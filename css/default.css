@@ -18,7 +18,7 @@ section {
   text-align: center;
   padding: 20px 0;
 }
-nav a img{
+nav {
   background-color: rgb(247, 154, 4);
   display: grid;
   grid-template-columns: 33% 33% 33%;
