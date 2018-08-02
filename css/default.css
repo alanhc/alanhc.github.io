@@ -23,7 +23,7 @@ nav {
   background-color: rgb(247, 154, 4);
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  height: 100%
+  
 }
 .mycircle, .mail, .github, .facebook{
   border-radius: 50%;
