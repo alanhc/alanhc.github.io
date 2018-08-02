@@ -1,13 +1,19 @@
+
 body {
   background-color: white;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-
+  grid-template-columns: 10% 80% 10%;
   align-content: center;
   text-align: center;
   background-color: #2196F3;
   padding: 5%;
   grid-gap: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    grid-template-columns: 33% 33% 33%;
+  }
 }
 .profile {
   background-color: white;
