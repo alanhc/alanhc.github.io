@@ -33,6 +33,7 @@ nav {
   display: block;
   width: 88%;
   height: 88%;
+  border: 1px solid black;
 }
 
 .mycircle {
