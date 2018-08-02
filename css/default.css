@@ -2,7 +2,7 @@ body {
   background-color: white;
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  
+
   align-content: center;
   text-align: center;
   background-color: #2196F3;
@@ -12,7 +12,7 @@ body {
 .profile {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+
 }
 section {
   text-align: center;
@@ -25,14 +25,15 @@ nav {
   max-width: 105%;
   height:auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-  
+
 }
+
 .mycircle, .mail, .github, .facebook{
   border-radius: 50%;
   margin: auto;
   display: block;
-  width: 88%;
-  height: 88%;
+  width: 50%;
+  height: 50%;
 }
 
 .mycircle {
@@ -45,14 +46,13 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .mail:hover {
-  background-color: red;
+  background-color: rgb(226, 18, 18);
 }
 .github:hover {
-  background-color: purple;
+  background-color: rgb(90, 33, 196);
   border-radius: 50%;
 
 }
 .facebook:hover {
-  background-color: blue;
+  background-color: rgb(45, 107, 206);
 }
-
