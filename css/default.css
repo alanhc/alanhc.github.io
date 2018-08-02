@@ -22,7 +22,7 @@ nav {
   background-color: rgb(247, 154, 4);
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  max-width: 101%;
+  max-width: 105%;
   height:auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   
