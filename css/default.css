@@ -2,7 +2,7 @@
 body {
   background-color: white;
   display: grid;
-  grid-template-columns: 6% 88% 6%;
+  grid-template-rows: 0% 50% 50%;
   align-content: center;
   text-align: center;
   background-color: #2196F3;
@@ -24,6 +24,12 @@ section {
   text-align: center;
   padding: 20px 0;
 }
+.right {
+  display: none;
+  height:100%;
+}
+
+
 nav {
   background-color: rgb(247, 154, 4);
   display: grid;
@@ -41,7 +47,9 @@ nav {
   width: 50%;
   height: 50%;
 }
-
+.chatbot {
+  visibility:hidden;
+}
 .mycircle {
   width: 88%;
   height: auto;
