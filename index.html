@@ -3,17 +3,17 @@
 
   <head>
     <link rel="stylesheet" href="css/default.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/support.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
-    <section></section>
+    <section class="left"></section>
     <section class="profile">
       <section>
-        <a href="https://alanhc.github.io" >
-        <img src="img/alanhc.jpg" alt="my photo" class="mycircle">
-      </a>
+        <a href="javascript:talkToMe();">
+          <img src="img/alanhc.jpg" alt="my photo" class="mycircle">
+        </a>
       </section>
-
       <nav class="social-links">
         <a href="https://www.facebook.com/alanhc.tseng" >
           <img src="img/facebook.png" alt="my photo" class="facebook">
@@ -26,7 +26,15 @@
         </a>
       </nav>
     </section>
-    <section></section>
+    <section class="right">
+      <iframe
+          allow="microphone;"
+          width="100%"
+          height="100%"
+          src="https://console.dialogflow.com/api-client/demo/embedded/1fdd5fa7-d425-47ec-acca-39956431e805">
+      </iframe>
+    </section>
+
 
   </body>
 </html>
