@@ -2,6 +2,7 @@ function talkToMe()
 {
 
   $(".right").animate({
-    width: 'toggle'
+    width: 'toggle',
+    height: 'toggle'
   });
 }
