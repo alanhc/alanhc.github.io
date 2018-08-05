@@ -1,18 +1,24 @@
 
 body {
-  background-color: white;
   display: grid;
-  grid-template-rows: 0% 50% 50%;
+  grid-template-rows: 0% 30% 70%;
   align-content: center;
   text-align: center;
   background-color: #2196F3;
   padding: 5%;
   grid-gap: 10px;
 }
+.right {
+  display: none;
+  height:450px;
+}
 
 @media screen and (orientation:landscape) {
   body {
     grid-template-columns: 33% 33% 33%;
+  }
+  .right {
+    height:100%;
   }
 }
 .profile {
@@ -24,10 +30,7 @@ section {
   text-align: center;
   padding: 20px 0;
 }
-.right {
-  display: none;
-  height:100%;
-}
+
 
 
 nav {

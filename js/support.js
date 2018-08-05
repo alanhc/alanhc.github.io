@@ -1,7 +1,7 @@
+
 function talkToMe()
 {
-
-  $(".right").animate({
-    width: 'toggle'
-  });
+    $(".right").animate({
+      width: 'toggle',
+    });
 }
