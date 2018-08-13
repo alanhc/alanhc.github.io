@@ -1,46 +1,58 @@
 
 body {
   display: grid;
-  grid-template-rows: 0% 30% 70%;
+  grid-template-rows: 33% 33% 33%;
   align-content: center;
   text-align: center;
   background-color: #2196F3;
   padding: 5%;
   grid-gap: 10px;
 }
-.right {
-  display: none;
-  height:450px;
-}
 
 @media screen and (orientation:landscape) {
   body {
     grid-template-columns: 33% 33% 33%;
   }
-  .right {
-    height:100%;
-  }
+
 }
-.profile {
+.left, .profile, .right{
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
-section {
-  text-align: center;
+.profile {
   padding: 20px 0;
 }
+.left, .right {
+  display: none;
+  height: 100%;
 
+}
+
+table {
+  padding: 15px;
+  width: 100%;
+}
+
+td {
+  border-left: 1.5px solid #33adff;
+  text-align: left;
+  padding-bottom: 0.5em;
+}
+td:hover {
+  background-color: #ccf2ff;
+}
+th:hover {
+  background-color: #d9d9d9;
+}
 
 
 nav {
   background-color: rgb(247, 154, 4);
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  max-width: 105%;
+  max-width: 100%;
   height:auto;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .mycircle, .mail, .github, .facebook{
@@ -50,14 +62,13 @@ nav {
   width: 50%;
   height: 50%;
 }
-.chatbot {
-  visibility:hidden;
-}
+
 .mycircle {
   width: 88%;
   height: auto;
-  opacity: 0.9;
+  opacity: 0.8;
   transition: .5s ease;
+  margin-bottom: 10px;
 }
 .mycircle:hover {
   transition: .5s ease;
