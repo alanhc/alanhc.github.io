@@ -27,7 +27,9 @@ body {
   height: 100%;
 
 }
-
+.right {
+  min-height: 200px;
+}
 table {
   padding: 15px;
   width: 100%;
@@ -45,7 +47,12 @@ th:hover {
   background-color: #d9d9d9;
 }
 
-
+footer {
+  color:white;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
 nav {
   background-color: rgb(247, 154, 4);
   display: grid;

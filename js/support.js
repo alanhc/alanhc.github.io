@@ -11,8 +11,3 @@ function talkToMe()
       opacity: 'toggle'
     });
 }
-
-function showSummary()
-{
-  
-}
