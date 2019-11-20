@@ -41,7 +41,7 @@ class Star {
     stroke(255);
     line(px,py,sx,sy);
     noStroke();
-    textFont(myFont);
+   
     textAlign(CENTER);
     fill(255-r,255-g,255-b);textSize(45);text("LANDING PLANET",0,0,0);
     fill(r,g,b);textSize(25); text("\nPress to Start",0,0,0 );

@@ -1,6 +1,6 @@
 /* @pjs preload="fuel.png, heart.png, helipad.png, home.png, mars.png, 
-ship.png, Georgia.ttf"; */
-PFont myFont;
+ship.png"; */
+
 
 PImage img_planet;
 PImage img_player;
@@ -221,7 +221,7 @@ void start_scene()
     p.remove(i);  
   }
   background(0);
-  myFont = createFont("Georgia", 50);
+  
   start_scene_animation();
   
 }

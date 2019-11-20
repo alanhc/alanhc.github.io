@@ -98,7 +98,7 @@ class Planet {
      fill(255*(1-discover/100),255*discover/100,0); circle(x,y,inner+5);
      imageMode(CENTER);
      image(img_planet, x, y,inner,inner);
-     textFont(myFont); fill(0); textSize(12); textAlign(CENTER); text(floor(discover)+"%",x,y);
+      fill(0); textSize(12); textAlign(CENTER); text(floor(discover)+"%",x,y);
      
     
    }
