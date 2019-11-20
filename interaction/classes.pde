@@ -125,8 +125,7 @@ class Planet {
       land=false;
     } else if (dist_Player_P<=inner/2) {
       inside=true;
-       collision_sound.play();
-       collision_sound.rewind();
+       
       nv=new PVector(player.pos.x+homeX-x,player.pos.y+homeY-y);
       nv.normalize();
       float len = PVector.dot(nv, player.v);
@@ -135,8 +134,7 @@ class Planet {
       if (player.mag<4.5) {
         if (!land) {
           
-          landing_sound.play();
-          landing_sound.rewind();
+          
           land=true;
           
         }

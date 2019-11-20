@@ -99,7 +99,8 @@ void draw()
     stage=0;
     case 0:
     
-    mp3player.play();
+    
+    
     initplay=false;
     start_scene();
     
@@ -240,8 +241,7 @@ boolean inside=false;
 
 void play_scene()
 {
-  if (!mp3player.isPlaying()) { mp3player.rewind();
-    mp3player.play(); }
+  
   inside=false;
   
   float minD_player_plant=1e9;
