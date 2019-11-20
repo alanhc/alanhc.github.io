@@ -1,4 +1,5 @@
-/* @pjs preload="fuel.png, heart.png, helipad.png, home.png, mars.png, ship.png"; */
+/* @pjs preload="fuel.png, heart.png, helipad.png, home.png, mars.png, 
+ship.png, Georgia.ttf"; */
 PFont myFont;
 
 PImage img_planet;
