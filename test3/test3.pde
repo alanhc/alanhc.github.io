@@ -82,7 +82,7 @@ void setup()
   img_heart= loadImage("heart.png");
   img_fuel= loadImage("fuel.png");
   noStroke();
-  music_setup();
+  
 }
 
 float x=0;
