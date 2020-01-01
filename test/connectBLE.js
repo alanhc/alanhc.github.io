@@ -3,7 +3,22 @@ let serviceUuid;
 let myCharacteristic;
 let myValue;
 let myBLE
+
+let button;
 function initBLE() {
+  let inp = createInput('');
+  inp.input(myInputEvent);
+  function myInputEvent() {
+    console.log('you are typing: ', this.value());
+  }
+  button = createButton('set server ip');
+  
+  button.mousePressed(changeBG);
+  function changeBG() {
+    serverIp=inp.value;
+    console.log(inp.value());
+  }
+
   serviceUuid = "19B10010-E8F2-537E-4F6C-D104768A1214";
   
   myValue = 0;
