@@ -3,7 +3,7 @@ let socket;
 let players;
 let host;
 let myId;
-let serverIp='192.168.1.109:3000';
+let serverIp;
 let state;
 function setup() {
     initBLE();
