@@ -1,3 +1,6 @@
+---
 layout: page
 title: "PAGE TITLE"
-permalink: /test/
+permalink: /about/contact/
+---
+this is a test
