@@ -1,4 +1,29 @@
 #theme: jekyll-theme-hacker
 #theme: jekyll-theme-minimal
-title: Alan 's homepage
-description: Hello world!
+#title: Alan 's homepage
+#description: Hello world!
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
