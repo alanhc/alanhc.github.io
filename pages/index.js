@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Alan Tseng | HUNG-CHUN, TSENG</title>
+        <title>Alan Tseng | HUNG-CHUN, TSENG | 曾宏鈞</title>
         <meta name="description" content="Alan Tseng's website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to Alan Tseng's wesite!
+          Welcome to Alan Tseng&apos;s wesite!
         </h1>        
       </main>
 
