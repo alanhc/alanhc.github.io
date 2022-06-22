@@ -9,6 +9,7 @@ export default function Home() {
         <title>Alan Tseng | HUNG-CHUN, TSENG | 曾宏鈞</title>
         <meta name="description" content="Alan Tseng's website" />
         <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
         
       </Head>
 
