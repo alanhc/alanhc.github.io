@@ -3,7 +3,6 @@ import Image from 'next/image';
 //import styles from './layout.module.css';
 //import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import profilePic from '../public/images/profile.jpeg';
 
 const name = 'Alan Tseng';
 export const siteTitle = "Alan Tseng's Website";
@@ -25,7 +24,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src={profilePic}
+              src="/images/profile.jpeg"
               className=""
               height={144}
               width={144}
