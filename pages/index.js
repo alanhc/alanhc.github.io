@@ -16,11 +16,9 @@ export async function getStaticProps() {
 }
 export default function Home({ allPostsData }) {
   return (
-    <Layout>
+    <Layout home>
       
-        <h1 className="text-3xl font-bold text-center">
-          Welcome to Alan Tseng&apos;s wesite!
-        </h1>
+        
         {allPostsData.map(({ id, date, title }) => (
           <li className="" key={id}>
             <Link href={`/posts/${id}`}>

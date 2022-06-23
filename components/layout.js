@@ -4,6 +4,7 @@ import Image from 'next/image';
 //import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
+
 const name = 'Alan Tseng';
 export const siteTitle = "Alan Tseng's Website";
 
@@ -19,18 +20,19 @@ export default function Layout({ children, home }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
 
       </Head>
-      <header className="">
+      <header className=" flex flex-col items-center">
         {home ? (
           <>
-            <Image
-              priority
-              src="/images/profile.jpeg"
-              className=""
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className="text-3xl font-bold text-center">{name}</h1>
+              <Image
+                priority
+                src="/images/profile.jpeg"
+                height={144}
+                width={144}
+                className=' justify-center rounded-full'
+                alt={name}
+              />
+            
+            <h1 className="underline text-center">{name}</h1>
           </>
         ) : (
           <>
@@ -39,16 +41,16 @@ export default function Layout({ children, home }) {
                 <Image
                   priority
                   src="/images/profile.jpeg"
-                  className=""
+                  className='rounded-full'
                   height={108}
                   width={108}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className="">
+            <h2 >
               <Link href="/">
-                <a className="">{name}</a>
+                <a >{name} !!!</a>
               </Link>
             </h2>
           </>
@@ -56,7 +58,7 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className="">
+        <div>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
