@@ -34,5 +34,5 @@ yarn-error.log*
 
 gh-pages*
 
-# 最後一篇文會用到的證據
+# 最後一篇文會用到的證據，最後要註解掉
 public/images/whistleblower/*
