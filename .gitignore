@@ -33,3 +33,6 @@ yarn-error.log*
 
 
 gh-pages*
+
+# 最後一篇文會用到的證據
+public/images/whistleblower/*
