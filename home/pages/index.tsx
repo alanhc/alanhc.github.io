@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <h1 className={styles.title}>
-        Hi! I&apos;m <a href="https://nextjs.org">Alan</a>
+        Hi! I&apos;m <a href="https://nextjs.org">Alan Tseng</a>
       </h1>
       <footer className={styles.footer}>
         <p>@alanhc</p>
