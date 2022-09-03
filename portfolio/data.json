@@ -1,3 +1,10 @@
 {
-    "title": "hello"
+    "title": "hello",
+    "projects": [
+        {
+            "name:":"example",
+            "image": "https://alanhc.github.io/favicon_io/apple-touch-icon.png",
+            "tags":["select"]
+        }
+    ]
 }
