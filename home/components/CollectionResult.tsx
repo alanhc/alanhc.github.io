@@ -11,7 +11,6 @@ const CollectionResult = ({ projects }: any) => {
     ]
     return (
         <Container>
-            CollectionResult
             <VStack spacing="24px">
 
                 <HStack spacing={4}>
@@ -32,7 +31,7 @@ const CollectionResult = ({ projects }: any) => {
                                         <Badge borderRadius="full" px="2" colorScheme="teal">
                                             {metadata.tags}
                                         </Badge>
-                                       
+
                                     </Box>
 
                                     <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
@@ -46,7 +45,7 @@ const CollectionResult = ({ projects }: any) => {
                                         </Box>
                                     </Box>
                                 </Box>
-                                
+
                             </Box>
                         ))}
 

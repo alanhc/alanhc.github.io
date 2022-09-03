@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import CollectionResult from '../components/CollectionResult'
 import LeftCheckBox from '../components/LeftCheckBox'
 import { IProjects } from '../types/portfolio'
+
 const Home: NextPage = ({portfolio}:any) => {
   //console.log(portfolio)
   return (
@@ -22,7 +23,7 @@ const Home: NextPage = ({portfolio}:any) => {
       </h1>
       */}
       
-      <LeftCheckBox />
+      <LeftCheckBox search_groups={portfolio.search_groups}/>
       
       <CollectionResult projects={portfolio.projects}/>
     
