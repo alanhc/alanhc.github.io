@@ -11,11 +11,11 @@ const Home: NextPage = ({portfolio}:any) => {
   //console.log(portfolio)
   return (
     <Layout>
-      {/*<Head>
+      <Head>
         <title>Hello, from alanhc</title>
         <meta name="description" content="Alan Tseng | alanhc | 曾宏鈞's website" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>*/}
+      </Head>
       {/*
       <h1 className={styles.title}>
         Hi! I&apos;m <Link href="/">Alan</Link>

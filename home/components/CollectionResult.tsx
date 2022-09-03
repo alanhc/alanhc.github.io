@@ -1,7 +1,7 @@
 import { Container, SimpleGrid, Box } from "@chakra-ui/react";
 import { Image, Badge, VStack, HStack, Tag, TagLabel, TagCloseButton, Button } from "@chakra-ui/react";
 const CollectionResult = ({ projects }: any) => {
-    console.log("---", projects[0])
+    //console.log("---", projects[0])
     const tags = ["tadA"]
     let result = [
         {
