@@ -7,7 +7,9 @@ import Layout from '../components/Layout'
 import CollectionResult from '../components/CollectionResult'
 import LeftCheckBox from '../components/LeftCheckBox'
 import { IProjects } from '../types/portfolio'
-
+import path from 'path';
+import { promises as fs } from 'fs';
+const jsonDirectory = path.join(process.cwd(), 'public/api');
 const Home: NextPage = ({portfolio}:any) => {
   //console.log(portfolio)
   return (
@@ -33,12 +35,14 @@ const Home: NextPage = ({portfolio}:any) => {
 
 export async function getStaticProps() {
 //export async function getServerSideProps() {
-  console.log(process.env.baseUrl)
-  const res = fetch(`${process.env.baseUrl}/api/portfolio.json`)
+  //console.log(process.env.baseUrl)
+  //const res = fetch(`${process.env.baseUrl}/api/portfolio.json`)
   
-  const portfolio = await (await res).json()
+  //const portfolio = await (await res).json()
   
-  //console.log("===", portfolio)
+  const portfolio = JSON.parse(await fs.readFile(jsonDirectory + '/portfolio.json', 'utf8'));
+
+  //console.log("===", portfolio, typeof portfolio)
   return {
     props: {
       portfolio,

@@ -5,7 +5,6 @@ const LeftCheckBox = ({ search_groups }: any) => {
     return (
         <div>
             <Container>
-                LeftCheckBox<br />
                 <Accordion defaultIndex={[0]}  allowMultiple>
                 {search_groups.map((group: any)=>(
                     <AccordionItem key={group.title}>
