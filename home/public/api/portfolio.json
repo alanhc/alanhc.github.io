@@ -1,7 +1,8 @@
 {
     "title": "hello",
     "search_groups": [
-        {"title":"tag","options":["select"]}
+        {"title":"tag","options":["select", "web", "client", "server"]},
+        {"title":"language","options":["JS"]}
     ],
     "projects": [
         {
@@ -15,7 +16,7 @@
             "title": "example name 2",
             "image": "https://alanhc.github.io/favicon_io/apple-touch-icon.png",
             "tags": [
-                "select"
+                "select", "web"
             ]
         }
     ]

@@ -27,16 +27,19 @@ const CollectionResult = ({ projects }: any) => {
                             <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' key={metadata.title}>
                                 <Image src={metadata.image} alt={metadata.image} />
                                 <Box p="6">
-                                    <Box display="flex" alignItems="baseline">
-                                        <Badge borderRadius="full" px="2" colorScheme="teal">
-                                            {metadata.tags}
-                                        </Badge>
-
-                                    </Box>
-
                                     <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
                                         {metadata.title}
                                     </Box>
+
+                                    <Box display="flex" alignItems="baseline">
+                                        {metadata.tags.map((tag: string) => (
+                                            <Badge key={tag} borderRadius="full" px="2" colorScheme="teal">
+                                                {tag}
+                                            </Badge>
+                                        ))}
+
+                                    </Box>
+
 
                                     <Box>
                                         {metadata.formattedPrice}
