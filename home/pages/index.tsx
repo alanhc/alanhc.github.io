@@ -34,9 +34,11 @@ const Home: NextPage = ({portfolio}:any) => {
 export async function getStaticProps() {
 //export async function getServerSideProps() {
   console.log(process.env.baseUrl)
-  const res = fetch(`${process.env.baseUrl}/api/portfolio`)
+  const res = fetch(`${process.env.baseUrl}/api/portfolio.json`)
+  
   const portfolio = await (await res).json()
   
+  //console.log("===", portfolio)
   return {
     props: {
       portfolio,
