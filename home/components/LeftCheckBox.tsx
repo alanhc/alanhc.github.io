@@ -8,7 +8,7 @@ const LeftCheckBox = ({ search_groups }: any) => {
                 LeftCheckBox<br />
                 <Accordion defaultIndex={[0]}  allowMultiple>
                 {search_groups.map((group: any)=>(
-                    <AccordionItem >
+                    <AccordionItem key={group.title}>
                     <h2>
                       <AccordionButton>
                         <Box flex="1" textAlign="left">
