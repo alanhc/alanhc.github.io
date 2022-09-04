@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import Script from 'next/script';
-
+import ProfileProvider from '../context/portfolioContext';
 function MyApp({ Component, pageProps }: AppProps) {
 
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
@@ -22,9 +22,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <ChakraProvider>
-        <Component {...pageProps} />
-      </ChakraProvider>
+      <ProfileProvider>
+        <ChakraProvider>
+          <Component {...pageProps} />
+        </ChakraProvider>
+      </ProfileProvider>
     </>
   )
 }

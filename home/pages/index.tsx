@@ -25,9 +25,9 @@ const Home: NextPage = ({portfolio}:any) => {
       </h1>
       */}
       
-      <LeftCheckBox search_groups={portfolio.search_groups}/>
+      <LeftCheckBox search_groups={portfolio.search_groups} global_state={{search:portfolio.search}}/>
       
-      <CollectionResult projects={portfolio.projects}/>
+      <CollectionResult projects={portfolio.projects} global_state={{search:portfolio.search}}/>
     
     </Layout>
   )

@@ -1,20 +1,18 @@
 import { Container, SimpleGrid, Box } from "@chakra-ui/react";
 import { Image, Badge, VStack, HStack, Tag, TagLabel, TagCloseButton, Button } from "@chakra-ui/react";
-const CollectionResult = ({ projects }: any) => {
-    //console.log("---", projects[0])
-    const tags = ["tadA"]
-    let result = [
-        {
-            title: "title_A",
-            image: "https://alanhc.github.io/favicon_io/apple-touch-icon.png"
-        }
-    ]
+import { useContext } from "react";
+import {TagContext, ITags} from "../context/portfolioContext";
+
+const CollectionResult = ({ projects, global_state }: any) => {
+    const tagContext = useContext(TagContext);
+    let tags = (tagContext?.tags===undefined)? [] : tagContext.tags
+   
     return (
+       
         <Container>
             <VStack spacing="24px">
-
                 <HStack spacing={4}>
-                    {tags.map((tag) => (
+                    {tags.map((tag:string) => (
                         <Tag key={tag} borderRadius="full" variant="solid">
                             <TagLabel>{tag}</TagLabel>
                             <TagCloseButton />

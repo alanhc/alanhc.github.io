@@ -1,5 +1,6 @@
 {
     "title": "hello",
+    "search":["select"],
     "search_groups": [
         {"title":"tag","options":["select", "web", "client", "server"]},
         {"title":"language","options":["JS"]}
