@@ -32,7 +32,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
       <Container>
         <Formik
           initialValues={{
-            tags: [],
+            tags: ["select"],
           }}
           onSubmit={onClickSubmit}
         >

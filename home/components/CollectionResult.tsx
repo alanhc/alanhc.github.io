@@ -1,18 +1,22 @@
 import { Container, SimpleGrid, Box } from "@chakra-ui/react";
 import { Image, Badge, VStack, HStack, Tag, TagLabel, TagCloseButton, Button } from "@chakra-ui/react";
 import { useContext } from "react";
-import {TagContext, ITags} from "../context/portfolioContext";
+import { TagContext, ITags } from "../context/portfolioContext";
 
 const CollectionResult = ({ projects, global_state }: any) => {
     const tagContext = useContext(TagContext);
-    let tags = (tagContext?.tags===undefined)? [] : tagContext.tags
-   
+    let tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
+    function myFilter(value: any) {
+        let arrA = value.tags;
+        let arrB = tags;
+        return arrA.some((x: string) => arrB?.includes(x));
+    }
     return (
-       
+
         <Container>
             <VStack spacing="24px">
                 <HStack spacing={4}>
-                    {tags.map((tag:string) => (
+                    {tags.map((tag: string) => (
                         <Tag key={tag} borderRadius="full" variant="solid">
                             <TagLabel>{tag}</TagLabel>
                             <TagCloseButton />
@@ -20,8 +24,8 @@ const CollectionResult = ({ projects, global_state }: any) => {
                     ))}
                 </HStack>
                 <SimpleGrid columns={[2, 3]} spacing="40px">
-                    {projects
-                        .map((metadata: any) => (
+                    {projects.
+                        filter(myFilter).map((metadata: any) => (
                             <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' key={metadata.title}>
                                 <Image src={metadata.image} alt={metadata.image} />
                                 <Box p="6">
