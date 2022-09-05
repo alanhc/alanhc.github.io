@@ -37,14 +37,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
     <div>
       <Container>
   
-        <Formik
-          initialValues={{
-            tags: ["select"],
-          }}
-          onSubmit={onClickSubmit}
-        >
-          <Form>
-          
+        
             <Accordion defaultIndex={[0]} allowMultiple>
               {search_groups.map((group: any) => (
                 <AccordionItem key={group.title}>
@@ -60,17 +53,13 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
                       <Stack pl={1} mt={1} spacing={1}>
                       {group.options.map((option: string, index:number) => (
                         <label key={option}>
-                        <Field
-                          as={Checkbox}
-                          name="tags"
-                          value={option}
+                        <Checkbox
                           isChecked={tags.includes(option)}
                           defaultChecked={option==="select"}
                           onChange={(e:any)=>{handleChecked(option, e.target.checked)}}
-                          
-                        />
-                        
+                        >
                         {option}
+                        </Checkbox>
                       </label>
                       ))}
                       </Stack>
@@ -80,10 +69,10 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
               ))}
             </Accordion>
             {/*<Button type="submit">Submit</Button>*/}
-          </Form>
-        </Formik>
+     
       </Container>
-    </div>
+      </div>
+  
   )
 }
 export default LeftCheckBox;

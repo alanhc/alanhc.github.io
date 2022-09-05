@@ -7,9 +7,9 @@ type AppProps = {
 };
 const Layout = ({ children }: AppProps) => {
     return (
-        <Container maxW="full">
+        <Container maxW="full" >
            
-            <Stack direction={{ base: 'column', md: 'row' }} spacing='24px'>
+            <Stack  direction={{ base: 'column', md: 'row' }} spacing='24px'>
                 {children}
             </Stack>
 
