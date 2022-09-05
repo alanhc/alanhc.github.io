@@ -10,7 +10,7 @@
             "title": "MCU-up",
             "image": "image/up.png",
             "tags": ["select", "web"],
-            "language": ["NodeJS", "MVC", "mongodb"]
+            "language": ["NodeJS", "MVC", "mongodb", "docker"]
         },
         {
             "title": "Decentral Showroom",
