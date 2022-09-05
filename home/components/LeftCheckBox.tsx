@@ -64,6 +64,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
                           as={Checkbox}
                           name="tags"
                           value={option}
+                          isChecked={tags.includes(option)}
                           defaultChecked={option==="select"}
                           onChange={(e:any)=>{handleChecked(option, e.target.checked)}}
                           
