@@ -2,27 +2,27 @@
     "title": "hello",
     "search":["select"],
     "search_groups": [
-        {"title":"tag","options":["select", "web", "ar/vr", "blockchain", "mobile" ]},
-        {"title":"language","options":["Javascript", "Python"]}
+        {"title":"tag","options":["select", "web", "AR/VR", "blockchain", "mobile" ]},
+        {"title":"techstack","options":[]}
     ],
     "projects": [
         {
             "title": "MCU-up",
             "image": "image/up.png",
             "tags": ["select", "web"],
-            "language": ["Javascript", "MVC", "mongodb"]
+            "language": ["NodeJS", "MVC", "mongodb"]
         },
         {
             "title": "Decentral Showroom",
             "image": "image/showroom.png",
-            "tags": ["select", "ar/vr", "blockchain", "web"],
-            "language":["Javascript", "Python", "Tezos"]
+            "tags": ["select", "AR/VR", "blockchain", "web"],
+            "language":["Unity", "NFT", "FARM stack"]
         },
         {
             "title": "NFT Ticketing",
             "image": "image/ticket.png",
             "tags": ["select", "blockchain", "web"],
-            "language":["Javascript", "Python", "Tezos"]
+            "language":["NextJS", "PWA", "NFT"]
 
         }
     ]
