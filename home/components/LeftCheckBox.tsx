@@ -9,27 +9,34 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
   const tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
   const saveTag = tagContext?.saveTag;
 
-  function handleChecked(value: string, checked: boolean) {
+  const handleChecked =  (value: string, checked: boolean) =>{
     
-  
-    if (saveTag) {
+    
+      //console.log("===", value, checked)
       if (checked) {
-        tags.push(value)
-        saveTag(tags);
+        //let tmp = tags
+        var arr = tags.slice()
+        arr.push(value)
+        if (saveTag) saveTag(arr);
+        //console.log(value, checked, tmp)
       } else {
         var filteredArray = tags.filter(function (e) { return e !== value })
-        
+        if(saveTag) saveTag(filteredArray)
       }
-      //
-    }
+  
+    
   }
   const onClickSubmit =  (values:any) => {
     if (saveTag) saveTag(values.tags);
   };
-  
+  const checkInArray = (value:string, checked:boolean)=>{
+    return false
+    
+  }
   return (
     <div>
       <Container>
+  
         <Formik
           initialValues={{
             tags: ["select"],
@@ -37,6 +44,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
           onSubmit={onClickSubmit}
         >
           <Form>
+          
             <Accordion defaultIndex={[0]} allowMultiple>
               {search_groups.map((group: any) => (
                 <AccordionItem key={group.title}>
@@ -50,14 +58,17 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
                   </h2>
                   <AccordionPanel>
                       <Stack pl={1} mt={1} spacing={1}>
-                      {group.options.map((option: string) => (
+                      {group.options.map((option: string, index:number) => (
                         <label key={option}>
                         <Field
                           as={Checkbox}
                           name="tags"
                           value={option}
                           defaultChecked={option==="select"}
+                          onChange={(e:any)=>{handleChecked(option, e.target.checked)}}
+                          
                         />
+                        
                         {option}
                       </label>
                       ))}
@@ -67,7 +78,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
                 </AccordionItem>
               ))}
             </Accordion>
-            <Button type="submit">Submit</Button>
+            {/*<Button type="submit">Submit</Button>*/}
           </Form>
         </Formik>
       </Container>

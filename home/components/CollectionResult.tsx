@@ -6,6 +6,11 @@ import { TagContext, ITags } from "../context/portfolioContext";
 const CollectionResult = ({ projects, global_state }: any) => {
     const tagContext = useContext(TagContext);
     let tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
+    const saveTag = tagContext?.saveTag;
+    const handleClose = (value:string)=>{
+        var filteredArray = tags.filter(function (e) { return e !== value })
+        if(saveTag) saveTag(filteredArray)
+    }
     function myFilter(value: any) {
         let arrA = value.tags;
         let arrB = tags;
@@ -19,7 +24,7 @@ const CollectionResult = ({ projects, global_state }: any) => {
                     {tags.map((tag: string) => (
                         <Tag key={tag} borderRadius="full" variant="solid">
                             <TagLabel>{tag}</TagLabel>
-                            <TagCloseButton />
+                            <TagCloseButton onClick={(e)=>handleClose(tag)}/>
                         </Tag>
                     ))}
                 </HStack>
