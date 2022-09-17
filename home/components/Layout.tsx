@@ -9,10 +9,8 @@ const Layout = ({ children }: AppProps) => {
     return (
         <Container maxW="full" >
            
-            <Stack  direction={{ base: 'column', md: 'row' }} spacing='24px'>
                 {children}
-            </Stack>
-
+            
             <Center>
                 <p>@alanhc</p>
             </Center>
