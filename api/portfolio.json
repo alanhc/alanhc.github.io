@@ -1,5 +1,11 @@
 {
     "title": "hello",
+    "social_links":[
+        {"name": "blog", "link":"https://medium.com/@alanhc"},
+        {"name": "twitter", "link":"https://twitter.com/alanhc316"},
+        {"name": "github", "link":"https://github.com/alanhc"}
+    ],
+    "quote":"Keeping curiosity alive.",
     "search":["select"],
     "search_groups": [
         {"title":"tag","options":["select", "web", "ar/vr", "blockchain", "mobile" ]},
