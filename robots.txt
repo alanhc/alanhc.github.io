@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alanhc.github.io/school
+
+# Sitemaps
+Sitemap: https://alanhc.github.io/school/sitemap.xml
