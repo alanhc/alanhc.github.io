@@ -73,6 +73,28 @@
                     "description": "Teaching Assistant of Computer Programming II"
                 }
             ]
+        },
+        {
+            "Honors & awards": [
+                {
+                    "time": {
+                        "from": "2019",
+                        "to": ""
+                    },
+                    "first": "Andy Grove Scholarship",
+                    "second": "Intel",
+                    "description": ""
+                },
+                {
+                    "time": {
+                        "from": "2021",
+                        "to": ""
+                    },
+                    "first": "Research Excellence Award",
+                    "second": "Ming Chuan University",
+                    "description": ""
+                }
+            ]
         }
     ],
     "search": [
