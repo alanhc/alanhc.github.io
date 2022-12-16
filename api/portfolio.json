@@ -126,7 +126,11 @@
                 "Unity",
                 "NFT",
                 "FARM stack"
-            ]
+            ],
+            "modal":{
+                "title":"Decentral Showroom",
+                "description":"Decentral Showroom..."
+            }
         },
         {
             "title": "NFT Ticketing",
@@ -140,7 +144,11 @@
                 "NextJS",
                 "PWA",
                 "NFT"
-            ]
+            ],
+            "modal":{
+                "title":"NFT Ticketing",
+                "description":"NFT Ticketing..."
+            }
         },
         {
             "title": "MCU-up",
@@ -154,7 +162,11 @@
                 "MVC",
                 "mongodb",
                 "SSR"
-            ]
+            ],
+            "modal":{
+                "title":"MCU-up",
+                "description":"MCU-up..."
+            }
         }
     ]
 }
