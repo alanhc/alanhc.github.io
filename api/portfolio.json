@@ -129,7 +129,10 @@
             ],
             "modal":{
                 "title":"Decentral Showroom",
-                "description":"Decentral Showroom..."
+                "description":"Decentral Showroom...",
+                "demo": "https://dsr-team.github.io/DSR-Editor",
+                "github": "https://github.com/DSR-Team",
+                "video": "7EPRiUR4XqM"
             }
         },
         {
@@ -147,7 +150,10 @@
             ],
             "modal":{
                 "title":"NFT Ticketing",
-                "description":"NFT Ticketing..."
+                "description":"NFT Ticketing...",
+                "video": "ZYo51JMlp5Y",
+                "demo": "",
+                "github": ""
             }
         },
         {
@@ -165,7 +171,9 @@
             ],
             "modal":{
                 "title":"MCU-up",
-                "description":"MCU-up..."
+                "description":"MCU-up...asdnajsdhjh",
+                "demo": "",
+                "github": ""
             }
         }
     ]
