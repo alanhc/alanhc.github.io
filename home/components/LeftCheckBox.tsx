@@ -1,4 +1,4 @@
-import { Button, Checkbox, VStack, Container, Accordion, AccordionItem, AccordionPanel, AccordionButton, Box, AccordionIcon, Stack } from "@chakra-ui/react";
+import { Flex, Button, Checkbox, VStack, Container, Accordion, AccordionItem, AccordionPanel, AccordionButton, Box, AccordionIcon, Stack } from "@chakra-ui/react";
 import { useContext } from "react";
 import { TagContext } from "../context/portfolioContext";
 import { useOutsideClick } from '@chakra-ui/react'
@@ -35,7 +35,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
   }
   return (
     <div>
-      <Container>
+      <Flex>
   
         
             <Accordion defaultIndex={[0]} allowMultiple>
@@ -70,7 +70,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
             </Accordion>
             {/*<Button type="submit">Submit</Button>*/}
      
-      </Container>
+      </Flex>
       </div>
   
   )

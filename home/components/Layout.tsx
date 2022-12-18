@@ -1,5 +1,5 @@
 
-import { Stack, HStack, VStack } from '@chakra-ui/react'
+import { Stack, HStack, VStack, Divider } from '@chakra-ui/react'
 import { Heading, Container, Box } from '@chakra-ui/react'
 import { Center, Square, Circle } from '@chakra-ui/react'
 type AppProps = {
@@ -10,8 +10,8 @@ const Layout = ({ children }: AppProps) => {
         <Container maxW="full" >
            
                 {children}
-            
-            <Center>
+          
+            <Center mt="10">
                 <p>@alanhc</p>
             </Center>
         </Container>

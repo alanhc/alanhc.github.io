@@ -1,9 +1,11 @@
 import { Container, SimpleGrid, Box, Flex } from "@chakra-ui/react";
-import { Image, Badge, VStack, HStack, Tag, TagLabel, TagCloseButton, Button } from "@chakra-ui/react";
+import { Image, Badge, Stack, VStack, HStack, Tag, TagLabel, TagCloseButton, Button } from "@chakra-ui/react";
 import { useContext } from "react";
 import { TagContext, ITags } from "../context/portfolioContext";
 import NextImage from 'next/image'
+import Project from "./Project";
 const CollectionResult = ({ projects, global_state }: any) => {
+
     const tagContext = useContext(TagContext);
     let tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
     const saveTag = tagContext?.saveTag;
@@ -18,11 +20,11 @@ const CollectionResult = ({ projects, global_state }: any) => {
     }
     return (
 
-        <Container maxW='full'>
+        <Flex minW={{base:"auto",md:"container.md"}} ml="10">
             <VStack spacing="24px" >
                 <HStack spacing={4}>
                     {tags.map((tag: string) => (
-                        <Tag key={tag} borderRadius="full" variant="solid">
+                        <Tag key={tag} borderRadius="full" variant="solid" bg="blue.300">
                             <TagLabel>{tag}</TagLabel>
                             <TagCloseButton onClick={(e) => handleClose(tag)} />
                         </Tag>
@@ -30,57 +32,16 @@ const CollectionResult = ({ projects, global_state }: any) => {
                 </HStack>
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing="40px">
                     {projects.
-                        filter(myFilter).map((metadata: any) => (
-                            <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' key={metadata.title}>
-                                {/*<Image src={metadata.image} alt={metadata.image} loading="lazy" fit='cover'/>*/}
-                               
-                                <NextImage width="600" height="500" layout="responsive" src={`/${metadata.image}`}alt={metadata.image} />
-                                <Box p="6">
-                                    <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
-                                        {metadata.title}
-                                    </Box>
-
-                                    <Box display="flex" alignItems="baseline">
-                                        {metadata.tags.map((tag: string) => (
-                                            tag !== "select" && <Badge key={tag} borderRadius="full" px="2" colorScheme="teal">
-                                                {tag}
-                                            </Badge>
-                                        ))}
-
-                                    </Box>
-
-
-                                    <Box>
-                                        {metadata.formattedPrice}
-                                        {metadata.language.map((lan: string) => (
-                                            <Box key={lan} as="span" color="gray" fontSize="sm">
-                                                {lan} &nbsp;
-                                            </Box>
-                                        ))}
-
-                                    </Box>
-                                </Box>
-
-                            </Box>
+                        filter(myFilter).map((metadata: any, i:number) => (
+                            <Project metadata={metadata} key={i}/>
                         ))}
 
                 </SimpleGrid>
 
             </VStack>
-        </Container>
+        </Flex>
     )
 }
-/*
-<Box key={metadata.title} maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
-                            <Image src={metadata.image} alt={metadata.image} />
-                            <Box p='6'>
-                                <Box display='flex' alignItems='baseline'>
-                                    <Badge borderRadius='full' px='2' colorScheme='teal'>
-                                        New
-                                    </Badge>
-                                </Box>
-                            </Box>
-                        </Box>
-*/
+
 
 export default CollectionResult;
