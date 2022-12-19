@@ -110,6 +110,15 @@
                 "blockchain",
                 "mobile"
             ]
+        },
+        {
+            "title": "tech",
+            "options": [
+                "Unity",
+                "NFT",
+                "NextJS",
+                "NodeJS"
+            ]
         }
     ],
     "projects": [
