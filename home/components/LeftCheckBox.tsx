@@ -1,5 +1,5 @@
 import { Flex, Button, Checkbox, VStack, Container, Accordion, AccordionItem, AccordionPanel, AccordionButton, Box, AccordionIcon, Stack } from "@chakra-ui/react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { TagContext } from "../context/portfolioContext";
 import { useOutsideClick } from '@chakra-ui/react'
 import { Formik, Field, Form } from "formik";
@@ -8,6 +8,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
   const tagContext = useContext(TagContext);
   const tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
   const saveTag = tagContext?.saveTag;
+  
 
   const handleChecked =  (value: string, checked: boolean) =>{
     
@@ -23,7 +24,6 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
         var filteredArray = tags.filter(function (e) { return e !== value })
         if(saveTag) saveTag(filteredArray)
       }
-  
     
   }
   const onClickSubmit =  (values:any) => {
@@ -38,7 +38,7 @@ const LeftCheckBox = ({ search_groups, global_state }: any) => {
       <Flex>
   
         
-            <Accordion defaultIndex={[0]} allowMultiple>
+            <Accordion defaultIndex={[0,1]} allowMultiple>
               {search_groups.map((group: any) => (
                 <AccordionItem key={group.title}>
                   <h2>

@@ -110,6 +110,21 @@
                 "blockchain",
                 "mobile"
             ]
+        },
+        {
+            "title": "tech",
+            "options": [
+                "Unity",
+                "NFT",
+                "NextJS",
+                "NodeJS",
+                "FARM stack",
+                "PWA",
+                "MVC",
+                "mongodb",
+                "SSR",
+                "SSG"
+            ]
         }
     ],
     "projects": [

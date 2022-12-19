@@ -29,8 +29,9 @@ import {
 } from '@chakra-ui/react'
 import Profile from '../components/Profile'
 import { Field, Form, Formik } from 'formik';
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { TagContext } from '../context/portfolioContext'
 const jsonDirectory = path.join(process.cwd(), 'public/api');
 const Home: NextPage = ({ portfolio }: any) => {
   const router = useRouter()
@@ -103,6 +104,9 @@ const Home: NextPage = ({ portfolio }: any) => {
 }
 
 export async function getStaticProps() {
+  
+  
+
   //export async function getServerSideProps() {
   //console.log(process.env.baseUrl)
   //const res = fetch(`${process.env.baseUrl}/api/portfolio.json`)
