@@ -113,7 +113,7 @@
         },
         {
             "title": "tech",
-            "options": [ "Unity", "NFT", "FARM stack", "NextJS", "PWA", "NodeJS", "MVC", "mongodb", "SSR", "SSG", "TypeScript", "chakra UI", "Python", "solidity", "streamlit", "example", "select" ]
+            "options": [ "Unity", "NFT", "FARM stack", "NextJS", "PWA", "NodeJS", "MVC", "mongodb", "SSR", "SSG", "TypeScript", "chakra UI", "Python", "solidity", "streamlit", "example" ]
         }
     ],
     "projects": [
