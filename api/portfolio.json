@@ -351,13 +351,19 @@
     ],
     "interest": [
         {
-            "Video": "https://youtube.com/playlist?list=PLMpHKKbuR6oF5CD49wcWkdrav1PKSOw-Q"
+            "title": "Video",
+            "image": "/image/video-marketing.png",
+            "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oF5CD49wcWkdrav1PKSOw-Q"
         },
         {
-            "Drum": "https://youtube.com/playlist?list=PLMpHKKbuR6oFT0ntQWeAU714PCdCA8P45"
+            "title": "Drum",
+            "image": "/image/drum-set.png",
+            "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oFT0ntQWeAU714PCdCA8P45"
         },
         {
-            "Coding": "https://youtube.com/playlist?list=PLMpHKKbuR6oF_97Bbtvdqi7LWP4_6P0hh"
+            "title": "Coding",
+            "image": "/image/coding.png",
+            "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oF_97Bbtvdqi7LWP4_6P0hh"
         }
     ]
 }
