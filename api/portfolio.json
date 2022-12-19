@@ -113,7 +113,24 @@
         },
         {
             "title": "tech",
-            "options": [ "Unity", "NFT", "FARM stack", "NextJS", "PWA", "NodeJS", "MVC", "mongodb", "SSR", "SSG", "TypeScript", "chakra UI", "Python", "solidity", "streamlit", "example" ]
+            "options": [
+                "Unity",
+                "NFT",
+                "FARM stack",
+                "NextJS",
+                "PWA",
+                "NodeJS",
+                "MVC",
+                "mongodb",
+                "SSR",
+                "SSG",
+                "TypeScript",
+                "chakra UI",
+                "Python",
+                "solidity",
+                "streamlit",
+                "example"
+            ]
         }
     ],
     "projects": [
@@ -353,6 +370,29 @@
             "title": "Coding",
             "image": "/image/coding.png",
             "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oF_97Bbtvdqi7LWP4_6P0hh"
+        }
+    ],
+    "timeline": [
+        {
+            "time":"2021 - 2023",
+            "description":[
+                "A",
+                "B"
+            ]
+        },
+        {
+            "time":"2017 - 2021",
+            "description":[
+                "A",
+                "B"
+            ]
+        },
+        {
+            "time":"2014 - 2017",
+            "description":[
+                "A",
+                "B"
+            ]
         }
     ]
 }
