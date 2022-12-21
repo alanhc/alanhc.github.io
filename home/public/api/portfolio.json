@@ -116,14 +116,20 @@
             "options": [
                 "Unity",
                 "NFT",
-                "NextJS",
-                "NodeJS",
                 "FARM stack",
+                "NextJS",
                 "PWA",
+                "NodeJS",
                 "MVC",
                 "mongodb",
                 "SSR",
-                "SSG"
+                "SSG",
+                "TypeScript",
+                "chakra UI",
+                "Python",
+                "solidity",
+                "streamlit",
+                "example"
             ]
         }
     ],
@@ -351,13 +357,42 @@
     ],
     "interest": [
         {
-            "Video": "https://youtube.com/playlist?list=PLMpHKKbuR6oF5CD49wcWkdrav1PKSOw-Q"
+            "title": "Video",
+            "image": "/image/video-marketing.png",
+            "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oF5CD49wcWkdrav1PKSOw-Q"
         },
         {
-            "Drum": "https://youtube.com/playlist?list=PLMpHKKbuR6oFT0ntQWeAU714PCdCA8P45"
+            "title": "Drum",
+            "image": "/image/drum-set.png",
+            "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oFT0ntQWeAU714PCdCA8P45"
         },
         {
-            "Coding": "https://youtube.com/playlist?list=PLMpHKKbuR6oF_97Bbtvdqi7LWP4_6P0hh"
+            "title": "Coding",
+            "image": "/image/coding.png",
+            "link": "https://youtube.com/playlist?list=PLMpHKKbuR6oF_97Bbtvdqi7LWP4_6P0hh"
+        }
+    ],
+    "timeline": [
+        {
+            "time":"2021 - 2023",
+            "description":[
+                "A",
+                "B"
+            ]
+        },
+        {
+            "time":"2017 - 2021",
+            "description":[
+                "A",
+                "B"
+            ]
+        },
+        {
+            "time":"2014 - 2017",
+            "description":[
+                "A",
+                "B"
+            ]
         }
     ]
 }

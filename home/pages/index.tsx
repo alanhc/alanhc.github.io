@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-//import Image from 'next/image'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Layout from '../components/Layout'
@@ -9,14 +9,15 @@ import LeftCheckBox from '../components/LeftCheckBox'
 import { IProjects } from '../types/portfolio'
 import path from 'path';
 import { promises as fs } from 'fs';
-import { Divider, Text, Image, VStack, Container, HStack, Stack, Heading, Flex, Card, FormControl, FormLabel, Input, FormHelperText, Textarea, FormErrorMessage, Center } from "@chakra-ui/react";
+import { IconButton, Divider, Text, VStack, Container, HStack, Stack, Heading, Flex, Card, FormControl, FormLabel, Input, FormHelperText, Textarea, FormErrorMessage, Center, CardHeader, CardBody, StackDivider, AspectRatio } from "@chakra-ui/react";
 //import Link from 'next/link' 
 import { Link } from '@chakra-ui/react'
 import Experience from '../components/Experience'
 import { Avatar, AvatarBadge, AvatarGroup, Button } from '@chakra-ui/react'
 import { Tooltip, SimpleGrid, Box } from '@chakra-ui/react'
 import YouTube from "react-youtube";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { StarIcon } from '@chakra-ui/icons'
 import {
   Modal,
   ModalOverlay,
@@ -32,11 +33,14 @@ import { Field, Form, Formik } from 'formik';
 import { useContext, useEffect, useState } from 'react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { TagContext } from '../context/portfolioContext'
+
+
 const jsonDirectory = path.join(process.cwd(), 'public/api');
 const Home: NextPage = ({ portfolio }: any) => {
   const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [msg, setMsg] = useState("")
+
   const opts = {
     height: '240',
     width: '240',
@@ -48,6 +52,8 @@ const Home: NextPage = ({ portfolio }: any) => {
   const handleInputChange = (e: any) => {
     setMsg(e.target.value)
   }
+  const tagContext = useContext(TagContext);
+  const tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
 
   return (
     <Layout>
@@ -67,22 +73,37 @@ const Home: NextPage = ({ portfolio }: any) => {
         <Experience experience={portfolio.experience} />
         <Heading size='xl' color='blue.500'>Projects</Heading>
         <Flex direction={{ base: 'column', md: 'row' }} >
-          <LeftCheckBox search_groups={portfolio.search_groups} global_state={{ search: portfolio.search }} />
+          <LeftCheckBox search_groups={portfolio.search_groups} global_state={{ search: portfolio.search }} init_tech_tags={portfolio.search_groups[1].options} />
 
           <CollectionResult projects={portfolio.projects} global_state={{ search: portfolio.search }} />
         </Flex>
-        <Heading size='xl' color='blue.500'>Interest</Heading>
-        <Text>
-          {portfolio.interest.map((_interest: any, i: number) => (
-            <Link key={i} href={_interest[Object.keys(_interest)[0]]} isExternal>
-              {Object.keys(_interest)} <ExternalLinkIcon mx='2px' />
-            </Link>
+       
 
-          ))}
-        </Text>
 
       </VStack>
-      <Center>
+      <Center mt="5">
+      <Heading size='xl' color='blue.500'>Interest</Heading>
+      </Center>
+      <Card variant="filled">
+        <Center mt="10">
+          <HStack maxW="2xl" >
+
+            {portfolio.interest.map((_interest: any, i: number) => (
+              <Link key={i} href={_interest.link} isExternal>
+
+                <Box mt="5" ml="5" mb="5" mr="5">
+                  
+                  <Image width={300} height={300} src={_interest.image} alt={_interest.title} />
+               
+                  <Center>{_interest.title}</Center>
+                </Box>
+              </Link>
+            ))}
+
+          </HStack>
+        </Center>
+      </Card>
+      <Center mt="10">
         <Heading size='xl' color='blue.500'>Contact</Heading>
       </Center>
       <Container>
@@ -99,13 +120,43 @@ const Home: NextPage = ({ portfolio }: any) => {
         </HStack>
       </Container>
 
+      <Container mt="5">
+        <Card variant="filled">
+          <CardBody>
+            <Stack  divider={<StackDivider />} spacing='4'>
+                
+                {portfolio.timeline.map((_timeline: any, i: number) => (
+                  <Flex key={i} mt="3" maxW="5xl">
+                    <Heading size='xs' textTransform='uppercase'>
+                      {_timeline.time}
+                    </Heading>
+                    <Container ml="3" >
+                      <ul>
+                        {_timeline.description.map((_description: any, i: number) => (
+                          
+                         
+                            <li key={i}> {_description}</li>
+                     
+                      
+                        ))}
+                      </ul>
+                    </Container>
+                  </Flex>
+
+                ))}
+        
+            </Stack>
+          </CardBody>
+        </Card>
+      </Container>
+
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  
-  
+
+
 
   //export async function getServerSideProps() {
   //console.log(process.env.baseUrl)

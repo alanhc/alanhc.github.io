@@ -1,12 +1,22 @@
-import {useDisclosure,Link, Text, Container, Tooltip, Image, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Heading} from '@chakra-ui/react'
+import {Box,Image,useDisclosure,Link, Text, Container, Tooltip, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Heading, AspectRatio} from '@chakra-ui/react'
+import NextImage from 'next/image';
 const Profile = ({ portfolio }: any) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
 
-        <Container maxW='full' centerContent>
+        <Container maxW='full' centerContent mt="5">
         <button onClick={onOpen}>
           <Tooltip label='say hi!'>
+          <AspectRatio minW="300" ratio={1}>
+          <Box position='relative' bottom={1} >
+            <NextImage src='/image/me.jpeg' alt='My Picture' layout='fill' style={{ borderRadius: '100%' }} />
+          </Box>
+          </AspectRatio>
+            {/*
+            
             <Image borderRadius='full' src="image/me.jpeg" alt="me" width="300" height="300" />
+           
+            */}
           </Tooltip>
         </button>
         <Modal isOpen={isOpen} onClose={onClose}>

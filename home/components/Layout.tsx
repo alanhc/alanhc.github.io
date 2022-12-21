@@ -7,7 +7,7 @@ type AppProps = {
 };
 const Layout = ({ children }: AppProps) => {
     return (
-        <Container maxW="full" >
+        <Container minW="full" >
            
                 {children}
           

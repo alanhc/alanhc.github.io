@@ -22,13 +22,18 @@ const CollectionResult = ({ projects, global_state }: any) => {
 
         <Flex minW={{base:"auto",md:"container.md"}} ml="10">
             <VStack spacing="24px" >
+                
                 <HStack spacing={4}>
+                    <Container  >
+                        
                     {tags.map((tag: string) => (
-                        <Tag key={tag} borderRadius="full" variant="solid" bg="blue.300">
+                        
+                        <Tag ml="1" mt="1" key={tag} borderRadius="full" variant="solid" bg="gray.500">
                             <TagLabel>{tag}</TagLabel>
                             <TagCloseButton onClick={(e) => handleClose(tag)} />
                         </Tag>
                     ))}
+                    </Container>
                 </HStack>
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing="40px">
                     {projects.
