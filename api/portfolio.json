@@ -119,6 +119,7 @@
                 "FARM stack",
                 "NextJS",
                 "PWA",
+                "Tezos",
                 "NodeJS",
                 "MVC",
                 "mongodb",
@@ -128,7 +129,19 @@
                 "chakra UI",
                 "Python",
                 "solidity",
-                "streamlit"
+                "streamlit",
+                "Chrome Extension",
+                "tensorflow",
+                "Javascript",
+                "p5JS",
+                "socket",
+                "Java",
+                "Processing",
+                "OpenGL",
+                "C++",
+                "OpenCV",
+                "example",
+                "select"
             ]
         }
     ],
