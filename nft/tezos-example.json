@@ -1,11 +1,15 @@
 {
-    "name": "alanhc - test",
-    "description": "description",
-    "image": "https://alanhc.github.io/image/github.png",
-    "attributes": [
-    ],
-    "animation_url": "https://alanhc.github.io/image/github.png",
-    "origin_id": "14",
-    "origin_amount": "1",
-    "external_url": ""
+    "symbol": "ticker",
+    "name": "name of the NFT",
+    "description": "Description",
+    "decimals": "0",
+    "isBooleanAmount": true,
+    "artifactUri": "link to the tokenised object",
+    "thumbnailUri": "logo of theNFT",
+    "minter": "token issuer name",
+    "interfaces": [
+        "TZIP-007-2021-04-17",
+        "TZIP-016-2021-04-17",
+        "TZIP-21"
+    ]
 }
