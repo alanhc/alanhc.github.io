@@ -14,7 +14,7 @@
             "link": "https://www.linkedin.com/in/alanhc316/"
         },
         {
-            "name": "Blog",
+            "name": "notes",
             "link": "next-blog"    
         },
         {
@@ -414,7 +414,25 @@
         {
             "time":"2014 - 2017",
             "description":[
-                "2015, 2016 Team captain at Interschool Robot Competition and won the first place"
+                "2015, 2016 Team captain at Interschool Robot Competition and won the first & third place",
+                "2015 English writing contest - 3rd place"
+            ]
+        },
+        {
+            "time":"2011 - 2014",
+            "description":[
+                "2012 Taipei Science fair - Honorable Mention",
+                "2012 Taipei class website contest"
+            ]
+        },
+        {
+            "time":"2005 - 2011",
+            "description":[
+                "2011 Taipei class website contest",
+                "2011 science fair - Honorable Mention",
+                "2010 science fair - Honorable Mention",
+                "2009 science fair - Honorable Mention"
+                
             ]
         }
     ]
