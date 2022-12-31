@@ -16,6 +16,10 @@
         {
             "name": "Blog",
             "link": "next-blog"    
+        },
+        {
+            "name": "Linktree",
+            "link": "https://linktr.ee/alanhc"   
         }
     ],
     "quote": "Patience is a key element of success.",
