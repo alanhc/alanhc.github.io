@@ -1,5 +1,10 @@
 {
-    "name": "Paper",
-    "description": "This is a collection of Paper NFTs.",
-    "image": "https://ipfs.io/ipfs/bafkreidfg4h6u5r35hztzgdwb5sg4tg2sy5xtt52wtlofnpeb4jwe6766i",
+    "title": "Thor",
+    "name": "Thor",
+    "type": "object",
+    "imageUrl": "ipfs://QmSg4AgCs6DSzKGYAHcqWzjoA5DzDsDDw1yYTWkBJHQJ6J",
+    "description": "Thor",
+    "id": 1,
+    "image": "ipfs://QmSg4AgCs6DSzKGYAHcqWzjoA5DzDsDDw1yYTWkBJHQJ6J",
+    "httpUrl": "https://ipfs.io/ipfs/QmSg4AgCs6DSzKGYAHcqWzjoA5DzDsDDw1yYTWkBJHQJ6J"
 }

@@ -1,5 +1,10 @@
 {
-    "name": "Rocks",
-    "description": "This is a collection of Rock NFTs.",
-    "image": "https://ipfs.io/ipfs/bafkreifvhjdf6ve4jfv6qytqtux5nd4nwnelioeiqx5x2ez5yrgrzk7ypi",
+    "title": "Captain America",
+    "name": "Captain America",
+    "type": "object",
+    "imageUrl": "ipfs://QmfDo3bMAza2VavMjtTs3yVqCZc4Adsb1aCFHN7txRhZyH",
+    "description": "Captain America",
+    "id": 0,
+    "image": "ipfs://QmfDo3bMAza2VavMjtTs3yVqCZc4Adsb1aCFHN7txRhZyH",
+    "httpUrl": "https://ipfs.io/ipfs/QmfDo3bMAza2VavMjtTs3yVqCZc4Adsb1aCFHN7txRhZyH"
 }
