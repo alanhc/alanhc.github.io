@@ -26,7 +26,7 @@ const Project = ({ metadata }: any) => {
         <>
             <button key={metadata.title} onClick={onOpen}>
                 <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'  >
-                    <NextImage width="600" height="500" layout="responsive" src={(metadata.image)?`/${metadata.image}`:"/image/github.png"} alt={metadata.image} />
+                    <NextImage width="600" height="500" layout="responsive" src={(metadata.image) ? `/${metadata.image}` : "/image/github.png"} alt={metadata.image} />
                     <Box p="6" >
                         <Box display="flex" mt="1" fontWeight="semibold" as="h3" lineHeight="tight" color="black">
                             {metadata.title}
@@ -40,7 +40,7 @@ const Project = ({ metadata }: any) => {
                         </Box>
                         <Box display="flex" mt="1">
                             {metadata.formattedPrice}
-                            {metadata.language.map((lan: string) => (
+                            {metadata.language.slice(0, 3).map((lan: string) => (
                                 <Box key={lan} as="span" color="gray" fontSize="sm">
                                     {lan} &nbsp;
                                 </Box>
@@ -59,14 +59,21 @@ const Project = ({ metadata }: any) => {
                     <ModalCloseButton />
                     <ModalBody>
 
-                        {metadata.modal.video && 
-                        <AspectRatio ratio={4/3}>
-                        <YouTube
-                            videoId={metadata.modal.video}
-                            opts={opts}
-                        />
-                        </AspectRatio>
+                        {metadata.modal.video &&
+                            <AspectRatio ratio={4 / 3}>
+                                <YouTube
+                                    videoId={metadata.modal.video}
+                                    opts={opts}
+                                />
+                            </AspectRatio>
+
                         }
+                        {metadata.modal.screenshot?.map((img: string, i: number) => (
+                           
+                                <NextImage key={i} width="400" height="300" layout="responsive" src={img} alt={img} />
+                    
+                        ))}
+
                         {metadata.modal.description}
 
                         <Flex>

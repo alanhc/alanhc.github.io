@@ -2,16 +2,20 @@
     "title": "hello",
     "social_links": [
         {
-            "name": "blog",
+            "name": "Medium",
             "link": "https://medium.com/@alanhc"
         },
         {
-            "name": "github",
+            "name": "Github",
             "link": "https://github.com/alanhc"
         },
         {
-            "name": "twitter",
-            "link": "https://twitter.com/alanhc316"
+            "name": "Linkedin",
+            "link": "https://www.linkedin.com/in/alanhc316/"
+        },
+        {
+            "name": "notes",
+            "link": "next-blog"    
         }
     ],
     "quote": "Patience is a key element of success.",
@@ -39,7 +43,7 @@
                     },
                     "first": "Ming Chuan University",
                     "second": "Computer and Communication Engineering",
-                    "description": ""
+                    "description": "Developer Student Club Lead"
                 }
             ]
         },
@@ -52,7 +56,7 @@
                     },
                     "first": "LINE",
                     "second": "Software Engineer Intern",
-                    "description": ""
+                    "description": "work with the KR colleague, using monorepo development to build scalable front-end, leading a team of 5 people to develop an NFT applications"
                 },
                 {
                     "time": {
@@ -119,6 +123,7 @@
                 "FARM stack",
                 "NextJS",
                 "PWA",
+                "Tezos",
                 "NodeJS",
                 "MVC",
                 "mongodb",
@@ -129,7 +134,18 @@
                 "Python",
                 "solidity",
                 "streamlit",
-                "example"
+                "Chrome Extension",
+                "tensorflow",
+                "Javascript",
+                "p5JS",
+                "socket",
+                "Java",
+                "Processing",
+                "OpenGL",
+                "C++",
+                "OpenCV",
+                "example",
+                "select"
             ]
         }
     ],
@@ -150,8 +166,8 @@
             ],
             "modal": {
                 "title": "Decentral Showroom",
-                "description": "Decentral Showroom...",
-                "demo": "https://dsr-team.github.io/DSR-Editor",
+                "description": "Enjoy the exhibition!",
+                "demo": "https://medium.com/@alanhc/decentral-showroom-ntu-dapp-term-project-ce947ea9c792",
                 "github": "https://github.com/DSR-Team",
                 "video": "7EPRiUR4XqM"
             }
@@ -167,14 +183,15 @@
             "language": [
                 "NextJS",
                 "PWA",
-                "NFT"
+                "NFT",
+                "Tezos"
             ],
             "modal": {
                 "title": "NFT Ticketing",
-                "description": "NFT Ticketing...",
+                "description": "An NFT Ticketing system based on Steganography and Homomorphic encryption",
                 "video": "ZYo51JMlp5Y",
                 "demo": "",
-                "github": ""
+                "github": "https://github.com/alanhc/MMS-final"
             }
         },
         {
@@ -192,9 +209,10 @@
             ],
             "modal": {
                 "title": "MCU-up",
-                "description": "MCU-up...",
-                "demo": "",
-                "github": ""
+                "description": "MCU-up is a review site using MVC pattern, using nodejs, express from scratch with Authentication, CRUD and Server-Side Rendering.",
+                "demo": "https://medium.com/@alanhc/%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92-5214e62aca80",
+                "github": "",
+                "screenshot":["image/mcu-up.webp"]
             }
         },
         {
@@ -211,8 +229,8 @@
             ],
             "modal": {
                 "title": "alanhc.github.io",
-                "description": "alanhc.github.io",
-                "demo": "",
+                "description": "It uses the SSG to speed up the page load and is better for SEO.",
+                "demo": "https://alanhc.github.io/",
                 "github": ""
             }
         },
@@ -230,7 +248,7 @@
             "modal": {
                 "title": "2022 NTU DApp (spring) Midterm Project",
                 "description": "prototype demo",
-                "demo": "",
+                "demo": "https://medium.com/@alanhc/%E4%BD%BF%E7%94%A8bloom-filter%E5%8F%8Aweb3-py%E4%BE%86%E5%81%9A%E7%96%AB%E8%8B%97%E8%AA%8D%E8%AD%89-ntu-dapp-%E6%9C%9F%E4%B8%ADprototype-4493ba5425e9",
                 "github": "",
                 "video": "oaXrKvUwzuU"
             }
@@ -242,30 +260,30 @@
                 "web"
             ],
             "language": [
-                "example"
+                "Chrome Extension"
             ],
             "modal": {
                 "title": "Fake News Hunter",
-                "description": "2020 Solution Challenge - Fake News Hunter - with introduction",
+                "description": "2020 Solution Challenge - Fake News Hunter",
                 "demo": "",
-                "github": "",
+                "github": "https://github.com/DSC-TW/SC-cofacts-extension",
                 "video": "JxxwyeFB45s"
             }
         },
         {
-            "title": "dino-posenet",
+            "title": "Posenet Chrome Dino(T-Rex Game)",
             "image": "",
             "tags": [
                 "web"
             ],
             "language": [
-                "example"
+                "tensorflow","Javascript","p5JS"
             ],
             "modal": {
                 "title": "dino-posenet",
-                "description": "dino-posenet demo",
+                "description": "Using Posenet and modify repo from source detecting human motions to control chrome dinosaurs.",
                 "demo": "",
-                "github": "",
+                "github": "https://github.com/alanhc/dino-posenet",
                 "video": "rE01xxdUTdY"
             }
         },
@@ -276,11 +294,11 @@
                 "web"
             ],
             "language": [
-                "example"
+                "socket", "p5JS"
             ],
             "modal": {
                 "title": "drum.io",
-                "description": "Interactive Media 2019 - Final project [ drum.io ]",
+                "description": "Won the First place in Interactive Technologies of 52 people. Won the Third place in a collective vote of 50 people. Using KNN algorithm to analyze the acceleration data from embedded device to make an air drum, and let everyone can battle online.",
                 "demo": "",
                 "github": "",
                 "video": "82d7E0uENcg"
@@ -293,11 +311,11 @@
                 "mobile"
             ],
             "language": [
-                "example"
+                "Java", "Processing"
             ],
             "modal": {
                 "title": "LANDING:PLANET",
-                "description": "Interactive Media 2019 - Midterm project [ LANDING:PLANET ]",
+                "description": "Won the Second place in a collective vote of 50 people. Using Java and \"Computer Graphics\" concepts to apply particle systems and physics simulations to space exploration games.",
                 "demo": "",
                 "github": "",
                 "video": "sISmhfmjx60"
@@ -310,7 +328,7 @@
                 "mobile"
             ],
             "language": [
-                "example"
+                "Unity"
             ],
             "modal": {
                 "title": "sea level rise",
@@ -327,7 +345,7 @@
                 "mobile"
             ],
             "language": [
-                "example"
+                "OpenGL", "C++", "OpenCV"
             ],
             "modal": {
                 "title": "GLUT Dancing robots",
@@ -376,22 +394,41 @@
         {
             "time":"2021 - 2023",
             "description":[
-                "A",
-                "B"
+                "2023 Graduate from National Taiwan University",
+                "2022 Software Engineer intership at LINE Corp"
             ]
         },
         {
             "time":"2017 - 2021",
             "description":[
-                "A",
-                "B"
+                "2021 Graduate Research Excellent Awards",
+                "2019 Intel Andy Grove Scholarship",
+                "2019-2021 Developer Student Club Lead",
+                "2018, 2019 Team captain at Microprocessor App Design Contest"
             ]
         },
         {
             "time":"2014 - 2017",
             "description":[
-                "A",
-                "B"
+                "2015, 2016 Team captain at Interschool Robot Competition and won the first & third place",
+                "2015 English writing contest - 3rd place"
+            ]
+        },
+        {
+            "time":"2011 - 2014",
+            "description":[
+                "2012 Taipei Science fair - Honorable Mention",
+                "2012 Taipei class website contest"
+            ]
+        },
+        {
+            "time":"2005 - 2011",
+            "description":[
+                "2011 Taipei class website contest",
+                "2011 science fair - Honorable Mention",
+                "2010 science fair - Honorable Mention",
+                "2009 science fair - Honorable Mention"
+                
             ]
         }
     ]

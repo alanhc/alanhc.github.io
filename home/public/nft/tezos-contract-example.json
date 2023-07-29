@@ -1,0 +1,8 @@
+{
+    "name": "NFT marketplace tutorial",
+    "description": "NFT marketplace",
+    "version": "1.0.0",
+    "interfaces": [
+        "TZIP-12"
+    ]
+}

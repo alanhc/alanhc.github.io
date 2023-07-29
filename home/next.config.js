@@ -5,7 +5,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: 'akamai',
-    path: '',
+    path: '.',
   },
   env:{
     baseUrl: isProd?  "https://alanhc.github.io" : "http://localhost:3000",

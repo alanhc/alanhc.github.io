@@ -4,6 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import Script from 'next/script';
 import ProfileProvider from '../context/portfolioContext';
 
+import '../styles.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 

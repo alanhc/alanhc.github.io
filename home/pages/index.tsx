@@ -103,23 +103,10 @@ const Home: NextPage = ({ portfolio }: any) => {
           </HStack>
         </Center>
       </Card>
+      
       <Center mt="10">
-        <Heading size='xl' color='blue.500'>Contact</Heading>
+        <Heading size='xl' color='blue.500'>History</Heading>
       </Center>
-      <Container>
-        <HStack mt="5" >
-          <Textarea
-            value={msg}
-            placeholder='write something to me...'
-            onChange={handleInputChange}
-            size='sm'
-          />
-          <Button onClick={() => router.push(`mailto:alanhc.tseng1999@gmail.com?subject=hello,from alanhc.github.io&body=${msg}`)}>
-            Send
-          </Button>
-        </HStack>
-      </Container>
-
       <Container mt="5">
         <Card variant="filled">
           <CardBody>
@@ -148,6 +135,22 @@ const Home: NextPage = ({ portfolio }: any) => {
             </Stack>
           </CardBody>
         </Card>
+      </Container>
+      <Center mt="10">
+        <Heading size='xl' color='blue.500'>Contact</Heading>
+      </Center>
+      <Container>
+        <HStack mt="5" >
+          <Textarea
+            value={msg}
+            placeholder='write something to me...'
+            onChange={handleInputChange}
+            size='sm'
+          />
+          <Button onClick={() => router.push(`mailto:alanhc.tseng1999@gmail.com?subject=hello,from alanhc.github.io&body=${msg}`)}>
+            Send
+          </Button>
+        </HStack>
       </Container>
 
     </Layout>
