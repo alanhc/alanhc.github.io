@@ -3,7 +3,7 @@ import { NextPage } from "next"
 import { promises as fs } from 'fs';
 import { getSortedPostsData } from '../../lib/posts';
 import NextLink from 'next/link';
-import { Container, Link } from "@chakra-ui/react";
+import { Container, Divider, Link } from "@chakra-ui/react";
 import Date from '../../components/Date';
 import BlogLayout from "../../components/BlogLayout";
 import { Flex, Tag, Button, SimpleGrid, Box, Text, StackDivider, Stack, Heading, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
@@ -15,13 +15,12 @@ import {
     UnorderedList,
 } from '@chakra-ui/react'
 const Blog: NextPage = ({ allPostsData }: any) => {
-
     return (
-
         <Container>
+            <Heading>Notes</Heading>
+    
             <Stack divider={<StackDivider />} >
                 {allPostsData.map(({ id, date, title, tag }: any) => (
-
                     <Box key={id}>
                         <NextLink href={`/next-blog/posts/${id}`}>
                             <a>
@@ -34,14 +33,10 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                                 ))}
                             </a>
                         </NextLink>
-
-
                     </Box>
                 ))}
-
             </Stack>
         </Container>
-
     )
 }
 
