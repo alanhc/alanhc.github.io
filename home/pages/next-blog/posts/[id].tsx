@@ -3,17 +3,17 @@ import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Head from 'next/head';
 import Date from '../../../components/Date';
 import utilStyles from '../../styles/utils.module.css';
-import { Container, Heading, Link } from "@chakra-ui/react";
+import { Container, Heading, Link, Code, useClipboard, Flex, Button } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { CSSProperties } from "react";
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from "react-markdown";
-
-const components = {
-  code: ({ node, inline, className, children, ...props }:any) => {
-    const match = /language-(\w+)/.exec(className || '');
-    return !inline && match ? (
+function CodeBlock({ node, inline, className, children, ...props }: any)  {
+  const { onCopy, value, setValue, hasCopied } = useClipboard(children);
+  const match = /language-(\w+)/.exec(className || '');
+  return !inline && match ? (
+    <Flex mb={2}>
       <SyntaxHighlighter
         style={darcula as { [key: string]: CSSProperties }}
         language={match[1]}
@@ -22,12 +22,19 @@ const components = {
       >
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>
-    ) : (
-      <code className={className} {...props}>
+      <Button ml={2} onClick={onCopy}colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
+    </Flex>
+  ) : (
+    <Flex mb={2}>
+      <Code {...props} colorScheme="blackAlpha">
         {children}
-      </code>
-    );
-  },
+      </Code>
+      <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
+    </Flex>
+  );
+}
+const components = {
+  code: CodeBlock,
 };
 
 export async function getStaticProps({ params }: any) {
@@ -49,6 +56,8 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }: any) {
+
+
   return (
     <Container>
       <Head>
