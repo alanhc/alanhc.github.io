@@ -18,7 +18,7 @@ tag: ['notes', 'blockchain']
     Commitment: confirmed
     ```
 
-5. 拿測試token: solana airdrop 2
+5. 拿測試token: `solana airdrop 2`
 6. sugar launch
     - <https://nft.storage/manage/>
     <https://github.com/metaplex-foundation/sugar>
