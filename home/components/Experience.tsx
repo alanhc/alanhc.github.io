@@ -9,7 +9,7 @@ const Experience = ({ experience }: any) => {
             {
                 experience.map((exp: any, i:number) => (
 
-                    <Card maxW='full' key={i} variant="filled">
+                    <Card maxW='full' key={i} variant="unstyled">
                         <CardBody>
                             <Stack mt='6' spacing='3'>
                                 <Heading size='xl' color='blue.500'>{Object.keys(exp)[0]}</Heading>

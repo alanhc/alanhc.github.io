@@ -5,13 +5,13 @@ tag: ['notes', 'ipfs']
 ---
 # store IPFS
 1. import package
-```
+```js
 import { NFTStorage, File, Blob } from 'nft.storage'
 const API_KEY = process.env.NFT_STORAGE_API_KEY
 const client = new NFTStorage({ token: API_KEY })
 ```
 2. 
-```
+```js
 function dataURItoBlob(dataURI) {
     // convert base64 to raw binary data held in a string
     // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
@@ -32,7 +32,7 @@ function dataURItoBlob(dataURI) {
 }
 ```
 3. 
-```
+```js
     ...
     const [dataUri, setDataUri] = useState("")
     const [ipfs, setIpfs] = useState("")
@@ -64,7 +64,7 @@ function dataURItoBlob(dataURI) {
 
 ```
 4. 
-```
+```js
 return (
         <Layout>
            ...
