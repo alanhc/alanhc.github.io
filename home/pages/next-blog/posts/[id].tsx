@@ -3,13 +3,19 @@ import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Head from 'next/head';
 import Date from '../../../components/Date';
 import utilStyles from '../../styles/utils.module.css';
-import { Container, Heading, Link, Code, useClipboard, Flex, Button } from "@chakra-ui/react";
+import { Tag, Container, Heading, Link, Code, useClipboard, Flex, Button, HStack, Textarea, Divider } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { CSSProperties } from "react";
+import { CSSProperties, Children } from "react";
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from "react-markdown";
-function CodeBlock({ node, inline, className, children, ...props }: any)  {
+import remarkToc from 'remark-toc';
+import remarkSlug from 'remark-slug';
+import router from "next/router";
+import { useRouter } from 'next/router';
+import { useContext, useEffect, useState } from 'react'
+
+function CodeBlock({ node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || '');
   return !inline && match ? (
@@ -22,7 +28,7 @@ function CodeBlock({ node, inline, className, children, ...props }: any)  {
       >
         {String(children).replace(/\n$/, '')}
       </SyntaxHighlighter>
-      <Button ml={2} onClick={onCopy}colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
+      <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
     </Flex>
   ) : (
     <Flex mb={2}>
@@ -33,8 +39,24 @@ function CodeBlock({ node, inline, className, children, ...props }: any)  {
     </Flex>
   );
 }
+const ListRenderer = ({ children }:any) => (
+  <ul style={{ marginLeft: '0px' }}>{children}</ul>
+);
+
+const ListItemRenderer = ({ children }:any) => (
+  <li style={{ marginLeft: '20px' }}>{children}</li>
+);
 const components = {
   code: CodeBlock,
+  h1: ({ node, ...props }: any) => <Heading as="h1" size='xl' {...props} />,
+  h2: ({ node, ...props }: any) => <Heading as="h2" size='lg' {...props} />,
+  h3: ({ node, ...props }: any) => <Heading as="h3" size='md' {...props} />,
+  h4: ({ node, ...props }: any) => <Heading as="h4" size='sm' {...props} />,
+  h5: ({ node, ...props }: any) => <Heading as="h5" size='xs' {...props} />,
+  a: ({ node, ...props }: any) => <Link color='blue.500' {...props}/>,
+  ul: ListRenderer,
+  ol: ListRenderer,
+  li: ListItemRenderer,
 };
 
 export async function getStaticProps({ params }: any) {
@@ -68,13 +90,43 @@ export default function Post({ postData }: any) {
         <div>
           <Date dateString={postData.date} />
         </div>
-        <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
+        <Divider />
+        {/*TOC*/}
+        <Container>
+        <ReactMarkdown components={components} >
+          {postData.tocMarkdown}
+        </ReactMarkdown>
+        </Container>
+        <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]}
+        >
           {postData.contentHtml}
         </ReactMarkdown>
+
+
+        <Container mt="5">
+          {postData.tag.map((t: string, i: number) => (
+            <Tag key={i}>{t}</Tag>
+          ))}
+          {/*留言板
+          <HStack mt={2}>
+            <Textarea
+              value={msg}
+              placeholder='write something to me...'
+              onChange={handleInputChange}
+              size='sm'
+            />
+            <Button onClick={() => router.push(`mailto:alanhc.tseng1999@gmail.com?subject=hello,from alanhc.github.io &body=${msg} %0D%0A${window.location.href}`)}>
+              Send
+            </Button>
+          </HStack>
+          */}
+        </Container>
         <Link>
-          <a href="javascript:history.back()">👈Go Back</a>
+          <a onClick={() => router.push("/next-blog")}>👈Go Back</a>
         </Link>
       </article>
+
+
     </Container>
   );
 }

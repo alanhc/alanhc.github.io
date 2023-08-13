@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 import { remark } from 'remark';
 import html from 'remark-html';
-
+import markdownToc from 'markdown-toc';
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getSortedPostsData() {
@@ -67,7 +67,10 @@ export function getAllPostIds() {
   
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+   
     const contentHtml = matterResult.content
+    const tocMarkdown = markdownToc(contentHtml).content;
+
     /*
     // Use remark to convert markdown into HTML string
     const processedContent = await remark()
@@ -79,6 +82,7 @@ export function getAllPostIds() {
     return {
       id,
       contentHtml,
+      tocMarkdown,
       ...matterResult.data,
     };
   }

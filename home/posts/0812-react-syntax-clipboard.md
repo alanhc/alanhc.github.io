@@ -74,6 +74,7 @@ const components = {
   code: CodeBlock,
 };
 ```
+
 ![](https://hackmd.io/_uploads/ryNnKSrh3.png)
 
 ## ref:

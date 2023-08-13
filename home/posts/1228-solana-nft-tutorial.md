@@ -7,7 +7,7 @@ tag: ['notes', 'blockchain']
 
 1. 下載 solana cli: `sh -c "$(curl -sSfL https://release.solana.com/v1.14.11/install)"`
 2. 新增帳號 `solana-keygen new --outfile ~/.config/solana/devnet.json`
-3. 設定 devnet `solana config set --url <https://metaplex.devnet.rpcpool.com/>
+3. 設定 devnet `solana config set --url <https://metaplex.devnet.rpcpool.com/>`
 4. 檢查設定 `solana config get`
 
     ```
