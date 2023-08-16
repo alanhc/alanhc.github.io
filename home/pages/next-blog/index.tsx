@@ -13,7 +13,7 @@ import {
     ListItem,
     ListIcon,
     OrderedList,
-    UnorderedList, Input
+    UnorderedList, Input, TagCloseButton, TagLabel
 } from '@chakra-ui/react'
 
 import {
@@ -25,15 +25,43 @@ import {
 } from '@chakra-ui/react'
 import { useState } from "react";
 const Blog: NextPage = ({ allPostsData }: any) => {
+
+    const tagsSet = new Set();
+
+    allPostsData.forEach(({ tag }: any) => {
+        tag.forEach((t: string) => {
+            tagsSet.add(t);
+        });
+    });
+    const tagsArray = Array.from(tagsSet) as string[];
+
+    const distinctTags = Array.from(tagsSet);
+
+    console.log(tagsSet)
     const [search, setSearch] = useState("")
     const search_text = ({ content, tag, title }: any) => {
-        return content.includes(search) || tag.includes(search) || title.includes(search)
+        return content.includes(search) || title.includes(search) ||  tag.includes(search)
     }
     return (
         <Container>
 
             <Heading>Notes</Heading>
-            <Input placeholder='👀' onChange={(event) => setSearch(event.target.value)} />
+            <Input placeholder="👀" value={search} onChange={(event) => setSearch(event.target.value)} />
+            <Box mt={2} mb={2}>
+                {distinctTags.map((t, index) => (
+                    <Link
+                        size='md'
+                        key={index}
+                        borderRadius='full'
+                        variant='solid'
+                        colorScheme='blue'
+                        onClick={() => setSearch(t)}
+                    >   
+                        {(index !== distinctTags.length - 1) ? t + " | " : t}
+                    </Link>
+                ))}
+            </Box>
+
             {(!search) ?
                 <Stack divider={<StackDivider />} >
 
@@ -56,7 +84,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                     {allPostsData.filter(search_text).map(({ id, date, title, tag, content }: any) => (
 
 
-                        <AccordionItem key = {id}>
+                        <AccordionItem key={id}>
                             <h2>
                                 <AccordionButton>
                                     <Box as="span" flex='1' textAlign='left'>
@@ -70,8 +98,8 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                                     <Tag key={i} ml="1">{t}</Tag>
                                 ))}<br />
                                 <NextLink href={`/next-blog/posts/${id}`}>
-                                <a>
-                                    <ReactMarkdown className="no_newline">{content}</ReactMarkdown>
+                                    <a>
+                                        <ReactMarkdown className="no_newline">{content}</ReactMarkdown>
                                     </a>
                                 </NextLink>
                             </AccordionPanel>
