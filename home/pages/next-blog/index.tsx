@@ -56,7 +56,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                     {allPostsData.filter(search_text).map(({ id, date, title, tag, content }: any) => (
 
 
-                        <AccordionItem>
+                        <AccordionItem key = {id}>
                             <h2>
                                 <AccordionButton>
                                     <Box as="span" flex='1' textAlign='left'>
