@@ -6,39 +6,39 @@ tag: ['notes', 'react']
 # react syntax highlighter + clipboard
 
 1. 先去讀 postsDirectory 的markdownfile交給matter將markdown轉成object
-```md
----
-title: Hello
-slug: home
----
-# Hello world!
-```
-```js
-{
-  content: '# Hello world!',
-  data: { 
-    title: 'Hello', 
-    slug: 'home' 
+  ```md
+  ---
+  title: Hello
+  slug: home
+  ---
+  # Hello world!
+  ```
+  ```js
+  {
+    content: '# Hello world!',
+    data: { 
+      title: 'Hello', 
+      slug: 'home' 
+    }
   }
-}
-```
+  ```
 
-```js
-const fullPath = path.join(postsDirectory, `${id}.md`);
-const fileContents = fs.readFileSync(fullPath, 'utf8');
-const matterResult = matter(fileContents);
-...
-```
+  ```js
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const matterResult = matter(fileContents);
+  ...
+  ```
 2. 將matterResult的markdown語法顯示出來
-註：remarkGfm 讓他可以接受github的神奇markdown語法
-```jsx
-import remarkGfm from 'remark-gfm'
-import ReactMarkdown from "react-markdown";
-...
-<ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
-    {postData.contentHtml}
-</ReactMarkdown>
-```
+  註：remarkGfm 讓他可以接受github的神奇markdown語法
+  ```jsx
+  import remarkGfm from 'remark-gfm'
+  import ReactMarkdown from "react-markdown";
+  ...
+  <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
+      {postData.contentHtml}
+  </ReactMarkdown>
+  ```
 3. 讓產生出來的程式需要有顏色的語法提示及複製功能
 註：這裡是透過指定ReactMarkdown的components及使用chakra ui的useClipboard hook，如果codeblock有指定的程式語言就使用react-syntax-highlighter將他顯示語法提示
 ```jsx

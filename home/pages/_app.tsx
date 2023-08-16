@@ -9,6 +9,7 @@ import ProfileProvider from '../context/portfolioContext';
 
 
 const theme = extendTheme({
+
   components: {
   },
 })

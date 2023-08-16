@@ -14,6 +14,7 @@ import remarkSlug from 'remark-slug';
 import router from "next/router";
 import { useRouter } from 'next/router';
 import { useContext, useEffect, useState } from 'react'
+import rehypeRaw from "rehype-raw";
 
 function CodeBlock({ node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
@@ -42,10 +43,13 @@ function CodeBlock({ node, inline, className, children, ...props }: any) {
 const ListRenderer = ({ children }:any) => (
   <ul style={{ marginLeft: '0px' }}>{children}</ul>
 );
-
+const OrderListRenderer = ({ children }:any) => (
+  <ol style={{ marginLeft: '0px' }}>{children}</ol>
+);
 const ListItemRenderer = ({ children }:any) => (
   <li style={{ marginLeft: '20px' }}>{children}</li>
 );
+
 const components = {
   code: CodeBlock,
   h1: ({ node, ...props }: any) => <Heading as="h1" size='xl' {...props} />,
@@ -53,9 +57,19 @@ const components = {
   h3: ({ node, ...props }: any) => <Heading as="h3" size='md' {...props} />,
   h4: ({ node, ...props }: any) => <Heading as="h4" size='sm' {...props} />,
   h5: ({ node, ...props }: any) => <Heading as="h5" size='xs' {...props} />,
-  a: ({ node, ...props }: any) => <Link color='blue.500' {...props}/>,
+  a: ({ node, ...props }: any) => <Link  {...props}/>,
+
+};
+const components_toc = {
+  code: CodeBlock,
+  h1: ({ node, ...props }: any) => <Heading as="h1" size='xl' {...props} />,
+  h2: ({ node, ...props }: any) => <Heading as="h2" size='lg' {...props} />,
+  h3: ({ node, ...props }: any) => <Heading as="h3" size='md' {...props} />,
+  h4: ({ node, ...props }: any) => <Heading as="h4" size='sm' {...props} />,
+  h5: ({ node, ...props }: any) => <Heading as="h5" size='xs' {...props} />,
+  a: ({ node, ...props }: any) => <Link  {...props}/>,
   ul: ListRenderer,
-  ol: ListRenderer,
+  ol: OrderListRenderer,
   li: ListItemRenderer,
 };
 
@@ -93,12 +107,11 @@ export default function Post({ postData }: any) {
         <Divider />
         {/*TOC*/}
         <Container>
-        <ReactMarkdown components={components} >
+        <ReactMarkdown components={components_toc} >
           {postData.tocMarkdown}
         </ReactMarkdown>
         </Container>
-        <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]}
-        >
+        <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
           {postData.contentHtml}
         </ReactMarkdown>
 
