@@ -35,12 +35,12 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     });
     const tagsArray = Array.from(tagsSet) as string[];
 
-    const distinctTags = Array.from(tagsSet);
+
 
     console.log(tagsSet)
     const [search, setSearch] = useState("")
     const search_text = ({ content, tag, title }: any) => {
-        return content.includes(search) || title.includes(search) ||  tag.includes(search)
+        return content.includes(search) || title.includes(search) || tag.includes(search)
     }
     return (
         <Container>
@@ -48,7 +48,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
             <Heading>Notes</Heading>
             <Input placeholder="👀" value={search} onChange={(event) => setSearch(event.target.value)} />
             <Box mt={2} mb={2}>
-                {distinctTags.map((t, index) => (
+                {tagsArray.map((t: string, index) => (
                     <Link
                         size='md'
                         key={index}
@@ -56,10 +56,13 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                         variant='solid'
                         colorScheme='blue'
                         onClick={() => setSearch(t)}
-                    >   
-                        {(index !== distinctTags.length - 1) ? t + " | " : t}
+                    >
+                        <span>
+                            {(index !== distinctTags.length - 1) ? t + " | " : t}
+                        </span>
                     </Link>
                 ))}
+
             </Box>
 
             {(!search) ?
