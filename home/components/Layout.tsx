@@ -1,7 +1,6 @@
 
-import { Stack, HStack, VStack, Divider } from '@chakra-ui/react'
-import { Heading, Container, Box } from '@chakra-ui/react'
-import { Center, Square, Circle } from '@chakra-ui/react'
+import { Stack, HStack, VStack, Divider, Container, Center } from '@chakra-ui/react'
+
 type AppProps = {
     children?: React.ReactNode;
 };

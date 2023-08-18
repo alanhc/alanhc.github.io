@@ -1,6 +1,7 @@
 ---
-title: 'My first Post'
+title: 'Hello World'
 date: '2022-12-22'
-tag: ['notes']
+tag: []
 ---
-## hello world
+# Hi! 😃
+hello world!

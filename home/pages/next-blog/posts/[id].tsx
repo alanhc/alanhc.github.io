@@ -1,9 +1,9 @@
-import BlogLayout from "../../../components/BlogLayout";
+import BlogLayout from "../../../components/TestLayout";
 import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Head from 'next/head';
 import Date from '../../../components/Date';
 import utilStyles from '../../styles/utils.module.css';
-import { Tag, Container, Heading, Link, Code, useClipboard, Flex, Button, HStack, Textarea, Divider } from "@chakra-ui/react";
+import { Tag, Container, Heading, Link, Code, useClipboard, Flex, Button, HStack, Textarea, Divider, UnorderedList, OrderedList, ListItem } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { CSSProperties, Children } from "react";
@@ -41,13 +41,13 @@ function CodeBlock({ node, inline, className, children, ...props }: any) {
   );
 }
 const ListRenderer = ({ children }:any) => (
-  <ul style={{ marginLeft: '0px' }}>{children}</ul>
+  <UnorderedList>{children}</UnorderedList>
 );
 const OrderListRenderer = ({ children }:any) => (
-  <ol style={{ marginLeft: '0px' }}>{children}</ol>
+  <OrderedList>{children}</OrderedList>
 );
 const ListItemRenderer = ({ children }:any) => (
-  <li style={{ marginLeft: '20px' }}>{children}</li>
+  <ListItem >{children}</ListItem>
 );
 
 const components = {
@@ -58,16 +58,9 @@ const components = {
   h4: ({ node, ...props }: any) => <Heading as="h4" size='sm' {...props} />,
   h5: ({ node, ...props }: any) => <Heading as="h5" size='xs' {...props} />,
   a: ({ node, ...props }: any) => <Link  {...props}/>,
-
 };
 const components_toc = {
-  code: CodeBlock,
-  h1: ({ node, ...props }: any) => <Heading as="h1" size='xl' {...props} />,
-  h2: ({ node, ...props }: any) => <Heading as="h2" size='lg' {...props} />,
-  h3: ({ node, ...props }: any) => <Heading as="h3" size='md' {...props} />,
-  h4: ({ node, ...props }: any) => <Heading as="h4" size='sm' {...props} />,
-  h5: ({ node, ...props }: any) => <Heading as="h5" size='xs' {...props} />,
-  a: ({ node, ...props }: any) => <Link  {...props}/>,
+  ...components,
   ul: ListRenderer,
   ol: OrderListRenderer,
   li: ListItemRenderer,

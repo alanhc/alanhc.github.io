@@ -1,9 +1,8 @@
 ---
-title: '0109-ipfs-upload'
+title: '實作NFT mint的前端'
 date: '2023-01-09'
-tag: ['notes', 'ipfs']
+tag: ['notes', 'ipfs', 'ethereum']
 ---
-# store IPFS
 1. import package
 ```js
 import { NFTStorage, File, Blob } from 'nft.storage'
@@ -61,7 +60,6 @@ function dataURItoBlob(dataURI) {
         }
         upload_ipfs()
     }
-
 ```
 4. 
 ```js
@@ -75,3 +73,4 @@ return (
         </Layout>
     )
 ```
+- https://github.com/alanhc/aka-ticket/blob/main/frontend/pages/event/index.js

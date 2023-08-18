@@ -1,7 +1,7 @@
 ---
-title: 'back-up crawler'
+title: '三種使用Python爬取網頁的方法'
 date: '2023-08-13'
-tag: ['notes', 'crawler']
+tag: ['notes', 'crawler', 'mcu-up']
 ---
 # back-up crawler
 
@@ -65,3 +65,5 @@ urls_courses = [
 loop = asyncio.get_event_loop()
 results = loop.run_until_complete(fetch_all(urls_courses))
 ```
+## link
+- https://github.com/alanhc/back-up

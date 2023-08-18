@@ -3,7 +3,7 @@ import { NextPage } from "next"
 import { promises as fs } from 'fs';
 import { getSortedPostsData } from '../../lib/posts';
 import NextLink from 'next/link';
-import { Container, Divider, Link } from "@chakra-ui/react";
+import { Container, Divider, Link, position } from "@chakra-ui/react";
 import Date from '../../components/Date';
 import BlogLayout from "../../components/BlogLayout";
 import ReactMarkdown from "react-markdown";
@@ -24,6 +24,7 @@ import {
     AccordionIcon,
 } from '@chakra-ui/react'
 import { useState } from "react";
+import Layout from "../../components/TestLayout";
 const Blog: NextPage = ({ allPostsData }: any) => {
 
     const tagsSet = new Set();
@@ -43,12 +44,12 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         return content.includes(search) || title.includes(search) || tag.includes(search)
     }
     return (
-        <Container>
+        <BlogLayout>
 
-            <Heading>Notes</Heading>
+
             <Input placeholder="👀" value={search} onChange={(event) => setSearch(event.target.value)} />
             <Box mt={2} mb={2}>
-                {tagsArray.map((t: string, index) => (
+                {tagsArray.sort().map((t: string, index) => (
                     <Link
                         size='md'
                         key={index}
@@ -58,7 +59,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                         onClick={() => setSearch(t)}
                     >
                         <span>
-                            {(index !== distinctTags.length - 1) ? t + " | " : t}
+                            {(index !== tagsArray.length - 1) ? t + " | " : t}
                         </span>
                     </Link>
                 ))}
@@ -69,19 +70,25 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                 <Stack divider={<StackDivider />} >
 
                     {allPostsData.map(({ id, date, title, tag, content }: any) => (
-                        <Box key={id}>
-                            <NextLink href={`/next-blog/posts/${id}`}>
-                                <a>
+
+                        <NextLink key={id} href={`/next-blog/posts/${id}`}>
+                            <a>
+                                <Box >
                                     📍{title}
                                     {" - "}
-                                    <small>{date}</small>
 
                                     {tag.map((t: string, i: number) => (
-                                        <Tag key={i} ml="1">{t}</Tag>
+                                        <small key={i}>{t} {i !== tag.length - 1 && ","}</small>
+
                                     ))}
-                                </a>
-                            </NextLink>
-                        </Box>
+
+                                    <div style={{ float: "right" }}>
+                                        <small >{date}</small>
+                                    </div>
+                                </Box>
+                            </a>
+                        </NextLink>
+
                     ))}
                 </Stack> : <Accordion allowToggle>
                     {allPostsData.filter(search_text).map(({ id, date, title, tag, content }: any) => (
@@ -111,7 +118,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 
                 </Accordion>
             }
-        </Container>
+        </BlogLayout>
     )
 }
 
