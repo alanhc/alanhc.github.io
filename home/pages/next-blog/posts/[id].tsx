@@ -15,6 +15,8 @@ import router from "next/router";
 import { useRouter } from 'next/router';
 import { useContext, useEffect, useState } from 'react'
 import rehypeRaw from "rehype-raw";
+import NextLink from 'next/link';
+
 
 function CodeBlock({ node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
@@ -40,24 +42,38 @@ function CodeBlock({ node, inline, className, children, ...props }: any) {
     </Flex>
   );
 }
-const ListRenderer = ({ children }:any) => (
+function SectionBlock({ node, inline, className, children, id, ...props }: any) {
+
+  const router = useRouter()
+  const { onCopy, value, setValue, hasCopied } = useClipboard("https://alanhc.github.io" + router.asPath + "#" + children);
+  const [isHovering, setIsHovering] = useState(false);
+  return (
+    <Link onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+
+      <Heading  {...props}>
+        {children} {isHovering&&"🔗"}
+      </Heading>
+    </Link>
+  );
+}
+const ListRenderer = ({ children }: any) => (
   <UnorderedList>{children}</UnorderedList>
 );
-const OrderListRenderer = ({ children }:any) => (
+const OrderListRenderer = ({ children }: any) => (
   <OrderedList>{children}</OrderedList>
 );
-const ListItemRenderer = ({ children }:any) => (
+const ListItemRenderer = ({ children }: any) => (
   <ListItem >{children}</ListItem>
 );
 
 const components = {
   code: CodeBlock,
-  h1: ({ node, ...props }: any) => <Heading as="h1" size='xl' {...props} />,
-  h2: ({ node, ...props }: any) => <Heading as="h2" size='lg' {...props} />,
-  h3: ({ node, ...props }: any) => <Heading as="h3" size='md' {...props} />,
-  h4: ({ node, ...props }: any) => <Heading as="h4" size='sm' {...props} />,
-  h5: ({ node, ...props }: any) => <Heading as="h5" size='xs' {...props} />,
-  a: ({ node, ...props }: any) => <Link  {...props}/>,
+  h1: ({ node, ...props }: any) => <SectionBlock as="h1" size='xl' {...props} />,
+  h2: ({ node, ...props }: any) => <SectionBlock as="h2" size='lg' {...props} />,
+  h3: ({ node, ...props }: any) => <SectionBlock as="h3" size='md' {...props} />,
+  h4: ({ node, ...props }: any) => <SectionBlock as="h4" size='sm' {...props} />,
+  h5: ({ node, ...props }: any) => <SectionBlock as="h5" size='xs' {...props} />,
+  a: ({ node, ...props }: any) => <Link  {...props} />,
 };
 const components_toc = {
   ...components,
@@ -100,9 +116,9 @@ export default function Post({ postData }: any) {
         <Divider />
         {/*TOC*/}
         <Container>
-        <ReactMarkdown components={components_toc} >
-          {postData.tocMarkdown}
-        </ReactMarkdown>
+          <ReactMarkdown components={components_toc} >
+            {postData.tocMarkdown}
+          </ReactMarkdown>
         </Container>
         <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
           {postData.contentHtml}
