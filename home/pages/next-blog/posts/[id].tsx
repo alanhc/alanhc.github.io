@@ -17,6 +17,7 @@ import { useContext, useEffect, useState } from 'react'
 import rehypeRaw from "rehype-raw";
 import NextLink from 'next/link';
 import Script from "next/script";
+import rehypePrism from 'rehype-prism-plus';
 
 function CodeBlock({ language, node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
@@ -123,7 +124,7 @@ export default function Post({ postData }: any) {
 
         </UnorderedList>
         {/*正文*/}
-        <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
+        <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm]} rehypePlugins={[rehypeRaw]}>
           {postData.contentHtml}
         </ReactMarkdown>
         <Script

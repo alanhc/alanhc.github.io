@@ -7,6 +7,10 @@ import { extendTheme } from "@chakra-ui/react"
 import Script from 'next/script';
 import ProfileProvider from '../context/portfolioContext';
 
+import 'nprogress/nprogress.css';
+import { useRouter } from 'next/router'; 
+import NProgress from 'nprogress'; 
+import { useEffect } from 'react';
 
 const theme = extendTheme({
 
@@ -14,7 +18,14 @@ const theme = extendTheme({
   },
 })
 function MyApp({ Component, pageProps }: AppProps) {
-
+  const router = useRouter();
+  // Integrate nprogress
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => NProgress.start());
+    router.events.on('routeChangeComplete', () => NProgress.done());
+    router.events.on('routeChangeError', () => NProgress.done());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
   //console.log(GA_MEASUREMENT_ID)
   return (

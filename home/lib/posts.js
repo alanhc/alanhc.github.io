@@ -72,7 +72,7 @@ export function getAllPostIds() {
    
     const contentHtml = matterResult.content
     const tocMarkdown = await markdownToc(contentHtml);
-    console.log(tocMarkdown,"======")
+    //console.log(tocMarkdown,"======")
     /*
     // Use remark to convert markdown into HTML string
     const processedContent = await remark()
