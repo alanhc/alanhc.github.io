@@ -44,7 +44,7 @@ function CodeBlock({ language, node, inline, className, children, ...props }: an
         </SyntaxHighlighter>
         <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
       </Flex>
-    )
+    );
   }
 
 

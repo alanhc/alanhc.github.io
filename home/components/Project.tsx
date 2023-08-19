@@ -1,5 +1,5 @@
 import { Box, Badge, useDisclosure, Button, VStack, HStack, AspectRatio } from "@chakra-ui/react";
-import NextImage from 'next/image'
+import NextImage from "next/legacy/image"
 import {
     Modal,
     ModalOverlay,

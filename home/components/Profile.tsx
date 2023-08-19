@@ -1,5 +1,5 @@
 import {Box,Image,useDisclosure,Link, Text, Container, Tooltip, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Heading, AspectRatio} from '@chakra-ui/react'
-import NextImage from 'next/image';
+import NextImage from "next/legacy/image";
 const Profile = ({ portfolio }: any) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
