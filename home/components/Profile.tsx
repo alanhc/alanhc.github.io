@@ -1,5 +1,6 @@
 import {Box,Image,useDisclosure,Link, Text, Container, Tooltip, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Button, Heading, AspectRatio} from '@chakra-ui/react'
 import NextImage from "next/legacy/image";
+import NextLink from 'next/link';
 const Profile = ({ portfolio }: any) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
@@ -40,7 +41,7 @@ const Profile = ({ portfolio }: any) => {
         <Heading>Alan Tseng</Heading>
         <Text fontSize='xl'>
           {portfolio.social_links.map((social: any, i: number) => (
-            <Link key={i} color='blue.500' href={social.link}>
+            <Link as={NextLink} key={i} color='blue.500' href={social.link}>
               {social.name} {(i + 1 < portfolio.social_links.length) ? " | " : ""}
             </Link>
           ))}

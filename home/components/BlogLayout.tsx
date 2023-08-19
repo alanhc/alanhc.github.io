@@ -14,15 +14,15 @@ const BlogLayout = ({ children }: AppProps) => {
 
             <Heading>
                 {navigation.map((l: object, index: number) => (
-                    <NextLink key={index} href={Object.values(l)[0]} passHref legacyBehavior>
-                        <Link>
+                
+                        <Link key={index} as={NextLink}href={Object.values(l)[0]}>
 
                      
                                 {Object.keys(l)}  {index !== navigation.length - 1 && " · "}
                 
 
                         </Link>
-                    </NextLink>
+
                 ))}
             </Heading>
 

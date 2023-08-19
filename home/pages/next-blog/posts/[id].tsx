@@ -74,7 +74,7 @@ const components = {
   h3: ({ node, ...props }: any) => <SectionBlock as="h3" size='md' {...props} />,
   h4: ({ node, ...props }: any) => <SectionBlock as="h4" size='sm' {...props} />,
   h5: ({ node, ...props }: any) => <SectionBlock as="h5" size='xs' {...props} />,
-  a: ({ node, ...props }: any) => <Link  {...props} />,
+  a: ({ node, ...props }: any) => <Link as={NextLink} {...props} />,
 };
 
 

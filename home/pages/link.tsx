@@ -32,13 +32,13 @@ const LinkPage: NextPage = () => {
                         {key}
                         <br />
                         {Object.entries(value).map(([key, value]) => (
-                            <NextLink key={key} href={value} passHref legacyBehavior>
-                                <Link >
+                          
+                                <Link as={NextLink} key={key} href={value}  >
 
                                   {key} {" "}
 
                                 </Link>
-                            </NextLink>
+                        
                         ))}
 
                     </ListItem>

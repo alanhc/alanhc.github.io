@@ -18,6 +18,7 @@ import { Tooltip, SimpleGrid, Box } from '@chakra-ui/react'
 import YouTube from "react-youtube";
 import { useRouter } from 'next/router';
 import { StarIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link';
 import {
   Modal,
   ModalOverlay,
@@ -89,7 +90,7 @@ const Home: NextPage = ({ portfolio }: any) => {
           <HStack maxW="2xl" >
 
             {portfolio.interest.map((_interest: any, i: number) => (
-              <Link key={i} href={_interest.link} isExternal>
+              <Link as={NextLink}key={i} href={_interest.link} isExternal>
 
                 <Box mt="5" ml="5" mb="5" mr="5">
                   

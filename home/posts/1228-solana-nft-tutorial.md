@@ -18,7 +18,7 @@ tag: ['notes', 'solana']
 
 5. 拿測試token: `solana airdrop 2`
 6. sugar launch
-    - <https://nft.storage/manage/>
-    <https://github.com/metaplex-foundation/sugar>
-    - <https://docs.metaplex.com/deprecated/candy-machine-js-cli/getting-started#solana-wallet>
+- https://nft.storage/manage/
+- https://github.com/metaplex-foundation/sugar
+- https://docs.metaplex.com/deprecated/candy-machine-js-cli/getting-started#solana-wallet
 ![](https://i.imgur.com/5Z75hh4.png)
