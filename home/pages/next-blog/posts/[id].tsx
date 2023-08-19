@@ -21,22 +21,22 @@ import Script from "next/script";
 function CodeBlock({ language, node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || '');
-  const lang = match![1] 
-  if (inline) { //只有一行的code
+  
+  if (inline || !match) { //只有一行的code
     return (<Flex mb={2}>
       <Code {...props} colorScheme="blackAlpha">
         {children}
       </Code>
       <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
     </Flex>)
-  } else if (lang==='mermaid') {
+  } else if (match![1] ==='mermaid') {
     return (<Box className='mermaid'>{children}</Box>)
   } else {
     return (
       <Flex mb={2}>
         <SyntaxHighlighter
           style={darcula as { [key: string]: CSSProperties }}
-          language={lang}
+          language={match![1] }
           PreTag="div"
           {...props}
         >
@@ -127,6 +127,7 @@ export default function Post({ postData }: any) {
           {postData.contentHtml}
         </ReactMarkdown>
         <Script
+          id="mermaidjs"
           type="module"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
