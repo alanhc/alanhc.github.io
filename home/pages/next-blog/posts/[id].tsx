@@ -101,7 +101,7 @@ export default function Post({ postData }: any) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <Heading>{postData.title}</Heading>
+        <SectionBlock>{postData.title}</SectionBlock>
         <div>
           <Date dateString={postData.date} />
         </div>
