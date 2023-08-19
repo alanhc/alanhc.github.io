@@ -74,23 +74,23 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 
                     {allPostsData.map(({ id, date, title, tag, content }: any) => (
 
-                        <NextLink key={id} href={`/next-blog/posts/${id}`}>
-                            <a>
-                                <Box >
-                                    📍{title}
-                                    {" - "}
+                        (<NextLink key={id} href={`/next-blog/posts/${id}`}>
 
-                                    {tag.map((t: string, i: number) => (
-                                        <small key={i}>{t} {i !== tag.length - 1 && ","}</small>
+                            <Box >
+                                📍{title}
+                                {" - "}
 
-                                    ))}
+                                {tag.map((t: string, i: number) => (
+                                    <small key={i}>{t} {i !== tag.length - 1 && ","}</small>
 
-                                    <div style={{ float: "right" }}>
-                                        <small >{date}</small>
-                                    </div>
-                                </Box>
-                            </a>
-                        </NextLink>
+                                ))}
+
+                                <div style={{ float: "right" }}>
+                                    <small >{date}</small>
+                                </div>
+                            </Box>
+
+                        </NextLink>)
 
                     ))}
                 </Stack> : <Accordion allowToggle>
@@ -111,9 +111,9 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                                     <Tag key={i} ml="1">{t}</Tag>
                                 ))}<br />
                                 <NextLink href={`/next-blog/posts/${id}`}>
-                                    <a>
-                                        <ReactMarkdown className="no_newline">{content}</ReactMarkdown>
-                                    </a>
+
+                                    <ReactMarkdown className="no_newline">{content}</ReactMarkdown>
+
                                 </NextLink>
                             </AccordionPanel>
                         </AccordionItem>
@@ -122,7 +122,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                 </Accordion>
             }
         </BlogLayout>
-    )
+    );
 }
 
 export async function getStaticProps() {

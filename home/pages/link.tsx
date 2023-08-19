@@ -32,7 +32,7 @@ const LinkPage: NextPage = () => {
                         {key}
                         <br />
                         {Object.entries(value).map(([key, value]) => (
-                            <NextLink key={key} href={value} passHref>
+                            <NextLink key={key} href={value} passHref legacyBehavior>
                                 <Link >
 
                                   {key} {" "}
@@ -45,6 +45,6 @@ const LinkPage: NextPage = () => {
                 ))}
             </UnorderedList>
         </BlogLayout>
-    )
+    );
 }
 export default LinkPage;

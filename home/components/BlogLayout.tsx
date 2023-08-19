@@ -14,7 +14,7 @@ const BlogLayout = ({ children }: AppProps) => {
 
             <Heading>
                 {navigation.map((l: object, index: number) => (
-                    <NextLink key={index} href={Object.values(l)[0]} passHref>
+                    <NextLink key={index} href={Object.values(l)[0]} passHref legacyBehavior>
                         <Link>
 
                      
@@ -33,7 +33,6 @@ const BlogLayout = ({ children }: AppProps) => {
                 <p>@alanhc</p>
             </Center>
         </Container>
-
-    )
+    );
 }
 export default BlogLayout;
