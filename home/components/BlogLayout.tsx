@@ -11,16 +11,18 @@ const BlogLayout = ({ children }: AppProps) => {
     ]
     return (
         <Container>
-            
+
             <Heading>
-                {navigation.map((l:object, index:number) => (
-                    <Link key={index}>
-                        <NextLink href={Object.values(l)[0]}>
-                            <a>
-                                {Object.keys(l) }  {index!== navigation.length-1 && " · "}
-                            </a>
-                        </NextLink>
-                    </Link>
+                {navigation.map((l: object, index: number) => (
+                    <NextLink key={index} href={Object.values(l)[0]} passHref>
+                        <Link>
+
+                     
+                                {Object.keys(l)}  {index !== navigation.length - 1 && " · "}
+                
+
+                        </Link>
+                    </NextLink>
                 ))}
             </Heading>
 

@@ -20,7 +20,7 @@ const LinkPage: NextPage = () => {
         person: {
             ttzeng: "https://ttzeng.github.io/",
             evanlin: "https://evanlin.com/"
-            
+
         }
     }
 
@@ -32,11 +32,13 @@ const LinkPage: NextPage = () => {
                         {key}
                         <br />
                         {Object.entries(value).map(([key, value]) => (
-                            <Link key={key}>
-                            <NextLink href={value}>
-                                <a target="_blank">{key} {" "}</a>
+                            <NextLink key={key} href={value} passHref>
+                                <Link >
+
+                                  {key} {" "}
+
+                                </Link>
                             </NextLink>
-                            </Link>
                         ))}
 
                     </ListItem>

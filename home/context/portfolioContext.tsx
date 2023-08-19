@@ -30,7 +30,7 @@ const TagProvider = ({ children }: Props) => {
       _tags = _tags.filter((v, i, a) => a.indexOf(v) === i); //distinct array
       _tags.push("select")
       
-      console.log(_tags)
+      //console.log(_tags)
       setTags(_tags)
 
     }

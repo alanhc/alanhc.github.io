@@ -3,7 +3,7 @@ import { getAllPostIds, getPostData } from '../../../lib/posts';
 import Head from 'next/head';
 import Date from '../../../components/Date';
 import utilStyles from '../../styles/utils.module.css';
-import { Tag, Container, Heading, Link, Code, useClipboard, Flex, Button, HStack, Textarea, Divider, UnorderedList, OrderedList, ListItem } from "@chakra-ui/react";
+import { Box, Tag, Container, Heading, Link, Code, useClipboard, Flex, Button, HStack, Textarea, Divider, UnorderedList, OrderedList, ListItem } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { CSSProperties, Children } from "react";
@@ -45,26 +45,23 @@ function CodeBlock({ node, inline, className, children, ...props }: any) {
 function SectionBlock({ node, inline, className, children, id, ...props }: any) {
 
   const router = useRouter()
-  const { onCopy, value, setValue, hasCopied } = useClipboard("https://alanhc.github.io" + router.asPath + "#" + children);
+  const origin =
+        typeof window !== 'undefined' && window.location.origin
+            ? window.location.origin
+            : '';
+    const URL = `${origin}${router.asPath}`;
+  const { onCopy, value, setValue, hasCopied } = useClipboard(URL + "#" + children);
   const [isHovering, setIsHovering] = useState(false);
-  return (
-    <Link onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
 
+  return (
+    <Link href={`#${children}`} id={children} onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
       <Heading  {...props}>
-        {children} {isHovering&&"🔗"}
+        {children} {isHovering && "🔗"}
       </Heading>
     </Link>
   );
 }
-const ListRenderer = ({ children }: any) => (
-  <UnorderedList>{children}</UnorderedList>
-);
-const OrderListRenderer = ({ children }: any) => (
-  <OrderedList>{children}</OrderedList>
-);
-const ListItemRenderer = ({ children }: any) => (
-  <ListItem >{children}</ListItem>
-);
+
 
 const components = {
   code: CodeBlock,
@@ -75,16 +72,11 @@ const components = {
   h5: ({ node, ...props }: any) => <SectionBlock as="h5" size='xs' {...props} />,
   a: ({ node, ...props }: any) => <Link  {...props} />,
 };
-const components_toc = {
-  ...components,
-  ul: ListRenderer,
-  ol: OrderListRenderer,
-  li: ListItemRenderer,
-};
+
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
-  console.log("---", postData);
+
   return {
     props: {
       postData,
@@ -115,19 +107,31 @@ export default function Post({ postData }: any) {
         </div>
         <Divider />
         {/*TOC*/}
-        <Container>
-          <ReactMarkdown components={components_toc} >
-            {postData.tocMarkdown}
-          </ReactMarkdown>
-        </Container>
+        <UnorderedList>
+
+          {postData.tocMarkdown.json.map((heading: any) => (
+            <ListItem key={heading.content}>
+              <Link href={`#${heading.content}`}>
+                {heading.content}
+              </Link>
+            </ListItem>
+          ))}
+
+        </UnorderedList>
+        {/*正文*/}
         <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
           {postData.contentHtml}
         </ReactMarkdown>
 
-
+        {/*Tags*/}
         <Container mt="5">
           {postData.tag.map((t: string, i: number) => (
-            <Tag key={i}>{t}</Tag>
+            <Link key={i} onClick={() => router.push(`/next-blog?tag=${t}`)}>
+              <Tag>
+                {t}
+              </Tag>
+            </Link>
+
           ))}
           {/*留言板
           <HStack mt={2}>
@@ -143,8 +147,9 @@ export default function Post({ postData }: any) {
           </HStack>
           */}
         </Container>
-        <Link>
-          <a onClick={() => router.push("/next-blog")}>👈Go Back</a>
+
+        <Link onClick={() => router.push("/next-blog")}>
+          👈Go Back
         </Link>
       </article>
 

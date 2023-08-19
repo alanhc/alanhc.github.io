@@ -25,8 +25,10 @@ import {
 } from '@chakra-ui/react'
 import { useState } from "react";
 import Layout from "../../components/TestLayout";
+import { useRouter } from 'next/router';
 const Blog: NextPage = ({ allPostsData }: any) => {
-
+    const router = useRouter();
+    
     const tagsSet = new Set();
 
     allPostsData.forEach(({ tag }: any) => {
@@ -37,17 +39,18 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     const tagsArray = Array.from(tagsSet) as string[];
 
 
-
-    console.log(tagsSet)
-    const [search, setSearch] = useState("")
+    const { tag } = router.query;
+    //console.log(tagsSet)
+    const [search, setSearch] = useState(tag)
     const search_text = ({ content, tag, title }: any) => {
         return content.includes(search) || title.includes(search) || tag.includes(search)
     }
     return (
         <BlogLayout>
-
-
+            <Flex>
             <Input placeholder="👀" value={search} onChange={(event) => setSearch(event.target.value)} />
+             <Button onClick={()=>setSearch("")}>Clear</Button>
+             </Flex>
             <Box mt={2} mb={2}>
                 {tagsArray.sort().map((t: string, index) => (
                     <Link
