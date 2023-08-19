@@ -16,40 +16,46 @@ import { useRouter } from 'next/router';
 import { useContext, useEffect, useState } from 'react'
 import rehypeRaw from "rehype-raw";
 import NextLink from 'next/link';
+import Script from "next/script";
 
-
-function CodeBlock({ node, inline, className, children, ...props }: any) {
+function CodeBlock({ language, node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || '');
-  return !inline && match ? (
-    <Flex mb={2}>
-      <SyntaxHighlighter
-        style={darcula as { [key: string]: CSSProperties }}
-        language={match[1]}
-        PreTag="div"
-        {...props}
-      >
-        {String(children).replace(/\n$/, '')}
-      </SyntaxHighlighter>
-      <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
-    </Flex>
-  ) : (
-    <Flex mb={2}>
+  const lang = match![1] 
+  if (inline) { //只有一行的code
+    return (<Flex mb={2}>
       <Code {...props} colorScheme="blackAlpha">
         {children}
       </Code>
       <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
-    </Flex>
-  );
+    </Flex>)
+  } else if (lang==='mermaid') {
+    return (<Box className='mermaid'>{children}</Box>)
+  } else {
+    return (
+      <Flex mb={2}>
+        <SyntaxHighlighter
+          style={darcula as { [key: string]: CSSProperties }}
+          language={lang}
+          PreTag="div"
+          {...props}
+        >
+          {String(children).replace(/\n$/, '')}
+        </SyntaxHighlighter>
+        <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
+      </Flex>
+    )
+  }
+
+
 }
 function SectionBlock({ node, inline, className, children, id, ...props }: any) {
-
   const router = useRouter()
   const origin =
-        typeof window !== 'undefined' && window.location.origin
-            ? window.location.origin
-            : '';
-    const URL = `${origin}${router.asPath}`;
+    typeof window !== 'undefined' && window.location.origin
+      ? window.location.origin
+      : '';
+  const URL = `${origin}${router.asPath}`;
   const { onCopy, value, setValue, hasCopied } = useClipboard(URL + "#" + children);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -61,8 +67,6 @@ function SectionBlock({ node, inline, className, children, id, ...props }: any) 
     </Link>
   );
 }
-
-
 const components = {
   code: CodeBlock,
   h1: ({ node, ...props }: any) => <SectionBlock as="h1" size='xl' {...props} />,
@@ -122,7 +126,17 @@ export default function Post({ postData }: any) {
         <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm, remarkSlug]} rehypePlugins={[rehypeRaw]}>
           {postData.contentHtml}
         </ReactMarkdown>
-
+        <Script
+          type="module"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true });
+            mermaid.contentLoaded();
+            `,
+          }}
+        />
         {/*Tags*/}
         <Container mt="5">
           {postData.tag.map((t: string, i: number) => (
