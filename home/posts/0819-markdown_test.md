@@ -4,17 +4,20 @@ date: '2023-08-19'
 tag: ["blog", "mermaid js"]
 ---
 code如下
+
 ```
-```mermaid
+mermaid
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
 ```
-```
+
+
 
 ## 修改CodeBlock
+
 ```js
 function CodeBlock({ language, node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
