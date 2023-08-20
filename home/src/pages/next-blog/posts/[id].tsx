@@ -2,7 +2,6 @@ import BlogLayout from "../../../components/TestLayout";
 import { getAllPostIds, getPostData } from "../../../lib/posts";
 import Head from "next/head";
 import Date from "../../../components/partial/Date";
-import utilStyles from "../../styles/utils.module.css";
 import {
   Box,
   Tag,
@@ -35,7 +34,9 @@ import NextLink from "next/link";
 import Script from "next/script";
 import rehypePrism from "rehype-prism-plus";
 import SectionBlock from "../../../components/partial/SectionBlock";
-
+import slugify from "slugify"
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 function CodeBlock({
   language,
   node,
@@ -67,7 +68,6 @@ function CodeBlock({
           style={darcula as { [key: string]: CSSProperties }}
           language={match![1]}
           PreTag="div"
-     
         >
           {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>
@@ -101,10 +101,11 @@ const components = {
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
-
+  const mdxSource = await serialize(postData.postMarkdown)
   return {
     props: {
       postData,
+      mdxSource: mdxSource
     },
   };
 }
@@ -117,7 +118,8 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Post({ postData }: any) {
+export default function Post({ postData, mdxSource }: any) {
+  
   return (
     <Container>
       <Head>
@@ -138,13 +140,14 @@ export default function Post({ postData }: any) {
           ))}
         </UnorderedList>
         {/*正文*/}
-        <ReactMarkdown
+        <MDXRemote {...mdxSource} components={components} />
+        {/*<ReactMarkdown
           components={components}
           remarkPlugins={[remarkToc, remarkGfm]}
           rehypePlugins={[rehypeRaw]}
         >
           {postData.postMarkdown}
-        </ReactMarkdown>
+          </ReactMarkdown>*/}
         <Script
           id="mermaidjs"
           type="module"
