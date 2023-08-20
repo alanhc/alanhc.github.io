@@ -125,7 +125,7 @@ export default function Post({ postData }: any) {
         </UnorderedList>
         {/*正文*/}
         <ReactMarkdown components={components} remarkPlugins={[remarkToc, remarkGfm]} rehypePlugins={[rehypeRaw]}>
-          {postData.contentHtml}
+          {postData.postMarkdown}
         </ReactMarkdown>
         <Script
           id="mermaidjs"
@@ -149,19 +149,6 @@ export default function Post({ postData }: any) {
             </Link>
 
           ))}
-          {/*留言板
-          <HStack mt={2}>
-            <Textarea
-              value={msg}
-              placeholder='write something to me...'
-              onChange={handleInputChange}
-              size='sm'
-            />
-            <Button onClick={() => router.push(`mailto:alanhc.tseng1999@gmail.com?subject=hello,from alanhc.github.io &body=${msg} %0D%0A${window.location.href}`)}>
-              Send
-            </Button>
-          </HStack>
-          */}
         </Container>
 
         <Link onClick={() => router.push("/next-blog")}>

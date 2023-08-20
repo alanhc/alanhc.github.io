@@ -1,39 +1,27 @@
+import { useContext, useEffect, useState } from 'react'
+import { useDisclosure, VStack, Heading, Flex, Center, Card, HStack, Box, Container, CardBody, Stack, StackDivider, Textarea, Button } from '@chakra-ui/react'
+import Link from 'next/link'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from "next/legacy/image"
 import styles from '../styles/Home.module.css'
-
 import Layout from '../components/Layout'
 import CollectionResult from '../components/CollectionResult'
 import LeftCheckBox from '../components/LeftCheckBox'
 import { IProjects } from '../types/portfolio'
 import path from 'path';
 import { promises as fs } from 'fs';
-import { IconButton, Divider, Text, VStack, Container, HStack, Stack, Heading, Flex, Card, FormControl, FormLabel, Input, FormHelperText, Textarea, FormErrorMessage, Center, CardHeader, CardBody, StackDivider, AspectRatio } from "@chakra-ui/react";
-//import Link from 'next/link' 
-import { Link } from '@chakra-ui/react'
 import Experience from '../components/Experience'
-import { Avatar, AvatarBadge, AvatarGroup, Button } from '@chakra-ui/react'
-import { Tooltip, SimpleGrid, Box } from '@chakra-ui/react'
+
 import YouTube from "react-youtube";
 import { useRouter } from 'next/router';
 import { StarIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link';
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure
-} from '@chakra-ui/react'
+
 import Profile from '../components/Profile'
-import { Field, Form, Formik } from 'formik';
-import { useContext, useEffect, useState } from 'react'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 import { TagContext } from '../context/portfolioContext'
+
 
 
 const jsonDirectory = path.join(process.cwd(), 'public/api');
@@ -159,18 +147,7 @@ const Home: NextPage = ({ portfolio }: any) => {
 }
 
 export async function getStaticProps() {
-
-
-
-  //export async function getServerSideProps() {
-  //console.log(process.env.baseUrl)
-  //const res = fetch(`${process.env.baseUrl}/api/portfolio.json`)
-
-  //const portfolio = await (await res).json()
-
   const portfolio = JSON.parse(await fs.readFile(jsonDirectory + '/portfolio.json', 'utf8'));
-
-  //console.log("===", portfolio, typeof portfolio)
   return {
     props: {
       portfolio,

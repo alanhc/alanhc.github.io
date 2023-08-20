@@ -70,8 +70,8 @@ export function getAllPostIds() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
    
-    const contentHtml = matterResult.content
-    const tocMarkdown = await markdownToc(contentHtml);
+    const postMarkdown = matterResult.content
+    const tocMarkdown = await markdownToc(postMarkdown);
     //console.log(tocMarkdown,"======")
     /*
     // Use remark to convert markdown into HTML string
@@ -83,7 +83,7 @@ export function getAllPostIds() {
     // Combine the data with the id and contentHtml
     return {
       id,
-      contentHtml,
+      postMarkdown,
       tocMarkdown,
       ...matterResult.data,
     };
