@@ -1,7 +1,7 @@
 import { Container, SimpleGrid, Box, Flex } from "@chakra-ui/react";
 import { Image, Badge, Stack, VStack, HStack, Tag, TagLabel, TagCloseButton, Button } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
-import { TagContext, ITags } from "../context/portfolioContext";
+import { TagContext, ITags } from "../../context/portfolioContext";
 import NextImage from "next/legacy/image"
 import Project from "./Project";
 const CollectionResult = ({ projects, global_state }: any) => {

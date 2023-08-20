@@ -1,7 +1,7 @@
 
 import { Text, Flex, Button, Container, SimpleGrid, VStack, Wrap, WrapItem, Center, Box, AspectRatio } from '@chakra-ui/react'
 import type { NextPage } from 'next'
-import Profile from '../components/Profile'
+import Profile from '../components/partial/Profile'
 import NextImage from "next/legacy/image";
 import { useRouter } from 'next/router'
 

@@ -23,7 +23,7 @@ const LinkPage: NextPage = () => {
 
         }
     }
-
+    
     return (
         <BlogLayout>
             <UnorderedList>

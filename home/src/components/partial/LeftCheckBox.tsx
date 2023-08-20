@@ -1,6 +1,6 @@
 import { Flex, Button, Checkbox, VStack, Container, Accordion, AccordionItem, AccordionPanel, AccordionButton, Box, AccordionIcon, Stack } from "@chakra-ui/react";
 import { useContext, useEffect } from "react";
-import { TagContext } from "../context/portfolioContext";
+import { TagContext } from "../../context/portfolioContext";
 import { useOutsideClick } from '@chakra-ui/react'
 import { Formik, Field, Form } from "formik";
 const LeftCheckBox = ({ search_groups, global_state,init_tech_tags }: any) => {

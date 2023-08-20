@@ -1,27 +1,23 @@
 import { useContext, useEffect, useState } from 'react'
-import { useDisclosure, VStack, Heading, Flex, Center, Card, HStack, Box, Container, CardBody, Stack, StackDivider, Textarea, Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from "next/legacy/image"
 import styles from '../styles/Home.module.css'
-import Layout from '../components/Layout'
-import CollectionResult from '../components/CollectionResult'
-import LeftCheckBox from '../components/LeftCheckBox'
-import { IProjects } from '../types/portfolio'
 import path from 'path';
 import { promises as fs } from 'fs';
-import Experience from '../components/Experience'
-
 import YouTube from "react-youtube";
 import { useRouter } from 'next/router';
 import { StarIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link';
-
-import Profile from '../components/Profile'
-
+import Profile from '../components/partial/Profile'
 import { TagContext } from '../context/portfolioContext'
-
+import Experience from '../components/partial/Experience'
+import Layout from '../components/Layout'
+import CollectionResult from '../components/partial/CollectionResult'
+import LeftCheckBox from '../components/partial/LeftCheckBox'
+import portfolioData from "../../public/api/portfolio.json"
+import { useDisclosure, VStack, Heading, Flex, Center, Card, HStack, Box, Container, CardBody, Stack, StackDivider, Textarea, Button } from '@chakra-ui/react'
 
 
 
@@ -43,7 +39,7 @@ const Home: NextPage = ({ portfolio }: any) => {
   }
   const tagContext = useContext(TagContext);
   const tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
-
+  console.log(tags)
   return (
     <Layout>
       <Head>
@@ -78,7 +74,7 @@ const Home: NextPage = ({ portfolio }: any) => {
           <HStack maxW="2xl" >
 
             {portfolio.interest.map((_interest: any, i: number) => (
-              <Link as={NextLink}key={i} href={_interest.link} isExternal>
+              <Link key={i} href={_interest.link} >
 
                 <Box mt="5" ml="5" mb="5" mr="5">
                   
@@ -147,8 +143,7 @@ const Home: NextPage = ({ portfolio }: any) => {
 }
 
 export async function getStaticProps() {
-  const jsonDirectory = path.join(process.cwd(), '/public/api');
-  const portfolio = JSON.parse(await fs.readFile(jsonDirectory + '/portfolio.json', 'utf8'));
+  const portfolio = portfolioData;
   return {
     props: {
       portfolio,
