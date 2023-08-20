@@ -1,6 +1,6 @@
 import { createContext, Context, useState, FC, useEffect } from "react";
 import React, { ReactNode } from "react";
-import portfolio from "../public/api/portfolio.json"
+import portfolio from "../../public/api/portfolio.json"
 
 export interface ITags {
   tags: string[];

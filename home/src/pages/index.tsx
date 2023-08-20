@@ -24,7 +24,7 @@ import { TagContext } from '../context/portfolioContext'
 
 
 
-const jsonDirectory = path.join(process.cwd(), 'public/api');
+
 const Home: NextPage = ({ portfolio }: any) => {
   const router = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -147,6 +147,7 @@ const Home: NextPage = ({ portfolio }: any) => {
 }
 
 export async function getStaticProps() {
+  const jsonDirectory = path.join(process.cwd(), '/public/api');
   const portfolio = JSON.parse(await fs.readFile(jsonDirectory + '/portfolio.json', 'utf8'));
   return {
     props: {
