@@ -1,40 +1,30 @@
 import { useRef,createContext, Context, useState, FC, useMemo, useEffect } from "react";
 import React, { ReactNode } from "react";
 import portfolio from "../../public/api/portfolio.json";
-import {flatten} from "lodash";
-
 
 export interface ITags {
   tags: string[];
-  saveTag: (e: string[]) => void;
+  setTags: React.Dispatch<React.SetStateAction<string[]>>;
 }
-interface Props {
-  children?: ReactNode
-  // any props that come into the component
-}
-export const TagContext = createContext<ITags | null>(null);
 
-const TagProvider = ({ children }: Props) => {
-  const [tags, setTags] = useState<string[]>([]);
+export const TagContext = React.createContext<ITags|null>(null);
 
-  const _tagsRef = useRef<string[]>([]);
+const TagProvider = ({children}: { children: React.ReactNode }) => {
+  const [tags, setTags] = useState(["select"]);
+  const init_tags = async ()=>{
+    let pre_tags = await portfolio.projects.map((project: any, i: number) => project.language).flat(1);
+    pre_tags.push("select")
+    pre_tags = Array.from(new Set(pre_tags));
+    setTags(pre_tags)
+  }
+  useEffect(()=>{
+    init_tags()
+  },[]);
 
-  useEffect(() => {
-    const init = async () => {
-      const pre_tags = await portfolio.projects.map((project: any, i: number) => project.language);
-      _tagsRef.current = flatten(pre_tags);
-      _tagsRef.current.push("select");
-      setTags(_tagsRef.current)
-    };
-    init();
-    console.log(_tagsRef)
-  }, []);
-
-  const saveTag = (value: string[]) => {
-    setTags(value);
-  };
-
-  return <TagContext.Provider value={{ tags, saveTag }}>{children}</TagContext.Provider>;
+  return (
+    <TagContext.Provider value={{tags, setTags}}>
+      {children}
+    </TagContext.Provider>
+  );
 };
-
 export default TagProvider;

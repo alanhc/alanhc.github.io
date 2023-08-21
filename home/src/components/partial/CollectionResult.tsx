@@ -8,7 +8,7 @@ const CollectionResult = ({ projects, global_state }: any) => {
 
     const tagContext = useContext(TagContext);
     let tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
-    const saveTag = tagContext?.saveTag;
+    const saveTag = tagContext?.setTags;
     
     
     const handleClose = (value: string) => {

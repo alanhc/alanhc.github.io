@@ -40,44 +40,44 @@ export function getSortedPostsData() {
   });
 }
 export function getAllPostIds() {
-    const fileNames = fs.readdirSync(postsDirectory);
-  
-    // Returns an array that looks like this:
-    // [
-    //   {
-    //     params: {
-    //       id: 'ssg-ssr'
-    //     }
-    //   },
-    //   {
-    //     params: {
-    //       id: 'pre-rendering'
-    //     }
-    //   }
-    // ]
-    return fileNames.map((fileName) => {
-      return {
-        params: {
-          id: fileName.replace(/\.md$/, ''),
-        },
-      };
-    });
-  }
-  import { serialize } from 'next-mdx-remote/serialize'
-  export async function getPostData(id) {
-    const fullPath = path.join(postsDirectory, `${id}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-  
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-    const postMarkdown = matterResult.content
-  
-    const tocMarkdown = await markdownToc(postMarkdown);
-  
+  const fileNames = fs.readdirSync(postsDirectory);
+
+  // Returns an array that looks like this:
+  // [
+  //   {
+  //     params: {
+  //       id: 'ssg-ssr'
+  //     }
+  //   },
+  //   {
+  //     params: {
+  //       id: 'pre-rendering'
+  //     }
+  //   }
+  // ]
+  return fileNames.map((fileName) => {
     return {
-      id,
-      postMarkdown,
-      tocMarkdown,
-      ...matterResult.data,
+      params: {
+        id: fileName.replace(/\.md$/, ''),
+      },
     };
-  }
+  });
+}
+
+export async function getPostData(id) {
+  const fullPath = path.join(postsDirectory, `${id}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+  // Use gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+  const postMarkdown = matterResult.content
+
+  const tocMarkdown = await markdownToc(postMarkdown);
+
+  return {
+    id,
+    postMarkdown,
+    tocMarkdown,
+    ...matterResult.data,
+  };
+}

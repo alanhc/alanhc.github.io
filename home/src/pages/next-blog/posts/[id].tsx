@@ -32,11 +32,14 @@ import { useContext, useEffect, useState } from "react";
 import rehypeRaw from "rehype-raw";
 import NextLink from "next/link";
 import Script from "next/script";
-import rehypePrism from "rehype-prism-plus";
 import SectionBlock from "../../../components/partial/SectionBlock";
 import slugify from "slugify"
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import rehypeSlug from 'rehype-slug'
+import GithubSlugger, {slug} from 'github-slugger'
+import rehypePrism from 'rehype-prism-plus'
+
 function CodeBlock({
   language,
   node,
@@ -46,7 +49,6 @@ function CodeBlock({
 }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || "");
-
   if (inline || !match) {
     //只有一行的code
     return (
@@ -65,7 +67,7 @@ function CodeBlock({
     return (
       <Flex mb={2}>
         <SyntaxHighlighter
-          style={darcula as { [key: string]: CSSProperties }}
+          style={darcula}
           language={match![1]}
           PreTag="div"
         >
@@ -97,11 +99,24 @@ const components = {
     <SectionBlock as="h5" size="xs" {...props} />
   ),
   a: ({ node, ...props }: any) => <Link as={NextLink} {...props} />,
+  ul:  ({ node, ...props }: any) => <UnorderedList {...props} />,
+  li:  ({ node, ...props }: any) => <ListItem {...props} />,
+  ol: ({ node, ...props }: any) => <OrderedList {...props} />,
 };
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
-  const mdxSource = await serialize(postData.postMarkdown)
+  const all_markdonw = postData.tocMarkdown.content+"\n"+postData.postMarkdown
+  const mdxSource = await serialize(all_markdonw,
+    {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [rehypeRaw],
+        format: 'mdx',
+      }
+    }
+  )
+  
   return {
     props: {
       postData,
@@ -119,7 +134,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData, mdxSource }: any) {
-  
+  console.log(mdxSource)
   return (
     <Container>
       <Head>
@@ -132,13 +147,8 @@ export default function Post({ postData, mdxSource }: any) {
         </div>
         <Divider />
         {/*TOC*/}
-        <UnorderedList>
-          {postData.tocMarkdown.json.map((heading: any) => (
-            <ListItem key={heading.content}>
-              <Link href={`#${heading.content}`}>{heading.content}</Link>
-            </ListItem>
-          ))}
-        </UnorderedList>
+
+        
         {/*正文*/}
         <MDXRemote {...mdxSource} components={components} />
         {/*<ReactMarkdown

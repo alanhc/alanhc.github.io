@@ -7,7 +7,7 @@ const LeftCheckBox = ({ search_groups, global_state,init_tech_tags }: any) => {
 
   const tagContext = useContext(TagContext);
   const tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
-  const saveTag = tagContext?.saveTag;
+  const saveTag = tagContext?.setTags;
   
 
   const handleChecked =  (value: string, checked: boolean) =>{

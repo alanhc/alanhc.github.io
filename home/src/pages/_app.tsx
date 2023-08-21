@@ -1,17 +1,23 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { ChakraProvider, Heading } from "@chakra-ui/react";
-import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
-import { extendTheme } from "@chakra-ui/react";
+import { Heading, extendTheme } from "@chakra-ui/react";
 import Script from "next/script";
 import ProfileProvider from "../context/portfolioContext";
 import "nprogress/nprogress.css";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import { useEffect } from "react";
+import { ChakraBaseProvider, extendBaseTheme } from '@chakra-ui/react'
+// `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
+import chakraTheme from '@chakra-ui/theme'
+const { Button } = chakraTheme.components
 
 const theme = extendTheme({
-  components: {},
+  styles:{
+    global:{
+      
+    }
+  }
 });
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -40,9 +46,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         `}
       </Script>
       <ProfileProvider>
-        <ChakraProvider theme={theme}>
+        <ChakraBaseProvider theme={theme} resetCSS={true}>
           <Component {...pageProps} />
-        </ChakraProvider>
+        </ChakraBaseProvider>
       </ProfileProvider>
     </>
   );
