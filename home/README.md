@@ -1,18 +1,29 @@
 # alanhc 
 
 ## todo
-- https://horizon-ui.com/documentation/docs/data-display/timeline
-- frontawesome
-- docker
-- CI
-- CD
-- k8s
+- [ ] https://horizon-ui.com/documentation/docs/data-display/timeline
+- [ ] frontawesome
+- [ ] docker
+- [ ] CI
+- [ ] CD
+- [ ] k8s
+- [ ] eslint
+- [ ] prettier
+- [ ] husky
+- [ ] lint-staged
+- [ ] commitlint
+- [ ] commitizen
+- [ ] standard-version
+- [ ] next-pwa
 ## done
 - lazy load image
 - GA
 - chakra ui
 - pnpm
 - ssg
+- next-sitemap
+-  E2E Test
+-  自動更新dependency:Renovate https://renovatebot.com/
 
 
 

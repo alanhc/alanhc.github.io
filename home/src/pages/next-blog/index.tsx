@@ -3,7 +3,15 @@ import { NextPage } from "next";
 import { promises as fs } from "fs";
 import { getSortedPostsData } from "../../lib/posts";
 import NextLink from "next/link";
-import { Container, Divider, Link, position } from "@chakra-ui/react";
+import {
+  Container,
+  Divider,
+  InputGroup,
+  InputRightElement,
+  Link,
+  position,
+  useColorMode,
+} from "@chakra-ui/react";
 import Date from "../../components/partial/Date";
 import BlogLayout from "../../components/BlogLayout";
 import ReactMarkdown from "react-markdown";
@@ -43,6 +51,7 @@ import {
 import { useState } from "react";
 import Layout from "../../components/TestLayout";
 import { useRouter } from "next/router";
+import { CloseIcon } from "@chakra-ui/icons";
 const Blog: NextPage = ({ allPostsData }: any) => {
   const router = useRouter();
 
@@ -63,15 +72,23 @@ const Blog: NextPage = ({ allPostsData }: any) => {
       content.includes(search) || title.includes(search) || tag.includes(search)
     );
   };
+  
   return (
     <BlogLayout>
-      <Flex>
-        <Input
-          placeholder="👀"
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-        />
-        <Button onClick={() => setSearch("")}>Clear</Button>
+      
+      <Flex mt={2}>
+        <InputGroup size="md">
+          <Input
+            placeholder="👀"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+          />
+          <InputRightElement width="4.5rem">
+            {search&&<CloseIcon h="1.75rem"  onClick={() => setSearch("")}/>
+            
+         }
+          </InputRightElement>
+        </InputGroup>
       </Flex>
       <Box mt={2} mb={2}>
         {tagsArray.sort().map((t: string, index) => (

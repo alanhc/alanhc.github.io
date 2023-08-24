@@ -13,11 +13,8 @@ import chakraTheme from '@chakra-ui/theme'
 const { Button } = chakraTheme.components
 
 const theme = extendTheme({
-  styles:{
-    global:{
-      
-    }
-  }
+  initialColorMode: 'light',
+  useSystemColorMode: false,
 });
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

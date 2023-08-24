@@ -1,4 +1,4 @@
-import BlogLayout from "../../../components/TestLayout";
+import BlogLayout from "../../../components/BlogLayout";
 import { getAllPostIds, getPostData } from "../../../lib/posts";
 import Head from "next/head";
 import Date from "../../../components/partial/Date";
@@ -53,9 +53,10 @@ function CodeBlock({
     //只有一行的code
     return (
       <Flex mb={2}>
-        <Code colorScheme="blackAlpha">
+        <Code >
           {children}
         </Code>
+        
         <Button ml={2} onClick={onCopy} colorScheme="blue" variant="outline">
           {hasCopied ? "Copied!" : "Copy"}
         </Button>
@@ -64,6 +65,7 @@ function CodeBlock({
   } else if (match![1] === "mermaid") {
     return <Box className="mermaid">{children}</Box>;
   } else {
+    //很多行
     return (
       <Flex mb={2}>
         <SyntaxHighlighter
@@ -74,7 +76,7 @@ function CodeBlock({
           {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>
         <Button ml={2} onClick={onCopy} colorScheme="blue" variant="outline">
-          {hasCopied ? "Copied!" : "Copy"}
+          {hasCopied ? "Copied!" : match![1]}
         </Button>
       </Flex>
     );
@@ -136,19 +138,27 @@ export async function getStaticPaths() {
 export default function Post({ postData, mdxSource }: any) {
   console.log(mdxSource)
   return (
-    <Container>
+    <BlogLayout>
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
-        <SectionBlock>{postData.title}</SectionBlock>
-        <div>
-          <Date dateString={postData.date} />
-        </div>
-        <Divider />
-        {/*TOC*/}
-
         
+        <SectionBlock mt={2}>{postData.title}</SectionBlock>
+        <Box>
+          <Date dateString={postData.date} />
+        </Box>
+         {/*Tags*/}
+         <Box mt={2} mb={2}>
+          {postData.tag.map((t: string, i: number) => (
+            <Link key={i} onClick={() => router.push(`/next-blog?tag=${t}`)}>
+              <Tag mr={2}>#{t}</Tag>
+            </Link>
+          ))}
+        </Box>
+        <Divider />
+        
+       
         {/*正文*/}
         <MDXRemote {...mdxSource} components={components} />
         {/*<ReactMarkdown
@@ -170,17 +180,10 @@ export default function Post({ postData, mdxSource }: any) {
             `,
           }}
         />
-        {/*Tags*/}
-        <Container mt="5">
-          {postData.tag.map((t: string, i: number) => (
-            <Link key={i} onClick={() => router.push(`/next-blog?tag=${t}`)}>
-              <Tag>{t}</Tag>
-            </Link>
-          ))}
-        </Container>
+       
 
         <Link onClick={() => router.push("/next-blog")}>👈Go Back</Link>
       </article>
-    </Container>
+    </BlogLayout>
   );
 }
