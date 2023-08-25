@@ -17,6 +17,7 @@ import Layout from "../components/Layout";
 import CollectionResult from "../components/partial/CollectionResult";
 import LeftCheckBox from "../components/partial/LeftCheckBox";
 import portfolioData from "../../public/api/portfolio.json";
+import generateRSS from "../lib/generateRSS"
 import {
   useDisclosure,
   VStack,
@@ -35,6 +36,7 @@ import {
 } from "@chakra-ui/react";
 
 const Home: NextPage = ({ portfolio }: any) => {
+  
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [msg, setMsg] = useState("");
@@ -170,6 +172,7 @@ const Home: NextPage = ({ portfolio }: any) => {
 };
 
 export async function getStaticProps() {
+  generateRSS();
   const portfolio = portfolioData;
   return {
     props: {
