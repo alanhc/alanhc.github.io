@@ -16,6 +16,10 @@
         {
             "name": "notes",
             "link": "next-blog"    
+        },
+        {
+            "name": "feed",
+            "link": "feed.xml"    
         }
     ],
     "quote": "Patience is a key element of success.",
