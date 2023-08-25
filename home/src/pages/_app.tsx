@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { Heading, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider, Heading, extendTheme } from "@chakra-ui/react";
 import Script from "next/script";
 import ProfileProvider from "../context/portfolioContext";
 import "nprogress/nprogress.css";
@@ -10,15 +10,17 @@ import { useEffect } from "react";
 import { ChakraBaseProvider, extendBaseTheme } from '@chakra-ui/react'
 // `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
 import chakraTheme from '@chakra-ui/theme'
-const { Button } = chakraTheme.components
 
+import { Rubik } from 'next/font/google';
+
+const rubik = Rubik({ subsets: ['latin'] });
+const { Button } = chakraTheme.components
 const theme = extendTheme({
   initialColorMode: 'light',
   useSystemColorMode: false,
 });
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  // Integrate nprogress
   useEffect(() => {
     router.events.on("routeChangeStart", () => NProgress.start());
     router.events.on("routeChangeComplete", () => NProgress.done());
@@ -26,9 +28,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
-  //console.log(GA_MEASUREMENT_ID)
   return (
     <>
+
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
@@ -43,9 +45,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         `}
       </Script>
       <ProfileProvider>
-        <ChakraBaseProvider theme={theme} resetCSS={true}>
+        <ChakraProvider  resetScope=".ck-reset">
+       
           <Component {...pageProps} />
-        </ChakraBaseProvider>
+      
+        </ChakraProvider>
       </ProfileProvider>
     </>
   );

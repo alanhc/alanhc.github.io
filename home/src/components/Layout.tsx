@@ -1,20 +1,39 @@
-
-import { Stack, HStack, VStack, Divider, Container, Center } from '@chakra-ui/react'
+import {
+  Stack,
+  HStack,
+  VStack,
+  Divider,
+  Container,
+  Center,
+  Text,
+  Box,
+  Button,
+  useColorMode,
+  Flex,
+  Spacer,
+} from "@chakra-ui/react";
 
 type AppProps = {
-    children?: React.ReactNode;
+  children?: React.ReactNode;
 };
 const Layout = ({ children }: AppProps) => {
-    return (
-        <Container minW="full" >
-           
-                {children}
-          
-            <Center mt="10">
-                <p>@alanhc</p>
-            </Center>
-        </Container>
+  const { colorMode, toggleColorMode } = useColorMode();
+  return (
+    <Container className="ck-reset" minW="full">
+      <Flex>
+      
+        
+        <Box>{children}</Box>
+        <Spacer />
+        <Button onClick={toggleColorMode}>
+          {colorMode === "light" ? "☾" : "☀️"}
+        </Button>
+      </Flex>
 
-    )
-}
+      <Center mt="10">
+        <Text>@alanhc</Text>
+      </Center>
+    </Container>
+  );
+};
 export default Layout;

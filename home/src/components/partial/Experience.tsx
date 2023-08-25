@@ -22,11 +22,11 @@ const Experience = ({ experience }: any) => {
                                             - {content.second}
                                             
                                         </CardHeader>
-                                        <Text  as='b' color='gray.600' fontSize='xs'>
+                                        <Text  as='b' color='gray.500' fontSize='xs'>
                                             {content.time.from} {(content.time.to) && "-"}  {content.time.to}
                                           
                                         </Text>
-                                        <Text color='gray.600' fontSize='sm'>
+                                        <Text color='gray.500' fontSize='sm'>
                                             {content.description}
                                         </Text>
                                     </Card>

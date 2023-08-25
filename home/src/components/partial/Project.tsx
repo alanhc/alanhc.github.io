@@ -28,7 +28,7 @@ const Project = ({ metadata }: any) => {
                 <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'  >
                     <NextImage width="600" height="500" layout="responsive" src={(metadata.image) ? `/${metadata.image}` : "/image/github.png"} alt={metadata.image} />
                     <Box p="6" >
-                        <Box display="flex" mt="1" fontWeight="semibold" as="h3" lineHeight="tight" color="black">
+                        <Box display="flex" mt="1" fontWeight="semibold" as="h3" lineHeight="tight" >
                             {metadata.title}
                         </Box>
                         <Box display="flex" alignItems="baseline"  >

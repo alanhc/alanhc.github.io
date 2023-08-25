@@ -19,10 +19,10 @@ type AppProps = {
 };
 const BlogLayout = ({ children }: AppProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const navigation = [{ Note: "/next-blog" }, { Link: "/link" }];
+  const navigation = [{ "🏠": "/" }, { "🗒️": "/next-blog" }, { "🔗": "/link" }];
 
   return (
-    <Container>
+    <Container className="ck-reset">
       <Flex>
         <Heading>
           {navigation.map((l: object, index: number) => (
@@ -30,18 +30,19 @@ const BlogLayout = ({ children }: AppProps) => {
               {Object.keys(l)} {index !== navigation.length - 1 && " · "}
             </Link>
           ))}
+
          
         </Heading>
         <Spacer />
         <Button onClick={toggleColorMode} mr={0}>
-          {colorMode === "light" ? "Dark" : "Light"}
+          {colorMode === "light" ? "🌓" : "☀️"}
         </Button>
       </Flex>
       {children}
       <Center mt="10">
         <p>@alanhc</p>
       </Center>
-    </Container >
+    </Container>
   );
 };
 export default BlogLayout;
