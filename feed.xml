@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0">
     <channel>
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Fri, 25 Aug 2023 18:16:56 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 06:52:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -12,34 +12,18 @@
             <url>https://alanhc.github.io/image/me.jpeg</url>
             <link>https://alanhc.github.io</link>
         </image>
-        <copyright>All rights reserved 2013, John Doe</copyright>
+        <copyright>All rights reserved 2023, alanhc</copyright>
         <item>
             <title><![CDATA[添加rss功能到nextjs部落格]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230825-rss</link>
             <guid>20230825-rss</guid>
             <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-## 下載 npm feed
-
-`pnpm add  feed`
-
-## 新增 generateRSS()
-
-新增 `lib/generateRSS.js`
-
-```js
-import { Feed]]></description>
-            <content:encoded><![CDATA[
-## 下載 npm feed
-
-`pnpm add  feed`
-
-## 新增 generateRSS()
-
-新增 `lib/generateRSS.js`
-
-```js
-import { Feed } from "feed";
+<h2>下載 npm feed</h2>
+<p><code>pnpm add feed</code></p>
+<h2>新增 generateRSS()</h2>
+<p>新增 <code>lib/generateRSS.js</code></p>
+<pre><code class="language-js">import { Feed } from "feed";
 
 import { writeFileSync } from "fs";
 
@@ -112,33 +96,32 @@ export default function generateRSS() {
     writeFileSync("./public/feed.json", feed.json1());
   });
 }
-```
-
-## load 時產生
-
-在 pages/index.tsx 的`getStaticProps` 裡，新增 generateRSS();
-打開 localhost/feed.xml 使用 [chrome extension - RSS Feed Reader](https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp) 可以看到東西就成功了 🎉
-
-## ref
-
-- https://www.npmjs.com/package/feed
-]]></content:encoded>
+</code></pre>
+<h2>load 時產生</h2>
+<p>
+  在 pages/index.tsx 的<code>getStaticProps</code> 裡，新增 generateRSS();
+  打開 localhost/feed.xml 使用 <a href="https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp">chrome extension - RSS Feed Reader</a> 可以看到東西就成功了 🎉
+</p>
+<h2>ref</h2>
+<ul>
+  <li>https://www.npmjs.com/package/feed</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[初探bigchaindb - python]]></title>
+            <title><![CDATA[初探bigchaindb]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230824-bigchain</link>
             <guid>20230824-bigchain</guid>
             <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[## 設定bigchaindb本地節點
-### 使用docker
-- pull image：`docker pull bigchaindb/bigchaindb:all-in-one`
-- run i]]></description>
-            <content:encoded><![CDATA[## 設定bigchaindb本地節點
-### 使用docker
-- pull image：`docker pull bigchaindb/bigchaindb:all-in-one`
-- run image：
-```shell
-docker run \
+            <description><![CDATA[
+<h2>設定bigchaindb本地節點</h2>
+<h3>使用docker</h3>
+<ul>
+  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>
+  <li>run image：</li>
+</ul>
+<pre><code class="language-shell">docker run \
   --detach \
   --name bigchaindb \
   --publish 9984:9984 \
@@ -149,18 +132,19 @@ docker run \
   --volume $HOME/bigchaindb_docker/mongodb/data/configdb:/data/configdb \
   --volume $HOME/bigchaindb_docker/tendermint:/tendermint \
   bigchaindb/bigchaindb:all-in-one`
-```
-
-## python 程式
-1. 設定節點
-```python
-from bigchaindb_driver import BigchainDB
+</code></pre>
+<h2>python 程式</h2>
+<ol>
+  <li>設定節點</li>
+</ol>
+<pre><code class="language-python">from bigchaindb_driver import BigchainDB
 bdb_root_url = 'http://localhost:9984'
 bdb = BigchainDB(bdb_root_url)
-```
-2. 定義asset(資產)
-```python
-game_boy_token = {
+</code></pre>
+<ol start="2">
+  <li>定義asset(資產)</li>
+</ol>
+<pre><code class="language-python">game_boy_token = {
     'data': {
         'token_for': {
             'game_boy': {
@@ -170,29 +154,31 @@ game_boy_token = {
         'description': 'Time share token. Each token equals one hour of usage.',
     },
 }
-```
-3. 建立交易
-```python
-prepared_token_tx = bdb.transactions.prepare(
+</code></pre>
+<ol start="3">
+  <li>建立交易</li>
+</ol>
+<pre><code class="language-python">prepared_token_tx = bdb.transactions.prepare(
     operation='CREATE',
     signers=alice.public_key,
     recipients=[([bob.public_key], 10)],
     asset=game_boy_token)
-```
-4. 簽署交易
-```python
-fulfilled_token_tx = bdb.transactions.fulfill(
+</code></pre>
+<ol start="4">
+  <li>簽署交易</li>
+</ol>
+<pre><code class="language-python">fulfilled_token_tx = bdb.transactions.fulfill(
     prepared_token_tx,
     private_keys=alice.private_key)
-```
-5. 送出交易
-```python
-txn_id = bdb.transactions.send_commit(fulfilled_token_tx)
+</code></pre>
+<ol start="5">
+  <li>送出交易</li>
+</ol>
+<pre><code class="language-python">txn_id = bdb.transactions.send_commit(fulfilled_token_tx)
 txn_id
-```
-應該會看到以下
-```json
-{'asset': {'data': {'description': 'Time share token. Each token equals one hour of usage.',
+</code></pre>
+<p>應該會看到以下</p>
+<pre><code class="language-json">{'asset': {'data': {'description': 'Time share token. Each token equals one hour of usage.',
    'token_for': {'game_boy': {'serial_number': 'LR1235'}}}},
  'id': '98ac51b2c675269aa11baef335b8bd0ebcc57f5f0667e214801c2985cf4c2523',
  'inputs': [{'fulfillment': 'pGSAIOPXBFb8bPTDgBLdij1w4kGQgXqx71ufCbGIAT9XqDeNgUC8k44UIXeEDswVGq2dmD5V1njfa3_u-4NXbUXoZIgQRIZCFBf3_bGVAokaaUrZ7R3TtRxIqtw3OKszxEKc-ooC',
@@ -203,13 +189,17 @@ txn_id
  'outputs': [{'amount': '10',
    'condition': {'details': {'public_key': '3NAbk3h45m2Jw56trHaXm5jWP8Jxtz6ZK2WECyDgvEte',
      'type': 'ed25519-sha-256'},
-    'uri': 'ni:///sha-256;MoPw1IV6D9k0fbiVr65BNRvmhnqmSrHZAw1EVGiALUA?fpt=ed25519-sha-256&cost=131072'},
+    'uri': 'ni:///sha-256;MoPw1IV6D9k0fbiVr65BNRvmhnqmSrHZAw1EVGiALUA?fpt=ed25519-sha-256&#x26;cost=131072'},
    'public_keys': ['3NAbk3h45m2Jw56trHaXm5jWP8Jxtz6ZK2WECyDgvEte']}],
  'version': '2.0'}
-```
-## ref
-- https://github.com/bigchaindb/bigchaindb-driver
-- https://docs.bigchaindb.com/projects/server/en/latest/appendices/all-in-one-bigchaindb.html]]></content:encoded>
+</code></pre>
+<h2>ref</h2>
+<ul>
+  <li>https://github.com/bigchaindb/bigchaindb-driver</li>
+  <li>https://docs.bigchaindb.com/projects/server/en/latest/appendices/all-in-one-bigchaindb.html</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[部落格暗黑模式]]></title>
@@ -217,17 +207,10 @@ txn_id
             <guid>20230824-chakra-darkmode</guid>
             <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-1. 新增 theme.ts
-
-```js
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
-
-// 2. Add ]]></description>
-            <content:encoded><![CDATA[
-1. 新增 theme.ts
-
-```js
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+<ol>
+  <li>新增 theme.ts</li>
+</ol>
+<pre><code class="language-js">import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
 // 2. Add your color mode config
 
@@ -242,55 +225,54 @@ const config: ThemeConfig = {
 const theme = extendTheme({ config });
 
 export default theme;
-```
-
-2. 新增\_document.tsx
-
-```js
-import { ColorModeScript } from "@chakra-ui/react";
+</code></pre>
+<ol start="2">
+  <li>新增_document.tsx</li>
+</ol>
+<pre><code class="language-js">import { ColorModeScript } from "@chakra-ui/react";
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 import theme from "./theme";
 
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
-        <Head />
+      &#x3C;Html lang="en">
+        &#x3C;Head />
 
-        <body>
+        &#x3C;body>
           {/* 👇 Here's the script */}
 
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          &#x3C;ColorModeScript initialColorMode={theme.config.initialColorMode} />
 
-          <Main />
+          &#x3C;Main />
 
-          <NextScript />
-        </body>
-      </Html>
+          &#x3C;NextScript />
+        &#x3C;/body>
+      &#x3C;/Html>
     );
   }
 }
-```
-
-3. 新增切換按鈕
-
-```js
-const { colorMode, toggleColorMode } = useColorMode()
+</code></pre>
+<ol start="3">
+  <li>新增切換按鈕</li>
+</ol>
+<pre><code class="language-js">const { colorMode, toggleColorMode } = useColorMode()
 ...
 return (
 ...
-<Button onClick={toggleColorMode}>
+&#x3C;Button onClick={toggleColorMode}>
         Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-</Button>
+&#x3C;/Button>
 
 )
 
-```
-
-## ref
-
-- https://chakra-ui.com/docs/styled-system/color-mode
-]]></content:encoded>
+</code></pre>
+<h2>ref</h2>
+<ul>
+  <li>https://chakra-ui.com/docs/styled-system/color-mode</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[更新nextjs到13]]></title>
@@ -298,154 +280,79 @@ return (
             <guid>20230820-nexjs13</guid>
             <pubDate>Sun, 20 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-- 升級nextjs版本：`pnpm up next react react-dom eslint-config-next --latest`
-- 自動更新image import：`npx @ne]]></description>
-            <content:encoded><![CDATA[
-- 升級nextjs版本：`pnpm up next react react-dom eslint-config-next --latest`
-- 自動更新image import：`npx @next/codemod@latest next-image-to-legacy-image .`
-	- 會更新  next/image -> next/legacy/image
-- 更新link：`npx @next/codemod@latest new-link .`
-
-記錄一下目前部落格的樣貌
-![](/image/next-blog-13-1.png)
-![](/image/next-blog-13-2.png)
-![](/image/next-blog-13-3.png)
-## Ref
-- https://chakra-ui.com/docs/components/link/usage#usage-with-nextjs
-- https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#new-link
-- https://nextjs.org/docs/pages/building-your-application/upgrading/version-13
-- https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image
-
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[實作markdown section link]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230818-markdown-section-link</link>
-            <guid>20230818-markdown-section-link</guid>
-            <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[## Toc部分
-
-```js
-import markdownToc from 'markdown-toc';
-const tocMarkdown = await markdownToc(markdo]]></description>
-            <content:encoded><![CDATA[## Toc部分
-
-```js
-import markdownToc from 'markdown-toc';
-const tocMarkdown = await markdownToc(markdownContent);
-```
-```js
-<UnorderedList>
-  {postData.tocMarkdown.json.map((heading: any) => (
-    <ListItem key={heading.content}>
-      <Link href={`#${heading.content}`}>
-        {heading.content}
-      </Link>
-    </ListItem>
-  ))}
-</UnorderedList>
-```
-## 修改react markdown所需要的component
-```js
-function SectionBlock({ node, inline, className, children, id, ...props }: any) {
-  const router = useRouter()
-  const origin =
-    typeof window !== 'undefined' && window.location.origin
-      ? window.location.origin
-      : '';
-  const URL = `${origin}${router.asPath}`;
-  const { onCopy, value, setValue, hasCopied } = useClipboard(URL + "#" + children);
-  const [isHovering, setIsHovering] = useState(false);
-
-  return (
-    <Link href={`#${children}`} id={children} onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
-      <Heading  {...props}>
-        {children} {isHovering && "🔗"}
-      </Heading>
-    </Link>
-  );
-}
-const components = {
-  code: CodeBlock,
-  h1: ({ node, ...props }: any) => <SectionBlock as="h1" size='xl' {...props} />,
-  h2: ({ node, ...props }: any) => <SectionBlock as="h2" size='lg' {...props} />,
-  h3: ({ node, ...props }: any) => <SectionBlock as="h3" size='md' {...props} />,
-  h4: ({ node, ...props }: any) => <SectionBlock as="h4" size='sm' {...props} />,
-  h5: ({ node, ...props }: any) => <SectionBlock as="h5" size='xs' {...props} />,
-  a: ({ node, ...props }: any) => <Link  {...props} />,
-};
-```]]></content:encoded>
+<ul>
+  <li>升級nextjs版本：<code>pnpm up next react react-dom eslint-config-next --latest</code></li>
+  <li>自動更新image import：<code>npx @next/codemod@latest next-image-to-legacy-image .</code>
+    <ul>
+      <li>會更新 next/image -> next/legacy/image</li>
+    </ul>
+  </li>
+  <li>更新link：<code>npx @next/codemod@latest new-link .</code></li>
+</ul>
+<p>
+  記錄一下目前部落格的樣貌
+  
+  <img src="/image/next-blog-13-1.png" alt="">
+  <img src="/image/next-blog-13-2.png" alt="">
+  <img src="/image/next-blog-13-3.png" alt="">
+</p>
+<h2>Ref</h2>
+<ul>
+  <li>https://chakra-ui.com/docs/components/link/usage#usage-with-nextjs</li>
+  <li>https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#new-link</li>
+  <li>https://nextjs.org/docs/pages/building-your-application/upgrading/version-13</li>
+  <li>https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230819-markdown_test</link>
             <guid>20230819-markdown_test</guid>
             <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[code如下
-
-```
-mermaid
+            <description><![CDATA[
+<p>code如下</p>
+<pre><code>mermaid
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
-
-
-
-## 修改CodeBlock
-
-```]]></description>
-            <content:encoded><![CDATA[code如下
-
-```
-mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-
-
-## 修改CodeBlock
-
-```js
-function CodeBlock({ language, node, inline, className, children, ...props }: any) {
+</code></pre>
+<h2>修改CodeBlock</h2>
+<pre><code class="language-js">function CodeBlock({ language, node, inline, className, children, ...props }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || '');
   
   if (inline || !match) { //只有一行的code
-    return (<Flex mb={2}>
-      <Code {...props} colorScheme="blackAlpha">
+    return (&#x3C;Flex mb={2}>
+      &#x3C;Code {...props} colorScheme="blackAlpha">
         {children}
-      </Code>
-      <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
-    </Flex>)
+      &#x3C;/Code>
+      &#x3C;Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
+    &#x3C;/Flex>)
   } else if (match![1] ==='mermaid') {
-    return (<Box className='mermaid'>{children}</Box>)
+    return (&#x3C;Box className='mermaid'>{children}&#x3C;/Box>)
   } else {
     return (
-      <Flex mb={2}>
-        <SyntaxHighlighter
+      &#x3C;Flex mb={2}>
+        &#x3C;SyntaxHighlighter
           style={darcula as { [key: string]: CSSProperties }}
           language={match![1] }
           PreTag="div"
           {...props}
         >
           {String(children).replace(/\n$/, '')}
-        </SyntaxHighlighter>
-        <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
-      </Flex>
+        &#x3C;/SyntaxHighlighter>
+        &#x3C;Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
+      &#x3C;/Flex>
     )
   }
 }
-```
-## render新增
-```js
-<Script
+</code></pre>
+<h2>render新增</h2>
+<pre><code class="language-js">&#x3C;Script
   id="mermaidjs"
   type="module"
   strategy="afterInteractive"
@@ -457,78 +364,125 @@ function CodeBlock({ language, node, inline, className, children, ...props }: an
     `,
   }}
 />
-```
-## 成功
-以下圖是使用 mermaidjs渲染出來的
-```mermaid
-graph TD;
+</code></pre>
+<h2>成功</h2>
+<p>以下圖是使用 mermaidjs渲染出來的</p>
+<pre><code class="language-mermaid">graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-```
-- https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/
-- https://nextjs.org/docs/pages/api-reference/components/script
-- http://mermaid.js.org/]]></content:encoded>
+</code></pre>
+<ul>
+  <li>https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/</li>
+  <li>https://nextjs.org/docs/pages/api-reference/components/script</li>
+  <li>http://mermaid.js.org/</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[實作markdown section link]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230818-markdown-section-link</link>
+            <guid>20230818-markdown-section-link</guid>
+            <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Toc部分</h2>
+<pre><code class="language-js">import markdownToc from 'markdown-toc';
+const tocMarkdown = await markdownToc(markdownContent);
+</code></pre>
+<pre><code class="language-js">&#x3C;UnorderedList>
+  {postData.tocMarkdown.json.map((heading: any) => (
+    &#x3C;ListItem key={heading.content}>
+      &#x3C;Link href={`#${heading.content}`}>
+        {heading.content}
+      &#x3C;/Link>
+    &#x3C;/ListItem>
+  ))}
+&#x3C;/UnorderedList>
+</code></pre>
+<h2>修改react markdown所需要的component</h2>
+<pre><code class="language-js">function SectionBlock({ node, inline, className, children, id, ...props }: any) {
+  const router = useRouter()
+  const origin =
+    typeof window !== 'undefined' &#x26;&#x26; window.location.origin
+      ? window.location.origin
+      : '';
+  const URL = `${origin}${router.asPath}`;
+  const { onCopy, value, setValue, hasCopied } = useClipboard(URL + "#" + children);
+  const [isHovering, setIsHovering] = useState(false);
+
+  return (
+    &#x3C;Link href={`#${children}`} id={children} onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+      &#x3C;Heading  {...props}>
+        {children} {isHovering &#x26;&#x26; "🔗"}
+      &#x3C;/Heading>
+    &#x3C;/Link>
+  );
+}
+const components = {
+  code: CodeBlock,
+  h1: ({ node, ...props }: any) => &#x3C;SectionBlock as="h1" size='xl' {...props} />,
+  h2: ({ node, ...props }: any) => &#x3C;SectionBlock as="h2" size='lg' {...props} />,
+  h3: ({ node, ...props }: any) => &#x3C;SectionBlock as="h3" size='md' {...props} />,
+  h4: ({ node, ...props }: any) => &#x3C;SectionBlock as="h4" size='sm' {...props} />,
+  h5: ({ node, ...props }: any) => &#x3C;SectionBlock as="h5" size='xs' {...props} />,
+  a: ({ node, ...props }: any) => &#x3C;Link  {...props} />,
+};
+</code></pre>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[將部落格加入sitemap功能]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230817-next-sitemap</link>
             <guid>20230817-next-sitemap</guid>
             <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[指令下：`pnpm add -D next-sitemap`
-
-新增 next-sitemap.config.js
-```js
-/** @type {import('next-sitemap').IC]]></description>
-            <content:encoded><![CDATA[指令下：`pnpm add -D next-sitemap`
-
-新增 next-sitemap.config.js
-```js
-/** @type {import('next-sitemap').IConfig} */
+            <description><![CDATA[
+<p>指令下：<code>pnpm add -D next-sitemap</code></p>
+<p>新增 next-sitemap.config.js</p>
+<pre><code class="language-js">/** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://example.com',
   generateRobotsTxt: true, // (optional)
   // ...other options
 }
-```
-在package.json > script
-新增 `"postbuild": "next-sitemap"`
-使用pnpm需要新增 `.npmrc`
-```
-enable-pre-post-scripts=true
-```
-在public/看到 sitemap.xml 、robots.txt、sitemap-0.xml成功🎉
-
-去[http://www.google.com/webmasters/tools/](http://www.google.com/webmasters/tools/) 驗證網域
-會要下載一個 googleOOOOO.js ，放在public
-
-提交sitemap：`https://www.google.com/ping?sitemap=https://alanhc.github.io/sitemap.xml`
-## ref
-- https://www.npmjs.com/package/next-sitemap
-]]></content:encoded>
+</code></pre>
+<p>
+  在package.json > script
+  新增 <code>"postbuild": "next-sitemap"</code>
+  使用pnpm需要新增 <code>.npmrc</code>
+</p>
+<pre><code>enable-pre-post-scripts=true
+</code></pre>
+<p>在public/看到 sitemap.xml 、robots.txt、sitemap-0.xml成功🎉</p>
+<p>
+  去<a href="http://www.google.com/webmasters/tools/">http://www.google.com/webmasters/tools/</a> 驗證網域
+  會要下載一個 googleOOOOO.js ，放在public
+</p>
+<p>提交sitemap：<code>https://www.google.com/ping?sitemap=https://alanhc.github.io/sitemap.xml</code></p>
+<h2>ref</h2>
+<ul>
+  <li>https://www.npmjs.com/package/next-sitemap</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[新增page loading的進度條]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230816-nprogress</link>
             <guid>20230816-nprogress</guid>
             <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[`pnpm add nprogress`
-`pnpm add -D @types/nprogress`
-
-在pages/_app.tsx新增
-```js
-import 'nprogress/nprog]]></description>
-            <content:encoded><![CDATA[`pnpm add nprogress`
-`pnpm add -D @types/nprogress`
-
-在pages/_app.tsx新增
-```js
-import 'nprogress/nprogress.css';
+            <description><![CDATA[
+<p>
+  <code>pnpm add nprogress</code>
+  <code>pnpm add -D @types/nprogress</code>
+</p>
+<p>在pages/_app.tsx新增</p>
+<pre><code class="language-js">import 'nprogress/nprogress.css';
 import { useRouter } from 'next/router'; import NProgress from 'nprogress'; import { useEffect } from 'react';
-```
-```js
-function MyApp({ Component, pageProps }: AppProps) {
+</code></pre>
+<pre><code class="language-js">function MyApp({ Component, pageProps }: AppProps) {
 const router = useRouter();
 // Integrate nprogress
 useEffect(() => {
@@ -540,31 +494,27 @@ router.events.on('routeChangeError', () => NProgress.done());
 // eslint-disable-next-line react-hooks/exhaustive-deps
 
 }, []);
-```
-這樣就可以在等待的時候看到藍色進度條了🎉
-## ref
-- https://www.npmjs.com/package/nprogress
-- https://learnjsx.com/category/4/posts/nextjs-nprogress#google_vignette]]></content:encoded>
+</code></pre>
+<p>這樣就可以在等待的時候看到藍色進度條了🎉</p>
+<h2>ref</h2>
+<ul>
+  <li>https://www.npmjs.com/package/nprogress</li>
+  <li>https://learnjsx.com/category/4/posts/nextjs-nprogress#google_vignette</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[三種使用Python爬取網頁的方法]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230813-back-up-crawler</link>
             <guid>20230813-back-up-crawler</guid>
             <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[## 第一版: 使用session慢慢爬
-```python
-s = requests.Session()
-```
-## 第二版: 使用python的並行處理功能
-```python
-import r]]></description>
-            <content:encoded><![CDATA[## 第一版: 使用session慢慢爬
-```python
-s = requests.Session()
-```
-## 第二版: 使用python的並行處理功能
-```python
-import requests
+            <description><![CDATA[
+<h2>第一版: 使用session慢慢爬</h2>
+<pre><code class="language-python">s = requests.Session()
+</code></pre>
+<h2>第二版: 使用python的並行處理功能</h2>
+<pre><code class="language-python">import requests
 import concurrent.futures
 results = []
 # 定義爬蟲任務
@@ -586,10 +536,9 @@ def fetch(urls):
             # 使用 map 函式來同時執行多個爬蟲任務
             results = executor.map(fetch_url, urls, [session] * len(urls))
     return results
-```
-## 第三版: 直接使用異步處理方式
-```python
-import asyncio
+</code></pre>
+<h2>第三版: 直接使用異步處理方式</h2>
+<pre><code class="language-python">import asyncio
 import aiohttp
 
 async def fetch_url(session, url):
@@ -617,115 +566,123 @@ urls_courses = [
 
 loop = asyncio.get_event_loop()
 results = loop.run_until_complete(fetch_all(urls_courses))
-```
-## link
-- https://github.com/alanhc/back-up]]></content:encoded>
+</code></pre>
+<h2>link</h2>
+<ul>
+  <li>https://github.com/alanhc/back-up</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[使用react syntax highlighter及useClipboard強化程式碼區塊]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard</link>
             <guid>20230812-react-syntax-clipboard</guid>
             <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[# react syntax highlighter + clipboard
-
-1. 先去讀 postsDirectory 的markdownfile交給matter將markdown轉成object]]></description>
-            <content:encoded><![CDATA[# react syntax highlighter + clipboard
-
-1. 先去讀 postsDirectory 的markdownfile交給matter將markdown轉成object
-  ```md
-  ---
-  title: Hello
-  slug: home
-  ---
-  # Hello world!
-  ```
-  ```js
-  {
-    content: '# Hello world!',
-    data: { 
-      title: 'Hello', 
-      slug: 'home' 
-    }
+            <description><![CDATA[
+<h1>react syntax highlighter + clipboard</h1>
+<ol>
+  <li>先去讀 postsDirectory 的markdownfile交給matter將markdown轉成object</li>
+</ol>
+<pre><code class="language-md">---
+title: Hello
+slug: home
+---
+# Hello world!
+</code></pre>
+<pre><code class="language-js">{
+  content: '# Hello world!',
+  data: { 
+    title: 'Hello', 
+    slug: 'home' 
   }
-  ```
-
-  ```js
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const matterResult = matter(fileContents);
-  ...
-  ```
-2. 將matterResult的markdown語法顯示出來
-  註：remarkGfm 讓他可以接受github的神奇markdown語法
-  ```jsx
-  import remarkGfm from 'remark-gfm'
-  import ReactMarkdown from "react-markdown";
-  ...
-  <ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
-      {postData.contentHtml}
-  </ReactMarkdown>
-  ```
-3. 讓產生出來的程式需要有顏色的語法提示及複製功能
-註：這裡是透過指定ReactMarkdown的components及使用chakra ui的useClipboard hook，如果codeblock有指定的程式語言就使用react-syntax-highlighter將他顯示語法提示
-```jsx
-import { Container, Heading, Link, Code, useClipboard, Flex, Button } from "@chakra-ui/react";
+}
+</code></pre>
+<pre><code class="language-js">const fullPath = path.join(postsDirectory, `${id}.md`);
+const fileContents = fs.readFileSync(fullPath, 'utf8');
+const matterResult = matter(fileContents);
+...
+</code></pre>
+<ol start="2">
+  <li>
+    將matterResult的markdown語法顯示出來
+    註：remarkGfm 讓他可以接受github的神奇markdown語法
+  </li>
+</ol>
+<pre><code class="language-jsx">import remarkGfm from 'remark-gfm'
+import ReactMarkdown from "react-markdown";
+...
+&#x3C;ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
+    {postData.contentHtml}
+&#x3C;/ReactMarkdown>
+</code></pre>
+<ol start="3">
+  <li>
+    讓產生出來的程式需要有顏色的語法提示及複製功能
+    註：這裡是透過指定ReactMarkdown的components及使用chakra ui的useClipboard hook，如果codeblock有指定的程式語言就使用react-syntax-highlighter將他顯示語法提示
+  </li>
+</ol>
+<pre><code class="language-jsx">import { Container, Heading, Link, Code, useClipboard, Flex, Button } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 
 
 function CodeBlock({ node, inline, className, children, ...props }: any)  {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || '');
-  return !inline && match ? (
-    <Flex mb={2}>
-      <SyntaxHighlighter
+  return !inline &#x26;&#x26; match ? (
+    &#x3C;Flex mb={2}>
+      &#x3C;SyntaxHighlighter
         style={darcula as { [key: string]: CSSProperties }}
         language={match[1]}
         PreTag="div"
         {...props}
       >
         {String(children).replace(/\n$/, '')}
-      </SyntaxHighlighter>
-      <Button ml={2} onClick={onCopy}colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
-    </Flex>
+      &#x3C;/SyntaxHighlighter>
+      &#x3C;Button ml={2} onClick={onCopy}colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
+    &#x3C;/Flex>
   ) : (
-    <Flex mb={2}>
-      <Code {...props} colorScheme="blackAlpha">
+    &#x3C;Flex mb={2}>
+      &#x3C;Code {...props} colorScheme="blackAlpha">
         {children}
-      </Code>
-      <Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}</Button>
-    </Flex>
+      &#x3C;/Code>
+      &#x3C;Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
+    &#x3C;/Flex>
   );
 }
 const components = {
   code: CodeBlock,
 };
-```
-
-![](https://hackmd.io/_uploads/ryNnKSrh3.png)
-
-## ref:
-- https://npm.io/package/gray-matter
-- https://www.npmjs.com/package/react-markdown
-- https://www.npmjs.com/package/remark-gfm]]></content:encoded>
+</code></pre>
+<p>
+  <img src="https://hackmd.io/_uploads/ryNnKSrh3.png" alt="">
+</p>
+<h2>ref:</h2>
+<ul>
+  <li>https://npm.io/package/gray-matter</li>
+  <li>https://www.npmjs.com/package/react-markdown</li>
+  <li>https://www.npmjs.com/package/remark-gfm</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[實作NFT mint的前端]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230109-ipfs-upload</link>
             <guid>20230109-ipfs-upload</guid>
             <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[1. import package
-```js
-import { NFTStorage, File, Blob } from 'nft.storage'
-const API_KEY = process]]></description>
-            <content:encoded><![CDATA[1. import package
-```js
-import { NFTStorage, File, Blob } from 'nft.storage'
+            <description><![CDATA[
+<ol>
+  <li>import package</li>
+</ol>
+<pre><code class="language-js">import { NFTStorage, File, Blob } from 'nft.storage'
 const API_KEY = process.env.NFT_STORAGE_API_KEY
 const client = new NFTStorage({ token: API_KEY })
-```
-2. 
-```js
-function dataURItoBlob(dataURI) {
+</code></pre>
+<ol start="2">
+  <li></li>
+</ol>
+<pre><code class="language-js">function dataURItoBlob(dataURI) {
     // convert base64 to raw binary data held in a string
     // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
     var byteString = atob(dataURI.split(',')[1]);
@@ -736,17 +693,18 @@ function dataURItoBlob(dataURI) {
     // create a view into the buffer
     var ia = new Uint8Array(ab);
     // set the bytes of the buffer to the correct values
-    for (var i = 0; i < byteString.length; i++) {
+    for (var i = 0; i &#x3C; byteString.length; i++) {
         ia[i] = byteString.charCodeAt(i);
     }
     // write the ArrayBuffer to a blob, and you're done
     var blob = new Blob([ab], {type: mimeString});
     return blob;  
 }
-```
-3. 
-```js
-    ...
+</code></pre>
+<ol start="3">
+  <li></li>
+</ol>
+<pre><code class="language-js">    ...
     const [dataUri, setDataUri] = useState("")
     const [ipfs, setIpfs] = useState("")
 
@@ -774,35 +732,34 @@ function dataURItoBlob(dataURI) {
         }
         upload_ipfs()
     }
-```
-4. 
-```js
-return (
-        <Layout>
+</code></pre>
+<ol start="4">
+  <li></li>
+</ol>
+<pre><code class="language-js">return (
+        &#x3C;Layout>
            ...
-            <img width="100" height="100" src={dataUri} alt="avatar"/>
-            <input type="file" onChange={(event) => onChange(event.target.files[0] || null)} ></input>
-            <Button onClick={handle_mint}>Create</Button>
+            &#x3C;img width="100" height="100" src={dataUri} alt="avatar"/>
+            &#x3C;input type="file" onChange={(event) => onChange(event.target.files[0] || null)} >&#x3C;/input>
+            &#x3C;Button onClick={handle_mint}>Create&#x3C;/Button>
             {ipfs}
-        </Layout>
+        &#x3C;/Layout>
     )
-```
-- https://github.com/alanhc/aka-ticket/blob/main/frontend/pages/event/index.js]]></content:encoded>
+</code></pre>
+<ul>
+  <li>https://github.com/alanhc/aka-ticket/blob/main/frontend/pages/event/index.js</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[erc 1155 合約]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230108-erc-1155</link>
             <guid>20230108-erc-1155</guid>
             <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[## erc 1155
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
-
-import "@openzeppel]]></description>
-            <content:encoded><![CDATA[## erc 1155
-```solidity
-// SPDX-License-Identifier: MIT
+            <description><![CDATA[
+<h2>erc 1155</h2>
+<pre><code class="language-solidity">// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
@@ -836,24 +793,51 @@ contract MyToken is ERC1155, Ownable {
         _mintBatch(to, ids, amounts, data);
     }
 }
-```
-註記：mint data要設定 0x0000000000000000000000000000000000000000000000000000000000000000]]></content:encoded>
+</code></pre>
+<p>註記：mint data要設定 0x0000000000000000000000000000000000000000000000000000000000000000</p>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[test]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/test</link>
+            <guid>test</guid>
+            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>h1</h1>
+<p>
+  text text text text text text text text text text text text text text text text text text text text text text
+  text text text text text text text text text text text text text text text text text text text text text text
+</p>
+<h2>h2</h2>
+<h3>h3</h3>
+<h2>abc abc</h2>
+<h2>abc + abc</h2>
+<h2>code</h2>
+<p>hello</p>
+<pre><code class="language-js">const main = () => console.log("hello")
+main();
+</code></pre>
+<h2>one line code</h2>
+<p><code>rm -rf</code></p>
+<h2>flowchart</h2>
+<pre><code class="language-mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</code></pre>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[部署我的網站到k8s上]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20221231-k8s-notes</link>
             <guid>20221231-k8s-notes</guid>
             <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[## 1. 在專案根目錄新增以下檔案
-```dockerfile
-FROM node:16-alpine
-
-ARG NODE_ENV="production"
-
-ENV NODE_ENV=${NODE]]></description>
-            <content:encoded><![CDATA[## 1. 在專案根目錄新增以下檔案
-```dockerfile
-FROM node:16-alpine
+            <description><![CDATA[
+<h2>1. 在專案根目錄新增以下檔案</h2>
+<pre><code class="language-dockerfile">FROM node:16-alpine
 
 ARG NODE_ENV="production"
 
@@ -873,16 +857,15 @@ EXPOSE 3000
 
 CMD [ "yarn", "start" ]
 
-```
-## 2. build image
-`docker build . -t alanhc/alanhc.github.io:latest`
-## 3. 跑起來測試 
-`docker run -p 3000:3000 alanhc/alanhc.github.io`
-## 4. 推上docker hub 
-`docker push alanhc/alanhc.github.io`
-## 5. 新增 k8s/deploy.yml
-```yaml
-apiVersion: apps/v1
+</code></pre>
+<h2>2. build image</h2>
+<p><code>docker build . -t alanhc/alanhc.github.io:latest</code></p>
+<h2>3. 跑起來測試</h2>
+<p><code>docker run -p 3000:3000 alanhc/alanhc.github.io</code></p>
+<h2>4. 推上docker hub</h2>
+<p><code>docker push alanhc/alanhc.github.io</code></p>
+<h2>5. 新增 k8s/deploy.yml</h2>
+<pre><code class="language-yaml">apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -903,27 +886,25 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 3000
-```
-## 6. k8s config
-`kubectl apply -f k8s`
-## 7. 在minikube使用portfoard啟動
-`kubectl port-forward svc/nextjs-app 3000:3000`
-]]></content:encoded>
+</code></pre>
+<h2>6. k8s config</h2>
+<p><code>kubectl apply -f k8s</code></p>
+<h2>7. 在minikube使用portfoard啟動</h2>
+<p><code>kubectl port-forward svc/nextjs-app 3000:3000</code></p>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[使用smartpy撰寫tezos的nft程式]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20221230-tezos-nft-tutorial</link>
             <guid>20221230-tezos-nft-tutorial</guid>
             <pubDate>Fri, 30 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[## 撰寫nft合約
-- 到 [smartpy ide](https://smartpy.io/ide) 輸入
-```python
-import smartpy as sp
-FA2 = sp.io.i]]></description>
-            <content:encoded><![CDATA[## 撰寫nft合約
-- 到 [smartpy ide](https://smartpy.io/ide) 輸入
-```python
-import smartpy as sp
+            <description><![CDATA[
+<h2>撰寫nft合約</h2>
+<ul>
+  <li>到 <a href="https://smartpy.io/ide">smartpy ide</a> 輸入</li>
+</ul>
+<pre><code class="language-python">import smartpy as sp
 FA2 = sp.io.import_template("FA2.py")
 
 class NFT(FA2.FA2):
@@ -938,94 +919,98 @@ def test():
   scenario.h1("tutorial tests")
   nft = NFT(FA2.FA2_config(non_fungible=True), admin=admin, metadata= sp.utils.metadata_of_url("https://alanhc.github.io/nft/tezos-contract-example.json")
   scenario += nft
-```
-## 部署合約
-- 更改admin為自己的地址、按下執行(左上)，並按下deploy contract
-![](https://i.imgur.com/qLG96GS.png)
-- 選擇測試鏈（ghostnet），並選擇estimate gas
-![](https://i.imgur.com/tRzRx3P.png)
-![](https://i.imgur.com/BEyHnAN.png)
-- 將 token metadata (hex) 輸入，可使用 [string2hex](https://codebeautify.org/string-hex-converter)
-    - 範例：(hex)`697066733a2f2f6261666b7265696833366d336434796662707974656c75766e7475706835787962777467786476796b736267796736366573343464726b34687179`，原文(string)：`ipfs://bafkreih36m3d4yfbpyteluvntuph5xybwtgxdvyksbgyg66es44drk4hqy`
-![](https://i.imgur.com/5W1GHKA.png)
-## 查看nft
-- 到 [tzkt](https://ghostnet.tzkt.io/) >balance 查看是否有nft
-![](https://i.imgur.com/vhoA46K.png)
-
-
-## 參考
-- https://learn.figment.io/tutorials/mint-nfts-on-tezos]]></content:encoded>
+</code></pre>
+<h2>部署合約</h2>
+<ul>
+  <li>
+    更改admin為自己的地址、按下執行(左上)，並按下deploy contract
+    
+    <img src="https://i.imgur.com/qLG96GS.png" alt="">
+  </li>
+  <li>
+    選擇測試鏈（ghostnet），並選擇estimate gas
+    
+    <img src="https://i.imgur.com/tRzRx3P.png" alt="">
+    <img src="https://i.imgur.com/BEyHnAN.png" alt="">
+  </li>
+  <li>將 token metadata (hex) 輸入，可使用 <a href="https://codebeautify.org/string-hex-converter">string2hex</a>
+    <ul>
+      <li>
+        範例：(hex)<code>697066733a2f2f6261666b7265696833366d336434796662707974656c75766e7475706835787962777467786476796b736267796736366573343464726b34687179</code>，原文(string)：<code>ipfs://bafkreih36m3d4yfbpyteluvntuph5xybwtgxdvyksbgyg66es44drk4hqy</code>
+        <img src="https://i.imgur.com/5W1GHKA.png" alt="">
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2>查看nft</h2>
+<ul>
+  <li>
+    到 <a href="https://ghostnet.tzkt.io/">tzkt</a> >balance 查看是否有nft
+    
+    <img src="https://i.imgur.com/vhoA46K.png" alt="">
+  </li>
+</ul>
+<h2>參考</h2>
+<ul>
+  <li>https://learn.figment.io/tutorials/mint-nfts-on-tezos</li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[在solana上mint NFT]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20221228-solana-nft-tutorial</link>
             <guid>20221228-solana-nft-tutorial</guid>
             <pubDate>Wed, 28 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[1. 下載 solana cli: `sh -c "$(curl -sSfL https://release.solana.com/v1.14.11/install)"`
-2. 新增帳號 `solan]]></description>
-            <content:encoded><![CDATA[1. 下載 solana cli: `sh -c "$(curl -sSfL https://release.solana.com/v1.14.11/install)"`
-2. 新增帳號 `solana-keygen new --outfile ~/.config/solana/devnet.json`
-3. 設定 devnet `solana config set --url <https://metaplex.devnet.rpcpool.com/>`
-4. 檢查設定 `solana config get`
-
-    ```
-    Config File: ~/.config/solana/cli/config.yml
-    RPC URL: https://metaplex.devnet.rpcpool.com/
-    WebSocket URL: wss://metaplex.devnet.rpcpool.com/ (computed)
-    Keypair Path: ~/.config/solana/devnet.json
-    Commitment: confirmed
-    ```
-
-5. 拿測試token: `solana airdrop 2`
-6. sugar launch
-- https://nft.storage/manage/
-- https://github.com/metaplex-foundation/sugar
-- https://docs.metaplex.com/deprecated/candy-machine-js-cli/getting-started#solana-wallet
-![](https://i.imgur.com/5Z75hh4.png)
-]]></content:encoded>
+            <description><![CDATA[
+<ol>
+  <li>
+    <p>下載 solana cli: <code>sh -c "$(curl -sSfL https://release.solana.com/v1.14.11/install)"</code></p>
+  </li>
+  <li>
+    <p>新增帳號 <code>solana-keygen new --outfile ~/.config/solana/devnet.json</code></p>
+  </li>
+  <li>
+    <p>設定 devnet <code>solana config set --url &#x3C;https://metaplex.devnet.rpcpool.com/></code></p>
+  </li>
+  <li>
+    <p>檢查設定 <code>solana config get</code></p>
+    <pre><code>Config File: ~/.config/solana/cli/config.yml
+RPC URL: https://metaplex.devnet.rpcpool.com/
+WebSocket URL: wss://metaplex.devnet.rpcpool.com/ (computed)
+Keypair Path: ~/.config/solana/devnet.json
+Commitment: confirmed
+</code></pre>
+  </li>
+  <li>
+    <p>拿測試token: <code>solana airdrop 2</code></p>
+  </li>
+  <li>
+    <p>sugar launch</p>
+  </li>
+</ol>
+<ul>
+  <li>https://nft.storage/manage/</li>
+  <li>https://github.com/metaplex-foundation/sugar</li>
+  <li>
+    https://docs.metaplex.com/deprecated/candy-machine-js-cli/getting-started#solana-wallet
+    
+    <img src="https://i.imgur.com/5Z75hh4.png" alt="">
+  </li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
             <link>https://alanhc.github.io/next-blog/posts/first-day</link>
             <guid>first-day</guid>
             <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[# Hi! 😃
-hello world!
+            <description><![CDATA[
+<h1>Hi! 😃</h1>
+<p>hello world!</p>
 ]]></description>
-            <content:encoded><![CDATA[# Hi! 😃
-hello world!
-]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[test]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/test</link>
-            <guid>test</guid>
-            <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
-            <description><![CDATA[# h1
-text text text text text text text text text text text text text text text text text text text ]]></description>
-            <content:encoded><![CDATA[# h1
-text text text text text text text text text text text text text text text text text text text text text text 
-text text text text text text text text text text text text text text text text text text text text text text 
-## h2
-### h3
-## abc abc
-## abc + abc
-## code
-hello
-```js
-const main = () => console.log("hello")
-main();
-```
-## one line code
-`rm -rf`
-## flowchart
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```]]></content:encoded>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
     </channel>
 </rss>
