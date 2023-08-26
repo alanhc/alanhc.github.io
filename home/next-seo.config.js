@@ -13,7 +13,9 @@ export default {
         cardType: 'summary_large_image',
     },
     additionalLinkTags: [
-        {rel: 'icon', href: process.env.config.image.logo}
+        { rel: 'icon', href: process.env.config.image.logo },
+        { rel: "alternate", type: "application/rss+xml",href: "/feed.xml"},
+        { rel: "alternate", type: "application/atom+xml", href: "/atom.xml"},
     ]
 
 };
