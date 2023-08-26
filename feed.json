@@ -11,10 +11,21 @@
     },
     "items": [
         {
+            "id": "20230826-next-seo",
+            "url": "https://alanhc.github.io/next-blog/posts/20230826-next-seo",
+            "title": "加入next-seo",
+            "summary": "\n<h2>加入環境變數</h2>\n<ul>\n  <li>在next.config.js新增</li>\n</ul>\n<pre><code class=\"language-js\">const nextConfig = {\n...\nenv: {\n\nbaseUrl: isProd ? \"https://alanhc.github.io\" : \"http://localhost:3000\",\n\nNEXT_PUBLIC_GOOGLE_ANALYTICS: \"G-L5Z3CY454S\",\n\nconfig: {",
+            "date_modified": "2023-08-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "nextjs-markdown",
             "url": "https://alanhc.github.io/next-blog/posts/nextjs-markdown",
             "title": "統整markdown的使用方法",
-            "summary": "\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<pre><code class=\"language-js\">export async function getSortedPostsData() {\n  // Get file names under /posts\n  const fileNames = fs.readdirSync(postsDirectory);\n  const allPostsData = await Promise.all(\n    fileName",
+            "summary": "\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<h2>資料在雲端</h2>\n<h3>使用 MDX</h3>\n<h2>相關posts</h2>\n<ul>\n  <li><a href=\"https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard\">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -154,17 +165,6 @@
             }
         },
         {
-            "id": "test",
-            "url": "https://alanhc.github.io/next-blog/posts/test",
-            "title": "test",
-            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
-            "date_modified": "2023-01-01T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20221231-k8s-notes",
             "url": "https://alanhc.github.io/next-blog/posts/20221231-k8s-notes",
             "title": "部署我的網站到k8s上",
@@ -203,6 +203,17 @@
             "title": "Hello World",
             "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
             "date_modified": "2022-12-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "test-render",
+            "url": "https://alanhc.github.io/next-blog/posts/test-render",
+            "title": "test",
+            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
+            "date_modified": "2000-01-01T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"

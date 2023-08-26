@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-08-26T07:50:19.792Z</updated>
+    <updated>2023-08-26T11:10:05.684Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -16,6 +16,31 @@
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
     <entry>
+        <title type="html"><![CDATA[加入next-seo]]></title>
+        <id>20230826-next-seo</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230826-next-seo"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>加入環境變數</h2>
+<ul>
+  <li>在next.config.js新增</li>
+</ul>
+<pre><code class="language-js">const nextConfig = {
+...
+env: {
+
+baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+
+NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
+
+config: {]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[統整markdown的使用方法]]></title>
         <id>nextjs-markdown</id>
         <link href="https://alanhc.github.io/next-blog/posts/nextjs-markdown"/>
@@ -23,11 +48,11 @@
         <summary type="html"><![CDATA[
 <h2>資料在本地</h2>
 <h3>使用unified</h3>
-<pre><code class="language-js">export async function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = await Promise.all(
-    fileName]]></summary>
+<h2>資料在雲端</h2>
+<h3>使用 MDX</h3>
+<h2>相關posts</h2>
+<ul>
+  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -282,24 +307,6 @@ contract MyToken is ERC]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>test</id>
-        <link href="https://alanhc.github.io/next-blog/posts/test"/>
-        <updated>2023-01-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h1>h1</h1>
-<p>
-  text text text text text text text text text text text text text text text text text text text text text text
-  text text text text text text text text text text text text text text text text text text text text text text
-</p>
-<h2>]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[部署我的網站到k8s上]]></title>
         <id>20221231-k8s-notes</id>
         <link href="https://alanhc.github.io/next-blog/posts/20221231-k8s-notes"/>
@@ -385,6 +392,24 @@ def t]]></summary>
 <h1>Hi! 😃</h1>
 <p>hello world!</p>
 ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>test-render</id>
+        <link href="https://alanhc.github.io/next-blog/posts/test-render"/>
+        <updated>2000-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h1>h1</h1>
+<p>
+  text text text text text text text text text text text text text text text text text text text text text text
+  text text text text text text text text text text text text text text text text text text text text text text
+</p>
+<h2>]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

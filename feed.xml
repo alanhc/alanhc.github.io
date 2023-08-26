@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 26 Aug 2023 07:50:19 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 11:10:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -14,6 +14,27 @@
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
         <item>
+            <title><![CDATA[加入next-seo]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230826-next-seo</link>
+            <guid>20230826-next-seo</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>加入環境變數</h2>
+<ul>
+  <li>在next.config.js新增</li>
+</ul>
+<pre><code class="language-js">const nextConfig = {
+...
+env: {
+
+baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+
+NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
+
+config: {]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
             <title><![CDATA[統整markdown的使用方法]]></title>
             <link>https://alanhc.github.io/next-blog/posts/nextjs-markdown</link>
             <guid>nextjs-markdown</guid>
@@ -21,11 +42,11 @@
             <description><![CDATA[
 <h2>資料在本地</h2>
 <h3>使用unified</h3>
-<pre><code class="language-js">export async function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = await Promise.all(
-    fileName]]></description>
+<h2>資料在雲端</h2>
+<h3>使用 MDX</h3>
+<h2>相關posts</h2>
+<ul>
+  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -228,20 +249,6 @@ contract MyToken is ERC]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[test]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/test</link>
-            <guid>test</guid>
-            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h1>h1</h1>
-<p>
-  text text text text text text text text text text text text text text text text text text text text text text
-  text text text text text text text text text text text text text text text text text text text text text text
-</p>
-<h2>]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
             <title><![CDATA[部署我的網站到k8s上]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20221231-k8s-notes</link>
             <guid>20221231-k8s-notes</guid>
@@ -315,6 +322,20 @@ def t]]></description>
 <h1>Hi! 😃</h1>
 <p>hello world!</p>
 ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[test]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/test-render</link>
+            <guid>test-render</guid>
+            <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>h1</h1>
+<p>
+  text text text text text text text text text text text text text text text text text text text text text text
+  text text text text text text text text text text text text text text text text text text text text text text
+</p>
+<h2>]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
     </channel>
