@@ -15,6 +15,7 @@
 - [ ] commitizen
 - [ ] standard-version
 - [ ] next-pwa
+- [ ] https://unstoppabledomains.com/d/next-seo.wallet
 ## done
 - lazy load image
 - GA

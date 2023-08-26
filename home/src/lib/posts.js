@@ -5,12 +5,29 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import markdownToc from 'markdown-toc';
-const postsDirectory = path.join(process.cwd(), 'src/posts');
+import rehypeDocument from 'rehype-document'
+import rehypeFormat from 'rehype-format'
+import rehypeStringify from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
+import { reporter } from 'vfile-reporter'
 
-export function getSortedPostsData() {
+const postsDirectory = path.join(process.cwd(), 'src/posts');
+async function markdownToHtml(markdownContent) {
+  const htmlContent = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    //.use(rehypeDocument, {title: '👋🌍'})
+    .use(rehypeFormat)
+    .use(rehypeStringify)
+    .process(markdownContent)
+  return String(htmlContent)
+}
+export async function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData = await Promise.all(fileNames.map(async (fileName) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
 
@@ -20,14 +37,14 @@ export function getSortedPostsData() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-    //console.log(matterResult)
-    // Combine the data with the id
+    const htmlContent = await markdownToHtml(matterResult.content);
     return {
       id,
       ...matterResult.data,
-      content: matterResult.content
+      content:htmlContent,
+      markdownContent: matterResult.content
     };
-  });
+  }));
   // Sort posts by date
   return allPostsData.sort(({ date: a }, { date: b }) => {
     if (a < b) {
@@ -36,7 +53,7 @@ export function getSortedPostsData() {
       return -1;
     } else {
       return 0;
-    }
+    };
   });
 }
 export function getAllPostIds() {
@@ -70,14 +87,16 @@ export async function getPostData(id) {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  const postMarkdown = matterResult.content
+  const htmlContent = await markdownToHtml(matterResult.content);
+  const markdownContent = matterResult.content
 
-  const tocMarkdown = await markdownToc(postMarkdown);
+  const tocMarkdown = await markdownToc(markdownContent);
 
   return {
     id,
-    postMarkdown,
+    markdownContent,
     tocMarkdown,
+    htmlContent,
     ...matterResult.data,
   };
 }

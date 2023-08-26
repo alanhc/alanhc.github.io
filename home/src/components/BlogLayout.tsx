@@ -35,7 +35,7 @@ const BlogLayout = ({ children }: AppProps) => {
         </Heading>
         <Spacer />
         <Button onClick={toggleColorMode} mr={0}>
-          {colorMode === "light" ? "🌓" : "☀️"}
+          {colorMode === "light" ? "☾" : "☀️"}
         </Button>
       </Flex>
       {children}

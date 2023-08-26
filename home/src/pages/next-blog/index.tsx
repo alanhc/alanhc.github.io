@@ -72,10 +72,9 @@ const Blog: NextPage = ({ allPostsData }: any) => {
       content.includes(search) || title.includes(search) || tag.includes(search)
     );
   };
-  
+
   return (
     <BlogLayout>
-      
       <Flex mt={2}>
         <InputGroup size="md">
           <Input
@@ -84,9 +83,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
             onChange={(event) => setSearch(event.target.value)}
           />
           <InputRightElement width="4.5rem">
-            {search&&<CloseIcon h="1.75rem"  onClick={() => setSearch("")}/>
-            
-         }
+            {search && <CloseIcon h="1.75rem" onClick={() => setSearch("")} />}
           </InputRightElement>
         </InputGroup>
       </Flex>
@@ -128,7 +125,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         <Accordion allowToggle>
           {allPostsData
             .filter(search_text)
-            .map(({ id, date, title, tag, content }: any) => (
+            .map(({ id, date, title, tag, content, markdownContent }: any) => (
               <AccordionItem key={id}>
                 <h2>
                   <AccordionButton>
@@ -147,7 +144,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                   <br />
                   <NextLink href={`/next-blog/posts/${id}`}>
                     <ReactMarkdown className="no_newline">
-                      {content}
+                      {markdownContent}
                     </ReactMarkdown>
                   </NextLink>
                 </AccordionPanel>
@@ -160,7 +157,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 };
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,

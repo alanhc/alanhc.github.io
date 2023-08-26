@@ -1,5 +1,5 @@
 ---
-title: '實作NFT mint的前端'
+title: '實作ipfs上傳的前端'
 date: '2023-01-09'
 tag: ['notes', 'ipfs', 'ethereum']
 ---

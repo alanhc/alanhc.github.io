@@ -108,7 +108,7 @@ const components = {
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
-  const all_markdonw = postData.tocMarkdown.content+"\n"+postData.postMarkdown
+  const all_markdonw = postData.tocMarkdown.content+"\n"+postData.markdownContent
   const mdxSource = await serialize(all_markdonw,
     {
       mdxOptions: {
@@ -136,7 +136,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData, mdxSource }: any) {
-  console.log(mdxSource)
+  //console.log(mdxSource)
   return (
     <BlogLayout>
       <Head>
@@ -161,13 +161,7 @@ export default function Post({ postData, mdxSource }: any) {
        
         {/*正文*/}
         <MDXRemote {...mdxSource} components={components} />
-        {/*<ReactMarkdown
-          components={components}
-          remarkPlugins={[remarkToc, remarkGfm]}
-          rehypePlugins={[rehypeRaw]}
-        >
-          {postData.postMarkdown}
-          </ReactMarkdown>*/}
+      
         <Script
           id="mermaidjs"
           type="module"

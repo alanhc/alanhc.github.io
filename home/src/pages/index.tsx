@@ -54,7 +54,7 @@ const Home: NextPage = ({ portfolio }: any) => {
   };
   const tagContext = useContext(TagContext);
   const tags = tagContext?.tags === undefined ? [] : tagContext.tags;
-  console.log(tags);
+  //console.log(tags);
   return (
     <Layout>
       <Head>
