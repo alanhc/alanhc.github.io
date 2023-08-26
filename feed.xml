@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 26 Aug 2023 06:52:31 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 07:47:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,21 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[統整markdown的使用方法]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/nextjs-markdown</link>
+            <guid>nextjs-markdown</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>資料在本地</h2>
+<h3>使用unified</h3>
+<pre><code class="language-js">export async function getSortedPostsData() {
+  // Get file names under /posts
+  const fileNames = fs.readdirSync(postsDirectory);
+  const allPostsData = await Promise.all(
+    fileName]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[添加rss功能到nextjs部落格]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230825-rss</link>
@@ -27,86 +42,7 @@
 
 import { writeFileSync } from "fs";
 
-import { getSortedPostsData } from "./posts";
-
-export default function generateRSS() {
-  const feed = new Feed({
-    title: "Alan Tseng",
-
-    description: "This is my personal feed!",
-
-    id: process.env.baseUrl,
-
-    link: process.env.baseUrl,
-
-    //language: "en", // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
-
-    image: `${process.env.baseUrl}/image/me.jpeg`,
-
-    favicon: `${process.env.baseUrl}/favicon.ico`,
-
-    copyright: "All rights reserved 2013, John Doe",
-
-    //updated: new Date(2013, 6, 14), // optional, default = today
-
-    generator: "awesome", // optional, default = 'Feed for Node.js'
-
-    feedLinks: {
-      json: `${process.env.baseUrl}/json`,
-
-      atom: `${process.env.baseUrl}/atom`,
-    },
-
-    author: {
-      name: "alanhc",
-
-      email: "alanhc.tseng1999@gmail.com",
-
-      link: `${process.env.baseUrl}`,
-    },
-  });
-
-  const Blog_URL = `${process.env.baseUrl}/next-blog/posts`;
-
-  getSortedPostsData().forEach((post) => {
-    console.log(post);
-
-    feed.addItem({
-      title: post.title,
-
-      id: post.id,
-
-      link: `${Blog_URL}/${post.id}`,
-
-      description: post.content.slice(0, 100),
-
-      content: post.content,
-
-      author: "alanhc",
-
-      date: new Date(post.date),
-
-      //image: ""
-    });
-
-    writeFileSync("./public/feed.xml", feed.rss2());
-
-    writeFileSync("./public/atom.xml", feed.atom1());
-
-    writeFileSync("./public/feed.json", feed.json1());
-  });
-}
-</code></pre>
-<h2>load 時產生</h2>
-<p>
-  在 pages/index.tsx 的<code>getStaticProps</code> 裡，新增 generateRSS();
-  打開 localhost/feed.xml 使用 <a href="https://chrome.google.com/webstore/detail/rss-feed-reader/pnjaodmkngahhkoihejjehlcdlnohgmp">chrome extension - RSS Feed Reader</a> 可以看到東西就成功了 🎉
-</p>
-<h2>ref</h2>
-<ul>
-  <li>https://www.npmjs.com/package/feed</li>
-</ul>
-]]></description>
+import { getSortedPostsData ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -124,81 +60,7 @@ export default function generateRSS() {
 <pre><code class="language-shell">docker run \
   --detach \
   --name bigchaindb \
-  --publish 9984:9984 \
-  --publish 9985:9985 \
-  --publish 27017:27017 \
-  --publish 26657:26657 \
-  --volume $HOME/bigchaindb_docker/mongodb/data/db:/data/db \
-  --volume $HOME/bigchaindb_docker/mongodb/data/configdb:/data/configdb \
-  --volume $HOME/bigchaindb_docker/tendermint:/tendermint \
-  bigchaindb/bigchaindb:all-in-one`
-</code></pre>
-<h2>python 程式</h2>
-<ol>
-  <li>設定節點</li>
-</ol>
-<pre><code class="language-python">from bigchaindb_driver import BigchainDB
-bdb_root_url = 'http://localhost:9984'
-bdb = BigchainDB(bdb_root_url)
-</code></pre>
-<ol start="2">
-  <li>定義asset(資產)</li>
-</ol>
-<pre><code class="language-python">game_boy_token = {
-    'data': {
-        'token_for': {
-            'game_boy': {
-                'serial_number': 'LR1235'
-            }
-        },
-        'description': 'Time share token. Each token equals one hour of usage.',
-    },
-}
-</code></pre>
-<ol start="3">
-  <li>建立交易</li>
-</ol>
-<pre><code class="language-python">prepared_token_tx = bdb.transactions.prepare(
-    operation='CREATE',
-    signers=alice.public_key,
-    recipients=[([bob.public_key], 10)],
-    asset=game_boy_token)
-</code></pre>
-<ol start="4">
-  <li>簽署交易</li>
-</ol>
-<pre><code class="language-python">fulfilled_token_tx = bdb.transactions.fulfill(
-    prepared_token_tx,
-    private_keys=alice.private_key)
-</code></pre>
-<ol start="5">
-  <li>送出交易</li>
-</ol>
-<pre><code class="language-python">txn_id = bdb.transactions.send_commit(fulfilled_token_tx)
-txn_id
-</code></pre>
-<p>應該會看到以下</p>
-<pre><code class="language-json">{'asset': {'data': {'description': 'Time share token. Each token equals one hour of usage.',
-   'token_for': {'game_boy': {'serial_number': 'LR1235'}}}},
- 'id': '98ac51b2c675269aa11baef335b8bd0ebcc57f5f0667e214801c2985cf4c2523',
- 'inputs': [{'fulfillment': 'pGSAIOPXBFb8bPTDgBLdij1w4kGQgXqx71ufCbGIAT9XqDeNgUC8k44UIXeEDswVGq2dmD5V1njfa3_u-4NXbUXoZIgQRIZCFBf3_bGVAokaaUrZ7R3TtRxIqtw3OKszxEKc-ooC',
-   'fulfills': None,
-   'owners_before': ['GLPi9fyTGfcHzQe11Zu39q3yWvCDsPzJ5CKYbaieRtig']}],
- 'metadata': None,
- 'operation': 'CREATE',
- 'outputs': [{'amount': '10',
-   'condition': {'details': {'public_key': '3NAbk3h45m2Jw56trHaXm5jWP8Jxtz6ZK2WECyDgvEte',
-     'type': 'ed25519-sha-256'},
-    'uri': 'ni:///sha-256;MoPw1IV6D9k0fbiVr65BNRvmhnqmSrHZAw1EVGiALUA?fpt=ed25519-sha-256&#x26;cost=131072'},
-   'public_keys': ['3NAbk3h45m2Jw56trHaXm5jWP8Jxtz6ZK2WECyDgvEte']}],
- 'version': '2.0'}
-</code></pre>
-<h2>ref</h2>
-<ul>
-  <li>https://github.com/bigchaindb/bigchaindb-driver</li>
-  <li>https://docs.bigchaindb.com/projects/server/en/latest/appendices/all-in-one-bigchaindb.html</li>
-</ul>
-]]></description>
+  --publis]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -217,61 +79,7 @@ txn_id
 const config: ThemeConfig = {
   initialColorMode: "light",
 
-  useSystemColorMode: false,
-};
-
-// 3. extend the theme
-
-const theme = extendTheme({ config });
-
-export default theme;
-</code></pre>
-<ol start="2">
-  <li>新增_document.tsx</li>
-</ol>
-<pre><code class="language-js">import { ColorModeScript } from "@chakra-ui/react";
-import NextDocument, { Html, Head, Main, NextScript } from "next/document";
-import theme from "./theme";
-
-export default class Document extends NextDocument {
-  render() {
-    return (
-      &#x3C;Html lang="en">
-        &#x3C;Head />
-
-        &#x3C;body>
-          {/* 👇 Here's the script */}
-
-          &#x3C;ColorModeScript initialColorMode={theme.config.initialColorMode} />
-
-          &#x3C;Main />
-
-          &#x3C;NextScript />
-        &#x3C;/body>
-      &#x3C;/Html>
-    );
-  }
-}
-</code></pre>
-<ol start="3">
-  <li>新增切換按鈕</li>
-</ol>
-<pre><code class="language-js">const { colorMode, toggleColorMode } = useColorMode()
-...
-return (
-...
-&#x3C;Button onClick={toggleColorMode}>
-        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-&#x3C;/Button>
-
-)
-
-</code></pre>
-<h2>ref</h2>
-<ul>
-  <li>https://chakra-ui.com/docs/styled-system/color-mode</li>
-</ul>
-]]></description>
+  useSystemColorMode: f]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -285,31 +93,13 @@ return (
   <li>自動更新image import：<code>npx @next/codemod@latest next-image-to-legacy-image .</code>
     <ul>
       <li>會更新 next/image -> next/legacy/image</li>
-    </ul>
-  </li>
-  <li>更新link：<code>npx @next/codemod@latest new-link .</code></li>
-</ul>
-<p>
-  記錄一下目前部落格的樣貌
-  
-  <img src="/image/next-blog-13-1.png" alt="">
-  <img src="/image/next-blog-13-2.png" alt="">
-  <img src="/image/next-blog-13-3.png" alt="">
-</p>
-<h2>Ref</h2>
-<ul>
-  <li>https://chakra-ui.com/docs/components/link/usage#usage-with-nextjs</li>
-  <li>https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#new-link</li>
-  <li>https://nextjs.org/docs/pages/building-your-application/upgrading/version-13</li>
-  <li>https://nextjs.org/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image</li>
-</ul>
-]]></description>
+  ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
             <title><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230819-markdown_test</link>
-            <guid>20230819-markdown_test</guid>
+            <link>https://alanhc.github.io/next-blog/posts/20230819-mermaid-js</link>
+            <guid>20230819-mermaid-js</guid>
             <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
 <p>code如下</p>
@@ -322,63 +112,7 @@ graph TD;
 </code></pre>
 <h2>修改CodeBlock</h2>
 <pre><code class="language-js">function CodeBlock({ language, node, inline, className, children, ...props }: any) {
-  const { onCopy, value, setValue, hasCopied } = useClipboard(children);
-  const match = /language-(\w+)/.exec(className || '');
-  
-  if (inline || !match) { //只有一行的code
-    return (&#x3C;Flex mb={2}>
-      &#x3C;Code {...props} colorScheme="blackAlpha">
-        {children}
-      &#x3C;/Code>
-      &#x3C;Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
-    &#x3C;/Flex>)
-  } else if (match![1] ==='mermaid') {
-    return (&#x3C;Box className='mermaid'>{children}&#x3C;/Box>)
-  } else {
-    return (
-      &#x3C;Flex mb={2}>
-        &#x3C;SyntaxHighlighter
-          style={darcula as { [key: string]: CSSProperties }}
-          language={match![1] }
-          PreTag="div"
-          {...props}
-        >
-          {String(children).replace(/\n$/, '')}
-        &#x3C;/SyntaxHighlighter>
-        &#x3C;Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
-      &#x3C;/Flex>
-    )
-  }
-}
-</code></pre>
-<h2>render新增</h2>
-<pre><code class="language-js">&#x3C;Script
-  id="mermaidjs"
-  type="module"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
-    mermaid.contentLoaded();
-    `,
-  }}
-/>
-</code></pre>
-<h2>成功</h2>
-<p>以下圖是使用 mermaidjs渲染出來的</p>
-<pre><code class="language-mermaid">graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</code></pre>
-<ul>
-  <li>https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/</li>
-  <li>https://nextjs.org/docs/pages/api-reference/components/script</li>
-  <li>http://mermaid.js.org/</li>
-</ul>
-]]></description>
+  const { o]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -392,45 +126,7 @@ graph TD;
 const tocMarkdown = await markdownToc(markdownContent);
 </code></pre>
 <pre><code class="language-js">&#x3C;UnorderedList>
-  {postData.tocMarkdown.json.map((heading: any) => (
-    &#x3C;ListItem key={heading.content}>
-      &#x3C;Link href={`#${heading.content}`}>
-        {heading.content}
-      &#x3C;/Link>
-    &#x3C;/ListItem>
-  ))}
-&#x3C;/UnorderedList>
-</code></pre>
-<h2>修改react markdown所需要的component</h2>
-<pre><code class="language-js">function SectionBlock({ node, inline, className, children, id, ...props }: any) {
-  const router = useRouter()
-  const origin =
-    typeof window !== 'undefined' &#x26;&#x26; window.location.origin
-      ? window.location.origin
-      : '';
-  const URL = `${origin}${router.asPath}`;
-  const { onCopy, value, setValue, hasCopied } = useClipboard(URL + "#" + children);
-  const [isHovering, setIsHovering] = useState(false);
-
-  return (
-    &#x3C;Link href={`#${children}`} id={children} onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
-      &#x3C;Heading  {...props}>
-        {children} {isHovering &#x26;&#x26; "🔗"}
-      &#x3C;/Heading>
-    &#x3C;/Link>
-  );
-}
-const components = {
-  code: CodeBlock,
-  h1: ({ node, ...props }: any) => &#x3C;SectionBlock as="h1" size='xl' {...props} />,
-  h2: ({ node, ...props }: any) => &#x3C;SectionBlock as="h2" size='lg' {...props} />,
-  h3: ({ node, ...props }: any) => &#x3C;SectionBlock as="h3" size='md' {...props} />,
-  h4: ({ node, ...props }: any) => &#x3C;SectionBlock as="h4" size='sm' {...props} />,
-  h5: ({ node, ...props }: any) => &#x3C;SectionBlock as="h5" size='xs' {...props} />,
-  a: ({ node, ...props }: any) => &#x3C;Link  {...props} />,
-};
-</code></pre>
-]]></description>
+  {postData.tocMarkdown.json.map((heading]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -444,28 +140,7 @@ const components = {
 <pre><code class="language-js">/** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.SITE_URL || 'https://example.com',
-  generateRobotsTxt: true, // (optional)
-  // ...other options
-}
-</code></pre>
-<p>
-  在package.json > script
-  新增 <code>"postbuild": "next-sitemap"</code>
-  使用pnpm需要新增 <code>.npmrc</code>
-</p>
-<pre><code>enable-pre-post-scripts=true
-</code></pre>
-<p>在public/看到 sitemap.xml 、robots.txt、sitemap-0.xml成功🎉</p>
-<p>
-  去<a href="http://www.google.com/webmasters/tools/">http://www.google.com/webmasters/tools/</a> 驗證網域
-  會要下載一個 googleOOOOO.js ，放在public
-</p>
-<p>提交sitemap：<code>https://www.google.com/ping?sitemap=https://alanhc.github.io/sitemap.xml</code></p>
-<h2>ref</h2>
-<ul>
-  <li>https://www.npmjs.com/package/next-sitemap</li>
-</ul>
-]]></description>
+  generateRob]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -480,28 +155,7 @@ module.exports = {
 </p>
 <p>在pages/_app.tsx新增</p>
 <pre><code class="language-js">import 'nprogress/nprogress.css';
-import { useRouter } from 'next/router'; import NProgress from 'nprogress'; import { useEffect } from 'react';
-</code></pre>
-<pre><code class="language-js">function MyApp({ Component, pageProps }: AppProps) {
-const router = useRouter();
-// Integrate nprogress
-useEffect(() => {
-router.events.on('routeChangeStart', () => NProgress.start());
-router.events.on('routeChangeComplete', () => NProgress.done());
-router.events.on('routeChangeError', () => NProgress.done());
-...
-
-// eslint-disable-next-line react-hooks/exhaustive-deps
-
-}, []);
-</code></pre>
-<p>這樣就可以在等待的時候看到藍色進度條了🎉</p>
-<h2>ref</h2>
-<ul>
-  <li>https://www.npmjs.com/package/nprogress</li>
-  <li>https://learnjsx.com/category/4/posts/nextjs-nprogress#google_vignette</li>
-</ul>
-]]></description>
+import { useRouter } from 'next/router'; import NProgress from 'nprogres]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -518,60 +172,7 @@ router.events.on('routeChangeError', () => NProgress.done());
 import concurrent.futures
 results = []
 # 定義爬蟲任務
-def fetch_url(url, session):
-    try:
-        response = session.get(url)
-        try:
-            return url, response.status_code, response.json()
-        except:
-            return url, response.status_code, {}
-
-       
-    except requests.RequestException as e:
-        return url, None
-
-def fetch(urls):
-    with requests.Session() as session:
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            # 使用 map 函式來同時執行多個爬蟲任務
-            results = executor.map(fetch_url, urls, [session] * len(urls))
-    return results
-</code></pre>
-<h2>第三版: 直接使用異步處理方式</h2>
-<pre><code class="language-python">import asyncio
-import aiohttp
-
-async def fetch_url(session, url):
-    try:
-        async with session.get(url) as response:
-            # 在這裡你可以對回應進行任何處理，例如解析HTML，提取資料等。
-            # 這裡我們只回傳回應的狀態碼作為範例。
-            try:
-                data = await response.json()
-                return url, response.status, data
-            except:
-                print("=======================================", url, response.status)
-                return url, response.status, {}
-
-    except aiohttp.ClientError as e:
-        return url, None, {}
-async def fetch_all(urls):
-    async with aiohttp.ClientSession() as session:
-        tasks = [fetch_url(session, url) for url in urls]
-        return await asyncio.gather(*tasks)
-
-urls_courses = [
-    "https://up.mcuosc.dev/courses/json?page="+str(i) for i in range(200)
-]
-
-loop = asyncio.get_event_loop()
-results = loop.run_until_complete(fetch_all(urls_courses))
-</code></pre>
-<h2>link</h2>
-<ul>
-  <li>https://github.com/alanhc/back-up</li>
-</ul>
-]]></description>
+def fetch_url(url, se]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -590,84 +191,11 @@ slug: home
 ---
 # Hello world!
 </code></pre>
-<pre><code class="language-js">{
-  content: '# Hello world!',
-  data: { 
-    title: 'Hello', 
-    slug: 'home' 
-  }
-}
-</code></pre>
-<pre><code class="language-js">const fullPath = path.join(postsDirectory, `${id}.md`);
-const fileContents = fs.readFileSync(fullPath, 'utf8');
-const matterResult = matter(fileContents);
-...
-</code></pre>
-<ol start="2">
-  <li>
-    將matterResult的markdown語法顯示出來
-    註：remarkGfm 讓他可以接受github的神奇markdown語法
-  </li>
-</ol>
-<pre><code class="language-jsx">import remarkGfm from 'remark-gfm'
-import ReactMarkdown from "react-markdown";
-...
-&#x3C;ReactMarkdown components={components} remarkPlugins={[remarkGfm]}>
-    {postData.contentHtml}
-&#x3C;/ReactMarkdown>
-</code></pre>
-<ol start="3">
-  <li>
-    讓產生出來的程式需要有顏色的語法提示及複製功能
-    註：這裡是透過指定ReactMarkdown的components及使用chakra ui的useClipboard hook，如果codeblock有指定的程式語言就使用react-syntax-highlighter將他顯示語法提示
-  </li>
-</ol>
-<pre><code class="language-jsx">import { Container, Heading, Link, Code, useClipboard, Flex, Button } from "@chakra-ui/react";
-import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
-
-
-function CodeBlock({ node, inline, className, children, ...props }: any)  {
-  const { onCopy, value, setValue, hasCopied } = useClipboard(children);
-  const match = /language-(\w+)/.exec(className || '');
-  return !inline &#x26;&#x26; match ? (
-    &#x3C;Flex mb={2}>
-      &#x3C;SyntaxHighlighter
-        style={darcula as { [key: string]: CSSProperties }}
-        language={match[1]}
-        PreTag="div"
-        {...props}
-      >
-        {String(children).replace(/\n$/, '')}
-      &#x3C;/SyntaxHighlighter>
-      &#x3C;Button ml={2} onClick={onCopy}colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
-    &#x3C;/Flex>
-  ) : (
-    &#x3C;Flex mb={2}>
-      &#x3C;Code {...props} colorScheme="blackAlpha">
-        {children}
-      &#x3C;/Code>
-      &#x3C;Button ml={2} onClick={onCopy} colorScheme='blue' variant='outline'>{hasCopied ? "Copied!" : "Copy"}&#x3C;/Button>
-    &#x3C;/Flex>
-  );
-}
-const components = {
-  code: CodeBlock,
-};
-</code></pre>
-<p>
-  <img src="https://hackmd.io/_uploads/ryNnKSrh3.png" alt="">
-</p>
-<h2>ref:</h2>
-<ul>
-  <li>https://npm.io/package/gray-matter</li>
-  <li>https://www.npmjs.com/package/react-markdown</li>
-  <li>https://www.npmjs.com/package/remark-gfm</li>
-</ul>
-]]></description>
+<pre><code class="language-js">]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[實作NFT mint的前端]]></title>
+            <title><![CDATA[實作ipfs上傳的前端]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230109-ipfs-upload</link>
             <guid>20230109-ipfs-upload</guid>
             <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
@@ -680,76 +208,7 @@ const API_KEY = process.env.NFT_STORAGE_API_KEY
 const client = new NFTStorage({ token: API_KEY })
 </code></pre>
 <ol start="2">
-  <li></li>
-</ol>
-<pre><code class="language-js">function dataURItoBlob(dataURI) {
-    // convert base64 to raw binary data held in a string
-    // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
-    var byteString = atob(dataURI.split(',')[1]);
-    // separate out the mime component
-    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
-    // write the bytes of the string to an ArrayBuffer
-    var ab = new ArrayBuffer(byteString.length);
-    // create a view into the buffer
-    var ia = new Uint8Array(ab);
-    // set the bytes of the buffer to the correct values
-    for (var i = 0; i &#x3C; byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-    }
-    // write the ArrayBuffer to a blob, and you're done
-    var blob = new Blob([ab], {type: mimeString});
-    return blob;  
-}
-</code></pre>
-<ol start="3">
-  <li></li>
-</ol>
-<pre><code class="language-js">    ...
-    const [dataUri, setDataUri] = useState("")
-    const [ipfs, setIpfs] = useState("")
-
-    const onChange = (file) => {
-        if (!file) {
-            setDataUri('');
-            return;
-        }
-        fileToDataUri(file)
-            .then(dataUri => {
-                setDataUri(dataUri)
-            })
-    }
-    const handle_mint = () => {
-        const upload_ipfs  = async() => {
-            const img_blob = await dataURItoBlob(dataUri)
-            //const img_cid = await client.storeBlob(img_blob)
-            const metadata = await client.store({
-                name: 'My sweet NFT',
-                description: 'Just try to funge it. You can\'t do it.',
-                image: img_blob
-            })
-            console.log(metadata.url)
-            setIpfs(metadata.url)
-        }
-        upload_ipfs()
-    }
-</code></pre>
-<ol start="4">
-  <li></li>
-</ol>
-<pre><code class="language-js">return (
-        &#x3C;Layout>
-           ...
-            &#x3C;img width="100" height="100" src={dataUri} alt="avatar"/>
-            &#x3C;input type="file" onChange={(event) => onChange(event.target.files[0] || null)} >&#x3C;/input>
-            &#x3C;Button onClick={handle_mint}>Create&#x3C;/Button>
-            {ipfs}
-        &#x3C;/Layout>
-    )
-</code></pre>
-<ul>
-  <li>https://github.com/alanhc/aka-ticket/blob/main/frontend/pages/event/index.js</li>
-</ul>
-]]></description>
+ ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -765,37 +224,7 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MyToken is ERC1155, Ownable {
-    uint256 public constant Rock = 1;
-    uint256 public constant Paper = 2;
-    uint256 public constant Scissors = 3;
-    constructor() ERC1155("https://alanhc.github.io/nft/erc-1155/{id}.json") {
-        _mint(msg.sender, Rock, 1, "");
-        _mint(msg.sender, Paper, 1, "");
-        _mint(msg.sender, Scissors, 1, "");
-    }
-
-    function setURI(string memory newuri) public onlyOwner {
-        _setURI(newuri);
-    }
-
-    function mint(address account, uint256 id, uint256 amount, bytes memory data)
-        public
-        onlyOwner
-    {
-        _mint(account, id, amount, data);
-    }
-
-    function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
-        public
-        onlyOwner
-    {
-        _mintBatch(to, ids, amounts, data);
-    }
-}
-</code></pre>
-<p>註記：mint data要設定 0x0000000000000000000000000000000000000000000000000000000000000000</p>
-]]></description>
+contract MyToken is ERC]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -809,25 +238,7 @@ contract MyToken is ERC1155, Ownable {
   text text text text text text text text text text text text text text text text text text text text text text
   text text text text text text text text text text text text text text text text text text text text text text
 </p>
-<h2>h2</h2>
-<h3>h3</h3>
-<h2>abc abc</h2>
-<h2>abc + abc</h2>
-<h2>code</h2>
-<p>hello</p>
-<pre><code class="language-js">const main = () => console.log("hello")
-main();
-</code></pre>
-<h2>one line code</h2>
-<p><code>rm -rf</code></p>
-<h2>flowchart</h2>
-<pre><code class="language-mermaid">graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</code></pre>
-]]></description>
+<h2>]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -855,43 +266,7 @@ ENV PORT=3000
 
 EXPOSE 3000
 
-CMD [ "yarn", "start" ]
-
-</code></pre>
-<h2>2. build image</h2>
-<p><code>docker build . -t alanhc/alanhc.github.io:latest</code></p>
-<h2>3. 跑起來測試</h2>
-<p><code>docker run -p 3000:3000 alanhc/alanhc.github.io</code></p>
-<h2>4. 推上docker hub</h2>
-<p><code>docker push alanhc/alanhc.github.io</code></p>
-<h2>5. 新增 k8s/deploy.yml</h2>
-<pre><code class="language-yaml">apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app: nextjs-app
-  name: nextjs-app
-spec:
-  selector:
-    matchLabels:
-      app: nextjsapp
-  template:
-    metadata:
-      labels:
-        app: nextjsapp
-    spec:
-      containers:
-      - name: app
-        image: docker.io/alanhc/alanhc.github.io
-        imagePullPolicy: Always
-        ports:
-          - containerPort: 3000
-</code></pre>
-<h2>6. k8s config</h2>
-<p><code>kubectl apply -f k8s</code></p>
-<h2>7. 在minikube使用portfoard啟動</h2>
-<p><code>kubectl port-forward svc/nextjs-app 3000:3000</code></p>
-]]></description>
+CMD [ "yarn", "sta]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -911,50 +286,7 @@ class NFT(FA2.FA2):
    pass
 
 @sp.add_test(name="tests")
-def test():
-  jerry = sp.test_account("Jerry")
-  tom = sp.test_account("Tom")
-  admin = sp.address("tz1aV2DuPYXEK2mEVc4VBhP9o4gguFGxBky4")
-  scenario = sp.test_scenario()
-  scenario.h1("tutorial tests")
-  nft = NFT(FA2.FA2_config(non_fungible=True), admin=admin, metadata= sp.utils.metadata_of_url("https://alanhc.github.io/nft/tezos-contract-example.json")
-  scenario += nft
-</code></pre>
-<h2>部署合約</h2>
-<ul>
-  <li>
-    更改admin為自己的地址、按下執行(左上)，並按下deploy contract
-    
-    <img src="https://i.imgur.com/qLG96GS.png" alt="">
-  </li>
-  <li>
-    選擇測試鏈（ghostnet），並選擇estimate gas
-    
-    <img src="https://i.imgur.com/tRzRx3P.png" alt="">
-    <img src="https://i.imgur.com/BEyHnAN.png" alt="">
-  </li>
-  <li>將 token metadata (hex) 輸入，可使用 <a href="https://codebeautify.org/string-hex-converter">string2hex</a>
-    <ul>
-      <li>
-        範例：(hex)<code>697066733a2f2f6261666b7265696833366d336434796662707974656c75766e7475706835787962777467786476796b736267796736366573343464726b34687179</code>，原文(string)：<code>ipfs://bafkreih36m3d4yfbpyteluvntuph5xybwtgxdvyksbgyg66es44drk4hqy</code>
-        <img src="https://i.imgur.com/5W1GHKA.png" alt="">
-      </li>
-    </ul>
-  </li>
-</ul>
-<h2>查看nft</h2>
-<ul>
-  <li>
-    到 <a href="https://ghostnet.tzkt.io/">tzkt</a> >balance 查看是否有nft
-    
-    <img src="https://i.imgur.com/vhoA46K.png" alt="">
-  </li>
-</ul>
-<h2>參考</h2>
-<ul>
-  <li>https://learn.figment.io/tutorials/mint-nfts-on-tezos</li>
-</ul>
-]]></description>
+def t]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -971,34 +303,7 @@ def test():
     <p>新增帳號 <code>solana-keygen new --outfile ~/.config/solana/devnet.json</code></p>
   </li>
   <li>
-    <p>設定 devnet <code>solana config set --url &#x3C;https://metaplex.devnet.rpcpool.com/></code></p>
-  </li>
-  <li>
-    <p>檢查設定 <code>solana config get</code></p>
-    <pre><code>Config File: ~/.config/solana/cli/config.yml
-RPC URL: https://metaplex.devnet.rpcpool.com/
-WebSocket URL: wss://metaplex.devnet.rpcpool.com/ (computed)
-Keypair Path: ~/.config/solana/devnet.json
-Commitment: confirmed
-</code></pre>
-  </li>
-  <li>
-    <p>拿測試token: <code>solana airdrop 2</code></p>
-  </li>
-  <li>
-    <p>sugar launch</p>
-  </li>
-</ol>
-<ul>
-  <li>https://nft.storage/manage/</li>
-  <li>https://github.com/metaplex-foundation/sugar</li>
-  <li>
-    https://docs.metaplex.com/deprecated/candy-machine-js-cli/getting-started#solana-wallet
-    
-    <img src="https://i.imgur.com/5Z75hh4.png" alt="">
-  </li>
-</ul>
-]]></description>
+    <p>設定 devnet]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
