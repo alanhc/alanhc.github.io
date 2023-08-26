@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-08-26T12:08:16.259Z</updated>
+    <updated>2023-08-26T16:24:42.937Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,54 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[imgur上傳]]></title>
+        <id>20230826-imgur</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230826-imgur"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>註冊：<a href="https://api.imgur.com/oauth2/addclient">https://api.imgur.com/oauth2/addclient</a></p>
+<h2>ref</h2>
+<ul>
+  <li><a href="https://apidocs.imgur.com/">https://apidocs.imgur.com/</a></li>
+</ul>
+]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[加入import別名讓import更好看]]></title>
+        <id>20230826-import-alias</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230826-import-alias"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>設定</h2>
+<ul>
+  <li>tsconfig.json</li>
+</ul>
+<pre><code class="language-js">{
+	"compilerOptions": {
+	...
+	"baseUrl": ".",
+	"paths": {
+		"@/components/*": ["src/components/*"],
+	...
+	}
+}
+</code></pre>
+<ul>
+  <li>使用</li>
+</ul>
+<pre><code class="lan]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[加入next-seo]]></title>
         <id>20230826-next-seo</id>
@@ -31,6 +79,26 @@
 		baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
 		NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
 		confi]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[加入PWA功能]]></title>
+        <id>20230827-next-pwa</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230827-next-pwa"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>前置</h2>
+<ul>
+  <li>先準備 service worker、manifacts.json、logo.png</li>
+  <li>引入套件：<code>pnpm add next-pwa</code></li>
+  <li>修改 <code>next.config.js</code></li>
+</ul>
+<pre><code class="language-js">const withPWA = require('next-pwa')({
+	dest: 'public]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

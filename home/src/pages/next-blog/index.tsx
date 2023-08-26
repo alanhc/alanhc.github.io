@@ -1,9 +1,9 @@
 import { NextPage } from "next";
 
 import { promises as fs } from "fs";
-import { getSortedPostsData } from "../../lib/posts";
+import { getSortedPostsData } from "@/lib/posts";
 import NextLink from "next/link";
-import SEO from '../../../next-seo.config';
+import SEO from 'next-seo.config';
 import {
   Container,
   Divider,
@@ -13,8 +13,8 @@ import {
   position,
   useColorMode,
 } from "@chakra-ui/react";
-import Date from "../../components/partial/Date";
-import BlogLayout from "../../components/BlogLayout";
+import Date from "@/components/partial/Date";
+import BlogLayout from "@/components/BlogLayout";
 import ReactMarkdown from "react-markdown";
 import {
   Flex,

@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import BlogLayout from "../components/BlogLayout"
+import BlogLayout from "@/components/BlogLayout"
 
 const Link: NextPage = ({}:any)=>{
     return (

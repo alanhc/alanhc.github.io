@@ -1,23 +1,20 @@
 import { useContext, useEffect, useState } from "react";
-import Link from "next/link";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/legacy/image";
 import styles from "../styles/Home.module.css";
 import path from "path";
 import { promises as fs } from "fs";
-import YouTube from "react-youtube";
 import { useRouter } from "next/router";
-import { StarIcon } from "@chakra-ui/icons";
-import NextLink from "next/link";
-import Profile from "../components/partial/Profile";
-import { TagContext } from "../context/portfolioContext";
-import Experience from "../components/partial/Experience";
-import Layout from "../components/Layout";
-import CollectionResult from "../components/partial/CollectionResult";
-import LeftCheckBox from "../components/partial/LeftCheckBox";
+import Profile from "@/components/partial/Profile";
+import { TagContext } from "@/context/portfolioContext";
+import Experience from "@/components/partial/Experience";
+import Layout from "@/components/Layout";
+import CollectionResult from "@/components/partial/CollectionResult";
+import LeftCheckBox from "@/components/partial/LeftCheckBox";
 import portfolioData from "../../public/api/portfolio.json";
-import generateRSS from "../lib/generateRSS";
+import generateRSS from "@/lib/generateRSS";
+import NextLink from "next/link";
 import {
   useDisclosure,
   VStack,
@@ -33,6 +30,7 @@ import {
   StackDivider,
   Textarea,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import SEO from "../../next-seo.config";
 import { NextSeo } from "next-seo";
@@ -93,7 +91,7 @@ const Home: NextPage = ({ portfolio }: any) => {
         <Center mt="10">
           <HStack maxW="2xl">
             {portfolio.interest.map((_interest: any, i: number) => (
-              <Link key={i} href={_interest.link}>
+              <Link as={NextLink}key={i} href={_interest.link}>
                 <Box mt="5" ml="5" mb="5" mr="5">
                   <Image
                     width={300}

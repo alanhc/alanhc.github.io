@@ -1,7 +1,7 @@
-import BlogLayout from "../../../components/BlogLayout";
-import { getAllPostIds, getPostData } from "../../../lib/posts";
+import BlogLayout from "@/components/BlogLayout";
+import { getAllPostIds, getPostData } from "@/lib/posts";
 import Head from "next/head";
-import Date from "../../../components/partial/Date";
+import Date from "@/components/partial/Date";
 import {
   Box,
   Tag,
@@ -21,7 +21,6 @@ import {
 } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { CSSProperties, Children } from "react";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import remarkToc from "remark-toc";
@@ -32,15 +31,14 @@ import { useContext, useEffect, useState } from "react";
 import rehypeRaw from "rehype-raw";
 import NextLink from "next/link";
 import Script from "next/script";
-import SectionBlock from "../../../components/partial/SectionBlock";
-import slugify from "slugify"
+import SectionBlock from "@/components/partial/SectionBlock";
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import rehypeSlug from 'rehype-slug'
 import GithubSlugger, {slug} from 'github-slugger'
 import rehypePrism from 'rehype-prism-plus'
 import { NextSeo } from "next-seo";
-import SEO from "../../../../next-seo.config";
+import SEO from "next-seo.config";
 function CodeBlock({
   language,
   node,

@@ -14,16 +14,17 @@
 - [ ] commitlint
 - [ ] commitizen
 - [ ] standard-version
-- [ ] next-pwa
 - [ ] https://unstoppabledomains.com/d/next-seo.wallet
+- [ ] kbar: https://www.npmjs.com/package/kbar
+- [ ] E2E Test
 ## done
+- next-pwa
 - lazy load image
 - GA
 - chakra ui
 - pnpm
 - ssg
-- next-sitemap
--  E2E Test
+-  next-sitemap
 -  自動更新dependency:Renovate https://renovatebot.com/
 
 

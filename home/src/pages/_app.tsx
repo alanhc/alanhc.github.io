@@ -1,18 +1,16 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ChakraProvider, Heading, extendTheme } from "@chakra-ui/react";
 import Script from "next/script";
-import ProfileProvider from "../context/portfolioContext";
+import ProfileProvider from "@/context/portfolioContext";
 import "nprogress/nprogress.css";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import { useEffect } from "react";
-import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
-// `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
 import chakraTheme from "@chakra-ui/theme";
 import { DefaultSeo } from "next-seo";
 import { Rubik } from "next/font/google";
-import SEO from '../../next-seo.config';
+import SEO from "next-seo.config";
 const rubik = Rubik({ subsets: ["latin"] });
 const { Button } = chakraTheme.components;
 const theme = extendTheme({
@@ -30,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
   return (
     <>
-      <DefaultSeo {...SEO}  />
+      <DefaultSeo {...SEO} />
       <ProfileProvider>
         <ChakraProvider resetScope=".ck-reset">
           <Component {...pageProps} />

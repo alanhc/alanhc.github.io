@@ -1,3 +1,6 @@
+const withPWA = require('next-pwa')({
+  dest: 'public'
+})
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -34,7 +37,8 @@ const nextConfig = {
         twitterID:"@alanhc316"
       },
       image: {
-        logo: "/favicon.ico"
+        logo: "/logo.png",
+        favicon: "/favicon.ico"
       }
     }
   },
@@ -42,4 +46,4 @@ const nextConfig = {
 
 }
 
-module.exports = withMDX(nextConfig)
+module.exports = withPWA(withMDX(nextConfig));
