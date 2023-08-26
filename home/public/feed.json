@@ -154,8 +154,8 @@
             }
         },
         {
-            "id": "test",
-            "url": "http://localhost:3000/next-blog/posts/test",
+            "id": "test-render",
+            "url": "http://localhost:3000/next-blog/posts/test-render",
             "title": "test",
             "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
             "date_modified": "2023-01-01T00:00:00.000Z",

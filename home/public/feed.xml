@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 26 Aug 2023 07:57:37 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 08:03:03 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -229,8 +229,8 @@ contract MyToken is ERC]]></description>
         </item>
         <item>
             <title><![CDATA[test]]></title>
-            <link>http://localhost:3000/next-blog/posts/test</link>
-            <guid>test</guid>
+            <link>http://localhost:3000/next-blog/posts/test-render</link>
+            <guid>test-render</guid>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
 <h1>h1</h1>

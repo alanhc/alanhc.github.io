@@ -1,6 +1,6 @@
 ---
 title: 'test'
-date: '2023-01-01'
+date: '2000-01-01'
 tag: []
 ---
 # h1
@@ -26,3 +26,5 @@ graph TD;
     B-->D;
     C-->D;
 ```
+## link in p tag
+link: [alanhc.github.io](https://alanhc.github.io/) is best
