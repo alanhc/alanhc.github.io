@@ -2,20 +2,20 @@
 <rss version="2.0">
     <channel>
         <title>Alan Tseng</title>
-        <link>https://alanhc.github.io</link>
+        <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 26 Aug 2023 07:50:19 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 07:57:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
             <title>Alan Tseng</title>
-            <url>https://alanhc.github.io/image/me.jpeg</url>
-            <link>https://alanhc.github.io</link>
+            <url>http://localhost:3000/image/me.jpeg</url>
+            <link>http://localhost:3000</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
         <item>
             <title><![CDATA[統整markdown的使用方法]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/nextjs-markdown</link>
+            <link>http://localhost:3000/next-blog/posts/nextjs-markdown</link>
             <guid>nextjs-markdown</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -30,7 +30,7 @@
         </item>
         <item>
             <title><![CDATA[添加rss功能到nextjs部落格]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230825-rss</link>
+            <link>http://localhost:3000/next-blog/posts/20230825-rss</link>
             <guid>20230825-rss</guid>
             <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -47,7 +47,7 @@ import { getSortedPostsData ]]></description>
         </item>
         <item>
             <title><![CDATA[初探bigchaindb]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230824-bigchain</link>
+            <link>http://localhost:3000/next-blog/posts/20230824-bigchain</link>
             <guid>20230824-bigchain</guid>
             <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -65,7 +65,7 @@ import { getSortedPostsData ]]></description>
         </item>
         <item>
             <title><![CDATA[部落格暗黑模式]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230824-chakra-darkmode</link>
+            <link>http://localhost:3000/next-blog/posts/20230824-chakra-darkmode</link>
             <guid>20230824-chakra-darkmode</guid>
             <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -84,7 +84,7 @@ const config: ThemeConfig = {
         </item>
         <item>
             <title><![CDATA[更新nextjs到13]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230820-nexjs13</link>
+            <link>http://localhost:3000/next-blog/posts/20230820-nexjs13</link>
             <guid>20230820-nexjs13</guid>
             <pubDate>Sun, 20 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -98,7 +98,7 @@ const config: ThemeConfig = {
         </item>
         <item>
             <title><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230819-mermaid-js</link>
+            <link>http://localhost:3000/next-blog/posts/20230819-mermaid-js</link>
             <guid>20230819-mermaid-js</guid>
             <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -117,7 +117,7 @@ graph TD;
         </item>
         <item>
             <title><![CDATA[實作markdown section link]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230818-markdown-section-link</link>
+            <link>http://localhost:3000/next-blog/posts/20230818-markdown-section-link</link>
             <guid>20230818-markdown-section-link</guid>
             <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -131,7 +131,7 @@ const tocMarkdown = await markdownToc(markdownContent);
         </item>
         <item>
             <title><![CDATA[將部落格加入sitemap功能]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230817-next-sitemap</link>
+            <link>http://localhost:3000/next-blog/posts/20230817-next-sitemap</link>
             <guid>20230817-next-sitemap</guid>
             <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -145,7 +145,7 @@ module.exports = {
         </item>
         <item>
             <title><![CDATA[新增page loading的進度條]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230816-nprogress</link>
+            <link>http://localhost:3000/next-blog/posts/20230816-nprogress</link>
             <guid>20230816-nprogress</guid>
             <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -160,7 +160,7 @@ import { useRouter } from 'next/router'; import NProgress from 'nprogres]]></des
         </item>
         <item>
             <title><![CDATA[三種使用Python爬取網頁的方法]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230813-back-up-crawler</link>
+            <link>http://localhost:3000/next-blog/posts/20230813-back-up-crawler</link>
             <guid>20230813-back-up-crawler</guid>
             <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -177,7 +177,7 @@ def fetch_url(url, se]]></description>
         </item>
         <item>
             <title><![CDATA[使用react syntax highlighter及useClipboard強化程式碼區塊]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard</link>
+            <link>http://localhost:3000/next-blog/posts/20230812-react-syntax-clipboard</link>
             <guid>20230812-react-syntax-clipboard</guid>
             <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -196,7 +196,7 @@ slug: home
         </item>
         <item>
             <title><![CDATA[實作ipfs上傳的前端]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230109-ipfs-upload</link>
+            <link>http://localhost:3000/next-blog/posts/20230109-ipfs-upload</link>
             <guid>20230109-ipfs-upload</guid>
             <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -213,7 +213,7 @@ const client = new NFTStorage({ token: API_KEY })
         </item>
         <item>
             <title><![CDATA[erc 1155 合約]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230108-erc-1155</link>
+            <link>http://localhost:3000/next-blog/posts/20230108-erc-1155</link>
             <guid>20230108-erc-1155</guid>
             <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -229,7 +229,7 @@ contract MyToken is ERC]]></description>
         </item>
         <item>
             <title><![CDATA[test]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/test</link>
+            <link>http://localhost:3000/next-blog/posts/test</link>
             <guid>test</guid>
             <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -243,7 +243,7 @@ contract MyToken is ERC]]></description>
         </item>
         <item>
             <title><![CDATA[部署我的網站到k8s上]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20221231-k8s-notes</link>
+            <link>http://localhost:3000/next-blog/posts/20221231-k8s-notes</link>
             <guid>20221231-k8s-notes</guid>
             <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -271,7 +271,7 @@ CMD [ "yarn", "sta]]></description>
         </item>
         <item>
             <title><![CDATA[使用smartpy撰寫tezos的nft程式]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20221230-tezos-nft-tutorial</link>
+            <link>http://localhost:3000/next-blog/posts/20221230-tezos-nft-tutorial</link>
             <guid>20221230-tezos-nft-tutorial</guid>
             <pubDate>Fri, 30 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -291,7 +291,7 @@ def t]]></description>
         </item>
         <item>
             <title><![CDATA[在solana上mint NFT]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20221228-solana-nft-tutorial</link>
+            <link>http://localhost:3000/next-blog/posts/20221228-solana-nft-tutorial</link>
             <guid>20221228-solana-nft-tutorial</guid>
             <pubDate>Wed, 28 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[
@@ -308,7 +308,7 @@ def t]]></description>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/first-day</link>
+            <link>http://localhost:3000/next-blog/posts/first-day</link>
             <guid>first-day</guid>
             <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[

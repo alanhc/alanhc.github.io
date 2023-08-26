@@ -12,15 +12,18 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
 import { reporter } from 'vfile-reporter'
-
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 async function markdownToHtml(markdownContent) {
   const htmlContent = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkRehype)
     //.use(rehypeDocument, {title: '👋🌍'})
     .use(rehypeFormat)
     .use(rehypeStringify)
+    .use(rehypeRaw)
     .process(markdownContent)
   return String(htmlContent)
 }
