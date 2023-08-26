@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 26 Aug 2023 11:10:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 12:07:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -25,13 +25,10 @@
 </ul>
 <pre><code class="language-js">const nextConfig = {
 ...
-env: {
-
-baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
-
-NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
-
-config: {]]></description>
+	env: {
+		baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+		NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
+		confi]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -60,10 +57,8 @@ config: {]]></description>
 <h2>新增 generateRSS()</h2>
 <p>新增 <code>lib/generateRSS.js</code></p>
 <pre><code class="language-js">import { Feed } from "feed";
-
 import { writeFileSync } from "fs";
-
-import { getSortedPostsData ]]></description>
+import { getSortedPostsData } ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -212,7 +207,8 @@ slug: home
 ---
 # Hello world!
 </code></pre>
-<pre><code class="language-js">]]></description>
+<p>結果</p>
+<pre><code class="lan]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-08-26T11:10:05.684Z</updated>
+    <updated>2023-08-26T12:07:32.987Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -27,13 +27,10 @@
 </ul>
 <pre><code class="language-js">const nextConfig = {
 ...
-env: {
-
-baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
-
-NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
-
-config: {]]></summary>
+	env: {
+		baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+		NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
+		confi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -70,10 +67,8 @@ config: {]]></summary>
 <h2>新增 generateRSS()</h2>
 <p>新增 <code>lib/generateRSS.js</code></p>
 <pre><code class="language-js">import { Feed } from "feed";
-
 import { writeFileSync } from "fs";
-
-import { getSortedPostsData ]]></summary>
+import { getSortedPostsData } ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -258,7 +253,8 @@ slug: home
 ---
 # Hello world!
 </code></pre>
-<pre><code class="language-js">]]></summary>
+<p>結果</p>
+<pre><code class="lan]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
