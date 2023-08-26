@@ -21,11 +21,25 @@ const nextConfig = {
     loader: 'akamai',
     path: '.',
   },
-  env:{
-    baseUrl: isProd?  "https://alanhc.github.io" : "http://localhost:3000",
-    NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S"
+  env: {
+    baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+    NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
+    
+    config: {
+      title: "Alan Tseng",
+      titleShort:"alanhc",
+      description: "this is alanhc's website",
+      fqdn: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+      social: {
+        twitterID:"@alanhc316"
+      },
+      image: {
+        logo: "/favicon.ico"
+      }
+    }
   },
-  
+
+
 }
 
 module.exports = withMDX(nextConfig)

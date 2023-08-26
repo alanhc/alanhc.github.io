@@ -39,7 +39,8 @@ import { MDXRemote } from 'next-mdx-remote'
 import rehypeSlug from 'rehype-slug'
 import GithubSlugger, {slug} from 'github-slugger'
 import rehypePrism from 'rehype-prism-plus'
-
+import { NextSeo } from "next-seo";
+import SEO from "../../../../next-seo.config";
 function CodeBlock({
   language,
   node,
@@ -139,6 +140,10 @@ export default function Post({ postData, mdxSource }: any) {
   //console.log(mdxSource)
   return (
     <BlogLayout>
+      <NextSeo
+        title={postData.title}
+        {...SEO}
+      />
       <Head>
         <title>{postData.title}</title>
       </Head>

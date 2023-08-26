@@ -1,211 +1,222 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "Alan Tseng",
-    "home_page_url": "http://localhost:3000",
-    "feed_url": "http://localhost:3000/json",
+    "home_page_url": "https://alanhc.github.io",
+    "feed_url": "https://alanhc.github.io/json",
     "description": "This is my personal feed!",
-    "icon": "http://localhost:3000/image/me.jpeg",
+    "icon": "https://alanhc.github.io/image/me.jpeg",
     "author": {
         "name": "alanhc",
-        "url": "http://localhost:3000"
+        "url": "https://alanhc.github.io"
     },
     "items": [
         {
-            "id": "nextjs-markdown",
-            "url": "http://localhost:3000/next-blog/posts/nextjs-markdown",
-            "title": "統整markdown的使用方法",
-            "summary": "\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<pre><code class=\"language-js\">export async function getSortedPostsData() {\n  // Get file names under /posts\n  const fileNames = fs.readdirSync(postsDirectory);\n  const allPostsData = await Promise.all(\n    fileName",
+            "id": "20230826-next-seo",
+            "url": "https://alanhc.github.io/next-blog/posts/20230826-next-seo",
+            "title": "加入next-seo",
+            "summary": "\n<h2>加入環境變數</h2>\n<ul>\n  <li>在next.config.js新增</li>\n</ul>\n<pre><code class=\"language-js\">const nextConfig = {\n...\nenv: {\n\nbaseUrl: isProd ? \"https://alanhc.github.io\" : \"http://localhost:3000\",\n\nNEXT_PUBLIC_GOOGLE_ANALYTICS: \"G-L5Z3CY454S\",\n\nconfig: {",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "nextjs-markdown",
+            "url": "https://alanhc.github.io/next-blog/posts/nextjs-markdown",
+            "title": "統整markdown的使用方法",
+            "summary": "\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<h2>資料在雲端</h2>\n<h3>使用 MDX</h3>\n<h2>相關posts</h2>\n<ul>\n  <li><a href=\"https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard\">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<",
+            "date_modified": "2023-08-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230825-rss",
-            "url": "http://localhost:3000/next-blog/posts/20230825-rss",
+            "url": "https://alanhc.github.io/next-blog/posts/20230825-rss",
             "title": "添加rss功能到nextjs部落格",
             "summary": "\n<h2>下載 npm feed</h2>\n<p><code>pnpm add feed</code></p>\n<h2>新增 generateRSS()</h2>\n<p>新增 <code>lib/generateRSS.js</code></p>\n<pre><code class=\"language-js\">import { Feed } from \"feed\";\n\nimport { writeFileSync } from \"fs\";\n\nimport { getSortedPostsData ",
             "date_modified": "2023-08-25T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230824-bigchain",
-            "url": "http://localhost:3000/next-blog/posts/20230824-bigchain",
+            "url": "https://alanhc.github.io/next-blog/posts/20230824-bigchain",
             "title": "初探bigchaindb",
             "summary": "\n<h2>設定bigchaindb本地節點</h2>\n<h3>使用docker</h3>\n<ul>\n  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>\n  <li>run image：</li>\n</ul>\n<pre><code class=\"language-shell\">docker run \\\n  --detach \\\n  --name bigchaindb \\\n  --publis",
             "date_modified": "2023-08-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230824-chakra-darkmode",
-            "url": "http://localhost:3000/next-blog/posts/20230824-chakra-darkmode",
+            "url": "https://alanhc.github.io/next-blog/posts/20230824-chakra-darkmode",
             "title": "部落格暗黑模式",
             "summary": "\n<ol>\n  <li>新增 theme.ts</li>\n</ol>\n<pre><code class=\"language-js\">import { extendTheme, type ThemeConfig } from \"@chakra-ui/react\";\n\n// 2. Add your color mode config\n\nconst config: ThemeConfig = {\n  initialColorMode: \"light\",\n\n  useSystemColorMode: f",
             "date_modified": "2023-08-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230820-nexjs13",
-            "url": "http://localhost:3000/next-blog/posts/20230820-nexjs13",
+            "url": "https://alanhc.github.io/next-blog/posts/20230820-nexjs13",
             "title": "更新nextjs到13",
             "summary": "\n<ul>\n  <li>升級nextjs版本：<code>pnpm up next react react-dom eslint-config-next --latest</code></li>\n  <li>自動更新image import：<code>npx @next/codemod@latest next-image-to-legacy-image .</code>\n    <ul>\n      <li>會更新 next/image -> next/legacy/image</li>\n  ",
             "date_modified": "2023-08-20T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230819-mermaid-js",
-            "url": "http://localhost:3000/next-blog/posts/20230819-mermaid-js",
+            "url": "https://alanhc.github.io/next-blog/posts/20230819-mermaid-js",
             "title": "讓部落格可以顯示markdown的流程圖",
             "summary": "\n<p>code如下</p>\n<pre><code>mermaid\ngraph TD;\n    A-->B;\n    A-->C;\n    B-->D;\n    C-->D;\n</code></pre>\n<h2>修改CodeBlock</h2>\n<pre><code class=\"language-js\">function CodeBlock({ language, node, inline, className, children, ...props }: any) {\n  const { o",
             "date_modified": "2023-08-19T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230818-markdown-section-link",
-            "url": "http://localhost:3000/next-blog/posts/20230818-markdown-section-link",
+            "url": "https://alanhc.github.io/next-blog/posts/20230818-markdown-section-link",
             "title": "實作markdown section link",
             "summary": "\n<h2>Toc部分</h2>\n<pre><code class=\"language-js\">import markdownToc from 'markdown-toc';\nconst tocMarkdown = await markdownToc(markdownContent);\n</code></pre>\n<pre><code class=\"language-js\">&#x3C;UnorderedList>\n  {postData.tocMarkdown.json.map((heading",
             "date_modified": "2023-08-18T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230817-next-sitemap",
-            "url": "http://localhost:3000/next-blog/posts/20230817-next-sitemap",
+            "url": "https://alanhc.github.io/next-blog/posts/20230817-next-sitemap",
             "title": "將部落格加入sitemap功能",
             "summary": "\n<p>指令下：<code>pnpm add -D next-sitemap</code></p>\n<p>新增 next-sitemap.config.js</p>\n<pre><code class=\"language-js\">/** @type {import('next-sitemap').IConfig} */\nmodule.exports = {\n  siteUrl: process.env.SITE_URL || 'https://example.com',\n  generateRob",
             "date_modified": "2023-08-17T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230816-nprogress",
-            "url": "http://localhost:3000/next-blog/posts/20230816-nprogress",
+            "url": "https://alanhc.github.io/next-blog/posts/20230816-nprogress",
             "title": "新增page loading的進度條",
             "summary": "\n<p>\n  <code>pnpm add nprogress</code>\n  <code>pnpm add -D @types/nprogress</code>\n</p>\n<p>在pages/_app.tsx新增</p>\n<pre><code class=\"language-js\">import 'nprogress/nprogress.css';\nimport { useRouter } from 'next/router'; import NProgress from 'nprogres",
             "date_modified": "2023-08-16T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230813-back-up-crawler",
-            "url": "http://localhost:3000/next-blog/posts/20230813-back-up-crawler",
+            "url": "https://alanhc.github.io/next-blog/posts/20230813-back-up-crawler",
             "title": "三種使用Python爬取網頁的方法",
             "summary": "\n<h2>第一版: 使用session慢慢爬</h2>\n<pre><code class=\"language-python\">s = requests.Session()\n</code></pre>\n<h2>第二版: 使用python的並行處理功能</h2>\n<pre><code class=\"language-python\">import requests\nimport concurrent.futures\nresults = []\n# 定義爬蟲任務\ndef fetch_url(url, se",
             "date_modified": "2023-08-13T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230812-react-syntax-clipboard",
-            "url": "http://localhost:3000/next-blog/posts/20230812-react-syntax-clipboard",
+            "url": "https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard",
             "title": "使用react syntax highlighter及useClipboard強化程式碼區塊",
             "summary": "\n<h1>react syntax highlighter + clipboard</h1>\n<ol>\n  <li>先去讀 postsDirectory 的markdownfile交給matter將markdown轉成object</li>\n</ol>\n<pre><code class=\"language-md\">---\ntitle: Hello\nslug: home\n---\n# Hello world!\n</code></pre>\n<pre><code class=\"language-js\">",
             "date_modified": "2023-08-12T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230109-ipfs-upload",
-            "url": "http://localhost:3000/next-blog/posts/20230109-ipfs-upload",
+            "url": "https://alanhc.github.io/next-blog/posts/20230109-ipfs-upload",
             "title": "實作ipfs上傳的前端",
             "summary": "\n<ol>\n  <li>import package</li>\n</ol>\n<pre><code class=\"language-js\">import { NFTStorage, File, Blob } from 'nft.storage'\nconst API_KEY = process.env.NFT_STORAGE_API_KEY\nconst client = new NFTStorage({ token: API_KEY })\n</code></pre>\n<ol start=\"2\">\n ",
             "date_modified": "2023-01-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20230108-erc-1155",
-            "url": "http://localhost:3000/next-blog/posts/20230108-erc-1155",
+            "url": "https://alanhc.github.io/next-blog/posts/20230108-erc-1155",
             "title": "erc 1155 合約",
             "summary": "\n<h2>erc 1155</h2>\n<pre><code class=\"language-solidity\">// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;\n\nimport \"@openzeppelin/contracts/token/ERC1155/ERC1155.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract MyToken is ERC",
             "date_modified": "2023-01-08T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
-            }
-        },
-        {
-            "id": "test-render",
-            "url": "http://localhost:3000/next-blog/posts/test-render",
-            "title": "test",
-            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
-            "date_modified": "2023-01-01T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20221231-k8s-notes",
-            "url": "http://localhost:3000/next-blog/posts/20221231-k8s-notes",
+            "url": "https://alanhc.github.io/next-blog/posts/20221231-k8s-notes",
             "title": "部署我的網站到k8s上",
             "summary": "\n<h2>1. 在專案根目錄新增以下檔案</h2>\n<pre><code class=\"language-dockerfile\">FROM node:16-alpine\n\nARG NODE_ENV=\"production\"\n\nENV NODE_ENV=${NODE_ENV}\n\nWORKDIR /app\n\nCOPY package*.json ./\n\nRUN yarn install\n\nCOPY . .\n\nENV PORT=3000\n\nEXPOSE 3000\n\nCMD [ \"yarn\", \"sta",
             "date_modified": "2022-12-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20221230-tezos-nft-tutorial",
-            "url": "http://localhost:3000/next-blog/posts/20221230-tezos-nft-tutorial",
+            "url": "https://alanhc.github.io/next-blog/posts/20221230-tezos-nft-tutorial",
             "title": "使用smartpy撰寫tezos的nft程式",
             "summary": "\n<h2>撰寫nft合約</h2>\n<ul>\n  <li>到 <a href=\"https://smartpy.io/ide\">smartpy ide</a> 輸入</li>\n</ul>\n<pre><code class=\"language-python\">import smartpy as sp\nFA2 = sp.io.import_template(\"FA2.py\")\n\nclass NFT(FA2.FA2):\n   pass\n\n@sp.add_test(name=\"tests\")\ndef t",
             "date_modified": "2022-12-30T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "20221228-solana-nft-tutorial",
-            "url": "http://localhost:3000/next-blog/posts/20221228-solana-nft-tutorial",
+            "url": "https://alanhc.github.io/next-blog/posts/20221228-solana-nft-tutorial",
             "title": "在solana上mint NFT",
             "summary": "\n<ol>\n  <li>\n    <p>下載 solana cli: <code>sh -c \"$(curl -sSfL https://release.solana.com/v1.14.11/install)\"</code></p>\n  </li>\n  <li>\n    <p>新增帳號 <code>solana-keygen new --outfile ~/.config/solana/devnet.json</code></p>\n  </li>\n  <li>\n    <p>設定 devnet",
             "date_modified": "2022-12-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
             }
         },
         {
             "id": "first-day",
-            "url": "http://localhost:3000/next-blog/posts/first-day",
+            "url": "https://alanhc.github.io/next-blog/posts/first-day",
             "title": "Hello World",
             "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
             "date_modified": "2022-12-22T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
-                "url": "http://localhost:3000"
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "test-render",
+            "url": "https://alanhc.github.io/next-blog/posts/test-render",
+            "title": "test",
+            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
+            "date_modified": "2000-01-01T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
             }
         }
     ]

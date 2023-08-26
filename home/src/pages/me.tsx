@@ -52,7 +52,6 @@ export async function getStaticProps() {
         { "name": "Tezos NFT", "link": "https://objkt.com/profile/alanhc/owned" },
 
     ]
-    //console.log("===", portfolio, typeof portfolio)
     return {
         props: {
             links,

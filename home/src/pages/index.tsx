@@ -17,7 +17,7 @@ import Layout from "../components/Layout";
 import CollectionResult from "../components/partial/CollectionResult";
 import LeftCheckBox from "../components/partial/LeftCheckBox";
 import portfolioData from "../../public/api/portfolio.json";
-import generateRSS from "../lib/generateRSS"
+import generateRSS from "../lib/generateRSS";
 import {
   useDisclosure,
   VStack,
@@ -34,9 +34,9 @@ import {
   Textarea,
   Button,
 } from "@chakra-ui/react";
-
+import SEO from "../../next-seo.config";
+import { NextSeo } from "next-seo";
 const Home: NextPage = ({ portfolio }: any) => {
-  
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [msg, setMsg] = useState("");
@@ -57,14 +57,11 @@ const Home: NextPage = ({ portfolio }: any) => {
   //console.log(tags);
   return (
     <Layout>
-      <Head>
-        <title>Hello, from alanhc</title>
-        <meta
-          name="description"
-          content="Alan Tseng | alanhc | 曾宏鈞's website"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title="Hello, from alanhc"
+        description="Alan Tseng | alanhc | 曾宏鈞's website"
+        {...SEO}
+      />
 
       {/*edu work awards*/}
       <VStack spacing={10}>
@@ -112,7 +109,7 @@ const Home: NextPage = ({ portfolio }: any) => {
           </HStack>
         </Center>
       </Card>
-     {/*histiry*/}
+      {/*histiry*/}
       <Center mt="10">
         <Heading size="xl" color="blue.500">
           History

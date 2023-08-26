@@ -1,43 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:3000</id>
+    <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-08-26T08:03:03.671Z</updated>
+    <updated>2023-08-26T11:10:05.684Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
         <email>alanhc.tseng1999@gmail.com</email>
-        <uri>http://localhost:3000</uri>
+        <uri>https://alanhc.github.io</uri>
     </author>
-    <link rel="alternate" href="http://localhost:3000"/>
-    <link rel="self" href="http://localhost:3000/atom"/>
+    <link rel="alternate" href="https://alanhc.github.io"/>
+    <link rel="self" href="https://alanhc.github.io/atom"/>
     <subtitle>This is my personal feed!</subtitle>
-    <logo>http://localhost:3000/image/me.jpeg</logo>
-    <icon>http://localhost:3000/favicon.ico</icon>
+    <logo>https://alanhc.github.io/image/me.jpeg</logo>
+    <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[加入next-seo]]></title>
+        <id>20230826-next-seo</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230826-next-seo"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>加入環境變數</h2>
+<ul>
+  <li>在next.config.js新增</li>
+</ul>
+<pre><code class="language-js">const nextConfig = {
+...
+env: {
+
+baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
+
+NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
+
+config: {]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[統整markdown的使用方法]]></title>
         <id>nextjs-markdown</id>
-        <link href="http://localhost:3000/next-blog/posts/nextjs-markdown"/>
+        <link href="https://alanhc.github.io/next-blog/posts/nextjs-markdown"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>資料在本地</h2>
 <h3>使用unified</h3>
-<pre><code class="language-js">export async function getSortedPostsData() {
-  // Get file names under /posts
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = await Promise.all(
-    fileName]]></summary>
+<h2>資料在雲端</h2>
+<h3>使用 MDX</h3>
+<h2>相關posts</h2>
+<ul>
+  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[添加rss功能到nextjs部落格]]></title>
         <id>20230825-rss</id>
-        <link href="http://localhost:3000/next-blog/posts/20230825-rss"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230825-rss"/>
         <updated>2023-08-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>下載 npm feed</h2>
@@ -52,13 +77,13 @@ import { getSortedPostsData ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[初探bigchaindb]]></title>
         <id>20230824-bigchain</id>
-        <link href="http://localhost:3000/next-blog/posts/20230824-bigchain"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230824-bigchain"/>
         <updated>2023-08-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>設定bigchaindb本地節點</h2>
@@ -74,13 +99,13 @@ import { getSortedPostsData ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[部落格暗黑模式]]></title>
         <id>20230824-chakra-darkmode</id>
-        <link href="http://localhost:3000/next-blog/posts/20230824-chakra-darkmode"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230824-chakra-darkmode"/>
         <updated>2023-08-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ol>
@@ -97,13 +122,13 @@ const config: ThemeConfig = {
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[更新nextjs到13]]></title>
         <id>20230820-nexjs13</id>
-        <link href="http://localhost:3000/next-blog/posts/20230820-nexjs13"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230820-nexjs13"/>
         <updated>2023-08-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ul>
@@ -115,13 +140,13 @@ const config: ThemeConfig = {
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
         <id>20230819-mermaid-js</id>
-        <link href="http://localhost:3000/next-blog/posts/20230819-mermaid-js"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230819-mermaid-js"/>
         <updated>2023-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>code如下</p>
@@ -138,13 +163,13 @@ graph TD;
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[實作markdown section link]]></title>
         <id>20230818-markdown-section-link</id>
-        <link href="http://localhost:3000/next-blog/posts/20230818-markdown-section-link"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230818-markdown-section-link"/>
         <updated>2023-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Toc部分</h2>
@@ -156,13 +181,13 @@ const tocMarkdown = await markdownToc(markdownContent);
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[將部落格加入sitemap功能]]></title>
         <id>20230817-next-sitemap</id>
-        <link href="http://localhost:3000/next-blog/posts/20230817-next-sitemap"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230817-next-sitemap"/>
         <updated>2023-08-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>指令下：<code>pnpm add -D next-sitemap</code></p>
@@ -174,13 +199,13 @@ module.exports = {
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[新增page loading的進度條]]></title>
         <id>20230816-nprogress</id>
-        <link href="http://localhost:3000/next-blog/posts/20230816-nprogress"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230816-nprogress"/>
         <updated>2023-08-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -193,13 +218,13 @@ import { useRouter } from 'next/router'; import NProgress from 'nprogres]]></sum
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[三種使用Python爬取網頁的方法]]></title>
         <id>20230813-back-up-crawler</id>
-        <link href="http://localhost:3000/next-blog/posts/20230813-back-up-crawler"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230813-back-up-crawler"/>
         <updated>2023-08-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>第一版: 使用session慢慢爬</h2>
@@ -214,13 +239,13 @@ def fetch_url(url, se]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用react syntax highlighter及useClipboard強化程式碼區塊]]></title>
         <id>20230812-react-syntax-clipboard</id>
-        <link href="http://localhost:3000/next-blog/posts/20230812-react-syntax-clipboard"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard"/>
         <updated>2023-08-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h1>react syntax highlighter + clipboard</h1>
@@ -237,13 +262,13 @@ slug: home
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[實作ipfs上傳的前端]]></title>
         <id>20230109-ipfs-upload</id>
-        <link href="http://localhost:3000/next-blog/posts/20230109-ipfs-upload"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230109-ipfs-upload"/>
         <updated>2023-01-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ol>
@@ -258,13 +283,13 @@ const client = new NFTStorage({ token: API_KEY })
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[erc 1155 合約]]></title>
         <id>20230108-erc-1155</id>
-        <link href="http://localhost:3000/next-blog/posts/20230108-erc-1155"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20230108-erc-1155"/>
         <updated>2023-01-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>erc 1155</h2>
@@ -278,31 +303,13 @@ contract MyToken is ERC]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>test-render</id>
-        <link href="http://localhost:3000/next-blog/posts/test-render"/>
-        <updated>2023-01-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h1>h1</h1>
-<p>
-  text text text text text text text text text text text text text text text text text text text text text text
-  text text text text text text text text text text text text text text text text text text text text text text
-</p>
-<h2>]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[部署我的網站到k8s上]]></title>
         <id>20221231-k8s-notes</id>
-        <link href="http://localhost:3000/next-blog/posts/20221231-k8s-notes"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20221231-k8s-notes"/>
         <updated>2022-12-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>1. 在專案根目錄新增以下檔案</h2>
@@ -328,13 +335,13 @@ CMD [ "yarn", "sta]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用smartpy撰寫tezos的nft程式]]></title>
         <id>20221230-tezos-nft-tutorial</id>
-        <link href="http://localhost:3000/next-blog/posts/20221230-tezos-nft-tutorial"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20221230-tezos-nft-tutorial"/>
         <updated>2022-12-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>撰寫nft合約</h2>
@@ -352,13 +359,13 @@ def t]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[在solana上mint NFT]]></title>
         <id>20221228-solana-nft-tutorial</id>
-        <link href="http://localhost:3000/next-blog/posts/20221228-solana-nft-tutorial"/>
+        <link href="https://alanhc.github.io/next-blog/posts/20221228-solana-nft-tutorial"/>
         <updated>2022-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ol>
@@ -373,13 +380,13 @@ def t]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello World]]></title>
         <id>first-day</id>
-        <link href="http://localhost:3000/next-blog/posts/first-day"/>
+        <link href="https://alanhc.github.io/next-blog/posts/first-day"/>
         <updated>2022-12-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h1>Hi! 😃</h1>
@@ -388,7 +395,25 @@ def t]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>test-render</id>
+        <link href="https://alanhc.github.io/next-blog/posts/test-render"/>
+        <updated>2000-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h1>h1</h1>
+<p>
+  text text text text text text text text text text text text text text text text text text text text text text
+  text text text text text text text text text text text text text text text text text text text text text text
+</p>
+<h2>]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
 </feed>

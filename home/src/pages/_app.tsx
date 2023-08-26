@@ -7,16 +7,16 @@ import "nprogress/nprogress.css";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
 import { useEffect } from "react";
-import { ChakraBaseProvider, extendBaseTheme } from '@chakra-ui/react'
+import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 // `@chakra-ui/theme` is a part of the base install with `@chakra-ui/react`
-import chakraTheme from '@chakra-ui/theme'
-
-import { Rubik } from 'next/font/google';
-
-const rubik = Rubik({ subsets: ['latin'] });
-const { Button } = chakraTheme.components
+import chakraTheme from "@chakra-ui/theme";
+import { DefaultSeo } from "next-seo";
+import { Rubik } from "next/font/google";
+import SEO from '../../next-seo.config';
+const rubik = Rubik({ subsets: ["latin"] });
+const { Button } = chakraTheme.components;
 const theme = extendTheme({
-  initialColorMode: 'light',
+  initialColorMode: "light",
   useSystemColorMode: false,
 });
 function MyApp({ Component, pageProps }: AppProps) {
@@ -30,25 +30,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
   return (
     <>
-
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${GA_MEASUREMENT_ID}');
-        `}
-      </Script>
+      <DefaultSeo {...SEO}  />
       <ProfileProvider>
-        <ChakraProvider  resetScope=".ck-reset">
-       
+        <ChakraProvider resetScope=".ck-reset">
           <Component {...pageProps} />
-      
         </ChakraProvider>
       </ProfileProvider>
     </>
