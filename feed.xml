@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 26 Aug 2023 16:12:31 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 26 Aug 2023 16:24:42 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,46 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[imgur上傳]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230826-imgur</link>
+            <guid>20230826-imgur</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>註冊：<a href="https://api.imgur.com/oauth2/addclient">https://api.imgur.com/oauth2/addclient</a></p>
+<h2>ref</h2>
+<ul>
+  <li><a href="https://apidocs.imgur.com/">https://apidocs.imgur.com/</a></li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[加入import別名讓import更好看]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230826-import-alias</link>
+            <guid>20230826-import-alias</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>設定</h2>
+<ul>
+  <li>tsconfig.json</li>
+</ul>
+<pre><code class="language-js">{
+	"compilerOptions": {
+	...
+	"baseUrl": ".",
+	"paths": {
+		"@/components/*": ["src/components/*"],
+	...
+	}
+}
+</code></pre>
+<ul>
+  <li>使用</li>
+</ul>
+<pre><code class="lan]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[加入next-seo]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230826-next-seo</link>
@@ -29,6 +69,22 @@
 		baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
 		NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
 		confi]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[加入PWA功能]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230827-next-pwa</link>
+            <guid>20230827-next-pwa</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>前置</h2>
+<ul>
+  <li>先準備 service worker、manifacts.json、logo.png</li>
+  <li>引入套件：<code>pnpm add next-pwa</code></li>
+  <li>修改 <code>next.config.js</code></li>
+</ul>
+<pre><code class="language-js">const withPWA = require('next-pwa')({
+	dest: 'public]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
