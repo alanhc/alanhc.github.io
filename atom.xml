@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-08-26T16:24:42.937Z</updated>
+    <updated>2023-08-29T04:28:22.926Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,143 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[初探ipfs]]></title>
+        <id>20230828-ipfs</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230828-ipfs"/>
+        <updated>2023-08-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>下載</h2>
+<p>
+  <code>brew install ipfs</code>
+  <code>ipfs init</code>
+</p>
+<pre><code class="language-js">import { create } from 'ipfs-http-client'
+const ipfs = create(new URL('http://127.0.0.1:5001'))
+const { cid } = await ipfs.add('Hello world]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初探libp2p]]></title>
+        <id>20230828-libp2p</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230828-libp2p"/>
+        <updated>2023-08-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>建立signal 節點</h2>
+<pre><code class="language-js">import { sigServer } from '@libp2p/webrtc-star-signalling-server'
+const server = await sigServer({
+	port: 24642,
+	host: '0.0.0.0',
+	metrics: false
+})
+</code></pre>
+<p>
+  到127.0.0.1:24642訪問即可看到
+  
+ ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[chat聊天界面初探]]></title>
+        <id>20230827-chat-app</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230827-chat-app"/>
+        <updated>2023-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>chat</h2>
+<p>
+  <code>npx create-next-app chat</code>
+  <code>pnpm add @chatscope/chat-ui-kit-react</code>
+  <code>pnpm add @chatscope/chat-ui-kit-styles</code>
+</p>
+<pre><code class="language-js">import styles from '@chatscope/chat-ui-kit-style]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[加入PWA功能]]></title>
+        <id>20230827-next-pwa</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230827-next-pwa"/>
+        <updated>2023-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>前置</h2>
+<ul>
+  <li>先準備 service worker、manifacts.json、logo.png</li>
+  <li>引入套件：<code>pnpm add next-pwa</code></li>
+  <li>修改 <code>next.config.js</code></li>
+</ul>
+<pre><code class="language-js">const withPWA = require('next-pwa')({
+	dest: 'public]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[notion的替代品 - AFFiNE]]></title>
+        <id>20230827-notion-alternative</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230827-notion-alternative"/>
+        <updated>2023-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>
+  替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有<a href="https://app.affine.pro/">線上版</a>目前還是beta。
+  
+  <img src="https://user-images.githubusercontent.com/79301703/230892907-5fd5c0c5-1665-4d75-8a35-744e0afc36a5.g]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[初探orbitdb]]></title>
+        <id>20230827-orbitdb</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230827-orbitdb"/>
+        <updated>2023-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>orbitdb</h2>
+<p>
+  <code>npm init -y</code>
+  <code>package.json</code> 加入：<code>"type": "module"</code>
+  <code>pnpm add @orbitdb/core@next</code>
+  <code>pnpm add ipfs-core</code>
+</p>
+<pre><code class="language-js">import { createOrbitDB } fr]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安裝動漫vscode主題]]></title>
+        <id>20230827-vscode-animate-extension</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230827-vscode-animate-extension"/>
+        <updated>2023-08-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<ul>
+  <li>去 <a href="https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme">下載doki-theme</a></li>
+</ul>
+<h2>使用方法</h2>
+<ul>
+  <li><a href="https://github.com/doki-theme/doki-theme-vscode/blob/main/albums/complete_theme_album.md"]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[imgur上傳]]></title>
         <id>20230826-imgur</id>
@@ -86,26 +223,6 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[加入PWA功能]]></title>
-        <id>20230827-next-pwa</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230827-next-pwa"/>
-        <updated>2023-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h2>前置</h2>
-<ul>
-  <li>先準備 service worker、manifacts.json、logo.png</li>
-  <li>引入套件：<code>pnpm add next-pwa</code></li>
-  <li>修改 <code>next.config.js</code></li>
-</ul>
-<pre><code class="language-js">const withPWA = require('next-pwa')({
-	dest: 'public]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[統整markdown的使用方法]]></title>
         <id>nextjs-markdown</id>
         <link href="https://alanhc.github.io/next-blog/posts/nextjs-markdown"/>
@@ -118,6 +235,26 @@
 <h2>相關posts</h2>
 <ul>
   <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nextjs 相關文章]]></title>
+        <id>nextjs</id>
+        <link href="https://alanhc.github.io/next-blog/posts/nextjs"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h1>markdown相關</h1>
+<h2>資料在本地</h2>
+<h3>使用unified</h3>
+<h2>資料在雲端2</h2>
+<h3>使用 MDX</h3>
+<h2>相關posts</h2>
+<ul>
+  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-re]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
