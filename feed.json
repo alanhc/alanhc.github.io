@@ -11,10 +11,21 @@
     },
     "items": [
         {
+            "id": "20230831-mongodb-aggregate-multiple-group",
+            "url": "https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group",
+            "title": "在mongodb裡面將兩個group merge成一個結果",
+            "summary": "\n<h2>結果</h2>\n<pre><code class=\"language-json\">{\n  \"results\": [\n    {\n      \"path\": \"/mcu/course/2D動畫實務\",\n      \"id\": \"2D動畫實務\"\n    },\n    ...\n\t{\n      \"path\": \"/mcu/professor/楊健貴\",\n      \"id\": \"楊健貴\"\n    },\n    ...\n}\n</code></pre>\n<p>\n  原本資料\n  \n  <img ",
+            "date_modified": "2023-08-31T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20230830-nextjs-google-analytics",
             "url": "https://alanhc.github.io/next-blog/posts/20230830-nextjs-google-analytics",
             "title": "加入GA",
-            "summary": "\n<p><a href=\"https://analytics.google.com/analytics/web/\">https://analytics.google.com/analytics/web/</a> 拿到GA_MEASUREMENT_ID應該會是G-{...}</p>\n<p>在_app.tsx 加入</p>\n<pre><code class=\"language-js\">const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_A",
+            "summary": "\n<p><a href=\"https://analytics.google.com/analytics/web/\">https://analytics.google.com/analytics/web/</a> 裡面 拿到GA_MEASUREMENT_ID應該會是<code>G-{...}</code></p>\n<p>在_app.tsx 加入</p>\n<pre><code class=\"language-js\">const GA_MEASUREMENT_ID = process.env.NEXT",
             "date_modified": "2023-08-30T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -357,17 +368,6 @@
             "title": "在solana上mint NFT",
             "summary": "\n<ol>\n  <li>\n    <p>下載 solana cli: <code>sh -c \"$(curl -sSfL https://release.solana.com/v1.14.11/install)\"</code></p>\n  </li>\n  <li>\n    <p>新增帳號 <code>solana-keygen new --outfile ~/.config/solana/devnet.json</code></p>\n  </li>\n  <li>\n    <p>設定 devnet",
             "date_modified": "2022-12-28T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20230831-mongodb-aggregate-multiple-group",
-            "url": "https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group",
-            "title": "在mongodb裡面將兩個group merge成一個結果",
-            "summary": "\n<h2>結果</h2>\n<pre><code class=\"language-json\">{\n  \"results\": [\n    {\n      \"path\": \"/mcu/course/2D動畫實務\",\n      \"id\": \"2D動畫實務\"\n    },\n    ...\n\t{\n      \"path\": \"/mcu/professor/楊健貴\",\n      \"id\": \"楊健貴\"\n    },\n    ...\n</code></pre>\n<p>\n  原本資料\n  \n  <img sr",
-            "date_modified": "2023-08-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"

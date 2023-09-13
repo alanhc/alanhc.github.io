@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-09-13T17:35:24.363Z</updated>
+    <updated>2023-09-13T18:02:03.805Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -16,14 +16,45 @@
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
     <entry>
+        <title type="html"><![CDATA[在mongodb裡面將兩個group merge成一個結果]]></title>
+        <id>20230831-mongodb-aggregate-multiple-group</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group"/>
+        <updated>2023-08-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>結果</h2>
+<pre><code class="language-json">{
+  "results": [
+    {
+      "path": "/mcu/course/2D動畫實務",
+      "id": "2D動畫實務"
+    },
+    ...
+	{
+      "path": "/mcu/professor/楊健貴",
+      "id": "楊健貴"
+    },
+    ...
+}
+</code></pre>
+<p>
+  原本資料
+  
+  <img ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[加入GA]]></title>
         <id>20230830-nextjs-google-analytics</id>
         <link href="https://alanhc.github.io/next-blog/posts/20230830-nextjs-google-analytics"/>
         <updated>2023-08-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
-<p><a href="https://analytics.google.com/analytics/web/">https://analytics.google.com/analytics/web/</a> 拿到GA_MEASUREMENT_ID應該會是G-{...}</p>
+<p><a href="https://analytics.google.com/analytics/web/">https://analytics.google.com/analytics/web/</a> 裡面 拿到GA_MEASUREMENT_ID應該會是<code>G-{...}</code></p>
 <p>在_app.tsx 加入</p>
-<pre><code class="language-js">const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GOOGLE_A]]></summary>
+<pre><code class="language-js">const GA_MEASUREMENT_ID = process.env.NEXT]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -668,36 +699,6 @@ def t]]></summary>
   </li>
   <li>
     <p>設定 devnet]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[在mongodb裡面將兩個group merge成一個結果]]></title>
-        <id>20230831-mongodb-aggregate-multiple-group</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group"/>
-        <updated>2023-08-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h2>結果</h2>
-<pre><code class="language-json">{
-  "results": [
-    {
-      "path": "/mcu/course/2D動畫實務",
-      "id": "2D動畫實務"
-    },
-    ...
-	{
-      "path": "/mcu/professor/楊健貴",
-      "id": "楊健貴"
-    },
-    ...
-</code></pre>
-<p>
-  原本資料
-  
-  <img sr]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
