@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Fri, 29 Sep 2023 16:21:55 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 29 Sep 2023 17:22:29 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -19,12 +19,17 @@
             <guid>20230929-rn-qrcode</guid>
             <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<p><a href="https://snack.expo.dev/@alanhc/alantick-verifier">https://snack.expo.dev/@alanhc/alantick-verifier</a></p>
 <ul>
-  <li>Podfile</li>
+  <li>
+    <p><a href="https://snack.expo.dev/@alanhc/alantick-verifier">snack</a></p>
+  </li>
+  <li>
+    <p>Podfile</p>
+  </li>
 </ul>
 <pre><code class="language-ruby">def node_require(script)
-# Resolve script with node to allow for ho]]></description>
+# Resolve script with node to allow for hoisting
+re]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

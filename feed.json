@@ -14,7 +14,7 @@
             "id": "20230929-rn-qrcode",
             "url": "https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode",
             "title": "20230929-rn-qrcode",
-            "summary": "\n<p><a href=\"https://snack.expo.dev/@alanhc/alantick-verifier\">https://snack.expo.dev/@alanhc/alantick-verifier</a></p>\n<ul>\n  <li>Podfile</li>\n</ul>\n<pre><code class=\"language-ruby\">def node_require(script)\n# Resolve script with node to allow for ho",
+            "summary": "\n<ul>\n  <li>\n    <p><a href=\"https://snack.expo.dev/@alanhc/alantick-verifier\">snack</a></p>\n  </li>\n  <li>\n    <p>Podfile</p>\n  </li>\n</ul>\n<pre><code class=\"language-ruby\">def node_require(script)\n# Resolve script with node to allow for hoisting\nre",
             "date_modified": "2023-09-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-09-29T16:21:55.638Z</updated>
+    <updated>2023-09-29T17:22:29.468Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -21,12 +21,17 @@
         <link href="https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode"/>
         <updated>2023-09-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
-<p><a href="https://snack.expo.dev/@alanhc/alantick-verifier">https://snack.expo.dev/@alanhc/alantick-verifier</a></p>
 <ul>
-  <li>Podfile</li>
+  <li>
+    <p><a href="https://snack.expo.dev/@alanhc/alantick-verifier">snack</a></p>
+  </li>
+  <li>
+    <p>Podfile</p>
+  </li>
 </ul>
 <pre><code class="language-ruby">def node_require(script)
-# Resolve script with node to allow for ho]]></summary>
+# Resolve script with node to allow for hoisting
+re]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
