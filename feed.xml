@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 25 Sep 2023 17:26:33 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 29 Sep 2023 16:21:55 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,31 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20230929-rn-qrcode]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode</link>
+            <guid>20230929-rn-qrcode</guid>
+            <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://snack.expo.dev/@alanhc/alantick-verifier">https://snack.expo.dev/@alanhc/alantick-verifier</a></p>
+<ul>
+  <li>Podfile</li>
+</ul>
+<pre><code class="language-ruby">def node_require(script)
+# Resolve script with node to allow for ho]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230926-21-things-before-21]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230926-21-things-before-21</link>
+            <guid>20230926-21-things-before-21</guid>
+            <pubDate>Tue, 26 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwAR3QDSeABMFLomEetK8o_6izjB-B42bcQMGiQRY2nMP6ICJi724-1jwenH8">https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwA]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20230924-wagami]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230924-wagami</link>
@@ -57,9 +82,22 @@ viewBox={`0 0 256 256`}
             <guid>20230924-cmd-copy</guid>
             <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<pre><code class="language-shell">for i in {0..100}; cp ticket.png "./images/$i.png"
-</code></pre>
+<p><code>for i in {0..100}; cp ticket.png "./images/$i.png"</code></p>
 <h2>Ref</h2>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230920-nx]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230920-nx</link>
+            <guid>20230920-nx</guid>
+            <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://nx.dev/getting-started/intro">https://nx.dev/getting-started/intro</a></li>
+  <li><a href="https://nx.dev/getting-started/installation">https://nx.dev/getting-started/installation</a></li>
+</ul>
 ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
@@ -88,7 +126,7 @@ viewBox={`0 0 256 256`}
   </li>
 </ul>
 <p>
-  在螢幕間切換：<a href="https://reactnative.dev/docs/navigation">https://r]]></description>
+  <a href="https://reactnativepaper.com/">https://reactnativepaper.c]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -602,22 +640,6 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 i]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[erc 1155 合約]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230108-erc-1155</link>
-            <guid>20230108-erc-1155</guid>
-            <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>erc 1155</h2>
-<pre><code class="language-solidity">// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
-
-import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-
-contract MyToken is ERC]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

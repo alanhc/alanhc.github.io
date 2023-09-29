@@ -11,6 +11,28 @@
     },
     "items": [
         {
+            "id": "20230929-rn-qrcode",
+            "url": "https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode",
+            "title": "20230929-rn-qrcode",
+            "summary": "\n<p><a href=\"https://snack.expo.dev/@alanhc/alantick-verifier\">https://snack.expo.dev/@alanhc/alantick-verifier</a></p>\n<ul>\n  <li>Podfile</li>\n</ul>\n<pre><code class=\"language-ruby\">def node_require(script)\n# Resolve script with node to allow for ho",
+            "date_modified": "2023-09-29T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230926-21-things-before-21",
+            "url": "https://alanhc.github.io/next-blog/posts/20230926-21-things-before-21",
+            "title": "20230926-21-things-before-21",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwAR3QDSeABMFLomEetK8o_6izjB-B42bcQMGiQRY2nMP6ICJi724-1jwenH8\">https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwA",
+            "date_modified": "2023-09-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20230924-wagami",
             "url": "https://alanhc.github.io/next-blog/posts/20230924-wagami",
             "title": "20230924-wagami",
@@ -36,8 +58,19 @@
             "id": "20230924-cmd-copy",
             "url": "https://alanhc.github.io/next-blog/posts/20230924-cmd-copy",
             "title": "20230924-cmd-copy",
-            "summary": "\n<pre><code class=\"language-shell\">for i in {0..100}; cp ticket.png \"./images/$i.png\"\n</code></pre>\n<h2>Ref</h2>\n",
+            "summary": "\n<p><code>for i in {0..100}; cp ticket.png \"./images/$i.png\"</code></p>\n<h2>Ref</h2>\n",
             "date_modified": "2023-09-24T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230920-nx",
+            "url": "https://alanhc.github.io/next-blog/posts/20230920-nx",
+            "title": "20230920-nx",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://nx.dev/getting-started/intro\">https://nx.dev/getting-started/intro</a></li>\n  <li><a href=\"https://nx.dev/getting-started/installation\">https://nx.dev/getting-started/installation</a></li>\n</ul>\n",
+            "date_modified": "2023-09-20T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -58,7 +91,7 @@
             "id": "20230907-react-native",
             "url": "https://alanhc.github.io/next-blog/posts/20230907-react-native",
             "title": "初探 react native",
-            "summary": "\n<ul>\n  <li>網路編輯器：<a href=\"https://snack.expo.dev/\">https://snack.expo.dev/</a></li>\n  <li>\n    CocoaPods：ios 的套件管理\n    npx react-native@latest init AwesomeProject\n  </li>\n</ul>\n<p>\n  在螢幕間切換：<a href=\"https://reactnative.dev/docs/navigation\">https://r",
+            "summary": "\n<ul>\n  <li>網路編輯器：<a href=\"https://snack.expo.dev/\">https://snack.expo.dev/</a></li>\n  <li>\n    CocoaPods：ios 的套件管理\n    npx react-native@latest init AwesomeProject\n  </li>\n</ul>\n<p>\n  <a href=\"https://reactnativepaper.com/\">https://reactnativepaper.c",
             "date_modified": "2023-09-07T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -400,17 +433,6 @@
             "url": "https://alanhc.github.io/next-blog/posts/20230108-solidity-nft",
             "title": "erc 1155 合約",
             "summary": "\n<h2>ERC 721</h2>\n<pre><code class=\"language-solidity\">// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\nimport \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\";\ni",
-            "date_modified": "2023-01-08T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20230108-erc-1155",
-            "url": "https://alanhc.github.io/next-blog/posts/20230108-erc-1155",
-            "title": "erc 1155 合約",
-            "summary": "\n<h2>erc 1155</h2>\n<pre><code class=\"language-solidity\">// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;\n\nimport \"@openzeppelin/contracts/token/ERC1155/ERC1155.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract MyToken is ERC",
             "date_modified": "2023-01-08T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
