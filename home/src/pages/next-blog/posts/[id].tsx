@@ -107,35 +107,44 @@ const components = {
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
-  const all_markdonw = postData.tocMarkdown.content+"\n"+postData.markdownContent
-  const mdxSource = await serialize(all_markdonw,
-    {
-      mdxOptions: {
-        remarkPlugins: [remarkGfm],
-        rehypePlugins: [rehypeRaw],
-        format: 'mdx',
-      }
-    }
-  )
   
-  return {
-    props: {
-      postData,
-      mdxSource: mdxSource
-    },
-  };
+  const all_markdonw = postData.tocMarkdown.content+"\n"+postData.markdownContent
+  try{
+    const mdxSource = await serialize(all_markdonw,
+      {
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+          rehypePlugins: [],
+          format: 'mdx',
+        }
+      }
+    )
+    return {
+      props: {
+        postData,
+        mdxSource: mdxSource
+      },
+    };
+  } 
+  catch (e){
+    console.log(e)
+  }
+      
+  
+  
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
+  const paths = await getAllPostIds();
+  
+    return {
+      paths,
+      fallback: false,
+    };
 }
 
 export default function Post({ postData, mdxSource }: any) {
-  //console.log(mdxSource)
+
   return (
     <BlogLayout>
       <NextSeo

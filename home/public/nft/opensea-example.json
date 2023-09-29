@@ -1,4 +1,11 @@
 {
     "name":"sally example",
-    "image":"https://stickershop.line-scdn.net/stickershop/v1/product/789/LINEStorePC/main.png;compress=true"
+    "external_url": "https://openseacreatures.io/3", 
+    "image":"https://stickershop.line-scdn.net/stickershop/v1/product/789/LINEStorePC/main.png;compress=true",
+    "attributes":[
+        {
+            "trait_type": "Base", 
+            "value": "Yello"
+        }
+    ]
 }

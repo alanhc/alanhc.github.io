@@ -34,7 +34,7 @@ const CollectionResult = ({ projects, global_state }: any) => {
                         
                         <Tag ml="-1" mr="4" mt="1" key={tag} borderRadius="full" variant="solid" bg="gray.500">
                             <TagLabel>{tag}</TagLabel>
-                            <TagCloseButton onClick={(e) => handleClose(tag)} />
+                            <TagCloseButton onClick={(e:any) => handleClose(tag)} />
                         </Tag>
                     ))}
                    

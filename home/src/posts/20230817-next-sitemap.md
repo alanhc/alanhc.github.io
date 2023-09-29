@@ -4,12 +4,13 @@ date: '2023-08-17'
 tag: ["blog"]
 ---
 指令下：`pnpm add -D next-sitemap`
-
+next.config.js新增
+SITE_URL="https://example.com"
 新增 next-sitemap.config.js
 ```js
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://example.com',
+  siteUrl:  'https://example.com',
   generateRobotsTxt: true, // (optional)
   // ...other options
 }

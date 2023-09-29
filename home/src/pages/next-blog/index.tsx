@@ -16,6 +16,7 @@ import {
 import Date from "@/components/partial/Date";
 import BlogLayout from "@/components/BlogLayout";
 import ReactMarkdown from "react-markdown";
+import {remark} from 'remark'
 import {
   Flex,
   Tag,
@@ -57,17 +58,20 @@ import { NextSeo } from 'next-seo';
 
 const Blog: NextPage = ({ allPostsData }: any) => {
   const router = useRouter();
-
+  const { tag } = router.query;
   const tagsSet = new Set();
-
+  
   allPostsData.forEach(({ tag }: any) => {
-    tag.forEach((t: string) => {
-      tagsSet.add(t);
-    });
+    if (tag) {
+      tag.forEach((t: string) => {
+        tagsSet.add(t);
+      });
+    }
   });
+  console.log(tag)
   const tagsArray = Array.from(tagsSet) as string[];
 
-  const { tag } = router.query;
+  
   //console.log(tagsSet)
   const [search, setSearch] = useState(tag);
   const search_text = ({ content, tag, title }: any) => {
@@ -114,7 +118,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
                 <Box>
                   📍{title}
                   {" - "}
-                  {tag.map((t: string, i: number) => (
+                  {(tag)&&tag.map((t: string, i: number) => (
                     <small key={i}>
                       {t} {i !== tag.length - 1 && ","}
                     </small>
@@ -164,6 +168,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
+  //console.log(allPostsData)
   return {
     props: {
       allPostsData,

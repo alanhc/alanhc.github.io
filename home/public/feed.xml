@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Tue, 29 Aug 2023 04:28:22 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 29 Sep 2023 17:26:08 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -14,19 +14,242 @@
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
         <item>
-            <title><![CDATA[初探ipfs]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230828-ipfs</link>
-            <guid>20230828-ipfs</guid>
-            <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
+            <title><![CDATA[20230929-rn-qrcode]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode</link>
+            <guid>20230929-rn-qrcode</guid>
+            <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<h2>下載</h2>
+<ul>
+  <li>
+    <p><a href="https://snack.expo.dev/@alanhc/alantick-verifier">snack</a></p>
+  </li>
+  <li>
+    <p>Podfile</p>
+  </li>
+</ul>
+<pre><code class="language-ruby">def node_require(script)
+# Resolve script with node to allow for hoisting
+re]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230926-21-things-before-21]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230926-21-things-before-21</link>
+            <guid>20230926-21-things-before-21</guid>
+            <pubDate>Tue, 26 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwAR3QDSeABMFLomEetK8o_6izjB-B42bcQMGiQRY2nMP6ICJi724-1jwenH8">https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwA]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230924-wagami]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230924-wagami</link>
+            <guid>20230924-wagami</guid>
+            <pubDate>Mon, 25 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
 <p>
-  <code>brew install ipfs</code>
-  <code>ipfs init</code>
+  <code>import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'</code>
+  <code>_app.tsx</code>:
 </p>
-<pre><code class="language-js">import { create } from 'ipfs-http-client'
-const ipfs = create(new URL('http://127.0.0.1:5001'))
-const { cid } = await ipfs.add('Hello world]]></description>
+<pre><code class="language-js">const chains = [sepolia,polygonMumbai, goerli,arbitrum, mainnet, polygon,localhost]
+
+con]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230924-QR-Code]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230924-QR-Code</link>
+            <guid>20230924-QR-Code</guid>
+            <pubDate>Mon, 25 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<pre><code class="language-js">&#x3C;QRCode
+
+size={256}
+
+style={{ height: "auto", maxWidth: "100%", width: "100%" }}
+
+value={JSON.stringify(url)}
+
+viewBox={`0 0 256 256`}
+
+/>
+</code></pre>
+<ul>
+  <li><code>@/components/Html5QrcodePlugin</code></li>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230924-cmd-copy]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230924-cmd-copy</link>
+            <guid>20230924-cmd-copy</guid>
+            <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><code>for i in {0..100}; cp ticket.png "./images/$i.png"</code></p>
+<h2>Ref</h2>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230920-nx]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230920-nx</link>
+            <guid>20230920-nx</guid>
+            <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://nx.dev/getting-started/intro">https://nx.dev/getting-started/intro</a></li>
+  <li><a href="https://nx.dev/getting-started/installation">https://nx.dev/getting-started/installation</a></li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[hardhat]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230919-hardhat</link>
+            <guid>20230919-hardhat</guid>
+            <pubDate>Tue, 19 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <code>npx hardhat</code>
+  <code>pnpm add -D @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomicfoundation/hardhat-ethers @nomicfoundation/hardhat-verify chai ethers hardhat-g]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[初探 react native]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230907-react-native</link>
+            <guid>20230907-react-native</guid>
+            <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<ul>
+  <li>網路編輯器：<a href="https://snack.expo.dev/">https://snack.expo.dev/</a></li>
+  <li>
+    CocoaPods：ios 的套件管理
+    npx react-native@latest init AwesomeProject
+  </li>
+</ul>
+<p>
+  <a href="https://reactnativepaper.com/">https://reactnativepaper.c]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[在部落格中使用mdx]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230831-mdx</link>
+            <guid>20230831-mdx</guid>
+            <pubDate>Fri, 01 Sep 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://nextjs.org/docs/pages/building-your-application/configuring/mdx">https://nextjs.org/docs/pages/building-your-application/configuring/mdx</a></li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[在mongodb裡面將兩個group merge成一個結果]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group</link>
+            <guid>20230831-mongodb-aggregate-multiple-group</guid>
+            <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>結果</h2>
+<pre><code class="language-json">{
+  "results": [
+    {
+      "path": "/mcu/course/2D動畫實務",
+      "id": "2D動畫實務"
+    },
+    ...
+	{
+      "path": "/mcu/professor/楊健貴",
+      "id": "楊健貴"
+    },
+    ...
+}
+</code></pre>
+<p>
+  原本資料
+  
+  <img ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[(未完)加入kbar讓搜尋更便利]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230831-kbar</link>
+            <guid>20230831-kbar</guid>
+            <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>_app.tsx</p>
+<pre><code class="language-js">// app.tsx
+import { KBarProvider } from "kbar";
+
+function MyApp() {
+  return (
+    &#x3C;KBarProvider>
+      // ...
+    &#x3C;/KBarProvider>
+  );
+}
+</code></pre>
+<h2>Ref</h2>
+<ul>
+  <li><a href="https:/]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[加入GA]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230830-nextjs-google-analytics</link>
+            <guid>20230830-nextjs-google-analytics</guid>
+            <pubDate>Wed, 30 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://analytics.google.com/analytics/web/">https://analytics.google.com/analytics/web/</a> 裡面 拿到GA_MEASUREMENT_ID應該會是<code>G-{...}</code></p>
+<p>在_app.tsx 加入</p>
+<pre><code class="language-js">const GA_MEASUREMENT_ID = process.env.NEXT]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230829-peerjs]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230829-peerjs</link>
+            <guid>20230829-peerjs</guid>
+            <pubDate>Tue, 29 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>簡化wwebrtc的使用方法</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs">https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs</a></li>
+  <li><a href="https://gi]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230829-orbit-chat]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230829-orbit-chat</link>
+            <guid>20230829-orbit-chat</guid>
+            <pubDate>Tue, 29 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  嘗試使用chatui及orbitdb製作一個去中心化的chat聊天
+  <a href="https://github.com/alanhc/orbit-chat">https://github.com/alanhc/orbit-chat</a>
+  <img src="https://i.imgur.com/QeXYkUw.png" alt="">
+</p>
+<h2>Ref</h2>
+<ul>
+  <li></li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230829-chakra-ui]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230829-chakra-ui</link>
+            <guid>20230829-chakra-ui</guid>
+            <pubDate>Tue, 29 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>pnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion</p>
+<pre><code class="language-js">// pages/_app.tsx
+import type { AppProps } from 'next/app'
+import { ChakraProvider } from '@chakra-ui/react'
+
+export defa]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -50,46 +273,32 @@ const server = await sigServer({
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[chat聊天界面初探]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230827-chat-app</link>
-            <guid>20230827-chat-app</guid>
-            <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
+            <title><![CDATA[初探ipfs]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230828-ipfs</link>
+            <guid>20230828-ipfs</guid>
+            <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<h2>chat</h2>
+<h2>下載</h2>
 <p>
-  <code>npx create-next-app chat</code>
-  <code>pnpm add @chatscope/chat-ui-kit-react</code>
-  <code>pnpm add @chatscope/chat-ui-kit-styles</code>
+  <code>brew install ipfs</code>
+  <code>ipfs init</code>
 </p>
-<pre><code class="language-js">import styles from '@chatscope/chat-ui-kit-style]]></description>
+<pre><code class="language-js">import { create } from 'ipfs-http-client'
+const ipfs = create(new URL('http://127.0.0.1:5001'))
+const { cid } = await ipfs.add('Hello world]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[加入PWA功能]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230827-next-pwa</link>
-            <guid>20230827-next-pwa</guid>
+            <title><![CDATA[安裝動漫vscode主題]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230827-vscode-animate-extension</link>
+            <guid>20230827-vscode-animate-extension</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<h2>前置</h2>
+<p>去 <a href="https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme">下載doki-theme</a></p>
+<h2>使用方法</h2>
 <ul>
-  <li>先準備 service worker、manifacts.json、logo.png</li>
-  <li>引入套件：<code>pnpm add next-pwa</code></li>
-  <li>修改 <code>next.config.js</code></li>
-</ul>
-<pre><code class="language-js">const withPWA = require('next-pwa')({
-	dest: 'public]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[notion的替代品 - AFFiNE]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230827-notion-alternative</link>
-            <guid>20230827-notion-alternative</guid>
-            <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<p>
-  替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有<a href="https://app.affine.pro/">線上版</a>目前還是beta。
-  
-  <img src="https://user-images.githubusercontent.com/79301703/230892907-5fd5c0c5-1665-4d75-8a35-744e0afc36a5.g]]></description>
+  <li><a href="https://github.com/doki-theme/doki-theme-vscode/blob/main/albums/complete_theme_album.md">瀏覽主題</a></li>
+]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -109,31 +318,94 @@ const server = await sigServer({
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[安裝動漫vscode主題]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230827-vscode-animate-extension</link>
-            <guid>20230827-vscode-animate-extension</guid>
+            <title><![CDATA[notion的替代品 - AFFiNE]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230827-notion-alternative</link>
+            <guid>20230827-notion-alternative</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<ul>
-  <li>去 <a href="https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme">下載doki-theme</a></li>
-</ul>
-<h2>使用方法</h2>
-<ul>
-  <li><a href="https://github.com/doki-theme/doki-theme-vscode/blob/main/albums/complete_theme_album.md"]]></description>
+<p>
+  替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有<a href="https://app.affine.pro/">線上版</a>目前還是beta。
+  
+  <img src="https://user-images.githubusercontent.com/79301703/230892907-5fd5c0c5-1665-4d75-8a35-744e0afc36a5.g]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[imgur上傳]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230826-imgur</link>
-            <guid>20230826-imgur</guid>
+            <title><![CDATA[加入PWA功能]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230827-next-pwa</link>
+            <guid>20230827-next-pwa</guid>
+            <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>前置</h2>
+<ul>
+  <li>先準備 service worker、manifacts.json、logo.png</li>
+  <li>引入套件：<code>pnpm add next-pwa</code></li>
+  <li>修改 <code>next.config.js</code></li>
+</ul>
+<pre><code class="language-js">const withPWA = require('next-pwa')({
+	dest: 'public]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[chat聊天界面初探]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230827-chat-app</link>
+            <guid>20230827-chat-app</guid>
+            <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>chat</h2>
+<p>
+  <code>npx create-next-app chat</code>
+  <code>pnpm add @chatscope/chat-ui-kit-react</code>
+  <code>pnpm add @chatscope/chat-ui-kit-styles</code>
+</p>
+<pre><code class="language-js">import styles from '@chatscope/chat-ui-kit-style]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[nextjs 相關文章]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/nextjs</link>
+            <guid>nextjs</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<p>註冊：<a href="https://api.imgur.com/oauth2/addclient">https://api.imgur.com/oauth2/addclient</a></p>
-<h2>ref</h2>
+<h1>markdown相關</h1>
+<h2>資料在本地</h2>
+<h3>使用unified</h3>
+<h2>資料在雲端</h2>
+<h3>使用 MDX remote</h3>
+<h2>相關posts</h2>
 <ul>
-  <li><a href="https://apidocs.imgur.com/">https://apidocs.imgur.com/</a></li>
+  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[統整markdown的使用方法]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/nextjs-markdown</link>
+            <guid>nextjs-markdown</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>資料在本地</h2>
+<h3>使用unified</h3>
+<h2>資料在雲端</h2>
+<h3>使用 MDX</h3>
+<h2>相關posts</h2>
+<ul>
+  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[加入next-seo]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230826-next-seo</link>
+            <guid>20230826-next-seo</guid>
+            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>使用 <a href="https://www.favicon.cc/">https://www.favicon.cc/</a> 從logo.png製作 favicon.ico</p>
+<h2>加入環境變數</h2>
+<ul>
+  <li>在next.config.js新增</li>
 </ul>
-]]></description>
+<pre><code class="language-js">const nextConfig = {
+...
+	env: {
+		baseUrl: isProd ? "https://alan]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -163,52 +435,17 @@ const server = await sigServer({
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[加入next-seo]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230826-next-seo</link>
-            <guid>20230826-next-seo</guid>
+            <title><![CDATA[imgur上傳]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230826-imgur</link>
+            <guid>20230826-imgur</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<h2>加入環境變數</h2>
+<p>註冊：<a href="https://api.imgur.com/oauth2/addclient">https://api.imgur.com/oauth2/addclient</a></p>
+<h2>ref</h2>
 <ul>
-  <li>在next.config.js新增</li>
+  <li><a href="https://apidocs.imgur.com/">https://apidocs.imgur.com/</a></li>
 </ul>
-<pre><code class="language-js">const nextConfig = {
-...
-	env: {
-		baseUrl: isProd ? "https://alanhc.github.io" : "http://localhost:3000",
-		NEXT_PUBLIC_GOOGLE_ANALYTICS: "G-L5Z3CY454S",
-		confi]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[統整markdown的使用方法]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/nextjs-markdown</link>
-            <guid>nextjs-markdown</guid>
-            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>資料在本地</h2>
-<h3>使用unified</h3>
-<h2>資料在雲端</h2>
-<h3>使用 MDX</h3>
-<h2>相關posts</h2>
-<ul>
-  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[nextjs 相關文章]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/nextjs</link>
-            <guid>nextjs</guid>
-            <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h1>markdown相關</h1>
-<h2>資料在本地</h2>
-<h3>使用unified</h3>
-<h2>資料在雲端2</h2>
-<h3>使用 MDX</h3>
-<h2>相關posts</h2>
-<ul>
-  <li><a href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard">https://alanhc.github.io/next-blog/posts/20230812-re]]></description>
+]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -224,24 +461,6 @@ const server = await sigServer({
 <pre><code class="language-js">import { Feed } from "feed";
 import { writeFileSync } from "fs";
 import { getSortedPostsData } ]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[初探bigchaindb]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230824-bigchain</link>
-            <guid>20230824-bigchain</guid>
-            <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>設定bigchaindb本地節點</h2>
-<h3>使用docker</h3>
-<ul>
-  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>
-  <li>run image：</li>
-</ul>
-<pre><code class="language-shell">docker run \
-  --detach \
-  --name bigchaindb \
-  --publis]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -261,6 +480,24 @@ const config: ThemeConfig = {
   initialColorMode: "light",
 
   useSystemColorMode: f]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[初探bigchaindb]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20230824-bigchain</link>
+            <guid>20230824-bigchain</guid>
+            <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>設定bigchaindb本地節點</h2>
+<h3>使用docker</h3>
+<ul>
+  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>
+  <li>run image：</li>
+</ul>
+<pre><code class="language-shell">docker run \
+  --detach \
+  --name bigchaindb \
+  --publis]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -316,12 +553,14 @@ const tocMarkdown = await markdownToc(markdownContent);
             <guid>20230817-next-sitemap</guid>
             <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<p>指令下：<code>pnpm add -D next-sitemap</code></p>
-<p>新增 next-sitemap.config.js</p>
+<p>
+  指令下：<code>pnpm add -D next-sitemap</code>
+  next.config.js新增
+  SITE_URL="<a href="https://example.com">https://example.com</a>"
+  新增 next-sitemap.config.js
+</p>
 <pre><code class="language-js">/** @type {import('next-sitemap').IConfig} */
-module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://example.com',
-  generateRob]]></description>
+modul]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -395,18 +634,17 @@ const client = new NFTStorage({ token: API_KEY })
         </item>
         <item>
             <title><![CDATA[erc 1155 合約]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20230108-erc-1155</link>
-            <guid>20230108-erc-1155</guid>
+            <link>https://alanhc.github.io/next-blog/posts/20230108-solidity-nft</link>
+            <guid>20230108-solidity-nft</guid>
             <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
-<h2>erc 1155</h2>
+<h2>ERC 721</h2>
 <pre><code class="language-solidity">// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-
-contract MyToken is ERC]]></description>
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+i]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

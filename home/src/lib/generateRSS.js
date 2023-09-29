@@ -27,19 +27,23 @@ export default async function generateRSS() {
     const Blog_URL = `${process.env.baseUrl}/next-blog/posts`
     const posts = await getSortedPostsData()
     posts.forEach((post) => {
-        feed.addItem({
-            title: post.title,
-            id: post.id,
-            link: `${Blog_URL}/${post.id}`,
-            description: post.content.slice(0,250),
-            //content: post.content,
-            author: [{ name: "alanhc", email: "alanhc.tseng1999@gmail.com", link: process.env.baseUrl }],
-            date: new Date(post.date),
-            //image: ""
-        })
         
-        writeFileSync("./public/feed.xml", feed.rss2());
-        writeFileSync("./public/atom.xml", feed.atom1());
-        writeFileSync("./public/feed.json", feed.json1());
+        if (post.date) {
+            feed.addItem({
+                title: post.title,
+                id: post.id,
+                link: `${Blog_URL}/${post.id}`,
+                description: post.content.slice(0,250),
+                //content: post.content,
+                author: [{ name: "alanhc", email: "alanhc.tseng1999@gmail.com", link: process.env.baseUrl }],
+                date: new Date(post.date),
+                //image: ""
+            })
+            
+            writeFileSync("./public/feed.xml", feed.rss2());
+            writeFileSync("./public/atom.xml", feed.atom1());
+            writeFileSync("./public/feed.json", feed.json1());
+        }
+        
     })
 }

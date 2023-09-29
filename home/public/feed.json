@@ -11,11 +11,165 @@
     },
     "items": [
         {
-            "id": "20230828-ipfs",
-            "url": "https://alanhc.github.io/next-blog/posts/20230828-ipfs",
-            "title": "初探ipfs",
-            "summary": "\n<h2>下載</h2>\n<p>\n  <code>brew install ipfs</code>\n  <code>ipfs init</code>\n</p>\n<pre><code class=\"language-js\">import { create } from 'ipfs-http-client'\nconst ipfs = create(new URL('http://127.0.0.1:5001'))\nconst { cid } = await ipfs.add('Hello world",
-            "date_modified": "2023-08-28T00:00:00.000Z",
+            "id": "20230929-rn-qrcode",
+            "url": "https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode",
+            "title": "20230929-rn-qrcode",
+            "summary": "\n<ul>\n  <li>\n    <p><a href=\"https://snack.expo.dev/@alanhc/alantick-verifier\">snack</a></p>\n  </li>\n  <li>\n    <p>Podfile</p>\n  </li>\n</ul>\n<pre><code class=\"language-ruby\">def node_require(script)\n# Resolve script with node to allow for hoisting\nre",
+            "date_modified": "2023-09-29T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230926-21-things-before-21",
+            "url": "https://alanhc.github.io/next-blog/posts/20230926-21-things-before-21",
+            "title": "20230926-21-things-before-21",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwAR3QDSeABMFLomEetK8o_6izjB-B42bcQMGiQRY2nMP6ICJi724-1jwenH8\">https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwA",
+            "date_modified": "2023-09-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230924-wagami",
+            "url": "https://alanhc.github.io/next-blog/posts/20230924-wagami",
+            "title": "20230924-wagami",
+            "summary": "\n<p>\n  <code>import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'</code>\n  <code>_app.tsx</code>:\n</p>\n<pre><code class=\"language-js\">const chains = [sepolia,polygonMumbai, goerli,arbitrum, mainnet, polygon,localhost]\n\ncon",
+            "date_modified": "2023-09-25T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230924-QR-Code",
+            "url": "https://alanhc.github.io/next-blog/posts/20230924-QR-Code",
+            "title": "20230924-QR-Code",
+            "summary": "\n<pre><code class=\"language-js\">&#x3C;QRCode\n\nsize={256}\n\nstyle={{ height: \"auto\", maxWidth: \"100%\", width: \"100%\" }}\n\nvalue={JSON.stringify(url)}\n\nviewBox={`0 0 256 256`}\n\n/>\n</code></pre>\n<ul>\n  <li><code>@/components/Html5QrcodePlugin</code></li>\n",
+            "date_modified": "2023-09-25T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230924-cmd-copy",
+            "url": "https://alanhc.github.io/next-blog/posts/20230924-cmd-copy",
+            "title": "20230924-cmd-copy",
+            "summary": "\n<p><code>for i in {0..100}; cp ticket.png \"./images/$i.png\"</code></p>\n<h2>Ref</h2>\n",
+            "date_modified": "2023-09-24T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230920-nx",
+            "url": "https://alanhc.github.io/next-blog/posts/20230920-nx",
+            "title": "20230920-nx",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://nx.dev/getting-started/intro\">https://nx.dev/getting-started/intro</a></li>\n  <li><a href=\"https://nx.dev/getting-started/installation\">https://nx.dev/getting-started/installation</a></li>\n</ul>\n",
+            "date_modified": "2023-09-20T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230919-hardhat",
+            "url": "https://alanhc.github.io/next-blog/posts/20230919-hardhat",
+            "title": "hardhat",
+            "summary": "\n<p>\n  <code>npx hardhat</code>\n  <code>pnpm add -D @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomicfoundation/hardhat-ethers @nomicfoundation/hardhat-verify chai ethers hardhat-g",
+            "date_modified": "2023-09-19T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230907-react-native",
+            "url": "https://alanhc.github.io/next-blog/posts/20230907-react-native",
+            "title": "初探 react native",
+            "summary": "\n<ul>\n  <li>網路編輯器：<a href=\"https://snack.expo.dev/\">https://snack.expo.dev/</a></li>\n  <li>\n    CocoaPods：ios 的套件管理\n    npx react-native@latest init AwesomeProject\n  </li>\n</ul>\n<p>\n  <a href=\"https://reactnativepaper.com/\">https://reactnativepaper.c",
+            "date_modified": "2023-09-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230831-mdx",
+            "url": "https://alanhc.github.io/next-blog/posts/20230831-mdx",
+            "title": "在部落格中使用mdx",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://nextjs.org/docs/pages/building-your-application/configuring/mdx\">https://nextjs.org/docs/pages/building-your-application/configuring/mdx</a></li>\n</ul>\n",
+            "date_modified": "2023-09-01T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230831-mongodb-aggregate-multiple-group",
+            "url": "https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group",
+            "title": "在mongodb裡面將兩個group merge成一個結果",
+            "summary": "\n<h2>結果</h2>\n<pre><code class=\"language-json\">{\n  \"results\": [\n    {\n      \"path\": \"/mcu/course/2D動畫實務\",\n      \"id\": \"2D動畫實務\"\n    },\n    ...\n\t{\n      \"path\": \"/mcu/professor/楊健貴\",\n      \"id\": \"楊健貴\"\n    },\n    ...\n}\n</code></pre>\n<p>\n  原本資料\n  \n  <img ",
+            "date_modified": "2023-08-31T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230831-kbar",
+            "url": "https://alanhc.github.io/next-blog/posts/20230831-kbar",
+            "title": "(未完)加入kbar讓搜尋更便利",
+            "summary": "\n<p>_app.tsx</p>\n<pre><code class=\"language-js\">// app.tsx\nimport { KBarProvider } from \"kbar\";\n\nfunction MyApp() {\n  return (\n    &#x3C;KBarProvider>\n      // ...\n    &#x3C;/KBarProvider>\n  );\n}\n</code></pre>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https:/",
+            "date_modified": "2023-08-31T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230830-nextjs-google-analytics",
+            "url": "https://alanhc.github.io/next-blog/posts/20230830-nextjs-google-analytics",
+            "title": "加入GA",
+            "summary": "\n<p><a href=\"https://analytics.google.com/analytics/web/\">https://analytics.google.com/analytics/web/</a> 裡面 拿到GA_MEASUREMENT_ID應該會是<code>G-{...}</code></p>\n<p>在_app.tsx 加入</p>\n<pre><code class=\"language-js\">const GA_MEASUREMENT_ID = process.env.NEXT",
+            "date_modified": "2023-08-30T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230829-peerjs",
+            "url": "https://alanhc.github.io/next-blog/posts/20230829-peerjs",
+            "title": "20230829-peerjs",
+            "summary": "\n<p>簡化wwebrtc的使用方法</p>\n<ul>\n  <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs\">https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs</a></li>\n  <li><a href=\"https://gi",
+            "date_modified": "2023-08-29T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230829-orbit-chat",
+            "url": "https://alanhc.github.io/next-blog/posts/20230829-orbit-chat",
+            "title": "20230829-orbit-chat",
+            "summary": "\n<p>\n  嘗試使用chatui及orbitdb製作一個去中心化的chat聊天\n  <a href=\"https://github.com/alanhc/orbit-chat\">https://github.com/alanhc/orbit-chat</a>\n  <img src=\"https://i.imgur.com/QeXYkUw.png\" alt=\"\">\n</p>\n<h2>Ref</h2>\n<ul>\n  <li></li>\n</ul>\n",
+            "date_modified": "2023-08-29T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230829-chakra-ui",
+            "url": "https://alanhc.github.io/next-blog/posts/20230829-chakra-ui",
+            "title": "20230829-chakra-ui",
+            "summary": "\n<p>pnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion</p>\n<pre><code class=\"language-js\">// pages/_app.tsx\nimport type { AppProps } from 'next/app'\nimport { ChakraProvider } from '@chakra-ui/react'\n\nexport defa",
+            "date_modified": "2023-08-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -33,32 +187,21 @@
             }
         },
         {
-            "id": "20230827-chat-app",
-            "url": "https://alanhc.github.io/next-blog/posts/20230827-chat-app",
-            "title": "chat聊天界面初探",
-            "summary": "\n<h2>chat</h2>\n<p>\n  <code>npx create-next-app chat</code>\n  <code>pnpm add @chatscope/chat-ui-kit-react</code>\n  <code>pnpm add @chatscope/chat-ui-kit-styles</code>\n</p>\n<pre><code class=\"language-js\">import styles from '@chatscope/chat-ui-kit-style",
-            "date_modified": "2023-08-27T00:00:00.000Z",
+            "id": "20230828-ipfs",
+            "url": "https://alanhc.github.io/next-blog/posts/20230828-ipfs",
+            "title": "初探ipfs",
+            "summary": "\n<h2>下載</h2>\n<p>\n  <code>brew install ipfs</code>\n  <code>ipfs init</code>\n</p>\n<pre><code class=\"language-js\">import { create } from 'ipfs-http-client'\nconst ipfs = create(new URL('http://127.0.0.1:5001'))\nconst { cid } = await ipfs.add('Hello world",
+            "date_modified": "2023-08-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
             }
         },
         {
-            "id": "20230827-next-pwa",
-            "url": "https://alanhc.github.io/next-blog/posts/20230827-next-pwa",
-            "title": "加入PWA功能",
-            "summary": "\n<h2>前置</h2>\n<ul>\n  <li>先準備 service worker、manifacts.json、logo.png</li>\n  <li>引入套件：<code>pnpm add next-pwa</code></li>\n  <li>修改 <code>next.config.js</code></li>\n</ul>\n<pre><code class=\"language-js\">const withPWA = require('next-pwa')({\n\tdest: 'public",
-            "date_modified": "2023-08-27T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20230827-notion-alternative",
-            "url": "https://alanhc.github.io/next-blog/posts/20230827-notion-alternative",
-            "title": "notion的替代品 - AFFiNE",
-            "summary": "\n<p>\n  替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有<a href=\"https://app.affine.pro/\">線上版</a>目前還是beta。\n  \n  <img src=\"https://user-images.githubusercontent.com/79301703/230892907-5fd5c0c5-1665-4d75-8a35-744e0afc36a5.g",
+            "id": "20230827-vscode-animate-extension",
+            "url": "https://alanhc.github.io/next-blog/posts/20230827-vscode-animate-extension",
+            "title": "安裝動漫vscode主題",
+            "summary": "\n<p>去 <a href=\"https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme\">下載doki-theme</a></p>\n<h2>使用方法</h2>\n<ul>\n  <li><a href=\"https://github.com/doki-theme/doki-theme-vscode/blob/main/albums/complete_theme_album.md\">瀏覽主題</a></li>\n",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -77,10 +220,10 @@
             }
         },
         {
-            "id": "20230827-vscode-animate-extension",
-            "url": "https://alanhc.github.io/next-blog/posts/20230827-vscode-animate-extension",
-            "title": "安裝動漫vscode主題",
-            "summary": "\n<ul>\n  <li>去 <a href=\"https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme\">下載doki-theme</a></li>\n</ul>\n<h2>使用方法</h2>\n<ul>\n  <li><a href=\"https://github.com/doki-theme/doki-theme-vscode/blob/main/albums/complete_theme_album.md\"",
+            "id": "20230827-notion-alternative",
+            "url": "https://alanhc.github.io/next-blog/posts/20230827-notion-alternative",
+            "title": "notion的替代品 - AFFiNE",
+            "summary": "\n<p>\n  替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有<a href=\"https://app.affine.pro/\">線上版</a>目前還是beta。\n  \n  <img src=\"https://user-images.githubusercontent.com/79301703/230892907-5fd5c0c5-1665-4d75-8a35-744e0afc36a5.g",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -88,32 +231,32 @@
             }
         },
         {
-            "id": "20230826-imgur",
-            "url": "https://alanhc.github.io/next-blog/posts/20230826-imgur",
-            "title": "imgur上傳",
-            "summary": "\n<p>註冊：<a href=\"https://api.imgur.com/oauth2/addclient\">https://api.imgur.com/oauth2/addclient</a></p>\n<h2>ref</h2>\n<ul>\n  <li><a href=\"https://apidocs.imgur.com/\">https://apidocs.imgur.com/</a></li>\n</ul>\n",
-            "date_modified": "2023-08-26T00:00:00.000Z",
+            "id": "20230827-next-pwa",
+            "url": "https://alanhc.github.io/next-blog/posts/20230827-next-pwa",
+            "title": "加入PWA功能",
+            "summary": "\n<h2>前置</h2>\n<ul>\n  <li>先準備 service worker、manifacts.json、logo.png</li>\n  <li>引入套件：<code>pnpm add next-pwa</code></li>\n  <li>修改 <code>next.config.js</code></li>\n</ul>\n<pre><code class=\"language-js\">const withPWA = require('next-pwa')({\n\tdest: 'public",
+            "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
             }
         },
         {
-            "id": "20230826-import-alias",
-            "url": "https://alanhc.github.io/next-blog/posts/20230826-import-alias",
-            "title": "加入import別名讓import更好看",
-            "summary": "\n<h2>設定</h2>\n<ul>\n  <li>tsconfig.json</li>\n</ul>\n<pre><code class=\"language-js\">{\n\t\"compilerOptions\": {\n\t...\n\t\"baseUrl\": \".\",\n\t\"paths\": {\n\t\t\"@/components/*\": [\"src/components/*\"],\n\t...\n\t}\n}\n</code></pre>\n<ul>\n  <li>使用</li>\n</ul>\n<pre><code class=\"lan",
-            "date_modified": "2023-08-26T00:00:00.000Z",
+            "id": "20230827-chat-app",
+            "url": "https://alanhc.github.io/next-blog/posts/20230827-chat-app",
+            "title": "chat聊天界面初探",
+            "summary": "\n<h2>chat</h2>\n<p>\n  <code>npx create-next-app chat</code>\n  <code>pnpm add @chatscope/chat-ui-kit-react</code>\n  <code>pnpm add @chatscope/chat-ui-kit-styles</code>\n</p>\n<pre><code class=\"language-js\">import styles from '@chatscope/chat-ui-kit-style",
+            "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
             }
         },
         {
-            "id": "20230826-next-seo",
-            "url": "https://alanhc.github.io/next-blog/posts/20230826-next-seo",
-            "title": "加入next-seo",
-            "summary": "\n<h2>加入環境變數</h2>\n<ul>\n  <li>在next.config.js新增</li>\n</ul>\n<pre><code class=\"language-js\">const nextConfig = {\n...\n\tenv: {\n\t\tbaseUrl: isProd ? \"https://alanhc.github.io\" : \"http://localhost:3000\",\n\t\tNEXT_PUBLIC_GOOGLE_ANALYTICS: \"G-L5Z3CY454S\",\n\t\tconfi",
+            "id": "nextjs",
+            "url": "https://alanhc.github.io/next-blog/posts/nextjs",
+            "title": "nextjs 相關文章",
+            "summary": "\n<h1>markdown相關</h1>\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<h2>資料在雲端</h2>\n<h3>使用 MDX remote</h3>\n<h2>相關posts</h2>\n<ul>\n  <li><a href=\"https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard\">https://alanhc.github.io/next-blog/posts/20230",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -132,10 +275,32 @@
             }
         },
         {
-            "id": "nextjs",
-            "url": "https://alanhc.github.io/next-blog/posts/nextjs",
-            "title": "nextjs 相關文章",
-            "summary": "\n<h1>markdown相關</h1>\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<h2>資料在雲端2</h2>\n<h3>使用 MDX</h3>\n<h2>相關posts</h2>\n<ul>\n  <li><a href=\"https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard\">https://alanhc.github.io/next-blog/posts/20230812-re",
+            "id": "20230826-next-seo",
+            "url": "https://alanhc.github.io/next-blog/posts/20230826-next-seo",
+            "title": "加入next-seo",
+            "summary": "\n<p>使用 <a href=\"https://www.favicon.cc/\">https://www.favicon.cc/</a> 從logo.png製作 favicon.ico</p>\n<h2>加入環境變數</h2>\n<ul>\n  <li>在next.config.js新增</li>\n</ul>\n<pre><code class=\"language-js\">const nextConfig = {\n...\n\tenv: {\n\t\tbaseUrl: isProd ? \"https://alan",
+            "date_modified": "2023-08-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230826-import-alias",
+            "url": "https://alanhc.github.io/next-blog/posts/20230826-import-alias",
+            "title": "加入import別名讓import更好看",
+            "summary": "\n<h2>設定</h2>\n<ul>\n  <li>tsconfig.json</li>\n</ul>\n<pre><code class=\"language-js\">{\n\t\"compilerOptions\": {\n\t...\n\t\"baseUrl\": \".\",\n\t\"paths\": {\n\t\t\"@/components/*\": [\"src/components/*\"],\n\t...\n\t}\n}\n</code></pre>\n<ul>\n  <li>使用</li>\n</ul>\n<pre><code class=\"lan",
+            "date_modified": "2023-08-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230826-imgur",
+            "url": "https://alanhc.github.io/next-blog/posts/20230826-imgur",
+            "title": "imgur上傳",
+            "summary": "\n<p>註冊：<a href=\"https://api.imgur.com/oauth2/addclient\">https://api.imgur.com/oauth2/addclient</a></p>\n<h2>ref</h2>\n<ul>\n  <li><a href=\"https://apidocs.imgur.com/\">https://apidocs.imgur.com/</a></li>\n</ul>\n",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -154,10 +319,10 @@
             }
         },
         {
-            "id": "20230824-bigchain",
-            "url": "https://alanhc.github.io/next-blog/posts/20230824-bigchain",
-            "title": "初探bigchaindb",
-            "summary": "\n<h2>設定bigchaindb本地節點</h2>\n<h3>使用docker</h3>\n<ul>\n  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>\n  <li>run image：</li>\n</ul>\n<pre><code class=\"language-shell\">docker run \\\n  --detach \\\n  --name bigchaindb \\\n  --publis",
+            "id": "20230824-chakra-darkmode",
+            "url": "https://alanhc.github.io/next-blog/posts/20230824-chakra-darkmode",
+            "title": "部落格暗黑模式",
+            "summary": "\n<ol>\n  <li>新增 theme.ts</li>\n</ol>\n<pre><code class=\"language-js\">import { extendTheme, type ThemeConfig } from \"@chakra-ui/react\";\n\n// 2. Add your color mode config\n\nconst config: ThemeConfig = {\n  initialColorMode: \"light\",\n\n  useSystemColorMode: f",
             "date_modified": "2023-08-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -165,10 +330,10 @@
             }
         },
         {
-            "id": "20230824-chakra-darkmode",
-            "url": "https://alanhc.github.io/next-blog/posts/20230824-chakra-darkmode",
-            "title": "部落格暗黑模式",
-            "summary": "\n<ol>\n  <li>新增 theme.ts</li>\n</ol>\n<pre><code class=\"language-js\">import { extendTheme, type ThemeConfig } from \"@chakra-ui/react\";\n\n// 2. Add your color mode config\n\nconst config: ThemeConfig = {\n  initialColorMode: \"light\",\n\n  useSystemColorMode: f",
+            "id": "20230824-bigchain",
+            "url": "https://alanhc.github.io/next-blog/posts/20230824-bigchain",
+            "title": "初探bigchaindb",
+            "summary": "\n<h2>設定bigchaindb本地節點</h2>\n<h3>使用docker</h3>\n<ul>\n  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>\n  <li>run image：</li>\n</ul>\n<pre><code class=\"language-shell\">docker run \\\n  --detach \\\n  --name bigchaindb \\\n  --publis",
             "date_modified": "2023-08-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -212,7 +377,7 @@
             "id": "20230817-next-sitemap",
             "url": "https://alanhc.github.io/next-blog/posts/20230817-next-sitemap",
             "title": "將部落格加入sitemap功能",
-            "summary": "\n<p>指令下：<code>pnpm add -D next-sitemap</code></p>\n<p>新增 next-sitemap.config.js</p>\n<pre><code class=\"language-js\">/** @type {import('next-sitemap').IConfig} */\nmodule.exports = {\n  siteUrl: process.env.SITE_URL || 'https://example.com',\n  generateRob",
+            "summary": "\n<p>\n  指令下：<code>pnpm add -D next-sitemap</code>\n  next.config.js新增\n  SITE_URL=\"<a href=\"https://example.com\">https://example.com</a>\"\n  新增 next-sitemap.config.js\n</p>\n<pre><code class=\"language-js\">/** @type {import('next-sitemap').IConfig} */\nmodul",
             "date_modified": "2023-08-17T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -264,10 +429,10 @@
             }
         },
         {
-            "id": "20230108-erc-1155",
-            "url": "https://alanhc.github.io/next-blog/posts/20230108-erc-1155",
+            "id": "20230108-solidity-nft",
+            "url": "https://alanhc.github.io/next-blog/posts/20230108-solidity-nft",
             "title": "erc 1155 合約",
-            "summary": "\n<h2>erc 1155</h2>\n<pre><code class=\"language-solidity\">// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;\n\nimport \"@openzeppelin/contracts/token/ERC1155/ERC1155.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract MyToken is ERC",
+            "summary": "\n<h2>ERC 721</h2>\n<pre><code class=\"language-solidity\">// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\nimport \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\";\ni",
             "date_modified": "2023-01-08T00:00:00.000Z",
             "author": {
                 "name": "alanhc",

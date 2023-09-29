@@ -9,8 +9,8 @@ tag: ["nextjs"]
 ### 使用unified
 
 
-## 資料在雲端2
-### 使用 MDX
+## 資料在雲端
+### 使用 MDX remote
 
 ## 相關posts
 - https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard
