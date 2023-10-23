@@ -11,6 +11,28 @@
     },
     "items": [
         {
+            "id": "20231023-learning-from-lin",
+            "url": "https://alanhc.github.io/next-blog/posts/20231023-learning-from-lin",
+            "title": "20231023-learning",
+            "summary": "\n<p>小林說：分享有關於金融背景的ytr，分享得很棒 <a href=\"https://www.youtube.com/watch?v=EViSmcCPK5g\">我是如何快速学习一个领域的 (15:49)</a></p>\n<ol>\n  <li>search 搜尋\n    <ol>\n      <li>問題：資料太多</li>\n      <li>\n        整理框架 &#x3C; 結構化思維\n        3. 參考別人的框架\n        1. 看書目錄、框架\n        2.",
+            "date_modified": "2023-10-23T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231006-fastapi-streaming",
+            "url": "https://alanhc.github.io/next-blog/posts/20231006-fastapi-streaming",
+            "title": "20231006-fastapi-streaming",
+            "summary": "\n<ul>\n  <li>main.py</li>\n</ul>\n<pre><code class=\"language-python\">from fastapi import FastAPI\nfrom fastapi.responses import StreamingResponse\nimport time\napp = FastAPI()\ndef fake_data_streamer():\n\tfor i in range(10):\n\tyield b'some fake data\\n\\n'\n\ttim",
+            "date_modified": "2023-10-06T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20230929-rn-qrcode",
             "url": "https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode",
             "title": "20230929-rn-qrcode",

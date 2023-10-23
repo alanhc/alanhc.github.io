@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 23 Oct 2023 13:49:16 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Oct 2023 14:04:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,43 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20231023-learning]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231023-learning-from-lin</link>
+            <guid>20231023-learning-from-lin</guid>
+            <pubDate>Mon, 23 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>小林說：分享有關於金融背景的ytr，分享得很棒 <a href="https://www.youtube.com/watch?v=EViSmcCPK5g">我是如何快速学习一个领域的 (15:49)</a></p>
+<ol>
+  <li>search 搜尋
+    <ol>
+      <li>問題：資料太多</li>
+      <li>
+        整理框架 &#x3C; 結構化思維
+        3. 參考別人的框架
+        1. 看書目錄、框架
+        2.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231006-fastapi-streaming]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231006-fastapi-streaming</link>
+            <guid>20231006-fastapi-streaming</guid>
+            <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<ul>
+  <li>main.py</li>
+</ul>
+<pre><code class="language-python">from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+import time
+app = FastAPI()
+def fake_data_streamer():
+	for i in range(10):
+	yield b'some fake data\n\n'
+	tim]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20230929-rn-qrcode]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode</link>
