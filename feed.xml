@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 26 Oct 2023 15:49:13 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 26 Oct 2023 15:52:38 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -46,6 +46,25 @@ from dotenv import lo]]></description>
       <li>參考別人的框架
         <ol>
           <li>看書目錄、框架]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231023-Pair-Programming-with-a-Large-Language-Model]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231023-Pair-Programming-with-a-Large- Language-Model</link>
+            <guid>20231023-Pair-Programming-with-a-Large- Language-Model</guid>
+            <pubDate>Mon, 23 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>TL;DR</h2>
+<p>LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫測試、優化程式除錯及解釋程式碼，使用流程為(1)建立prompt (2)取得結果 (3) 輸出結果，為了程式重複使用，會使用template機制讓呼叫比較簡單。</p>
+<p>
+  Palm - google 的llm模型
+  有三個組成
+</p>
+<ul>
+  <li>API Key</li>
+  <li>
+    GEN AI library
+    model裡面選擇 chat bison]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
