@@ -11,11 +11,44 @@
     },
     "items": [
         {
+            "id": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
+            "url": "https://alanhc.github.io/next-blog/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers",
+            "title": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
+            "summary": "\n<h2>Introduction</h2>\n<h3>兩種LLM模型</h3>\n<h4>1. base：由訓練資料預測下一個word</h4>\n<h4>2. instruction based ：由指令Fine-turn / RLHF(強化學習、人類回饋)</h4>\n<h2>Guidelines</h2>\n<h3>Setup</h3>\n<pre><code class=\"language-python\">import openai\nimport os\n\nfrom dotenv import lo",
+            "date_modified": "2023-10-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231023-learning-from-lin",
             "url": "https://alanhc.github.io/next-blog/posts/20231023-learning-from-lin",
             "title": "20231023-learning",
-            "summary": "\n<p>小林說：分享有關於金融背景的ytr，分享得很棒 <a href=\"https://www.youtube.com/watch?v=EViSmcCPK5g\">我是如何快速学习一个领域的 (15:49)</a></p>\n<ol>\n  <li>search 搜尋\n    <ol>\n      <li>問題：資料太多</li>\n      <li>\n        整理框架 &#x3C; 結構化思維\n        3. 參考別人的框架\n        1. 看書目錄、框架\n        2.",
+            "summary": "\n<p>小林說：分享有關於金融背景的ytr，分享得很棒 <a href=\"https://www.youtube.com/watch?v=EViSmcCPK5g\">我是如何快速学习一个领域的 (15:49)</a></p>\n<ol>\n  <li>search 搜尋\n    <ol>\n      <li>問題：資料太多</li>\n      <li>整理框架 &#x3C; 結構化思維</li>\n      <li>參考別人的框架\n        <ol>\n          <li>看書目錄、框架",
             "date_modified": "2023-10-23T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231023-Pair-Programming-with-a-Large Language-Model",
+            "url": "https://alanhc.github.io/next-blog/posts/20231023-Pair-Programming-with-a-Large Language-Model",
+            "title": "20231023-Pair-Programming-with-a-Large Language-Model",
+            "summary": "\n<h2>TL;DR</h2>\n<p>LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫測試、優化程式除錯及解釋程式碼，使用流程為(1)建立prompt (2)取得結果 (3) 輸出結果，為了程式重複使用，會使用template機制讓呼叫比較簡單。</p>\n<p>\n  Palm - google 的llm模型\n  有三個組成\n</p>\n<ul>\n  <li>API Key</li>\n  <li>\n    GEN AI library\n    model裡面選擇 chat bison",
+            "date_modified": "2023-10-23T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231010-webauthn",
+            "url": "https://alanhc.github.io/next-blog/posts/20231010-webauthn",
+            "title": "20231010-webauthn",
+            "summary": "\n<p>web 生物辨識api</p>\n<h2>Ref</h2>\n",
+            "date_modified": "2023-10-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
