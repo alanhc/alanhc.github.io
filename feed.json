@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "20231028-mozilla-ai",
+            "url": "https://alanhc.github.io/next-blog/posts/20231028-mozilla-ai",
+            "title": "20231028-mozilla-ai",
+            "summary": "\n<p>有涵蓋LLM，由淺入深，有colab實作，還不錯</p>\n<h1>Introduction</h1>\n<h3>Summarization</h3>\n<pre><code>- [colab introduction](https://colab.research.google.com/drive/1cpdhABVmqmjLfJr-qQIlOOM0Yonc_xFY#scrollTo=Jd2i2959FP3L)\n</code></pre>\n<h2>Ref</h2>\n<ul>\n  <li>\n  ",
+            "date_modified": "2023-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
             "url": "https://alanhc.github.io/next-blog/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers",
             "title": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
@@ -35,7 +46,7 @@
         {
             "id": "20231023-Pair-Programming-with-a-Large-Language-Model",
             "url": "https://alanhc.github.io/next-blog/posts/20231023-Pair-Programming-with-a-Large-Language-Model",
-            "title": "20231023-Pair-Programming-with-a-Larg-Language-Model",
+            "title": "20231023-Pair-Programming-with-a-Large-Language-Model",
             "summary": "\n<h2>TL;DR</h2>\n<p>LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫測試、優化程式除錯及解釋程式碼，使用流程為(1)建立prompt (2)取得結果 (3) 輸出結果，為了程式重複使用，會使用template機制讓呼叫比較簡單。</p>\n<p>\n  Palm - google 的llm模型\n  有三個組成\n</p>\n<ul>\n  <li>API Key</li>\n  <li>\n    GEN AI library\n    model裡面選擇 chat bison",
             "date_modified": "2023-10-23T00:00:00.000Z",
             "author": {

@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 26 Oct 2023 15:58:34 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Oct 2023 17:52:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,23 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20231028-mozilla-ai]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231028-mozilla-ai</link>
+            <guid>20231028-mozilla-ai</guid>
+            <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>有涵蓋LLM，由淺入深，有colab實作，還不錯</p>
+<h1>Introduction</h1>
+<h3>Summarization</h3>
+<pre><code>- [colab introduction](https://colab.research.google.com/drive/1cpdhABVmqmjLfJr-qQIlOOM0Yonc_xFY#scrollTo=Jd2i2959FP3L)
+</code></pre>
+<h2>Ref</h2>
+<ul>
+  <li>
+  ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers</link>
@@ -49,7 +66,7 @@ from dotenv import lo]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[20231023-Pair-Programming-with-a-Larg-Language-Model]]></title>
+            <title><![CDATA[20231023-Pair-Programming-with-a-Large-Language-Model]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20231023-Pair-Programming-with-a-Large-Language-Model</link>
             <guid>20231023-Pair-Programming-with-a-Large-Language-Model</guid>
             <pubDate>Mon, 23 Oct 2023 00:00:00 GMT</pubDate>

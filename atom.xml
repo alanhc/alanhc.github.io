@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-10-26T15:58:34.626Z</updated>
+    <updated>2023-10-27T17:52:44.850Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,27 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[20231028-mozilla-ai]]></title>
+        <id>20231028-mozilla-ai</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231028-mozilla-ai"/>
+        <updated>2023-10-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>有涵蓋LLM，由淺入深，有colab實作，還不錯</p>
+<h1>Introduction</h1>
+<h3>Summarization</h3>
+<pre><code>- [colab introduction](https://colab.research.google.com/drive/1cpdhABVmqmjLfJr-qQIlOOM0Yonc_xFY#scrollTo=Jd2i2959FP3L)
+</code></pre>
+<h2>Ref</h2>
+<ul>
+  <li>
+  ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
         <id>20231026-ChatGPT-Prompt-Engineering-for-Developers</id>
@@ -59,7 +80,7 @@ from dotenv import lo]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20231023-Pair-Programming-with-a-Larg-Language-Model]]></title>
+        <title type="html"><![CDATA[20231023-Pair-Programming-with-a-Large-Language-Model]]></title>
         <id>20231023-Pair-Programming-with-a-Large-Language-Model</id>
         <link href="https://alanhc.github.io/next-blog/posts/20231023-Pair-Programming-with-a-Large-Language-Model"/>
         <updated>2023-10-23T00:00:00.000Z</updated>
