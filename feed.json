@@ -33,17 +33,6 @@
             }
         },
         {
-            "id": "20231029-Building-Systems-with-the-ChatGPT-API 2",
-            "url": "https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API 2",
-            "title": "Building Systems with the ChatGPT API",
-            "summary": "\n<h2>Introduction</h2>\n<h2>Language Models, the Chat Format and Tokens</h2>\n<ul>\n  <li>LLM\n    <ul>\n      <li>How? 使用 監督式學習 預測下一個word</li>\n      <li>type\n        <ul>\n          <li>Base LLM： 訓練時是去預測下一個字的訓練方式</li>\n          <li>Instruction Turned LLM：",
-            "date_modified": "2023-10-28T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20231028-mozilla-ai",
             "url": "https://alanhc.github.io/next-blog/posts/20231028-mozilla-ai",
             "title": "20231028-mozilla-ai",

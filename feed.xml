@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Wed, 01 Nov 2023 04:29:46 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Nov 2023 04:30:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -38,24 +38,6 @@
             <title><![CDATA[Building Systems with the ChatGPT API]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API</link>
             <guid>20231029-Building-Systems-with-the-ChatGPT-API</guid>
-            <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>Introduction</h2>
-<h2>Language Models, the Chat Format and Tokens</h2>
-<ul>
-  <li>LLM
-    <ul>
-      <li>How? 使用 監督式學習 預測下一個word</li>
-      <li>type
-        <ul>
-          <li>Base LLM： 訓練時是去預測下一個字的訓練方式</li>
-          <li>Instruction Turned LLM：]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[Building Systems with the ChatGPT API]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API 2</link>
-            <guid>20231029-Building-Systems-with-the-ChatGPT-API 2</guid>
             <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
 <h2>Introduction</h2>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-01T04:29:46.622Z</updated>
+    <updated>2023-11-01T04:30:15.376Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -44,28 +44,6 @@
         <title type="html"><![CDATA[Building Systems with the ChatGPT API]]></title>
         <id>20231029-Building-Systems-with-the-ChatGPT-API</id>
         <link href="https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
-        <updated>2023-10-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h2>Introduction</h2>
-<h2>Language Models, the Chat Format and Tokens</h2>
-<ul>
-  <li>LLM
-    <ul>
-      <li>How? 使用 監督式學習 預測下一個word</li>
-      <li>type
-        <ul>
-          <li>Base LLM： 訓練時是去預測下一個字的訓練方式</li>
-          <li>Instruction Turned LLM：]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Building Systems with the ChatGPT API]]></title>
-        <id>20231029-Building-Systems-with-the-ChatGPT-API 2</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API 2"/>
         <updated>2023-10-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Introduction</h2>
