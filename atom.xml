@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-10-31T17:06:19.087Z</updated>
+    <updated>2023-11-01T04:29:46.622Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -19,31 +19,6 @@
         <title type="html"><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
         <id>20231031-Andrew-Ng-Opportunities-in-AI-2023</id>
         <link href="https://alanhc.github.io/next-blog/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023"/>
-        <updated>2023-10-31T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h3>兩個很重要的領域 監督式學習及生成式AI</h3>
-<p>
-  <img src="https://i.imgur.com/Wvb36Eh.png" alt="">
-</p>
-<ul>
-  <li>生成式AI 怎麼訓練？
-    <ul>
-      <li>
-        使用很大的資料集用監督式學習方法訓練
-        
-        <img src="https://i.imgur.com/8jvY67N.png" alt="">
-      </li>
-    </u]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
-        <id>20231031-Andrew-Ng-Opportunities-in-AI-2023 2</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023 2"/>
         <updated>2023-10-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h3>兩個很重要的領域 監督式學習及生成式AI</h3>

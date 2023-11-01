@@ -22,17 +22,6 @@
             }
         },
         {
-            "id": "20231031-Andrew-Ng-Opportunities-in-AI-2023 2",
-            "url": "https://alanhc.github.io/next-blog/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023 2",
-            "title": "Andrew-Ng-Opportunities-in-AI-2023",
-            "summary": "\n<h3>兩個很重要的領域 監督式學習及生成式AI</h3>\n<p>\n  <img src=\"https://i.imgur.com/Wvb36Eh.png\" alt=\"\">\n</p>\n<ul>\n  <li>生成式AI 怎麼訓練？\n    <ul>\n      <li>\n        使用很大的資料集用監督式學習方法訓練\n        \n        <img src=\"https://i.imgur.com/8jvY67N.png\" alt=\"\">\n      </li>\n    </u",
-            "date_modified": "2023-10-31T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20231029-Building-Systems-with-the-ChatGPT-API",
             "url": "https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API",
             "title": "Building Systems with the ChatGPT API",
