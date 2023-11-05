@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-01T04:32:10.776Z</updated>
+    <updated>2023-11-05T12:03:45.479Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,105 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[20231104-learn-cosmos]]></title>
+        <id>20231104-learn-cosmos</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231104-learn-cosmos"/>
+        <updated>2023-11-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>
+  <a href="https://ignite.com/cli">Ignite CLI</a>: <a href="https://github.com/cosmos/cosmos-sdk">它是Cosmos SDK</a>的開發人員友善介面
+  <a href="https://docs.ignite.com/guide">https://docs.ignite.com/guide</a>
+</p>
+<p>
+  建立區塊鏈
+  ignite scaffold chain mars]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231103-linklist]]></title>
+        <id>20231103-linklist</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231103-linklist"/>
+        <updated>2023-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h3>c++</h3>
+<pre><code class="language-c++">#include &#x3C;iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head = nullptr;
+void insertNode(int data)
+{
+    Node* newNode = new Node();
+    newNode->data = data;
+ ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
+        <id>20231103-Finetuning-Large-Language-Models</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models"/>
+        <updated>2023-11-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>Introduction</h2>
+<ul>
+  <li>why?
+    <ul>
+      <li>
+        要學某種語氣等等要使用
+        
+        <img src="https://i.imgur.com/eRJk6Wv.png" alt="">
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2>Why finetune</h2>
+<p>
+  <img src="https://i.imgur.com/BDIrVE7.p]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231101-]]></title>
+        <id>20231101-generative-ai-for-everyone</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231101-generative-ai-for-everyone"/>
+        <updated>2023-11-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>What is Generative AI</h2>
+<p>
+  <img src="https://i.imgur.com/Q877q0W.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/8DpeAAb.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/FhLUDBG.png" alt="">
+</p>
+<ul>
+  <li>
+    <p>
+      Superv]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
         <id>20231031-Andrew-Ng-Opportunities-in-AI-2023</id>

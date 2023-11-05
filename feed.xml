@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Wed, 01 Nov 2023 04:32:10 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Nov 2023 12:03:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,89 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20231104-learn-cosmos]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231104-learn-cosmos</link>
+            <guid>20231104-learn-cosmos</guid>
+            <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <a href="https://ignite.com/cli">Ignite CLI</a>: <a href="https://github.com/cosmos/cosmos-sdk">它是Cosmos SDK</a>的開發人員友善介面
+  <a href="https://docs.ignite.com/guide">https://docs.ignite.com/guide</a>
+</p>
+<p>
+  建立區塊鏈
+  ignite scaffold chain mars]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231103-linklist]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231103-linklist</link>
+            <guid>20231103-linklist</guid>
+            <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h3>c++</h3>
+<pre><code class="language-c++">#include &#x3C;iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+Node* head = nullptr;
+void insertNode(int data)
+{
+    Node* newNode = new Node();
+    newNode->data = data;
+ ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models</link>
+            <guid>20231103-Finetuning-Large-Language-Models</guid>
+            <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Introduction</h2>
+<ul>
+  <li>why?
+    <ul>
+      <li>
+        要學某種語氣等等要使用
+        
+        <img src="https://i.imgur.com/eRJk6Wv.png" alt="">
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2>Why finetune</h2>
+<p>
+  <img src="https://i.imgur.com/BDIrVE7.p]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231101-]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231101-generative-ai-for-everyone</link>
+            <guid>20231101-generative-ai-for-everyone</guid>
+            <pubDate>Thu, 02 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>What is Generative AI</h2>
+<p>
+  <img src="https://i.imgur.com/Q877q0W.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/8DpeAAb.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/FhLUDBG.png" alt="">
+</p>
+<ul>
+  <li>
+    <p>
+      Superv]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023</link>
