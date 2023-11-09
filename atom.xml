@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-09T04:20:08.576Z</updated>
+    <updated>2023-11-09T04:20:49.161Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -55,33 +55,6 @@ void insertNode(int data)
     Node* newNode = new Node();
     newNode->data = data;
  ]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
-        <id>20231103-Finetuning-Large-Language-Models</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models"/>
-        <updated>2023-11-03T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h2>Introduction</h2>
-<ul>
-  <li>why?
-    <ul>
-      <li>
-        要學某種語氣等等要使用
-        
-        <img src="https://i.imgur.com/eRJk6Wv.png" alt="">
-      </li>
-    </ul>
-  </li>
-</ul>
-<h2>Why finetune</h2>
-<p>
-  <img src="https://i.imgur.com/BDIrVE7.p]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

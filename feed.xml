@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 09 Nov 2023 04:20:08 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Nov 2023 04:20:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -49,29 +49,6 @@ void insertNode(int data)
     Node* newNode = new Node();
     newNode->data = data;
  ]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models</link>
-            <guid>20231103-Finetuning-Large-Language-Models</guid>
-            <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>Introduction</h2>
-<ul>
-  <li>why?
-    <ul>
-      <li>
-        要學某種語氣等等要使用
-        
-        <img src="https://i.imgur.com/eRJk6Wv.png" alt="">
-      </li>
-    </ul>
-  </li>
-</ul>
-<h2>Why finetune</h2>
-<p>
-  <img src="https://i.imgur.com/BDIrVE7.p]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

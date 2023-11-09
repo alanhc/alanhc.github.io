@@ -33,17 +33,6 @@
             }
         },
         {
-            "id": "20231103-Finetuning-Large-Language-Models",
-            "url": "https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models",
-            "title": "20231103-Finetuning-Large-Language-Models",
-            "summary": "\n<h2>Introduction</h2>\n<ul>\n  <li>why?\n    <ul>\n      <li>\n        要學某種語氣等等要使用\n        \n        <img src=\"https://i.imgur.com/eRJk6Wv.png\" alt=\"\">\n      </li>\n    </ul>\n  </li>\n</ul>\n<h2>Why finetune</h2>\n<p>\n  <img src=\"https://i.imgur.com/BDIrVE7.p",
-            "date_modified": "2023-11-03T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20231101-generative-ai-for-everyone",
             "url": "https://alanhc.github.io/next-blog/posts/20231101-generative-ai-for-everyone",
             "title": "20231101-",
