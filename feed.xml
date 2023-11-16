@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 09 Nov 2023 04:30:05 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Nov 2023 14:42:20 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,196 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20231116-Vector-Databases-from-Embeddings-to-Applications]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231116-Vector-Databases-from-Embeddings-to-Applications</link>
+            <guid>20231116-Vector-Databases-from-Embeddings-to-Applications</guid>
+            <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>RAG -> vector database</p>
+<p>
+  <img src="https://i.imgur.com/EDn3CJo.png" alt="">
+</p>
+<h2>how-to-obtain-vector-representations-of-data</h2>
+<p>
+  <img src="https://i.imgur.com/OdWVtRa.png" alt="">
+  <img src="https://i.imgur.com/pW8RpmW.png" a]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231115-How-to-Build-An-MVP-Startup-School]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231115-How-to-Build-An-MVP-Startup-School</link>
+            <guid>20231115-How-to-Build-An-MVP-Startup-School</guid>
+            <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  16:52
+  twich 創辦人（Michael Seibel）
+</p>
+<p>
+  <img src="https://i.imgur.com/dLhPAHZ.png" alt="">
+</p>
+<h2>1. 從使用者學習</h2>
+<p>
+  <img src="https://i.imgur.com/Rxqo8ls.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/1t93zk7.png" alt="">
+  不要]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases</link>
+            <guid>20211115-Building-Multi-Modal-Search-with-Vector-Databases</guid>
+            <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/0k8rQsV.png" alt="">
+  problem?
+  關鍵字搜尋
+  
+  <img src="https://i.imgur.com/mTMj2P7.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/9W5ClYB.png" alt="">
+  vector embeding
+</p>
+<p>
+  <img src="https://i.imgur.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[2021112-upload-large-file]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231112-nextjs-upload-large-file</link>
+            <guid>20231112-nextjs-upload-large-file</guid>
+            <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>upload api</h2>
+<pre><code class="language-js">
+import { connectToDb, fileExists } from "@/lib/mongodb";
+
+import { NextResponse } from "next/server";
+
+import { Readable } from "stream";
+
+import formidable, { errors as formidableErrors } from 'fo]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</link>
+            <guid>20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</guid>
+            <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/E4SLakC.png" alt="">
+  <img src="https://i.imgur.com/NBeKimk.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/m6eJNV9.png" alt="">
+  <img src="https://i.imgur.com/8eGCc4I.png" alt="">
+</p>
+<p>
+  <img src="htt]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</link>
+            <guid>20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</guid>
+            <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/U6OeFM7.png" alt="">
+  客製化GPT
+  <a href="https://openai.com/blog/introducing-gpts">https://openai.com/blog/introducing-gpts</a>
+  串接dalle 自動生成頭像
+</p>
+<p>
+  <img src="https://i.imgur.com/oBxJeFw.png" alt="">
+  GPT:]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231108-How-Diffusion-Models-Work]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231108-How-Diffusion-Models-Work</link>
+            <guid>20231108-How-Diffusion-Models-Work</guid>
+            <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Intuition</h2>
+<p>
+  <img src="https://i.imgur.com/TVoI8QQ.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/oNLoPAC.png" alt="">
+</p>
+<h2>Sampling</h2>
+<p>
+  <img src="https://i.imgur.com/ormC1nN.png" alt="">
+</p>
+<p>
+  <img src="https://i.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231107-upload-multer]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231107-upload-multer</link>
+            <guid>20231107-upload-multer</guid>
+            <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://www.npmjs.com/package/multer">https://www.npmjs.com/package/multer</a></li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231107-next-auth]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231107-next-auth</link>
+            <guid>20231107-next-auth</guid>
+            <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  // This is an example of how to read a JSON Web Token from an API route
+  import { getToken } from "next-auth/jwt"
+</p>
+<h2>Ref</h2>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231107-imgbb]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231107-imgbb</link>
+            <guid>20231107-imgbb</guid>
+            <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>免費圖片上傳api</p>
+<pre><code class="language-js">const onDrop = useCallback((acceptedFiles: any) => {
+acceptedFiles.forEach((file: any) => {
+
+const reader:any = new FileReader()
+
+reader.onabort = () => console.log('file reading was aborted')
+
+reader.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231107-MUI-toolpad]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231107-MUI-toolpad</link>
+            <guid>20231107-MUI-toolpad</guid>
+            <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>很好做prototype的前端網站</p>
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://mui.com/toolpad/getting-started/first-app/">https://mui.com/toolpad/getting-started/first-app/</a></li>
+</ul>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20231104-learn-cosmos]]></title>
             <link>https://alanhc.github.io/next-blog/posts/20231104-learn-cosmos</link>
@@ -49,6 +239,29 @@ void insertNode(int data)
     Node* newNode = new Node();
     newNode->data = data;
  ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
+            <link>https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models</link>
+            <guid>20231103-Finetuning-Large-Language-Models</guid>
+            <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Introduction</h2>
+<ul>
+  <li>why?
+    <ul>
+      <li>
+        要學某種語氣等等要使用
+        
+        <img src="https://i.imgur.com/eRJk6Wv.png" alt="">
+      </li>
+    </ul>
+  </li>
+</ul>
+<h2>Why finetune</h2>
+<p>
+  <img src="https://i.imgur.com/BDIrVE7.p]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

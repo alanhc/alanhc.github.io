@@ -11,6 +11,127 @@
     },
     "items": [
         {
+            "id": "20231116-Vector-Databases-from-Embeddings-to-Applications",
+            "url": "https://alanhc.github.io/next-blog/posts/20231116-Vector-Databases-from-Embeddings-to-Applications",
+            "title": "20231116-Vector-Databases-from-Embeddings-to-Applications",
+            "summary": "\n<p>RAG -> vector database</p>\n<p>\n  <img src=\"https://i.imgur.com/EDn3CJo.png\" alt=\"\">\n</p>\n<h2>how-to-obtain-vector-representations-of-data</h2>\n<p>\n  <img src=\"https://i.imgur.com/OdWVtRa.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/pW8RpmW.png\" a",
+            "date_modified": "2023-11-16T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231115-How-to-Build-An-MVP-Startup-School",
+            "url": "https://alanhc.github.io/next-blog/posts/20231115-How-to-Build-An-MVP-Startup-School",
+            "title": "20231115-How-to-Build-An-MVP-Startup-School",
+            "summary": "\n<p>\n  16:52\n  twich 創辦人（Michael Seibel）\n</p>\n<p>\n  <img src=\"https://i.imgur.com/dLhPAHZ.png\" alt=\"\">\n</p>\n<h2>1. 從使用者學習</h2>\n<p>\n  <img src=\"https://i.imgur.com/Rxqo8ls.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/1t93zk7.png\" alt=\"\">\n  不要",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "url": "https://alanhc.github.io/next-blog/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231112-nextjs-upload-large-file",
+            "url": "https://alanhc.github.io/next-blog/posts/20231112-nextjs-upload-large-file",
+            "title": "2021112-upload-large-file",
+            "summary": "\n<h2>upload api</h2>\n<pre><code class=\"language-js\">\nimport { connectToDb, fileExists } from \"@/lib/mongodb\";\n\nimport { NextResponse } from \"next/server\";\n\nimport { Readable } from \"stream\";\n\nimport formidable, { errors as formidableErrors } from 'fo",
+            "date_modified": "2023-11-12T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理",
+            "url": "https://alanhc.github.io/next-blog/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理",
+            "title": "20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/E4SLakC.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/NBeKimk.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/m6eJNV9.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/8eGCc4I.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"htt",
+            "date_modified": "2023-11-10T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷",
+            "url": "https://alanhc.github.io/next-blog/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷",
+            "title": "80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/U6OeFM7.png\" alt=\"\">\n  客製化GPT\n  <a href=\"https://openai.com/blog/introducing-gpts\">https://openai.com/blog/introducing-gpts</a>\n  串接dalle 自動生成頭像\n</p>\n<p>\n  <img src=\"https://i.imgur.com/oBxJeFw.png\" alt=\"\">\n  GPT:",
+            "date_modified": "2023-11-10T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231108-How-Diffusion-Models-Work",
+            "url": "https://alanhc.github.io/next-blog/posts/20231108-How-Diffusion-Models-Work",
+            "title": "20231108-How-Diffusion-Models-Work",
+            "summary": "\n<h2>Intuition</h2>\n<p>\n  <img src=\"https://i.imgur.com/TVoI8QQ.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/oNLoPAC.png\" alt=\"\">\n</p>\n<h2>Sampling</h2>\n<p>\n  <img src=\"https://i.imgur.com/ormC1nN.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.",
+            "date_modified": "2023-11-08T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231107-upload-multer",
+            "url": "https://alanhc.github.io/next-blog/posts/20231107-upload-multer",
+            "title": "20231107-upload-multer",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.npmjs.com/package/multer\">https://www.npmjs.com/package/multer</a></li>\n</ul>\n",
+            "date_modified": "2023-11-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231107-next-auth",
+            "url": "https://alanhc.github.io/next-blog/posts/20231107-next-auth",
+            "title": "20231107-next-auth",
+            "summary": "\n<p>\n  // This is an example of how to read a JSON Web Token from an API route\n  import { getToken } from \"next-auth/jwt\"\n</p>\n<h2>Ref</h2>\n",
+            "date_modified": "2023-11-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231107-imgbb",
+            "url": "https://alanhc.github.io/next-blog/posts/20231107-imgbb",
+            "title": "20231107-imgbb",
+            "summary": "\n<p>免費圖片上傳api</p>\n<pre><code class=\"language-js\">const onDrop = useCallback((acceptedFiles: any) => {\nacceptedFiles.forEach((file: any) => {\n\nconst reader:any = new FileReader()\n\nreader.onabort = () => console.log('file reading was aborted')\n\nreader.",
+            "date_modified": "2023-11-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231107-MUI-toolpad",
+            "url": "https://alanhc.github.io/next-blog/posts/20231107-MUI-toolpad",
+            "title": "20231107-MUI-toolpad",
+            "summary": "\n<p>很好做prototype的前端網站</p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://mui.com/toolpad/getting-started/first-app/\">https://mui.com/toolpad/getting-started/first-app/</a></li>\n</ul>\n",
+            "date_modified": "2023-11-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231104-learn-cosmos",
             "url": "https://alanhc.github.io/next-blog/posts/20231104-learn-cosmos",
             "title": "20231104-learn-cosmos",
@@ -26,6 +147,17 @@
             "url": "https://alanhc.github.io/next-blog/posts/20231103-linklist",
             "title": "20231103-linklist",
             "summary": "\n<h3>c++</h3>\n<pre><code class=\"language-c++\">#include &#x3C;iostream>\nusing namespace std;\n\nstruct Node {\n    int data;\n    Node* next;\n};\n\nNode* head = nullptr;\nvoid insertNode(int data)\n{\n    Node* newNode = new Node();\n    newNode->data = data;\n ",
+            "date_modified": "2023-11-03T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231103-Finetuning-Large-Language-Models",
+            "url": "https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models",
+            "title": "20231103-Finetuning-Large-Language-Models",
+            "summary": "\n<h2>Introduction</h2>\n<ul>\n  <li>why?\n    <ul>\n      <li>\n        要學某種語氣等等要使用\n        \n        <img src=\"https://i.imgur.com/eRJk6Wv.png\" alt=\"\">\n      </li>\n    </ul>\n  </li>\n</ul>\n<h2>Why finetune</h2>\n<p>\n  <img src=\"https://i.imgur.com/BDIrVE7.p",
             "date_modified": "2023-11-03T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
