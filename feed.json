@@ -88,28 +88,6 @@
             }
         },
         {
-            "id": "20231107-upload-multer",
-            "url": "https://alanhc.github.io/next-blog/posts/20231107-upload-multer",
-            "title": "20231107-upload-multer",
-            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.npmjs.com/package/multer\">https://www.npmjs.com/package/multer</a></li>\n</ul>\n",
-            "date_modified": "2023-11-07T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20231107-next-auth",
-            "url": "https://alanhc.github.io/next-blog/posts/20231107-next-auth",
-            "title": "20231107-next-auth",
-            "summary": "\n<p>\n  // This is an example of how to read a JSON Web Token from an API route\n  import { getToken } from \"next-auth/jwt\"\n</p>\n<h2>Ref</h2>\n",
-            "date_modified": "2023-11-07T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20231107-imgbb",
             "url": "https://alanhc.github.io/next-blog/posts/20231107-imgbb",
             "title": "20231107-imgbb",

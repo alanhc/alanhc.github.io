@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 16 Nov 2023 14:42:20 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Nov 2023 14:45:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -143,33 +143,6 @@ import formidable, { errors as formidableErrors } from 'fo]]></description>
 </p>
 <p>
   <img src="https://i.]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20231107-upload-multer]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20231107-upload-multer</link>
-            <guid>20231107-upload-multer</guid>
-            <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>Ref</h2>
-<ul>
-  <li><a href="https://www.npmjs.com/package/multer">https://www.npmjs.com/package/multer</a></li>
-</ul>
-]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20231107-next-auth]]></title>
-            <link>https://alanhc.github.io/next-blog/posts/20231107-next-auth</link>
-            <guid>20231107-next-auth</guid>
-            <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<p>
-  // This is an example of how to read a JSON Web Token from an API route
-  import { getToken } from "next-auth/jwt"
-</p>
-<h2>Ref</h2>
-]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

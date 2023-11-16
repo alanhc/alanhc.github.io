@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-16T14:42:20.375Z</updated>
+    <updated>2023-11-16T14:45:09.495Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -169,41 +169,6 @@ import formidable, { errors as formidableErrors } from 'fo]]></summary>
 </p>
 <p>
   <img src="https://i.]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20231107-upload-multer]]></title>
-        <id>20231107-upload-multer</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231107-upload-multer"/>
-        <updated>2023-11-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h2>Ref</h2>
-<ul>
-  <li><a href="https://www.npmjs.com/package/multer">https://www.npmjs.com/package/multer</a></li>
-</ul>
-]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20231107-next-auth]]></title>
-        <id>20231107-next-auth</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231107-next-auth"/>
-        <updated>2023-11-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<p>
-  // This is an example of how to read a JSON Web Token from an API route
-  import { getToken } from "next-auth/jwt"
-</p>
-<h2>Ref</h2>
-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
