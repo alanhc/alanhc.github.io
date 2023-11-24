@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-20T18:00:14.729Z</updated>
+    <updated>2023-11-24T19:20:49.146Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,46 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2023, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[20231124-terraform-vercel]]></title>
+        <id>20231124-terraform-vercel</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231124-terraform-vercel"/>
+        <updated>2023-11-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>
+  vercel token: <a href="https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token">https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token</a>
+  npx create-next-app nextjs-terraform-demo
+  main.tf
+</p>
+<pre><code class="language]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231117-Large Language Models with Semantic Search]]></title>
+        <id>20231117-Large Language Models with Semantic Search</id>
+        <link href="https://alanhc.github.io/next-blog/posts/20231117-Large Language Models with Semantic Search"/>
+        <updated>2023-11-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>
+  <img src="https://i.imgur.com/06Un2NL.png" alt="">
+</p>
+<h2>keyword-search</h2>
+<p>
+  <img src="https://i.imgur.com/JujinkN.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/iBetWva.png" alt="">
+  <img src="https://i.imgur.com/Buh9p6p.png"]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20231116-Vector-Databases-from-Embeddings-to-Applications]]></title>
         <id>20231116-Vector-Databases-from-Embeddings-to-Applications</id>
