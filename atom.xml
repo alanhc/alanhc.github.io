@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-24T19:25:29.303Z</updated>
+    <updated>2023-11-24T19:26:47.475Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -34,7 +34,7 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20231117-Large]]></title>
+        <title type="html"><![CDATA[20231117-Large-Language-Models-with-Semantic-Search]]></title>
         <id>20231117-Large Language Models with Semantic Search</id>
         <link href="https://alanhc.github.io/next-blog/posts/20231117-Large Language Models with Semantic Search"/>
         <updated>2023-11-17T00:00:00.000Z</updated>
