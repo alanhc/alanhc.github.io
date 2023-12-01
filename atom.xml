@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-11-25T12:14:43.019Z</updated>
+    <updated>2023-12-01T12:37:51.428Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -18,7 +18,7 @@
     <entry>
         <title type="html"><![CDATA[20231124-terraform-vercel]]></title>
         <id>20231124-terraform-vercel</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231124-terraform-vercel"/>
+        <link href="https://alanhc.github.io/logA/posts/20231124-terraform-vercel"/>
         <updated>2023-11-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -36,7 +36,7 @@
     <entry>
         <title type="html"><![CDATA[20231116-Vector-Databases-from-Embeddings-to-Applications]]></title>
         <id>20231116-Vector-Databases-from-Embeddings-to-Applications</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231116-Vector-Databases-from-Embeddings-to-Applications"/>
+        <link href="https://alanhc.github.io/logA/posts/20231116-Vector-Databases-from-Embeddings-to-Applications"/>
         <updated>2023-11-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>RAG -> vector database</p>
@@ -56,7 +56,7 @@
     <entry>
         <title type="html"><![CDATA[20231115-How-to-Build-An-MVP-Startup-School]]></title>
         <id>20231115-How-to-Build-An-MVP-Startup-School</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231115-How-to-Build-An-MVP-Startup-School"/>
+        <link href="https://alanhc.github.io/logA/posts/20231115-How-to-Build-An-MVP-Startup-School"/>
         <updated>2023-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -82,7 +82,7 @@
     <entry>
         <title type="html"><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
         <id>20211115-Building-Multi-Modal-Search-with-Vector-Databases</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases"/>
+        <link href="https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases"/>
         <updated>2023-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -107,7 +107,7 @@
     <entry>
         <title type="html"><![CDATA[2021112-upload-large-file]]></title>
         <id>20231112-nextjs-upload-large-file</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231112-nextjs-upload-large-file"/>
+        <link href="https://alanhc.github.io/logA/posts/20231112-nextjs-upload-large-file"/>
         <updated>2023-11-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>upload api</h2>
@@ -128,7 +128,7 @@ import formidable, { errors as formidableErrors } from 'fo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理]]></title>
         <id>20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理"/>
+        <link href="https://alanhc.github.io/logA/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理"/>
         <updated>2023-11-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -150,7 +150,7 @@ import formidable, { errors as formidableErrors } from 'fo]]></summary>
     <entry>
         <title type="html"><![CDATA[80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷]]></title>
         <id>20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷"/>
+        <link href="https://alanhc.github.io/logA/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷"/>
         <updated>2023-11-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -171,7 +171,7 @@ import formidable, { errors as formidableErrors } from 'fo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231108-How-Diffusion-Models-Work]]></title>
         <id>20231108-How-Diffusion-Models-Work</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231108-How-Diffusion-Models-Work"/>
+        <link href="https://alanhc.github.io/logA/posts/20231108-How-Diffusion-Models-Work"/>
         <updated>2023-11-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Intuition</h2>
@@ -196,7 +196,7 @@ import formidable, { errors as formidableErrors } from 'fo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231107-imgbb]]></title>
         <id>20231107-imgbb</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231107-imgbb"/>
+        <link href="https://alanhc.github.io/logA/posts/20231107-imgbb"/>
         <updated>2023-11-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>免費圖片上傳api</p>
@@ -217,7 +217,7 @@ reader.]]></summary>
     <entry>
         <title type="html"><![CDATA[20231107-MUI-toolpad]]></title>
         <id>20231107-MUI-toolpad</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231107-MUI-toolpad"/>
+        <link href="https://alanhc.github.io/logA/posts/20231107-MUI-toolpad"/>
         <updated>2023-11-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>很好做prototype的前端網站</p>
@@ -235,7 +235,7 @@ reader.]]></summary>
     <entry>
         <title type="html"><![CDATA[20231104-learn-cosmos]]></title>
         <id>20231104-learn-cosmos</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231104-learn-cosmos"/>
+        <link href="https://alanhc.github.io/logA/posts/20231104-learn-cosmos"/>
         <updated>2023-11-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -254,7 +254,7 @@ reader.]]></summary>
     <entry>
         <title type="html"><![CDATA[20231103-linklist]]></title>
         <id>20231103-linklist</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231103-linklist"/>
+        <link href="https://alanhc.github.io/logA/posts/20231103-linklist"/>
         <updated>2023-11-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h3>c++</h3>
@@ -281,7 +281,7 @@ void insertNode(int data)
     <entry>
         <title type="html"><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
         <id>20231103-Finetuning-Large-Language-Models</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231103-Finetuning-Large-Language-Models"/>
+        <link href="https://alanhc.github.io/logA/posts/20231103-Finetuning-Large-Language-Models"/>
         <updated>2023-11-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Introduction</h2>
@@ -308,7 +308,7 @@ void insertNode(int data)
     <entry>
         <title type="html"><![CDATA[20231101-]]></title>
         <id>20231101-generative-ai-for-everyone</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231101-generative-ai-for-everyone"/>
+        <link href="https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone"/>
         <updated>2023-11-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>What is Generative AI</h2>
@@ -334,7 +334,7 @@ void insertNode(int data)
     <entry>
         <title type="html"><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
         <id>20231031-Andrew-Ng-Opportunities-in-AI-2023</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023"/>
+        <link href="https://alanhc.github.io/logA/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023"/>
         <updated>2023-10-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h3>兩個很重要的領域 監督式學習及生成式AI</h3>
@@ -359,7 +359,7 @@ void insertNode(int data)
     <entry>
         <title type="html"><![CDATA[Building Systems with the ChatGPT API]]></title>
         <id>20231029-Building-Systems-with-the-ChatGPT-API</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
+        <link href="https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
         <updated>2023-10-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Introduction</h2>
@@ -381,7 +381,7 @@ void insertNode(int data)
     <entry>
         <title type="html"><![CDATA[20231028-mozilla-ai]]></title>
         <id>20231028-mozilla-ai</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231028-mozilla-ai"/>
+        <link href="https://alanhc.github.io/logA/posts/20231028-mozilla-ai"/>
         <updated>2023-10-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>有涵蓋LLM，由淺入深，有colab實作，還不錯</p>
@@ -402,7 +402,7 @@ void insertNode(int data)
     <entry>
         <title type="html"><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
         <id>20231026-ChatGPT-Prompt-Engineering-for-Developers</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers"/>
+        <link href="https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers"/>
         <updated>2023-10-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Introduction</h2>
@@ -424,7 +424,7 @@ from dotenv import lo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231023-learning]]></title>
         <id>20231023-learning-from-lin</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231023-learning-from-lin"/>
+        <link href="https://alanhc.github.io/logA/posts/20231023-learning-from-lin"/>
         <updated>2023-10-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>小林說：分享有關於金融背景的ytr，分享得很棒 <a href="https://www.youtube.com/watch?v=EViSmcCPK5g">我是如何快速学习一个领域的 (15:49)</a></p>
@@ -445,7 +445,7 @@ from dotenv import lo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231023-Pair-Programming-with-a-Large-Language-Model]]></title>
         <id>20231023-Pair-Programming-with-a-Large-Language-Model</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231023-Pair-Programming-with-a-Large-Language-Model"/>
+        <link href="https://alanhc.github.io/logA/posts/20231023-Pair-Programming-with-a-Large-Language-Model"/>
         <updated>2023-10-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>TL;DR</h2>
@@ -468,7 +468,7 @@ from dotenv import lo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231010-webauthn]]></title>
         <id>20231010-webauthn</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231010-webauthn"/>
+        <link href="https://alanhc.github.io/logA/posts/20231010-webauthn"/>
         <updated>2023-10-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>web 生物辨識api</p>
@@ -483,7 +483,7 @@ from dotenv import lo]]></summary>
     <entry>
         <title type="html"><![CDATA[20231006-fastapi-streaming]]></title>
         <id>20231006-fastapi-streaming</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20231006-fastapi-streaming"/>
+        <link href="https://alanhc.github.io/logA/posts/20231006-fastapi-streaming"/>
         <updated>2023-10-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ul>
@@ -506,7 +506,7 @@ def fake_data_streamer():
     <entry>
         <title type="html"><![CDATA[20230929-rn-qrcode]]></title>
         <id>20230929-rn-qrcode</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230929-rn-qrcode"/>
+        <link href="https://alanhc.github.io/logA/posts/20230929-rn-qrcode"/>
         <updated>2023-09-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ul>
@@ -529,7 +529,7 @@ re]]></summary>
     <entry>
         <title type="html"><![CDATA[20230926-21-things-before-21]]></title>
         <id>20230926-21-things-before-21</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230926-21-things-before-21"/>
+        <link href="https://alanhc.github.io/logA/posts/20230926-21-things-before-21"/>
         <updated>2023-09-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Ref</h2>
@@ -544,7 +544,7 @@ re]]></summary>
     <entry>
         <title type="html"><![CDATA[20230924-wagami]]></title>
         <id>20230924-wagami</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230924-wagami"/>
+        <link href="https://alanhc.github.io/logA/posts/20230924-wagami"/>
         <updated>2023-09-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -563,7 +563,7 @@ con]]></summary>
     <entry>
         <title type="html"><![CDATA[20230924-QR-Code]]></title>
         <id>20230924-QR-Code</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230924-QR-Code"/>
+        <link href="https://alanhc.github.io/logA/posts/20230924-QR-Code"/>
         <updated>2023-09-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <pre><code class="language-js">&#x3C;QRCode
@@ -590,7 +590,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[20230924-cmd-copy]]></title>
         <id>20230924-cmd-copy</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230924-cmd-copy"/>
+        <link href="https://alanhc.github.io/logA/posts/20230924-cmd-copy"/>
         <updated>2023-09-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p><code>for i in {0..100}; cp ticket.png "./images/$i.png"</code></p>
@@ -605,7 +605,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[20230920-nx]]></title>
         <id>20230920-nx</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230920-nx"/>
+        <link href="https://alanhc.github.io/logA/posts/20230920-nx"/>
         <updated>2023-09-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Ref</h2>
@@ -623,7 +623,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[hardhat]]></title>
         <id>20230919-hardhat</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230919-hardhat"/>
+        <link href="https://alanhc.github.io/logA/posts/20230919-hardhat"/>
         <updated>2023-09-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -638,7 +638,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[初探 react native]]></title>
         <id>20230907-react-native</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230907-react-native"/>
+        <link href="https://alanhc.github.io/logA/posts/20230907-react-native"/>
         <updated>2023-09-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ul>
@@ -659,7 +659,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[在部落格中使用mdx]]></title>
         <id>20230831-mdx</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230831-mdx"/>
+        <link href="https://alanhc.github.io/logA/posts/20230831-mdx"/>
         <updated>2023-09-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Ref</h2>
@@ -676,7 +676,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[在mongodb裡面將兩個group merge成一個結果]]></title>
         <id>20230831-mongodb-aggregate-multiple-group</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230831-mongodb-aggregate-multiple-group"/>
+        <link href="https://alanhc.github.io/logA/posts/20230831-mongodb-aggregate-multiple-group"/>
         <updated>2023-08-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>結果</h2>
@@ -707,7 +707,7 @@ viewBox={`0 0 256 256`}
     <entry>
         <title type="html"><![CDATA[(未完)加入kbar讓搜尋更便利]]></title>
         <id>20230831-kbar</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230831-kbar"/>
+        <link href="https://alanhc.github.io/logA/posts/20230831-kbar"/>
         <updated>2023-08-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>_app.tsx</p>
@@ -734,7 +734,7 @@ function MyApp() {
     <entry>
         <title type="html"><![CDATA[加入GA]]></title>
         <id>20230830-nextjs-google-analytics</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230830-nextjs-google-analytics"/>
+        <link href="https://alanhc.github.io/logA/posts/20230830-nextjs-google-analytics"/>
         <updated>2023-08-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p><a href="https://analytics.google.com/analytics/web/">https://analytics.google.com/analytics/web/</a> 裡面 拿到GA_MEASUREMENT_ID應該會是<code>G-{...}</code></p>
@@ -749,7 +749,7 @@ function MyApp() {
     <entry>
         <title type="html"><![CDATA[20230829-peerjs]]></title>
         <id>20230829-peerjs</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230829-peerjs"/>
+        <link href="https://alanhc.github.io/logA/posts/20230829-peerjs"/>
         <updated>2023-08-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>簡化wwebrtc的使用方法</p>
@@ -765,7 +765,7 @@ function MyApp() {
     <entry>
         <title type="html"><![CDATA[20230829-orbit-chat]]></title>
         <id>20230829-orbit-chat</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230829-orbit-chat"/>
+        <link href="https://alanhc.github.io/logA/posts/20230829-orbit-chat"/>
         <updated>2023-08-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -787,7 +787,7 @@ function MyApp() {
     <entry>
         <title type="html"><![CDATA[20230829-chakra-ui]]></title>
         <id>20230829-chakra-ui</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230829-chakra-ui"/>
+        <link href="https://alanhc.github.io/logA/posts/20230829-chakra-ui"/>
         <updated>2023-08-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>pnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion</p>
@@ -805,7 +805,7 @@ export defa]]></summary>
     <entry>
         <title type="html"><![CDATA[初探libp2p]]></title>
         <id>20230828-libp2p</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230828-libp2p"/>
+        <link href="https://alanhc.github.io/logA/posts/20230828-libp2p"/>
         <updated>2023-08-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>建立signal 節點</h2>
@@ -829,7 +829,7 @@ const server = await sigServer({
     <entry>
         <title type="html"><![CDATA[初探ipfs]]></title>
         <id>20230828-ipfs</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230828-ipfs"/>
+        <link href="https://alanhc.github.io/logA/posts/20230828-ipfs"/>
         <updated>2023-08-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>下載</h2>
@@ -849,7 +849,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[安裝動漫vscode主題]]></title>
         <id>20230827-vscode-animate-extension</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230827-vscode-animate-extension"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-vscode-animate-extension"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>去 <a href="https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme">下載doki-theme</a></p>
@@ -866,7 +866,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[初探orbitdb]]></title>
         <id>20230827-orbitdb</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230827-orbitdb"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-orbitdb"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>orbitdb</h2>
@@ -886,7 +886,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[notion的替代品 - AFFiNE]]></title>
         <id>20230827-notion-alternative</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230827-notion-alternative"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-notion-alternative"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -902,7 +902,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[加入PWA功能]]></title>
         <id>20230827-next-pwa</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230827-next-pwa"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-next-pwa"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>前置</h2>
@@ -922,7 +922,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[chat聊天界面初探]]></title>
         <id>20230827-chat-app</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230827-chat-app"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-chat-app"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>chat</h2>
@@ -941,7 +941,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[nextjs 相關文章]]></title>
         <id>nextjs</id>
-        <link href="https://alanhc.github.io/next-blog/posts/nextjs"/>
+        <link href="https://alanhc.github.io/logA/posts/nextjs"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h1>markdown相關</h1>
@@ -961,7 +961,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[統整markdown的使用方法]]></title>
         <id>nextjs-markdown</id>
-        <link href="https://alanhc.github.io/next-blog/posts/nextjs-markdown"/>
+        <link href="https://alanhc.github.io/logA/posts/nextjs-markdown"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>資料在本地</h2>
@@ -980,7 +980,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[加入next-seo]]></title>
         <id>20230826-next-seo</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230826-next-seo"/>
+        <link href="https://alanhc.github.io/logA/posts/20230826-next-seo"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>使用 <a href="https://www.favicon.cc/">https://www.favicon.cc/</a> 從logo.png製作 favicon.ico</p>
@@ -1001,7 +1001,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[加入import別名讓import更好看]]></title>
         <id>20230826-import-alias</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230826-import-alias"/>
+        <link href="https://alanhc.github.io/logA/posts/20230826-import-alias"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>設定</h2>
@@ -1031,7 +1031,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[imgur上傳]]></title>
         <id>20230826-imgur</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230826-imgur"/>
+        <link href="https://alanhc.github.io/logA/posts/20230826-imgur"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>註冊：<a href="https://api.imgur.com/oauth2/addclient">https://api.imgur.com/oauth2/addclient</a></p>
@@ -1049,7 +1049,7 @@ const { cid } = await ipfs.add('Hello world]]></summary>
     <entry>
         <title type="html"><![CDATA[添加rss功能到nextjs部落格]]></title>
         <id>20230825-rss</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230825-rss"/>
+        <link href="https://alanhc.github.io/logA/posts/20230825-rss"/>
         <updated>2023-08-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>下載 npm feed</h2>
@@ -1068,7 +1068,7 @@ import { getSortedPostsData } ]]></summary>
     <entry>
         <title type="html"><![CDATA[部落格暗黑模式]]></title>
         <id>20230824-chakra-darkmode</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230824-chakra-darkmode"/>
+        <link href="https://alanhc.github.io/logA/posts/20230824-chakra-darkmode"/>
         <updated>2023-08-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ol>
@@ -1091,7 +1091,7 @@ const config: ThemeConfig = {
     <entry>
         <title type="html"><![CDATA[初探bigchaindb]]></title>
         <id>20230824-bigchain</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230824-bigchain"/>
+        <link href="https://alanhc.github.io/logA/posts/20230824-bigchain"/>
         <updated>2023-08-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>設定bigchaindb本地節點</h2>
@@ -1113,7 +1113,7 @@ const config: ThemeConfig = {
     <entry>
         <title type="html"><![CDATA[更新nextjs到13]]></title>
         <id>20230820-nexjs13</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230820-nexjs13"/>
+        <link href="https://alanhc.github.io/logA/posts/20230820-nexjs13"/>
         <updated>2023-08-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ul>
@@ -1131,7 +1131,7 @@ const config: ThemeConfig = {
     <entry>
         <title type="html"><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
         <id>20230819-mermaid-js</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230819-mermaid-js"/>
+        <link href="https://alanhc.github.io/logA/posts/20230819-mermaid-js"/>
         <updated>2023-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>code如下</p>
@@ -1154,7 +1154,7 @@ graph TD;
     <entry>
         <title type="html"><![CDATA[實作markdown section link]]></title>
         <id>20230818-markdown-section-link</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230818-markdown-section-link"/>
+        <link href="https://alanhc.github.io/logA/posts/20230818-markdown-section-link"/>
         <updated>2023-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>Toc部分</h2>
@@ -1172,7 +1172,7 @@ const tocMarkdown = await markdownToc(markdownContent);
     <entry>
         <title type="html"><![CDATA[將部落格加入sitemap功能]]></title>
         <id>20230817-next-sitemap</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230817-next-sitemap"/>
+        <link href="https://alanhc.github.io/logA/posts/20230817-next-sitemap"/>
         <updated>2023-08-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -1192,7 +1192,7 @@ modul]]></summary>
     <entry>
         <title type="html"><![CDATA[新增page loading的進度條]]></title>
         <id>20230816-nprogress</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230816-nprogress"/>
+        <link href="https://alanhc.github.io/logA/posts/20230816-nprogress"/>
         <updated>2023-08-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -1211,7 +1211,7 @@ import { useRouter } from 'next/router'; import NProgress from 'nprogres]]></sum
     <entry>
         <title type="html"><![CDATA[三種使用Python爬取網頁的方法]]></title>
         <id>20230813-back-up-crawler</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230813-back-up-crawler"/>
+        <link href="https://alanhc.github.io/logA/posts/20230813-back-up-crawler"/>
         <updated>2023-08-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>第一版: 使用session慢慢爬</h2>
@@ -1232,7 +1232,7 @@ def fetch_url(url, se]]></summary>
     <entry>
         <title type="html"><![CDATA[使用react syntax highlighter及useClipboard強化程式碼區塊]]></title>
         <id>20230812-react-syntax-clipboard</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard"/>
+        <link href="https://alanhc.github.io/logA/posts/20230812-react-syntax-clipboard"/>
         <updated>2023-08-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h1>react syntax highlighter + clipboard</h1>
@@ -1256,7 +1256,7 @@ slug: home
     <entry>
         <title type="html"><![CDATA[實作ipfs上傳的前端]]></title>
         <id>20230109-ipfs-upload</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230109-ipfs-upload"/>
+        <link href="https://alanhc.github.io/logA/posts/20230109-ipfs-upload"/>
         <updated>2023-01-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ol>
@@ -1277,7 +1277,7 @@ const client = new NFTStorage({ token: API_KEY })
     <entry>
         <title type="html"><![CDATA[erc 1155 合約]]></title>
         <id>20230108-solidity-nft</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20230108-solidity-nft"/>
+        <link href="https://alanhc.github.io/logA/posts/20230108-solidity-nft"/>
         <updated>2023-01-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>ERC 721</h2>
@@ -1296,7 +1296,7 @@ i]]></summary>
     <entry>
         <title type="html"><![CDATA[部署我的網站到k8s上]]></title>
         <id>20221231-k8s-notes</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20221231-k8s-notes"/>
+        <link href="https://alanhc.github.io/logA/posts/20221231-k8s-notes"/>
         <updated>2022-12-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>1. 在專案根目錄新增以下檔案</h2>
@@ -1328,7 +1328,7 @@ CMD [ "yarn", "sta]]></summary>
     <entry>
         <title type="html"><![CDATA[使用smartpy撰寫tezos的nft程式]]></title>
         <id>20221230-tezos-nft-tutorial</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20221230-tezos-nft-tutorial"/>
+        <link href="https://alanhc.github.io/logA/posts/20221230-tezos-nft-tutorial"/>
         <updated>2022-12-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h2>撰寫nft合約</h2>
@@ -1352,7 +1352,7 @@ def t]]></summary>
     <entry>
         <title type="html"><![CDATA[在solana上mint NFT]]></title>
         <id>20221228-solana-nft-tutorial</id>
-        <link href="https://alanhc.github.io/next-blog/posts/20221228-solana-nft-tutorial"/>
+        <link href="https://alanhc.github.io/logA/posts/20221228-solana-nft-tutorial"/>
         <updated>2022-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <ol>
@@ -1373,7 +1373,7 @@ def t]]></summary>
     <entry>
         <title type="html"><![CDATA[Hello World]]></title>
         <id>first-day</id>
-        <link href="https://alanhc.github.io/next-blog/posts/first-day"/>
+        <link href="https://alanhc.github.io/logA/posts/first-day"/>
         <updated>2022-12-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h1>Hi! 😃</h1>
@@ -1388,7 +1388,7 @@ def t]]></summary>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>test-render</id>
-        <link href="https://alanhc.github.io/next-blog/posts/test-render"/>
+        <link href="https://alanhc.github.io/logA/posts/test-render"/>
         <updated>2000-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <h1>h1</h1>
