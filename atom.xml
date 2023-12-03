@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-12-01T12:37:51.428Z</updated>
+    <updated>2023-12-03T14:10:55.898Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -306,7 +306,7 @@ void insertNode(int data)
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20231101-]]></title>
+        <title type="html"><![CDATA[20231101-generative-ai-for-everyone]]></title>
         <id>20231101-generative-ai-for-everyone</id>
         <link href="https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone"/>
         <updated>2023-11-02T00:00:00.000Z</updated>
