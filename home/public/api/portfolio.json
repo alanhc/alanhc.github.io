@@ -15,14 +15,14 @@
         },
         {
             "name": "notes",
-            "link": "next-blog"    
+            "link": "logA"    
         },
         {
             "name": "rss",
             "link": "feed.xml"    
         }
     ],
-    "quote": "Patience is a key element of success.",
+    "quote": "Only the paranoid survive",
     "tech_interest": [
         "blockchain",
         "open source"
@@ -37,7 +37,7 @@
                         "to": ""
                     },
                     "first": "National Taiwan University",
-                    "second": "Institute of Networking and Multimedia ",
+                    "second": "Institute of Networking and Multimedia",
                     "description": "Image and Vision Lab"
                 },
                 {

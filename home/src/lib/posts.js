@@ -120,9 +120,7 @@ export async function getPostData(id) {
   if (matterResult.data.tag === null) matterResult.data.tag = []
   matterResult.data.tag = (!matterResult.data.tag) ? matterResult.data.tags : matterResult.data.tag
   if ((typeof matterResult.data.date) === "object") {
-
     matterResult.data.date = await moment(String(matterResult.data.date)).format("YYYY-MM-DD");
-
   }
   const htmlContent = await markdownToHtml(matterResult.content);
   const markdownContent = matterResult.content

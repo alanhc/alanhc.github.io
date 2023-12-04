@@ -1,7 +1,7 @@
 import { Button, Flex, Heading, Link, Spacer, useColorMode } from "@chakra-ui/react";
 import NextLink from "next/link";
 export default function BlogNav({  }:any) {
-  const navigation = [{ "🏠": "/" }, { "🗒️": "/next-blog" }, { "🔗": "/link" }];
+  const navigation = [{ "home": "/" }, { "Posts": "/logA" },{ "Archive": "/archive" }, { "Links": "/link" }];
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex className="ck-reset">

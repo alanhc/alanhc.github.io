@@ -22,9 +22,10 @@
       "@/posts/*": ["src/posts/*"],
       "@/styles/*": ["src/styles/*"],
       "@/types/*": ["src/types/*"],
-      "@/api/*": ["public/api/*"]
+      "@/api/*": ["public/api/*"],
+      "@/*":["src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/theme.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/theme.js", "src/pages/about.mdx"],
   "exclude": ["node_modules"]
 }

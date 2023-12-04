@@ -17,7 +17,7 @@ export default function SectionBlock({ node, inline, className, children, id, ..
   return (
     <Link href={`#${_id}`} id={_id} onClick={onCopy} onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
       <Heading  {...props}>
-        {children} {isHovering && "🔗"}
+      {isHovering && "#"} {children} 
       </Heading>
     </Link>
   );

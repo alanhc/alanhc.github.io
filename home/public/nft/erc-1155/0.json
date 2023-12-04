@@ -1,10 +1,10 @@
 {
-    "title": "Captain America",
-    "name": "Captain America",
+    "title": "Title",
+    "name": "Name",
     "type": "object",
-    "imageUrl": "ipfs://bafkreigfuns2p2dpbki7ejxuebxu35o7lqvthcl6of6zcjhmqpc4ntvgki",
-    "description": "Captain America",
+    "imageUrl": "https://alanhc.github.io/image/coding.png",
+    "description": "description",
     "id": 0,
-    "image": "ipfs://bafkreigfuns2p2dpbki7ejxuebxu35o7lqvthcl6of6zcjhmqpc4ntvgki",
-    "httpUrl": "https://ipfs.io/ipfs/bafkreigfuns2p2dpbki7ejxuebxu35o7lqvthcl6of6zcjhmqpc4ntvgki"
+    "image": "https://alanhc.github.io/image/github.png",
+    "httpUrl": "https://alanhc.github.io/image/linkedin.png"
 }

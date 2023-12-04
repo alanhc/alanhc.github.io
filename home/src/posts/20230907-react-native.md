@@ -18,6 +18,14 @@ https://snyk.io/advisor/npm-package/react-native-qrcode-scanner: QR Code
 https://blog.logrocket.com/using-mui-react-native/ 這也是使用 react-native-paper
 https://callstack.github.io/react-native-paper/docs/components/Badge
 https://stackoverflow.com/questions/61398426/is-it-possible-to-use-material-ui-library-with-react-native
+## UI
+- [**React Native Elements**](https://reactnativeelements.com/)
+- [**React Native Paper**](https://reactnativepaper.com/)
+- [**Native Base**](https://nativebase.io/)
+### Native base
+- https://docs.nativebase.io/install-rn
+- [/Users/alanhc/workspace/ticketing/components/hero/index.tsx](file:///Users/alanhc/workspace/ticketing/components/hero/index.tsx)
+
 ## Ref
 - https://reactnative.dev/docs/getting-started
 - https://reactnative.dev/docs/environment-setup?guide=quickstart

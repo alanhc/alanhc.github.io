@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Script>
       <DefaultSeo {...SEO} />
       <ProfileProvider>
-        <ChakraProvider resetScope=".ck-reset">
+        <ChakraProvider > {/* resetScope=".ck-reset"*/}
           <Component {...pageProps} />
         </ChakraProvider>
       </ProfileProvider>

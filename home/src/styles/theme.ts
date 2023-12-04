@@ -5,9 +5,14 @@ const config: ThemeConfig = {
   initialColorMode: 'light',
   useSystemColorMode: false,
   
+ 
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config })
+const theme = extendTheme({ config,
+  textStyles: {
+   
+  } 
+})
 
 export default theme

@@ -65,21 +65,8 @@ const Home: NextPage = ({ portfolio }: any) => {
       <VStack spacing={10}>
         <Profile portfolio={portfolio} />
         <Experience experience={portfolio.experience} />
-        <Heading size="xl" color="blue.500">
-          Projects
-        </Heading>
-        {/*projects*/}
-        <Flex direction={{ base: "column", md: "row" }}>
-          <LeftCheckBox
-            search_groups={portfolio.search_groups}
-            global_state={{ search: portfolio.search }}
-            init_tech_tags={portfolio.search_groups[1].options}
-          />
-          <CollectionResult
-            projects={portfolio.projects}
-            global_state={{ search: portfolio.search }}
-          />
-        </Flex>
+        
+       
       </VStack>
       {/*interest*/}
       <Center mt="5">

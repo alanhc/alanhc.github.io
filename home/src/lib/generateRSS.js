@@ -24,7 +24,7 @@ export default async function generateRSS() {
             link: `${process.env.baseUrl}`
         }
     });
-    const Blog_URL = `${process.env.baseUrl}/next-blog/posts`
+    const Blog_URL = `${process.env.baseUrl}/logA/posts`
     const posts = await getSortedPostsData()
     posts.forEach((post) => {
         

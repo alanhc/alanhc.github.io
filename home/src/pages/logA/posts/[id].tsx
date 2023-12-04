@@ -18,6 +18,11 @@ import {
   UnorderedList,
   OrderedList,
   ListItem,
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
 } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -35,10 +40,11 @@ import SectionBlock from "@/components/partial/SectionBlock";
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 import rehypeSlug from 'rehype-slug'
-import GithubSlugger, {slug} from 'github-slugger'
+import GithubSlugger, { slug } from 'github-slugger'
 import rehypePrism from 'rehype-prism-plus'
 import { NextSeo } from "next-seo";
 import SEO from "next-seo.config";
+const codeblocks = require('remark-code-blocks')
 function CodeBlock({
   language,
   node,
@@ -55,7 +61,7 @@ function CodeBlock({
         <Code >
           {children}
         </Code>
-        
+
         <Button ml={2} onClick={onCopy} colorScheme="blue" variant="outline">
           {hasCopied ? "Copied!" : "Copy"}
         </Button>
@@ -100,17 +106,27 @@ const components = {
     <SectionBlock as="h5" size="xs" {...props} />
   ),
   a: ({ node, ...props }: any) => <Link as={NextLink} {...props} />,
-  ul:  ({ node, ...props }: any) => <UnorderedList {...props} />,
-  li:  ({ node, ...props }: any) => <ListItem {...props} />,
+  ul: ({ node, ...props }: any) => <UnorderedList {...props} />,
+  li: ({ node, ...props }: any) => <ListItem {...props} />,
   ol: ({ node, ...props }: any) => <OrderedList {...props} />,
 };
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
+  const toc_markdown = postData.tocMarkdown.content
+  const all_markdonw = postData.markdownContent
   
-  const all_markdonw = postData.tocMarkdown.content+"\n"+postData.markdownContent
-  try{
+  try {
     const mdxSource = await serialize(all_markdonw,
+      {
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+          rehypePlugins: [],
+          format: 'mdx',
+        }
+      }
+    )
+    const tocSource = await serialize(toc_markdown,
       {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
@@ -122,28 +138,28 @@ export async function getStaticProps({ params }: any) {
     return {
       props: {
         postData,
+        tocSource: tocSource,
         mdxSource: mdxSource
       },
     };
-  } 
-  catch (e){
-    console.log(e)
   }
-      
-  
-  
+  catch (e) {
+    console.log("==",e)
+  }
+
+
+
 }
 
 export async function getStaticPaths() {
   const paths = await getAllPostIds();
-  
-    return {
-      paths,
-      fallback: false,
-    };
+  return {
+    paths,
+    fallback: false,
+  };
 }
 
-export default function Post({ postData, mdxSource }: any) {
+export default function Post({ postData, mdxSource, tocSource }: any) {
 
   return (
     <BlogLayout>
@@ -155,25 +171,41 @@ export default function Post({ postData, mdxSource }: any) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        
+
         <SectionBlock mt={2}>{postData.title}</SectionBlock>
         <Box>
           <Date dateString={postData.date} />
         </Box>
-         {/*Tags*/}
-         <Box mt={2} mb={2}>
+        {/*Tags*/}
+        <Box mt={2} mb={2}>
           {postData.tag.map((t: string, i: number) => (
-            <Link key={i} onClick={() => router.push(`/next-blog?tag=${t}`)}>
+            <Link key={i} onClick={() => router.push(`/logA?tag=${t}`)}>
               <Tag mr={2}>#{t}</Tag>
             </Link>
           ))}
         </Box>
-        <Divider />
-        
-       
+      
+        <Accordion defaultIndex={[0]} allowMultiple>
+          <AccordionItem>
+            <h2>
+              <AccordionButton>
+                <Box as="span" flex='1' textAlign='left'>
+                  Table of Content
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </h2>
+            <AccordionPanel pb={4}>
+              <MDXRemote {...tocSource} components={components} />
+            </AccordionPanel>
+          </AccordionItem>
+
+        </Accordion>
+
+
         {/*正文*/}
         <MDXRemote {...mdxSource} components={components} />
-      
+
         <Script
           id="mermaidjs"
           type="module"
@@ -186,9 +218,9 @@ export default function Post({ postData, mdxSource }: any) {
             `,
           }}
         />
-       
 
-        <Link onClick={() => router.push("/next-blog")}>👈Go Back</Link>
+
+        <Link onClick={() => router.push("/logA")}>👈Go Back</Link>
       </article>
     </BlogLayout>
   );
