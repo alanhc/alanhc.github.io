@@ -22,6 +22,17 @@
             }
         },
         {
+            "id": "20220811-monorepo-line",
+            "url": "https://alanhc.github.io/logA/posts/20220811-monorepo-line",
+            "title": "20220811-monorepo-line",
+            "summary": "\n<h2>Ref</h2>\n<p>前言</p>\n<ul>\n  <li>LINE台灣用戶有2100萬</li>\n  <li>\n    LINE 跨國公司\n    正文\n  </li>\n  <li>時間：2000年初</li>\n  <li>共享code，scale build system 及 version control</li>\n  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>\n  <li>Pros\n    <ul>\n ",
+            "date_modified": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231125-cloudflare-tunnel",
             "url": "https://alanhc.github.io/logA/posts/20231125-cloudflare-tunnel",
             "title": "20231125-cloudflare-tunnel",
@@ -79,6 +90,17 @@
         {
             "id": "20231115-Building-Multi-Modal-Search-with-Vector-Databases",
             "url": "https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "url": "https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases",
             "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
             "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
             "date_modified": "2023-11-15T00:00:00.000Z",
@@ -550,50 +572,6 @@
             }
         },
         {
-            "id": "first-day",
-            "url": "https://alanhc.github.io/logA/posts/first-day",
-            "title": "Hello World",
-            "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
-            "date_modified": "2022-12-22T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "test-render",
-            "url": "https://alanhc.github.io/logA/posts/test-render",
-            "title": "test",
-            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
-            "date_modified": "2000-01-01T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20220811-monorepo-line",
-            "url": "https://alanhc.github.io/logA/posts/20220811-monorepo-line",
-            "title": "20220811-monorepo-line",
-            "summary": "\n<h2>Ref</h2>\n<p>前言</p>\n<ul>\n  <li>LINE台灣用戶有2100萬</li>\n  <li>\n    LINE 跨國公司\n    正文\n  </li>\n  <li>時間：2000年初</li>\n  <li>共享code，scale build system 及 version control</li>\n  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>\n  <li>Pros\n    <ul>\n ",
-            "date_modified": "2023-12-01T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20211115-Building-Multi-Modal-Search-with-Vector-Databases",
-            "url": "https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases",
-            "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
-            "date_modified": "2023-11-15T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20230826-next-seo",
             "url": "https://alanhc.github.io/logA/posts/20230826-next-seo",
             "title": "加入next-seo",
@@ -786,6 +764,17 @@
             "title": "在solana上mint NFT",
             "summary": "\n<ol>\n  <li>\n    <p>下載 solana cli: <code>sh -c \"$(curl -sSfL https://release.solana.com/v1.14.11/install)\"</code></p>\n  </li>\n  <li>\n    <p>新增帳號 <code>solana-keygen new --outfile ~/.config/solana/devnet.json</code></p>\n  </li>\n  <li>\n    <p>設定 devnet",
             "date_modified": "2022-12-28T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "first-day",
+            "url": "https://alanhc.github.io/logA/posts/first-day",
+            "title": "Hello World",
+            "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
+            "date_modified": "2022-12-22T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -1127,6 +1116,17 @@
             "title": "20171027-bnf",
             "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUz_gNDElA-5k_2F-9vJBzQwKHDdD2KsuDJvqqMmHsUJ3hxmYqlPCEQynrj1EV-2rfTZHX6rUCqMF_sqwNVfOOqntifX1t4yIJLqiFAMuQV4b2EmD-VHyXUxudTt80rTPNmXWT2rfxky49rF4Bz5Lu5MVO",
             "date_modified": "2017-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "test-render",
+            "url": "https://alanhc.github.io/logA/posts/test-render",
+            "title": "test",
+            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
+            "date_modified": "2000-01-01T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"

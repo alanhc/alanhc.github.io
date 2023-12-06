@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Wed, 06 Dec 2023 19:10:02 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Dec 2023 19:10:52 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -28,6 +28,28 @@
   </li>
   <li>
     複製 Keys a]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20220811-monorepo-line]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220811-monorepo-line</link>
+            <guid>20220811-monorepo-line</guid>
+            <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<p>前言</p>
+<ul>
+  <li>LINE台灣用戶有2100萬</li>
+  <li>
+    LINE 跨國公司
+    正文
+  </li>
+  <li>時間：2000年初</li>
+  <li>共享code，scale build system 及 version control</li>
+  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>
+  <li>Pros
+    <ul>
+ ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -121,6 +143,27 @@
             <title><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
             <link>https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases</link>
             <guid>20231115-Building-Multi-Modal-Search-with-Vector-Databases</guid>
+            <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/0k8rQsV.png" alt="">
+  problem?
+  關鍵字搜尋
+  
+  <img src="https://i.imgur.com/mTMj2P7.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/9W5ClYB.png" alt="">
+  vector embeding
+</p>
+<p>
+  <img src="https://i.imgur.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases</link>
+            <guid>20211115-Building-Multi-Modal-Search-with-Vector-Databases</guid>
             <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[
 <p>
@@ -844,74 +887,6 @@ const { cid } = await ipfs.add('Hello world]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[Hello World]]></title>
-            <link>https://alanhc.github.io/logA/posts/first-day</link>
-            <guid>first-day</guid>
-            <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h1>Hi! 😃</h1>
-<p>hello world!</p>
-]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[test]]></title>
-            <link>https://alanhc.github.io/logA/posts/test-render</link>
-            <guid>test-render</guid>
-            <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h1>h1</h1>
-<p>
-  text text text text text text text text text text text text text text text text text text text text text text
-  text text text text text text text text text text text text text text text text text text text text text text
-</p>
-<h2>]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20220811-monorepo-line]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220811-monorepo-line</link>
-            <guid>20220811-monorepo-line</guid>
-            <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<h2>Ref</h2>
-<p>前言</p>
-<ul>
-  <li>LINE台灣用戶有2100萬</li>
-  <li>
-    LINE 跨國公司
-    正文
-  </li>
-  <li>時間：2000年初</li>
-  <li>共享code，scale build system 及 version control</li>
-  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>
-  <li>Pros
-    <ul>
- ]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
-            <link>https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases</link>
-            <guid>20211115-Building-Multi-Modal-Search-with-Vector-Databases</guid>
-            <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-<p>
-  <img src="https://i.imgur.com/0k8rQsV.png" alt="">
-  problem?
-  關鍵字搜尋
-  
-  <img src="https://i.imgur.com/mTMj2P7.png" alt="">
-</p>
-<p>
-  <img src="https://i.imgur.com/9W5ClYB.png" alt="">
-  vector embeding
-</p>
-<p>
-  <img src="https://i.imgur.]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
             <title><![CDATA[加入next-seo]]></title>
             <link>https://alanhc.github.io/logA/posts/20230826-next-seo</link>
             <guid>20230826-next-seo</guid>
@@ -1233,6 +1208,17 @@ def t]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
+            <title><![CDATA[Hello World]]></title>
+            <link>https://alanhc.github.io/logA/posts/first-day</link>
+            <guid>first-day</guid>
+            <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>Hi! 😃</h1>
+<p>hello world!</p>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
             <title><![CDATA[Upgrade nx repo to react 18]]></title>
             <link>https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18</link>
             <guid>20220721-upgrade-nx-repo-to-react-18</guid>
@@ -1538,6 +1524,20 @@ def t]]></description>
             <pubDate>Fri, 27 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[
 <p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUz_gNDElA-5k_2F-9vJBzQwKHDdD2KsuDJvqqMmHsUJ3hxmYqlPCEQynrj1EV-2rfTZHX6rUCqMF_sqwNVfOOqntifX1t4yIJLqiFAMuQV4b2EmD-VHyXUxudTt80rTPNmXWT2rfxky49rF4Bz5Lu5MVO]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[test]]></title>
+            <link>https://alanhc.github.io/logA/posts/test-render</link>
+            <guid>test-render</guid>
+            <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>h1</h1>
+<p>
+  text text text text text text text text text text text text text text text text text text text text text text
+  text text text text text text text text text text text text text text text text text text text text text text
+</p>
+<h2>]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
     </channel>

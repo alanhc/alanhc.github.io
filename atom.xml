@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2023-12-06T19:10:02.959Z</updated>
+    <updated>2023-12-06T19:10:52.255Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -30,6 +30,32 @@
   </li>
   <li>
     複製 Keys a]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20220811-monorepo-line]]></title>
+        <id>20220811-monorepo-line</id>
+        <link href="https://alanhc.github.io/logA/posts/20220811-monorepo-line"/>
+        <updated>2023-12-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>Ref</h2>
+<p>前言</p>
+<ul>
+  <li>LINE台灣用戶有2100萬</li>
+  <li>
+    LINE 跨國公司
+    正文
+  </li>
+  <li>時間：2000年初</li>
+  <li>共享code，scale build system 及 version control</li>
+  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>
+  <li>Pros
+    <ul>
+ ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -147,6 +173,31 @@
         <title type="html"><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
         <id>20231115-Building-Multi-Modal-Search-with-Vector-Databases</id>
         <link href="https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases"/>
+        <updated>2023-11-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>
+  <img src="https://i.imgur.com/0k8rQsV.png" alt="">
+  problem?
+  關鍵字搜尋
+  
+  <img src="https://i.imgur.com/mTMj2P7.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/9W5ClYB.png" alt="">
+  vector embeding
+</p>
+<p>
+  <img src="https://i.imgur.]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
+        <id>20211115-Building-Multi-Modal-Search-with-Vector-Databases</id>
+        <link href="https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases"/>
         <updated>2023-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p>
@@ -1042,90 +1093,6 @@ const { cid } = await ipfs.add('Hello world]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Hello World]]></title>
-        <id>first-day</id>
-        <link href="https://alanhc.github.io/logA/posts/first-day"/>
-        <updated>2022-12-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h1>Hi! 😃</h1>
-<p>hello world!</p>
-]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>test-render</id>
-        <link href="https://alanhc.github.io/logA/posts/test-render"/>
-        <updated>2000-01-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h1>h1</h1>
-<p>
-  text text text text text text text text text text text text text text text text text text text text text text
-  text text text text text text text text text text text text text text text text text text text text text text
-</p>
-<h2>]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20220811-monorepo-line]]></title>
-        <id>20220811-monorepo-line</id>
-        <link href="https://alanhc.github.io/logA/posts/20220811-monorepo-line"/>
-        <updated>2023-12-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<h2>Ref</h2>
-<p>前言</p>
-<ul>
-  <li>LINE台灣用戶有2100萬</li>
-  <li>
-    LINE 跨國公司
-    正文
-  </li>
-  <li>時間：2000年初</li>
-  <li>共享code，scale build system 及 version control</li>
-  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>
-  <li>Pros
-    <ul>
- ]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
-        <id>20211115-Building-Multi-Modal-Search-with-Vector-Databases</id>
-        <link href="https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases"/>
-        <updated>2023-11-15T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[
-<p>
-  <img src="https://i.imgur.com/0k8rQsV.png" alt="">
-  problem?
-  關鍵字搜尋
-  
-  <img src="https://i.imgur.com/mTMj2P7.png" alt="">
-</p>
-<p>
-  <img src="https://i.imgur.com/9W5ClYB.png" alt="">
-  vector embeding
-</p>
-<p>
-  <img src="https://i.imgur.]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[加入next-seo]]></title>
         <id>20230826-next-seo</id>
         <link href="https://alanhc.github.io/logA/posts/20230826-next-seo"/>
@@ -1512,6 +1479,21 @@ def t]]></summary>
   </li>
   <li>
     <p>設定 devnet]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World]]></title>
+        <id>first-day</id>
+        <link href="https://alanhc.github.io/logA/posts/first-day"/>
+        <updated>2022-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h1>Hi! 😃</h1>
+<p>hello world!</p>
+]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -1944,6 +1926,24 @@ def t]]></summary>
         <updated>2017-10-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[
 <p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUz_gNDElA-5k_2F-9vJBzQwKHDdD2KsuDJvqqMmHsUJ3hxmYqlPCEQynrj1EV-2rfTZHX6rUCqMF_sqwNVfOOqntifX1t4yIJLqiFAMuQV4b2EmD-VHyXUxudTt80rTPNmXWT2rfxky49rF4Bz5Lu5MVO]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>test-render</id>
+        <link href="https://alanhc.github.io/logA/posts/test-render"/>
+        <updated>2000-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h1>h1</h1>
+<p>
+  text text text text text text text text text text text text text text text text text text text text text text
+  text text text text text text text text text text text text text text text text text text text text text text
+</p>
+<h2>]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
