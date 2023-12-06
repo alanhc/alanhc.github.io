@@ -113,10 +113,11 @@
             "title": "tag",
             "options": [
                 "select",
-                "web",
-                "AR/VR",
+                "AI",
                 "blockchain",
-                "mobile"
+                "web",
+                "mobile",
+                "AR/VR"
             ]
         },
         {
@@ -163,7 +164,7 @@
                 "blockchain",
                 "web"
             ],
-            "language": [
+            "tech": [
                 "Unity",
                 "NFT",
                 "FARM stack"
@@ -184,7 +185,7 @@
                 "blockchain",
                 "web"
             ],
-            "language": [
+            "tech": [
                 "NextJS",
                 "PWA",
                 "NFT",
@@ -205,7 +206,7 @@
                 "select",
                 "web"
             ],
-            "language": [
+            "tech": [
                 "NodeJS",
                 "MVC",
                 "mongodb",
@@ -225,7 +226,7 @@
             "tags": [
                 "web"
             ],
-            "language": [
+            "tech": [
                 "NextJS",
                 "SSG",
                 "TypeScript",
@@ -244,7 +245,7 @@
             "tags": [
                 "blockchain"
             ],
-            "language": [
+            "tech": [
                 "Python",
                 "solidity",
                 "streamlit"
@@ -263,7 +264,7 @@
             "tags": [
                 "web"
             ],
-            "language": [
+            "tech": [
                 "Chrome Extension"
             ],
             "modal": {
@@ -280,7 +281,7 @@
             "tags": [
                 "web"
             ],
-            "language": [
+            "tech": [
                 "tensorflow","Javascript","p5JS"
             ],
             "modal": {
@@ -297,7 +298,7 @@
             "tags": [
                 "web"
             ],
-            "language": [
+            "tech": [
                 "socket", "p5JS"
             ],
             "modal": {
@@ -314,7 +315,7 @@
             "tags": [
                 "mobile"
             ],
-            "language": [
+            "tech": [
                 "Java", "Processing"
             ],
             "modal": {
@@ -331,7 +332,7 @@
             "tags": [
                 "mobile"
             ],
-            "language": [
+            "tech": [
                 "Unity"
             ],
             "modal": {
@@ -348,7 +349,7 @@
             "tags": [
                 "mobile"
             ],
-            "language": [
+            "tech": [
                 "OpenGL", "C++", "OpenCV"
             ],
             "modal": {
@@ -365,7 +366,7 @@
             "tags": [
                 ""
             ],
-            "language": [
+            "tech": [
                 "example"
             ],
             "modal": {
