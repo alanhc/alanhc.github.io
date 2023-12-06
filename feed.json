@@ -11,11 +11,44 @@
     },
     "items": [
         {
+            "id": "20231202-twitter-bot",
+            "url": "https://alanhc.github.io/logA/posts/20231202-twitter-bot",
+            "title": "20231202-twitter-bot",
+            "summary": "\n<h2>1. 使用 twitter API</h2>\n<ol>\n  <li>\n    先去 <a href=\"https://developer.twitter.com/en/portal/dashboard\">dashboard</a>建立App，並在User authentication settings > 設定\n    \n    <img src=\"https://i.imgur.com/zzfs8d9.png\" alt=\"\">\n  </li>\n  <li>\n    複製 Keys a",
+            "date_modified": "2023-12-02T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231125-cloudflare-tunnel",
+            "url": "https://alanhc.github.io/logA/posts/20231125-cloudflare-tunnel",
+            "title": "20231125-cloudflare-tunnel",
+            "summary": "\n<h1>方式一 使用 GUI</h1>\n<h2>run service</h2>\n<p>e.g. <code>docker run -p 80:80 -d nginx</code></p>\n<h2>cloudflare 設定</h2>\n<p>\n  <a href=\"https://dash.cloudflare.com/\">https://dash.cloudflare.com/</a>\n  dash > Zerotrust\n  \n  <img src=\"https://i.imgur.com",
+            "date_modified": "2023-11-25T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231124-terraform-vercel",
             "url": "https://alanhc.github.io/logA/posts/20231124-terraform-vercel",
             "title": "20231124-terraform-vercel",
             "summary": "\n<p>\n  vercel token: <a href=\"https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token\">https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token</a>\n  npx create-next-app nextjs-terraform-demo\n  main.tf\n</p>\n<pre><code class=\"language",
             "date_modified": "2023-11-24T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231117-Large Language Models with Semantic Search",
+            "url": "https://alanhc.github.io/logA/posts/20231117-Large Language Models with Semantic Search",
+            "title": "20231117-Large Language Models with Semantic Search",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/06Un2NL.png\" alt=\"\">\n</p>\n<h2>keyword-search</h2>\n<p>\n  <img src=\"https://i.imgur.com/JujinkN.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/iBetWva.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/Buh9p6p.png\"",
+            "date_modified": "2023-11-17T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -44,8 +77,8 @@
             }
         },
         {
-            "id": "20211115-Building-Multi-Modal-Search-with-Vector-Databases",
-            "url": "https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "id": "20231115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "url": "https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases",
             "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
             "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
             "date_modified": "2023-11-15T00:00:00.000Z",
@@ -156,7 +189,7 @@
         {
             "id": "20231101-generative-ai-for-everyone",
             "url": "https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone",
-            "title": "20231101-generative-ai-for-everyone",
+            "title": "20231101-",
             "summary": "\n<h2>What is Generative AI</h2>\n<p>\n  <img src=\"https://i.imgur.com/Q877q0W.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/8DpeAAb.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/FhLUDBG.png\" alt=\"\">\n</p>\n<ul>\n  <li>\n    <p>\n      Superv",
             "date_modified": "2023-11-02T00:00:00.000Z",
             "author": {
@@ -517,6 +550,50 @@
             }
         },
         {
+            "id": "first-day",
+            "url": "https://alanhc.github.io/logA/posts/first-day",
+            "title": "Hello World",
+            "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
+            "date_modified": "2022-12-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "test-render",
+            "url": "https://alanhc.github.io/logA/posts/test-render",
+            "title": "test",
+            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
+            "date_modified": "2000-01-01T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20220811-monorepo-line",
+            "url": "https://alanhc.github.io/logA/posts/20220811-monorepo-line",
+            "title": "20220811-monorepo-line",
+            "summary": "\n<h2>Ref</h2>\n<p>前言</p>\n<ul>\n  <li>LINE台灣用戶有2100萬</li>\n  <li>\n    LINE 跨國公司\n    正文\n  </li>\n  <li>時間：2000年初</li>\n  <li>共享code，scale build system 及 version control</li>\n  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>\n  <li>Pros\n    <ul>\n ",
+            "date_modified": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "url": "https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases",
+            "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
+            "date_modified": "2023-11-15T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20230826-next-seo",
             "url": "https://alanhc.github.io/logA/posts/20230826-next-seo",
             "title": "加入next-seo",
@@ -715,22 +792,341 @@
             }
         },
         {
-            "id": "first-day",
-            "url": "https://alanhc.github.io/logA/posts/first-day",
-            "title": "Hello World",
-            "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
-            "date_modified": "2022-12-22T00:00:00.000Z",
+            "id": "20220721-upgrade-nx-repo-to-react-18",
+            "url": "https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18",
+            "title": "Upgrade nx repo to react 18",
+            "summary": "\n<ul>\n  <li>更新@nrwl/react 到14會自動更新React到18</li>\n  <li><a href=\"https://nx.dev/guides/react-18#react-18-migration\">https://nx.dev/guides/react-18#react-18-migration</a></li>\n  <li>npx 指令：暫時使用，不global下載</li>\n  <li>更新nx\n    <ul>\n      <li><code>npx nx m",
+            "date_modified": "2022-07-21T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
             }
         },
         {
-            "id": "test-render",
-            "url": "https://alanhc.github.io/logA/posts/test-render",
-            "title": "test",
-            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
-            "date_modified": "2000-01-01T00:00:00.000Z",
+            "id": "20190409-uva409",
+            "url": "https://alanhc.github.io/logA/posts/20190409-uva409",
+            "title": "20190409-uva409",
+            "summary": "\n<p>\n  <a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZU3KamyHjeyRYUBe55Qklm2EDfet2LZXEBykmWxvBcuiGAo2EGWB-Jhpv6petJiutsLfUVrPXbaGyZnvzTYCKr-p3Asdf5ZWJTrFZUhzt4lcJ9BqvdmrboIssKgoKFGCh3fX5ov_u71S8-vAnJdf94m",
+            "date_modified": "2018-04-09T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180405-uva630",
+            "url": "https://alanhc.github.io/logA/posts/20180405-uva630",
+            "title": "20180405-uva630",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUjCZVfTWVpN-YxruuTa6Zxb9Niv-A_c-t6A2iojaZ6u3EAxJUwREbmPVy4TUqrSJzA76BpZiey9krp8XNdw7s4DXqD9uOE9B5oI5Wft_MISZ1VDqOT5X1GJY-Edtu-0QSOFdAkzDAZNZid7D4Cs-kfs0B",
+            "date_modified": "2018-04-05T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180317-uva10409",
+            "url": "https://alanhc.github.io/logA/posts/20180317-uva10409",
+            "title": "20180317-uva10409",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXaP_T8_j7nhUvXVfmlXe5oxYgFScAMBFbQDjBhHblfshtC_E5FZVxFakpMTr0QF61Ug7hOeZ6bOaKXgQu7fj8de741-QYjBCuTaNA3iZH2x1azPhnUn0ZaO-hSDUZnty6INLTSpKu_cgJsUhgy09Uv-O-",
+            "date_modified": "2018-03-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180314-uva105",
+            "url": "https://alanhc.github.io/logA/posts/20180314-uva105",
+            "title": "20180314-uva105",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUQAvrOLnhUg8gAgxrjuViGI2J9FXeLkv6ax2Suofq6zNNcLXJvnFptk_JrXNjWkgVi71x9_1aDD1Iw97g19_FPP7WBrz6EQhIlwqbClU5sMrA7p6gkaowWvOtSTJNz8DmfhxM7dqTGlUAQO4HPVeF_KRP",
+            "date_modified": "2018-03-14T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180312-uva10190",
+            "url": "https://alanhc.github.io/logA/posts/20180312-uva10190",
+            "title": "20180312-uva10190",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E6%9B%B4?__eep__=6&#x26;__cft__%5B0%5D=AZXKsASeP8yv3GQFmwMAB97lLtedKl7jUa-OZlTPreqehNhpS4-FXOOs_4iymD-ZIwiL2JaAfwIAwpBTCOR-cHIbD1Y6Qz-BUZXIBvfbLcs8vpjygxs8bYVYg0wfoLoKjmGYdcR5TZjNInCx4tBrF6T13a_PzhiHK4Sh",
+            "date_modified": "2018-03-12T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180309-uva141",
+            "url": "https://alanhc.github.io/logA/posts/20180309-uva141",
+            "title": "20180309-uva141",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E7%BA%8C?__eep__=6&#x26;__cft__%5B0%5D=AZUYI3uFckRV5BkHcM1swGyXTOK5pFMwUtVp4G8HG1TzktK0Xs544ls0v-Q9FkJWvm6_ggmSSc8ugHAB3PPFh0ZSjSpBXvZpKW7JJOWTH3l9M6jM4C1sIHfs0HJgY1IptvN1XeXTijd9N6mwTrM_YNdV9G6yMYttUglD",
+            "date_modified": "2018-03-09T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180228-hash-table",
+            "url": "https://alanhc.github.io/logA/posts/20180228-hash-table",
+            "title": "20180228-hash-table",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/data_structure_and_algorithms?__eep__=6&#x26;__cft__%5B0%5D=AZVEMsK7ypjElCs3HR_7O3Dqz56Z3tVUh43xhv3U7Vm-2RmcF2KOJ0eiy0ZT8Hs8V5itF6Ng9rR2W2DaPDcFTDzGVSmV5_LTGwpplPvIuXBxPd47Sx3Cl92cxdplGzQsyoKuM6TlkDvCekNL",
+            "date_modified": "2018-02-28T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180222-uva401",
+            "url": "https://alanhc.github.io/logA/posts/20180222-uva401",
+            "title": "20180222-uva401",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXJK464GxbR-YpyYdMrF43b4J1eKTpPbgyaGbiJZzOItb6VbRzfVZB1P11s-nsgRulL_91toNa6PUVCV-8L9iGXLUlUcEO3wXIgvW8IUNI1suDdilPEmKSnsLwGQNHSa-ip7dl1M5IvSxzaZCi6Vcp0z2k",
+            "date_modified": "2018-02-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180212-uva10611",
+            "url": "https://alanhc.github.io/logA/posts/20180212-uva10611",
+            "title": "20180212-uva10611",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/daxm26z.jpg\" alt=\"\">\n  <img src=\"https://i.imgur.com/8DqMq4E.jpg\" alt=\"\">\n</p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.facebook.com/groups/363494050740833/permalink/404391153317789/\">https://www.facebook.com/",
+            "date_modified": "2018-02-12T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180210-NCTU-PCCA-winter-notes",
+            "url": "https://alanhc.github.io/logA/posts/20180210-NCTU-PCCA-winter-notes",
+            "title": "20180210-NCTU-PCCA-winter-notes",
+            "summary": "\n<h1>NCTU PCCA winter</h1>\n<h2>快速索引</h2>\n<ul>\n  <li><a href=\"https://sites.google.com/g2.nctu.edu.tw/pcca-winter-2018/%E9%A6%96%E9%A0%81?authuser=0\">活動網頁</a> | <a href=\"https://vjudge.net/contest/204504\">水題大賽</a> | <a href=\"https://sites.google.com/g",
+            "date_modified": "2018-02-10T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180209-uva406",
+            "url": "https://alanhc.github.io/logA/posts/20180209-uva406",
+            "title": "20180209-uva406",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWuJ_MExaDDIO3GsIzeo3R1GlNMTeC33pqBL8woS5mQ056nLXkYDLAwY83ivy4-0wT7uVVCHB5uUXpxMXehU7laRKFGoIbskjTnrBoaODYOTvEAOUrfRMXnza-6K1DnIQrMd3jMaLyFWrq8oE2MOV5FGcT",
+            "date_modified": "2018-02-09T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180209-linked-list",
+            "url": "https://alanhc.github.io/logA/posts/20180209-linked-list",
+            "title": "20180209-linked-list",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E7%B7%B4%E7%BF%92?__eep__=6&#x26;__cft__%5B0%5D=AZUnn6vVAhlordDoly2czsqYs2RQ1OFk_QMJWwY6Jv6fYGXZwr9u38ZRxvtRC0i_-nl84g98zTwlyqCo9EV0EOPzqt4CxetfqNjSAklWQcKroQQejYlV1zKQKV01KcodnfBX0OkgYrc1w_tzYU2_FjPsx6m",
+            "date_modified": "2018-02-09T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180206-uva10162",
+            "url": "https://alanhc.github.io/logA/posts/20180206-uva10162",
+            "title": "20180206-uva10162",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXth538V0o5xEvIsIDhVRvfw7KlWeAQsu35gDE-PD-DkVXPjfLoapAWxMqNNoIydbnoxGJcZWKtyLuI6phDgFb0ZpS2DFCIqo-8lArQZUVON9QWMP1WHBgEmE3iM4bXZ9EeYVvNJePI5UV82-1d25T1Udl",
+            "date_modified": "2018-02-06T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180205-uva10405",
+            "url": "https://alanhc.github.io/logA/posts/20180205-uva10405",
+            "title": "20180205-uva10405",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWO3SVJ6V2JtxJvQYo3RCV3kf2A7IzBE5ZezvAoXBCeBOr-v6F2vMLAb_O2-os0460AFsPJD7ZUNk1kosmRLudvYuKy-gCeYVSlS5XR6-jCyAr-_Spb3RKD6X4uzGi8zzRyfRAVA19InRwdC1CcafEMSjH",
+            "date_modified": "2018-02-05T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180131-uva11917",
+            "url": "https://alanhc.github.io/logA/posts/20180131-uva11917",
+            "title": "20180131-uva11917",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZU1SFdqum70_lIZpz8s_XGGPjJJiX5DNDyV9bYZP8yVBFQQnX9ugmim2nbfSTi4C1-WEMfoSWM-Mjbh3JDZMnuNctzP2n8ESa8XUiAR4RGRcYVCwp3qxfbBCYMorYM-DrqYkk-aILVshUa4-uDqh4pml6s",
+            "date_modified": "2018-01-31T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180128-uva10931",
+            "url": "https://alanhc.github.io/logA/posts/20180128-uva10931",
+            "title": "20180128-uva10931",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUQWQe2svEDA5pKnMNrfclP_50US1grnHKvcpKHvRGZRqV-uaHv7aJCQnWtEqnGV6DSfQbgKtLMDwBRacJjFUU2GYnAe-nXK7Y8MLNyIMuTXnv3s5aYOHtLOu_ixrId8ufeqYOJ_Ym6DTq6psp4HEbCfQI",
+            "date_modified": "2018-01-28T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180124-gets-puts",
+            "url": "https://alanhc.github.io/logA/posts/20180124-gets-puts",
+            "title": "20180124-gets-puts",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWyWa5MzAwM1Nr9U922RKjA0YFjLWNWLg0oIpjRabOAkBWc9vNtwNTenxorr3YlTyTivUBfoReYkBbiUER72uZcIgxlOmnWBAlyF-bOVW3tcEgdykgxQcRVLPlATQe-Dom3U7zjYYXuCTTzwW3TjhFWVzh",
+            "date_modified": "2018-01-24T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180123-int2str",
+            "url": "https://alanhc.github.io/logA/posts/20180123-int2str",
+            "title": "20180123-int2str",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWZFm9BoSnltzZCjxyreHWIk7DN4dflfIChADeiCenwwzFp2jRwTSpq6Hod62IyII_QS5qCM07KXJX-glrDefmCVs3YAbFZw2lZXx-H8NfToEyn_XTx9T7-j9lwBtLEcQsYlBnjVMH9G6zQKD_9pNPuS64",
+            "date_modified": "2018-01-23T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20180119-hackmd",
+            "url": "https://alanhc.github.io/logA/posts/20180119-hackmd",
+            "title": "20180119-hackmd",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZWrqnxkmh2vocQBuGpgp_P4XBloDDABzvyTpxmrfb29IOEDWE7A-itkH-GCDMiNxtUAIv1L2Jq83M9-nQYgiN_NC74BljuV8dIwWobQv4z2IBKEPsyry3FVyq9HPH3nsYrdjEPddR3gHTSbfqWQBE-nPqk",
+            "date_modified": "2018-01-19T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171230-recursion",
+            "url": "https://alanhc.github.io/logA/posts/20171230-recursion",
+            "title": "20171230-recursion",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUi9EhO1AxvWuev5lfYQ9vH7eoB8iEMbdW9cLr_Av60-iI0R-KRUjCqlnrHK8Jcup_TLJQPnghkZmmSE34oonc79XBLjQaHA_drRrHWfTEEp_6tYObuga490V3AcvHD6crvaeAmGo5QmBDt8rgxbXvBo0f",
+            "date_modified": "2017-12-30T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171221-uva10190",
+            "url": "https://alanhc.github.io/logA/posts/20171221-uva10190",
+            "title": "20171221-uva10190",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/debug?__eep__=6&#x26;__cft__%5B0%5D=AZVA978Ul4liU9fJQ3zSzDO1nYMJQH-2ynnmUoEAJhgZNayYurL0P2Luj3MrD6zZtyMbKbVu1qp9lhKcLxbWZKb5nzEZiGACZuaHMTIIUN3rnXAdYu2myTnlI-b_39cn5QDgNbDgMI3Y_VZMunfSVzexv2mE9U1O2gi2TCu6",
+            "date_modified": "2017-12-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171219-recursion",
+            "url": "https://alanhc.github.io/logA/posts/20171219-recursion",
+            "title": "20171219-recursion",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe3",
+            "date_modified": "2017-12-19T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171217-DP",
+            "url": "https://alanhc.github.io/logA/posts/20171217-DP",
+            "title": "20171217-DP",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZW8h0LBTah501Oo3H-ot4494tYWv5SMlI4OKjNzpIc79ypNxD1zHFFBf5Mkk6akhS1uCl_6cwg7w4vQ1ZkxFuAkedYKh8sYc59yNrKKi5JAxHPsWpIu4mItcXD5jV13mfuCJ9dSPezEAJZwWx8zfeYnNy5",
+            "date_modified": "2017-12-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171210-vector",
+            "url": "https://alanhc.github.io/logA/posts/20171210-vector",
+            "title": "20171210-vector",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUO65Ug-wELBllXjnBpGPIr1flrwKtRiFPuNn4W_deYZGNcuFKkCo6PXAZ5aNWuV6ji4XRoNmHBm2H2ipbw58LL2KhQtUsacshByDrQDatexjh9atdHl2h4uo8RkLxZW5z_faVZofFe5UPwLLEOO6zINwV",
+            "date_modified": "2017-12-10T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171202-styleguide",
+            "url": "https://alanhc.github.io/logA/posts/20171202-styleguide",
+            "title": "20171202-styleguide",
+            "summary": "\n<p>\n  <a href=\"https://www.facebook.com/hashtag/%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZUB1vXBKbrzjGb2sMW06aisRc6HsARl1V41kQEVfykzeum5p0j39KknS27UT8pnYQL4J4hyS-CqZLwduL3yYPIY-xe99T606pHevHQxU_7j9ot3oajXCuPNej6L_tJ4bAsvuN",
+            "date_modified": "2017-12-02T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171106-gcd",
+            "url": "https://alanhc.github.io/logA/posts/20171106-gcd",
+            "title": "20171106-gcd",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E7%A8%8B%E5%BC%8F%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZX7hl_TW7KwyQlmwpO9DqeU0XAjBq52l8mSCBrP90F6gph9iSdUrZ-SxBF0kmItMf096X7T3GKY5W2W2_zl258VDKAWSFbRAQD44GFvVIxEU_9NGdkPyE4XT1ymKK21WTKRbiXYE",
+            "date_modified": "2017-11-06T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171105-makerfair",
+            "url": "https://alanhc.github.io/logA/posts/20171105-makerfair",
+            "title": "20171105-makerfair",
+            "summary": "\n<p>前情提要：</p>\n<p>今天去MakerFaire有個攤位是做智慧家電的，</p>\n<p>我覺得有個還蠻適合拿來討論的，</p>\n<p>簡單來說一般做物聯網都是用網路來做，</p>\n<p>但他們很特別是靠電力系統來做資料傳輸，</p>\n<p>我覺得方式還蠻有趣的，</p>\n<p>但我問了兩個問題：</p>\n<p>問題：</p>\n<p>Q1. 所有的電力系統都會連到同一條通往台電的線，那不是代表駭客只要在家插插頭就可以開始去散播寫的病毒程式，或直接在變壓站\u001d植入竊聽程式？</p>\n<p>",
+            "date_modified": "2017-11-05T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171102-computer-virus",
+            "url": "https://alanhc.github.io/logA/posts/20171102-computer-virus",
+            "title": "20171102-computer-virus",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXlbna_XcYPEnTgUyFmv6FgCIqAGu7QIsZOZsHZ8LrivarNzUGQvOPIRkej2uMiTT4hDLX-m08EQOR3GZUVcEK_sopLfRnMln4-TrkS5YONUVbzPGpCRDRLYAtP_Hz4yq9xMA51IKHwHtU_x4Nl5o3X7zB",
+            "date_modified": "2017-11-02T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171027-refactor",
+            "url": "https://alanhc.github.io/logA/posts/20171027-refactor",
+            "title": "20171027-refactor",
+            "summary": "\n<p><a href=\"https://www.ithome.com.tw/node/46046\">https://www.ithome.com.tw/node/46046</a></p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.facebook.com/groups/363494050740833/permalink/363567360733502/\">https://www.facebook.com/groups/3634940507408",
+            "date_modified": "2017-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20171027-bnf",
+            "url": "https://alanhc.github.io/logA/posts/20171027-bnf",
+            "title": "20171027-bnf",
+            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUz_gNDElA-5k_2F-9vJBzQwKHDdD2KsuDJvqqMmHsUJ3hxmYqlPCEQynrj1EV-2rfTZHX6rUCqMF_sqwNVfOOqntifX1t4yIJLqiFAMuQV4b2EmD-VHyXUxudTt80rTPNmXWT2rfxky49rF4Bz5Lu5MVO",
+            "date_modified": "2017-10-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
