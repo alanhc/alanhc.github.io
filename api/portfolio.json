@@ -60,7 +60,7 @@
                     },
                     "first": "LINE",
                     "second": "Software Engineer Intern",
-                    "description": "work with the KR colleague, using monorepo development to build scalable front-end, leading a team of 5 people to develop an NFT applications"
+                    "description": "Collaborated with Korean backend team on a scalable front-end using monorepo development, leading a team of 5 developers in building an NFT application"
                 },
                 {
                     "time": {
@@ -156,8 +156,8 @@
     ],
     "projects": [
         {
-            "title": "Decentral Showroom",
-            "image": "image/showroom.png",
+            "title": "Decentralized showroom",
+            "image": "image/projects/showroom.png",
             "tags": [
                 "select",
                 "AR/VR",
@@ -170,16 +170,16 @@
                 "FARM stack"
             ],
             "modal": {
-                "title": "Decentral Showroom",
-                "description": "Enjoy the exhibition!",
+                "title": "Decentralized showroom",
+                "description": "Developed backend API services for a decentralized showroom application using FastAPI, React, and MongoDB. Implemented a decentralized authentication mechanism using digital signatures.",
                 "demo": "https://medium.com/@alanhc/decentral-showroom-ntu-dapp-term-project-ce947ea9c792",
                 "github": "https://github.com/DSR-Team",
                 "video": "7EPRiUR4XqM"
             }
         },
         {
-            "title": "NFT Ticketing",
-            "image": "image/ticket.png",
+            "title": "Secure NFT Ticketing System",
+            "image": "image/projects/secureticketing.png",
             "tags": [
                 "select",
                 "blockchain",
@@ -193,31 +193,10 @@
             ],
             "modal": {
                 "title": "NFT Ticketing",
-                "description": "An NFT Ticketing system based on Steganography and Homomorphic encryption",
+                "description": "Designed and implemented backend API services for a ticketing system using Python, FastAPI, and MongoDB. Applied homomorphic encryption and steganography to create secure QR codes.",
                 "video": "ZYo51JMlp5Y",
                 "demo": "",
                 "github": "https://github.com/alanhc/MMS-final"
-            }
-        },
-        {
-            "title": "MCU-up",
-            "image": "image/up.png",
-            "tags": [
-                "select",
-                "web"
-            ],
-            "tech": [
-                "NodeJS",
-                "MVC",
-                "mongodb",
-                "SSR"
-            ],
-            "modal": {
-                "title": "MCU-up",
-                "description": "MCU-up is a review site using MVC pattern, using nodejs, express from scratch with Authentication, CRUD and Server-Side Rendering.",
-                "demo": "https://medium.com/@alanhc/%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92-5214e62aca80",
-                "github": "",
-                "screenshot":["image/mcu-up.webp"]
             }
         },
         {
@@ -234,14 +213,14 @@
             ],
             "modal": {
                 "title": "alanhc.github.io",
-                "description": "It uses the SSG to speed up the page load and is better for SEO.",
+                "description": "The application uses static site generation (SSG) to speed up page load times and improve SEO.",
                 "demo": "https://alanhc.github.io/",
                 "github": ""
             }
         },
         {
             "title": "BBF(Blockchain Bloom Filter)",
-            "image": "",
+            "image": "image/projects/bloomfilter.png",
             "tags": [
                 "blockchain"
             ],
@@ -252,7 +231,7 @@
             ],
             "modal": {
                 "title": "2022 NTU DApp (spring) Midterm Project",
-                "description": "prototype demo",
+                "description": "Developed a blockchain-based vaccine tracking system utilizing Bloom Filter for efficient and rapid vaccine batch number verification with lower time complexity O(k) and space complexity O(m).",
                 "demo": "https://medium.com/@alanhc/%E4%BD%BF%E7%94%A8bloom-filter%E5%8F%8Aweb3-py%E4%BE%86%E5%81%9A%E7%96%AB%E8%8B%97%E8%AA%8D%E8%AD%89-ntu-dapp-%E6%9C%9F%E4%B8%ADprototype-4493ba5425e9",
                 "github": "",
                 "video": "oaXrKvUwzuU"
@@ -260,7 +239,7 @@
         },
         {
             "title": "Fake News Hunter",
-            "image": "",
+            "image": "image/projects/cofacts.png",
             "tags": [
                 "web"
             ],
@@ -269,7 +248,7 @@
             ],
             "modal": {
                 "title": "Fake News Hunter",
-                "description": "2020 Solution Challenge - Fake News Hunter",
+                "description": "Developed a Chrome extension to combat fake news, integrating with g0v's Cofacts API. The extension utilizes the Flask backend and leverages GCP's Cloud Function server for scalability and efficiency.",
                 "demo": "",
                 "github": "https://github.com/DSC-TW/SC-cofacts-extension",
                 "video": "JxxwyeFB45s"
@@ -277,16 +256,17 @@
         },
         {
             "title": "Posenet Chrome Dino(T-Rex Game)",
-            "image": "",
+            "image": "image/projects/dino.png",
             "tags": [
-                "web"
+                "web",
+                "select"
             ],
             "tech": [
                 "tensorflow","Javascript","p5JS"
             ],
             "modal": {
                 "title": "dino-posenet",
-                "description": "Using Posenet and modify repo from source detecting human motions to control chrome dinosaurs.",
+                "description": "I modified the source code of the Chrome Dino Runner game to add a pose-based jumping mechanic. I used the PoseNet model from ml5.js to track the player's pose. When the player moved their arms up, the dinosaur would jump. I used the p5 Vector class from p5.js to calculate the dinosaur's jump trajectory.",
                 "demo": "",
                 "github": "https://github.com/alanhc/dino-posenet",
                 "video": "rE01xxdUTdY"
@@ -294,7 +274,7 @@
         },
         {
             "title": "drum.io",
-            "image": "",
+            "image": "image/projects/drum.png",
             "tags": [
                 "web"
             ],
@@ -303,7 +283,7 @@
             ],
             "modal": {
                 "title": "drum.io",
-                "description": "Won the First place in Interactive Technologies of 52 people. Won the Third place in a collective vote of 50 people. Using KNN algorithm to analyze the acceleration data from embedded device to make an air drum, and let everyone can battle online.",
+                "description": "Awarded 1st place in Interactive Media Programming and 3rd place by collective vote for developing a multiplayer interactive game combining machine learning and hardware. The game uses KNN algorithm to analyze acceleration data from an embedded device to create an air drum experience and enable online battles.",
                 "demo": "",
                 "github": "",
                 "video": "82d7E0uENcg"
@@ -311,7 +291,7 @@
         },
         {
             "title": "LANDING:PLANET",
-            "image": "",
+            "image": "image/projects/landing.png",
             "tags": [
                 "mobile"
             ],
@@ -320,15 +300,15 @@
             ],
             "modal": {
                 "title": "LANDING:PLANET",
-                "description": "Won the Second place in a collective vote of 50 people. Using Java and \"Computer Graphics\" concepts to apply particle systems and physics simulations to space exploration games.",
+                "description": "Received Second Place by collective vote (50 participants) for developing a space exploration game using Java and \"Computer Graphics\" concepts. Inspired by Mars: Mars, the game utilizes Java Processing to create immersive visuals and interactions, featuring physics simulations (gravity, landing) and particle effects (spaceship thrust, landing). An Android version of the game is also available.",
                 "demo": "",
                 "github": "",
                 "video": "sISmhfmjx60"
             }
         },
         {
-            "title": "sea level rise",
-            "image": "",
+            "title": "Money-Sea Crisis",
+            "image": "image/projects/Money-Sea-Crisis.png",
             "tags": [
                 "mobile"
             ],
@@ -337,15 +317,15 @@
             ],
             "modal": {
                 "title": "sea level rise",
-                "description": "Nasa space app challenge 2019 - Team ATHENA MARK III",
+                "description": "The game uses Unity to create a Monopoly-like land-buying mechanic with a quiz to teach players about climate change. The game allows players to experience the effects of sea level rise firsthand and earn money by answering questions correctly.",
                 "demo": "",
                 "github": "",
                 "video": "vm1mut6qMHA"
             }
         },
         {
-            "title": "GLUT Dancing robots",
-            "image": "",
+            "title": "OpenGL Dancing Robot",
+            "image": "image/projects/dancingrobot.png",
             "tags": [
                 "mobile"
             ],
@@ -353,11 +333,106 @@
                 "OpenGL", "C++", "OpenCV"
             ],
             "modal": {
-                "title": "GLUT Dancing robots",
-                "description": "Computer Graphics Final Homework - GLUT Dancing robots",
+                "title": "OpenGL Dancing Robot",
+                "description": "Developed a model control system in OpenGL that enables a robot to jump, winning first place in the Computer Graphics final project. The system was inspired by Maya's graphical model control system and utilizes computer graphics concepts such as alpha, model import, and coordinate movement.",
                 "demo": "",
                 "github": "",
                 "video": "1JbuL0aO4-s"
+            }
+        },
+        {
+            "title": "Early detection of human tremor symptoms",
+            "image": "image/projects/trembling.png",
+            "tags": [
+                "select",
+                "AI"
+            ],
+            "tech": [
+                "example"
+            ],
+            "modal": {
+                "title": "Early detection of human tremor symptoms and home care services based on video and deep learning",
+                "description": "Developed an LSTM-RNN model using Tensorflow Functional API to distinguish between patient tremor frequency and noise. The model achieved an average accuracy of 94.8% on a dataset of 160,000 simulated signals. The model can distinguish between different tremor frequencies with an accuracy of 94.14% and 95.42%, respectively.",
+                "demo": "",
+                "github": "",
+                "video": "",
+                "screenshot":["image/projects/trembling.png"]
+                
+            }
+        },
+        {
+            "title": "Adaptive Driving Beam System",
+            "image": "image/projects/adb.png",
+            "tags": [
+                "select",
+                "AI"
+            ],
+            "tech": [
+                "example"
+            ],
+            "modal": {
+                "title": "Adaptive Driving Beam System based on Deep Learning and Image Enhancement",
+                "description": "Developed an Adaptive Driving Beam Headlamp (ADB) system using deep learning techniques for nighttime vehicle detection. This project integrates recent research in computer vision and image enhancement to improve nighttime driving safety.",
+                "demo": "",
+                "github": "",
+                "video": "uoV21i9NB98"
+               
+            }
+        },
+        {
+            "title": "Change My Style",
+            "image": "image/projects/cce-demo.png",
+            "tags": [
+                "select",
+                "AI"
+            ],
+            "tech": [
+                "example"
+            ],
+            "modal": {
+                "title": "",
+                "description": "Developed a machine learning inference API using FastAPI and Tensorflow. The API takes an image as input and returns the predicted class label. The API was built using FastAPI, a modern Python framework for building APIs. Tensorflow was used to load and run the machine learning model. Built a client application using Tkinter and OpenCV to interact with the API. The client application allows users to upload images and view the predicted class label. The client application was built using Tkinter, a Python GUI toolkit. OpenCV was used to load and display the images.",
+                "demo": "",
+                "github": "",
+                "video": "",
+                "screenshot":["image/projects/cce-demo.png"]
+            }
+        },
+        {
+            "title": "AlgViz",
+            "image": "image/projects/alg.png",
+            "tags": [
+                "select"
+            ],
+            "tech": [
+                "example"
+            ],
+            "modal": {
+                "title": "",
+                "description": "Implemented algorithms including AVL Trees, Binary Search Trees, Dijkstra's algorithm, Kruskal's algorithm, Max Heaps, multiple sorting algorithms, and Topological Sort, and visualized the structures and time complexities of different sorting algorithms.",
+                "demo": "",
+                "github": "",
+                "video": ""
+            }
+        },
+        {
+            "title": "MCU-up",
+            "image": "image/projects/up.png",
+            "tags": [
+                "web"
+            ],
+            "tech": [
+                "NodeJS",
+                "MVC",
+                "mongodb",
+                "SSR"
+            ],
+            "modal": {
+                "title": "MCU-up",
+                "description": "Led a team of 5 developers and designers to build a review site using MVC, NodeJS, and Express. The application has been used by over 1,000 students.",
+                "demo": "https://medium.com/@alanhc/%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92-5214e62aca80",
+                "github": "",
+                "screenshot":["image/mcu-up.webp"]
             }
         },
         {
