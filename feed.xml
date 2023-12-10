@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sat, 09 Dec 2023 15:00:10 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 10 Dec 2023 10:40:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,53 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20231210-convert-post-markdown]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231210-convert-post-markdown</link>
+            <guid>20231210-convert-post-markdown</guid>
+            <pubDate>Sun, 10 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>medium</h2>
+<p><a href="https://github.com/dtesler/medium-to-markdown">https://github.com/dtesler/medium-to-markdown</a></p>
+<h2>Blogger</h2>
+<p><a href="https://codebeautify.org/html-to-markdown">https://codebeautify.org/html-to-markdown</a></p]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231209-docker-machine-learning]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231209-docker-machine-learning</link>
+            <guid>20231209-docker-machine-learning</guid>
+            <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Docker</h2>
+<p>
+  <code>docker search tensorflow</code>
+  <code>docker pull jupyter/tensorflow-notebook</code>
+  <code>docker run jupyter/tensorflow-notebook -p 8000:8888</code>
+</p>
+<ul>
+  <li>-p out:in</li>
+</ul>
+<p>
+  Transformers
+  <code>fro]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231209-AI-music-example]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231209-AI-music-example</link>
+            <guid>20231209-AI-music-example</guid>
+            <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  AI 音樂風格轉換太酷了
+  <a href="https://youtu.be/IM_EDpvY4vA?si=jrhDvSM1wWdcnZgG">Frank Sinatra - A Cruel Angel's Thesis</a>
+  <a href="https://youtu.be/_Y543NEiR5w?si=uLzQnCi-u3sp-ZSV">Careless Whisper - Frank Sinatra AI Cover</a>
+</p>
+<h2>Ref</h2>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20231202-twitter-bot]]></title>
             <link>https://alanhc.github.io/logA/posts/20231202-twitter-bot</link>
@@ -1213,6 +1260,146 @@ def t]]></description>
   <li>更新nx
     <ul>
       <li><code>npx nx m]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[Decentral Showroom — NTU DApp Term project]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project</link>
+            <guid>20220531-Decentral-Showroom-NTU-DApp-Term-project</guid>
+            <pubDate>Tue, 31 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/arbyM3t.png" alt="">
+</p>
+<p>photo by Hsiang Hsu, model: Cute Ubi</p>
+<blockquote>
+  <p>Decentral Showroom，屬於你的Metaverse展場空間</p>
+</blockquote>
+<p>期末我和實驗室同學Leo Chen、Jack Hsieh、Hsiang Hsu及Ubi Tsai製作了 一個基於Tezos鍊上的NFT]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[web3 世界裡的驗證機制，以Tezos為例]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例</link>
+            <guid>20220518-web3-世界裡的驗證機制-以Tezos為例</guid>
+            <pubDate>Wed, 18 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>在web3的世界裡面，區塊鏈錢包取代了過去綁定社交帳號登入的功能，以下面在Tezos上的NFT交易平台objkt為例，可以看到sync取代login的按鈕。</p>
+<p>
+  <img src="https://i.imgur.com/24a50VE.png" alt="">
+</p>
+<p>objkt</p>
+<p>如下圖，點選sync後，objkt會與您的錢包(temple wallet)互動，然後請您簽署一份payload：</p>
+<p>
+  <img src="https:/]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211028-虛擬人課堂筆記4-vroid]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211028-虛擬人課堂筆記4-vroid</link>
+            <guid>20211028-虛擬人課堂筆記4-vroid</guid>
+            <pubDate>Thu, 28 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<ul>
+  <li><a href="https://vroid.com/en/studio">vroid</a> (註冊&#x26;下載)</li>
+</ul>
+<p>調整模型到你喜歡的</p>
+<p>Face Editor>Generate Bone</p>
+<p>調整完 Camera/Export>Export Info> Material Reduction>設定2</p>
+<p>Camera/Export>Export Info> Texture Altas Resolution>]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211027-虛擬人課堂筆記3-unity-facecapture]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture</link>
+            <guid>20211027-虛擬人課堂筆記3-unity-facecapture</guid>
+            <pubDate>Wed, 27 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  去上禮拜<a href="https://readyplayer.me/">ReadyPlayerMe</a>下載glb模型檔
+  
+  <img src="https://i.imgur.com/FWWnEgg.png" alt="">
+</p>
+<ol>
+  <li>打開Blender，按右鍵刪除方塊</li>
+</ol>
+<p>2. File>import>.glb</p>
+<p>3. 選擇角色跟骨架</p>
+<p>3. 全選模型> File>Export>照著下面紅框做>E]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[虛擬人課堂筆記2 —Mozilla Hub]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211018-虛擬人課堂筆記2</link>
+            <guid>20211018-虛擬人課堂筆記2</guid>
+            <pubDate>Mon, 18 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>在Mozilla Hub裡面使用虛擬角色</h1>
+<p>新建一個room：</p>
+<p><a href="https://hubs.mozilla.com">https://hubs.mozilla.com</a></p>
+<p>
+  <img src="https://i.imgur.com/op3bKU6.png" alt="">
+</p>
+<p>掛載虛擬人</p>
+<p><a href="https://readyplayer.me">https://readyplayer.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[虛擬人課堂筆記 — SparkAR]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211011-虛擬人課堂筆記-spark-ar</link>
+            <guid>20211011-虛擬人課堂筆記-spark-ar</guid>
+            <pubDate>Mon, 11 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>讀完這篇，將學會可在FB嵌入的濾鏡👇</h2>
+<p>先<a href="https://sparkar.facebook.com/ar-studio/download/">下載 SparkAR</a></p>
+<p>
+  <img src="https://i.imgur.com/jGhSXT9.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/ue6p2Z8.png" alt="">
+</p>
+<ol>
+  <li>開啟 ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20210820-開發mcu-up-銘傳金手指3-0-的那些事兒]]></title>
+            <link>https://alanhc.github.io/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</link>
+            <guid>20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</guid>
+            <pubDate>Fri, 20 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>請參考：<a href="https://next-school-up.vercel.app/">銘傳金手指</a></p>
+<p>
+  <img src="https://i.imgur.com/ermaKMu.png" alt="">
+</p>
+<p>Photo by <a href="http://yabing890123@gmail.com">joanna</a>, from <a href="https://www.facebook.com/upMCU">upMCU</a></]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20200330-為什我會成為dsc-lead及怎麼申請]]></title>
+            <link>https://alanhc.github.io/logA/posts/20200330-為什我會成為dsc-lead及怎麼申請</link>
+            <guid>20200330-為什我會成為dsc-lead及怎麼申請</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/4EZuaSk.png" alt="">
+</p>
+<p>MCU開源社(DSC MCU) logo</p>
+<blockquote>
+  <p>我們的宗旨，是打造一個讓學生可以互相討論及交流的學生開發者社團！</p>
+</blockquote>
+<h1>為什麼我會申請DSC Lead？</h1>
+<p>一次的黑客松的賽前技術訓練中，遇見了 Eric ShangKuan。剛好今年Google在台灣要推出Developer S]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20190614-CGfinal]]></title>
+            <link>https://alanhc.github.io/logA/posts/20190614-CGfinal</link>
+            <guid>20190614-CGfinal</guid>
+            <pubDate>Fri, 14 Jun 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h3>alanhc/張牧之 電腦圖學-week17 [final]</h3>
+<p><a href="//1.bp.blogspot.com/-MTXC4fGai9E/XQXwPX8EOqI/AAAAAAAAKT8/cPuiAtKXqt4KJiqyYjqHT1yHnGu3nDnpQCK4BGAYYCw/s1600/s-948962aa160e9da97a540677d2bec48b97e6f72d.gif"><img src="https://1.bp.blogspot.com/-MTXC4]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

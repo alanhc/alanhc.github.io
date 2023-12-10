@@ -11,6 +11,39 @@
     },
     "items": [
         {
+            "id": "20231210-convert-post-markdown",
+            "url": "https://alanhc.github.io/logA/posts/20231210-convert-post-markdown",
+            "title": "20231210-convert-post-markdown",
+            "summary": "\n<h2>medium</h2>\n<p><a href=\"https://github.com/dtesler/medium-to-markdown\">https://github.com/dtesler/medium-to-markdown</a></p>\n<h2>Blogger</h2>\n<p><a href=\"https://codebeautify.org/html-to-markdown\">https://codebeautify.org/html-to-markdown</a></p",
+            "date_modified": "2023-12-10T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231209-docker-machine-learning",
+            "url": "https://alanhc.github.io/logA/posts/20231209-docker-machine-learning",
+            "title": "20231209-docker-machine-learning",
+            "summary": "\n<h2>Docker</h2>\n<p>\n  <code>docker search tensorflow</code>\n  <code>docker pull jupyter/tensorflow-notebook</code>\n  <code>docker run jupyter/tensorflow-notebook -p 8000:8888</code>\n</p>\n<ul>\n  <li>-p out:in</li>\n</ul>\n<p>\n  Transformers\n  <code>fro",
+            "date_modified": "2023-12-09T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231209-AI-music-example",
+            "url": "https://alanhc.github.io/logA/posts/20231209-AI-music-example",
+            "title": "20231209-AI-music-example",
+            "summary": "\n<p>\n  AI 音樂風格轉換太酷了\n  <a href=\"https://youtu.be/IM_EDpvY4vA?si=jrhDvSM1wWdcnZgG\">Frank Sinatra - A Cruel Angel's Thesis</a>\n  <a href=\"https://youtu.be/_Y543NEiR5w?si=uLzQnCi-u3sp-ZSV\">Careless Whisper - Frank Sinatra AI Cover</a>\n</p>\n<h2>Ref</h2>\n",
+            "date_modified": "2023-12-09T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231202-twitter-bot",
             "url": "https://alanhc.github.io/logA/posts/20231202-twitter-bot",
             "title": "20231202-twitter-bot",
@@ -775,6 +808,105 @@
             "title": "Upgrade nx repo to react 18",
             "summary": "\n<ul>\n  <li>更新@nrwl/react 到14會自動更新React到18</li>\n  <li><a href=\"https://nx.dev/guides/react-18#react-18-migration\">https://nx.dev/guides/react-18#react-18-migration</a></li>\n  <li>npx 指令：暫時使用，不global下載</li>\n  <li>更新nx\n    <ul>\n      <li><code>npx nx m",
             "date_modified": "2022-07-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20220531-Decentral-Showroom-NTU-DApp-Term-project",
+            "url": "https://alanhc.github.io/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project",
+            "title": "Decentral Showroom — NTU DApp Term project",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/arbyM3t.png\" alt=\"\">\n</p>\n<p>photo by Hsiang Hsu, model: Cute Ubi</p>\n<blockquote>\n  <p>Decentral Showroom，屬於你的Metaverse展場空間</p>\n</blockquote>\n<p>期末我和實驗室同學Leo Chen、Jack Hsieh、Hsiang Hsu及Ubi Tsai製作了 一個基於Tezos鍊上的NFT",
+            "date_modified": "2022-05-31T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20220518-web3-世界裡的驗證機制-以Tezos為例",
+            "url": "https://alanhc.github.io/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例",
+            "title": "web3 世界裡的驗證機制，以Tezos為例",
+            "summary": "\n<p>在web3的世界裡面，區塊鏈錢包取代了過去綁定社交帳號登入的功能，以下面在Tezos上的NFT交易平台objkt為例，可以看到sync取代login的按鈕。</p>\n<p>\n  <img src=\"https://i.imgur.com/24a50VE.png\" alt=\"\">\n</p>\n<p>objkt</p>\n<p>如下圖，點選sync後，objkt會與您的錢包(temple wallet)互動，然後請您簽署一份payload：</p>\n<p>\n  <img src=\"https:/",
+            "date_modified": "2022-05-18T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211028-虛擬人課堂筆記4-vroid",
+            "url": "https://alanhc.github.io/logA/posts/20211028-虛擬人課堂筆記4-vroid",
+            "title": "20211028-虛擬人課堂筆記4-vroid",
+            "summary": "\n<ul>\n  <li><a href=\"https://vroid.com/en/studio\">vroid</a> (註冊&#x26;下載)</li>\n</ul>\n<p>調整模型到你喜歡的</p>\n<p>Face Editor>Generate Bone</p>\n<p>調整完 Camera/Export>Export Info> Material Reduction>設定2</p>\n<p>Camera/Export>Export Info> Texture Altas Resolution>",
+            "date_modified": "2021-10-28T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211027-虛擬人課堂筆記3-unity-facecapture",
+            "url": "https://alanhc.github.io/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture",
+            "title": "20211027-虛擬人課堂筆記3-unity-facecapture",
+            "summary": "\n<p>\n  去上禮拜<a href=\"https://readyplayer.me/\">ReadyPlayerMe</a>下載glb模型檔\n  \n  <img src=\"https://i.imgur.com/FWWnEgg.png\" alt=\"\">\n</p>\n<ol>\n  <li>打開Blender，按右鍵刪除方塊</li>\n</ol>\n<p>2. File>import>.glb</p>\n<p>3. 選擇角色跟骨架</p>\n<p>3. 全選模型> File>Export>照著下面紅框做>E",
+            "date_modified": "2021-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211018-虛擬人課堂筆記2",
+            "url": "https://alanhc.github.io/logA/posts/20211018-虛擬人課堂筆記2",
+            "title": "虛擬人課堂筆記2 —Mozilla Hub",
+            "summary": "\n<h1>在Mozilla Hub裡面使用虛擬角色</h1>\n<p>新建一個room：</p>\n<p><a href=\"https://hubs.mozilla.com\">https://hubs.mozilla.com</a></p>\n<p>\n  <img src=\"https://i.imgur.com/op3bKU6.png\" alt=\"\">\n</p>\n<p>掛載虛擬人</p>\n<p><a href=\"https://readyplayer.me\">https://readyplayer.",
+            "date_modified": "2021-10-18T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20211011-虛擬人課堂筆記-spark-ar",
+            "url": "https://alanhc.github.io/logA/posts/20211011-虛擬人課堂筆記-spark-ar",
+            "title": "虛擬人課堂筆記 — SparkAR",
+            "summary": "\n<h2>讀完這篇，將學會可在FB嵌入的濾鏡👇</h2>\n<p>先<a href=\"https://sparkar.facebook.com/ar-studio/download/\">下載 SparkAR</a></p>\n<p>\n  <img src=\"https://i.imgur.com/jGhSXT9.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/ue6p2Z8.png\" alt=\"\">\n</p>\n<ol>\n  <li>開啟 ",
+            "date_modified": "2021-10-11T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
+            "url": "https://alanhc.github.io/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
+            "title": "20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
+            "summary": "\n<p>請參考：<a href=\"https://next-school-up.vercel.app/\">銘傳金手指</a></p>\n<p>\n  <img src=\"https://i.imgur.com/ermaKMu.png\" alt=\"\">\n</p>\n<p>Photo by <a href=\"http://yabing890123@gmail.com\">joanna</a>, from <a href=\"https://www.facebook.com/upMCU\">upMCU</a></",
+            "date_modified": "2021-08-20T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20200330-為什我會成為dsc-lead及怎麼申請",
+            "url": "https://alanhc.github.io/logA/posts/20200330-為什我會成為dsc-lead及怎麼申請",
+            "title": "20200330-為什我會成為dsc-lead及怎麼申請",
+            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/4EZuaSk.png\" alt=\"\">\n</p>\n<p>MCU開源社(DSC MCU) logo</p>\n<blockquote>\n  <p>我們的宗旨，是打造一個讓學生可以互相討論及交流的學生開發者社團！</p>\n</blockquote>\n<h1>為什麼我會申請DSC Lead？</h1>\n<p>一次的黑客松的賽前技術訓練中，遇見了 Eric ShangKuan。剛好今年Google在台灣要推出Developer S",
+            "date_modified": "2020-03-30T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20190614-CGfinal",
+            "url": "https://alanhc.github.io/logA/posts/20190614-CGfinal",
+            "title": "20190614-CGfinal",
+            "summary": "\n<h3>alanhc/張牧之 電腦圖學-week17 [final]</h3>\n<p><a href=\"//1.bp.blogspot.com/-MTXC4fGai9E/XQXwPX8EOqI/AAAAAAAAKT8/cPuiAtKXqt4KJiqyYjqHT1yHnGu3nDnpQCK4BGAYYCw/s1600/s-948962aa160e9da97a540677d2bec48b97e6f72d.gif\"><img src=\"https://1.bp.blogspot.com/-MTXC4",
+            "date_modified": "2019-06-14T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
