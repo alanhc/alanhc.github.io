@@ -46,7 +46,7 @@ const Layout = ({ children }: AppProps) => {
     { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
     { name: "LogA", link: "/logA" },
-    { name: "LogA", link: "/about%23contact" },
+    { name: "Contract", link: "/about#contact" },
   ]
 
   return (
@@ -78,6 +78,15 @@ const Layout = ({ children }: AppProps) => {
         </Flex>
 
 
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+            {links.map(({ name, link }) => (
+                <NavLink link={link} key={link}>{name}</NavLink>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
       </Box>
       <Container maxW={'7xl'} p="12">
         <Box>{children}</Box>

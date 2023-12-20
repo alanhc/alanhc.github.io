@@ -12,7 +12,7 @@ export const TagContext = React.createContext<ITags|null>(null);
 const TagProvider = ({children}: { children: React.ReactNode }) => {
   const [tags, setTags] = useState(["select"]);
   const init_tags = async ()=>{
-    let pre_tags = await portfolio.projects.map((project: any, i: number) => project.language).flat(1);
+    let pre_tags = await portfolio.projects.map((project: any, i: number) => project.tech).flat(1);
     pre_tags.push("select")
     pre_tags = Array.from(new Set(pre_tags));
     setTags(pre_tags)

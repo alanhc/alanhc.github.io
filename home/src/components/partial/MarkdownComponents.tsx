@@ -1,6 +1,6 @@
 import SectionBlock from "@/components/partial/SectionBlock";
 import NextLink from "next/link";
-import { UnorderedList, ListItem, OrderedList, Link,Text } from "@chakra-ui/react";
+import { UnorderedList, ListItem, OrderedList, Link,Text, Code } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 export const components = {
     h1: ({ node, ...props }: any) => (
@@ -22,4 +22,5 @@ export const components = {
     ul: ({ node, ...props }: any) => <UnorderedList {...props} />,
     li: ({ node, ...props }: any) => <ListItem {...props} />,
     ol: ({ node, ...props }: any) => <OrderedList {...props} />,
+    code:({ node, ...props }: any) => <Code colorScheme="twitter" variant="outline"  {...props} />,
   };

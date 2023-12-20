@@ -36,7 +36,9 @@ import SEO from "../../next-seo.config";
 import { NextSeo } from "next-seo";
 export async function getStaticProps() {
   generateRSS();
-  const portfolio = portfolioData;
+  let portfolio = portfolioData;
+  
+  //portfolio.search_groups = 
   return {
     props: {
       portfolio,

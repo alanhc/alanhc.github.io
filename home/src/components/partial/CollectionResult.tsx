@@ -20,7 +20,7 @@ const CollectionResult = ({ projects, global_state }: any) => {
         if (saveTag) saveTag([])
     }
     function myFilter(value: any) {
-        return value.tags.some((x: string) => tags?.includes(x)) && value.language.some((x: string) => tags?.includes(x));
+        return value.tags.some((x: string) => tags?.includes(x)) && value.tech.some((x: string) => tags?.includes(x));
     }
     return (
 

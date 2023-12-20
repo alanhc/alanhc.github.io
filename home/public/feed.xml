@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sun, 03 Dec 2023 19:50:22 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 10 Dec 2023 10:40:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,109 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2023, alanhc</copyright>
+        <item>
+            <title><![CDATA[20231210-convert-post-markdown]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231210-convert-post-markdown</link>
+            <guid>20231210-convert-post-markdown</guid>
+            <pubDate>Sun, 10 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>medium</h2>
+<p><a href="https://github.com/dtesler/medium-to-markdown">https://github.com/dtesler/medium-to-markdown</a></p>
+<h2>Blogger</h2>
+<p><a href="https://codebeautify.org/html-to-markdown">https://codebeautify.org/html-to-markdown</a></p]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231209-docker-machine-learning]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231209-docker-machine-learning</link>
+            <guid>20231209-docker-machine-learning</guid>
+            <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Docker</h2>
+<p>
+  <code>docker search tensorflow</code>
+  <code>docker pull jupyter/tensorflow-notebook</code>
+  <code>docker run jupyter/tensorflow-notebook -p 8000:8888</code>
+</p>
+<ul>
+  <li>-p out:in</li>
+</ul>
+<p>
+  Transformers
+  <code>fro]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231209-AI-music-example]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231209-AI-music-example</link>
+            <guid>20231209-AI-music-example</guid>
+            <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  AI 音樂風格轉換太酷了
+  <a href="https://youtu.be/IM_EDpvY4vA?si=jrhDvSM1wWdcnZgG">Frank Sinatra - A Cruel Angel's Thesis</a>
+  <a href="https://youtu.be/_Y543NEiR5w?si=uLzQnCi-u3sp-ZSV">Careless Whisper - Frank Sinatra AI Cover</a>
+</p>
+<h2>Ref</h2>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231202-twitter-bot]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231202-twitter-bot</link>
+            <guid>20231202-twitter-bot</guid>
+            <pubDate>Sat, 02 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>1. 使用 twitter API</h2>
+<ol>
+  <li>
+    先去 <a href="https://developer.twitter.com/en/portal/dashboard">dashboard</a>建立App，並在User authentication settings > 設定
+    
+    <img src="https://i.imgur.com/zzfs8d9.png" alt="">
+  </li>
+  <li>
+    複製 Keys a]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20220811-monorepo-line]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220811-monorepo-line</link>
+            <guid>20220811-monorepo-line</guid>
+            <pubDate>Fri, 01 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<p>前言</p>
+<ul>
+  <li>LINE台灣用戶有2100萬</li>
+  <li>
+    LINE 跨國公司
+    正文
+  </li>
+  <li>時間：2000年初</li>
+  <li>共享code，scale build system 及 version control</li>
+  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>
+  <li>Pros
+    <ul>
+ ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231125-cloudflare-tunnel]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231125-cloudflare-tunnel</link>
+            <guid>20231125-cloudflare-tunnel</guid>
+            <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>方式一 使用 GUI</h1>
+<h2>run service</h2>
+<p>e.g. <code>docker run -p 80:80 -d nginx</code></p>
+<h2>cloudflare 設定</h2>
+<p>
+  <a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a>
+  dash > Zerotrust
+  
+  <img src="https://i.imgur.com]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20231124-terraform-vercel]]></title>
             <link>https://alanhc.github.io/logA/posts/20231124-terraform-vercel</link>
@@ -63,6 +166,27 @@
 <p>
   <img src="https://i.imgur.com/1t93zk7.png" alt="">
   不要]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases</link>
+            <guid>20231115-Building-Multi-Modal-Search-with-Vector-Databases</guid>
+            <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/0k8rQsV.png" alt="">
+  problem?
+  關鍵字搜尋
+  
+  <img src="https://i.imgur.com/mTMj2P7.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/9W5ClYB.png" alt="">
+  vector embeding
+</p>
+<p>
+  <img src="https://i.imgur.]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -252,7 +376,7 @@ void insertNode(int data)
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[20231101-generative-ai-for-everyone]]></title>
+            <title><![CDATA[20231101-]]></title>
             <link>https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone</link>
             <guid>20231101-generative-ai-for-everyone</guid>
             <pubDate>Thu, 02 Nov 2023 00:00:00 GMT</pubDate>
@@ -1121,6 +1245,458 @@ def t]]></description>
 <h1>Hi! 😃</h1>
 <p>hello world!</p>
 ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[Upgrade nx repo to react 18]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18</link>
+            <guid>20220721-upgrade-nx-repo-to-react-18</guid>
+            <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<ul>
+  <li>更新@nrwl/react 到14會自動更新React到18</li>
+  <li><a href="https://nx.dev/guides/react-18#react-18-migration">https://nx.dev/guides/react-18#react-18-migration</a></li>
+  <li>npx 指令：暫時使用，不global下載</li>
+  <li>更新nx
+    <ul>
+      <li><code>npx nx m]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[Decentral Showroom — NTU DApp Term project]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project</link>
+            <guid>20220531-Decentral-Showroom-NTU-DApp-Term-project</guid>
+            <pubDate>Tue, 31 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/arbyM3t.png" alt="">
+</p>
+<p>photo by Hsiang Hsu, model: Cute Ubi</p>
+<blockquote>
+  <p>Decentral Showroom，屬於你的Metaverse展場空間</p>
+</blockquote>
+<p>期末我和實驗室同學Leo Chen、Jack Hsieh、Hsiang Hsu及Ubi Tsai製作了 一個基於Tezos鍊上的NFT]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[web3 世界裡的驗證機制，以Tezos為例]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例</link>
+            <guid>20220518-web3-世界裡的驗證機制-以Tezos為例</guid>
+            <pubDate>Wed, 18 May 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>在web3的世界裡面，區塊鏈錢包取代了過去綁定社交帳號登入的功能，以下面在Tezos上的NFT交易平台objkt為例，可以看到sync取代login的按鈕。</p>
+<p>
+  <img src="https://i.imgur.com/24a50VE.png" alt="">
+</p>
+<p>objkt</p>
+<p>如下圖，點選sync後，objkt會與您的錢包(temple wallet)互動，然後請您簽署一份payload：</p>
+<p>
+  <img src="https:/]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211028-虛擬人課堂筆記4-vroid]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211028-虛擬人課堂筆記4-vroid</link>
+            <guid>20211028-虛擬人課堂筆記4-vroid</guid>
+            <pubDate>Thu, 28 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<ul>
+  <li><a href="https://vroid.com/en/studio">vroid</a> (註冊&#x26;下載)</li>
+</ul>
+<p>調整模型到你喜歡的</p>
+<p>Face Editor>Generate Bone</p>
+<p>調整完 Camera/Export>Export Info> Material Reduction>設定2</p>
+<p>Camera/Export>Export Info> Texture Altas Resolution>]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20211027-虛擬人課堂筆記3-unity-facecapture]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture</link>
+            <guid>20211027-虛擬人課堂筆記3-unity-facecapture</guid>
+            <pubDate>Wed, 27 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  去上禮拜<a href="https://readyplayer.me/">ReadyPlayerMe</a>下載glb模型檔
+  
+  <img src="https://i.imgur.com/FWWnEgg.png" alt="">
+</p>
+<ol>
+  <li>打開Blender，按右鍵刪除方塊</li>
+</ol>
+<p>2. File>import>.glb</p>
+<p>3. 選擇角色跟骨架</p>
+<p>3. 全選模型> File>Export>照著下面紅框做>E]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[虛擬人課堂筆記2 —Mozilla Hub]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211018-虛擬人課堂筆記2</link>
+            <guid>20211018-虛擬人課堂筆記2</guid>
+            <pubDate>Mon, 18 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>在Mozilla Hub裡面使用虛擬角色</h1>
+<p>新建一個room：</p>
+<p><a href="https://hubs.mozilla.com">https://hubs.mozilla.com</a></p>
+<p>
+  <img src="https://i.imgur.com/op3bKU6.png" alt="">
+</p>
+<p>掛載虛擬人</p>
+<p><a href="https://readyplayer.me">https://readyplayer.]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[虛擬人課堂筆記 — SparkAR]]></title>
+            <link>https://alanhc.github.io/logA/posts/20211011-虛擬人課堂筆記-spark-ar</link>
+            <guid>20211011-虛擬人課堂筆記-spark-ar</guid>
+            <pubDate>Mon, 11 Oct 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>讀完這篇，將學會可在FB嵌入的濾鏡👇</h2>
+<p>先<a href="https://sparkar.facebook.com/ar-studio/download/">下載 SparkAR</a></p>
+<p>
+  <img src="https://i.imgur.com/jGhSXT9.png" alt="">
+</p>
+<p>
+  <img src="https://i.imgur.com/ue6p2Z8.png" alt="">
+</p>
+<ol>
+  <li>開啟 ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20210820-開發mcu-up-銘傳金手指3-0-的那些事兒]]></title>
+            <link>https://alanhc.github.io/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</link>
+            <guid>20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</guid>
+            <pubDate>Fri, 20 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>請參考：<a href="https://next-school-up.vercel.app/">銘傳金手指</a></p>
+<p>
+  <img src="https://i.imgur.com/ermaKMu.png" alt="">
+</p>
+<p>Photo by <a href="http://yabing890123@gmail.com">joanna</a>, from <a href="https://www.facebook.com/upMCU">upMCU</a></]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20200330-為什我會成為dsc-lead及怎麼申請]]></title>
+            <link>https://alanhc.github.io/logA/posts/20200330-為什我會成為dsc-lead及怎麼申請</link>
+            <guid>20200330-為什我會成為dsc-lead及怎麼申請</guid>
+            <pubDate>Mon, 30 Mar 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/4EZuaSk.png" alt="">
+</p>
+<p>MCU開源社(DSC MCU) logo</p>
+<blockquote>
+  <p>我們的宗旨，是打造一個讓學生可以互相討論及交流的學生開發者社團！</p>
+</blockquote>
+<h1>為什麼我會申請DSC Lead？</h1>
+<p>一次的黑客松的賽前技術訓練中，遇見了 Eric ShangKuan。剛好今年Google在台灣要推出Developer S]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20190614-CGfinal]]></title>
+            <link>https://alanhc.github.io/logA/posts/20190614-CGfinal</link>
+            <guid>20190614-CGfinal</guid>
+            <pubDate>Fri, 14 Jun 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h3>alanhc/張牧之 電腦圖學-week17 [final]</h3>
+<p><a href="//1.bp.blogspot.com/-MTXC4fGai9E/XQXwPX8EOqI/AAAAAAAAKT8/cPuiAtKXqt4KJiqyYjqHT1yHnGu3nDnpQCK4BGAYYCw/s1600/s-948962aa160e9da97a540677d2bec48b97e6f72d.gif"><img src="https://1.bp.blogspot.com/-MTXC4]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20190409-uva409]]></title>
+            <link>https://alanhc.github.io/logA/posts/20190409-uva409</link>
+            <guid>20190409-uva409</guid>
+            <pubDate>Mon, 09 Apr 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZU3KamyHjeyRYUBe55Qklm2EDfet2LZXEBykmWxvBcuiGAo2EGWB-Jhpv6petJiutsLfUVrPXbaGyZnvzTYCKr-p3Asdf5ZWJTrFZUhzt4lcJ9BqvdmrboIssKgoKFGCh3fX5ov_u71S8-vAnJdf94m]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180405-uva630]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180405-uva630</link>
+            <guid>20180405-uva630</guid>
+            <pubDate>Thu, 05 Apr 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUjCZVfTWVpN-YxruuTa6Zxb9Niv-A_c-t6A2iojaZ6u3EAxJUwREbmPVy4TUqrSJzA76BpZiey9krp8XNdw7s4DXqD9uOE9B5oI5Wft_MISZ1VDqOT5X1GJY-Edtu-0QSOFdAkzDAZNZid7D4Cs-kfs0B]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180317-uva10409]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180317-uva10409</link>
+            <guid>20180317-uva10409</guid>
+            <pubDate>Sat, 17 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXaP_T8_j7nhUvXVfmlXe5oxYgFScAMBFbQDjBhHblfshtC_E5FZVxFakpMTr0QF61Ug7hOeZ6bOaKXgQu7fj8de741-QYjBCuTaNA3iZH2x1azPhnUn0ZaO-hSDUZnty6INLTSpKu_cgJsUhgy09Uv-O-]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180314-uva105]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180314-uva105</link>
+            <guid>20180314-uva105</guid>
+            <pubDate>Wed, 14 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUQAvrOLnhUg8gAgxrjuViGI2J9FXeLkv6ax2Suofq6zNNcLXJvnFptk_JrXNjWkgVi71x9_1aDD1Iw97g19_FPP7WBrz6EQhIlwqbClU5sMrA7p6gkaowWvOtSTJNz8DmfhxM7dqTGlUAQO4HPVeF_KRP]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180312-uva10190]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180312-uva10190</link>
+            <guid>20180312-uva10190</guid>
+            <pubDate>Mon, 12 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E6%9B%B4?__eep__=6&#x26;__cft__%5B0%5D=AZXKsASeP8yv3GQFmwMAB97lLtedKl7jUa-OZlTPreqehNhpS4-FXOOs_4iymD-ZIwiL2JaAfwIAwpBTCOR-cHIbD1Y6Qz-BUZXIBvfbLcs8vpjygxs8bYVYg0wfoLoKjmGYdcR5TZjNInCx4tBrF6T13a_PzhiHK4Sh]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180309-uva141]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180309-uva141</link>
+            <guid>20180309-uva141</guid>
+            <pubDate>Fri, 09 Mar 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E7%BA%8C?__eep__=6&#x26;__cft__%5B0%5D=AZUYI3uFckRV5BkHcM1swGyXTOK5pFMwUtVp4G8HG1TzktK0Xs544ls0v-Q9FkJWvm6_ggmSSc8ugHAB3PPFh0ZSjSpBXvZpKW7JJOWTH3l9M6jM4C1sIHfs0HJgY1IptvN1XeXTijd9N6mwTrM_YNdV9G6yMYttUglD]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180228-hash-table]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180228-hash-table</link>
+            <guid>20180228-hash-table</guid>
+            <pubDate>Wed, 28 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/data_structure_and_algorithms?__eep__=6&#x26;__cft__%5B0%5D=AZVEMsK7ypjElCs3HR_7O3Dqz56Z3tVUh43xhv3U7Vm-2RmcF2KOJ0eiy0ZT8Hs8V5itF6Ng9rR2W2DaPDcFTDzGVSmV5_LTGwpplPvIuXBxPd47Sx3Cl92cxdplGzQsyoKuM6TlkDvCekNL]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180222-uva401]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180222-uva401</link>
+            <guid>20180222-uva401</guid>
+            <pubDate>Thu, 22 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXJK464GxbR-YpyYdMrF43b4J1eKTpPbgyaGbiJZzOItb6VbRzfVZB1P11s-nsgRulL_91toNa6PUVCV-8L9iGXLUlUcEO3wXIgvW8IUNI1suDdilPEmKSnsLwGQNHSa-ip7dl1M5IvSxzaZCi6Vcp0z2k]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180212-uva10611]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180212-uva10611</link>
+            <guid>20180212-uva10611</guid>
+            <pubDate>Mon, 12 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <img src="https://i.imgur.com/daxm26z.jpg" alt="">
+  <img src="https://i.imgur.com/8DqMq4E.jpg" alt="">
+</p>
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://www.facebook.com/groups/363494050740833/permalink/404391153317789/">https://www.facebook.com/]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180210-NCTU-PCCA-winter-notes]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180210-NCTU-PCCA-winter-notes</link>
+            <guid>20180210-NCTU-PCCA-winter-notes</guid>
+            <pubDate>Sat, 10 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h1>NCTU PCCA winter</h1>
+<h2>快速索引</h2>
+<ul>
+  <li><a href="https://sites.google.com/g2.nctu.edu.tw/pcca-winter-2018/%E9%A6%96%E9%A0%81?authuser=0">活動網頁</a> | <a href="https://vjudge.net/contest/204504">水題大賽</a> | <a href="https://sites.google.com/g]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180209-uva406]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180209-uva406</link>
+            <guid>20180209-uva406</guid>
+            <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWuJ_MExaDDIO3GsIzeo3R1GlNMTeC33pqBL8woS5mQ056nLXkYDLAwY83ivy4-0wT7uVVCHB5uUXpxMXehU7laRKFGoIbskjTnrBoaODYOTvEAOUrfRMXnza-6K1DnIQrMd3jMaLyFWrq8oE2MOV5FGcT]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180209-linked-list]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180209-linked-list</link>
+            <guid>20180209-linked-list</guid>
+            <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E7%B7%B4%E7%BF%92?__eep__=6&#x26;__cft__%5B0%5D=AZUnn6vVAhlordDoly2czsqYs2RQ1OFk_QMJWwY6Jv6fYGXZwr9u38ZRxvtRC0i_-nl84g98zTwlyqCo9EV0EOPzqt4CxetfqNjSAklWQcKroQQejYlV1zKQKV01KcodnfBX0OkgYrc1w_tzYU2_FjPsx6m]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180206-uva10162]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180206-uva10162</link>
+            <guid>20180206-uva10162</guid>
+            <pubDate>Tue, 06 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXth538V0o5xEvIsIDhVRvfw7KlWeAQsu35gDE-PD-DkVXPjfLoapAWxMqNNoIydbnoxGJcZWKtyLuI6phDgFb0ZpS2DFCIqo-8lArQZUVON9QWMP1WHBgEmE3iM4bXZ9EeYVvNJePI5UV82-1d25T1Udl]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180205-uva10405]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180205-uva10405</link>
+            <guid>20180205-uva10405</guid>
+            <pubDate>Mon, 05 Feb 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="">#心得</a> <a href="">#Longest_Common_Subsequence</a> <a href="">#LCS</a> <a href="">#DP</a> <a href="">#Uva10405</a> <a href="">#解題</a></p>
+<p>心得：</p>
+<p>這題其實看懂題目+用陣列來填真的蠻簡單，但是我debug了一天，因為我圖表陣列的型別弄錯QQ 要注意這個陣列是int</p>
+<p>題目：找最長的共同子集合</p>
+]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180131-uva11917]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180131-uva11917</link>
+            <guid>20180131-uva11917</guid>
+            <pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZU1SFdqum70_lIZpz8s_XGGPjJJiX5DNDyV9bYZP8yVBFQQnX9ugmim2nbfSTi4C1-WEMfoSWM-Mjbh3JDZMnuNctzP2n8ESa8XUiAR4RGRcYVCwp3qxfbBCYMorYM-DrqYkk-aILVshUa4-uDqh4pml6s]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180128-uva10931]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180128-uva10931</link>
+            <guid>20180128-uva10931</guid>
+            <pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUQWQe2svEDA5pKnMNrfclP_50US1grnHKvcpKHvRGZRqV-uaHv7aJCQnWtEqnGV6DSfQbgKtLMDwBRacJjFUU2GYnAe-nXK7Y8MLNyIMuTXnv3s5aYOHtLOu_ixrId8ufeqYOJ_Ym6DTq6psp4HEbCfQI]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180124-gets-puts]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180124-gets-puts</link>
+            <guid>20180124-gets-puts</guid>
+            <pubDate>Wed, 24 Jan 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWyWa5MzAwM1Nr9U922RKjA0YFjLWNWLg0oIpjRabOAkBWc9vNtwNTenxorr3YlTyTivUBfoReYkBbiUER72uZcIgxlOmnWBAlyF-bOVW3tcEgdykgxQcRVLPlATQe-Dom3U7zjYYXuCTTzwW3TjhFWVzh]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180123-int2str]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180123-int2str</link>
+            <guid>20180123-int2str</guid>
+            <pubDate>Tue, 23 Jan 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWZFm9BoSnltzZCjxyreHWIk7DN4dflfIChADeiCenwwzFp2jRwTSpq6Hod62IyII_QS5qCM07KXJX-glrDefmCVs3YAbFZw2lZXx-H8NfToEyn_XTx9T7-j9lwBtLEcQsYlBnjVMH9G6zQKD_9pNPuS64]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20180119-hackmd]]></title>
+            <link>https://alanhc.github.io/logA/posts/20180119-hackmd</link>
+            <guid>20180119-hackmd</guid>
+            <pubDate>Fri, 19 Jan 2018 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZWrqnxkmh2vocQBuGpgp_P4XBloDDABzvyTpxmrfb29IOEDWE7A-itkH-GCDMiNxtUAIv1L2Jq83M9-nQYgiN_NC74BljuV8dIwWobQv4z2IBKEPsyry3FVyq9HPH3nsYrdjEPddR3gHTSbfqWQBE-nPqk]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171230-recursion]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171230-recursion</link>
+            <guid>20171230-recursion</guid>
+            <pubDate>Sat, 30 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUi9EhO1AxvWuev5lfYQ9vH7eoB8iEMbdW9cLr_Av60-iI0R-KRUjCqlnrHK8Jcup_TLJQPnghkZmmSE34oonc79XBLjQaHA_drRrHWfTEEp_6tYObuga490V3AcvHD6crvaeAmGo5QmBDt8rgxbXvBo0f]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171221-uva10190]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171221-uva10190</link>
+            <guid>20171221-uva10190</guid>
+            <pubDate>Thu, 21 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/debug?__eep__=6&#x26;__cft__%5B0%5D=AZVA978Ul4liU9fJQ3zSzDO1nYMJQH-2ynnmUoEAJhgZNayYurL0P2Luj3MrD6zZtyMbKbVu1qp9lhKcLxbWZKb5nzEZiGACZuaHMTIIUN3rnXAdYu2myTnlI-b_39cn5QDgNbDgMI3Y_VZMunfSVzexv2mE9U1O2gi2TCu6]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171219-recursion]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171219-recursion</link>
+            <guid>20171219-recursion</guid>
+            <pubDate>Tue, 19 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe3]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171217-DP]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171217-DP</link>
+            <guid>20171217-DP</guid>
+            <pubDate>Sun, 17 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZW8h0LBTah501Oo3H-ot4494tYWv5SMlI4OKjNzpIc79ypNxD1zHFFBf5Mkk6akhS1uCl_6cwg7w4vQ1ZkxFuAkedYKh8sYc59yNrKKi5JAxHPsWpIu4mItcXD5jV13mfuCJ9dSPezEAJZwWx8zfeYnNy5]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171210-vector]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171210-vector</link>
+            <guid>20171210-vector</guid>
+            <pubDate>Sun, 10 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUO65Ug-wELBllXjnBpGPIr1flrwKtRiFPuNn4W_deYZGNcuFKkCo6PXAZ5aNWuV6ji4XRoNmHBm2H2ipbw58LL2KhQtUsacshByDrQDatexjh9atdHl2h4uo8RkLxZW5z_faVZofFe5UPwLLEOO6zINwV]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171202-styleguide]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171202-styleguide</link>
+            <guid>20171202-styleguide</guid>
+            <pubDate>Sat, 02 Dec 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  <a href="https://www.facebook.com/hashtag/%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZUB1vXBKbrzjGb2sMW06aisRc6HsARl1V41kQEVfykzeum5p0j39KknS27UT8pnYQL4J4hyS-CqZLwduL3yYPIY-xe99T606pHevHQxU_7j9ot3oajXCuPNej6L_tJ4bAsvuN]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171106-gcd]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171106-gcd</link>
+            <guid>20171106-gcd</guid>
+            <pubDate>Mon, 06 Nov 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E7%A8%8B%E5%BC%8F%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZX7hl_TW7KwyQlmwpO9DqeU0XAjBq52l8mSCBrP90F6gph9iSdUrZ-SxBF0kmItMf096X7T3GKY5W2W2_zl258VDKAWSFbRAQD44GFvVIxEU_9NGdkPyE4XT1ymKK21WTKRbiXYE]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171105-makerfair]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171105-makerfair</link>
+            <guid>20171105-makerfair</guid>
+            <pubDate>Sun, 05 Nov 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>前情提要：</p>
+<p>今天去MakerFaire有個攤位是做智慧家電的，</p>
+<p>我覺得有個還蠻適合拿來討論的，</p>
+<p>簡單來說一般做物聯網都是用網路來做，</p>
+<p>但他們很特別是靠電力系統來做資料傳輸，</p>
+<p>我覺得方式還蠻有趣的，</p>
+<p>但我問了兩個問題：</p>
+<p>問題：</p>
+<p>Q1. 所有的電力系統都會連到同一條通往台電的線，那不是代表駭客只要在家插插頭就可以開始去散播寫的病毒程式，或直接在變壓站植入竊聽程式？</p>
+<p>]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171102-computer-virus]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171102-computer-virus</link>
+            <guid>20171102-computer-virus</guid>
+            <pubDate>Thu, 02 Nov 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXlbna_XcYPEnTgUyFmv6FgCIqAGu7QIsZOZsHZ8LrivarNzUGQvOPIRkej2uMiTT4hDLX-m08EQOR3GZUVcEK_sopLfRnMln4-TrkS5YONUVbzPGpCRDRLYAtP_Hz4yq9xMA51IKHwHtU_x4Nl5o3X7zB]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171027-refactor]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171027-refactor</link>
+            <guid>20171027-refactor</guid>
+            <pubDate>Fri, 27 Oct 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.ithome.com.tw/node/46046">https://www.ithome.com.tw/node/46046</a></p>
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://www.facebook.com/groups/363494050740833/permalink/363567360733502/">https://www.facebook.com/groups/3634940507408]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20171027-bnf]]></title>
+            <link>https://alanhc.github.io/logA/posts/20171027-bnf</link>
+            <guid>20171027-bnf</guid>
+            <pubDate>Fri, 27 Oct 2017 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p><a href="https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUz_gNDElA-5k_2F-9vJBzQwKHDdD2KsuDJvqqMmHsUJ3hxmYqlPCEQynrj1EV-2rfTZHX6rUCqMF_sqwNVfOOqntifX1t4yIJLqiFAMuQV4b2EmD-VHyXUxudTt80rTPNmXWT2rfxky49rF4Bz5Lu5MVO]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

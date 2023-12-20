@@ -40,7 +40,7 @@ const Project = ({ metadata }: any) => {
                         </Box>
                         <Box display="flex" mt="1">
                             {metadata.formattedPrice}
-                            {metadata.language.slice(0, 3).map((lan: string) => (
+                            {metadata.tech.slice(0, 3).map((lan: string) => (
                                 <Box key={lan} as="span" color="gray" fontSize="sm">
                                     {lan} &nbsp;
                                 </Box>
