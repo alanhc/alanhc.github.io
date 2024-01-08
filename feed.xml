@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Sun, 07 Jan 2024 23:10:43 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 08 Jan 2024 10:04:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -14,6 +14,71 @@
         </image>
         <copyright>All rights reserved 2024, alanhc</copyright>
         <item>
+            <title><![CDATA[20240108-attention]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240108-attention</link>
+            <guid>20240108-attention</guid>
+            <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>公司 → 搶奪注意力</p>
+<p>太多分心事</p>
+<ul>
+  <li>克服
+    <ul>
+      <li>決心、自我反省</li>
+    </ul>
+  </li>
+</ul>
+<p>why? 手機成癮</p>
+<p>多巴安 → 採取行動獲得獎勵</p>
+<p>看手機→獎勵→空虛 （重複）久了會疲乏 →思考力下降 高度專注任務難以進行 因為需要相同刺激</p>
+<p>多巴安排毒 = 減少外在刺激</p>
+<ol>
+  <li>（激烈）24-48 小時內 斷絕 網路 社群]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20240107-notion-websire]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240107-notion-websire</link>
+            <guid>20240107-notion-websire</guid>
+            <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<p>
+  使用這套件可以讓notion嵌入到網站
+  因為notion不能使用iframe 嵌入，大多數的solution都要付費
+</p>
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://github.com/NotionX/react-notion-x">https://github.com/NotionX/react-notion-x</a></li>
+  <li><a href="https://github.com/NotionX/react-no]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231217-ntu-matches]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231217-ntu-matches</link>
+            <guid>20231217-ntu-matches</guid>
+            <pubDate>Sun, 17 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>先請AI生成資料</h2>
+<h3>prompt</h3>
+<pre><code class="language-text">請生成三組男女，各有各的自我介紹，僅說明自己，這個叫做content 請將這三組男女配對 用第一個使用者去敘述他配對的對象，這叫做mate 生成以上敘述的json資料，共會有六筆，有mate, content, gender, wish_gender欄位
+</code></pre>
+<h3>回傳</h3>
+<pre><code class="language-j]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20231217-google-gemini]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231217-google-gemini</link>
+            <guid>20231217-google-gemini</guid>
+            <pubDate>Sun, 17 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook">https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook</a></li>
+  <li><a href="https://makersuite.google.com/app/library">https://makersuite.goo]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
             <title><![CDATA[20231210-convert-post-markdown]]></title>
             <link>https://alanhc.github.io/logA/posts/20231210-convert-post-markdown</link>
             <guid>20231210-convert-post-markdown</guid>
@@ -22,7 +87,8 @@
 <h2>medium</h2>
 <p><a href="https://github.com/dtesler/medium-to-markdown">https://github.com/dtesler/medium-to-markdown</a></p>
 <h2>Blogger</h2>
-<p><a href="https://codebeautify.org/html-to-markdown">https://codebeautify.org/html-to-markdown</a></p]]></description>
+<p>
+  <a href="https://codebeautify.org/html-to-markdown">https://codebeautify.org/html-to-markdown</a>]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -97,6 +163,20 @@
   <li>Pros
     <ul>
  ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[Should You Use Open Source Large Language Models?]]></title>
+            <link>https://alanhc.github.io/logA/posts/20231129-Should You Use Open Source Large Language Models?</link>
+            <guid>20231129-Should You Use Open Source Large Language Models?</guid>
+            <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+<h2>Ref</h2>
+<p>
+  <a href="https://www.youtube.com/watch?v=y9k-U9AuDeM">https://www.youtube.com/watch?v=y9k-U9AuDeM</a>
+  <img src="https://i.imgur.com/RU3QUqs.png" alt="">
+</p>
+]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -376,7 +456,7 @@ void insertNode(int data)
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[20231101-]]></title>
+            <title><![CDATA[20231101-generative-ai-for-everyone]]></title>
             <link>https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone</link>
             <guid>20231101-generative-ai-for-everyone</guid>
             <pubDate>Thu, 02 Nov 2023 00:00:00 GMT</pubDate>

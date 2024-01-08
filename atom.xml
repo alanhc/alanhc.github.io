@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-01-07T23:10:43.019Z</updated>
+    <updated>2024-01-08T10:04:01.200Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -16,6 +16,87 @@
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, alanhc</rights>
     <entry>
+        <title type="html"><![CDATA[20240108-attention]]></title>
+        <id>20240108-attention</id>
+        <link href="https://alanhc.github.io/logA/posts/20240108-attention"/>
+        <updated>2024-01-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>公司 → 搶奪注意力</p>
+<p>太多分心事</p>
+<ul>
+  <li>克服
+    <ul>
+      <li>決心、自我反省</li>
+    </ul>
+  </li>
+</ul>
+<p>why? 手機成癮</p>
+<p>多巴安 → 採取行動獲得獎勵</p>
+<p>看手機→獎勵→空虛 （重複）久了會疲乏 →思考力下降 高度專注任務難以進行 因為需要相同刺激</p>
+<p>多巴安排毒 = 減少外在刺激</p>
+<ol>
+  <li>（激烈）24-48 小時內 斷絕 網路 社群]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240107-notion-websire]]></title>
+        <id>20240107-notion-websire</id>
+        <link href="https://alanhc.github.io/logA/posts/20240107-notion-websire"/>
+        <updated>2024-01-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<p>
+  使用這套件可以讓notion嵌入到網站
+  因為notion不能使用iframe 嵌入，大多數的solution都要付費
+</p>
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://github.com/NotionX/react-notion-x">https://github.com/NotionX/react-notion-x</a></li>
+  <li><a href="https://github.com/NotionX/react-no]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231217-ntu-matches]]></title>
+        <id>20231217-ntu-matches</id>
+        <link href="https://alanhc.github.io/logA/posts/20231217-ntu-matches"/>
+        <updated>2023-12-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>先請AI生成資料</h2>
+<h3>prompt</h3>
+<pre><code class="language-text">請生成三組男女，各有各的自我介紹，僅說明自己，這個叫做content 請將這三組男女配對 用第一個使用者去敘述他配對的對象，這叫做mate 生成以上敘述的json資料，共會有六筆，有mate, content, gender, wish_gender欄位
+</code></pre>
+<h3>回傳</h3>
+<pre><code class="language-j]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231217-google-gemini]]></title>
+        <id>20231217-google-gemini</id>
+        <link href="https://alanhc.github.io/logA/posts/20231217-google-gemini"/>
+        <updated>2023-12-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>Ref</h2>
+<ul>
+  <li><a href="https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook">https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook</a></li>
+  <li><a href="https://makersuite.google.com/app/library">https://makersuite.goo]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20231210-convert-post-markdown]]></title>
         <id>20231210-convert-post-markdown</id>
         <link href="https://alanhc.github.io/logA/posts/20231210-convert-post-markdown"/>
@@ -24,7 +105,8 @@
 <h2>medium</h2>
 <p><a href="https://github.com/dtesler/medium-to-markdown">https://github.com/dtesler/medium-to-markdown</a></p>
 <h2>Blogger</h2>
-<p><a href="https://codebeautify.org/html-to-markdown">https://codebeautify.org/html-to-markdown</a></p]]></summary>
+<p>
+  <a href="https://codebeautify.org/html-to-markdown">https://codebeautify.org/html-to-markdown</a>]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -115,6 +197,24 @@
   <li>Pros
     <ul>
  ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Should You Use Open Source Large Language Models?]]></title>
+        <id>20231129-Should You Use Open Source Large Language Models?</id>
+        <link href="https://alanhc.github.io/logA/posts/20231129-Should You Use Open Source Large Language Models?"/>
+        <updated>2023-11-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+<h2>Ref</h2>
+<p>
+  <a href="https://www.youtube.com/watch?v=y9k-U9AuDeM">https://www.youtube.com/watch?v=y9k-U9AuDeM</a>
+  <img src="https://i.imgur.com/RU3QUqs.png" alt="">
+</p>
+]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -458,7 +558,7 @@ void insertNode(int data)
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20231101-]]></title>
+        <title type="html"><![CDATA[20231101-generative-ai-for-everyone]]></title>
         <id>20231101-generative-ai-for-everyone</id>
         <link href="https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone"/>
         <updated>2023-11-02T00:00:00.000Z</updated>

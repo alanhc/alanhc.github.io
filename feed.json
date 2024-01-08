@@ -11,10 +11,54 @@
     },
     "items": [
         {
+            "id": "20240108-attention",
+            "url": "https://alanhc.github.io/logA/posts/20240108-attention",
+            "title": "20240108-attention",
+            "summary": "\n<p>公司 → 搶奪注意力</p>\n<p>太多分心事</p>\n<ul>\n  <li>克服\n    <ul>\n      <li>決心、自我反省</li>\n    </ul>\n  </li>\n</ul>\n<p>why? 手機成癮</p>\n<p>多巴安 → 採取行動獲得獎勵</p>\n<p>看手機→獎勵→空虛 （重複）久了會疲乏 →思考力下降 高度專注任務難以進行 因為需要相同刺激</p>\n<p>多巴安排毒 = 減少外在刺激</p>\n<ol>\n  <li>（激烈）24-48 小時內 斷絕 網路 社群",
+            "date_modified": "2024-01-08T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240107-notion-websire",
+            "url": "https://alanhc.github.io/logA/posts/20240107-notion-websire",
+            "title": "20240107-notion-websire",
+            "summary": "\n<p>\n  使用這套件可以讓notion嵌入到網站\n  因為notion不能使用iframe 嵌入，大多數的solution都要付費\n</p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://github.com/NotionX/react-notion-x\">https://github.com/NotionX/react-notion-x</a></li>\n  <li><a href=\"https://github.com/NotionX/react-no",
+            "date_modified": "2024-01-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231217-ntu-matches",
+            "url": "https://alanhc.github.io/logA/posts/20231217-ntu-matches",
+            "title": "20231217-ntu-matches",
+            "summary": "\n<h2>先請AI生成資料</h2>\n<h3>prompt</h3>\n<pre><code class=\"language-text\">請生成三組男女，各有各的自我介紹，僅說明自己，這個叫做content 請將這三組男女配對 用第一個使用者去敘述他配對的對象，這叫做mate 生成以上敘述的json資料，共會有六筆，有mate, content, gender, wish_gender欄位\n</code></pre>\n<h3>回傳</h3>\n<pre><code class=\"language-j",
+            "date_modified": "2023-12-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231217-google-gemini",
+            "url": "https://alanhc.github.io/logA/posts/20231217-google-gemini",
+            "title": "20231217-google-gemini",
+            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook\">https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook</a></li>\n  <li><a href=\"https://makersuite.google.com/app/library\">https://makersuite.goo",
+            "date_modified": "2023-12-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231210-convert-post-markdown",
             "url": "https://alanhc.github.io/logA/posts/20231210-convert-post-markdown",
             "title": "20231210-convert-post-markdown",
-            "summary": "\n<h2>medium</h2>\n<p><a href=\"https://github.com/dtesler/medium-to-markdown\">https://github.com/dtesler/medium-to-markdown</a></p>\n<h2>Blogger</h2>\n<p><a href=\"https://codebeautify.org/html-to-markdown\">https://codebeautify.org/html-to-markdown</a></p",
+            "summary": "\n<h2>medium</h2>\n<p><a href=\"https://github.com/dtesler/medium-to-markdown\">https://github.com/dtesler/medium-to-markdown</a></p>\n<h2>Blogger</h2>\n<p>\n  <a href=\"https://codebeautify.org/html-to-markdown\">https://codebeautify.org/html-to-markdown</a>",
             "date_modified": "2023-12-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -60,6 +104,17 @@
             "title": "20220811-monorepo-line",
             "summary": "\n<h2>Ref</h2>\n<p>前言</p>\n<ul>\n  <li>LINE台灣用戶有2100萬</li>\n  <li>\n    LINE 跨國公司\n    正文\n  </li>\n  <li>時間：2000年初</li>\n  <li>共享code，scale build system 及 version control</li>\n  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>\n  <li>Pros\n    <ul>\n ",
             "date_modified": "2023-12-01T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231129-Should You Use Open Source Large Language Models?",
+            "url": "https://alanhc.github.io/logA/posts/20231129-Should You Use Open Source Large Language Models?",
+            "title": "Should You Use Open Source Large Language Models?",
+            "summary": "\n<h2>Ref</h2>\n<p>\n  <a href=\"https://www.youtube.com/watch?v=y9k-U9AuDeM\">https://www.youtube.com/watch?v=y9k-U9AuDeM</a>\n  <img src=\"https://i.imgur.com/RU3QUqs.png\" alt=\"\">\n</p>\n",
+            "date_modified": "2023-11-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -233,7 +288,7 @@
         {
             "id": "20231101-generative-ai-for-everyone",
             "url": "https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone",
-            "title": "20231101-",
+            "title": "20231101-generative-ai-for-everyone",
             "summary": "\n<h2>What is Generative AI</h2>\n<p>\n  <img src=\"https://i.imgur.com/Q877q0W.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/8DpeAAb.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/FhLUDBG.png\" alt=\"\">\n</p>\n<ul>\n  <li>\n    <p>\n      Superv",
             "date_modified": "2023-11-02T00:00:00.000Z",
             "author": {
