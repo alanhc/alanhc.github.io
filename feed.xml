@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 08 Jan 2024 23:43:06 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jan 2024 14:31:39 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,27 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2024, alanhc</copyright>
+        <item>
+            <title><![CDATA[20240113-data-pay]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240113-data-pay</link>
+            <guid>20240113-data-pay</guid>
+            <pubDate>Sat, 13 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+中國經濟變差 政府監管 員工信心
+全球資產配置 美股 賺美元全權資產配置
+大廠 推行要一年
+大廠大家做得跟核心業務沒關
+數據 有博士會有加成、做得好不需要博]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20240108-attention]]></title>
             <link>https://alanhc.github.io/logA/posts/20240108-attention</link>
@@ -1373,29 +1394,6 @@ s = requests.Session()
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[20220811-intern-at-line]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220811-intern-at-line</link>
-            <guid>20220811-intern-at-line</guid>
-            <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Ref
-前言
-- LINE台灣用戶有2100萬
-- LINE 跨國公司
-正文
-- 時間：2000年初
-- 共享code，scale build sys]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
             <title><![CDATA[實作ipfs上傳的前端]]></title>
             <link>https://alanhc.github.io/logA/posts/20230109-ipfs-upload</link>
             <guid>20230109-ipfs-upload</guid>
@@ -1512,6 +1510,29 @@ hello world!
 </body>
 </html>
 ]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20220811-intern-at-line]]></title>
+            <link>https://alanhc.github.io/logA/posts/20220811-intern-at-line</link>
+            <guid>20220811-intern-at-line</guid>
+            <pubDate>Thu, 11 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+前言
+- LINE台灣用戶有2100萬
+- LINE 跨國公司
+正文
+- 時間：2000年初
+- 共享code，scale build sys]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

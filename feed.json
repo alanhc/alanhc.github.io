@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "20240113-data-pay",
+            "url": "https://alanhc.github.io/logA/posts/20240113-data-pay",
+            "title": "20240113-data-pay",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n中國經濟變差 政府監管 員工信心\n全球資產配置 美股 賺美元全權資產配置\n大廠 推行要一年\n大廠大家做得跟核心業務沒關\n數據 有博士會有加成、做得好不需要博",
+            "date_modified": "2024-01-13T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240108-attention",
             "url": "https://alanhc.github.io/logA/posts/20240108-attention",
             "title": "20240108-attention",
@@ -770,17 +781,6 @@
             }
         },
         {
-            "id": "20220811-intern-at-line",
-            "url": "https://alanhc.github.io/logA/posts/20220811-intern-at-line",
-            "title": "20220811-intern-at-line",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n前言\n- LINE台灣用戶有2100萬\n- LINE 跨國公司\n正文\n- 時間：2000年初\n- 共享code，scale build sys",
-            "date_modified": "2023-08-11T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20230109-ipfs-upload",
             "url": "https://alanhc.github.io/logA/posts/20230109-ipfs-upload",
             "title": "實作ipfs上傳的前端",
@@ -841,6 +841,17 @@
             "title": "Hello World",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# Hi! 😃\nhello world!\n\n</body>\n</html>\n",
             "date_modified": "2022-12-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20220811-intern-at-line",
+            "url": "https://alanhc.github.io/logA/posts/20220811-intern-at-line",
+            "title": "20220811-intern-at-line",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n前言\n- LINE台灣用戶有2100萬\n- LINE 跨國公司\n正文\n- 時間：2000年初\n- 共享code，scale build sys",
+            "date_modified": "2022-08-11T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
