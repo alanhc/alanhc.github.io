@@ -11,10 +11,43 @@
     },
     "items": [
         {
+            "id": "20240122-english-speaking",
+            "url": "https://alanhc.github.io/logA/posts/20240122-english-speaking",
+            "title": "沒環境講英文？如何跟 ChatGPT 對話，快速加強口說",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[Voice Control for ChatGPT](https://chromewebstore.google.com/detail/voice-con",
+            "date_modified": "2024-01-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20230122-ntu-cool-video-download",
+            "url": "https://alanhc.github.io/logA/posts/20230122-ntu-cool-video-download",
+            "title": "20230122-ntu-cool",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://cdm-project.com/How-To\n- https://www.youtube.com/watch?v=hT6A",
+            "date_modified": "2024-01-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240121-Web-Scraping-Instagram-with-Selenium",
+            "url": "https://alanhc.github.io/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium",
+            "title": "20240121-Web-Scraping-Instagram-with-Selenium",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://github.com/alanhc/bot/blob/main/instagram.ipynb\n## Ref\nhttps://youtu.b",
+            "date_modified": "2024-01-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240119-OSINT",
             "url": "https://alanhc.github.io/logA/posts/20240119-OSINT",
             "title": "20240119-OSINT",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://minmin0625.medium.com/滲透測試lab-如何使用osint-spiderfoot-執行情蒐-425de6e9198c\n#",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 一開始看到\n- [The KK Show - 187 中共網軍的敵人 - 沈伯洋](https://youtu.be/Da2LDllZjHQ?si=Kf",
             "date_modified": "2024-01-19T00:00:00.000Z",
             "author": {
                 "name": "alanhc",

@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Tue, 23 Jan 2024 11:34:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jan 2024 16:15:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,61 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2024, alanhc</copyright>
+        <item>
+            <title><![CDATA[沒環境講英文？如何跟 ChatGPT 對話，快速加強口說]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240122-english-speaking</link>
+            <guid>20240122-english-speaking</guid>
+            <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+[Voice Control for ChatGPT](https://chromewebstore.google.com/detail/voice-con]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20230122-ntu-cool]]></title>
+            <link>https://alanhc.github.io/logA/posts/20230122-ntu-cool-video-download</link>
+            <guid>20230122-ntu-cool-video-download</guid>
+            <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+- https://cdm-project.com/How-To
+- https://www.youtube.com/watch?v=hT6A]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20240121-Web-Scraping-Instagram-with-Selenium]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium</link>
+            <guid>20240121-Web-Scraping-Instagram-with-Selenium</guid>
+            <pubDate>Sun, 21 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://github.com/alanhc/bot/blob/main/instagram.ipynb
+## Ref
+https://youtu.b]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20240119-OSINT]]></title>
             <link>https://alanhc.github.io/logA/posts/20240119-OSINT</link>
@@ -27,8 +82,8 @@
 </head>
 <body>
 
-https://minmin0625.medium.com/滲透測試lab-如何使用osint-spiderfoot-執行情蒐-425de6e9198c
-#]]></description>
+- 一開始看到
+- [The KK Show - 187 中共網軍的敵人 - 沈伯洋](https://youtu.be/Da2LDllZjHQ?si=Kf]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
