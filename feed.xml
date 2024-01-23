@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Tue, 23 Jan 2024 16:15:48 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Jan 2024 16:27:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,24 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2024, alanhc</copyright>
+        <item>
+            <title><![CDATA[20230122-ntu-cool]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240122-ntu-cool-video-download</link>
+            <guid>20240122-ntu-cool-video-download</guid>
+            <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+- https://www.youtube.com/watch?v=hT6A8zRn0Ck&#x26;t=31s&#x26;ab_channe]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[沒環境講英文？如何跟 ChatGPT 對話，快速加強口說]]></title>
             <link>https://alanhc.github.io/logA/posts/20240122-english-speaking</link>
@@ -63,9 +81,9 @@
 </head>
 <body>
 
-https://github.com/alanhc/bot/blob/main/instagram.ipynb
+- https://github.com/alanhc/bot/blob/main/instagram.ipynb
 ## Ref
-https://youtu.b]]></description>
+https://youtu]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

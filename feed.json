@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "20240122-ntu-cool-video-download",
+            "url": "https://alanhc.github.io/logA/posts/20240122-ntu-cool-video-download",
+            "title": "20230122-ntu-cool",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://www.youtube.com/watch?v=hT6A8zRn0Ck&#x26;t=31s&#x26;ab_channe",
+            "date_modified": "2024-01-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240122-english-speaking",
             "url": "https://alanhc.github.io/logA/posts/20240122-english-speaking",
             "title": "沒環境講英文？如何跟 ChatGPT 對話，快速加強口說",
@@ -36,7 +47,7 @@
             "id": "20240121-Web-Scraping-Instagram-with-Selenium",
             "url": "https://alanhc.github.io/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium",
             "title": "20240121-Web-Scraping-Instagram-with-Selenium",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://github.com/alanhc/bot/blob/main/instagram.ipynb\n## Ref\nhttps://youtu.b",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- https://github.com/alanhc/bot/blob/main/instagram.ipynb\n## Ref\nhttps://youtu",
             "date_modified": "2024-01-21T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
