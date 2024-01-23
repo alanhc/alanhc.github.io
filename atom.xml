@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-01-23T16:27:26.761Z</updated>
+    <updated>2024-01-23T16:29:30.416Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -52,29 +52,6 @@
 <body>
 
 [Voice Control for ChatGPT](https://chromewebstore.google.com/detail/voice-con]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20230122-ntu-cool]]></title>
-        <id>20230122-ntu-cool-video-download</id>
-        <link href="https://alanhc.github.io/logA/posts/20230122-ntu-cool-video-download"/>
-        <updated>2024-01-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Ref
-- https://cdm-project.com/How-To
-- https://www.youtube.com/watch?v=hT6A]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
