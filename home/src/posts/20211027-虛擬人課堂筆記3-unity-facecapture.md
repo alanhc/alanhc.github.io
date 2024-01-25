@@ -4,6 +4,7 @@ date: 2021-10-27
 tags:
   - unity
   - medium
+  - select
 ---
 
 去上禮拜[ReadyPlayerMe](https://readyplayer.me/)下載glb模型檔

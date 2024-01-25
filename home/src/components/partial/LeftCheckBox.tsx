@@ -3,8 +3,9 @@ import { useContext, useEffect } from "react";
 import { TagContext } from "../../context/portfolioContext";
 import { useOutsideClick } from '@chakra-ui/react'
 import { Formik, Field, Form } from "formik";
-const LeftCheckBox = ({ search_groups, global_state,init_tech_tags }: any) => {
-
+const LeftCheckBox = ({ search_groups }: any) => {
+  
+  const init_tech_tags = search_groups[1].options
   const tagContext = useContext(TagContext);
   const tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
   const saveTag = tagContext?.setTags;
@@ -51,7 +52,7 @@ const LeftCheckBox = ({ search_groups, global_state,init_tech_tags }: any) => {
                   </h2>
                   <AccordionPanel>
                       <Stack pl={1} mt={1} spacing={1}>
-                      {(( group.title==="tech")?init_tech_tags:group.options).map((option: string, index:number) => (
+                      {(( group.title==="tech")?init_tech_tags:group.options).sort().map((option: string, index:number) => (
                         <label key={option}>
                         <Checkbox
                           isChecked={tags.includes(option)}

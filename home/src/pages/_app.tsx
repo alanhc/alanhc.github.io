@@ -12,7 +12,7 @@ import { DefaultSeo } from "next-seo";
 import { Rubik } from "next/font/google";
 import SEO from "next-seo.config";
 const rubik = Rubik({ subsets: ["latin"] });
-const { Button } = chakraTheme.components;
+
 const theme = extendTheme({
   initialColorMode: "light",
   useSystemColorMode: false,
@@ -50,5 +50,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
 export default MyApp;

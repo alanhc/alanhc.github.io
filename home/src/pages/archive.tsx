@@ -11,8 +11,18 @@ import {
     InputRightElement,
     Link,
     Select,
+    Step,
+    StepDescription,
+    StepIcon,
+    StepIndicator,
+    StepNumber,
+    StepSeparator,
+    StepStatus,
+    StepTitle,
+    Stepper,
     position,
     useColorMode,
+    useSteps,
 } from "@chakra-ui/react";
 import Date from "@/components/partial/Date";
 import BlogLayout from "@/components/BlogLayout";
@@ -58,7 +68,7 @@ import { CloseIcon } from "@chakra-ui/icons";
 import { NextSeo } from 'next-seo';
 import moment from "moment";
 export async function getStaticProps() {
-    let allPostsData = await getSortedPostsData();
+    let allPostsData: any = await getSortedPostsData();
     allPostsData = allPostsData.map((post: any) => {
         let d = moment(post.date, 'YYYY-MM-DD')
 
@@ -78,12 +88,12 @@ export async function getStaticProps() {
     let yy = -1
     let mm = -1
 
-    let y_ct=0;
+    let y_ct = 0;
     posts.map((p: any) => {
         if (yy !== p.year) {
             allPostsData.push({
                 title: p.year,
-                ct:0,
+                ct: 0,
                 month:
                     [
                         {
@@ -95,11 +105,11 @@ export async function getStaticProps() {
             yy = p.year;
             mm = p.month;
             let y = allPostsData.length - 1
-            if (y>0) allPostsData[y-1].ct=y_ct+1
-            y_ct=0;
+            if (y > 0) allPostsData[y - 1].ct = y_ct + 1
+            y_ct = 0;
         } else if (mm === p.month) {
             let y = allPostsData.length - 1
-            let m = allPostsData[y].month.length -1
+            let m = allPostsData[y].month.length - 1
             allPostsData[y].month[m].posts.push({ id: p.id, title: p.title })
             y_ct++
         } else {
@@ -112,7 +122,7 @@ export async function getStaticProps() {
             y_ct++
         }
     })
-    allPostsData[allPostsData.length-1].ct=y_ct+1;
+    allPostsData[allPostsData.length - 1].ct = y_ct + 1;
 
 
     return {
@@ -123,27 +133,63 @@ export async function getStaticProps() {
 }
 
 const Blog: NextPage = ({ allPostsData }: any) => {
+    const { activeStep } = useSteps({
+        index: 1,
+        count: allPostsData.length,
+    })
 
 
     return (
 
         <BlogLayout>
-           
+               
+            <Stepper  size='lg'  index={-1} orientation='vertical' gap='0'>
+                {allPostsData.map((y: any, i: number) => (
+                    <Step key={i}>
+                        <StepIndicator>
+                            <StepStatus
+                                complete={<StepIcon />}
+                                incomplete={`${y.title}`}
+                                active={" "}
+                            />
+                        </StepIndicator>
+                        <Box flexShrink='0'>
+                            <StepTitle> <Tag mb="5">{y.ct}</Tag></StepTitle>
+                            <StepDescription>
+                            <Stepper index={-1} orientation='vertical' gap='0'>
+                                {y.month.map((m: any, i: number) => (
+                                        <Step key={i}>
+                                            <StepIndicator>
+                                                <StepStatus
+                                                    complete={<StepIcon />}
+                                                    incomplete={`${m.title.slice(0, 3)}`}
+                                                    active={" "}
+                                                />
+                                            </StepIndicator>
+                                            <Box flexShrink='0'>
+                                                <StepTitle><Tag mb="5"> {m.posts.length} </Tag></StepTitle>
+                                                <StepDescription>
+                                                    <Stack>
+                                                        {m.posts.map((p: any, i: number) => (
+                                                            <Box key={i} as={NextLink} href={`/logA/posts/${p.id}`}>{p.title}</Box>
+                                                        ))}
+                                                    </Stack>
+                                                </StepDescription>
+                                            </Box>
+                                            <StepSeparator />
+                                        </Step>
+                                  
+                                ))}
+                                  </Stepper>
 
-            {allPostsData.map((y: any,i:number) => (
-                <Stack key={i}>
-                    <Heading>{y.title} ({y.ct}) </Heading>
-                    {y.month.map((m: any,i:number) => (
-                        <Stack key={i}>
-                            <Heading size='md'>{m.title} ({m.posts.length}) </Heading>
-                            {m.posts.map((p: any,i:number) => (
-                                <Box key={i} as={NextLink} href={`/logA/posts/${p.id}`}>{p.title}</Box>
-                            ))}
-                        </Stack>
-                    ))}
-                </Stack>
+                            </StepDescription>
+                        </Box>
+                        {/* <Heading>{y.title} ({y.ct}) </Heading> */}
 
-            ))}
+                        <StepSeparator />
+                    </Step>
+                ))}
+            </Stepper>
 
         </BlogLayout>
 

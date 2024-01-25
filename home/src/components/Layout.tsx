@@ -39,7 +39,8 @@ const NavLink = (props: any) => {
     </Box>
   )
 }
-const Layout = ({ children }: AppProps) => {
+const Layout = ({ children, maxW }: any) => {
+  if (!maxW) maxW = "7xl";
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure()
   const links = [
@@ -88,7 +89,7 @@ const Layout = ({ children }: AppProps) => {
           </Box>
         ) : null}
       </Box>
-      <Container maxW={'7xl'} p="12">
+      <Container maxW={maxW} p="12">
         <Box>{children}</Box>
       </Container>
       <Center mt="10">

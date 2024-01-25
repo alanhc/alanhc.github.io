@@ -1,5 +1,5 @@
 ---
-title: 20231101-
+title: 20231101-generative-ai-for-everyone
 date: 2023-11-02
 tags:
   - ai

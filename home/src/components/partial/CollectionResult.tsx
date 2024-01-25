@@ -4,7 +4,8 @@ import { useContext, useEffect } from "react";
 import { TagContext, ITags } from "../../context/portfolioContext";
 import NextImage from "next/legacy/image"
 import Project from "./Project";
-const CollectionResult = ({ projects, global_state }: any) => {
+
+const CollectionResult = ({ projects, mdxSource }: any) => {
 
     const tagContext = useContext(TagContext);
     let tags = (tagContext?.tags === undefined) ? [] : tagContext.tags
@@ -30,7 +31,7 @@ const CollectionResult = ({ projects, global_state }: any) => {
                 <HStack spacing={4} minW={300}>
                     <Container minW={{base:"250",md:"container.md"}}>
                   
-                    {tags.map((tag: string) => (
+                    {tags.sort().map((tag: string) => (
                         
                         <Tag ml="-1" mr="4" mt="1" key={tag} borderRadius="full" variant="solid" bg="gray.500">
                             <TagLabel>{tag}</TagLabel>

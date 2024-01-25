@@ -11,10 +11,120 @@
     },
     "items": [
         {
+            "id": "20240122-ntu-cool-video-download",
+            "url": "https://alanhc.github.io/logA/posts/20240122-ntu-cool-video-download",
+            "title": "20230122-ntu-cool",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://www.youtube.com/watch?v=hT6A8zRn0Ck&#x26;t=31s&#x26;ab_channe",
+            "date_modified": "2024-01-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240122-english-speaking",
+            "url": "https://alanhc.github.io/logA/posts/20240122-english-speaking",
+            "title": "沒環境講英文？如何跟 ChatGPT 對話，快速加強口說",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[Voice Control for ChatGPT](https://chromewebstore.google.com/detail/voice-con",
+            "date_modified": "2024-01-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240121-Web-Scraping-Instagram-with-Selenium",
+            "url": "https://alanhc.github.io/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium",
+            "title": "20240121-Web-Scraping-Instagram-with-Selenium",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- https://github.com/alanhc/bot/blob/main/instagram.ipynb\n## Ref\nhttps://youtu",
+            "date_modified": "2024-01-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240119-OSINT",
+            "url": "https://alanhc.github.io/logA/posts/20240119-OSINT",
+            "title": "20240119-OSINT",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 一開始看到\n- [The KK Show - 187 中共網軍的敵人 - 沈伯洋](https://youtu.be/Da2LDllZjHQ?si=Kf",
+            "date_modified": "2024-01-19T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240114-product-insight",
+            "url": "https://alanhc.github.io/logA/posts/20240114-product-insight",
+            "title": "20240114-product-insight",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n在台灣，跟商品有關的統計資料價格大約一年100w (客製化程度不同)\n統計資訊包含 競品分析 競爭對手售價 客製化報告等等\nwhy? 品牌商想知道自己跟對手",
+            "date_modified": "2024-01-14T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240113-data-pay",
+            "url": "https://alanhc.github.io/logA/posts/20240113-data-pay",
+            "title": "20240113-data-pay",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n以下內容為該影片的筆記：\n中國經濟變差 政府監管 員工信心\n全球資產配置 美股 賺美元全權資產配置\n大廠 推行要一年\n大廠大家做得跟核心業務沒關\n數據 有博",
+            "date_modified": "2024-01-13T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240108-attention",
+            "url": "https://alanhc.github.io/logA/posts/20240108-attention",
+            "title": "20240108-attention",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n公司 → 搶奪注意力\n太多分心事\n- 克服\n- 決心、自我反省\nwhy? 手機成癮\n多巴安 → 採取行動獲得獎勵\n看手機→獎勵→空虛 （重複）久了會疲乏 →",
+            "date_modified": "2024-01-08T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240107-notion-website",
+            "url": "https://alanhc.github.io/logA/posts/20240107-notion-website",
+            "title": "20240107-notion-websire",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n使用這套件可以讓notion嵌入到網站\n因為notion不能使用iframe 嵌入，大多數的solution都要付費\n## Ref\n- https://gi",
+            "date_modified": "2024-01-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231217-ntu-matches",
+            "url": "https://alanhc.github.io/logA/posts/20231217-ntu-matches",
+            "title": "20231217-ntu-matches",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 先請AI生成資料\n### prompt\n```text\n請生成三組男女，各有各的自我介紹，僅說明自己，這個叫做content 請將這三組男女配對 用第",
+            "date_modified": "2023-12-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231217-google-gemini",
+            "url": "https://alanhc.github.io/logA/posts/20231217-google-gemini",
+            "title": "20231217-google-gemini",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook\n- http",
+            "date_modified": "2023-12-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231210-convert-post-markdown",
             "url": "https://alanhc.github.io/logA/posts/20231210-convert-post-markdown",
             "title": "20231210-convert-post-markdown",
-            "summary": "\n<h2>medium</h2>\n<p><a href=\"https://github.com/dtesler/medium-to-markdown\">https://github.com/dtesler/medium-to-markdown</a></p>\n<h2>Blogger</h2>\n<p><a href=\"https://codebeautify.org/html-to-markdown\">https://codebeautify.org/html-to-markdown</a></p",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## medium\nhttps://github.com/dtesler/medium-to-markdown\n## Blogger\nhttps://cod",
             "date_modified": "2023-12-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -25,7 +135,7 @@
             "id": "20231209-docker-machine-learning",
             "url": "https://alanhc.github.io/logA/posts/20231209-docker-machine-learning",
             "title": "20231209-docker-machine-learning",
-            "summary": "\n<h2>Docker</h2>\n<p>\n  <code>docker search tensorflow</code>\n  <code>docker pull jupyter/tensorflow-notebook</code>\n  <code>docker run jupyter/tensorflow-notebook -p 8000:8888</code>\n</p>\n<ul>\n  <li>-p out:in</li>\n</ul>\n<p>\n  Transformers\n  <code>fro",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Docker\n`docker search tensorflow`\n`docker pull jupyter/tensorflow-notebook`",
             "date_modified": "2023-12-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -36,7 +146,7 @@
             "id": "20231209-AI-music-example",
             "url": "https://alanhc.github.io/logA/posts/20231209-AI-music-example",
             "title": "20231209-AI-music-example",
-            "summary": "\n<p>\n  AI 音樂風格轉換太酷了\n  <a href=\"https://youtu.be/IM_EDpvY4vA?si=jrhDvSM1wWdcnZgG\">Frank Sinatra - A Cruel Angel's Thesis</a>\n  <a href=\"https://youtu.be/_Y543NEiR5w?si=uLzQnCi-u3sp-ZSV\">Careless Whisper - Frank Sinatra AI Cover</a>\n</p>\n<h2>Ref</h2>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nAI 音樂風格轉換太酷了\n[Frank Sinatra - A Cruel Angel's Thesis](https://youtu.be/IM_EDpv",
             "date_modified": "2023-12-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -47,7 +157,7 @@
             "id": "20231202-twitter-bot",
             "url": "https://alanhc.github.io/logA/posts/20231202-twitter-bot",
             "title": "20231202-twitter-bot",
-            "summary": "\n<h2>1. 使用 twitter API</h2>\n<ol>\n  <li>\n    先去 <a href=\"https://developer.twitter.com/en/portal/dashboard\">dashboard</a>建立App，並在User authentication settings > 設定\n    \n    <img src=\"https://i.imgur.com/zzfs8d9.png\" alt=\"\">\n  </li>\n  <li>\n    複製 Keys a",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 1. 使用 twitter API\n1. 先去 [dashboard]( https://developer.twitter.com/en/porta",
             "date_modified": "2023-12-02T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -55,11 +165,11 @@
             }
         },
         {
-            "id": "20220811-monorepo-line",
-            "url": "https://alanhc.github.io/logA/posts/20220811-monorepo-line",
-            "title": "20220811-monorepo-line",
-            "summary": "\n<h2>Ref</h2>\n<p>前言</p>\n<ul>\n  <li>LINE台灣用戶有2100萬</li>\n  <li>\n    LINE 跨國公司\n    正文\n  </li>\n  <li>時間：2000年初</li>\n  <li>共享code，scale build system 及 version control</li>\n  <li>使用公司：Google Facebook Microsoft Uber Airbnb Twitter</li>\n  <li>Pros\n    <ul>\n ",
-            "date_modified": "2023-12-01T00:00:00.000Z",
+            "id": "20231129-Should You Use Open Source Large Language Models?",
+            "url": "https://alanhc.github.io/logA/posts/20231129-Should You Use Open Source Large Language Models?",
+            "title": "Should You Use Open Source Large Language Models?",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\nhttps://www.youtube.com/watch?v=y9k-U9AuDeM\n![](https://i.imgur.com/RU3",
+            "date_modified": "2023-11-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -69,7 +179,7 @@
             "id": "20231125-cloudflare-tunnel",
             "url": "https://alanhc.github.io/logA/posts/20231125-cloudflare-tunnel",
             "title": "20231125-cloudflare-tunnel",
-            "summary": "\n<h1>方式一 使用 GUI</h1>\n<h2>run service</h2>\n<p>e.g. <code>docker run -p 80:80 -d nginx</code></p>\n<h2>cloudflare 設定</h2>\n<p>\n  <a href=\"https://dash.cloudflare.com/\">https://dash.cloudflare.com/</a>\n  dash > Zerotrust\n  \n  <img src=\"https://i.imgur.com",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# 方式一 使用 GUI\n## run service\ne.g. `docker run -p 80:80 -d nginx`\n## cloudflare ",
             "date_modified": "2023-11-25T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -80,7 +190,7 @@
             "id": "20231124-terraform-vercel",
             "url": "https://alanhc.github.io/logA/posts/20231124-terraform-vercel",
             "title": "20231124-terraform-vercel",
-            "summary": "\n<p>\n  vercel token: <a href=\"https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token\">https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token</a>\n  npx create-next-app nextjs-terraform-demo\n  main.tf\n</p>\n<pre><code class=\"language",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nvercel token: https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token",
             "date_modified": "2023-11-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -91,7 +201,7 @@
             "id": "20231116-Vector-Databases-from-Embeddings-to-Applications",
             "url": "https://alanhc.github.io/logA/posts/20231116-Vector-Databases-from-Embeddings-to-Applications",
             "title": "20231116-Vector-Databases-from-Embeddings-to-Applications",
-            "summary": "\n<p>RAG -> vector database</p>\n<p>\n  <img src=\"https://i.imgur.com/EDn3CJo.png\" alt=\"\">\n</p>\n<h2>how-to-obtain-vector-representations-of-data</h2>\n<p>\n  <img src=\"https://i.imgur.com/OdWVtRa.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/pW8RpmW.png\" a",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nRAG -> vector database\n![](https://i.imgur.com/EDn3CJo.png)\n## how-to-obtain-v",
             "date_modified": "2023-11-16T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -102,7 +212,7 @@
             "id": "20231115-How-to-Build-An-MVP-Startup-School",
             "url": "https://alanhc.github.io/logA/posts/20231115-How-to-Build-An-MVP-Startup-School",
             "title": "20231115-How-to-Build-An-MVP-Startup-School",
-            "summary": "\n<p>\n  16:52\n  twich 創辦人（Michael Seibel）\n</p>\n<p>\n  <img src=\"https://i.imgur.com/dLhPAHZ.png\" alt=\"\">\n</p>\n<h2>1. 從使用者學習</h2>\n<p>\n  <img src=\"https://i.imgur.com/Rxqo8ls.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/1t93zk7.png\" alt=\"\">\n  不要",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n16:52\ntwich 創辦人（Michael Seibel）\n![](https://i.imgur.com/dLhPAHZ.png)\n## 1. 從使用",
             "date_modified": "2023-11-15T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -113,18 +223,7 @@
             "id": "20231115-Building-Multi-Modal-Search-with-Vector-Databases",
             "url": "https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases",
             "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
-            "date_modified": "2023-11-15T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20211115-Building-Multi-Modal-Search-with-Vector-Databases",
-            "url": "https://alanhc.github.io/logA/posts/20211115-Building-Multi-Modal-Search-with-Vector-Databases",
-            "title": "20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/0k8rQsV.png\" alt=\"\">\n  problem?\n  關鍵字搜尋\n  \n  <img src=\"https://i.imgur.com/mTMj2P7.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/9W5ClYB.png\" alt=\"\">\n  vector embeding\n</p>\n<p>\n  <img src=\"https://i.imgur.",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n![](https://i.imgur.com/0k8rQsV.png)\nproblem?\n關鍵字搜尋\n![](https://i.imgur.com/mT",
             "date_modified": "2023-11-15T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -135,7 +234,7 @@
             "id": "20231112-nextjs-upload-large-file",
             "url": "https://alanhc.github.io/logA/posts/20231112-nextjs-upload-large-file",
             "title": "2021112-upload-large-file",
-            "summary": "\n<h2>upload api</h2>\n<pre><code class=\"language-js\">\nimport { connectToDb, fileExists } from \"@/lib/mongodb\";\n\nimport { NextResponse } from \"next/server\";\n\nimport { Readable } from \"stream\";\n\nimport formidable, { errors as formidableErrors } from 'fo",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## upload api\n```js\nimport { connectToDb, fileExists } from \"@/lib/mongodb\";\ni",
             "date_modified": "2023-11-12T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -146,7 +245,7 @@
             "id": "20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理",
             "url": "https://alanhc.github.io/logA/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理",
             "title": "20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/E4SLakC.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/NBeKimk.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/m6eJNV9.png\" alt=\"\">\n  <img src=\"https://i.imgur.com/8eGCc4I.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"htt",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n![](https://i.imgur.com/E4SLakC.png)\n![](https://i.imgur.com/NBeKimk.png)\n![](",
             "date_modified": "2023-11-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -157,7 +256,7 @@
             "id": "20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷",
             "url": "https://alanhc.github.io/logA/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷",
             "title": "80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/U6OeFM7.png\" alt=\"\">\n  客製化GPT\n  <a href=\"https://openai.com/blog/introducing-gpts\">https://openai.com/blog/introducing-gpts</a>\n  串接dalle 自動生成頭像\n</p>\n<p>\n  <img src=\"https://i.imgur.com/oBxJeFw.png\" alt=\"\">\n  GPT:",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n![](https://i.imgur.com/U6OeFM7.png)\n客製化GPT\nhttps://openai.com/blog/introducin",
             "date_modified": "2023-11-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -168,7 +267,7 @@
             "id": "20231108-How-Diffusion-Models-Work",
             "url": "https://alanhc.github.io/logA/posts/20231108-How-Diffusion-Models-Work",
             "title": "20231108-How-Diffusion-Models-Work",
-            "summary": "\n<h2>Intuition</h2>\n<p>\n  <img src=\"https://i.imgur.com/TVoI8QQ.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/oNLoPAC.png\" alt=\"\">\n</p>\n<h2>Sampling</h2>\n<p>\n  <img src=\"https://i.imgur.com/ormC1nN.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Intuition\n![](https://i.imgur.com/TVoI8QQ.png)\n![](https://i.imgur.com/oNLo",
             "date_modified": "2023-11-08T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -179,7 +278,7 @@
             "id": "20231107-imgbb",
             "url": "https://alanhc.github.io/logA/posts/20231107-imgbb",
             "title": "20231107-imgbb",
-            "summary": "\n<p>免費圖片上傳api</p>\n<pre><code class=\"language-js\">const onDrop = useCallback((acceptedFiles: any) => {\nacceptedFiles.forEach((file: any) => {\n\nconst reader:any = new FileReader()\n\nreader.onabort = () => console.log('file reading was aborted')\n\nreader.",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n免費圖片上傳api\n```js\nconst onDrop = useCallback((acceptedFiles: any) => {\nacceptedF",
             "date_modified": "2023-11-07T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -190,7 +289,7 @@
             "id": "20231107-MUI-toolpad",
             "url": "https://alanhc.github.io/logA/posts/20231107-MUI-toolpad",
             "title": "20231107-MUI-toolpad",
-            "summary": "\n<p>很好做prototype的前端網站</p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://mui.com/toolpad/getting-started/first-app/\">https://mui.com/toolpad/getting-started/first-app/</a></li>\n</ul>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n很好做prototype的前端網站\n## Ref\n- https://mui.com/toolpad/getting-started/first-app/\n",
             "date_modified": "2023-11-07T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -201,7 +300,7 @@
             "id": "20231104-learn-cosmos",
             "url": "https://alanhc.github.io/logA/posts/20231104-learn-cosmos",
             "title": "20231104-learn-cosmos",
-            "summary": "\n<p>\n  <a href=\"https://ignite.com/cli\">Ignite CLI</a>: <a href=\"https://github.com/cosmos/cosmos-sdk\">它是Cosmos SDK</a>的開發人員友善介面\n  <a href=\"https://docs.ignite.com/guide\">https://docs.ignite.com/guide</a>\n</p>\n<p>\n  建立區塊鏈\n  ignite scaffold chain mars",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[Ignite CLI](https://ignite.com/cli): [它是Cosmos SDK](https://github.com/cosmos",
             "date_modified": "2023-11-04T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -212,7 +311,7 @@
             "id": "20231103-linklist",
             "url": "https://alanhc.github.io/logA/posts/20231103-linklist",
             "title": "20231103-linklist",
-            "summary": "\n<h3>c++</h3>\n<pre><code class=\"language-c++\">#include &#x3C;iostream>\nusing namespace std;\n\nstruct Node {\n    int data;\n    Node* next;\n};\n\nNode* head = nullptr;\nvoid insertNode(int data)\n{\n    Node* newNode = new Node();\n    newNode->data = data;\n ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n### c++\n```c++\n#include\n<div>\n  using namespace std;\n  struct Node {\n  int dat",
             "date_modified": "2023-11-03T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -223,7 +322,7 @@
             "id": "20231103-Finetuning-Large-Language-Models",
             "url": "https://alanhc.github.io/logA/posts/20231103-Finetuning-Large-Language-Models",
             "title": "20231103-Finetuning-Large-Language-Models",
-            "summary": "\n<h2>Introduction</h2>\n<ul>\n  <li>why?\n    <ul>\n      <li>\n        要學某種語氣等等要使用\n        \n        <img src=\"https://i.imgur.com/eRJk6Wv.png\" alt=\"\">\n      </li>\n    </ul>\n  </li>\n</ul>\n<h2>Why finetune</h2>\n<p>\n  <img src=\"https://i.imgur.com/BDIrVE7.p",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n- why?\n- 要學某種語氣等等要使用\n![](https://i.imgur.com/eRJk6Wv.png)\n## W",
             "date_modified": "2023-11-03T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -233,8 +332,8 @@
         {
             "id": "20231101-generative-ai-for-everyone",
             "url": "https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone",
-            "title": "20231101-",
-            "summary": "\n<h2>What is Generative AI</h2>\n<p>\n  <img src=\"https://i.imgur.com/Q877q0W.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/8DpeAAb.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/FhLUDBG.png\" alt=\"\">\n</p>\n<ul>\n  <li>\n    <p>\n      Superv",
+            "title": "20231101-generative-ai-for-everyone",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## What is Generative AI\n![](https://i.imgur.com/Q877q0W.png)\n![](https://i.im",
             "date_modified": "2023-11-02T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -245,7 +344,7 @@
             "id": "20231031-Andrew-Ng-Opportunities-in-AI-2023",
             "url": "https://alanhc.github.io/logA/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023",
             "title": "Andrew-Ng-Opportunities-in-AI-2023",
-            "summary": "\n<h3>兩個很重要的領域 監督式學習及生成式AI</h3>\n<p>\n  <img src=\"https://i.imgur.com/Wvb36Eh.png\" alt=\"\">\n</p>\n<ul>\n  <li>生成式AI 怎麼訓練？\n    <ul>\n      <li>\n        使用很大的資料集用監督式學習方法訓練\n        \n        <img src=\"https://i.imgur.com/8jvY67N.png\" alt=\"\">\n      </li>\n    </u",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n### 兩個很重要的領域 監督式學習及生成式AI\n![](https://i.imgur.com/Wvb36Eh.png)\n- 生成式AI 怎麼訓練？\n- ",
             "date_modified": "2023-10-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -256,7 +355,7 @@
             "id": "20231029-Building-Systems-with-the-ChatGPT-API",
             "url": "https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API",
             "title": "Building Systems with the ChatGPT API",
-            "summary": "\n<h2>Introduction</h2>\n<h2>Language Models, the Chat Format and Tokens</h2>\n<ul>\n  <li>LLM\n    <ul>\n      <li>How? 使用 監督式學習 預測下一個word</li>\n      <li>type\n        <ul>\n          <li>Base LLM： 訓練時是去預測下一個字的訓練方式</li>\n          <li>Instruction Turned LLM：",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n## Language Models, the Chat Format and Tokens\n- LLM\n- How? 使用",
             "date_modified": "2023-10-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -267,7 +366,7 @@
             "id": "20231028-mozilla-ai",
             "url": "https://alanhc.github.io/logA/posts/20231028-mozilla-ai",
             "title": "20231028-mozilla-ai",
-            "summary": "\n<p>有涵蓋LLM，由淺入深，有colab實作，還不錯</p>\n<h1>Introduction</h1>\n<h3>Summarization</h3>\n<pre><code>- [colab introduction](https://colab.research.google.com/drive/1cpdhABVmqmjLfJr-qQIlOOM0Yonc_xFY#scrollTo=Jd2i2959FP3L)\n</code></pre>\n<h2>Ref</h2>\n<ul>\n  <li>\n  ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n有涵蓋LLM，由淺入深，有colab實作，還不錯\n# Introduction\n### Summarization\n- [colab introductio",
             "date_modified": "2023-10-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -278,7 +377,7 @@
             "id": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
             "url": "https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers",
             "title": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
-            "summary": "\n<h2>Introduction</h2>\n<h3>兩種LLM模型</h3>\n<h4>1. base：由訓練資料預測下一個word</h4>\n<h4>2. instruction based ：由指令Fine-turn / RLHF(強化學習、人類回饋)</h4>\n<h2>Guidelines</h2>\n<h3>Setup</h3>\n<pre><code class=\"language-python\">import openai\nimport os\n\nfrom dotenv import lo",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n### 兩種LLM模型\n#### 1. base：由訓練資料預測下一個word\n#### 2. instruction ba",
             "date_modified": "2023-10-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -289,7 +388,7 @@
             "id": "20231023-learning-from-lin",
             "url": "https://alanhc.github.io/logA/posts/20231023-learning-from-lin",
             "title": "20231023-learning",
-            "summary": "\n<p>小林說：分享有關於金融背景的ytr，分享得很棒 <a href=\"https://www.youtube.com/watch?v=EViSmcCPK5g\">我是如何快速学习一个领域的 (15:49)</a></p>\n<ol>\n  <li>search 搜尋\n    <ol>\n      <li>問題：資料太多</li>\n      <li>整理框架 &#x3C; 結構化思維</li>\n      <li>參考別人的框架\n        <ol>\n          <li>看書目錄、框架",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n小林說：分享有關於金融背景的ytr，分享得很棒 [我是如何快速学习一个领域的 (15:49)](https://www.youtube.com/watch?",
             "date_modified": "2023-10-23T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -300,7 +399,7 @@
             "id": "20231023-Pair-Programming-with-a-Large-Language-Model",
             "url": "https://alanhc.github.io/logA/posts/20231023-Pair-Programming-with-a-Large-Language-Model",
             "title": "20231023-Pair-Programming-with-a-Large-Language-Model",
-            "summary": "\n<h2>TL;DR</h2>\n<p>LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫測試、優化程式除錯及解釋程式碼，使用流程為(1)建立prompt (2)取得結果 (3) 輸出結果，為了程式重複使用，會使用template機制讓呼叫比較簡單。</p>\n<p>\n  Palm - google 的llm模型\n  有三個組成\n</p>\n<ul>\n  <li>API Key</li>\n  <li>\n    GEN AI library\n    model裡面選擇 chat bison",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## TL;DR\nLLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫測試、優化程式除錯及解釋程式碼，使用流程為(1)建立prompt (2)取",
             "date_modified": "2023-10-23T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -311,7 +410,7 @@
             "id": "20231010-webauthn",
             "url": "https://alanhc.github.io/logA/posts/20231010-webauthn",
             "title": "20231010-webauthn",
-            "summary": "\n<p>web 生物辨識api</p>\n<h2>Ref</h2>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nweb 生物辨識api\n## Ref\n\n</body>\n</html>\n",
             "date_modified": "2023-10-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -322,7 +421,7 @@
             "id": "20231006-fastapi-streaming",
             "url": "https://alanhc.github.io/logA/posts/20231006-fastapi-streaming",
             "title": "20231006-fastapi-streaming",
-            "summary": "\n<ul>\n  <li>main.py</li>\n</ul>\n<pre><code class=\"language-python\">from fastapi import FastAPI\nfrom fastapi.responses import StreamingResponse\nimport time\napp = FastAPI()\ndef fake_data_streamer():\n\tfor i in range(10):\n\tyield b'some fake data\\n\\n'\n\ttim",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- main.py\n```python\nfrom fastapi import FastAPI\nfrom fastapi.responses import ",
             "date_modified": "2023-10-06T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -333,7 +432,7 @@
             "id": "20230929-rn-qrcode",
             "url": "https://alanhc.github.io/logA/posts/20230929-rn-qrcode",
             "title": "20230929-rn-qrcode",
-            "summary": "\n<ul>\n  <li>\n    <p><a href=\"https://snack.expo.dev/@alanhc/alantick-verifier\">snack</a></p>\n  </li>\n  <li>\n    <p>Podfile</p>\n  </li>\n</ul>\n<pre><code class=\"language-ruby\">def node_require(script)\n# Resolve script with node to allow for hoisting\nre",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- [snack](https://snack.expo.dev/@alanhc/alantick-verifier)\n- Podfile\n```ruby\n",
             "date_modified": "2023-09-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -344,7 +443,7 @@
             "id": "20230926-21-things-before-21",
             "url": "https://alanhc.github.io/logA/posts/20230926-21-things-before-21",
             "title": "20230926-21-things-before-21",
-            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwAR3QDSeABMFLomEetK8o_6izjB-B42bcQMGiQRY2nMP6ICJi724-1jwenH8\">https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?fbclid=IwA",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://mrjamie.cc/2023/03/27/21-things-you-need-to-know-before-21/?f",
             "date_modified": "2023-09-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -355,7 +454,7 @@
             "id": "20230924-wagami",
             "url": "https://alanhc.github.io/logA/posts/20230924-wagami",
             "title": "20230924-wagami",
-            "summary": "\n<p>\n  <code>import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum'</code>\n  <code>_app.tsx</code>:\n</p>\n<pre><code class=\"language-js\">const chains = [sepolia,polygonMumbai, goerli,arbitrum, mainnet, polygon,localhost]\n\ncon",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n`import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethere",
             "date_modified": "2023-09-25T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -366,7 +465,7 @@
             "id": "20230924-QR-Code",
             "url": "https://alanhc.github.io/logA/posts/20230924-QR-Code",
             "title": "20230924-QR-Code",
-            "summary": "\n<pre><code class=\"language-js\">&#x3C;QRCode\n\nsize={256}\n\nstyle={{ height: \"auto\", maxWidth: \"100%\", width: \"100%\" }}\n\nvalue={JSON.stringify(url)}\n\nviewBox={`0 0 256 256`}\n\n/>\n</code></pre>\n<ul>\n  <li><code>@/components/Html5QrcodePlugin</code></li>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n```js\n<div>\n  ```\n  - `@/components/Html5QrcodePlugin`\n  ```js\n  import { Html5",
             "date_modified": "2023-09-25T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -377,7 +476,7 @@
             "id": "20230924-cmd-copy",
             "url": "https://alanhc.github.io/logA/posts/20230924-cmd-copy",
             "title": "20230924-cmd-copy",
-            "summary": "\n<p><code>for i in {0..100}; cp ticket.png \"./images/$i.png\"</code></p>\n<h2>Ref</h2>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n`for i in {0..100}; cp ticket.png \"./images/$i.png\"`\n## Ref\n\n</body>\n</html>\n",
             "date_modified": "2023-09-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -388,7 +487,7 @@
             "id": "20230920-nx",
             "url": "https://alanhc.github.io/logA/posts/20230920-nx",
             "title": "20230920-nx",
-            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://nx.dev/getting-started/intro\">https://nx.dev/getting-started/intro</a></li>\n  <li><a href=\"https://nx.dev/getting-started/installation\">https://nx.dev/getting-started/installation</a></li>\n</ul>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://nx.dev/getting-started/intro\n- https://nx.dev/getting-started",
             "date_modified": "2023-09-20T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -399,7 +498,7 @@
             "id": "20230919-hardhat",
             "url": "https://alanhc.github.io/logA/posts/20230919-hardhat",
             "title": "hardhat",
-            "summary": "\n<p>\n  <code>npx hardhat</code>\n  <code>pnpm add -D @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomicfoundation/hardhat-ethers @nomicfoundation/hardhat-verify chai ethers hardhat-g",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n`npx hardhat`\n`pnpm add -D @nomicfoundation/hardhat-toolbox @nomicfoundation/h",
             "date_modified": "2023-09-19T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -410,7 +509,7 @@
             "id": "20230907-react-native",
             "url": "https://alanhc.github.io/logA/posts/20230907-react-native",
             "title": "初探 react native",
-            "summary": "\n<ul>\n  <li>網路編輯器：<a href=\"https://snack.expo.dev/\">https://snack.expo.dev/</a></li>\n  <li>\n    CocoaPods：ios 的套件管理\n    npx react-native@latest init AwesomeProject\n  </li>\n</ul>\n<p>\n  <a href=\"https://reactnativepaper.com/\">https://reactnativepaper.c",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 網路編輯器：https://snack.expo.dev/\n- CocoaPods：ios 的套件管理\nnpx react-native@latest ",
             "date_modified": "2023-09-07T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -421,7 +520,7 @@
             "id": "20230831-mdx",
             "url": "https://alanhc.github.io/logA/posts/20230831-mdx",
             "title": "在部落格中使用mdx",
-            "summary": "\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://nextjs.org/docs/pages/building-your-application/configuring/mdx\">https://nextjs.org/docs/pages/building-your-application/configuring/mdx</a></li>\n</ul>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n- https://nextjs.org/docs/pages/building-your-application/configuring/m",
             "date_modified": "2023-09-01T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -432,7 +531,7 @@
             "id": "20230831-mongodb-aggregate-multiple-group",
             "url": "https://alanhc.github.io/logA/posts/20230831-mongodb-aggregate-multiple-group",
             "title": "在mongodb裡面將兩個group merge成一個結果",
-            "summary": "\n<h2>結果</h2>\n<pre><code class=\"language-json\">{\n  \"results\": [\n    {\n      \"path\": \"/mcu/course/2D動畫實務\",\n      \"id\": \"2D動畫實務\"\n    },\n    ...\n\t{\n      \"path\": \"/mcu/professor/楊健貴\",\n      \"id\": \"楊健貴\"\n    },\n    ...\n}\n</code></pre>\n<p>\n  原本資料\n  \n  <img ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 結果\n```json\n{\n\"results\": [\n{\n\"path\": \"/mcu/course/2D動畫實務\",\n\"id\": \"2D動畫實務\"\n},",
             "date_modified": "2023-08-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -443,7 +542,7 @@
             "id": "20230831-kbar",
             "url": "https://alanhc.github.io/logA/posts/20230831-kbar",
             "title": "(未完)加入kbar讓搜尋更便利",
-            "summary": "\n<p>_app.tsx</p>\n<pre><code class=\"language-js\">// app.tsx\nimport { KBarProvider } from \"kbar\";\n\nfunction MyApp() {\n  return (\n    &#x3C;KBarProvider>\n      // ...\n    &#x3C;/KBarProvider>\n  );\n}\n</code></pre>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https:/",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n_app.tsx\n```js\n// app.tsx\nimport { KBarProvider } from \"kbar\";\nfunction MyApp(",
             "date_modified": "2023-08-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -454,7 +553,7 @@
             "id": "20230830-nextjs-google-analytics",
             "url": "https://alanhc.github.io/logA/posts/20230830-nextjs-google-analytics",
             "title": "加入GA",
-            "summary": "\n<p><a href=\"https://analytics.google.com/analytics/web/\">https://analytics.google.com/analytics/web/</a> 裡面 拿到GA_MEASUREMENT_ID應該會是<code>G-{...}</code></p>\n<p>在_app.tsx 加入</p>\n<pre><code class=\"language-js\">const GA_MEASUREMENT_ID = process.env.NEXT",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://analytics.google.com/analytics/web/ 裡面 拿到GA_MEASUREMENT_ID應該會是`G-{...}",
             "date_modified": "2023-08-30T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -465,7 +564,7 @@
             "id": "20230829-peerjs",
             "url": "https://alanhc.github.io/logA/posts/20230829-peerjs",
             "title": "20230829-peerjs",
-            "summary": "\n<p>簡化wwebrtc的使用方法</p>\n<ul>\n  <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs\">https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs</a></li>\n  <li><a href=\"https://gi",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n簡化wwebrtc的使用方法\n- https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/B",
             "date_modified": "2023-08-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -476,7 +575,7 @@
             "id": "20230829-orbit-chat",
             "url": "https://alanhc.github.io/logA/posts/20230829-orbit-chat",
             "title": "20230829-orbit-chat",
-            "summary": "\n<p>\n  嘗試使用chatui及orbitdb製作一個去中心化的chat聊天\n  <a href=\"https://github.com/alanhc/orbit-chat\">https://github.com/alanhc/orbit-chat</a>\n  <img src=\"https://i.imgur.com/QeXYkUw.png\" alt=\"\">\n</p>\n<h2>Ref</h2>\n<ul>\n  <li></li>\n</ul>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n嘗試使用chatui及orbitdb製作一個去中心化的chat聊天\nhttps://github.com/alanhc/orbit-chat\n![](htt",
             "date_modified": "2023-08-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -487,7 +586,7 @@
             "id": "20230829-chakra-ui",
             "url": "https://alanhc.github.io/logA/posts/20230829-chakra-ui",
             "title": "20230829-chakra-ui",
-            "summary": "\n<p>pnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion</p>\n<pre><code class=\"language-js\">// pages/_app.tsx\nimport type { AppProps } from 'next/app'\nimport { ChakraProvider } from '@chakra-ui/react'\n\nexport defa",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\npnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled fr",
             "date_modified": "2023-08-29T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -498,7 +597,7 @@
             "id": "20230828-libp2p",
             "url": "https://alanhc.github.io/logA/posts/20230828-libp2p",
             "title": "初探libp2p",
-            "summary": "\n<h2>建立signal 節點</h2>\n<pre><code class=\"language-js\">import { sigServer } from '@libp2p/webrtc-star-signalling-server'\nconst server = await sigServer({\n\tport: 24642,\n\thost: '0.0.0.0',\n\tmetrics: false\n})\n</code></pre>\n<p>\n  到127.0.0.1:24642訪問即可看到\n  \n ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 建立signal 節點\n```js\nimport { sigServer } from '@libp2p/webrtc-star-signalling",
             "date_modified": "2023-08-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -509,7 +608,7 @@
             "id": "20230828-ipfs",
             "url": "https://alanhc.github.io/logA/posts/20230828-ipfs",
             "title": "初探ipfs",
-            "summary": "\n<h2>下載</h2>\n<p>\n  <code>brew install ipfs</code>\n  <code>ipfs init</code>\n</p>\n<pre><code class=\"language-js\">import { create } from 'ipfs-http-client'\nconst ipfs = create(new URL('http://127.0.0.1:5001'))\nconst { cid } = await ipfs.add('Hello world",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 下載\n`brew install ipfs`\n`ipfs init`\n```js\nimport { create } from 'ipfs-http-",
             "date_modified": "2023-08-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -520,7 +619,7 @@
             "id": "20230827-vscode-animate-extension",
             "url": "https://alanhc.github.io/logA/posts/20230827-vscode-animate-extension",
             "title": "安裝動漫vscode主題",
-            "summary": "\n<p>去 <a href=\"https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme\">下載doki-theme</a></p>\n<h2>使用方法</h2>\n<ul>\n  <li><a href=\"https://github.com/doki-theme/doki-theme-vscode/blob/main/albums/complete_theme_album.md\">瀏覽主題</a></li>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n去 [下載doki-theme](https://marketplace.visualstudio.com/items?itemName=unthrottl",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -531,7 +630,7 @@
             "id": "20230827-orbitdb",
             "url": "https://alanhc.github.io/logA/posts/20230827-orbitdb",
             "title": "初探orbitdb",
-            "summary": "\n<h2>orbitdb</h2>\n<p>\n  <code>npm init -y</code>\n  <code>package.json</code> 加入：<code>\"type\": \"module\"</code>\n  <code>pnpm add @orbitdb/core@next</code>\n  <code>pnpm add ipfs-core</code>\n</p>\n<pre><code class=\"language-js\">import { createOrbitDB } fr",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## orbitdb\n`npm init -y`\n`package.json` 加入：`\"type\": \"module\"`\n`pnpm add @orbit",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -542,7 +641,7 @@
             "id": "20230827-notion-alternative",
             "url": "https://alanhc.github.io/logA/posts/20230827-notion-alternative",
             "title": "notion的替代品 - AFFiNE",
-            "summary": "\n<p>\n  替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有<a href=\"https://app.affine.pro/\">線上版</a>目前還是beta。\n  \n  <img src=\"https://user-images.githubusercontent.com/79301703/230892907-5fd5c0c5-1665-4d75-8a35-744e0afc36a5.g",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n替代notion的酷炫東西，github上目前有21.8k stars，而且是rust寫的，，而且也有類似miro的功能，但好像目前沒有發現ios版本，但有",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -553,7 +652,7 @@
             "id": "20230827-next-pwa",
             "url": "https://alanhc.github.io/logA/posts/20230827-next-pwa",
             "title": "加入PWA功能",
-            "summary": "\n<h2>前置</h2>\n<ul>\n  <li>先準備 service worker、manifacts.json、logo.png</li>\n  <li>引入套件：<code>pnpm add next-pwa</code></li>\n  <li>修改 <code>next.config.js</code></li>\n</ul>\n<pre><code class=\"language-js\">const withPWA = require('next-pwa')({\n\tdest: 'public",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 前置\n- 先準備 service worker、manifacts.json、logo.png\n- 引入套件：`pnpm add next-pwa`\n",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -564,7 +663,7 @@
             "id": "20230827-chat-app",
             "url": "https://alanhc.github.io/logA/posts/20230827-chat-app",
             "title": "chat聊天界面初探",
-            "summary": "\n<h2>chat</h2>\n<p>\n  <code>npx create-next-app chat</code>\n  <code>pnpm add @chatscope/chat-ui-kit-react</code>\n  <code>pnpm add @chatscope/chat-ui-kit-styles</code>\n</p>\n<pre><code class=\"language-js\">import styles from '@chatscope/chat-ui-kit-style",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## chat\n`npx create-next-app chat`\n`pnpm add @chatscope/chat-ui-kit-react`\n`pn",
             "date_modified": "2023-08-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -575,7 +674,7 @@
             "id": "nextjs",
             "url": "https://alanhc.github.io/logA/posts/nextjs",
             "title": "nextjs 相關文章",
-            "summary": "\n<h1>markdown相關</h1>\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<h2>資料在雲端</h2>\n<h3>使用 MDX remote</h3>\n<h2>相關posts</h2>\n<ul>\n  <li><a href=\"https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard\">https://alanhc.github.io/next-blog/posts/20230",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# markdown相關\n## 資料在本地\n### 使用unified\n## 資料在雲端\n### 使用 MDX remote\n## 相關posts\n- ht",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -586,7 +685,7 @@
             "id": "nextjs-markdown",
             "url": "https://alanhc.github.io/logA/posts/nextjs-markdown",
             "title": "統整markdown的使用方法",
-            "summary": "\n<h2>資料在本地</h2>\n<h3>使用unified</h3>\n<h2>資料在雲端</h2>\n<h3>使用 MDX</h3>\n<h2>相關posts</h2>\n<ul>\n  <li><a href=\"https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard\">https://alanhc.github.io/next-blog/posts/20230812-react-syntax-clipboard<",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 資料在本地\n### 使用unified\n## 資料在雲端\n### 使用 MDX\n## 相關posts\n- https://alanhc.github.",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -597,7 +696,7 @@
             "id": "20230826-next-seo",
             "url": "https://alanhc.github.io/logA/posts/20230826-next-seo",
             "title": "加入next-seo",
-            "summary": "\n<p>使用 <a href=\"https://www.favicon.cc/\">https://www.favicon.cc/</a> 從logo.png製作 favicon.ico</p>\n<h2>加入環境變數</h2>\n<ul>\n  <li>在next.config.js新增</li>\n</ul>\n<pre><code class=\"language-js\">const nextConfig = {\n...\n\tenv: {\n\t\tbaseUrl: isProd ? \"https://alan",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n使用 https://www.favicon.cc/ 從logo.png製作 favicon.ico\n## 加入環境變數\n- 在next.config.js",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -608,7 +707,7 @@
             "id": "20230826-import-alias",
             "url": "https://alanhc.github.io/logA/posts/20230826-import-alias",
             "title": "加入import別名讓import更好看",
-            "summary": "\n<h2>設定</h2>\n<ul>\n  <li>tsconfig.json</li>\n</ul>\n<pre><code class=\"language-js\">{\n\t\"compilerOptions\": {\n\t...\n\t\"baseUrl\": \".\",\n\t\"paths\": {\n\t\t\"@/components/*\": [\"src/components/*\"],\n\t...\n\t}\n}\n</code></pre>\n<ul>\n  <li>使用</li>\n</ul>\n<pre><code class=\"lan",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 設定\n- tsconfig.json\n```js\n{\n\"compilerOptions\": {\n...\n\"baseUrl\": \".\",\n\"paths\"",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -619,7 +718,7 @@
             "id": "20230826-imgur",
             "url": "https://alanhc.github.io/logA/posts/20230826-imgur",
             "title": "imgur上傳",
-            "summary": "\n<p>註冊：<a href=\"https://api.imgur.com/oauth2/addclient\">https://api.imgur.com/oauth2/addclient</a></p>\n<h2>ref</h2>\n<ul>\n  <li><a href=\"https://apidocs.imgur.com/\">https://apidocs.imgur.com/</a></li>\n</ul>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n註冊：https://api.imgur.com/oauth2/addclient\n## ref\n- https://apidocs.imgur.com/\n",
             "date_modified": "2023-08-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -630,7 +729,7 @@
             "id": "20230825-rss",
             "url": "https://alanhc.github.io/logA/posts/20230825-rss",
             "title": "添加rss功能到nextjs部落格",
-            "summary": "\n<h2>下載 npm feed</h2>\n<p><code>pnpm add feed</code></p>\n<h2>新增 generateRSS()</h2>\n<p>新增 <code>lib/generateRSS.js</code></p>\n<pre><code class=\"language-js\">import { Feed } from \"feed\";\nimport { writeFileSync } from \"fs\";\nimport { getSortedPostsData } ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 下載 npm feed\n`pnpm add feed`\n## 新增 generateRSS()\n新增 `lib/generateRSS.js`\n```",
             "date_modified": "2023-08-25T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -641,7 +740,7 @@
             "id": "20230824-chakra-darkmode",
             "url": "https://alanhc.github.io/logA/posts/20230824-chakra-darkmode",
             "title": "部落格暗黑模式",
-            "summary": "\n<ol>\n  <li>新增 theme.ts</li>\n</ol>\n<pre><code class=\"language-js\">import { extendTheme, type ThemeConfig } from \"@chakra-ui/react\";\n\n// 2. Add your color mode config\n\nconst config: ThemeConfig = {\n  initialColorMode: \"light\",\n\n  useSystemColorMode: f",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n1. 新增 theme.ts\n```js\nimport { extendTheme, type ThemeConfig } from \"@chakra-ui",
             "date_modified": "2023-08-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -652,7 +751,7 @@
             "id": "20230824-bigchain",
             "url": "https://alanhc.github.io/logA/posts/20230824-bigchain",
             "title": "初探bigchaindb",
-            "summary": "\n<h2>設定bigchaindb本地節點</h2>\n<h3>使用docker</h3>\n<ul>\n  <li>pull image：<code>docker pull bigchaindb/bigchaindb:all-in-one</code></li>\n  <li>run image：</li>\n</ul>\n<pre><code class=\"language-shell\">docker run \\\n  --detach \\\n  --name bigchaindb \\\n  --publis",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 設定bigchaindb本地節點\n### 使用docker\n- pull image：`docker pull bigchaindb/bigchain",
             "date_modified": "2023-08-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -663,7 +762,7 @@
             "id": "20230820-nexjs13",
             "url": "https://alanhc.github.io/logA/posts/20230820-nexjs13",
             "title": "更新nextjs到13",
-            "summary": "\n<ul>\n  <li>升級nextjs版本：<code>pnpm up next react react-dom eslint-config-next --latest</code></li>\n  <li>自動更新image import：<code>npx @next/codemod@latest next-image-to-legacy-image .</code>\n    <ul>\n      <li>會更新 next/image -> next/legacy/image</li>\n  ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 升級nextjs版本：`pnpm up next react react-dom eslint-config-next --latest`\n- 自動更新",
             "date_modified": "2023-08-20T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -674,7 +773,7 @@
             "id": "20230819-mermaid-js",
             "url": "https://alanhc.github.io/logA/posts/20230819-mermaid-js",
             "title": "讓部落格可以顯示markdown的流程圖",
-            "summary": "\n<p>code如下</p>\n<pre><code>mermaid\ngraph TD;\n    A-->B;\n    A-->C;\n    B-->D;\n    C-->D;\n</code></pre>\n<h2>修改CodeBlock</h2>\n<pre><code class=\"language-js\">function CodeBlock({ language, node, inline, className, children, ...props }: any) {\n  const { o",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\ncode如下\n```\nmermaid\ngraph TD;\nA-->B;\nA-->C;\nB-->D;\nC-->D;\n```\n## 修改CodeBlock\n``",
             "date_modified": "2023-08-19T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -685,7 +784,7 @@
             "id": "20230818-markdown-section-link",
             "url": "https://alanhc.github.io/logA/posts/20230818-markdown-section-link",
             "title": "實作markdown section link",
-            "summary": "\n<h2>Toc部分</h2>\n<pre><code class=\"language-js\">import markdownToc from 'markdown-toc';\nconst tocMarkdown = await markdownToc(markdownContent);\n</code></pre>\n<pre><code class=\"language-js\">&#x3C;UnorderedList>\n  {postData.tocMarkdown.json.map((heading",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Toc部分\n```js\nimport markdownToc from 'markdown-toc';\nconst tocMarkdown = awa",
             "date_modified": "2023-08-18T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -696,7 +795,7 @@
             "id": "20230817-next-sitemap",
             "url": "https://alanhc.github.io/logA/posts/20230817-next-sitemap",
             "title": "將部落格加入sitemap功能",
-            "summary": "\n<p>\n  指令下：<code>pnpm add -D next-sitemap</code>\n  next.config.js新增\n  SITE_URL=\"<a href=\"https://example.com\">https://example.com</a>\"\n  新增 next-sitemap.config.js\n</p>\n<pre><code class=\"language-js\">/** @type {import('next-sitemap').IConfig} */\nmodul",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n指令下：`pnpm add -D next-sitemap`\nnext.config.js新增\nSITE_URL=\"https://example.com\"",
             "date_modified": "2023-08-17T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -707,7 +806,7 @@
             "id": "20230816-nprogress",
             "url": "https://alanhc.github.io/logA/posts/20230816-nprogress",
             "title": "新增page loading的進度條",
-            "summary": "\n<p>\n  <code>pnpm add nprogress</code>\n  <code>pnpm add -D @types/nprogress</code>\n</p>\n<p>在pages/_app.tsx新增</p>\n<pre><code class=\"language-js\">import 'nprogress/nprogress.css';\nimport { useRouter } from 'next/router'; import NProgress from 'nprogres",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n`pnpm add nprogress`\n`pnpm add -D @types/nprogress`\n在pages/_app.tsx新增\n```js\nim",
             "date_modified": "2023-08-16T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -718,7 +817,7 @@
             "id": "20230813-back-up-crawler",
             "url": "https://alanhc.github.io/logA/posts/20230813-back-up-crawler",
             "title": "三種使用Python爬取網頁的方法",
-            "summary": "\n<h2>第一版: 使用session慢慢爬</h2>\n<pre><code class=\"language-python\">s = requests.Session()\n</code></pre>\n<h2>第二版: 使用python的並行處理功能</h2>\n<pre><code class=\"language-python\">import requests\nimport concurrent.futures\nresults = []\n# 定義爬蟲任務\ndef fetch_url(url, se",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 第一版: 使用session慢慢爬\n```python\ns = requests.Session()\n```\n## 第二版: 使用python的並行處",
             "date_modified": "2023-08-13T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -729,7 +828,7 @@
             "id": "20230812-react-syntax-clipboard",
             "url": "https://alanhc.github.io/logA/posts/20230812-react-syntax-clipboard",
             "title": "使用react syntax highlighter及useClipboard強化程式碼區塊",
-            "summary": "\n<h1>react syntax highlighter + clipboard</h1>\n<ol>\n  <li>先去讀 postsDirectory 的markdownfile交給matter將markdown轉成object</li>\n</ol>\n<pre><code class=\"language-md\">---\ntitle: Hello\nslug: home\n---\n# Hello world!\n</code></pre>\n<p>結果</p>\n<pre><code class=\"lan",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# react syntax highlighter + clipboard\n1. 先去讀 postsDirectory 的markdownfile交給ma",
             "date_modified": "2023-08-12T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -740,7 +839,7 @@
             "id": "20230109-ipfs-upload",
             "url": "https://alanhc.github.io/logA/posts/20230109-ipfs-upload",
             "title": "實作ipfs上傳的前端",
-            "summary": "\n<ol>\n  <li>import package</li>\n</ol>\n<pre><code class=\"language-js\">import { NFTStorage, File, Blob } from 'nft.storage'\nconst API_KEY = process.env.NFT_STORAGE_API_KEY\nconst client = new NFTStorage({ token: API_KEY })\n</code></pre>\n<ol start=\"2\">\n ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n1. import package\n```js\nimport { NFTStorage, File, Blob } from 'nft.storage'\nc",
             "date_modified": "2023-01-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -751,7 +850,7 @@
             "id": "20230108-solidity-nft",
             "url": "https://alanhc.github.io/logA/posts/20230108-solidity-nft",
             "title": "erc 1155 合約",
-            "summary": "\n<h2>ERC 721</h2>\n<pre><code class=\"language-solidity\">// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;\n\nimport \"@openzeppelin/contracts/token/ERC721/ERC721.sol\";\nimport \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\";\ni",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## ERC 721\n```solidity\n// SPDX-License-Identifier: MIT\npragma solidity ^0.8.9;",
             "date_modified": "2023-01-08T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -762,7 +861,7 @@
             "id": "20221231-k8s-notes",
             "url": "https://alanhc.github.io/logA/posts/20221231-k8s-notes",
             "title": "部署我的網站到k8s上",
-            "summary": "\n<h2>1. 在專案根目錄新增以下檔案</h2>\n<pre><code class=\"language-dockerfile\">FROM node:16-alpine\n\nARG NODE_ENV=\"production\"\n\nENV NODE_ENV=${NODE_ENV}\n\nWORKDIR /app\n\nCOPY package*.json ./\n\nRUN yarn install\n\nCOPY . .\n\nENV PORT=3000\n\nEXPOSE 3000\n\nCMD [ \"yarn\", \"sta",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 1. 在專案根目錄新增以下檔案\n```dockerfile\nFROM node:16-alpine\nARG NODE_ENV=\"production\"",
             "date_modified": "2022-12-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -773,7 +872,7 @@
             "id": "20221230-tezos-nft-tutorial",
             "url": "https://alanhc.github.io/logA/posts/20221230-tezos-nft-tutorial",
             "title": "使用smartpy撰寫tezos的nft程式",
-            "summary": "\n<h2>撰寫nft合約</h2>\n<ul>\n  <li>到 <a href=\"https://smartpy.io/ide\">smartpy ide</a> 輸入</li>\n</ul>\n<pre><code class=\"language-python\">import smartpy as sp\nFA2 = sp.io.import_template(\"FA2.py\")\n\nclass NFT(FA2.FA2):\n   pass\n\n@sp.add_test(name=\"tests\")\ndef t",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 撰寫nft合約\n- 到 [smartpy ide](https://smartpy.io/ide) 輸入\n```python\nimport smart",
             "date_modified": "2022-12-30T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -784,7 +883,7 @@
             "id": "20221228-solana-nft-tutorial",
             "url": "https://alanhc.github.io/logA/posts/20221228-solana-nft-tutorial",
             "title": "在solana上mint NFT",
-            "summary": "\n<ol>\n  <li>\n    <p>下載 solana cli: <code>sh -c \"$(curl -sSfL https://release.solana.com/v1.14.11/install)\"</code></p>\n  </li>\n  <li>\n    <p>新增帳號 <code>solana-keygen new --outfile ~/.config/solana/devnet.json</code></p>\n  </li>\n  <li>\n    <p>設定 devnet",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n1. 下載 solana cli: `sh -c \"$(curl -sSfL https://release.solana.com/v1.14.11/ins",
             "date_modified": "2022-12-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -795,8 +894,19 @@
             "id": "first-day",
             "url": "https://alanhc.github.io/logA/posts/first-day",
             "title": "Hello World",
-            "summary": "\n<h1>Hi! 😃</h1>\n<p>hello world!</p>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# Hi! 😃\nhello world!\n\n</body>\n</html>\n",
             "date_modified": "2022-12-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20220811-intern-at-line",
+            "url": "https://alanhc.github.io/logA/posts/20220811-intern-at-line",
+            "title": "20220811-intern-at-line",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n前言\n- LINE台灣用戶有2100萬\n- LINE 跨國公司\n正文\n- 時間：2000年初\n- 共享code，scale build sys",
+            "date_modified": "2022-08-11T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -806,7 +916,7 @@
             "id": "20220721-upgrade-nx-repo-to-react-18",
             "url": "https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18",
             "title": "Upgrade nx repo to react 18",
-            "summary": "\n<ul>\n  <li>更新@nrwl/react 到14會自動更新React到18</li>\n  <li><a href=\"https://nx.dev/guides/react-18#react-18-migration\">https://nx.dev/guides/react-18#react-18-migration</a></li>\n  <li>npx 指令：暫時使用，不global下載</li>\n  <li>更新nx\n    <ul>\n      <li><code>npx nx m",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 更新@nrwl/react 到14會自動更新React到18\n- https://nx.dev/guides/react-18#react-18-mig",
             "date_modified": "2022-07-21T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -817,7 +927,7 @@
             "id": "20220531-Decentral-Showroom-NTU-DApp-Term-project",
             "url": "https://alanhc.github.io/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project",
             "title": "Decentral Showroom — NTU DApp Term project",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/arbyM3t.png\" alt=\"\">\n</p>\n<p>photo by Hsiang Hsu, model: Cute Ubi</p>\n<blockquote>\n  <p>Decentral Showroom，屬於你的Metaverse展場空間</p>\n</blockquote>\n<p>期末我和實驗室同學Leo Chen、Jack Hsieh、Hsiang Hsu及Ubi Tsai製作了 一個基於Tezos鍊上的NFT",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n![](https://i.imgur.com/arbyM3t.png)\nphoto by Hsiang Hsu, model: Cute Ubi\n> De",
             "date_modified": "2022-05-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -828,7 +938,7 @@
             "id": "20220518-web3-世界裡的驗證機制-以Tezos為例",
             "url": "https://alanhc.github.io/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例",
             "title": "web3 世界裡的驗證機制，以Tezos為例",
-            "summary": "\n<p>在web3的世界裡面，區塊鏈錢包取代了過去綁定社交帳號登入的功能，以下面在Tezos上的NFT交易平台objkt為例，可以看到sync取代login的按鈕。</p>\n<p>\n  <img src=\"https://i.imgur.com/24a50VE.png\" alt=\"\">\n</p>\n<p>objkt</p>\n<p>如下圖，點選sync後，objkt會與您的錢包(temple wallet)互動，然後請您簽署一份payload：</p>\n<p>\n  <img src=\"https:/",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n在web3的世界裡面，區塊鏈錢包取代了過去綁定社交帳號登入的功能，以下面在Tezos上的NFT交易平台objkt為例，可以看到sync取代login的按鈕。",
             "date_modified": "2022-05-18T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -839,7 +949,7 @@
             "id": "20211028-虛擬人課堂筆記4-vroid",
             "url": "https://alanhc.github.io/logA/posts/20211028-虛擬人課堂筆記4-vroid",
             "title": "20211028-虛擬人課堂筆記4-vroid",
-            "summary": "\n<ul>\n  <li><a href=\"https://vroid.com/en/studio\">vroid</a> (註冊&#x26;下載)</li>\n</ul>\n<p>調整模型到你喜歡的</p>\n<p>Face Editor>Generate Bone</p>\n<p>調整完 Camera/Export>Export Info> Material Reduction>設定2</p>\n<p>Camera/Export>Export Info> Texture Altas Resolution>",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n* [vroid](https://vroid.com/en/studio) (註冊&#x26;下載)\n調整模型到你喜歡的\nFace Editor>Gene",
             "date_modified": "2021-10-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -850,7 +960,7 @@
             "id": "20211027-虛擬人課堂筆記3-unity-facecapture",
             "url": "https://alanhc.github.io/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture",
             "title": "20211027-虛擬人課堂筆記3-unity-facecapture",
-            "summary": "\n<p>\n  去上禮拜<a href=\"https://readyplayer.me/\">ReadyPlayerMe</a>下載glb模型檔\n  \n  <img src=\"https://i.imgur.com/FWWnEgg.png\" alt=\"\">\n</p>\n<ol>\n  <li>打開Blender，按右鍵刪除方塊</li>\n</ol>\n<p>2. File>import>.glb</p>\n<p>3. 選擇角色跟骨架</p>\n<p>3. 全選模型> File>Export>照著下面紅框做>E",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n去上禮拜[ReadyPlayerMe](https://readyplayer.me/)下載glb模型檔\n![](https://i.imgur.com/F",
             "date_modified": "2021-10-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -861,7 +971,7 @@
             "id": "20211018-虛擬人課堂筆記2",
             "url": "https://alanhc.github.io/logA/posts/20211018-虛擬人課堂筆記2",
             "title": "虛擬人課堂筆記2 —Mozilla Hub",
-            "summary": "\n<h1>在Mozilla Hub裡面使用虛擬角色</h1>\n<p>新建一個room：</p>\n<p><a href=\"https://hubs.mozilla.com\">https://hubs.mozilla.com</a></p>\n<p>\n  <img src=\"https://i.imgur.com/op3bKU6.png\" alt=\"\">\n</p>\n<p>掛載虛擬人</p>\n<p><a href=\"https://readyplayer.me\">https://readyplayer.",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n在Mozilla Hub裡面使用虛擬角色\n====================\n新建一個room：\n[https://hubs.mozilla.com]",
             "date_modified": "2021-10-18T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -872,7 +982,7 @@
             "id": "20211011-虛擬人課堂筆記-spark-ar",
             "url": "https://alanhc.github.io/logA/posts/20211011-虛擬人課堂筆記-spark-ar",
             "title": "虛擬人課堂筆記 — SparkAR",
-            "summary": "\n<h2>讀完這篇，將學會可在FB嵌入的濾鏡👇</h2>\n<p>先<a href=\"https://sparkar.facebook.com/ar-studio/download/\">下載 SparkAR</a></p>\n<p>\n  <img src=\"https://i.imgur.com/jGhSXT9.png\" alt=\"\">\n</p>\n<p>\n  <img src=\"https://i.imgur.com/ue6p2Z8.png\" alt=\"\">\n</p>\n<ol>\n  <li>開啟 ",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n讀完這篇，將學會可在FB嵌入的濾鏡👇\n-------------------\n先[下載 SparkAR](https://sparkar.facebook",
             "date_modified": "2021-10-11T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -883,19 +993,8 @@
             "id": "20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
             "url": "https://alanhc.github.io/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
             "title": "20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
-            "summary": "\n<p>請參考：<a href=\"https://next-school-up.vercel.app/\">銘傳金手指</a></p>\n<p>\n  <img src=\"https://i.imgur.com/ermaKMu.png\" alt=\"\">\n</p>\n<p>Photo by <a href=\"http://yabing890123@gmail.com\">joanna</a>, from <a href=\"https://www.facebook.com/upMCU\">upMCU</a></",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n請參考：[銘傳金手指](https://next-school-up.vercel.app/)\n![](https://i.imgur.com/ermaKM",
             "date_modified": "2021-08-20T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20200330-為什我會成為dsc-lead及怎麼申請",
-            "url": "https://alanhc.github.io/logA/posts/20200330-為什我會成為dsc-lead及怎麼申請",
-            "title": "20200330-為什我會成為dsc-lead及怎麼申請",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/4EZuaSk.png\" alt=\"\">\n</p>\n<p>MCU開源社(DSC MCU) logo</p>\n<blockquote>\n  <p>我們的宗旨，是打造一個讓學生可以互相討論及交流的學生開發者社團！</p>\n</blockquote>\n<h1>為什麼我會申請DSC Lead？</h1>\n<p>一次的黑客松的賽前技術訓練中，遇見了 Eric ShangKuan。剛好今年Google在台灣要推出Developer S",
-            "date_modified": "2020-03-30T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -905,7 +1004,7 @@
             "id": "20190614-CGfinal",
             "url": "https://alanhc.github.io/logA/posts/20190614-CGfinal",
             "title": "20190614-CGfinal",
-            "summary": "\n<h3>alanhc/張牧之 電腦圖學-week17 [final]</h3>\n<p><a href=\"//1.bp.blogspot.com/-MTXC4fGai9E/XQXwPX8EOqI/AAAAAAAAKT8/cPuiAtKXqt4KJiqyYjqHT1yHnGu3nDnpQCK4BGAYYCw/s1600/s-948962aa160e9da97a540677d2bec48b97e6f72d.gif\"><img src=\"https://1.bp.blogspot.com/-MTXC4",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n### alanhc/張牧之 電腦圖學-week17 \\[final\\]\n<div></div>[![](https://1.bp.blogspot.com",
             "date_modified": "2019-06-14T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -916,7 +1015,7 @@
             "id": "20190409-uva409",
             "url": "https://alanhc.github.io/logA/posts/20190409-uva409",
             "title": "20190409-uva409",
-            "summary": "\n<p>\n  <a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZU3KamyHjeyRYUBe55Qklm2EDfet2LZXEBykmWxvBcuiGAo2EGWB-Jhpv6petJiutsLfUVrPXbaGyZnvzTYCKr-p3Asdf5ZWJTrFZUhzt4lcJ9BqvdmrboIssKgoKFGCh3fX5ov_u71S8-vAnJdf94m",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-04-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -927,7 +1026,7 @@
             "id": "20180405-uva630",
             "url": "https://alanhc.github.io/logA/posts/20180405-uva630",
             "title": "20180405-uva630",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUjCZVfTWVpN-YxruuTa6Zxb9Niv-A_c-t6A2iojaZ6u3EAxJUwREbmPVy4TUqrSJzA76BpZiey9krp8XNdw7s4DXqD9uOE9B5oI5Wft_MISZ1VDqOT5X1GJY-Edtu-0QSOFdAkzDAZNZid7D4Cs-kfs0B",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-04-05T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -938,7 +1037,7 @@
             "id": "20180317-uva10409",
             "url": "https://alanhc.github.io/logA/posts/20180317-uva10409",
             "title": "20180317-uva10409",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXaP_T8_j7nhUvXVfmlXe5oxYgFScAMBFbQDjBhHblfshtC_E5FZVxFakpMTr0QF61Ug7hOeZ6bOaKXgQu7fj8de741-QYjBCuTaNA3iZH2x1azPhnUn0ZaO-hSDUZnty6INLTSpKu_cgJsUhgy09Uv-O-",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-03-17T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -949,7 +1048,7 @@
             "id": "20180314-uva105",
             "url": "https://alanhc.github.io/logA/posts/20180314-uva105",
             "title": "20180314-uva105",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUQAvrOLnhUg8gAgxrjuViGI2J9FXeLkv6ax2Suofq6zNNcLXJvnFptk_JrXNjWkgVi71x9_1aDD1Iw97g19_FPP7WBrz6EQhIlwqbClU5sMrA7p6gkaowWvOtSTJNz8DmfhxM7dqTGlUAQO4HPVeF_KRP",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-03-14T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -960,7 +1059,7 @@
             "id": "20180312-uva10190",
             "url": "https://alanhc.github.io/logA/posts/20180312-uva10190",
             "title": "20180312-uva10190",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E6%9B%B4?__eep__=6&#x26;__cft__%5B0%5D=AZXKsASeP8yv3GQFmwMAB97lLtedKl7jUa-OZlTPreqehNhpS4-FXOOs_4iymD-ZIwiL2JaAfwIAwpBTCOR-cHIbD1Y6Qz-BUZXIBvfbLcs8vpjygxs8bYVYg0wfoLoKjmGYdcR5TZjNInCx4tBrF6T13a_PzhiHK4Sh",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#更](https://www.facebook.com/hashtag/%E6%9B%B4?__eep__=6&#x26;__cft__[0]=AZXK",
             "date_modified": "2018-03-12T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -971,7 +1070,7 @@
             "id": "20180309-uva141",
             "url": "https://alanhc.github.io/logA/posts/20180309-uva141",
             "title": "20180309-uva141",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E7%BA%8C?__eep__=6&#x26;__cft__%5B0%5D=AZUYI3uFckRV5BkHcM1swGyXTOK5pFMwUtVp4G8HG1TzktK0Xs544ls0v-Q9FkJWvm6_ggmSSc8ugHAB3PPFh0ZSjSpBXvZpKW7JJOWTH3l9M6jM4C1sIHfs0HJgY1IptvN1XeXTijd9N6mwTrM_YNdV9G6yMYttUglD",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#續](https://www.facebook.com/hashtag/%E7%BA%8C?__eep__=6&#x26;__cft__[0]=AZUY",
             "date_modified": "2018-03-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -982,7 +1081,7 @@
             "id": "20180228-hash-table",
             "url": "https://alanhc.github.io/logA/posts/20180228-hash-table",
             "title": "20180228-hash-table",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/data_structure_and_algorithms?__eep__=6&#x26;__cft__%5B0%5D=AZVEMsK7ypjElCs3HR_7O3Dqz56Z3tVUh43xhv3U7Vm-2RmcF2KOJ0eiy0ZT8Hs8V5itF6Ng9rR2W2DaPDcFTDzGVSmV5_LTGwpplPvIuXBxPd47Sx3Cl92cxdplGzQsyoKuM6TlkDvCekNL",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#Data_Structure_and_Algorithms](https://www.facebook.com/hashtag/data_structu",
             "date_modified": "2018-02-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -993,7 +1092,7 @@
             "id": "20180222-uva401",
             "url": "https://alanhc.github.io/logA/posts/20180222-uva401",
             "title": "20180222-uva401",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXJK464GxbR-YpyYdMrF43b4J1eKTpPbgyaGbiJZzOItb6VbRzfVZB1P11s-nsgRulL_91toNa6PUVCV-8L9iGXLUlUcEO3wXIgvW8IUNI1suDdilPEmKSnsLwGQNHSa-ip7dl1M5IvSxzaZCi6Vcp0z2k",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-02-22T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1004,7 +1103,7 @@
             "id": "20180212-uva10611",
             "url": "https://alanhc.github.io/logA/posts/20180212-uva10611",
             "title": "20180212-uva10611",
-            "summary": "\n<p>\n  <img src=\"https://i.imgur.com/daxm26z.jpg\" alt=\"\">\n  <img src=\"https://i.imgur.com/8DqMq4E.jpg\" alt=\"\">\n</p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.facebook.com/groups/363494050740833/permalink/404391153317789/\">https://www.facebook.com/",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n![](https://i.imgur.com/daxm26z.jpg)\n![](https://i.imgur.com/8DqMq4E.jpg)\n## R",
             "date_modified": "2018-02-12T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1015,7 +1114,7 @@
             "id": "20180210-NCTU-PCCA-winter-notes",
             "url": "https://alanhc.github.io/logA/posts/20180210-NCTU-PCCA-winter-notes",
             "title": "20180210-NCTU-PCCA-winter-notes",
-            "summary": "\n<h1>NCTU PCCA winter</h1>\n<h2>快速索引</h2>\n<ul>\n  <li><a href=\"https://sites.google.com/g2.nctu.edu.tw/pcca-winter-2018/%E9%A6%96%E9%A0%81?authuser=0\">活動網頁</a> | <a href=\"https://vjudge.net/contest/204504\">水題大賽</a> | <a href=\"https://sites.google.com/g",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# NCTU PCCA winter\n## 快速索引\n- [活動網頁] | [水題大賽] | [課程網頁]\n- [演算法筆記]\n[課程網頁]: https:",
             "date_modified": "2018-02-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1026,7 +1125,7 @@
             "id": "20180209-uva406",
             "url": "https://alanhc.github.io/logA/posts/20180209-uva406",
             "title": "20180209-uva406",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWuJ_MExaDDIO3GsIzeo3R1GlNMTeC33pqBL8woS5mQ056nLXkYDLAwY83ivy4-0wT7uVVCHB5uUXpxMXehU7laRKFGoIbskjTnrBoaODYOTvEAOUrfRMXnza-6K1DnIQrMd3jMaLyFWrq8oE2MOV5FGcT",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-02-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1037,7 +1136,7 @@
             "id": "20180209-linked-list",
             "url": "https://alanhc.github.io/logA/posts/20180209-linked-list",
             "title": "20180209-linked-list",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E7%B7%B4%E7%BF%92?__eep__=6&#x26;__cft__%5B0%5D=AZUnn6vVAhlordDoly2czsqYs2RQ1OFk_QMJWwY6Jv6fYGXZwr9u38ZRxvtRC0i_-nl84g98zTwlyqCo9EV0EOPzqt4CxetfqNjSAklWQcKroQQejYlV1zKQKV01KcodnfBX0OkgYrc1w_tzYU2_FjPsx6m",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#練習](https://www.facebook.com/hashtag/%E7%B7%B4%E7%BF%92?__eep__=6&#x26;__cft",
             "date_modified": "2018-02-09T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1048,7 +1147,7 @@
             "id": "20180206-uva10162",
             "url": "https://alanhc.github.io/logA/posts/20180206-uva10162",
             "title": "20180206-uva10162",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXth538V0o5xEvIsIDhVRvfw7KlWeAQsu35gDE-PD-DkVXPjfLoapAWxMqNNoIydbnoxGJcZWKtyLuI6phDgFb0ZpS2DFCIqo-8lArQZUVON9QWMP1WHBgEmE3iM4bXZ9EeYVvNJePI5UV82-1d25T1Udl",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-02-06T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1059,7 +1158,7 @@
             "id": "20180205-uva10405",
             "url": "https://alanhc.github.io/logA/posts/20180205-uva10405",
             "title": "20180205-uva10405",
-            "summary": "\n<p><a href=\"\">#心得</a> <a href=\"\">#Longest_Common_Subsequence</a> <a href=\"\">#LCS</a> <a href=\"\">#DP</a> <a href=\"\">#Uva10405</a> <a href=\"\">#解題</a></p>\n<p>心得：</p>\n<p>這題其實看懂題目+用陣列來填真的蠻簡單，但是我debug了一天，因為我圖表陣列的型別弄錯QQ 要注意這個陣列是int</p>\n<p>題目：找最長的共同子集合</p>\n",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得]() [#Longest_Common_Subsequence]() [#LCS]() [#DP]() [#Uva10405]() [#解題]()",
             "date_modified": "2018-02-05T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1070,7 +1169,7 @@
             "id": "20180131-uva11917",
             "url": "https://alanhc.github.io/logA/posts/20180131-uva11917",
             "title": "20180131-uva11917",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZU1SFdqum70_lIZpz8s_XGGPjJJiX5DNDyV9bYZP8yVBFQQnX9ugmim2nbfSTi4C1-WEMfoSWM-Mjbh3JDZMnuNctzP2n8ESa8XUiAR4RGRcYVCwp3qxfbBCYMorYM-DrqYkk-aILVshUa4-uDqh4pml6s",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-01-31T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1081,7 +1180,7 @@
             "id": "20180128-uva10931",
             "url": "https://alanhc.github.io/logA/posts/20180128-uva10931",
             "title": "20180128-uva10931",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUQWQe2svEDA5pKnMNrfclP_50US1grnHKvcpKHvRGZRqV-uaHv7aJCQnWtEqnGV6DSfQbgKtLMDwBRacJjFUU2GYnAe-nXK7Y8MLNyIMuTXnv3s5aYOHtLOu_ixrId8ufeqYOJ_Ym6DTq6psp4HEbCfQI",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-01-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1092,7 +1191,7 @@
             "id": "20180124-gets-puts",
             "url": "https://alanhc.github.io/logA/posts/20180124-gets-puts",
             "title": "20180124-gets-puts",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWyWa5MzAwM1Nr9U922RKjA0YFjLWNWLg0oIpjRabOAkBWc9vNtwNTenxorr3YlTyTivUBfoReYkBbiUER72uZcIgxlOmnWBAlyF-bOVW3tcEgdykgxQcRVLPlATQe-Dom3U7zjYYXuCTTzwW3TjhFWVzh",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-01-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1103,7 +1202,7 @@
             "id": "20180123-int2str",
             "url": "https://alanhc.github.io/logA/posts/20180123-int2str",
             "title": "20180123-int2str",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWZFm9BoSnltzZCjxyreHWIk7DN4dflfIChADeiCenwwzFp2jRwTSpq6Hod62IyII_QS5qCM07KXJX-glrDefmCVs3YAbFZw2lZXx-H8NfToEyn_XTx9T7-j9lwBtLEcQsYlBnjVMH9G6zQKD_9pNPuS64",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2018-01-23T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1114,7 +1213,7 @@
             "id": "20180119-hackmd",
             "url": "https://alanhc.github.io/logA/posts/20180119-hackmd",
             "title": "20180119-hackmd",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZWrqnxkmh2vocQBuGpgp_P4XBloDDABzvyTpxmrfb29IOEDWE7A-itkH-GCDMiNxtUAIv1L2Jq83M9-nQYgiN_NC74BljuV8dIwWobQv4z2IBKEPsyry3FVyq9HPH3nsYrdjEPddR3gHTSbfqWQBE-nPqk",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#分享](https://www.facebook.com/hashtag/%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft",
             "date_modified": "2018-01-19T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1125,7 +1224,7 @@
             "id": "20171230-recursion",
             "url": "https://alanhc.github.io/logA/posts/20171230-recursion",
             "title": "20171230-recursion",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUi9EhO1AxvWuev5lfYQ9vH7eoB8iEMbdW9cLr_Av60-iI0R-KRUjCqlnrHK8Jcup_TLJQPnghkZmmSE34oonc79XBLjQaHA_drRrHWfTEEp_6tYObuga490V3AcvHD6crvaeAmGo5QmBDt8rgxbXvBo0f",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-12-30T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1136,7 +1235,7 @@
             "id": "20171221-uva10190",
             "url": "https://alanhc.github.io/logA/posts/20171221-uva10190",
             "title": "20171221-uva10190",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/debug?__eep__=6&#x26;__cft__%5B0%5D=AZVA978Ul4liU9fJQ3zSzDO1nYMJQH-2ynnmUoEAJhgZNayYurL0P2Luj3MrD6zZtyMbKbVu1qp9lhKcLxbWZKb5nzEZiGACZuaHMTIIUN3rnXAdYu2myTnlI-b_39cn5QDgNbDgMI3Y_VZMunfSVzexv2mE9U1O2gi2TCu6",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#Debug](https://www.facebook.com/hashtag/debug?__eep__=6&#x26;__cft__[0]=AZVA",
             "date_modified": "2017-12-21T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1147,7 +1246,7 @@
             "id": "20171219-recursion",
             "url": "https://alanhc.github.io/logA/posts/20171219-recursion",
             "title": "20171219-recursion",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe3",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-12-19T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1158,7 +1257,7 @@
             "id": "20171217-DP",
             "url": "https://alanhc.github.io/logA/posts/20171217-DP",
             "title": "20171217-DP",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZW8h0LBTah501Oo3H-ot4494tYWv5SMlI4OKjNzpIc79ypNxD1zHFFBf5Mkk6akhS1uCl_6cwg7w4vQ1ZkxFuAkedYKh8sYc59yNrKKi5JAxHPsWpIu4mItcXD5jV13mfuCJ9dSPezEAJZwWx8zfeYnNy5",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-12-17T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1169,7 +1268,7 @@
             "id": "20171210-vector",
             "url": "https://alanhc.github.io/logA/posts/20171210-vector",
             "title": "20171210-vector",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUO65Ug-wELBllXjnBpGPIr1flrwKtRiFPuNn4W_deYZGNcuFKkCo6PXAZ5aNWuV6ji4XRoNmHBm2H2ipbw58LL2KhQtUsacshByDrQDatexjh9atdHl2h4uo8RkLxZW5z_faVZofFe5UPwLLEOO6zINwV",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-12-10T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1180,7 +1279,7 @@
             "id": "20171202-styleguide",
             "url": "https://alanhc.github.io/logA/posts/20171202-styleguide",
             "title": "20171202-styleguide",
-            "summary": "\n<p>\n  <a href=\"https://www.facebook.com/hashtag/%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZUB1vXBKbrzjGb2sMW06aisRc6HsARl1V41kQEVfykzeum5p0j39KknS27UT8pnYQL4J4hyS-CqZLwduL3yYPIY-xe99T606pHevHQxU_7j9ot3oajXCuPNej6L_tJ4bAsvuN",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#文章分享](https://www.facebook.com/hashtag/%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB?",
             "date_modified": "2017-12-02T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1191,7 +1290,7 @@
             "id": "20171106-gcd",
             "url": "https://alanhc.github.io/logA/posts/20171106-gcd",
             "title": "20171106-gcd",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E7%A8%8B%E5%BC%8F%E5%88%86%E4%BA%AB?__eep__=6&#x26;__cft__%5B0%5D=AZX7hl_TW7KwyQlmwpO9DqeU0XAjBq52l8mSCBrP90F6gph9iSdUrZ-SxBF0kmItMf096X7T3GKY5W2W2_zl258VDKAWSFbRAQD44GFvVIxEU_9NGdkPyE4XT1ymKK21WTKRbiXYE",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#程式分享](https://www.facebook.com/hashtag/%E7%A8%8B%E5%BC%8F%E5%88%86%E4%BA%AB?",
             "date_modified": "2017-11-06T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1202,7 +1301,7 @@
             "id": "20171105-makerfair",
             "url": "https://alanhc.github.io/logA/posts/20171105-makerfair",
             "title": "20171105-makerfair",
-            "summary": "\n<p>前情提要：</p>\n<p>今天去MakerFaire有個攤位是做智慧家電的，</p>\n<p>我覺得有個還蠻適合拿來討論的，</p>\n<p>簡單來說一般做物聯網都是用網路來做，</p>\n<p>但他們很特別是靠電力系統來做資料傳輸，</p>\n<p>我覺得方式還蠻有趣的，</p>\n<p>但我問了兩個問題：</p>\n<p>問題：</p>\n<p>Q1. 所有的電力系統都會連到同一條通往台電的線，那不是代表駭客只要在家插插頭就可以開始去散播寫的病毒程式，或直接在變壓站\u001d植入竊聽程式？</p>\n<p>",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n前情提要：\n今天去MakerFaire有個攤位是做智慧家電的，\n我覺得有個還蠻適合拿來討論的，\n簡單來說一般做物聯網都是用網路來做，\n但他們很特別是靠電力系",
             "date_modified": "2017-11-05T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1213,7 +1312,7 @@
             "id": "20171102-computer-virus",
             "url": "https://alanhc.github.io/logA/posts/20171102-computer-virus",
             "title": "20171102-computer-virus",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZXlbna_XcYPEnTgUyFmv6FgCIqAGu7QIsZOZsHZ8LrivarNzUGQvOPIRkej2uMiTT4hDLX-m08EQOR3GZUVcEK_sopLfRnMln4-TrkS5YONUVbzPGpCRDRLYAtP_Hz4yq9xMA51IKHwHtU_x4Nl5o3X7zB",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-11-02T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1224,7 +1323,7 @@
             "id": "20171027-refactor",
             "url": "https://alanhc.github.io/logA/posts/20171027-refactor",
             "title": "20171027-refactor",
-            "summary": "\n<p><a href=\"https://www.ithome.com.tw/node/46046\">https://www.ithome.com.tw/node/46046</a></p>\n<h2>Ref</h2>\n<ul>\n  <li><a href=\"https://www.facebook.com/groups/363494050740833/permalink/363567360733502/\">https://www.facebook.com/groups/3634940507408",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://www.ithome.com.tw/node/46046\n## Ref\n- https://www.facebook.com/groups/",
             "date_modified": "2017-10-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1235,7 +1334,7 @@
             "id": "20171027-bnf",
             "url": "https://alanhc.github.io/logA/posts/20171027-bnf",
             "title": "20171027-bnf",
-            "summary": "\n<p><a href=\"https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft__%5B0%5D=AZUz_gNDElA-5k_2F-9vJBzQwKHDdD2KsuDJvqqMmHsUJ3hxmYqlPCEQynrj1EV-2rfTZHX6rUCqMF_sqwNVfOOqntifX1t4yIJLqiFAMuQV4b2EmD-VHyXUxudTt80rTPNmXWT2rfxky49rF4Bz5Lu5MVO",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-10-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -1246,7 +1345,7 @@
             "id": "test-render",
             "url": "https://alanhc.github.io/logA/posts/test-render",
             "title": "test",
-            "summary": "\n<h1>h1</h1>\n<p>\n  text text text text text text text text text text text text text text text text text text text text text text\n  text text text text text text text text text text text text text text text text text text text text text text\n</p>\n<h2>",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# h1\ntext text text text text text text text text text text text text text tex",
             "date_modified": "2000-01-01T00:00:00.000Z",
             "author": {
                 "name": "alanhc",

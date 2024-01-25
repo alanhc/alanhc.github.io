@@ -5,6 +5,7 @@ import { getSortedPostsData } from "@/lib/posts";
 import NextLink from "next/link";
 import SEO from 'next-seo.config';
 import {
+  Checkbox,
   Container,
   Divider,
   InputGroup,
@@ -78,7 +79,12 @@ const Blog: NextPage = ({ allPostsData }: any) => {
 
 
   //console.log(tagsSet)
+  const [select, setSelect] = useState(true)
   const [search, setSearch] = useState(tag);
+  const filter_select = ({ content, tag, title }: any) => {
+    if (!select) return true
+    else return tag.includes("select")
+  }
   const search_text = ({ content, tag, title }: any) => {
     if (!searchTag&& !search) return true
     if (searchTag === "." && !search) return true
@@ -94,7 +100,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     else return `${y}-${m}`===searchDate
   }
   const [searchTag, setSearchTag] = useState("")
-  
+ 
   return (
 
     <BlogLayout>
@@ -110,7 +116,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
             {search && <CloseIcon h="1.75rem" onClick={() => setSearch("")} />}
           </InputRightElement>
         </InputGroup>
-
+        
       </Flex>
       <Select onChange={(o)=>setSearchDate(o.target.value)} placeholder='Select month'>
         {date_options.map((op:any)=>(
@@ -120,6 +126,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         {/* <option value='option2'>Option 2</option>
         <option value='option3'>Option 3</option> */}
       </Select>
+      <Checkbox defaultChecked onChange={()=>setSelect(!select)}>Selected</Checkbox>
       <Box mt={2} mb={2}>
         {tagsArray.sort().map((t: string, index) => (
           <Link
@@ -139,7 +146,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
       {(!search) && (!searchTag) && (!searchDate) ? (
         <Stack divider={<StackDivider />}>
           <Text>total:  {JSON.stringify(allPostsData.length)}</Text>
-          {allPostsData.map(({ id, date, title, tag, content }: any) => (
+          {allPostsData.filter(filter_select).map(({ id, date, title, tag, content }: any) => (
             <NextLink key={id} href={`/logA/posts/${id}`}>
               <Box>
                 📍{title}
@@ -160,9 +167,11 @@ const Blog: NextPage = ({ allPostsData }: any) => {
         <Accordion allowToggle>
             total:  {JSON.stringify(allPostsData
             .filter(search_text)
+            .filter(filter_select)
             .filter(search_date).length)}
           {allPostsData
             .filter(search_text)
+            .filter(filter_select)
             .filter(search_date)
             .map(({ id, date, title, tag, content, markdownContent }: any) => (
               <AccordionItem key={id}>

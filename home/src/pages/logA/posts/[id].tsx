@@ -43,7 +43,9 @@ import rehypeSlug from 'rehype-slug'
 import GithubSlugger, { slug } from 'github-slugger'
 import rehypePrism from 'rehype-prism-plus'
 import { NextSeo } from "next-seo";
+import remarkHtml from 'remark-html'
 import SEO from "next-seo.config";
+import remarkRehype from 'remark-rehype'
 const codeblocks = require('remark-code-blocks')
 function CodeBlock({
   language,

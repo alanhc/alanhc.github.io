@@ -1,19 +1,24 @@
 
-import { Text, Flex, Button, Container, SimpleGrid, VStack, Wrap, WrapItem, Center, Box, AspectRatio } from '@chakra-ui/react'
+import { Text, Flex, Button, Container, SimpleGrid, VStack, Wrap, WrapItem, Center, Box, AspectRatio, useColorMode } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Profile from '../components/partial/Profile'
 import NextImage from "next/legacy/image";
 import { useRouter } from 'next/router'
-
-const Me: NextPage = ({ links }: any) => {
+import { NotionRenderer } from 'react-notion-x'
+import 'react-notion-x/src/styles.css'
+import { NotionAPI } from 'notion-client'
+import { NotionPage } from "@/components/NotionPage";
+const Me: NextPage = ({ links, recordMap }: any) => {
     const router = useRouter()
     const handle_click = (link: string) => {
         router.push(link)
     }
+    const { colorMode, toggleColorMode } = useColorMode()
     return (
         <>
-            <Container>
-                <Container mt={5} mb="5"centerContent>
+            
+            <NotionPage recordMap={recordMap} rootPageId={"Alan-Tseng-6928c2d8766044269c70b5a4b248bed8"} colorMode={colorMode}/>
+                {/* <Container mt={5} mb="5"centerContent>
                     <AspectRatio minW={100} minH={100} ratio={1}>
                         <Box position='relative' bottom={1} >
                             <NextImage src='/image/me.jpeg' alt='My Picture' layout='fill' style={{ borderRadius: '100%' }} />
@@ -33,10 +38,10 @@ const Me: NextPage = ({ links }: any) => {
                         </Button>
 
                     ))}
-                </VStack>
+                </VStack> */}
 
 
-            </Container>
+        
         </>
     )
 }
@@ -52,9 +57,12 @@ export async function getStaticProps() {
         { "name": "Tezos NFT", "link": "https://objkt.com/profile/alanhc/owned" },
 
     ]
+    const notion = new NotionAPI()
+    const pageId = 'Alan-Tseng-5f7264b563bd4a9d82024f39b5173dda'
+    let recordMap = await notion.getPage(pageId)
     return {
         props: {
-            links,
+            links, recordMap
         },
     }
 }

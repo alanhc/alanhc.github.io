@@ -1,4 +1,4 @@
-import { Box, Badge, useDisclosure, Button, VStack, HStack, AspectRatio } from "@chakra-ui/react";
+import { Box, Badge, useDisclosure, Button, VStack, HStack, AspectRatio, LinkOverlay } from "@chakra-ui/react";
 import NextImage from "next/legacy/image"
 import {
     Modal,
@@ -9,11 +9,30 @@ import {
     ModalBody,
     ModalCloseButton, Flex
 } from '@chakra-ui/react'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import { Link } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+import ReactMarkdown from "react-markdown";
+import { components } from "@/components/partial/MarkdownComponents";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import { da } from "date-fns/locale";
+
 const Project = ({ metadata }: any) => {
+    const [mdxSource, setData] = useState<any>(null);
+    useEffect(() => {
+        const init = async () =>{
+            const _ = await serialize(metadata.content, {
+                mdxOptions: {
+                  development: process.env.NODE_ENV === 'development',
+                }
+              })
+             setData(_)
+        }
+        init()
+        
+    }, [])
     const { isOpen, onOpen, onClose } = useDisclosure()
     const opts = {
 
@@ -24,7 +43,8 @@ const Project = ({ metadata }: any) => {
     };
     return (
         <>
-            <button key={metadata.title} onClick={onOpen}>
+            <button key={metadata.title}>
+                <a href={`projects/${metadata.id}`}>
                 <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'  >
                     <NextImage width="600" height="500" layout="responsive" src={(metadata.image) ? `/${metadata.image}` : "/image/github.png"} alt={metadata.image} />
                     <Box p="6" >
@@ -48,6 +68,7 @@ const Project = ({ metadata }: any) => {
                         </Box>
                     </Box>
                 </Box>
+                </a>
 
             </button>
             <Modal isOpen={isOpen} onClose={onClose} size="xl">
@@ -55,10 +76,9 @@ const Project = ({ metadata }: any) => {
                     bg='blackAlpha.300'
                     backdropFilter='blur(10px)' />
                 <ModalContent>
-                    <ModalHeader>{metadata.modal.title}</ModalHeader>
+                    <ModalHeader>{metadata.title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-
                         {metadata.modal.video &&
                             <AspectRatio ratio={4 / 3}>
                                 <YouTube
@@ -69,21 +89,13 @@ const Project = ({ metadata }: any) => {
 
                         }
                         {metadata.modal.screenshot?.map((img: string, i: number) => (
-                           
-                                <NextImage key={i} width="400" height="300" layout="responsive" src={img} alt={img} />
-                    
+
+                            <NextImage key={i} width="400" height="300" layout="responsive" src={img} alt={img} />
+
                         ))}
+                        {/* {JSON.stringify(data)} */}
+                        <MDXRemote {...mdxSource} components={components} />
 
-                        {metadata.modal.description}
-
-                        <Flex>
-                            {metadata.modal.demo && <Link href={metadata.modal.demo} ml="2" isExternal>
-                                demo <ExternalLinkIcon mx='2px' />
-                            </Link>}
-                            {metadata.modal.github && <Link href={metadata.modal.github} ml="2" isExternal>
-                                github <ExternalLinkIcon mx='2px' />
-                            </Link>}
-                        </Flex>
                     </ModalBody>
                     <ModalFooter>
                         <Button colorScheme='blue' mr={3} onClick={onClose}>

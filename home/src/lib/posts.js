@@ -15,16 +15,26 @@ import { reporter } from 'vfile-reporter'
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import moment from "moment"
+import remarkSlug from 'remark-slug'
+import remarkHtml from 'remark-html'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeParse from 'rehype-parse'
+
 const postsDirectory = path.join(process.cwd(), 'src/posts');
 async function markdownToHtml(markdownContent) {
   const htmlContent = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(remarkHtml)
+    .use(remarkSlug)
     //.use(rehypeDocument, {title: '👋🌍'})
     .use(rehypeFormat)
     .use(rehypeStringify)
     .use(rehypeRaw)
+    .use(rehypeParse, {fragment: true})
+    .use(rehypeSanitize)
+    .use(rehypeDocument, {title: 'Contents'})
     .process(markdownContent)
   return String(htmlContent)
 }
@@ -51,13 +61,14 @@ export async function getSortedPostsData() {
     matterResult.data.tag = (!matterResult.data.tag) ? matterResult.data.tags : matterResult.data.tag
     if (!matterResult.data.tag) matterResult.data.tag = []
     if ((typeof matterResult.data.date) === "object") {
-
       matterResult.data.date = moment(String(matterResult.data.date)).format("YYYY-MM-DD");
-
+    }
+    if ((typeof matterResult.data.updated) === "object") {
+      matterResult.data.updated = moment(String(matterResult.data.updated)).format("YYYY-MM-DD");
     }
 
-    if (id) {
 
+    if (id) {
       return {
         id,
         ...matterResult.data,
@@ -121,6 +132,9 @@ export async function getPostData(id) {
   matterResult.data.tag = (!matterResult.data.tag) ? matterResult.data.tags : matterResult.data.tag
   if ((typeof matterResult.data.date) === "object") {
     matterResult.data.date = await moment(String(matterResult.data.date)).format("YYYY-MM-DD");
+  }
+  if ((typeof matterResult.data.updated) === "object") {
+    matterResult.data.updated = await moment(String(matterResult.data.updated)).format("YYYY-MM-DD");
   }
   const htmlContent = await markdownToHtml(matterResult.content);
   const markdownContent = matterResult.content

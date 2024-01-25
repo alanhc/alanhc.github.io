@@ -22,13 +22,15 @@ const BlogLayout = ({ children }: AppProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
   
   return (
-    <Container className="ck-reset">
+    <>
+    <Container maxW="7xl" p="5" className="ck-reset">
       <BlogNav/>
       {children}
       <Center mt="10">
         <p>@alanhc</p>
       </Center>
     </Container>
+    </>
   );
 };
 export default BlogLayout;

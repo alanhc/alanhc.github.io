@@ -16,6 +16,7 @@ const withMDX = require('@next/mdx')({
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
+  
   // Configure pageExtensions to include md and mdx
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
@@ -42,7 +43,9 @@ const nextConfig = {
       }
     }
   },
-
+  experimental: {
+    mdxRs: false,
+  }
 
 }
 
