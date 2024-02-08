@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 08 Feb 2024 13:27:39 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 08 Feb 2024 13:32:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,25 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2024, alanhc</copyright>
+        <item>
+            <title><![CDATA[20240207-dcard-crawler]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240207-dcard-crawler</link>
+            <guid>20240207-dcard-crawler</guid>
+            <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://github.com/alanhc/dcard_crawler.git
+## Backgorund
+有些反爬蟲會針對selenium偵測，因]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20240205-salesrank]]></title>
             <link>https://alanhc.github.io/logA/posts/20240205-salesrank</link>

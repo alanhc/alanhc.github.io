@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "20240207-dcard-crawler",
+            "url": "https://alanhc.github.io/logA/posts/20240207-dcard-crawler",
+            "title": "20240207-dcard-crawler",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://github.com/alanhc/dcard_crawler.git\n## Backgorund\n有些反爬蟲會針對selenium偵測，因",
+            "date_modified": "2024-02-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240205-salesrank",
             "url": "https://alanhc.github.io/logA/posts/20240205-salesrank",
             "title": "20240205-salesrank",
