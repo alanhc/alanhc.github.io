@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-01-25T14:22:50.567Z</updated>
+    <updated>2024-02-08T13:27:39.580Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -16,7 +16,238 @@
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, alanhc</rights>
     <entry>
-        <title type="html"><![CDATA[20230122-ntu-cool]]></title>
+        <title type="html"><![CDATA[20240205-salesrank]]></title>
+        <id>20240205-salesrank</id>
+        <link href="https://alanhc.github.io/logA/posts/20240205-salesrank"/>
+        <updated>2024-02-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計一個有多類別的產品ranking網站
+## Solutions
+### Step 1 Scope the problem
+- 只]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240203-trading-bot]]></title>
+        <id>20240203-trading-bot</id>
+        <link href="https://alanhc.github.io/logA/posts/20240203-trading-bot"/>
+        <updated>2024-02-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+[Python自動化交易](https://youtu.be/eDolz-_Ls4o?si=SWWnmwDFPey1cUHS)
+https://www.xq]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[quotes]]></title>
+        <id>quotes</id>
+        <link href="https://alanhc.github.io/logA/posts/quotes"/>
+        <updated>2024-01-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- [Elizabeth Sloane](https://www.imdb.com/name/nm1567113/?ref_=tt_ch) : Lobbyi]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240125-web_srawler_design]]></title>
+        <id>20240125-web-crawler-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240125-web-crawler-design"/>
+        <updated>2024-01-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+再設計爬蟲時，如何避免無限迴圈
+## Solutions
+問題：無限迴圈何時發生？因為我們將鏈結化作graph，所以有可能有無限迴圈]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240125-duplicate-url-design]]></title>
+        <id>20240125-duplicate-url-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240125-duplicate-url-design"/>
+        <updated>2024-01-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+如何儲存1000萬的url，每個字4 byte、頁面平均100字，這樣大約會有4TB
+## Solutions
+### Soluti]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240125-cache-design]]></title>
+        <id>20240125-cache-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240125-cache-design"/>
+        <updated>2024-01-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240124-social-network-design]]></title>
+        <id>20240124-social-network-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240124-social-network-design"/>
+        <updated>2024-01-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240124-break-cloudflare-bot-prevention]]></title>
+        <id>20240124-break-cloudflare-bot-prevention</id>
+        <link href="https://alanhc.github.io/logA/posts/20240124-break-cloudflare-bot-prevention"/>
+        <updated>2024-01-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+今日看到好玩的東西，改天有時間來玩
+## Ref
+- https://github.com/g1879/DrissionPage
+
+</body>
+</ht]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240123-scalper]]></title>
+        <id>20240123-scalper</id>
+        <link href="https://alanhc.github.io/logA/posts/20240123-scalper"/>
+        <updated>2024-01-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+論文研究如何避免黃牛的賣票策略，其實也順便研究了黃牛
+## 黃牛訪談影片
+[【紀錄片】黃牛末日？直擊台灣黃牛產業鏈 - 第九人稱](https://yout]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240122-stock-data]]></title>
+        <id>20240122-stock-data-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240122-stock-data-design"/>
+        <updated>2024-01-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計一個可以有1000 client 可以取得最後的開高收低，已經有資料、可以自行決定儲存，要怎麼設計client說明幾種不同的方法]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240122-ntu-cool-video-download]]></title>
         <id>20240122-ntu-cool-video-download</id>
         <link href="https://alanhc.github.io/logA/posts/20240122-ntu-cool-video-download"/>
         <updated>2024-01-22T00:00:00.000Z</updated>
@@ -153,6 +384,32 @@ why? 品牌商想知道自己跟對手]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[20240113-data-pay]]></title>
+        <id>20240113-data-engineer-salary</id>
+        <link href="https://alanhc.github.io/logA/posts/20240113-data-engineer-salary"/>
+        <updated>2024-01-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+以下內容為該影片的筆記：
+中國經濟變差 政府監管 員工信心
+全球資產配置 美股 賺美元全權資產配置
+大廠 推行要一年
+大廠大家做得跟核心業務沒關
+數據 有博]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20240108-attention]]></title>
         <id>20240108-attention</id>
         <link href="https://alanhc.github.io/logA/posts/20240108-attention"/>
@@ -194,9 +451,31 @@ why? 手機成癮
 <body>
 
 使用這套件可以讓notion嵌入到網站
-因為notion不能使用iframe 嵌入，大多數的solution都要付費
+因為不能使用iframe 將notion嵌入，而大多數的solution都要付費
 ## Ref
-- https://gi]]></summary>
+- https://]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231222-socket-io]]></title>
+        <id>20231222-chat</id>
+        <link href="https://alanhc.github.io/logA/posts/20231222-chat"/>
+        <updated>2023-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://signal.org/blog/facebook-messenger/
+https://github.com/signalapp/libsi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -244,6 +523,28 @@ why? 手機成癮
 ## Ref
 - https://www.kaggle.com/code/alanhc/gemini-api-starter-notebook
 - http]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231213-pyspark]]></title>
+        <id>20231213-pyspark</id>
+        <link href="https://alanhc.github.io/logA/posts/20231213-pyspark"/>
+        <updated>2023-12-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+- https://learn.microsoft.com/en-us/azure/databricks/pandas/pyspark-pan]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -335,6 +636,29 @@ AI 音樂風格轉換太酷了
 
 ## 1. 使用 twitter API
 1. 先去 [dashboard]( https://developer.twitter.com/en/porta]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231130-Building-and-Evaluating-Advanced-RAG (未完)]]></title>
+        <id>20231130-Building-and-Evaluating-Advanced-RAG</id>
+        <link href="https://alanhc.github.io/logA/posts/20231130-Building-and-Evaluating-Advanced-RAG"/>
+        <updated>2023-11-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Advance RAG Pipeline
+![](https://i.imgur.com/8shM4tw.png)
+![](https://i.img]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
