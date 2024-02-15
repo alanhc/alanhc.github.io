@@ -11,9 +11,75 @@
     },
     "items": [
         {
+            "id": "20240215-Deck-of-cards-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240215-Deck-of-cards-ood",
+            "title": "20240205-Deck-of-cards",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\nDeck of cards：設計一個給一副牌的generic資料結構，解釋如何設計black-jack(21點)資料結構的子類別\n#",
+            "date_modified": "2024-02-15T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240212-linkedin-private-api",
+            "url": "https://alanhc.github.io/logA/posts/20240212-linkedin-private-api",
+            "title": "20240212-linkedin-private-api",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n思路：先用playwright 取得cookies，觀察network直接打API\n先取得 geoid (地點id)\n```python\nq_keyword",
+            "date_modified": "2024-02-12T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240211-pastebin-design",
+            "url": "https://alanhc.github.io/logA/posts/20240211-pastebin-design",
+            "title": "20240211-pastebin-design",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計像是『Pastebin』，一個可以讓使用者輸入文字並且取得分享鏈結的系統\n## Solutions\n### Step 1: Sc",
+            "date_modified": "2024-02-11T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240207-personal-finanicial-manager",
+            "url": "https://alanhc.github.io/logA/posts/20240207-personal-finanicial-manager",
+            "title": "20240207-personal-finanicial-manager",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n如何打造一個個人金融管理系統（mint.com），可以連結銀行帳戶、分析消費習慣及推薦\n## Solutions\n### Step ",
+            "date_modified": "2024-02-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240207-dcard-crawler",
+            "url": "https://alanhc.github.io/logA/posts/20240207-dcard-crawler",
+            "title": "20240207-dcard-crawler",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://github.com/alanhc/dcard_crawler.git\n## Backgorund\n有些反爬蟲會針對selenium偵測，因",
+            "date_modified": "2024-02-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240205-salesrank",
             "url": "https://alanhc.github.io/logA/posts/20240205-salesrank",
             "title": "20240205-salesrank",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個有多類別的產品ranking網站\n## Solutions\n### Step 1 Scope the problem\n- 只",
+            "date_modified": "2024-02-05T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240205-salesrank-design",
+            "url": "https://alanhc.github.io/logA/posts/20240205-salesrank-design",
+            "title": "20240205-salesrank-design",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個有多類別的產品ranking網站\n## Solutions\n### Step 1 Scope the problem\n- 只",
             "date_modified": "2024-02-05T00:00:00.000Z",
             "author": {
@@ -71,6 +137,17 @@
             "title": "20240125-cache-design",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS",
             "date_modified": "2024-01-25T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240124-social-network-design",
+            "url": "https://alanhc.github.io/logA/posts/20240124-social-network-design",
+            "title": "20240124-social-network-design",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短",
+            "date_modified": "2024-01-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -1479,6 +1556,17 @@
             "title": "20171027-bnf",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "test-render",
+            "url": "https://alanhc.github.io/logA/posts/test-render",
+            "title": "test",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# h1\ntext text text text text text text text text text text text text text tex",
+            "date_modified": "2000-01-01T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"

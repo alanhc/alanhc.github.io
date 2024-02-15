@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-02-10T15:02:12.404Z</updated>
+    <updated>2024-02-15T13:03:32.200Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -16,9 +16,152 @@
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, alanhc</rights>
     <entry>
+        <title type="html"><![CDATA[20240205-Deck-of-cards]]></title>
+        <id>20240215-Deck-of-cards-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240215-Deck-of-cards-ood"/>
+        <updated>2024-02-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+Deck of cards：設計一個給一副牌的generic資料結構，解釋如何設計black-jack(21點)資料結構的子類別
+#]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240212-linkedin-private-api]]></title>
+        <id>20240212-linkedin-private-api</id>
+        <link href="https://alanhc.github.io/logA/posts/20240212-linkedin-private-api"/>
+        <updated>2024-02-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+思路：先用playwright 取得cookies，觀察network直接打API
+先取得 geoid (地點id)
+```python
+q_keyword]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240211-pastebin-design]]></title>
+        <id>20240211-pastebin-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240211-pastebin-design"/>
+        <updated>2024-02-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計像是『Pastebin』，一個可以讓使用者輸入文字並且取得分享鏈結的系統
+## Solutions
+### Step 1: Sc]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240207-personal-finanicial-manager]]></title>
+        <id>20240207-personal-finanicial-manager</id>
+        <link href="https://alanhc.github.io/logA/posts/20240207-personal-finanicial-manager"/>
+        <updated>2024-02-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+如何打造一個個人金融管理系統（mint.com），可以連結銀行帳戶、分析消費習慣及推薦
+## Solutions
+### Step ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240207-dcard-crawler]]></title>
+        <id>20240207-dcard-crawler</id>
+        <link href="https://alanhc.github.io/logA/posts/20240207-dcard-crawler"/>
+        <updated>2024-02-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://github.com/alanhc/dcard_crawler.git
+## Backgorund
+有些反爬蟲會針對selenium偵測，因]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20240205-salesrank]]></title>
         <id>20240205-salesrank</id>
         <link href="https://alanhc.github.io/logA/posts/20240205-salesrank"/>
+        <updated>2024-02-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計一個有多類別的產品ranking網站
+## Solutions
+### Step 1 Scope the problem
+- 只]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240205-salesrank-design]]></title>
+        <id>20240205-salesrank-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240205-salesrank-design"/>
         <updated>2024-02-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -147,6 +290,28 @@ https://www.xq]]></summary>
 
 ## Question
 設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240124-social-network-design]]></title>
+        <id>20240124-social-network-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240124-social-network-design"/>
+        <updated>2024-01-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -3097,6 +3262,28 @@ https://www.ithome.com.tw/node/46046
 <body>
 
 [#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>test-render</id>
+        <link href="https://alanhc.github.io/logA/posts/test-render"/>
+        <updated>2000-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# h1
+text text text text text text text text text text text text text text tex]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
