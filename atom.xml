@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-02-16T09:47:51.852Z</updated>
+    <updated>2024-02-16T09:49:21.128Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -1164,30 +1164,6 @@ acceptedF]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Building Systems with the ChatGPT API]]></title>
-        <id>20231029-Building-Systems-with-the-ChatGPT-API</id>
-        <link href="https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
-        <updated>2023-10-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Introduction
-## Language Models, the Chat Format and Tokens
-- LLM
-- How? 使用]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[20231028-mozilla-ai]]></title>
         <id>20231028-mozilla-ai</id>
         <link href="https://alanhc.github.io/logA/posts/20231028-mozilla-ai"/>
@@ -1205,30 +1181,6 @@ acceptedF]]></summary>
 # Introduction
 ### Summarization
 - [colab introductio]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
-        <id>20231026-ChatGPT-Prompt-Engineering-for-Developers</id>
-        <link href="https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers"/>
-        <updated>2023-10-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Introduction
-### 兩種LLM模型
-#### 1. base：由訓練資料預測下一個word
-#### 2. instruction ba]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -2553,28 +2505,6 @@ Face Editor>Gene]]></summary>
 
 請參考：[銘傳金手指](https://next-school-up.vercel.app/)
 ![](https://i.imgur.com/ermaKM]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20190614-CGfinal]]></title>
-        <id>20190614-CGfinal</id>
-        <link href="https://alanhc.github.io/logA/posts/20190614-CGfinal"/>
-        <updated>2019-06-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-### alanhc/張牧之 電腦圖學-week17 \[final\]
-<div></div>[![](https://1.bp.blogspot.com]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

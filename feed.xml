@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Fri, 16 Feb 2024 09:47:51 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Feb 2024 09:49:21 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -966,26 +966,6 @@ acceptedF]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[Building Systems with the ChatGPT API]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API</link>
-            <guid>20231029-Building-Systems-with-the-ChatGPT-API</guid>
-            <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Introduction
-## Language Models, the Chat Format and Tokens
-- LLM
-- How? 使用]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
             <title><![CDATA[20231028-mozilla-ai]]></title>
             <link>https://alanhc.github.io/logA/posts/20231028-mozilla-ai</link>
             <guid>20231028-mozilla-ai</guid>
@@ -1003,26 +983,6 @@ acceptedF]]></description>
 # Introduction
 ### Summarization
 - [colab introductio]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers</link>
-            <guid>20231026-ChatGPT-Prompt-Engineering-for-Developers</guid>
-            <pubDate>Thu, 26 Oct 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Introduction
-### 兩種LLM模型
-#### 1. base：由訓練資料預測下一個word
-#### 2. instruction ba]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -2123,24 +2083,6 @@ Face Editor>Gene]]></description>
 
 請參考：[銘傳金手指](https://next-school-up.vercel.app/)
 ![](https://i.imgur.com/ermaKM]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20190614-CGfinal]]></title>
-            <link>https://alanhc.github.io/logA/posts/20190614-CGfinal</link>
-            <guid>20190614-CGfinal</guid>
-            <pubDate>Fri, 14 Jun 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-### alanhc/張牧之 電腦圖學-week17 \[final\]
-<div></div>[![](https://1.bp.blogspot.com]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

@@ -550,33 +550,11 @@
             }
         },
         {
-            "id": "20231029-Building-Systems-with-the-ChatGPT-API",
-            "url": "https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API",
-            "title": "Building Systems with the ChatGPT API",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n## Language Models, the Chat Format and Tokens\n- LLM\n- How? 使用",
-            "date_modified": "2023-10-28T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20231028-mozilla-ai",
             "url": "https://alanhc.github.io/logA/posts/20231028-mozilla-ai",
             "title": "20231028-mozilla-ai",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n有涵蓋LLM，由淺入深，有colab實作，還不錯\n# Introduction\n### Summarization\n- [colab introductio",
             "date_modified": "2023-10-27T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
-            "url": "https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers",
-            "title": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n### 兩種LLM模型\n#### 1. base：由訓練資料預測下一個word\n#### 2. instruction ba",
-            "date_modified": "2023-10-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -1193,17 +1171,6 @@
             "title": "20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n請參考：[銘傳金手指](https://next-school-up.vercel.app/)\n![](https://i.imgur.com/ermaKM",
             "date_modified": "2021-08-20T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20190614-CGfinal",
-            "url": "https://alanhc.github.io/logA/posts/20190614-CGfinal",
-            "title": "20190614-CGfinal",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n### alanhc/張牧之 電腦圖學-week17 \\[final\\]\n<div></div>[![](https://1.bp.blogspot.com",
-            "date_modified": "2019-06-14T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
