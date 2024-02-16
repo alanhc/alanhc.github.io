@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Fri, 16 Feb 2024 09:40:48 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Feb 2024 09:42:29 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -90,25 +90,6 @@ q_keyword]]></description>
 如何打造一個個人金融管理系統（mint.com），可以連結銀行帳戶、分析消費習慣及推薦
 ## Solutions
 ### Step ]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20240207-dcard-crawler]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240207-dcard-crawler</link>
-            <guid>20240207-dcard-crawler</guid>
-            <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-https://github.com/alanhc/dcard_crawler.git
-## Backgorund
-有些反爬蟲會針對selenium偵測，因]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -244,24 +225,6 @@ https://www.xq]]></description>
 
 ## Question
 設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20240124-social-network-design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240124-social-network-design</link>
-            <guid>20240124-social-network-design</guid>
-            <pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Question
-如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

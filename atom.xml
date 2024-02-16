@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-02-16T09:40:48.325Z</updated>
+    <updated>2024-02-16T09:42:29.895Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -104,29 +104,6 @@ q_keyword]]></summary>
 如何打造一個個人金融管理系統（mint.com），可以連結銀行帳戶、分析消費習慣及推薦
 ## Solutions
 ### Step ]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20240207-dcard-crawler]]></title>
-        <id>20240207-dcard-crawler</id>
-        <link href="https://alanhc.github.io/logA/posts/20240207-dcard-crawler"/>
-        <updated>2024-02-07T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-https://github.com/alanhc/dcard_crawler.git
-## Backgorund
-有些反爬蟲會針對selenium偵測，因]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -290,28 +267,6 @@ https://www.xq]]></summary>
 
 ## Question
 設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20240124-social-network-design]]></title>
-        <id>20240124-social-network-design</id>
-        <link href="https://alanhc.github.io/logA/posts/20240124-social-network-design"/>
-        <updated>2024-01-24T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Question
-如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

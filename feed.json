@@ -55,17 +55,6 @@
             }
         },
         {
-            "id": "20240207-dcard-crawler",
-            "url": "https://alanhc.github.io/logA/posts/20240207-dcard-crawler",
-            "title": "20240207-dcard-crawler",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://github.com/alanhc/dcard_crawler.git\n## Backgorund\n有些反爬蟲會針對selenium偵測，因",
-            "date_modified": "2024-02-07T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
             "id": "20240205-salesrank",
             "url": "https://alanhc.github.io/logA/posts/20240205-salesrank",
             "title": "20240205-salesrank",
@@ -137,17 +126,6 @@
             "title": "20240125-cache-design",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS",
             "date_modified": "2024-01-25T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20240124-social-network-design",
-            "url": "https://alanhc.github.io/logA/posts/20240124-social-network-design",
-            "title": "20240124-social-network-design",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短",
-            "date_modified": "2024-01-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
