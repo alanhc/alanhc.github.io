@@ -1505,17 +1505,6 @@
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
             }
-        },
-        {
-            "id": "test-render",
-            "url": "https://alanhc.github.io/logA/posts/test-render",
-            "title": "test",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# h1\ntext text text text text text text text text text text text text text tex",
-            "date_modified": "2000-01-01T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
         }
     ]
 }

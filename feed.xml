@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 19 Feb 2024 11:24:06 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Feb 2024 11:29:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -2605,24 +2605,6 @@ https://www.ithome.com.tw/node/46046
 <body>
 
 [#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[test]]></title>
-            <link>https://alanhc.github.io/logA/posts/test-render</link>
-            <guid>test-render</guid>
-            <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-# h1
-text text text text text text text text text text text text text text tex]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
     </channel>

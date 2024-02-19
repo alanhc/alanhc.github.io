@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-02-19T11:24:06.292Z</updated>
+    <updated>2024-02-19T11:29:37.002Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -3147,28 +3147,6 @@ https://www.ithome.com.tw/node/46046
 <body>
 
 [#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>test-render</id>
-        <link href="https://alanhc.github.io/logA/posts/test-render"/>
-        <updated>2000-01-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-# h1
-text text text text text text text text text text text text text text tex]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
