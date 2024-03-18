@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-03-18T03:35:19.443Z</updated>
+    <updated>2024-03-18T03:36:05.574Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,360 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[20240303-save-password-python]]></title>
+        <id>20240303-save-password-python</id>
+        <link href="https://alanhc.github.io/logA/posts/20240303-save-password-python"/>
+        <updated>2024-03-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+使用 AES（對稱加密） + base64
+## 加密
+```python
+from Crypto.Cipher import AES
+from Crypt]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240227-warp-terminal]]></title>
+        <id>20240227-warp-terminal</id>
+        <link href="https://alanhc.github.io/logA/posts/20240227-warp-terminal"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+發現一個有趣的東西
+brew install --cask warp
+![](https://assets-global.website-files.com]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240227-Hash-Table-ood]]></title>
+        <id>20240227-Hash-Table-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240227-Hash-Table-ood"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計一個使用chaining（Link List）處理碰撞問題的hash table
+## Solution
+O(1) 可以使用ar]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240227-File-Systems-ood]]></title>
+        <id>20240227-File-Systems-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240227-File-Systems-ood"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+解釋如何設計in-memory的DS 及 演算法，請可能舉例
+## Solution
+最簡單就分成有File及Directory他們]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240226-minesweeper-ood]]></title>
+        <id>20240226-minesweeper-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240226-minesweeper-ood"/>
+        <updated>2024-02-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+踩地雷遊戲，玩家直到整個盤都探索完畢，玩家點選後如果是炸彈就輸掉，若是空白，消除所有鄰近空白及數字
+## Solution
+- fo]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240226-Circular-array-ood]]></title>
+        <id>20240226-Circular-array-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240226-Circular-array-ood"/>
+        <updated>2024-02-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+實作CircularArray class可以有效翻轉array like data structure，這個class需使用gen]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240222-content-analysis]]></title>
+        <id>20240222-text-network-analysis</id>
+        <link href="https://alanhc.github.io/logA/posts/20240222-text-network-analysis"/>
+        <updated>2024-02-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 文字清理（去除符號、轉小寫）
+- 依據詞頻拆分關鍵字網路
+- 邊/連結厚度代表關鍵字的相依頻率
+- 節點大小代表專見字的頻率
+## Ref
+
+</bod]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240221-othello-ood]]></title>
+        <id>20240221-othello-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240221-othello-ood"/>
+        <updated>2024-02-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+- 設計黑白棋的OOD，黑白棋是如果周遭（上下左右）被圍起來就更換中間（被包圍）顏色，到一方無法下任何棋結束。
+## Solutio]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240219-chat-server-ood]]></title>
+        <id>20240219-chat-server-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240219-chat-server-ood"/>
+        <updated>2024-02-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+- 請解釋你會怎麼設計一個chat server，請說明你會怎麼設計Backend Component的細節、Class及Metho]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240217-parking-lot-ood]]></title>
+        <id>20240217-parking-lot-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240217-parking-lot-ood"/>
+        <updated>2024-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計一個根據object-oriented principles的parking lot（停車場）
+## Solution
+- 跟i]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240217-online-book-reader-ood]]></title>
+        <id>20240217-online-book-reader-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240217-online-book-reader-ood"/>
+        <updated>2024-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+設計線上書本閱讀器的資料結構
+## Solution
+- 因為問題沒解釋很清楚，我們假設提供以下功能
+- 用戶帳戶建立、擴增
+- 搜]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240217-jukebox-ood]]></title>
+        <id>20240217-jukebox-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240217-jukebox-ood"/>
+        <updated>2024-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+使用object-oriented principles設計jukebox musical（點唱機）
+## Solution
+- 問]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240217-jigsaw-ood]]></title>
+        <id>20240217-jigsaw-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240217-jigsaw-ood"/>
+        <updated>2024-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+打造一個拼圖遊戲，設計資料結構以及解釋如何破解這個拼圖的演算法。你可以假設有一個fitsWith()，他可以檢查兩個拼圖是否可以拼在]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240217-call-center-ood]]></title>
+        <id>20240217-call-center-ood</id>
+        <link href="https://alanhc.github.io/logA/posts/20240217-call-center-ood"/>
+        <updated>2024-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+有一個有三種level員工的call center，respondent, manager, director。當電話進來時，要as]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240216-levelsfyi-crawler]]></title>
+        <id>20240216-levelsfyi-crawler</id>
+        <link href="https://alanhc.github.io/logA/posts/20240216-levelsfyi-crawler"/>
+        <updated>2024-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Background
+- from a [stack overflow question](https://stackoverflow.com/que]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20240205-Deck-of-cards]]></title>
         <id>20240215-Deck-of-cards-ood</id>
@@ -63,6 +417,30 @@ q_keyword]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[20240211-taiwan-job-insights]]></title>
+        <id>20240211-taiwan-job-insights</id>
+        <link href="https://alanhc.github.io/logA/posts/20240211-taiwan-job-insights"/>
+        <updated>2024-02-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+[網頁互動版](https://alanhc.github.io/taiwan_jobs.html)
+- 資料來源：Levels Fyi
+## 台灣
+###]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20240211-pastebin-design]]></title>
         <id>20240211-pastebin-design</id>
         <link href="https://alanhc.github.io/logA/posts/20240211-pastebin-design"/>
@@ -104,6 +482,29 @@ q_keyword]]></summary>
 如何打造一個個人金融管理系統（mint.com），可以連結銀行帳戶、分析消費習慣及推薦
 ## Solutions
 ### Step ]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240207-dcard-crawler]]></title>
+        <id>20240207-dcard-crawler</id>
+        <link href="https://alanhc.github.io/logA/posts/20240207-dcard-crawler"/>
+        <updated>2024-02-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://github.com/alanhc/dcard_crawler.git
+## Backgorund
+有些反爬蟲會針對selenium偵測，因]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -267,6 +668,28 @@ https://www.xq]]></summary>
 
 ## Question
 設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240124-social-network-design]]></title>
+        <id>20240124-social-network-design</id>
+        <link href="https://alanhc.github.io/logA/posts/20240124-social-network-design"/>
+        <updated>2024-01-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Question
+如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -1164,6 +1587,30 @@ acceptedF]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Building Systems with the ChatGPT API]]></title>
+        <id>20231029-Building-Systems-with-the-ChatGPT-API</id>
+        <link href="https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
+        <updated>2023-10-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Introduction
+## Language Models, the Chat Format and Tokens
+- LLM
+- How? 使用]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20231028-mozilla-ai]]></title>
         <id>20231028-mozilla-ai</id>
         <link href="https://alanhc.github.io/logA/posts/20231028-mozilla-ai"/>
@@ -1181,6 +1628,30 @@ acceptedF]]></summary>
 # Introduction
 ### Summarization
 - [colab introductio]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
+        <id>20231026-ChatGPT-Prompt-Engineering-for-Developers</id>
+        <link href="https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers"/>
+        <updated>2023-10-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Introduction
+### 兩種LLM模型
+#### 1. base：由訓練資料預測下一個word
+#### 2. instruction ba]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -2306,6 +2777,33 @@ hello world!
     </entry>
     <entry>
         <title type="html"><![CDATA[20220811-intern-at-line]]></title>
+        <id>20220811-monorepo-development</id>
+        <link href="https://alanhc.github.io/logA/posts/20220811-monorepo-development"/>
+        <updated>2022-08-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+前言
+- LINE台灣用戶有2100萬
+- LINE 跨國公司
+正文
+- 時間：2000年初
+- 共享code，scale build sys]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20220811-intern-at-line]]></title>
         <id>20220811-intern-at-line</id>
         <link href="https://alanhc.github.io/logA/posts/20220811-intern-at-line"/>
         <updated>2022-08-11T00:00:00.000Z</updated>
@@ -2505,6 +3003,28 @@ Face Editor>Gene]]></summary>
 
 請參考：[銘傳金手指](https://next-school-up.vercel.app/)
 ![](https://i.imgur.com/ermaKM]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20190614-CGfinal]]></title>
+        <id>20190614-CGfinal</id>
+        <link href="https://alanhc.github.io/logA/posts/20190614-CGfinal"/>
+        <updated>2019-06-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+### alanhc/張牧之 電腦圖學-week17 \[final\]
+<div></div>[![](https://1.bp.blogspot.com]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -3147,6 +3667,28 @@ https://www.ithome.com.tw/node/46046
 <body>
 
 [#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[test]]></title>
+        <id>test-render</id>
+        <link href="https://alanhc.github.io/logA/posts/test-render"/>
+        <updated>2000-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# h1
+text text text text text text text text text text text text text text tex]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

@@ -11,6 +11,171 @@
     },
     "items": [
         {
+            "id": "20240303-save-password-python",
+            "url": "https://alanhc.github.io/logA/posts/20240303-save-password-python",
+            "title": "20240303-save-password-python",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n使用 AES（對稱加密） + base64\n## 加密\n```python\nfrom Crypto.Cipher import AES\nfrom Crypt",
+            "date_modified": "2024-03-03T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240227-warp-terminal",
+            "url": "https://alanhc.github.io/logA/posts/20240227-warp-terminal",
+            "title": "20240227-warp-terminal",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n發現一個有趣的東西\nbrew install --cask warp\n![](https://assets-global.website-files.com",
+            "date_modified": "2024-02-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240227-Hash-Table-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240227-Hash-Table-ood",
+            "title": "20240227-Hash-Table-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個使用chaining（Link List）處理碰撞問題的hash table\n## Solution\nO(1) 可以使用ar",
+            "date_modified": "2024-02-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240227-File-Systems-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240227-File-Systems-ood",
+            "title": "20240227-File-Systems-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n解釋如何設計in-memory的DS 及 演算法，請可能舉例\n## Solution\n最簡單就分成有File及Directory他們",
+            "date_modified": "2024-02-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240226-minesweeper-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240226-minesweeper-ood",
+            "title": "20240226-minesweeper-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n踩地雷遊戲，玩家直到整個盤都探索完畢，玩家點選後如果是炸彈就輸掉，若是空白，消除所有鄰近空白及數字\n## Solution\n- fo",
+            "date_modified": "2024-02-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240226-Circular-array-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240226-Circular-array-ood",
+            "title": "20240226-Circular-array-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n實作CircularArray class可以有效翻轉array like data structure，這個class需使用gen",
+            "date_modified": "2024-02-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240222-text-network-analysis",
+            "url": "https://alanhc.github.io/logA/posts/20240222-text-network-analysis",
+            "title": "20240222-content-analysis",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 文字清理（去除符號、轉小寫）\n- 依據詞頻拆分關鍵字網路\n- 邊/連結厚度代表關鍵字的相依頻率\n- 節點大小代表專見字的頻率\n## Ref\n\n</bod",
+            "date_modified": "2024-02-22T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240221-othello-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240221-othello-ood",
+            "title": "20240221-othello-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n- 設計黑白棋的OOD，黑白棋是如果周遭（上下左右）被圍起來就更換中間（被包圍）顏色，到一方無法下任何棋結束。\n## Solutio",
+            "date_modified": "2024-02-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240219-chat-server-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240219-chat-server-ood",
+            "title": "20240219-chat-server-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n- 請解釋你會怎麼設計一個chat server，請說明你會怎麼設計Backend Component的細節、Class及Metho",
+            "date_modified": "2024-02-19T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240217-parking-lot-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240217-parking-lot-ood",
+            "title": "20240217-parking-lot-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個根據object-oriented principles的parking lot（停車場）\n## Solution\n- 跟i",
+            "date_modified": "2024-02-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240217-online-book-reader-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240217-online-book-reader-ood",
+            "title": "20240217-online-book-reader-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計線上書本閱讀器的資料結構\n## Solution\n- 因為問題沒解釋很清楚，我們假設提供以下功能\n- 用戶帳戶建立、擴增\n- 搜",
+            "date_modified": "2024-02-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240217-jukebox-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240217-jukebox-ood",
+            "title": "20240217-jukebox-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n使用object-oriented principles設計jukebox musical（點唱機）\n## Solution\n- 問",
+            "date_modified": "2024-02-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240217-jigsaw-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240217-jigsaw-ood",
+            "title": "20240217-jigsaw-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n打造一個拼圖遊戲，設計資料結構以及解釋如何破解這個拼圖的演算法。你可以假設有一個fitsWith()，他可以檢查兩個拼圖是否可以拼在",
+            "date_modified": "2024-02-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240217-call-center-ood",
+            "url": "https://alanhc.github.io/logA/posts/20240217-call-center-ood",
+            "title": "20240217-call-center-ood",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n有一個有三種level員工的call center，respondent, manager, director。當電話進來時，要as",
+            "date_modified": "2024-02-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240216-levelsfyi-crawler",
+            "url": "https://alanhc.github.io/logA/posts/20240216-levelsfyi-crawler",
+            "title": "20240216-levelsfyi-crawler",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Background\n- from a [stack overflow question](https://stackoverflow.com/que",
+            "date_modified": "2024-02-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240215-Deck-of-cards-ood",
             "url": "https://alanhc.github.io/logA/posts/20240215-Deck-of-cards-ood",
             "title": "20240205-Deck-of-cards",
@@ -33,6 +198,17 @@
             }
         },
         {
+            "id": "20240211-taiwan-job-insights",
+            "url": "https://alanhc.github.io/logA/posts/20240211-taiwan-job-insights",
+            "title": "20240211-taiwan-job-insights",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[網頁互動版](https://alanhc.github.io/taiwan_jobs.html)\n- 資料來源：Levels Fyi\n## 台灣\n###",
+            "date_modified": "2024-02-11T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240211-pastebin-design",
             "url": "https://alanhc.github.io/logA/posts/20240211-pastebin-design",
             "title": "20240211-pastebin-design",
@@ -48,6 +224,17 @@
             "url": "https://alanhc.github.io/logA/posts/20240207-personal-finanicial-manager",
             "title": "20240207-personal-finanicial-manager",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n如何打造一個個人金融管理系統（mint.com），可以連結銀行帳戶、分析消費習慣及推薦\n## Solutions\n### Step ",
+            "date_modified": "2024-02-07T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240207-dcard-crawler",
+            "url": "https://alanhc.github.io/logA/posts/20240207-dcard-crawler",
+            "title": "20240207-dcard-crawler",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://github.com/alanhc/dcard_crawler.git\n## Backgorund\n有些反爬蟲會針對selenium偵測，因",
             "date_modified": "2024-02-07T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -126,6 +313,17 @@
             "title": "20240125-cache-design",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS",
             "date_modified": "2024-01-25T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240124-social-network-design",
+            "url": "https://alanhc.github.io/logA/posts/20240124-social-network-design",
+            "title": "20240124-social-network-design",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Question\n如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短",
+            "date_modified": "2024-01-24T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -550,11 +748,33 @@
             }
         },
         {
+            "id": "20231029-Building-Systems-with-the-ChatGPT-API",
+            "url": "https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API",
+            "title": "Building Systems with the ChatGPT API",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n## Language Models, the Chat Format and Tokens\n- LLM\n- How? 使用",
+            "date_modified": "2023-10-28T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20231028-mozilla-ai",
             "url": "https://alanhc.github.io/logA/posts/20231028-mozilla-ai",
             "title": "20231028-mozilla-ai",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n有涵蓋LLM，由淺入深，有colab實作，還不錯\n# Introduction\n### Summarization\n- [colab introductio",
             "date_modified": "2023-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
+            "url": "https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers",
+            "title": "20231026-ChatGPT-Prompt-Engineering-for-Developers",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Introduction\n### 兩種LLM模型\n#### 1. base：由訓練資料預測下一個word\n#### 2. instruction ba",
+            "date_modified": "2023-10-26T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -1078,6 +1298,17 @@
             }
         },
         {
+            "id": "20220811-monorepo-development",
+            "url": "https://alanhc.github.io/logA/posts/20220811-monorepo-development",
+            "title": "20220811-intern-at-line",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\n前言\n- LINE台灣用戶有2100萬\n- LINE 跨國公司\n正文\n- 時間：2000年初\n- 共享code，scale build sys",
+            "date_modified": "2022-08-11T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20220811-intern-at-line",
             "url": "https://alanhc.github.io/logA/posts/20220811-intern-at-line",
             "title": "20220811-intern-at-line",
@@ -1171,6 +1402,17 @@
             "title": "20210820-開發mcu-up-銘傳金手指3-0-的那些事兒",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n請參考：[銘傳金手指](https://next-school-up.vercel.app/)\n![](https://i.imgur.com/ermaKM",
             "date_modified": "2021-08-20T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20190614-CGfinal",
+            "url": "https://alanhc.github.io/logA/posts/20190614-CGfinal",
+            "title": "20190614-CGfinal",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n### alanhc/張牧之 電腦圖學-week17 \\[final\\]\n<div></div>[![](https://1.bp.blogspot.com",
+            "date_modified": "2019-06-14T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -1501,6 +1743,17 @@
             "title": "20171027-bnf",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft",
             "date_modified": "2017-10-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "test-render",
+            "url": "https://alanhc.github.io/logA/posts/test-render",
+            "title": "test",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# h1\ntext text text text text text text text text text text text text text tex",
+            "date_modified": "2000-01-01T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
