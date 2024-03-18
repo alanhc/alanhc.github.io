@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-03-18T03:45:50.194Z</updated>
+    <updated>2024-03-18T03:49:24.659Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -2700,6 +2700,33 @@ hello world!
 正文
 - 時間：2000年初
 - 共享code，scale build sys]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20220811-LINE-Blockchain-Developer-Intern]]></title>
+        <id>20220811-LINE-Blockchain-Developer-Intern</id>
+        <link href="https://alanhc.github.io/logA/posts/20220811-LINE-Blockchain-Developer-Intern"/>
+        <updated>2022-08-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 為何想去實習？
+- 知道業界缺乏什麼樣的人才？
+- 了解學界、業界差異
+- 累積實戰經驗
+- 同學都有好幾段實習經歷
+- 看看自己的市場價值
+## 我]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
