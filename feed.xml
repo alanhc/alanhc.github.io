@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Mon, 18 Mar 2024 03:36:05 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 18 Mar 2024 03:45:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -407,46 +407,6 @@ q_keyword]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[20240207-dcard-crawler]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240207-dcard-crawler</link>
-            <guid>20240207-dcard-crawler</guid>
-            <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-https://github.com/alanhc/dcard_crawler.git
-## Backgorund
-有些反爬蟲會針對selenium偵測，因]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20240205-salesrank]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240205-salesrank</link>
-            <guid>20240205-salesrank</guid>
-            <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Question
-設計一個有多類別的產品ranking網站
-## Solutions
-### Step 1 Scope the problem
-- 只]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
             <title><![CDATA[20240205-salesrank-design]]></title>
             <link>https://alanhc.github.io/logA/posts/20240205-salesrank-design</link>
             <guid>20240205-salesrank-design</guid>
@@ -558,24 +518,6 @@ https://www.xq]]></description>
 
 ## Question
 設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processS]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20240124-social-network-design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240124-social-network-design</link>
-            <guid>20240124-social-network-design</guid>
-            <pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Question
-如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -726,28 +668,6 @@ https://youtu]]></description>
 在台灣，跟商品有關的統計資料價格大約一年100w (客製化程度不同)
 統計資訊包含 競品分析 競爭對手售價 客製化報告等等
 why? 品牌商想知道自己跟對手]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[20240113-data-pay]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240113-data-pay</link>
-            <guid>20240113-data-pay</guid>
-            <pubDate>Sat, 13 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-以下內容為該影片的筆記：
-中國經濟變差 政府監管 員工信心
-全球資產配置 美股 賺美元全權資產配置
-大廠 推行要一年
-大廠大家做得跟核心業務沒關
-數據 有博]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -2329,29 +2249,6 @@ hello world!
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
-            <title><![CDATA[20220811-intern-at-line]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220811-intern-at-line</link>
-            <guid>20220811-intern-at-line</guid>
-            <pubDate>Thu, 11 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## Ref
-前言
-- LINE台灣用戶有2100萬
-- LINE 跨國公司
-正文
-- 時間：2000年初
-- 共享code，scale build sys]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
             <title><![CDATA[Upgrade nx repo to react 18]]></title>
             <link>https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18</link>
             <guid>20220721-upgrade-nx-repo-to-react-18</guid>
@@ -3037,24 +2934,6 @@ https://www.ithome.com.tw/node/46046
 <body>
 
 [#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&#x26;__cft]]></description>
-            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
-        </item>
-        <item>
-            <title><![CDATA[test]]></title>
-            <link>https://alanhc.github.io/logA/posts/test-render</link>
-            <guid>test-render</guid>
-            <pubDate>Sat, 01 Jan 2000 00:00:00 GMT</pubDate>
-            <description><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-# h1
-text text text text text text text text text text text text text text tex]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
     </channel>
