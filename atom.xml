@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-03-18T03:49:24.659Z</updated>
+    <updated>2024-03-20T20:31:54.799Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,131 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[quotes]]></title>
+        <id>quotes</id>
+        <link href="https://alanhc.github.io/logA/posts/quotes"/>
+        <updated>2024-01-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- [Elizabeth Sloane](https://www.imdb.com/name/nm1567113/?ref_=tt_ch) : Lobbyi]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20230924-QR-Code]]></title>
+        <id>20230924-QR-Code</id>
+        <link href="https://alanhc.github.io/logA/posts/20230924-QR-Code"/>
+        <updated>2023-09-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+```js
+<div>
+  ```
+  - `@/components/Html5QrcodePlugin`
+  ```js
+  import { Html5]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nextjs 相關文章]]></title>
+        <id>nextjs</id>
+        <link href="https://alanhc.github.io/logA/posts/nextjs"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# markdown相關
+## 資料在本地
+### 使用unified
+## 資料在雲端
+### 使用 MDX remote
+## 相關posts
+- ht]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[統整markdown的使用方法]]></title>
+        <id>nextjs-markdown</id>
+        <link href="https://alanhc.github.io/logA/posts/nextjs-markdown"/>
+        <updated>2023-08-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 資料在本地
+### 使用unified
+## 資料在雲端
+### 使用 MDX
+## 相關posts
+- https://alanhc.github.]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello World]]></title>
+        <id>first-day</id>
+        <link href="https://alanhc.github.io/logA/posts/first-day"/>
+        <updated>2022-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# Hi! 😃
+hello world!
+
+</body>
+</html>
+]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20240303-save-password-python]]></title>
         <id>20240303-save-password-python</id>
@@ -529,27 +654,6 @@ q_keyword]]></summary>
 
 [Python自動化交易](https://youtu.be/eDolz-_Ls4o?si=SWWnmwDFPey1cUHS)
 https://www.xq]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[quotes]]></title>
-        <id>quotes</id>
-        <link href="https://alanhc.github.io/logA/posts/quotes"/>
-        <updated>2024-01-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-- [Elizabeth Sloane](https://www.imdb.com/name/nm1567113/?ref_=tt_ch) : Lobbyi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -1723,31 +1827,6 @@ from fastapi.responses import ]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[20230924-QR-Code]]></title>
-        <id>20230924-QR-Code</id>
-        <link href="https://alanhc.github.io/logA/posts/20230924-QR-Code"/>
-        <updated>2023-09-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-```js
-<div>
-  ```
-  - `@/components/Html5QrcodePlugin`
-  ```js
-  import { Html5]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[20230924-cmd-copy]]></title>
         <id>20230924-cmd-copy</id>
         <link href="https://alanhc.github.io/logA/posts/20230924-cmd-copy"/>
@@ -2159,59 +2238,6 @@ import { create } from 'ipfs-http-]]></summary>
 `npx create-next-app chat`
 `pnpm add @chatscope/chat-ui-kit-react`
 `pn]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[nextjs 相關文章]]></title>
-        <id>nextjs</id>
-        <link href="https://alanhc.github.io/logA/posts/nextjs"/>
-        <updated>2023-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-# markdown相關
-## 資料在本地
-### 使用unified
-## 資料在雲端
-### 使用 MDX remote
-## 相關posts
-- ht]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[統整markdown的使用方法]]></title>
-        <id>nextjs-markdown</id>
-        <link href="https://alanhc.github.io/logA/posts/nextjs-markdown"/>
-        <updated>2023-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-## 資料在本地
-### 使用unified
-## 資料在雲端
-### 使用 MDX
-## 相關posts
-- https://alanhc.github.]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -2654,33 +2680,7 @@ import smart]]></summary>
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Hello World]]></title>
-        <id>first-day</id>
-        <link href="https://alanhc.github.io/logA/posts/first-day"/>
-        <updated>2022-12-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Contents</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-# Hi! 😃
-hello world!
-
-</body>
-</html>
-]]></summary>
-        <author>
-            <name>alanhc</name>
-            <email>alanhc.tseng1999@gmail.com</email>
-            <uri>https://alanhc.github.io</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[20220811-intern-at-line]]></title>
+        <title type="html"><![CDATA[20220811-monorepo-development]]></title>
         <id>20220811-monorepo-development</id>
         <link href="https://alanhc.github.io/logA/posts/20220811-monorepo-development"/>
         <updated>2022-08-11T00:00:00.000Z</updated>
