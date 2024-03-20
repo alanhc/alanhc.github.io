@@ -11,55 +11,11 @@
     },
     "items": [
         {
-            "id": "quotes",
-            "url": "https://alanhc.github.io/logA/posts/quotes",
-            "title": "quotes",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- [Elizabeth Sloane](https://www.imdb.com/name/nm1567113/?ref_=tt_ch) : Lobbyi",
-            "date_modified": "2024-01-28T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "20230924-QR-Code",
-            "url": "https://alanhc.github.io/logA/posts/20230924-QR-Code",
-            "title": "20230924-QR-Code",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n```js\n<div>\n  ```\n  - `@/components/Html5QrcodePlugin`\n  ```js\n  import { Html5",
-            "date_modified": "2023-09-25T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "nextjs",
-            "url": "https://alanhc.github.io/logA/posts/nextjs",
-            "title": "nextjs 相關文章",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# markdown相關\n## 資料在本地\n### 使用unified\n## 資料在雲端\n### 使用 MDX remote\n## 相關posts\n- ht",
-            "date_modified": "2023-08-26T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "nextjs-markdown",
-            "url": "https://alanhc.github.io/logA/posts/nextjs-markdown",
-            "title": "統整markdown的使用方法",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 資料在本地\n### 使用unified\n## 資料在雲端\n### 使用 MDX\n## 相關posts\n- https://alanhc.github.",
-            "date_modified": "2023-08-26T00:00:00.000Z",
-            "author": {
-                "name": "alanhc",
-                "url": "https://alanhc.github.io"
-            }
-        },
-        {
-            "id": "first-day",
-            "url": "https://alanhc.github.io/logA/posts/first-day",
-            "title": "Hello World",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# Hi! 😃\nhello world!\n\n</body>\n</html>\n",
-            "date_modified": "2022-12-22T00:00:00.000Z",
+            "id": "20240321-auto-recruiter",
+            "url": "https://alanhc.github.io/logA/posts/20240321-auto-recruiter",
+            "title": "20240321-auto-recruiter",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Backgrounds\nI just got rejected by a big tech company. I learned that I nee",
+            "date_modified": "2024-03-21T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -302,6 +258,17 @@
             "title": "20240203-trading-bot",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n[Python自動化交易](https://youtu.be/eDolz-_Ls4o?si=SWWnmwDFPey1cUHS)\nhttps://www.xq",
             "date_modified": "2024-02-03T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "quotes",
+            "url": "https://alanhc.github.io/logA/posts/quotes",
+            "title": "quotes",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- [Elizabeth Sloane](https://www.imdb.com/name/nm1567113/?ref_=tt_ch) : Lobbyi",
+            "date_modified": "2024-01-28T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
@@ -858,6 +825,17 @@
             }
         },
         {
+            "id": "20230924-QR-Code",
+            "url": "https://alanhc.github.io/logA/posts/20230924-QR-Code",
+            "title": "20230924-QR-Code",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n```js\n<div>\n  ```\n  - `@/components/Html5QrcodePlugin`\n  ```js\n  import { Html5",
+            "date_modified": "2023-09-25T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20230924-cmd-copy",
             "url": "https://alanhc.github.io/logA/posts/20230924-cmd-copy",
             "title": "20230924-cmd-copy",
@@ -1056,6 +1034,28 @@
             }
         },
         {
+            "id": "nextjs",
+            "url": "https://alanhc.github.io/logA/posts/nextjs",
+            "title": "nextjs 相關文章",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# markdown相關\n## 資料在本地\n### 使用unified\n## 資料在雲端\n### 使用 MDX remote\n## 相關posts\n- ht",
+            "date_modified": "2023-08-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "nextjs-markdown",
+            "url": "https://alanhc.github.io/logA/posts/nextjs-markdown",
+            "title": "統整markdown的使用方法",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 資料在本地\n### 使用unified\n## 資料在雲端\n### 使用 MDX\n## 相關posts\n- https://alanhc.github.",
+            "date_modified": "2023-08-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20230826-next-seo",
             "url": "https://alanhc.github.io/logA/posts/20230826-next-seo",
             "title": "加入next-seo",
@@ -1248,6 +1248,17 @@
             "title": "在solana上mint NFT",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n1. 下載 solana cli: `sh -c \"$(curl -sSfL https://release.solana.com/v1.14.11/ins",
             "date_modified": "2022-12-28T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "first-day",
+            "url": "https://alanhc.github.io/logA/posts/first-day",
+            "title": "Hello World",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# Hi! 😃\nhello world!\n\n</body>\n</html>\n",
+            "date_modified": "2022-12-22T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
