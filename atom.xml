@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2024-03-20T20:33:21.179Z</updated>
+    <updated>2024-03-20T20:35:26.161Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,28 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[20240321-interview-warmup]]></title>
+        <id>20240321-interview-warmup</id>
+        <link href="https://alanhc.github.io/logA/posts/20240321-interview-warmup"/>
+        <updated>2024-03-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Backgrounds
+I just got rejected by a big tech company. **In order to** impr]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20240321-auto-recruiter]]></title>
         <id>20240321-auto-recruiter</id>

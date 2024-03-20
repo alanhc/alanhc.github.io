@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Wed, 20 Mar 2024 20:33:21 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 20 Mar 2024 20:35:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,24 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2024, alanhc</copyright>
+        <item>
+            <title><![CDATA[20240321-interview-warmup]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240321-interview-warmup</link>
+            <guid>20240321-interview-warmup</guid>
+            <pubDate>Thu, 21 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Backgrounds
+I just got rejected by a big tech company. **In order to** impr]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20240321-auto-recruiter]]></title>
             <link>https://alanhc.github.io/logA/posts/20240321-auto-recruiter</link>

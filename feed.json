@@ -11,6 +11,17 @@
     },
     "items": [
         {
+            "id": "20240321-interview-warmup",
+            "url": "https://alanhc.github.io/logA/posts/20240321-interview-warmup",
+            "title": "20240321-interview-warmup",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Backgrounds\nI just got rejected by a big tech company. **In order to** impr",
+            "date_modified": "2024-03-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240321-auto-recruiter",
             "url": "https://alanhc.github.io/logA/posts/20240321-auto-recruiter",
             "title": "20240321-auto-recruiter",
