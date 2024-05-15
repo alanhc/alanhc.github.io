@@ -1,5 +1,5 @@
 ---
-title: 20230122-ntu-cool
+title: 20240122-ntu-cool-video-download
 date: 2024-01-22
 tags:
   - video

@@ -159,7 +159,7 @@ export async function getStaticProps() {
   const project = await getMarkdownData("projects");
   let tags = project.map((x: any) => x.tech).flat();
   tags.push("select");
-  fs.writeFile("src/config/tags.json", JSON.stringify({tags:tags}));
+  //fs.writeFile("src/config/tags.json", JSON.stringify({tags:tags}));
   generateRSS();
   const portfolio = portfolioData;
   return {

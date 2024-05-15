@@ -5,8 +5,7 @@ tags:
   - notion
 ---
 使用這套件可以讓notion嵌入到網站
-因為notion不能使用iframe 嵌入，大多數的solution都要付費
-
+因為不能使用iframe 將notion嵌入，而大多數的solution都要付費
 ## Ref
 - https://github.com/NotionX/react-notion-x
 - https://github.com/NotionX/react-notion-x/tree/master/examples/minimal

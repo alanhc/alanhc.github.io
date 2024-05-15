@@ -80,7 +80,9 @@ export async function getStaticProps() {
   const project = await getFolderMarkdownData("projects");
   let tags = project.map((x: any) => x.tech).flat();
   tags.push("select");
-  fs.writeFile("src/config/tags.json", JSON.stringify({tags:tags}));
+  tags = Array.from(new Set(tags));
+  console.log(tags)
+  fs.writeFile("src/config/tags.json", JSON.stringify({tags:tags}), 'utf8');
   generateRSS();
   const portfolio = portfolioData;
   const notion = new NotionAPI()

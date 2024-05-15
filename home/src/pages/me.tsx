@@ -8,12 +8,17 @@ import { NotionRenderer } from 'react-notion-x'
 import 'react-notion-x/src/styles.css'
 import { NotionAPI } from 'notion-client'
 import { NotionPage } from "@/components/NotionPage";
+import { useEffect } from 'react';
 const Me: NextPage = ({ links, recordMap }: any) => {
     const router = useRouter()
     const handle_click = (link: string) => {
         router.push(link)
     }
     const { colorMode, toggleColorMode } = useColorMode()
+   
+    useEffect(() => {
+        window.location.assign('https://hackmd.io/@alanhc/me')
+    })
     return (
         <>
             

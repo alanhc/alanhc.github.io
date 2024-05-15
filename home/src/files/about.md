@@ -18,19 +18,7 @@ Highly motivated and experienced software engineer with a strong track record of
 	- Crawled and visualized akaSwap's transaction data to gain insights into user behavior and market dynamics.
 	- Shared expertise in Solidity, NFT Ticketing, OpenSea, Jenny DAO, and SushiSwap to provide valuable input on smart contract design, security, and usability.
 	- Designed and implemented a cross-chain bridge that enables NFT exchange between the Tezos and Ethereum blockchains.
-- **Ming Chuan University - Interactive Media Lab** supervised by [Tsung-Lin, Chia](http://www.google.com/url?q=http%3A%2F%2Fwww2.mcu.edu.tw%2FePortfolio%2FTeacher%2Fhtml%2FePortfolioPost_Any.asp%3Flang%3DE%26tno%3D8900964&sa=D&sntz=1&usg=AOvVaw2I1IzohUqNKUaMT-ykjerE)
-- **Undergraduate Research Assistant**  _Taoyuan City, Taiwan, Aug 2020 – Jul 2021_
-	- **Nighttime vehicle light detection based on deep learning and image enhancement**
-		- Published in 2020 IPPR CVGIP (Computer Vision, Graphics, and Image Processing)
-		- Won the College Student Research Scholarship - MOST (No. 109-2813-C-130-026-E)
-		- Won the Graduation topical Research Project Research Excellence Award - 1st
-	- **Early detection of human tremor symptoms and home care services based on video and deep learning**
-		- `Tensorflow`, `Deep Learning`, `LSTM`, `RNN`
-		- 
-- **Ming Chuan University**
-- **Teaching Assistant**  _Taoyuan City, Taiwan, May 2018 – Jun 2018_
-	- `C/C++`
-	- Teaching Assistant of Computer Programming II
+
 
 ## Skills
 - Technical Skills
@@ -45,13 +33,9 @@ Highly motivated and experienced software engineer with a strong track record of
 ## Education
 - **National Taiwan University**  
     Master’s Degree, **Computer Science and Engineering** (Sep 2021 - Jan 2024)
-    - Master’s Thesis: [FansTick (Solidity, 2023)](https://github.com/alanhc/???), 
-    - GPA: 4.23/4.30
-- **Ming Chuan University**  
-    Bachelor’s Degree, **Computer Science and Engineering** (Sep 2017 - Jan 2021)
-    - Bachelor’s Thesis: [Adaptive Driving Beam Headlamp based on Deep Learning and Image Enhancement (Python, 2021)](https://youtu.be/uoV21i9NB98?si=ZUyl2YUCvmU9Ss7y) 
-    - GPA: 3.99/4.00
-    - Activities: Developer Student Clubs Lead, ACM Competitive Programming Lead
+    - Master’s Thesis: [FansTick (Solidity, 2023)](https://github.com/alanhc/Decentralized-Mechanisms-of-Ticket-Pricing-for-Highly-Demanded-Events-Theory-and-Practice), 
+    - avg. GPA: 4.12/4.30
+
 ## Publications
 - Sung, H.-M., Chen, T., **Tseng, H.-C.**, Prayogo, B., Lin, J.-Y., & Hung, Y.-P. (2023). **akaTick: Hybrid Mobile E-Ticketing System Based on Non-Fungible Tokens**. _2023 IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom)_, 686–687. [https://doi.org/10.1109/MetaCom57706.2023.00126](https://doi.org/10.1109/MetaCom57706.2023.00126)
 - **Tseng, H.-C**., Tu, C.-W., Huan, X.-Y., & Chia, T.-L. (2020). **Nighttime vehicle light detection based on deep learning and image enhancement**. _2020 IPPR Conference on Computer Vision, Graphics, and Image Processing (CVGIP)_, 1–8.
