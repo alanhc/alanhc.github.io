@@ -16,13 +16,13 @@ const Me: NextPage = ({ links, recordMap }: any) => {
     }
     const { colorMode, toggleColorMode } = useColorMode()
    
-    useEffect(() => {
-        window.location.assign('https://hackmd.io/@alanhc/me')
-    })
+    // useEffect(() => {
+    //     window.location.assign('https://hackmd.io/@alanhc/me')
+    // })
     return (
         <>
-            
-            <NotionPage recordMap={recordMap} rootPageId={"Alan-Tseng-6928c2d8766044269c70b5a4b248bed8"} colorMode={colorMode}/>
+            <iframe width="100%" height="500" src="https://hackmd.io/@alanhc/me" frameBorder="0"></iframe>
+            {/* <NotionPage recordMap={recordMap} rootPageId={"Alan-Tseng-6928c2d8766044269c70b5a4b248bed8"} colorMode={colorMode}/> */}
                 {/* <Container mt={5} mb="5"centerContent>
                     <AspectRatio minW={100} minH={100} ratio={1}>
                         <Box position='relative' bottom={1} >
