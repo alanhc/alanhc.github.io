@@ -9,6 +9,7 @@ import 'react-notion-x/src/styles.css'
 import { NotionAPI } from 'notion-client'
 import { NotionPage } from "@/components/NotionPage";
 import { useEffect } from 'react';
+import {Link} from '@chakra-ui/react'
 const Me: NextPage = ({ links, recordMap }: any) => {
     const router = useRouter()
     const handle_click = (link: string) => {
@@ -21,32 +22,16 @@ const Me: NextPage = ({ links, recordMap }: any) => {
     // })
     return (
         <>
-            <iframe width="100%" height="500" src="https://hackmd.io/@alanhc/me" frameBorder="0"></iframe>
-            {/* <NotionPage recordMap={recordMap} rootPageId={"Alan-Tseng-6928c2d8766044269c70b5a4b248bed8"} colorMode={colorMode}/> */}
-                {/* <Container mt={5} mb="5"centerContent>
-                    <AspectRatio minW={100} minH={100} ratio={1}>
-                        <Box position='relative' bottom={1} >
-                            <NextImage src='/image/me.jpeg' alt='My Picture' layout='fill' style={{ borderRadius: '100%' }} />
-                        </Box>
+            <Container mt={5} mb="5" centerContent>
+                <AspectRatio minW={100} minH={100} ratio={1}>
+                    <Box position='relative' bottom={1} >
+                        <NextImage src='/image/me.jpeg' alt='My Picture' layout='fill' style={{ borderRadius: '100%' }} />
+                    </Box>
 
-                    </AspectRatio>
-                    <Text>Alan</Text>
-                </Container>
-
-                <VStack mt="5">
-                    {links.map((link: any, i: number) => (
-
-                        <Button borderRadius='full' key={i} bg='red.300' color='white' px={4} h={8} w="100%"  onClick={(e)=>handle_click(link.link)}>
-
-                            {link.name}
-
-                        </Button>
-
-                    ))}
-                </VStack> */}
-
-
-        
+                </AspectRatio>
+                <Text>Alan</Text>
+                <iframe width="100%" height="1000" src="https://hackmd.io/@alanhc/me" frameBorder="0"></iframe>
+            </Container>
         </>
     )
 }
