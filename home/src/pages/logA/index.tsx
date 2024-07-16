@@ -102,7 +102,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
   const [searchTag, setSearchTag] = useState("")
  
   return (
-
+    
     <BlogLayout>
       Life is short and memory is limited. Log it if you might forget it.
       <Flex mt={2}>
