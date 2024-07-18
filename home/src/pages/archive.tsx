@@ -141,14 +141,8 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     count: allPostsData.length,
   });
 
-  const cal = new CalHeatmap();
-  cal.paint({
-    range: 4,
-    itemSelector: "#example-day",
-    // Change to month or week to view result
-    domain: { type: "month" },
-    subDomain: { type: "day", label: "DD" },
-  });
+//   const cal = new CalHeatmap();
+ 
   const pathname = usePathname();
   return (
     <BlogLayout>
