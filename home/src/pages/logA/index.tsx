@@ -100,7 +100,7 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     else return `${y}-${m}`===searchDate
   }
   const [searchTag, setSearchTag] = useState("")
- 
+ let preCh=""
   return (
     
     <BlogLayout>
@@ -128,18 +128,38 @@ const Blog: NextPage = ({ allPostsData }: any) => {
       </Select>
       <Checkbox defaultChecked onChange={()=>setSelect(!select)}>Selected</Checkbox>
       <Box mt={2} mb={2}>
-        {tagsArray.sort().map((t: string, index) => (
-          <Link
-            size="md"
-            key={index}
-            borderRadius="full"
-            variant="solid"
-            colorScheme="blue"
-            onClick={() => setSearchTag(t)}
-          >
-            <span>{index !== tagsArray.length - 1 ? t + " | " : t}</span>
-          </Link>
-        ))}
+        {tagsArray.sort().map((t: string, index: number) => {
+          if (index > 0 && tagsArray[index - 1][0] !== tagsArray[index][0]) {
+            return (
+              <>
+                <Text as='b' color={"blue"}>{t.slice(0, 1)} </Text>
+                <Link
+                  size="md"
+                  key={index}
+                  borderRadius="full"
+                  variant="solid"
+                  colorScheme="blue"
+                  onClick={() => setSearchTag(t)}
+                >
+                  <span>{index !== tagsArray.length - 1 ? t + ", " : t}</span>
+                </Link>
+              </>
+            );
+          } else {
+            return (
+              <Link
+                size="md"
+                key={index}
+                borderRadius="full"
+                variant="solid"
+                colorScheme="blue"
+                onClick={() => setSearchTag(t)}
+              >
+                <span>{index !== tagsArray.length - 1 ? t + ", " : t}</span>
+              </Link>
+            );
+          }
+        })}
       </Box>
       tag: {JSON.stringify(searchTag)}  date: {JSON.stringify(searchDate)}
       

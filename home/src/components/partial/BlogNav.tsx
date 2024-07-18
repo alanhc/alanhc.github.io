@@ -23,7 +23,7 @@ export default function BlogNav({}: any) {
   // get href from object value
   const pathname = usePathname()
   return (
-    <Flex className="ck-reset">
+  
      
       <Tabs defaultIndex={navigation.findIndex((item) => Object.values(item)[0] === pathname)} >
         <TabList>
@@ -34,17 +34,7 @@ export default function BlogNav({}: any) {
           ))}
         </TabList>
       </Tabs>
-      {/* <Heading>
-        {navigation.map((l: object, index: number) => (
-          <Link key={index} as={NextLink} href={Object.values(l)[0]}>
-            {Object.keys(l)} {index !== navigation.length - 1 && " · "}
-          </Link>
-        ))}
-      </Heading> */}
-      <Spacer />
-      <Button onClick={toggleColorMode} mr={0}>
-        {colorMode === "light" ? "☾" : "☀️"}
-      </Button>
-    </Flex>
+    
+      
   );
 }

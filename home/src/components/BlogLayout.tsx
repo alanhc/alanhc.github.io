@@ -24,22 +24,23 @@ type AppProps = {
   children?: React.ReactNode;
 };
 const NavLink = (props: any) => {
-  const { children, link } = props
+  const { children, link } = props;
   return (
     <Box
       as={NextLink}
       px={2}
       py={1}
-      rounded={'md'}
+      rounded={"md"}
       _hover={{
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
+        textDecoration: "none",
+        bg: useColorModeValue("gray.200", "gray.700"),
       }}
-      href={link}>
+      href={link}
+    >
       {children}
     </Box>
-  )
-}
+  );
+};
 const BlogLayout = ({ children }: AppProps) => {
   // Remove the duplicate declaration of colorMode
   const links = [
@@ -47,29 +48,36 @@ const BlogLayout = ({ children }: AppProps) => {
     { name: "Projects", link: "/projects" },
     { name: "LogA", link: "/logA" },
     { name: "Contract", link: "/about#contact" },
-  ]
+  ];
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-    <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
-            size={'md'}
+            size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={'center'}>
-            <Heading as={NextLink} href={"/"}>Alan Tseng</Heading>
-
+          <HStack spacing={8} alignItems={"center"}>
+            <Heading as={NextLink} href={"/"}>
+              Alan Tseng
+            </Heading>
           </HStack>
 
           <HStack>
-            <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
               {links.map(({ name, link }) => (
-                <NavLink link={link} key={link}>{name}</NavLink>
+                <NavLink link={link} key={link}>
+                  {name}
+                </NavLink>
               ))}
             </HStack>
             <Button onClick={toggleColorMode}>
@@ -78,24 +86,32 @@ const BlogLayout = ({ children }: AppProps) => {
           </HStack>
         </Flex>
 
-
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-            {links.map(({ name, link }) => (
-                <NavLink link={link} key={link}>{name}</NavLink>
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack as={"nav"} spacing={4}>
+              {links.map(({ name, link }) => (
+                <NavLink link={link} key={link}>
+                  {name}
+                </NavLink>
               ))}
             </Stack>
           </Box>
         ) : null}
       </Box>
-    <Container maxW="7xl" p="5" className="ck-reset">
-      <BlogNav/>
-      {children}
-      <Center mt="10">
-        <p>@alanhc</p>
-      </Center>
-    </Container>
+      <Container maxW="7xl" p="5" className="ck-reset">
+        <Flex className="ck-reset">
+          <BlogNav />
+          <Spacer />
+          <Button onClick={toggleColorMode} mr={0}>
+          {colorMode === "light" ? "☾" : "☀️"}
+        </Button>
+        </Flex>
+       
+        {children}
+        <Center mt="10">
+          <p>@alanhc</p>
+        </Center>
+      </Container>
     </>
   );
 };
