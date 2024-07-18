@@ -28,10 +28,10 @@ import {
 import BlogLayout from "@/components/BlogLayout";
 import ReactMarkdown from "react-markdown";
 import { remark } from "remark";
-import CalHeatmap from "cal-heatmap";
+// import CalHeatmap from "cal-heatmap";
 
 // Optionally import the CSS
-import "cal-heatmap/cal-heatmap.css";
+// import "cal-heatmap/cal-heatmap.css";
 import {
   Flex,
   Tag,
