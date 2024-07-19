@@ -163,7 +163,7 @@ export default function Post({ postData, mdxSource, tocSource }: any) {
           ))}
         </Box>
 
-        <Stack direction={{ md: "row", sm: "column" }}>
+        <Stack direction={{ base: "column", md: "row" }}>
            {/*Table of Content*/}
           <Accordion  position="sticky"  top="0" minW="fit-content"  defaultIndex={[0]} allowMultiple>
             <AccordionItem>
