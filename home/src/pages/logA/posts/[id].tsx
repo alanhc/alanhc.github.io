@@ -23,6 +23,7 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
+  Stack,
 } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -37,32 +38,24 @@ import rehypeRaw from "rehype-raw";
 import NextLink from "next/link";
 import Script from "next/script";
 import SectionBlock from "@/components/partial/SectionBlock";
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
-import rehypeSlug from 'rehype-slug'
-import GithubSlugger, { slug } from 'github-slugger'
-import rehypePrism from 'rehype-prism-plus'
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
+import rehypeSlug from "rehype-slug";
+import GithubSlugger, { slug } from "github-slugger";
+import rehypePrism from "rehype-prism-plus";
 import { NextSeo } from "next-seo";
-import remarkHtml from 'remark-html'
+import remarkHtml from "remark-html";
 import SEO from "next-seo.config";
-import remarkRehype from 'remark-rehype'
-const codeblocks = require('remark-code-blocks')
-function CodeBlock({
-  language,
-  node,
-  inline,
-  className,
-  children,
-}: any) {
+import remarkRehype from "remark-rehype";
+const codeblocks = require("remark-code-blocks");
+function CodeBlock({ language, node, inline, className, children }: any) {
   const { onCopy, value, setValue, hasCopied } = useClipboard(children);
   const match = /language-(\w+)/.exec(className || "");
   if (inline || !match) {
     //只有一行的code
     return (
       <Flex mb={2}>
-        <Code >
-          {children}
-        </Code>
+        <Code>{children}</Code>
 
         <Button ml={2} onClick={onCopy} colorScheme="blue" variant="outline">
           {hasCopied ? "Copied!" : "Copy"}
@@ -75,11 +68,7 @@ function CodeBlock({
     //很多行
     return (
       <Flex mb={2}>
-        <SyntaxHighlighter
-          style={darcula}
-          language={match![1]}
-          PreTag="div"
-        >
+        <SyntaxHighlighter style={darcula} language={match![1]} PreTag="div">
           {String(children).replace(/\n$/, "")}
         </SyntaxHighlighter>
         <Button ml={2} onClick={onCopy} colorScheme="blue" variant="outline">
@@ -115,42 +104,34 @@ const components = {
 
 export async function getStaticProps({ params }: any) {
   const postData = await getPostData(params.id);
-  const toc_markdown = postData.tocMarkdown.content
-  const all_markdonw = postData.markdownContent
-  
+  const toc_markdown = postData.tocMarkdown.content;
+  const all_markdonw = postData.markdownContent;
+
   try {
-    const mdxSource = await serialize(all_markdonw,
-      {
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [],
-          format: 'mdx',
-        }
-      }
-    )
-    const tocSource = await serialize(toc_markdown,
-      {
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [],
-          format: 'mdx',
-        }
-      }
-    )
+    const mdxSource = await serialize(all_markdonw, {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [],
+        format: "mdx",
+      },
+    });
+    const tocSource = await serialize(toc_markdown, {
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [],
+        format: "mdx",
+      },
+    });
     return {
       props: {
         postData,
         tocSource: tocSource,
-        mdxSource: mdxSource
+        mdxSource: mdxSource,
       },
     };
+  } catch (e) {
+    console.log("==", e);
   }
-  catch (e) {
-    console.log("==",e)
-  }
-
-
-
 }
 
 export async function getStaticPaths() {
@@ -162,18 +143,13 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData, mdxSource, tocSource }: any) {
-
   return (
     <BlogLayout>
-      <NextSeo
-        title={postData.title}
-        {...SEO}
-      />
+      <NextSeo title={postData.title} {...SEO} />
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
-
         <SectionBlock mt={2}>{postData.title}</SectionBlock>
         <Box>
           <Date dateString={postData.date} />
@@ -186,27 +162,31 @@ export default function Post({ postData, mdxSource, tocSource }: any) {
             </Link>
           ))}
         </Box>
-      
-        <Accordion defaultIndex={[0]} allowMultiple>
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box as="span" flex='1' textAlign='left'>
-                  Table of Content
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <MDXRemote {...tocSource} components={components} />
-            </AccordionPanel>
-          </AccordionItem>
 
-        </Accordion>
+        <Stack direction={{ md: "row", sm: "column" }}>
+           {/*Table of Content*/}
+          <Accordion  position="sticky"  top="0" minW="fit-content"  defaultIndex={[0]} allowMultiple>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    Table of Content
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <MDXRemote {...tocSource} components={components} />
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
 
-
-        {/*正文*/}
-        <MDXRemote {...mdxSource} components={components} />
+          {/*正文*/}
+          <Container maxW={"100%"}>
+            <MDXRemote {...mdxSource} components={components} />
+          </Container>
+        </Stack>
+       
 
         <Script
           id="mermaidjs"
@@ -220,7 +200,6 @@ export default function Post({ postData, mdxSource, tocSource }: any) {
             `,
           }}
         />
-
 
         <Link onClick={() => router.push("/logA")}>👈Go Back</Link>
       </article>
