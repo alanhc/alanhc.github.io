@@ -24,6 +24,9 @@ import {
   AccordionItem,
   AccordionPanel,
   Stack,
+  useColorMode,
+  useColorModeValue,
+  // useColorModeValue,
 } from "@chakra-ui/react";
 import { PrismAsync as SyntaxHighlighter } from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -143,6 +146,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData, mdxSource, tocSource }: any) {
+  const bgColor = useColorModeValue('white', 'gray.800');
   return (
     <BlogLayout>
       <NextSeo title={postData.title} {...SEO} />
@@ -165,7 +169,8 @@ export default function Post({ postData, mdxSource, tocSource }: any) {
 
         <Stack direction={{ base: "column", md: "row" }}>
            {/*Table of Content*/}
-          <Accordion  position="sticky"  top="0" minW="fit-content"  defaultIndex={[0]} allowMultiple>
+           <Box  bg={bgColor} position="sticky"  top="20"   minW="fit-content">
+          <Accordion   defaultIndex={[0]} allowMultiple>
             <AccordionItem>
               <h2>
                 <AccordionButton>
@@ -180,6 +185,7 @@ export default function Post({ postData, mdxSource, tocSource }: any) {
               </AccordionPanel>
             </AccordionItem>
           </Accordion>
+          </Box>
 
           {/*正文*/}
           <Container maxW={"100%"}>
