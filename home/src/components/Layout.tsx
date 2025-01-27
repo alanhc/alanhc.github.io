@@ -18,9 +18,6 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-type AppProps = {
-  children?: React.ReactNode;
-};
 
 const NavLink = (props: any) => {
   const { children, link } = props
@@ -39,7 +36,14 @@ const NavLink = (props: any) => {
     </Box>
   )
 }
-const Layout = ({ children, maxW }: any) => {
+import { ReactNode } from "react";
+
+interface LayoutProps {
+  children: ReactNode;
+  maxW?: string;
+}
+
+const Layout = ({ children, maxW = "12xl" }: LayoutProps) => {
   if (!maxW) maxW = "7xl";
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure()
