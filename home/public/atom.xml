@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://localhost:3000</id>
     <title>Alan Tseng</title>
-    <updated>2024-10-09T13:09:46.909Z</updated>
+    <updated>2025-01-27T16:03:01.565Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -14,7 +14,7 @@
     <subtitle>This is my personal feed!</subtitle>
     <logo>http://localhost:3000/image/me.jpeg</logo>
     <icon>http://localhost:3000/favicon.ico</icon>
-    <rights>All rights reserved 2024, alanhc</rights>
+    <rights>All rights reserved 2025, alanhc</rights>
     <entry>
         <title type="html"><![CDATA[20240321-interview-warmup]]></title>
         <id>20240321-interview-warmup</id>

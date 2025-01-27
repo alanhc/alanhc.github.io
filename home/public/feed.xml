@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Wed, 09 Oct 2024 13:09:46 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Jan 2025 16:03:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -12,7 +12,7 @@
             <url>http://localhost:3000/image/me.jpeg</url>
             <link>http://localhost:3000</link>
         </image>
-        <copyright>All rights reserved 2024, alanhc</copyright>
+        <copyright>All rights reserved 2025, alanhc</copyright>
         <item>
             <title><![CDATA[20240321-interview-warmup]]></title>
             <link>http://localhost:3000/logA/posts/20240321-interview-warmup</link>
