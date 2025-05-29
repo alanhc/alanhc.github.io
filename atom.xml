@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2025-05-28T15:34:13.311Z</updated>
+    <updated>2025-05-29T08:20:58.977Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
@@ -15,6 +15,292 @@
     <logo>https://alanhc.github.io/image/me.jpeg</logo>
     <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[ubuntu wifi網卡抓不到]]></title>
+        <id>ubuntu wifi網卡抓不到</id>
+        <link href="https://alanhc.github.io/logA/posts/ubuntu wifi網卡抓不到"/>
+        <updated>2024-10-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+lsusb
+![](https://i.imgur.com/SRI6jmT.png)
+RTL8821AU
+https://github.com]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安裝後直接進到 windows問題]]></title>
+        <id>安裝後直接進到 windows問題</id>
+        <link href="https://alanhc.github.io/logA/posts/安裝後直接進到 windows問題"/>
+        <updated>2024-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+Solution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opti]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇]]></title>
+        <id>超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</id>
+        <link href="https://alanhc.github.io/logA/posts/超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇"/>
+        <updated>2024-10-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 步驟
+![](https://i.imgur.com/jycGc1B.png)
+1. 安裝 Docker Desktop
+2. 使用wsl2
+3. 使]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[更快的影片學習方法]]></title>
+        <id>更快的影片學習方法</id>
+        <link href="https://alanhc.github.io/logA/posts/更快的影片學習方法"/>
+        <updated>2024-08-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+1. ytd get youtube video
+2. whisper video -> text
+3. video -> 關鍵影格 （變動threshol]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[fastapi-k8s]]></title>
+        <id>fastapi-k8s</id>
+        <link href="https://alanhc.github.io/logA/posts/fastapi-k8s"/>
+        <updated>2024-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+![[Pasted image 20240717010914.png]]
+```
+FROM tiangolo/uvicorn-gunicorn-fastap]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[inferencing-llm]]></title>
+        <id>20240704-inferencing-llm</id>
+        <link href="https://alanhc.github.io/logA/posts/20240704-inferencing-llm"/>
+        <updated>2024-07-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## mac
+## 安裝
+- `pip install mlx-lm`
+### 使用 mac cli
+- `python -m mlx_lm.generat]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python使用pyinstaller製作桌面應用程式]]></title>
+        <id>python使用pyinstaller製作桌面應用程式</id>
+        <link href="https://alanhc.github.io/logA/posts/python使用pyinstaller製作桌面應用程式"/>
+        <updated>2024-06-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 先看 File structure:
+![](https://i.imgur.com/HGlGJij.png)
+```python
+# app.py
+i]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240621-公雲學習筆記]]></title>
+        <id>20240621-公雲學習筆記</id>
+        <link href="https://alanhc.github.io/logA/posts/20240621-公雲學習筆記"/>
+        <updated>2024-06-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 概覽公共雲服務
+[(11:45)Top 50+ AWS Services Explained in 10 Minutes](https://youtu]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240409-你要如何衡量你的人生]]></title>
+        <id>20240409-你要如何衡量你的人生</id>
+        <link href="https://alanhc.github.io/logA/posts/20240409-你要如何衡量你的人生"/>
+        <updated>2024-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 人生方向
+- 樂在工作、挑戰、個人成長、有意義
+- 家庭
+- 婚姻
+- 孩子：學做困難事、價值觀
+- 家庭文化、行為準則
+- 個人：道德原則、不妥協
+-]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[閱讀筆記]]></title>
+        <id>閱讀筆記-建中2021校內培訓簡報</id>
+        <link href="https://alanhc.github.io/logA/posts/閱讀筆記-建中2021校內培訓簡報"/>
+        <updated>2024-04-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://tioj.ck.tp.edu.tw/articles/22
+## 9/15 演算法初探
+[https://slides.com/justin]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[閱讀筆記-建中 2021 暑假資讀投影片-謝一]]></title>
+        <id>閱讀筆記-建中2021暑假資讀投影片-謝一</id>
+        <link href="https://alanhc.github.io/logA/posts/閱讀筆記-建中2021暑假資讀投影片-謝一"/>
+        <updated>2024-04-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://slides.com/thanksone/deck
+#### Bubble sort
+![](https://i.imgur.com/znl]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240324-learn-go]]></title>
+        <id>20240324-learn-go</id>
+        <link href="https://alanhc.github.io/logA/posts/20240324-learn-go"/>
+        <updated>2024-03-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## quickstart
+[golang in 100 secoonds](https://youtu.be/446E-r0rXHI?si=waOpCnH]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20240321-interview-warmup]]></title>
         <id>20240321-interview-warmup</id>
@@ -30,7 +316,7 @@
 <body>
 
 ## Backgrounds
-I just got rejected by a big tech company. **In order to** impr]]></summary>
+I just got rejected by a big tech company. In order to improve ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -63,6 +349,32 @@ from Crypt]]></summary>
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[國外工作]]></title>
+        <id>國外工作</id>
+        <link href="https://alanhc.github.io/logA/posts/國外工作"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 歐洲
+根據 歐洲資訊科技產業協會: 的資料，歐洲軟體工程師最需要的領域包括：
+- 雲端計算和分散式系統
+- 人工智慧和機器學習
+- 網路安全
+- 大數]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[20240227-warp-terminal]]></title>
         <id>20240227-warp-terminal</id>
         <link href="https://alanhc.github.io/logA/posts/20240227-warp-terminal"/>
@@ -79,6 +391,29 @@ from Crypt]]></summary>
 發現一個有趣的東西
 brew install --cask warp
 ![](https://assets-global.website-files.com]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240227-huggingface-nlp]]></title>
+        <id>20240227-huggingface-nlp</id>
+        <link href="https://alanhc.github.io/logA/posts/20240227-huggingface-nlp"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# transformers models
+![](https://i.imgur.com/QkCYS7N.png)
+![](https://i.imgur]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
@@ -1269,6 +1604,30 @@ problem?
 ```js
 import { connectToDb, fileExists } from "@/lib/mongodb";
 i]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[filebase]]></title>
+        <id>learn-filebase</id>
+        <link href="https://alanhc.github.io/logA/posts/learn-filebase"/>
+        <updated>2023-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+https://docs.filebase.com/getting-started/ipfs-getting-started-guide
+
+<]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>

@@ -4,7 +4,7 @@
         <title>Alan Tseng</title>
         <link>https://alanhc.github.io</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Wed, 28 May 2025 15:34:13 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 May 2025 08:20:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
@@ -13,6 +13,244 @@
             <link>https://alanhc.github.io</link>
         </image>
         <copyright>All rights reserved 2025, alanhc</copyright>
+        <item>
+            <title><![CDATA[ubuntu wifi網卡抓不到]]></title>
+            <link>https://alanhc.github.io/logA/posts/ubuntu wifi網卡抓不到</link>
+            <guid>ubuntu wifi網卡抓不到</guid>
+            <pubDate>Fri, 11 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+lsusb
+![](https://i.imgur.com/SRI6jmT.png)
+RTL8821AU
+https://github.com]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[安裝後直接進到 windows問題]]></title>
+            <link>https://alanhc.github.io/logA/posts/安裝後直接進到 windows問題</link>
+            <guid>安裝後直接進到 windows問題</guid>
+            <pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+Solution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opti]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇]]></title>
+            <link>https://alanhc.github.io/logA/posts/超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</link>
+            <guid>超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</guid>
+            <pubDate>Thu, 03 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 步驟
+![](https://i.imgur.com/jycGc1B.png)
+1. 安裝 Docker Desktop
+2. 使用wsl2
+3. 使]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[更快的影片學習方法]]></title>
+            <link>https://alanhc.github.io/logA/posts/更快的影片學習方法</link>
+            <guid>更快的影片學習方法</guid>
+            <pubDate>Wed, 14 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+1. ytd get youtube video
+2. whisper video -> text
+3. video -> 關鍵影格 （變動threshol]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[fastapi-k8s]]></title>
+            <link>https://alanhc.github.io/logA/posts/fastapi-k8s</link>
+            <guid>fastapi-k8s</guid>
+            <pubDate>Wed, 17 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+![[Pasted image 20240717010914.png]]
+```
+FROM tiangolo/uvicorn-gunicorn-fastap]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[inferencing-llm]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240704-inferencing-llm</link>
+            <guid>20240704-inferencing-llm</guid>
+            <pubDate>Thu, 04 Jul 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## mac
+## 安裝
+- `pip install mlx-lm`
+### 使用 mac cli
+- `python -m mlx_lm.generat]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[python使用pyinstaller製作桌面應用程式]]></title>
+            <link>https://alanhc.github.io/logA/posts/python使用pyinstaller製作桌面應用程式</link>
+            <guid>python使用pyinstaller製作桌面應用程式</guid>
+            <pubDate>Wed, 26 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 先看 File structure:
+![](https://i.imgur.com/HGlGJij.png)
+```python
+# app.py
+i]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20240621-公雲學習筆記]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240621-公雲學習筆記</link>
+            <guid>20240621-公雲學習筆記</guid>
+            <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 概覽公共雲服務
+[(11:45)Top 50+ AWS Services Explained in 10 Minutes](https://youtu]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20240409-你要如何衡量你的人生]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240409-你要如何衡量你的人生</link>
+            <guid>20240409-你要如何衡量你的人生</guid>
+            <pubDate>Sun, 16 Jun 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 人生方向
+- 樂在工作、挑戰、個人成長、有意義
+- 家庭
+- 婚姻
+- 孩子：學做困難事、價值觀
+- 家庭文化、行為準則
+- 個人：道德原則、不妥協
+-]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[閱讀筆記]]></title>
+            <link>https://alanhc.github.io/logA/posts/閱讀筆記-建中2021校內培訓簡報</link>
+            <guid>閱讀筆記-建中2021校內培訓簡報</guid>
+            <pubDate>Sat, 06 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://tioj.ck.tp.edu.tw/articles/22
+## 9/15 演算法初探
+[https://slides.com/justin]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[閱讀筆記-建中 2021 暑假資讀投影片-謝一]]></title>
+            <link>https://alanhc.github.io/logA/posts/閱讀筆記-建中2021暑假資讀投影片-謝一</link>
+            <guid>閱讀筆記-建中2021暑假資讀投影片-謝一</guid>
+            <pubDate>Sat, 06 Apr 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://slides.com/thanksone/deck
+#### Bubble sort
+![](https://i.imgur.com/znl]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20240324-learn-go]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240324-learn-go</link>
+            <guid>20240324-learn-go</guid>
+            <pubDate>Sun, 24 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## quickstart
+[golang in 100 secoonds](https://youtu.be/446E-r0rXHI?si=waOpCnH]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
         <item>
             <title><![CDATA[20240321-interview-warmup]]></title>
             <link>https://alanhc.github.io/logA/posts/20240321-interview-warmup</link>
@@ -28,7 +266,7 @@
 <body>
 
 ## Backgrounds
-I just got rejected by a big tech company. **In order to** impr]]></description>
+I just got rejected by a big tech company. In order to improve ]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -53,6 +291,28 @@ from Crypt]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
+            <title><![CDATA[國外工作]]></title>
+            <link>https://alanhc.github.io/logA/posts/國外工作</link>
+            <guid>國外工作</guid>
+            <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 歐洲
+根據 歐洲資訊科技產業協會: 的資料，歐洲軟體工程師最需要的領域包括：
+- 雲端計算和分散式系統
+- 人工智慧和機器學習
+- 網路安全
+- 大數]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
             <title><![CDATA[20240227-warp-terminal]]></title>
             <link>https://alanhc.github.io/logA/posts/20240227-warp-terminal</link>
             <guid>20240227-warp-terminal</guid>
@@ -69,6 +329,25 @@ from Crypt]]></description>
 發現一個有趣的東西
 brew install --cask warp
 ![](https://assets-global.website-files.com]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[20240227-huggingface-nlp]]></title>
+            <link>https://alanhc.github.io/logA/posts/20240227-huggingface-nlp</link>
+            <guid>20240227-huggingface-nlp</guid>
+            <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# transformers models
+![](https://i.imgur.com/QkCYS7N.png)
+![](https://i.imgur]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>
@@ -1055,6 +1334,26 @@ problem?
 ```js
 import { connectToDb, fileExists } from "@/lib/mongodb";
 i]]></description>
+            <author>alanhc.tseng1999@gmail.com (alanhc)</author>
+        </item>
+        <item>
+            <title><![CDATA[filebase]]></title>
+            <link>https://alanhc.github.io/logA/posts/learn-filebase</link>
+            <guid>learn-filebase</guid>
+            <pubDate>Sat, 11 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+https://docs.filebase.com/getting-started/ipfs-getting-started-guide
+
+<]]></description>
             <author>alanhc.tseng1999@gmail.com (alanhc)</author>
         </item>
         <item>

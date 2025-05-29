@@ -11,10 +11,142 @@
     },
     "items": [
         {
+            "id": "ubuntu wifi網卡抓不到",
+            "url": "https://alanhc.github.io/logA/posts/ubuntu wifi網卡抓不到",
+            "title": "ubuntu wifi網卡抓不到",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\nlsusb\n![](https://i.imgur.com/SRI6jmT.png)\nRTL8821AU\nhttps://github.com",
+            "date_modified": "2024-10-11T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "安裝後直接進到 windows問題",
+            "url": "https://alanhc.github.io/logA/posts/安裝後直接進到 windows問題",
+            "title": "安裝後直接進到 windows問題",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\nSolution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opti",
+            "date_modified": "2024-10-10T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇",
+            "url": "https://alanhc.github.io/logA/posts/超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇",
+            "title": "超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 步驟\n![](https://i.imgur.com/jycGc1B.png)\n1. 安裝 Docker Desktop\n2. 使用wsl2\n3. 使",
+            "date_modified": "2024-10-03T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "更快的影片學習方法",
+            "url": "https://alanhc.github.io/logA/posts/更快的影片學習方法",
+            "title": "更快的影片學習方法",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n1. ytd get youtube video\n2. whisper video -> text\n3. video -> 關鍵影格 （變動threshol",
+            "date_modified": "2024-08-14T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "fastapi-k8s",
+            "url": "https://alanhc.github.io/logA/posts/fastapi-k8s",
+            "title": "fastapi-k8s",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n![[Pasted image 20240717010914.png]]\n```\nFROM tiangolo/uvicorn-gunicorn-fastap",
+            "date_modified": "2024-07-17T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240704-inferencing-llm",
+            "url": "https://alanhc.github.io/logA/posts/20240704-inferencing-llm",
+            "title": "inferencing-llm",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## mac\n## 安裝\n- `pip install mlx-lm`\n### 使用 mac cli\n- `python -m mlx_lm.generat",
+            "date_modified": "2024-07-04T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "python使用pyinstaller製作桌面應用程式",
+            "url": "https://alanhc.github.io/logA/posts/python使用pyinstaller製作桌面應用程式",
+            "title": "python使用pyinstaller製作桌面應用程式",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 先看 File structure:\n![](https://i.imgur.com/HGlGJij.png)\n```python\n# app.py\ni",
+            "date_modified": "2024-06-26T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240621-公雲學習筆記",
+            "url": "https://alanhc.github.io/logA/posts/20240621-公雲學習筆記",
+            "title": "20240621-公雲學習筆記",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 概覽公共雲服務\n[(11:45)Top 50+ AWS Services Explained in 10 Minutes](https://youtu",
+            "date_modified": "2024-06-21T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240409-你要如何衡量你的人生",
+            "url": "https://alanhc.github.io/logA/posts/20240409-你要如何衡量你的人生",
+            "title": "20240409-你要如何衡量你的人生",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n- 人生方向\n- 樂在工作、挑戰、個人成長、有意義\n- 家庭\n- 婚姻\n- 孩子：學做困難事、價值觀\n- 家庭文化、行為準則\n- 個人：道德原則、不妥協\n-",
+            "date_modified": "2024-06-16T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "閱讀筆記-建中2021校內培訓簡報",
+            "url": "https://alanhc.github.io/logA/posts/閱讀筆記-建中2021校內培訓簡報",
+            "title": "閱讀筆記",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://tioj.ck.tp.edu.tw/articles/22\n## 9/15 演算法初探\n[https://slides.com/justin",
+            "date_modified": "2024-04-06T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "閱讀筆記-建中2021暑假資讀投影片-謝一",
+            "url": "https://alanhc.github.io/logA/posts/閱讀筆記-建中2021暑假資讀投影片-謝一",
+            "title": "閱讀筆記-建中 2021 暑假資讀投影片-謝一",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\nhttps://slides.com/thanksone/deck\n#### Bubble sort\n![](https://i.imgur.com/znl",
+            "date_modified": "2024-04-06T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240324-learn-go",
+            "url": "https://alanhc.github.io/logA/posts/20240324-learn-go",
+            "title": "20240324-learn-go",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## quickstart\n[golang in 100 secoonds](https://youtu.be/446E-r0rXHI?si=waOpCnH",
+            "date_modified": "2024-03-24T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240321-interview-warmup",
             "url": "https://alanhc.github.io/logA/posts/20240321-interview-warmup",
             "title": "20240321-interview-warmup",
-            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Backgrounds\nI just got rejected by a big tech company. **In order to** impr",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Backgrounds\nI just got rejected by a big tech company. In order to improve ",
             "date_modified": "2024-03-21T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -33,10 +165,32 @@
             }
         },
         {
+            "id": "國外工作",
+            "url": "https://alanhc.github.io/logA/posts/國外工作",
+            "title": "國外工作",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## 歐洲\n根據 歐洲資訊科技產業協會: 的資料，歐洲軟體工程師最需要的領域包括：\n- 雲端計算和分散式系統\n- 人工智慧和機器學習\n- 網路安全\n- 大數",
+            "date_modified": "2024-02-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
             "id": "20240227-warp-terminal",
             "url": "https://alanhc.github.io/logA/posts/20240227-warp-terminal",
             "title": "20240227-warp-terminal",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n發現一個有趣的東西\nbrew install --cask warp\n![](https://assets-global.website-files.com",
+            "date_modified": "2024-02-27T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "20240227-huggingface-nlp",
+            "url": "https://alanhc.github.io/logA/posts/20240227-huggingface-nlp",
+            "title": "20240227-huggingface-nlp",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n# transformers models\n![](https://i.imgur.com/QkCYS7N.png)\n![](https://i.imgur",
             "date_modified": "2024-02-27T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
@@ -599,6 +753,17 @@
             "title": "2021112-upload-large-file",
             "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## upload api\n```js\nimport { connectToDb, fileExists } from \"@/lib/mongodb\";\ni",
             "date_modified": "2023-11-12T00:00:00.000Z",
+            "author": {
+                "name": "alanhc",
+                "url": "https://alanhc.github.io"
+            }
+        },
+        {
+            "id": "learn-filebase",
+            "url": "https://alanhc.github.io/logA/posts/learn-filebase",
+            "title": "filebase",
+            "summary": "<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Contents</title>\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n</head>\n<body>\n\n## Ref\nhttps://docs.filebase.com/getting-started/ipfs-getting-started-guide\n\n<",
+            "date_modified": "2023-11-11T00:00:00.000Z",
             "author": {
                 "name": "alanhc",
                 "url": "https://alanhc.github.io"
