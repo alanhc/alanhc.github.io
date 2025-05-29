@@ -33,6 +33,7 @@
     "@uiw/react-heat-map": "^2.2.2",
     "add": "^2.0.6",
     "date-fns": "^2.29.3",
+    "disqus-react": "^1.1.6",
     "feed": "^4.2.2",
     "formik": "^2.2.9",
     "framer-motion": "^7.10.3",

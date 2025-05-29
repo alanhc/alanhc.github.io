@@ -2,6 +2,8 @@ import BlogLayout from "@/components/BlogLayout";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import Head from "next/head";
 import Date from "@/components/partial/Date";
+import { DiscussionEmbed } from 'disqus-react';
+
 import {
   Box,
   Tag,
@@ -209,6 +211,15 @@ export default function Post({ postData, mdxSource, tocSource }: any) {
         />
 
         <Link onClick={() => router.push("/logA")}>👈Go Back</Link>
+        <DiscussionEmbed
+          shortname='alanhc'
+          config={{
+              url: postData.url,
+              identifier: postData.id,
+              title: postData.title,
+              language: 'en' //e.g. for Traditional Chinese (Taiwan)
+          }}
+      />
       </article>
     </BlogLayout>
   );
