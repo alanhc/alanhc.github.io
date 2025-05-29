@@ -4,6 +4,8 @@ date: 2024-02-15
 tags:
   - object_oriented_design
 updated: 2024-02-15
+up:
+  - "[[ood]]"
 ---
 ## Question
 Deck of cards：設計一個給一副牌的generic資料結構，解釋如何設計black-jack(21點)資料結構的子類別

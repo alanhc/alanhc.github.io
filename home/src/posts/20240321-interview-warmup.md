@@ -6,9 +6,11 @@ tags:
   - chatgpt
   - rag
 updated: 2024-03-21
+up:
+  - "[[projects]]"
 ---
 ## Backgrounds
-I just got rejected by a big tech company. **In order to** improve my ability to explain interview questions effectively in English, I'm designing an interview warmup tool using LLM and RAG technologies.
+I just got rejected by a big tech company. In order to improve my ability to explain interview questions effectively in English, I'm designing an interview warmup tool using LLM and RAG technologies.
 ## Design
 So, I start design a system that could help me practice:
 - User Story
@@ -40,7 +42,7 @@ The Advisor component, powered by the ChatGPT API, assesses candidate responses 
    ]
 }
 ```
-- main.py
+- `main.py`
 ```python
 import json
 from pathlib import Path

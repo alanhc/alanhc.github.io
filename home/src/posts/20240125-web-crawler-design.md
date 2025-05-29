@@ -4,6 +4,8 @@ date: 2024-01-25
 tags:
   - system_design
 updated: 2024-01-25
+up:
+  - "[[system design]]"
 ---
 ## Question
 再設計爬蟲時，如何避免無限迴圈

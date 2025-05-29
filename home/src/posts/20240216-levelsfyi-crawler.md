@@ -4,6 +4,8 @@ date: 2024-02-17
 tags:
   - web_scraping
 updated: 2024-02-17
+up:
+  - "[[工作]]"
 ---
 ## Background
 - from a [stack overflow question](https://stackoverflow.com/questions/76496884/how-levels-fyi-is-encoding-the-api-response) , level.fyi encrypt its response

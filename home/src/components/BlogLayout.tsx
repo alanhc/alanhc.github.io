@@ -19,6 +19,7 @@ import {
 import NextLink from "next/link";
 import BlogNav from "./partial/BlogNav";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { FaLinkedin } from "react-icons/fa";
 // import NavLink from "./partial/NavLink"; // Import the NavLink component
 type AppProps = {
   children?: React.ReactNode;
@@ -79,10 +80,16 @@ const BlogLayout = ({ children }: AppProps) => {
                   {name}
                 </NavLink>
               ))}
+             
             </HStack>
+            <Button as={NextLink} href="https://www.linkedin.com/in/alanhc316/" target="_blank">
+            <FaLinkedin />
+            </Button>
             <Button onClick={toggleColorMode}>
+            
               {colorMode === "light" ? "☾" : "☀️"}
             </Button>
+            
           </HStack>
         </Flex>
 

@@ -4,6 +4,8 @@ date: 2024-02-17
 tags:
   - object_oriented_design
 updated: 2024-02-17
+up:
+  - "[[ood]]"
 ---
 ## Question
 設計線上書本閱讀器的資料結構

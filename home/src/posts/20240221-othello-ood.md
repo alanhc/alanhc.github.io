@@ -4,6 +4,8 @@ date: 2024-02-21
 tags:
   - object_oriented_design
 updated: 2024-02-21
+up:
+  - "[[ood]]"
 ---
 ## Question
 - 設計黑白棋的OOD，黑白棋是如果周遭（上下左右）被圍起來就更換中間（被包圍）顏色，到一方無法下任何棋結束。

@@ -5,6 +5,8 @@ tags:
   - linkedin
   - web_scraping
 updated: 2024-02-12
+up:
+  - "[[工作]]"
 ---
 思路：先用playwright 取得cookies，觀察network直接打API
 

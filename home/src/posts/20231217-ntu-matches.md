@@ -4,6 +4,8 @@ date: 2023-12-17
 tags:
   - vector_database
   - select
+up:
+  - "[[projects]]"
 ---
 ## 先請AI生成資料
 ### prompt

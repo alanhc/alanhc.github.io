@@ -4,6 +4,8 @@ date: 2024-01-22
 tags:
   - system_design
 updated: 2024-01-22
+up:
+  - "[[system design]]"
 ---
 ## Question
 設計一個可以有1000 client 可以取得最後的開高收低，已經有資料、可以自行決定儲存，要怎麼設計client說明幾種不同的方法及為甚麼使用，可以用任意技術及可以選擇任意分散機制

@@ -5,6 +5,8 @@ tags:
   - 學習
   - english
 updated: 2024-01-22
+up:
+  - "[[英文]]"
 ---
 [Voice Control for ChatGPT](https://chromewebstore.google.com/detail/voice-control-for-chatgpt/eollffkcakegifhacjnlnegohfdlidhn)
 

@@ -148,8 +148,9 @@ export async function getStaticPaths() {
 export default function Post({ postData, mdxSource, tocSource }: any) {
   const bgColor = useColorModeValue('white', 'gray.800');
   return (
+  
     <BlogLayout>
-      <NextSeo title={postData.title} {...SEO} />
+      <NextSeo title={postData.title} description={postData.markdownContent || ''} {...SEO} />
       <Head>
         <title>{postData.title}</title>
       </Head>

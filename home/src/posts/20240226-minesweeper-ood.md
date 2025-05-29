@@ -4,6 +4,8 @@ date: 2024-02-26
 tags:
   - object_oriented_design
 updated: 2024-02-26
+up:
+  - "[[ood]]"
 ---
 ## Question
 踩地雷遊戲，玩家直到整個盤都探索完畢，玩家點選後如果是炸彈就輸掉，若是空白，消除所有鄰近空白及數字

@@ -5,6 +5,7 @@ tags:
   - python
   - security
 updated: 2024-03-03
+up:
 ---
 使用 AES（對稱加密） + base64 
 ## 加密

@@ -4,6 +4,8 @@ date: 2024-02-11
 tags:
   - job
 updated: 2024-02-11
+up:
+  - "[[工作]]"
 ---
 [網頁互動版](https://alanhc.github.io/taiwan_jobs.html)
 - 資料來源：Levels Fyi

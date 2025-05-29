@@ -5,6 +5,8 @@ tags:
   - nlp
   - text_network_analysis
 updated: 2024-02-22
+up:
+  - "[[nlp]]"
 ---
 - 文字清理（去除符號、轉小寫）
 - 依據詞頻拆分關鍵字網路

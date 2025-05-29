@@ -4,6 +4,8 @@ date: 2024-02-05
 tags:
   - system_design
 updated: 2024-02-05
+up:
+  - "[[system design]]"
 ---
 ## Question
 設計一個有多類別的產品ranking網站

@@ -4,6 +4,8 @@ date: 2024-02-27
 tags:
   - terminal
 updated: 2024-02-27
+up:
+  - "[[tools]]"
 ---
 發現一個有趣的東西
 brew install --cask warp

@@ -4,6 +4,8 @@ date: 2024-02-11
 tags:
   - system_design
 updated: 2024-02-11
+up:
+  - "[[system design]]"
 ---
 ## Question
 

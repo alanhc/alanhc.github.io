@@ -5,6 +5,8 @@ tags:
   - genai
   - llm
   - google
+up:
+  - "[[llm]]"
 ---
 
 ## Ref

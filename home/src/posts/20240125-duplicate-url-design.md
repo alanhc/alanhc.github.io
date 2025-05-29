@@ -4,6 +4,8 @@ date: 2024-01-25
 tags:
   - system_design
 updated: 2024-01-25
+up:
+  - "[[system design]]"
 ---
 ## Question
 如何儲存1000萬的url，每個字4 byte、頁面平均100字，這樣大約會有4TB

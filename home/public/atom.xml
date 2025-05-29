@@ -1,24 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:3000</id>
+    <id>https://alanhc.github.io</id>
     <title>Alan Tseng</title>
-    <updated>2025-01-27T16:38:42.240Z</updated>
+    <updated>2025-05-29T10:10:05.808Z</updated>
     <generator>awesome</generator>
     <author>
         <name>alanhc</name>
         <email>alanhc.tseng1999@gmail.com</email>
-        <uri>http://localhost:3000</uri>
+        <uri>https://alanhc.github.io</uri>
     </author>
-    <link rel="alternate" href="http://localhost:3000"/>
-    <link rel="self" href="http://localhost:3000/atom"/>
+    <link rel="alternate" href="https://alanhc.github.io"/>
+    <link rel="self" href="https://alanhc.github.io/atom"/>
     <subtitle>This is my personal feed!</subtitle>
-    <logo>http://localhost:3000/image/me.jpeg</logo>
-    <icon>http://localhost:3000/favicon.ico</icon>
+    <logo>https://alanhc.github.io/image/me.jpeg</logo>
+    <icon>https://alanhc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, alanhc</rights>
+    <entry>
+        <title type="html"><![CDATA[ubuntu wifi網卡抓不到]]></title>
+        <id>ubuntu wifi網卡抓不到</id>
+        <link href="https://alanhc.github.io/logA/posts/ubuntu wifi網卡抓不到"/>
+        <updated>2024-10-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+lsusb
+![](https://i.imgur.com/SRI6jmT.png)
+RTL8821AU
+https://github.com]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安裝後直接進到 windows問題]]></title>
+        <id>安裝後直接進到 windows問題</id>
+        <link href="https://alanhc.github.io/logA/posts/安裝後直接進到 windows問題"/>
+        <updated>2024-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+Solution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opti]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇]]></title>
+        <id>超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</id>
+        <link href="https://alanhc.github.io/logA/posts/超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇"/>
+        <updated>2024-10-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 步驟
+![](https://i.imgur.com/jycGc1B.png)
+1. 安裝 Docker Desktop
+2. 使用wsl2
+3. 使]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[更快的影片學習方法]]></title>
+        <id>更快的影片學習方法</id>
+        <link href="https://alanhc.github.io/logA/posts/更快的影片學習方法"/>
+        <updated>2024-08-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+1. ytd get youtube video
+2. whisper video -> text
+3. video -> 關鍵影格 （變動threshol]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[fastapi-k8s]]></title>
+        <id>fastapi-k8s</id>
+        <link href="https://alanhc.github.io/logA/posts/fastapi-k8s"/>
+        <updated>2024-07-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+![[Pasted image 20240717010914.png]]
+```
+FROM tiangolo/uvicorn-gunicorn-fastap]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[inferencing-llm]]></title>
+        <id>20240704-inferencing-llm</id>
+        <link href="https://alanhc.github.io/logA/posts/20240704-inferencing-llm"/>
+        <updated>2024-07-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## mac
+## 安裝
+- `pip install mlx-lm`
+### 使用 mac cli
+- `python -m mlx_lm.generat]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python使用pyinstaller製作桌面應用程式]]></title>
+        <id>python使用pyinstaller製作桌面應用程式</id>
+        <link href="https://alanhc.github.io/logA/posts/python使用pyinstaller製作桌面應用程式"/>
+        <updated>2024-06-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 先看 File structure:
+![](https://i.imgur.com/HGlGJij.png)
+```python
+# app.py
+i]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240621-公雲學習筆記]]></title>
+        <id>20240621-公雲學習筆記</id>
+        <link href="https://alanhc.github.io/logA/posts/20240621-公雲學習筆記"/>
+        <updated>2024-06-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 概覽公共雲服務
+[(11:45)Top 50+ AWS Services Explained in 10 Minutes](https://youtu]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240409-你要如何衡量你的人生]]></title>
+        <id>20240409-你要如何衡量你的人生</id>
+        <link href="https://alanhc.github.io/logA/posts/20240409-你要如何衡量你的人生"/>
+        <updated>2024-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+- 人生方向
+- 樂在工作、挑戰、個人成長、有意義
+- 家庭
+- 婚姻
+- 孩子：學做困難事、價值觀
+- 家庭文化、行為準則
+- 個人：道德原則、不妥協
+-]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[閱讀筆記]]></title>
+        <id>閱讀筆記-建中2021校內培訓簡報</id>
+        <link href="https://alanhc.github.io/logA/posts/閱讀筆記-建中2021校內培訓簡報"/>
+        <updated>2024-04-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://tioj.ck.tp.edu.tw/articles/22
+## 9/15 演算法初探
+[https://slides.com/justin]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[閱讀筆記-建中 2021 暑假資讀投影片-謝一]]></title>
+        <id>閱讀筆記-建中2021暑假資讀投影片-謝一</id>
+        <link href="https://alanhc.github.io/logA/posts/閱讀筆記-建中2021暑假資讀投影片-謝一"/>
+        <updated>2024-04-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+https://slides.com/thanksone/deck
+#### Bubble sort
+![](https://i.imgur.com/znl]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240324-learn-go]]></title>
+        <id>20240324-learn-go</id>
+        <link href="https://alanhc.github.io/logA/posts/20240324-learn-go"/>
+        <updated>2024-03-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## quickstart
+[golang in 100 secoonds](https://youtu.be/446E-r0rXHI?si=waOpCnH]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[20240321-interview-warmup]]></title>
         <id>20240321-interview-warmup</id>
-        <link href="http://localhost:3000/logA/posts/20240321-interview-warmup"/>
+        <link href="https://alanhc.github.io/logA/posts/20240321-interview-warmup"/>
         <updated>2024-03-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -30,17 +316,17 @@
 <body>
 
 ## Backgrounds
-I just got rejected by a big tech company. **In order to** impr]]></summary>
+I just got rejected by a big tech company. In order to improve ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240303-save-password-python]]></title>
         <id>20240303-save-password-python</id>
-        <link href="http://localhost:3000/logA/posts/20240303-save-password-python"/>
+        <link href="https://alanhc.github.io/logA/posts/20240303-save-password-python"/>
         <updated>2024-03-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -59,13 +345,39 @@ from Crypt]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[國外工作]]></title>
+        <id>國外工作</id>
+        <link href="https://alanhc.github.io/logA/posts/國外工作"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## 歐洲
+根據 歐洲資訊科技產業協會: 的資料，歐洲軟體工程師最需要的領域包括：
+- 雲端計算和分散式系統
+- 人工智慧和機器學習
+- 網路安全
+- 大數]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240227-warp-terminal]]></title>
         <id>20240227-warp-terminal</id>
-        <link href="http://localhost:3000/logA/posts/20240227-warp-terminal"/>
+        <link href="https://alanhc.github.io/logA/posts/20240227-warp-terminal"/>
         <updated>2024-02-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -82,13 +394,36 @@ brew install --cask warp
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[20240227-huggingface-nlp]]></title>
+        <id>20240227-huggingface-nlp</id>
+        <link href="https://alanhc.github.io/logA/posts/20240227-huggingface-nlp"/>
+        <updated>2024-02-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+# transformers models
+![](https://i.imgur.com/QkCYS7N.png)
+![](https://i.imgur]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240227-Hash-Table-ood]]></title>
         <id>20240227-Hash-Table-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240227-Hash-Table-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240227-Hash-Table-ood"/>
         <updated>2024-02-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -106,13 +441,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240227-File-Systems-ood]]></title>
         <id>20240227-File-Systems-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240227-File-Systems-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240227-File-Systems-ood"/>
         <updated>2024-02-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -130,13 +465,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240226-minesweeper-ood]]></title>
         <id>20240226-minesweeper-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240226-minesweeper-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240226-minesweeper-ood"/>
         <updated>2024-02-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -154,13 +489,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240226-Circular-array-ood]]></title>
         <id>20240226-Circular-array-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240226-Circular-array-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240226-Circular-array-ood"/>
         <updated>2024-02-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -176,13 +511,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240222-content-analysis]]></title>
         <id>20240222-text-network-analysis</id>
-        <link href="http://localhost:3000/logA/posts/20240222-text-network-analysis"/>
+        <link href="https://alanhc.github.io/logA/posts/20240222-text-network-analysis"/>
         <updated>2024-02-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -203,13 +538,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240221-othello-ood]]></title>
         <id>20240221-othello-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240221-othello-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240221-othello-ood"/>
         <updated>2024-02-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -226,13 +561,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240219-chat-server-ood]]></title>
         <id>20240219-chat-server-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240219-chat-server-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240219-chat-server-ood"/>
         <updated>2024-02-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -248,13 +583,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240217-parking-lot-ood]]></title>
         <id>20240217-parking-lot-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240217-parking-lot-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240217-parking-lot-ood"/>
         <updated>2024-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -272,13 +607,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240217-online-book-reader-ood]]></title>
         <id>20240217-online-book-reader-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240217-online-book-reader-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240217-online-book-reader-ood"/>
         <updated>2024-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -298,13 +633,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240217-jukebox-ood]]></title>
         <id>20240217-jukebox-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240217-jukebox-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240217-jukebox-ood"/>
         <updated>2024-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -322,13 +657,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240217-jigsaw-ood]]></title>
         <id>20240217-jigsaw-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240217-jigsaw-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240217-jigsaw-ood"/>
         <updated>2024-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -344,13 +679,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240217-call-center-ood]]></title>
         <id>20240217-call-center-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240217-call-center-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240217-call-center-ood"/>
         <updated>2024-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -366,13 +701,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240216-levelsfyi-crawler]]></title>
         <id>20240216-levelsfyi-crawler</id>
-        <link href="http://localhost:3000/logA/posts/20240216-levelsfyi-crawler"/>
+        <link href="https://alanhc.github.io/logA/posts/20240216-levelsfyi-crawler"/>
         <updated>2024-02-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -388,13 +723,13 @@ O(1) 可以使用ar]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240205-Deck-of-cards]]></title>
         <id>20240215-Deck-of-cards-ood</id>
-        <link href="http://localhost:3000/logA/posts/20240215-Deck-of-cards-ood"/>
+        <link href="https://alanhc.github.io/logA/posts/20240215-Deck-of-cards-ood"/>
         <updated>2024-02-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -411,13 +746,13 @@ Deck of cards：設計一個給一副牌的generic資料結構，解釋如何設
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240212-linkedin-private-api]]></title>
         <id>20240212-linkedin-private-api</id>
-        <link href="http://localhost:3000/logA/posts/20240212-linkedin-private-api"/>
+        <link href="https://alanhc.github.io/logA/posts/20240212-linkedin-private-api"/>
         <updated>2024-02-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -435,13 +770,13 @@ q_keyword]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240211-taiwan-job-insights]]></title>
         <id>20240211-taiwan-job-insights</id>
-        <link href="http://localhost:3000/logA/posts/20240211-taiwan-job-insights"/>
+        <link href="https://alanhc.github.io/logA/posts/20240211-taiwan-job-insights"/>
         <updated>2024-02-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -459,13 +794,13 @@ q_keyword]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240211-pastebin-design]]></title>
         <id>20240211-pastebin-design</id>
-        <link href="http://localhost:3000/logA/posts/20240211-pastebin-design"/>
+        <link href="https://alanhc.github.io/logA/posts/20240211-pastebin-design"/>
         <updated>2024-02-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -483,13 +818,13 @@ q_keyword]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240207-personal-finanicial-manager]]></title>
         <id>20240207-personal-finanicial-manager</id>
-        <link href="http://localhost:3000/logA/posts/20240207-personal-finanicial-manager"/>
+        <link href="https://alanhc.github.io/logA/posts/20240207-personal-finanicial-manager"/>
         <updated>2024-02-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -507,13 +842,13 @@ q_keyword]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240205-salesrank-design]]></title>
         <id>20240205-salesrank-design</id>
-        <link href="http://localhost:3000/logA/posts/20240205-salesrank-design"/>
+        <link href="https://alanhc.github.io/logA/posts/20240205-salesrank-design"/>
         <updated>2024-02-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -532,13 +867,13 @@ q_keyword]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240203-trading-bot]]></title>
         <id>20240203-trading-bot</id>
-        <link href="http://localhost:3000/logA/posts/20240203-trading-bot"/>
+        <link href="https://alanhc.github.io/logA/posts/20240203-trading-bot"/>
         <updated>2024-02-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -554,13 +889,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[quotes]]></title>
         <id>quotes</id>
-        <link href="http://localhost:3000/logA/posts/quotes"/>
+        <link href="https://alanhc.github.io/logA/posts/quotes"/>
         <updated>2024-01-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -575,13 +910,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240125-web_srawler_design]]></title>
         <id>20240125-web-crawler-design</id>
-        <link href="http://localhost:3000/logA/posts/20240125-web-crawler-design"/>
+        <link href="https://alanhc.github.io/logA/posts/20240125-web-crawler-design"/>
         <updated>2024-01-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -599,13 +934,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240125-duplicate-url-design]]></title>
         <id>20240125-duplicate-url-design</id>
-        <link href="http://localhost:3000/logA/posts/20240125-duplicate-url-design"/>
+        <link href="https://alanhc.github.io/logA/posts/20240125-duplicate-url-design"/>
         <updated>2024-01-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -623,13 +958,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240125-cache-design]]></title>
         <id>20240125-cache-design</id>
-        <link href="http://localhost:3000/logA/posts/20240125-cache-design"/>
+        <link href="https://alanhc.github.io/logA/posts/20240125-cache-design"/>
         <updated>2024-01-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -645,13 +980,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240124-break-cloudflare-bot-prevention]]></title>
         <id>20240124-break-cloudflare-bot-prevention</id>
-        <link href="http://localhost:3000/logA/posts/20240124-break-cloudflare-bot-prevention"/>
+        <link href="https://alanhc.github.io/logA/posts/20240124-break-cloudflare-bot-prevention"/>
         <updated>2024-01-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -671,13 +1006,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240123-scalper]]></title>
         <id>20240123-scalper</id>
-        <link href="http://localhost:3000/logA/posts/20240123-scalper"/>
+        <link href="https://alanhc.github.io/logA/posts/20240123-scalper"/>
         <updated>2024-01-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -694,13 +1029,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240122-stock-data]]></title>
         <id>20240122-stock-data-design</id>
-        <link href="http://localhost:3000/logA/posts/20240122-stock-data-design"/>
+        <link href="https://alanhc.github.io/logA/posts/20240122-stock-data-design"/>
         <updated>2024-01-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -716,13 +1051,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240122-ntu-cool-video-download]]></title>
         <id>20240122-ntu-cool-video-download</id>
-        <link href="http://localhost:3000/logA/posts/20240122-ntu-cool-video-download"/>
+        <link href="https://alanhc.github.io/logA/posts/20240122-ntu-cool-video-download"/>
         <updated>2024-01-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -738,13 +1073,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[沒環境講英文？如何跟 ChatGPT 對話，快速加強口說]]></title>
         <id>20240122-english-speaking</id>
-        <link href="http://localhost:3000/logA/posts/20240122-english-speaking"/>
+        <link href="https://alanhc.github.io/logA/posts/20240122-english-speaking"/>
         <updated>2024-01-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -759,13 +1094,13 @@ https://www.xq]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240121-Web-Scraping-Instagram-with-Selenium]]></title>
         <id>20240121-Web-Scraping-Instagram-with-Selenium</id>
-        <link href="http://localhost:3000/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium"/>
+        <link href="https://alanhc.github.io/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium"/>
         <updated>2024-01-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -782,13 +1117,13 @@ https://youtu]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240119-OSINT]]></title>
         <id>20240119-OSINT</id>
-        <link href="http://localhost:3000/logA/posts/20240119-OSINT"/>
+        <link href="https://alanhc.github.io/logA/posts/20240119-OSINT"/>
         <updated>2024-01-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -804,13 +1139,13 @@ https://youtu]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240114-product-insight]]></title>
         <id>20240114-product-insight</id>
-        <link href="http://localhost:3000/logA/posts/20240114-product-insight"/>
+        <link href="https://alanhc.github.io/logA/posts/20240114-product-insight"/>
         <updated>2024-01-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -827,13 +1162,13 @@ why? 品牌商想知道自己跟對手]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240113-data-pay]]></title>
         <id>20240113-data-engineer-salary</id>
-        <link href="http://localhost:3000/logA/posts/20240113-data-engineer-salary"/>
+        <link href="https://alanhc.github.io/logA/posts/20240113-data-engineer-salary"/>
         <updated>2024-01-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -853,13 +1188,13 @@ why? 品牌商想知道自己跟對手]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240108-attention]]></title>
         <id>20240108-attention</id>
-        <link href="http://localhost:3000/logA/posts/20240108-attention"/>
+        <link href="https://alanhc.github.io/logA/posts/20240108-attention"/>
         <updated>2024-01-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -880,13 +1215,13 @@ why? 手機成癮
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20240107-notion-websire]]></title>
         <id>20240107-notion-website</id>
-        <link href="http://localhost:3000/logA/posts/20240107-notion-website"/>
+        <link href="https://alanhc.github.io/logA/posts/20240107-notion-website"/>
         <updated>2024-01-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -904,13 +1239,13 @@ why? 手機成癮
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231222-socket-io]]></title>
         <id>20231222-chat</id>
-        <link href="http://localhost:3000/logA/posts/20231222-chat"/>
+        <link href="https://alanhc.github.io/logA/posts/20231222-chat"/>
         <updated>2023-12-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -926,13 +1261,13 @@ https://github.com/signalapp/libsi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231217-ntu-matches]]></title>
         <id>20231217-ntu-matches</id>
-        <link href="http://localhost:3000/logA/posts/20231217-ntu-matches"/>
+        <link href="https://alanhc.github.io/logA/posts/20231217-ntu-matches"/>
         <updated>2023-12-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -950,13 +1285,13 @@ https://github.com/signalapp/libsi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231217-google-gemini]]></title>
         <id>20231217-google-gemini</id>
-        <link href="http://localhost:3000/logA/posts/20231217-google-gemini"/>
+        <link href="https://alanhc.github.io/logA/posts/20231217-google-gemini"/>
         <updated>2023-12-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -973,13 +1308,13 @@ https://github.com/signalapp/libsi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231213-pyspark]]></title>
         <id>20231213-pyspark</id>
-        <link href="http://localhost:3000/logA/posts/20231213-pyspark"/>
+        <link href="https://alanhc.github.io/logA/posts/20231213-pyspark"/>
         <updated>2023-12-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -995,13 +1330,13 @@ https://github.com/signalapp/libsi]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231210-convert-post-markdown]]></title>
         <id>20231210-convert-post-markdown</id>
-        <link href="http://localhost:3000/logA/posts/20231210-convert-post-markdown"/>
+        <link href="https://alanhc.github.io/logA/posts/20231210-convert-post-markdown"/>
         <updated>2023-12-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1019,13 +1354,13 @@ https://cod]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231209-docker-machine-learning]]></title>
         <id>20231209-docker-machine-learning</id>
-        <link href="http://localhost:3000/logA/posts/20231209-docker-machine-learning"/>
+        <link href="https://alanhc.github.io/logA/posts/20231209-docker-machine-learning"/>
         <updated>2023-12-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1042,13 +1377,13 @@ https://cod]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231209-AI-music-example]]></title>
         <id>20231209-AI-music-example</id>
-        <link href="http://localhost:3000/logA/posts/20231209-AI-music-example"/>
+        <link href="https://alanhc.github.io/logA/posts/20231209-AI-music-example"/>
         <updated>2023-12-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1064,13 +1399,13 @@ AI 音樂風格轉換太酷了
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231202-twitter-bot]]></title>
         <id>20231202-twitter-bot</id>
-        <link href="http://localhost:3000/logA/posts/20231202-twitter-bot"/>
+        <link href="https://alanhc.github.io/logA/posts/20231202-twitter-bot"/>
         <updated>2023-12-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1086,13 +1421,13 @@ AI 音樂風格轉換太酷了
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231130-Building-and-Evaluating-Advanced-RAG (未完)]]></title>
         <id>20231130-Building-and-Evaluating-Advanced-RAG</id>
-        <link href="http://localhost:3000/logA/posts/20231130-Building-and-Evaluating-Advanced-RAG"/>
+        <link href="https://alanhc.github.io/logA/posts/20231130-Building-and-Evaluating-Advanced-RAG"/>
         <updated>2023-11-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1109,13 +1444,13 @@ AI 音樂風格轉換太酷了
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Should You Use Open Source Large Language Models?]]></title>
         <id>20231129-Should You Use Open Source Large Language Models</id>
-        <link href="http://localhost:3000/logA/posts/20231129-Should You Use Open Source Large Language Models"/>
+        <link href="https://alanhc.github.io/logA/posts/20231129-Should You Use Open Source Large Language Models"/>
         <updated>2023-11-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1132,13 +1467,13 @@ https://www.youtube.com/watch?v=y9k-U9AuDeM
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231125-cloudflare-tunnel]]></title>
         <id>20231125-cloudflare-tunnel</id>
-        <link href="http://localhost:3000/logA/posts/20231125-cloudflare-tunnel"/>
+        <link href="https://alanhc.github.io/logA/posts/20231125-cloudflare-tunnel"/>
         <updated>2023-11-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1156,13 +1491,13 @@ e.g. `docker run -p 80:80 -d nginx`
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231124-terraform-vercel]]></title>
         <id>20231124-terraform-vercel</id>
-        <link href="http://localhost:3000/logA/posts/20231124-terraform-vercel"/>
+        <link href="https://alanhc.github.io/logA/posts/20231124-terraform-vercel"/>
         <updated>2023-11-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1177,13 +1512,13 @@ vercel token: https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token]]
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231116-Vector-Databases-from-Embeddings-to-Applications]]></title>
         <id>20231116-Vector-Databases-from-Embeddings-to-Applications</id>
-        <link href="http://localhost:3000/logA/posts/20231116-Vector-Databases-from-Embeddings-to-Applications"/>
+        <link href="https://alanhc.github.io/logA/posts/20231116-Vector-Databases-from-Embeddings-to-Applications"/>
         <updated>2023-11-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1200,13 +1535,13 @@ RAG -> vector database
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231115-How-to-Build-An-MVP-Startup-School]]></title>
         <id>20231115-How-to-Build-An-MVP-Startup-School</id>
-        <link href="http://localhost:3000/logA/posts/20231115-How-to-Build-An-MVP-Startup-School"/>
+        <link href="https://alanhc.github.io/logA/posts/20231115-How-to-Build-An-MVP-Startup-School"/>
         <updated>2023-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1224,13 +1559,13 @@ twich 創辦人（Michael Seibel）
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
         <id>20231115-Building-Multi-Modal-Search-with-Vector-Databases</id>
-        <link href="http://localhost:3000/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases"/>
+        <link href="https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases"/>
         <updated>2023-11-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1248,13 +1583,13 @@ problem?
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[2021112-upload-large-file]]></title>
         <id>20231112-nextjs-upload-large-file</id>
-        <link href="http://localhost:3000/logA/posts/20231112-nextjs-upload-large-file"/>
+        <link href="https://alanhc.github.io/logA/posts/20231112-nextjs-upload-large-file"/>
         <updated>2023-11-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1272,13 +1607,37 @@ i]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[filebase]]></title>
+        <id>learn-filebase</id>
+        <link href="https://alanhc.github.io/logA/posts/learn-filebase"/>
+        <updated>2023-11-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contents</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+## Ref
+https://docs.filebase.com/getting-started/ipfs-getting-started-guide
+
+<]]></summary>
+        <author>
+            <name>alanhc</name>
+            <email>alanhc.tseng1999@gmail.com</email>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理]]></title>
         <id>20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</id>
-        <link href="http://localhost:3000/logA/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理"/>
+        <link href="https://alanhc.github.io/logA/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理"/>
         <updated>2023-11-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1295,13 +1654,13 @@ i]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷]]></title>
         <id>20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</id>
-        <link href="http://localhost:3000/logA/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷"/>
+        <link href="https://alanhc.github.io/logA/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷"/>
         <updated>2023-11-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1318,13 +1677,13 @@ https://openai.com/blog/introducin]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231108-How-Diffusion-Models-Work]]></title>
         <id>20231108-How-Diffusion-Models-Work</id>
-        <link href="http://localhost:3000/logA/posts/20231108-How-Diffusion-Models-Work"/>
+        <link href="https://alanhc.github.io/logA/posts/20231108-How-Diffusion-Models-Work"/>
         <updated>2023-11-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1341,13 +1700,13 @@ https://openai.com/blog/introducin]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231107-imgbb]]></title>
         <id>20231107-imgbb</id>
-        <link href="http://localhost:3000/logA/posts/20231107-imgbb"/>
+        <link href="https://alanhc.github.io/logA/posts/20231107-imgbb"/>
         <updated>2023-11-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1365,13 +1724,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231107-MUI-toolpad]]></title>
         <id>20231107-MUI-toolpad</id>
-        <link href="http://localhost:3000/logA/posts/20231107-MUI-toolpad"/>
+        <link href="https://alanhc.github.io/logA/posts/20231107-MUI-toolpad"/>
         <updated>2023-11-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1389,13 +1748,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231104-learn-cosmos]]></title>
         <id>20231104-learn-cosmos</id>
-        <link href="http://localhost:3000/logA/posts/20231104-learn-cosmos"/>
+        <link href="https://alanhc.github.io/logA/posts/20231104-learn-cosmos"/>
         <updated>2023-11-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1410,13 +1769,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231103-linklist]]></title>
         <id>20231103-linklist</id>
-        <link href="http://localhost:3000/logA/posts/20231103-linklist"/>
+        <link href="https://alanhc.github.io/logA/posts/20231103-linklist"/>
         <updated>2023-11-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1437,13 +1796,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
         <id>20231103-Finetuning-Large-Language-Models</id>
-        <link href="http://localhost:3000/logA/posts/20231103-Finetuning-Large-Language-Models"/>
+        <link href="https://alanhc.github.io/logA/posts/20231103-Finetuning-Large-Language-Models"/>
         <updated>2023-11-03T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1462,13 +1821,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231101-generative-ai-for-everyone]]></title>
         <id>20231101-generative-ai-for-everyone</id>
-        <link href="http://localhost:3000/logA/posts/20231101-generative-ai-for-everyone"/>
+        <link href="https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone"/>
         <updated>2023-11-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1485,13 +1844,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
         <id>20231031-Andrew-Ng-Opportunities-in-AI-2023</id>
-        <link href="http://localhost:3000/logA/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023"/>
+        <link href="https://alanhc.github.io/logA/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023"/>
         <updated>2023-10-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1509,13 +1868,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Building Systems with the ChatGPT API]]></title>
         <id>20231029-Building-Systems-with-the-ChatGPT-API</id>
-        <link href="http://localhost:3000/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
+        <link href="https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API"/>
         <updated>2023-10-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1533,13 +1892,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231028-mozilla-ai]]></title>
         <id>20231028-mozilla-ai</id>
-        <link href="http://localhost:3000/logA/posts/20231028-mozilla-ai"/>
+        <link href="https://alanhc.github.io/logA/posts/20231028-mozilla-ai"/>
         <updated>2023-10-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1557,13 +1916,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
         <id>20231026-ChatGPT-Prompt-Engineering-for-Developers</id>
-        <link href="http://localhost:3000/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers"/>
+        <link href="https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers"/>
         <updated>2023-10-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1581,13 +1940,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231023-learning]]></title>
         <id>20231023-learning-from-lin</id>
-        <link href="http://localhost:3000/logA/posts/20231023-learning-from-lin"/>
+        <link href="https://alanhc.github.io/logA/posts/20231023-learning-from-lin"/>
         <updated>2023-10-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1602,13 +1961,13 @@ acceptedF]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231023-Pair-Programming-with-a-Large-Language-Model]]></title>
         <id>20231023-Pair-Programming-with-a-Large-Language-Model</id>
-        <link href="http://localhost:3000/logA/posts/20231023-Pair-Programming-with-a-Large-Language-Model"/>
+        <link href="https://alanhc.github.io/logA/posts/20231023-Pair-Programming-with-a-Large-Language-Model"/>
         <updated>2023-10-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1624,13 +1983,13 @@ LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231010-webauthn]]></title>
         <id>20231010-webauthn</id>
-        <link href="http://localhost:3000/logA/posts/20231010-webauthn"/>
+        <link href="https://alanhc.github.io/logA/posts/20231010-webauthn"/>
         <updated>2023-10-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1650,13 +2009,13 @@ web 生物辨識api
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20231006-fastapi-streaming]]></title>
         <id>20231006-fastapi-streaming</id>
-        <link href="http://localhost:3000/logA/posts/20231006-fastapi-streaming"/>
+        <link href="https://alanhc.github.io/logA/posts/20231006-fastapi-streaming"/>
         <updated>2023-10-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1674,13 +2033,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230929-rn-qrcode]]></title>
         <id>20230929-rn-qrcode</id>
-        <link href="http://localhost:3000/logA/posts/20230929-rn-qrcode"/>
+        <link href="https://alanhc.github.io/logA/posts/20230929-rn-qrcode"/>
         <updated>2023-09-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1698,13 +2057,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230926-21-things-before-21]]></title>
         <id>20230926-21-things-before-21</id>
-        <link href="http://localhost:3000/logA/posts/20230926-21-things-before-21"/>
+        <link href="https://alanhc.github.io/logA/posts/20230926-21-things-before-21"/>
         <updated>2023-09-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1720,13 +2079,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230924-wagami]]></title>
         <id>20230924-wagami</id>
-        <link href="http://localhost:3000/logA/posts/20230924-wagami"/>
+        <link href="https://alanhc.github.io/logA/posts/20230924-wagami"/>
         <updated>2023-09-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1741,13 +2100,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230924-QR-Code]]></title>
         <id>20230924-QR-Code</id>
-        <link href="http://localhost:3000/logA/posts/20230924-QR-Code"/>
+        <link href="https://alanhc.github.io/logA/posts/20230924-QR-Code"/>
         <updated>2023-09-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1766,13 +2125,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230924-cmd-copy]]></title>
         <id>20230924-cmd-copy</id>
-        <link href="http://localhost:3000/logA/posts/20230924-cmd-copy"/>
+        <link href="https://alanhc.github.io/logA/posts/20230924-cmd-copy"/>
         <updated>2023-09-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1792,13 +2151,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230920-nx]]></title>
         <id>20230920-nx</id>
-        <link href="http://localhost:3000/logA/posts/20230920-nx"/>
+        <link href="https://alanhc.github.io/logA/posts/20230920-nx"/>
         <updated>2023-09-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1815,13 +2174,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[hardhat]]></title>
         <id>20230919-hardhat</id>
-        <link href="http://localhost:3000/logA/posts/20230919-hardhat"/>
+        <link href="https://alanhc.github.io/logA/posts/20230919-hardhat"/>
         <updated>2023-09-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1837,13 +2196,13 @@ from fastapi.responses import ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[初探 react native]]></title>
         <id>20230907-react-native</id>
-        <link href="http://localhost:3000/logA/posts/20230907-react-native"/>
+        <link href="https://alanhc.github.io/logA/posts/20230907-react-native"/>
         <updated>2023-09-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1860,13 +2219,13 @@ npx react-native@latest ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[在部落格中使用mdx]]></title>
         <id>20230831-mdx</id>
-        <link href="http://localhost:3000/logA/posts/20230831-mdx"/>
+        <link href="https://alanhc.github.io/logA/posts/20230831-mdx"/>
         <updated>2023-09-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1882,13 +2241,13 @@ npx react-native@latest ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[在mongodb裡面將兩個group merge成一個結果]]></title>
         <id>20230831-mongodb-aggregate-multiple-group</id>
-        <link href="http://localhost:3000/logA/posts/20230831-mongodb-aggregate-multiple-group"/>
+        <link href="https://alanhc.github.io/logA/posts/20230831-mongodb-aggregate-multiple-group"/>
         <updated>2023-08-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1910,13 +2269,13 @@ npx react-native@latest ]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[(未完)加入kbar讓搜尋更便利]]></title>
         <id>20230831-kbar</id>
-        <link href="http://localhost:3000/logA/posts/20230831-kbar"/>
+        <link href="https://alanhc.github.io/logA/posts/20230831-kbar"/>
         <updated>2023-08-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1935,13 +2294,13 @@ function MyApp(]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[加入GA]]></title>
         <id>20230830-nextjs-google-analytics</id>
-        <link href="http://localhost:3000/logA/posts/20230830-nextjs-google-analytics"/>
+        <link href="https://alanhc.github.io/logA/posts/20230830-nextjs-google-analytics"/>
         <updated>2023-08-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1956,13 +2315,13 @@ https://analytics.google.com/analytics/web/ 裡面 拿到GA_MEASUREMENT_ID應該
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230829-peerjs]]></title>
         <id>20230829-peerjs</id>
-        <link href="http://localhost:3000/logA/posts/20230829-peerjs"/>
+        <link href="https://alanhc.github.io/logA/posts/20230829-peerjs"/>
         <updated>2023-08-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -1978,13 +2337,13 @@ https://analytics.google.com/analytics/web/ 裡面 拿到GA_MEASUREMENT_ID應該
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230829-orbit-chat]]></title>
         <id>20230829-orbit-chat</id>
-        <link href="http://localhost:3000/logA/posts/20230829-orbit-chat"/>
+        <link href="https://alanhc.github.io/logA/posts/20230829-orbit-chat"/>
         <updated>2023-08-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2001,13 +2360,13 @@ https://github.com/alanhc/orbit-chat
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20230829-chakra-ui]]></title>
         <id>20230829-chakra-ui</id>
-        <link href="http://localhost:3000/logA/posts/20230829-chakra-ui"/>
+        <link href="https://alanhc.github.io/logA/posts/20230829-chakra-ui"/>
         <updated>2023-08-29T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2022,13 +2381,13 @@ pnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled fr]]
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[初探libp2p]]></title>
         <id>20230828-libp2p</id>
-        <link href="http://localhost:3000/logA/posts/20230828-libp2p"/>
+        <link href="https://alanhc.github.io/logA/posts/20230828-libp2p"/>
         <updated>2023-08-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2045,13 +2404,13 @@ import { sigServer } from '@libp2p/webrtc-star-signalling]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[初探ipfs]]></title>
         <id>20230828-ipfs</id>
-        <link href="http://localhost:3000/logA/posts/20230828-ipfs"/>
+        <link href="https://alanhc.github.io/logA/posts/20230828-ipfs"/>
         <updated>2023-08-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2070,13 +2429,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[安裝動漫vscode主題]]></title>
         <id>20230827-vscode-animate-extension</id>
-        <link href="http://localhost:3000/logA/posts/20230827-vscode-animate-extension"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-vscode-animate-extension"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2091,13 +2450,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[初探orbitdb]]></title>
         <id>20230827-orbitdb</id>
-        <link href="http://localhost:3000/logA/posts/20230827-orbitdb"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-orbitdb"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2115,13 +2474,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[notion的替代品 - AFFiNE]]></title>
         <id>20230827-notion-alternative</id>
-        <link href="http://localhost:3000/logA/posts/20230827-notion-alternative"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-notion-alternative"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2136,13 +2495,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[加入PWA功能]]></title>
         <id>20230827-next-pwa</id>
-        <link href="http://localhost:3000/logA/posts/20230827-next-pwa"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-next-pwa"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2160,13 +2519,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[chat聊天界面初探]]></title>
         <id>20230827-chat-app</id>
-        <link href="http://localhost:3000/logA/posts/20230827-chat-app"/>
+        <link href="https://alanhc.github.io/logA/posts/20230827-chat-app"/>
         <updated>2023-08-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2184,13 +2543,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[nextjs 相關文章]]></title>
         <id>nextjs</id>
-        <link href="http://localhost:3000/logA/posts/nextjs"/>
+        <link href="https://alanhc.github.io/logA/posts/nextjs"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2211,13 +2570,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[統整markdown的使用方法]]></title>
         <id>nextjs-markdown</id>
-        <link href="http://localhost:3000/logA/posts/nextjs-markdown"/>
+        <link href="https://alanhc.github.io/logA/posts/nextjs-markdown"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2237,13 +2596,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[加入next-seo]]></title>
         <id>20230826-next-seo</id>
-        <link href="http://localhost:3000/logA/posts/20230826-next-seo"/>
+        <link href="https://alanhc.github.io/logA/posts/20230826-next-seo"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2260,13 +2619,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[加入import別名讓import更好看]]></title>
         <id>20230826-import-alias</id>
-        <link href="http://localhost:3000/logA/posts/20230826-import-alias"/>
+        <link href="https://alanhc.github.io/logA/posts/20230826-import-alias"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2288,13 +2647,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[imgur上傳]]></title>
         <id>20230826-imgur</id>
-        <link href="http://localhost:3000/logA/posts/20230826-imgur"/>
+        <link href="https://alanhc.github.io/logA/posts/20230826-imgur"/>
         <updated>2023-08-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2312,13 +2671,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[添加rss功能到nextjs部落格]]></title>
         <id>20230825-rss</id>
-        <link href="http://localhost:3000/logA/posts/20230825-rss"/>
+        <link href="https://alanhc.github.io/logA/posts/20230825-rss"/>
         <updated>2023-08-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2337,13 +2696,13 @@ import { create } from 'ipfs-http-]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[部落格暗黑模式]]></title>
         <id>20230824-chakra-darkmode</id>
-        <link href="http://localhost:3000/logA/posts/20230824-chakra-darkmode"/>
+        <link href="https://alanhc.github.io/logA/posts/20230824-chakra-darkmode"/>
         <updated>2023-08-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2360,13 +2719,13 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[初探bigchaindb]]></title>
         <id>20230824-bigchain</id>
-        <link href="http://localhost:3000/logA/posts/20230824-bigchain"/>
+        <link href="https://alanhc.github.io/logA/posts/20230824-bigchain"/>
         <updated>2023-08-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2383,13 +2742,13 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[更新nextjs到13]]></title>
         <id>20230820-nexjs13</id>
-        <link href="http://localhost:3000/logA/posts/20230820-nexjs13"/>
+        <link href="https://alanhc.github.io/logA/posts/20230820-nexjs13"/>
         <updated>2023-08-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2405,13 +2764,13 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
         <id>20230819-mermaid-js</id>
-        <link href="http://localhost:3000/logA/posts/20230819-mermaid-js"/>
+        <link href="https://alanhc.github.io/logA/posts/20230819-mermaid-js"/>
         <updated>2023-08-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2436,13 +2795,13 @@ C-->D;
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[實作markdown section link]]></title>
         <id>20230818-markdown-section-link</id>
-        <link href="http://localhost:3000/logA/posts/20230818-markdown-section-link"/>
+        <link href="https://alanhc.github.io/logA/posts/20230818-markdown-section-link"/>
         <updated>2023-08-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2460,13 +2819,13 @@ const tocMarkdown = awa]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[將部落格加入sitemap功能]]></title>
         <id>20230817-next-sitemap</id>
-        <link href="http://localhost:3000/logA/posts/20230817-next-sitemap"/>
+        <link href="https://alanhc.github.io/logA/posts/20230817-next-sitemap"/>
         <updated>2023-08-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2483,13 +2842,13 @@ SITE_URL="https://example.com"]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[新增page loading的進度條]]></title>
         <id>20230816-nprogress</id>
-        <link href="http://localhost:3000/logA/posts/20230816-nprogress"/>
+        <link href="https://alanhc.github.io/logA/posts/20230816-nprogress"/>
         <updated>2023-08-16T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2508,13 +2867,13 @@ im]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[三種使用Python爬取網頁的方法]]></title>
         <id>20230813-back-up-crawler</id>
-        <link href="http://localhost:3000/logA/posts/20230813-back-up-crawler"/>
+        <link href="https://alanhc.github.io/logA/posts/20230813-back-up-crawler"/>
         <updated>2023-08-13T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2533,13 +2892,13 @@ s = requests.Session()
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用react syntax highlighter及useClipboard強化程式碼區塊]]></title>
         <id>20230812-react-syntax-clipboard</id>
-        <link href="http://localhost:3000/logA/posts/20230812-react-syntax-clipboard"/>
+        <link href="https://alanhc.github.io/logA/posts/20230812-react-syntax-clipboard"/>
         <updated>2023-08-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2555,13 +2914,13 @@ s = requests.Session()
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[實作ipfs上傳的前端]]></title>
         <id>20230109-ipfs-upload</id>
-        <link href="http://localhost:3000/logA/posts/20230109-ipfs-upload"/>
+        <link href="https://alanhc.github.io/logA/posts/20230109-ipfs-upload"/>
         <updated>2023-01-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2579,13 +2938,13 @@ c]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[erc 1155 合約]]></title>
         <id>20230108-solidity-nft</id>
-        <link href="http://localhost:3000/logA/posts/20230108-solidity-nft"/>
+        <link href="https://alanhc.github.io/logA/posts/20230108-solidity-nft"/>
         <updated>2023-01-08T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2603,13 +2962,13 @@ pragma solidity ^0.8.9;]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[部署我的網站到k8s上]]></title>
         <id>20221231-k8s-notes</id>
-        <link href="http://localhost:3000/logA/posts/20221231-k8s-notes"/>
+        <link href="https://alanhc.github.io/logA/posts/20221231-k8s-notes"/>
         <updated>2022-12-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2627,13 +2986,13 @@ ARG NODE_ENV="production"]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[使用smartpy撰寫tezos的nft程式]]></title>
         <id>20221230-tezos-nft-tutorial</id>
-        <link href="http://localhost:3000/logA/posts/20221230-tezos-nft-tutorial"/>
+        <link href="https://alanhc.github.io/logA/posts/20221230-tezos-nft-tutorial"/>
         <updated>2022-12-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2651,13 +3010,13 @@ import smart]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[在solana上mint NFT]]></title>
         <id>20221228-solana-nft-tutorial</id>
-        <link href="http://localhost:3000/logA/posts/20221228-solana-nft-tutorial"/>
+        <link href="https://alanhc.github.io/logA/posts/20221228-solana-nft-tutorial"/>
         <updated>2022-12-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2672,13 +3031,13 @@ import smart]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello World]]></title>
         <id>first-day</id>
-        <link href="http://localhost:3000/logA/posts/first-day"/>
+        <link href="https://alanhc.github.io/logA/posts/first-day"/>
         <updated>2022-12-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2698,13 +3057,13 @@ hello world!
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20220811-monorepo-development]]></title>
         <id>20220811-monorepo-development</id>
-        <link href="http://localhost:3000/logA/posts/20220811-monorepo-development"/>
+        <link href="https://alanhc.github.io/logA/posts/20220811-monorepo-development"/>
         <updated>2022-08-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2725,13 +3084,13 @@ hello world!
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20220811-LINE-Blockchain-Developer-Intern]]></title>
         <id>20220811-LINE-Blockchain-Developer-Intern</id>
-        <link href="http://localhost:3000/logA/posts/20220811-LINE-Blockchain-Developer-Intern"/>
+        <link href="https://alanhc.github.io/logA/posts/20220811-LINE-Blockchain-Developer-Intern"/>
         <updated>2022-08-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2752,13 +3111,13 @@ hello world!
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Upgrade nx repo to react 18]]></title>
         <id>20220721-upgrade-nx-repo-to-react-18</id>
-        <link href="http://localhost:3000/logA/posts/20220721-upgrade-nx-repo-to-react-18"/>
+        <link href="https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18"/>
         <updated>2022-07-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2774,13 +3133,13 @@ hello world!
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Decentral Showroom — NTU DApp Term project]]></title>
         <id>20220531-Decentral-Showroom-NTU-DApp-Term-project</id>
-        <link href="http://localhost:3000/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project"/>
+        <link href="https://alanhc.github.io/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project"/>
         <updated>2022-05-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2797,13 +3156,13 @@ photo by Hsiang Hsu, model: Cute Ubi
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[web3 世界裡的驗證機制，以Tezos為例]]></title>
         <id>20220518-web3-世界裡的驗證機制-以Tezos為例</id>
-        <link href="http://localhost:3000/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例"/>
+        <link href="https://alanhc.github.io/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例"/>
         <updated>2022-05-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2818,13 +3177,13 @@ photo by Hsiang Hsu, model: Cute Ubi
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20211028-虛擬人課堂筆記4-vroid]]></title>
         <id>20211028-虛擬人課堂筆記4-vroid</id>
-        <link href="http://localhost:3000/logA/posts/20211028-虛擬人課堂筆記4-vroid"/>
+        <link href="https://alanhc.github.io/logA/posts/20211028-虛擬人課堂筆記4-vroid"/>
         <updated>2021-10-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2841,13 +3200,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20211027-虛擬人課堂筆記3-unity-facecapture]]></title>
         <id>20211027-虛擬人課堂筆記3-unity-facecapture</id>
-        <link href="http://localhost:3000/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture"/>
+        <link href="https://alanhc.github.io/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture"/>
         <updated>2021-10-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2863,13 +3222,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[虛擬人課堂筆記2 —Mozilla Hub]]></title>
         <id>20211018-虛擬人課堂筆記2</id>
-        <link href="http://localhost:3000/logA/posts/20211018-虛擬人課堂筆記2"/>
+        <link href="https://alanhc.github.io/logA/posts/20211018-虛擬人課堂筆記2"/>
         <updated>2021-10-18T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2887,13 +3246,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[虛擬人課堂筆記 — SparkAR]]></title>
         <id>20211011-虛擬人課堂筆記-spark-ar</id>
-        <link href="http://localhost:3000/logA/posts/20211011-虛擬人課堂筆記-spark-ar"/>
+        <link href="https://alanhc.github.io/logA/posts/20211011-虛擬人課堂筆記-spark-ar"/>
         <updated>2021-10-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2910,13 +3269,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20210820-開發mcu-up-銘傳金手指3-0-的那些事兒]]></title>
         <id>20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</id>
-        <link href="http://localhost:3000/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒"/>
+        <link href="https://alanhc.github.io/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒"/>
         <updated>2021-08-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2932,13 +3291,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20190614-CGfinal]]></title>
         <id>20190614-CGfinal</id>
-        <link href="http://localhost:3000/logA/posts/20190614-CGfinal"/>
+        <link href="https://alanhc.github.io/logA/posts/20190614-CGfinal"/>
         <updated>2019-06-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2954,13 +3313,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20190409-uva409]]></title>
         <id>20190409-uva409</id>
-        <link href="http://localhost:3000/logA/posts/20190409-uva409"/>
+        <link href="https://alanhc.github.io/logA/posts/20190409-uva409"/>
         <updated>2018-04-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2975,13 +3334,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180405-uva630]]></title>
         <id>20180405-uva630</id>
-        <link href="http://localhost:3000/logA/posts/20180405-uva630"/>
+        <link href="https://alanhc.github.io/logA/posts/20180405-uva630"/>
         <updated>2018-04-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -2996,13 +3355,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180317-uva10409]]></title>
         <id>20180317-uva10409</id>
-        <link href="http://localhost:3000/logA/posts/20180317-uva10409"/>
+        <link href="https://alanhc.github.io/logA/posts/20180317-uva10409"/>
         <updated>2018-03-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3017,13 +3376,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180314-uva105]]></title>
         <id>20180314-uva105</id>
-        <link href="http://localhost:3000/logA/posts/20180314-uva105"/>
+        <link href="https://alanhc.github.io/logA/posts/20180314-uva105"/>
         <updated>2018-03-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3038,13 +3397,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180312-uva10190]]></title>
         <id>20180312-uva10190</id>
-        <link href="http://localhost:3000/logA/posts/20180312-uva10190"/>
+        <link href="https://alanhc.github.io/logA/posts/20180312-uva10190"/>
         <updated>2018-03-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3059,13 +3418,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180309-uva141]]></title>
         <id>20180309-uva141</id>
-        <link href="http://localhost:3000/logA/posts/20180309-uva141"/>
+        <link href="https://alanhc.github.io/logA/posts/20180309-uva141"/>
         <updated>2018-03-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3080,13 +3439,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180228-hash-table]]></title>
         <id>20180228-hash-table</id>
-        <link href="http://localhost:3000/logA/posts/20180228-hash-table"/>
+        <link href="https://alanhc.github.io/logA/posts/20180228-hash-table"/>
         <updated>2018-02-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3101,13 +3460,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180222-uva401]]></title>
         <id>20180222-uva401</id>
-        <link href="http://localhost:3000/logA/posts/20180222-uva401"/>
+        <link href="https://alanhc.github.io/logA/posts/20180222-uva401"/>
         <updated>2018-02-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3122,13 +3481,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180212-uva10611]]></title>
         <id>20180212-uva10611</id>
-        <link href="http://localhost:3000/logA/posts/20180212-uva10611"/>
+        <link href="https://alanhc.github.io/logA/posts/20180212-uva10611"/>
         <updated>2018-02-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3145,13 +3504,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180210-NCTU-PCCA-winter-notes]]></title>
         <id>20180210-NCTU-PCCA-winter-notes</id>
-        <link href="http://localhost:3000/logA/posts/20180210-NCTU-PCCA-winter-notes"/>
+        <link href="https://alanhc.github.io/logA/posts/20180210-NCTU-PCCA-winter-notes"/>
         <updated>2018-02-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3170,13 +3529,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180209-uva406]]></title>
         <id>20180209-uva406</id>
-        <link href="http://localhost:3000/logA/posts/20180209-uva406"/>
+        <link href="https://alanhc.github.io/logA/posts/20180209-uva406"/>
         <updated>2018-02-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3191,13 +3550,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180209-linked-list]]></title>
         <id>20180209-linked-list</id>
-        <link href="http://localhost:3000/logA/posts/20180209-linked-list"/>
+        <link href="https://alanhc.github.io/logA/posts/20180209-linked-list"/>
         <updated>2018-02-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3212,13 +3571,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180206-uva10162]]></title>
         <id>20180206-uva10162</id>
-        <link href="http://localhost:3000/logA/posts/20180206-uva10162"/>
+        <link href="https://alanhc.github.io/logA/posts/20180206-uva10162"/>
         <updated>2018-02-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3233,13 +3592,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180205-uva10405]]></title>
         <id>20180205-uva10405</id>
-        <link href="http://localhost:3000/logA/posts/20180205-uva10405"/>
+        <link href="https://alanhc.github.io/logA/posts/20180205-uva10405"/>
         <updated>2018-02-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3254,13 +3613,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180131-uva11917]]></title>
         <id>20180131-uva11917</id>
-        <link href="http://localhost:3000/logA/posts/20180131-uva11917"/>
+        <link href="https://alanhc.github.io/logA/posts/20180131-uva11917"/>
         <updated>2018-01-31T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3275,13 +3634,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180128-uva10931]]></title>
         <id>20180128-uva10931</id>
-        <link href="http://localhost:3000/logA/posts/20180128-uva10931"/>
+        <link href="https://alanhc.github.io/logA/posts/20180128-uva10931"/>
         <updated>2018-01-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3296,13 +3655,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180124-gets-puts]]></title>
         <id>20180124-gets-puts</id>
-        <link href="http://localhost:3000/logA/posts/20180124-gets-puts"/>
+        <link href="https://alanhc.github.io/logA/posts/20180124-gets-puts"/>
         <updated>2018-01-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3317,13 +3676,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180123-int2str]]></title>
         <id>20180123-int2str</id>
-        <link href="http://localhost:3000/logA/posts/20180123-int2str"/>
+        <link href="https://alanhc.github.io/logA/posts/20180123-int2str"/>
         <updated>2018-01-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3338,13 +3697,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20180119-hackmd]]></title>
         <id>20180119-hackmd</id>
-        <link href="http://localhost:3000/logA/posts/20180119-hackmd"/>
+        <link href="https://alanhc.github.io/logA/posts/20180119-hackmd"/>
         <updated>2018-01-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3359,13 +3718,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171230-recursion]]></title>
         <id>20171230-recursion</id>
-        <link href="http://localhost:3000/logA/posts/20171230-recursion"/>
+        <link href="https://alanhc.github.io/logA/posts/20171230-recursion"/>
         <updated>2017-12-30T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3380,13 +3739,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171221-uva10190]]></title>
         <id>20171221-uva10190</id>
-        <link href="http://localhost:3000/logA/posts/20171221-uva10190"/>
+        <link href="https://alanhc.github.io/logA/posts/20171221-uva10190"/>
         <updated>2017-12-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3401,13 +3760,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171219-recursion]]></title>
         <id>20171219-recursion</id>
-        <link href="http://localhost:3000/logA/posts/20171219-recursion"/>
+        <link href="https://alanhc.github.io/logA/posts/20171219-recursion"/>
         <updated>2017-12-19T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3422,13 +3781,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171217-DP]]></title>
         <id>20171217-DP</id>
-        <link href="http://localhost:3000/logA/posts/20171217-DP"/>
+        <link href="https://alanhc.github.io/logA/posts/20171217-DP"/>
         <updated>2017-12-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3443,13 +3802,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171210-vector]]></title>
         <id>20171210-vector</id>
-        <link href="http://localhost:3000/logA/posts/20171210-vector"/>
+        <link href="https://alanhc.github.io/logA/posts/20171210-vector"/>
         <updated>2017-12-10T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3464,13 +3823,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171202-styleguide]]></title>
         <id>20171202-styleguide</id>
-        <link href="http://localhost:3000/logA/posts/20171202-styleguide"/>
+        <link href="https://alanhc.github.io/logA/posts/20171202-styleguide"/>
         <updated>2017-12-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3485,13 +3844,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171106-gcd]]></title>
         <id>20171106-gcd</id>
-        <link href="http://localhost:3000/logA/posts/20171106-gcd"/>
+        <link href="https://alanhc.github.io/logA/posts/20171106-gcd"/>
         <updated>2017-11-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3506,13 +3865,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171105-makerfair]]></title>
         <id>20171105-makerfair</id>
-        <link href="http://localhost:3000/logA/posts/20171105-makerfair"/>
+        <link href="https://alanhc.github.io/logA/posts/20171105-makerfair"/>
         <updated>2017-11-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3531,13 +3890,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171102-computer-virus]]></title>
         <id>20171102-computer-virus</id>
-        <link href="http://localhost:3000/logA/posts/20171102-computer-virus"/>
+        <link href="https://alanhc.github.io/logA/posts/20171102-computer-virus"/>
         <updated>2017-11-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3552,13 +3911,13 @@ Face Editor>Gene]]></summary>
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171027-refactor]]></title>
         <id>20171027-refactor</id>
-        <link href="http://localhost:3000/logA/posts/20171027-refactor"/>
+        <link href="https://alanhc.github.io/logA/posts/20171027-refactor"/>
         <updated>2017-10-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3575,13 +3934,13 @@ https://www.ithome.com.tw/node/46046
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[20171027-bnf]]></title>
         <id>20171027-bnf</id>
-        <link href="http://localhost:3000/logA/posts/20171027-bnf"/>
+        <link href="https://alanhc.github.io/logA/posts/20171027-bnf"/>
         <updated>2017-10-27T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[<!doctype html>
 <html lang="en">
@@ -3596,7 +3955,7 @@ https://www.ithome.com.tw/node/46046
         <author>
             <name>alanhc</name>
             <email>alanhc.tseng1999@gmail.com</email>
-            <uri>http://localhost:3000</uri>
+            <uri>https://alanhc.github.io</uri>
         </author>
     </entry>
 </feed>

@@ -71,9 +71,14 @@ const Blog: NextPage = ({ allPostsData }: any) => {
     }
   });
   let date_options = Array.from(new Set(allPostsData.map(({ date }: any) => {
-    const [y, m, d] = date.split("-")
-    return `${y}-${m}`
-  })))
+    if (!date) {
+      console.warn("No date found for post");
+      console.warn("Post data:", { date });
+      return undefined;
+    }
+    const [y, m, d] = date.split("-");
+    return `${y}-${m}`;
+  }).filter(Boolean)))
   
   const tagsArray = Array.from(tagsSet) as string[];
 
@@ -104,6 +109,25 @@ const Blog: NextPage = ({ allPostsData }: any) => {
   return (
     
     <BlogLayout>
+      <NextSeo
+        title="Alan's Blog"
+        description="A collection of Alan's thoughts and writings."
+        openGraph={{
+          url: 'https://alanhc.github.io',
+          title: "Alan's Blog",
+          description: "A collection of Alan's thoughts and writings.",
+          site_name: "Alan's Blog",
+        }}
+      />
+      <Box mb={4}>
+        <Text fontSize="2xl" fontWeight="bold">
+        Some articles also on {' '}
+          <Link href="https://hackmd.io/@alanhc" isExternal aria-label="Visit Alan's HackMD articles">
+             https://hackmd.io/@alanhc
+          </Link>
+        </Text>
+      </Box>
+
       Life is short and memory is limited. Log it if you might forget it.
       <Flex mt={2}>
         <InputGroup size="md">

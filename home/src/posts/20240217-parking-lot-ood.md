@@ -4,6 +4,8 @@ date: 2024-02-17
 tags:
   - object_oriented_design
 updated: 2024-02-17
+up:
+  - "[[ood]]"
 ---
 ## Question
 設計一個根據object-oriented principles的parking lot（停車場）

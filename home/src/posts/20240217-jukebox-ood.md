@@ -4,6 +4,8 @@ date: 2024-02-17
 tags:
   - object_oriented_design
 updated: 2024-02-17
+up:
+  - "[[ood]]"
 ---
 ## Question
 使用object-oriented principles設計jukebox musical（點唱機）

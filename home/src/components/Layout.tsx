@@ -18,7 +18,7 @@ import {
   Heading,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-
+import { FaLinkedin } from "react-icons/fa";
 const NavLink = (props: any) => {
   const { children, link } = props
   return (
@@ -76,6 +76,9 @@ const Layout = ({ children, maxW = "12xl" }: LayoutProps) => {
                 <NavLink link={link} key={link}>{name}</NavLink>
               ))}
             </HStack>
+            <Button as={NextLink} href="https://www.linkedin.com/in/alanhc316/" target="_blank">
+            <FaLinkedin />
+            </Button>
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? "☾" : "☀️"}
             </Button>
