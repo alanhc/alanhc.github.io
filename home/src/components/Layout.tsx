@@ -20,7 +20,7 @@ import {
 import NextLink from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 const NavLink = (props: any) => {
-  const { children, link } = props
+  const { children, link, external } = props
   return (
     <Box
       as={NextLink}
@@ -28,15 +28,19 @@ const NavLink = (props: any) => {
       py={1}
       rounded={'md'}
       _hover={{
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
+      textDecoration: 'none',
+      bg: useColorModeValue('gray.200', 'gray.700'),
       }}
-      href={link}>
-      {children}
+      href={link}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+    >
+      {children} {external ? "➚" : ""}
     </Box>
   )
 }
 import { ReactNode } from "react";
+import { link } from "fs";
 
 interface LayoutProps {
   children: ReactNode;
@@ -48,10 +52,15 @@ const Layout = ({ children, maxW = "12xl" }: LayoutProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure()
   const links = [
-    { name: "About", link: "/about" },
+    // { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
-    { name: "LogA", link: "/logA" },
-    { name: "Contract", link: "/about#contact" },
+    { name: "TIL", link:"https://alanhc.github.io/til", external: true },
+    { name: "Blog", link: "https://alanhc.github.io/logA", external: true },
+    { name: "HackMD", link:"https://hackmd.io/@alanhc", external: true },
+    { name: "CV", link: "/cv.pdf", external: true},
+
+    // { name: "LogA", link: "/logA" },
+    // { name: "Contract", link: "/about#contact" },
   ]
 
   return (
@@ -72,8 +81,8 @@ const Layout = ({ children, maxW = "12xl" }: LayoutProps) => {
 
           <HStack>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-              {links.map(({ name, link }) => (
-                <NavLink link={link} key={link}>{name}</NavLink>
+              {links.map(({ name, link, external }) => (
+                <NavLink link={link} key={link} external={external}>{name}</NavLink>
               ))}
             </HStack>
             <Button as={NextLink} href="https://www.linkedin.com/in/alanhc316/" target="_blank">
@@ -90,7 +99,7 @@ const Layout = ({ children, maxW = "12xl" }: LayoutProps) => {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
             {links.map(({ name, link }) => (
-                <NavLink link={link} key={link}>{name}</NavLink>
+                <NavLink link={link} key={link} external={external}>{name}</NavLink>
               ))}
             </Stack>
           </Box>
