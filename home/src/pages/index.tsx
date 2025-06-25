@@ -57,7 +57,7 @@ export async function getStaticProps() {
   };
 }
 
-const About: NextPage = ({ mdxSource, tocSource }: any) => {
+const Index: NextPage = ({ mdxSource, tocSource }: any) => {
   return (
     <Layout>
       <NextSeo title="index" description="About alanhc" {...SEO} />
@@ -76,4 +76,4 @@ const About: NextPage = ({ mdxSource, tocSource }: any) => {
     </Layout>
   );
 };
-export default About;
+export default Index;
