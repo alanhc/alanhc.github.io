@@ -2,20 +2,20 @@
 <rss version="2.0">
     <channel>
         <title>Alan Tseng</title>
-        <link>https://alanhc.github.io</link>
+        <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
-        <lastBuildDate>Thu, 29 May 2025 10:45:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 25 Jun 2025 14:59:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
             <title>Alan Tseng</title>
-            <url>https://alanhc.github.io/image/me.jpeg</url>
-            <link>https://alanhc.github.io</link>
+            <url>http://localhost:3000/image/me.jpeg</url>
+            <link>http://localhost:3000</link>
         </image>
         <copyright>All rights reserved 2025, alanhc</copyright>
         <item>
             <title><![CDATA[ubuntu wifi網卡抓不到]]></title>
-            <link>https://alanhc.github.io/logA/posts/ubuntu wifi網卡抓不到</link>
+            <link>http://localhost:3000/logA/posts/ubuntu wifi網卡抓不到</link>
             <guid>ubuntu wifi網卡抓不到</guid>
             <pubDate>Fri, 11 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -36,7 +36,7 @@ https://github.com]]></description>
         </item>
         <item>
             <title><![CDATA[安裝後直接進到 windows問題]]></title>
-            <link>https://alanhc.github.io/logA/posts/安裝後直接進到 windows問題</link>
+            <link>http://localhost:3000/logA/posts/安裝後直接進到 windows問題</link>
             <guid>安裝後直接進到 windows問題</guid>
             <pubDate>Thu, 10 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -54,7 +54,7 @@ Solution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opt
         </item>
         <item>
             <title><![CDATA[超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇]]></title>
-            <link>https://alanhc.github.io/logA/posts/超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</link>
+            <link>http://localhost:3000/logA/posts/超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</link>
             <guid>超簡單!一文理解如何使用私有大型語言模型LLM-Ollama＋OpenWebUI篇</guid>
             <pubDate>Thu, 03 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -75,7 +75,7 @@ Solution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opt
         </item>
         <item>
             <title><![CDATA[更快的影片學習方法]]></title>
-            <link>https://alanhc.github.io/logA/posts/更快的影片學習方法</link>
+            <link>http://localhost:3000/logA/posts/更快的影片學習方法</link>
             <guid>更快的影片學習方法</guid>
             <pubDate>Wed, 14 Aug 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -94,7 +94,7 @@ Solution: 在bios裡面 boot>UEFI Hard Disk Drive BBS Priorities 設定 Boot Opt
         </item>
         <item>
             <title><![CDATA[fastapi-k8s]]></title>
-            <link>https://alanhc.github.io/logA/posts/fastapi-k8s</link>
+            <link>http://localhost:3000/logA/posts/fastapi-k8s</link>
             <guid>fastapi-k8s</guid>
             <pubDate>Wed, 17 Jul 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -113,7 +113,7 @@ FROM tiangolo/uvicorn-gunicorn-fastap]]></description>
         </item>
         <item>
             <title><![CDATA[inferencing-llm]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240704-inferencing-llm</link>
+            <link>http://localhost:3000/logA/posts/20240704-inferencing-llm</link>
             <guid>20240704-inferencing-llm</guid>
             <pubDate>Thu, 04 Jul 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -134,7 +134,7 @@ FROM tiangolo/uvicorn-gunicorn-fastap]]></description>
         </item>
         <item>
             <title><![CDATA[python使用pyinstaller製作桌面應用程式]]></title>
-            <link>https://alanhc.github.io/logA/posts/python使用pyinstaller製作桌面應用程式</link>
+            <link>http://localhost:3000/logA/posts/python使用pyinstaller製作桌面應用程式</link>
             <guid>python使用pyinstaller製作桌面應用程式</guid>
             <pubDate>Wed, 26 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -155,7 +155,7 @@ i]]></description>
         </item>
         <item>
             <title><![CDATA[20240621-公雲學習筆記]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240621-公雲學習筆記</link>
+            <link>http://localhost:3000/logA/posts/20240621-公雲學習筆記</link>
             <guid>20240621-公雲學習筆記</guid>
             <pubDate>Fri, 21 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -173,7 +173,7 @@ i]]></description>
         </item>
         <item>
             <title><![CDATA[20240409-你要如何衡量你的人生]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240409-你要如何衡量你的人生</link>
+            <link>http://localhost:3000/logA/posts/20240409-你要如何衡量你的人生</link>
             <guid>20240409-你要如何衡量你的人生</guid>
             <pubDate>Sun, 16 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -197,7 +197,7 @@ i]]></description>
         </item>
         <item>
             <title><![CDATA[閱讀筆記]]></title>
-            <link>https://alanhc.github.io/logA/posts/閱讀筆記-建中2021校內培訓簡報</link>
+            <link>http://localhost:3000/logA/posts/閱讀筆記-建中2021校內培訓簡報</link>
             <guid>閱讀筆記-建中2021校內培訓簡報</guid>
             <pubDate>Sat, 06 Apr 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -216,7 +216,7 @@ https://tioj.ck.tp.edu.tw/articles/22
         </item>
         <item>
             <title><![CDATA[閱讀筆記-建中 2021 暑假資讀投影片-謝一]]></title>
-            <link>https://alanhc.github.io/logA/posts/閱讀筆記-建中2021暑假資讀投影片-謝一</link>
+            <link>http://localhost:3000/logA/posts/閱讀筆記-建中2021暑假資讀投影片-謝一</link>
             <guid>閱讀筆記-建中2021暑假資讀投影片-謝一</guid>
             <pubDate>Sat, 06 Apr 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -235,7 +235,7 @@ https://slides.com/thanksone/deck
         </item>
         <item>
             <title><![CDATA[20240324-learn-go]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240324-learn-go</link>
+            <link>http://localhost:3000/logA/posts/20240324-learn-go</link>
             <guid>20240324-learn-go</guid>
             <pubDate>Sun, 24 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -253,7 +253,7 @@ https://slides.com/thanksone/deck
         </item>
         <item>
             <title><![CDATA[20240321-interview-warmup]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240321-interview-warmup</link>
+            <link>http://localhost:3000/logA/posts/20240321-interview-warmup</link>
             <guid>20240321-interview-warmup</guid>
             <pubDate>Thu, 21 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -271,7 +271,7 @@ I just got rejected by a big tech company. In order to improve ]]></description>
         </item>
         <item>
             <title><![CDATA[20240303-save-password-python]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240303-save-password-python</link>
+            <link>http://localhost:3000/logA/posts/20240303-save-password-python</link>
             <guid>20240303-save-password-python</guid>
             <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -292,7 +292,7 @@ from Crypt]]></description>
         </item>
         <item>
             <title><![CDATA[國外工作]]></title>
-            <link>https://alanhc.github.io/logA/posts/國外工作</link>
+            <link>http://localhost:3000/logA/posts/國外工作</link>
             <guid>國外工作</guid>
             <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -314,7 +314,7 @@ from Crypt]]></description>
         </item>
         <item>
             <title><![CDATA[20240227-warp-terminal]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240227-warp-terminal</link>
+            <link>http://localhost:3000/logA/posts/20240227-warp-terminal</link>
             <guid>20240227-warp-terminal</guid>
             <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -333,7 +333,7 @@ brew install --cask warp
         </item>
         <item>
             <title><![CDATA[20240227-huggingface-nlp]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240227-huggingface-nlp</link>
+            <link>http://localhost:3000/logA/posts/20240227-huggingface-nlp</link>
             <guid>20240227-huggingface-nlp</guid>
             <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -352,7 +352,7 @@ brew install --cask warp
         </item>
         <item>
             <title><![CDATA[20240227-Hash-Table-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240227-Hash-Table-ood</link>
+            <link>http://localhost:3000/logA/posts/20240227-Hash-Table-ood</link>
             <guid>20240227-Hash-Table-ood</guid>
             <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -372,7 +372,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240227-File-Systems-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240227-File-Systems-ood</link>
+            <link>http://localhost:3000/logA/posts/20240227-File-Systems-ood</link>
             <guid>20240227-File-Systems-ood</guid>
             <pubDate>Tue, 27 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -392,7 +392,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240226-minesweeper-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240226-minesweeper-ood</link>
+            <link>http://localhost:3000/logA/posts/20240226-minesweeper-ood</link>
             <guid>20240226-minesweeper-ood</guid>
             <pubDate>Mon, 26 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -412,7 +412,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240226-Circular-array-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240226-Circular-array-ood</link>
+            <link>http://localhost:3000/logA/posts/20240226-Circular-array-ood</link>
             <guid>20240226-Circular-array-ood</guid>
             <pubDate>Mon, 26 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -430,7 +430,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240222-content-analysis]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240222-text-network-analysis</link>
+            <link>http://localhost:3000/logA/posts/20240222-text-network-analysis</link>
             <guid>20240222-text-network-analysis</guid>
             <pubDate>Thu, 22 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -453,7 +453,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240221-othello-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240221-othello-ood</link>
+            <link>http://localhost:3000/logA/posts/20240221-othello-ood</link>
             <guid>20240221-othello-ood</guid>
             <pubDate>Wed, 21 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -472,7 +472,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240219-chat-server-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240219-chat-server-ood</link>
+            <link>http://localhost:3000/logA/posts/20240219-chat-server-ood</link>
             <guid>20240219-chat-server-ood</guid>
             <pubDate>Mon, 19 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -490,7 +490,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240217-parking-lot-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240217-parking-lot-ood</link>
+            <link>http://localhost:3000/logA/posts/20240217-parking-lot-ood</link>
             <guid>20240217-parking-lot-ood</guid>
             <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -510,7 +510,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240217-online-book-reader-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240217-online-book-reader-ood</link>
+            <link>http://localhost:3000/logA/posts/20240217-online-book-reader-ood</link>
             <guid>20240217-online-book-reader-ood</guid>
             <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -532,7 +532,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240217-jukebox-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240217-jukebox-ood</link>
+            <link>http://localhost:3000/logA/posts/20240217-jukebox-ood</link>
             <guid>20240217-jukebox-ood</guid>
             <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -552,7 +552,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240217-jigsaw-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240217-jigsaw-ood</link>
+            <link>http://localhost:3000/logA/posts/20240217-jigsaw-ood</link>
             <guid>20240217-jigsaw-ood</guid>
             <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -570,7 +570,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240217-call-center-ood]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240217-call-center-ood</link>
+            <link>http://localhost:3000/logA/posts/20240217-call-center-ood</link>
             <guid>20240217-call-center-ood</guid>
             <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -588,7 +588,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240216-levelsfyi-crawler]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240216-levelsfyi-crawler</link>
+            <link>http://localhost:3000/logA/posts/20240216-levelsfyi-crawler</link>
             <guid>20240216-levelsfyi-crawler</guid>
             <pubDate>Sat, 17 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -606,7 +606,7 @@ O(1) 可以使用ar]]></description>
         </item>
         <item>
             <title><![CDATA[20240205-Deck-of-cards]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240215-Deck-of-cards-ood</link>
+            <link>http://localhost:3000/logA/posts/20240215-Deck-of-cards-ood</link>
             <guid>20240215-Deck-of-cards-ood</guid>
             <pubDate>Thu, 15 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -625,7 +625,7 @@ Deck of cards：設計一個給一副牌的generic資料結構，解釋如何設
         </item>
         <item>
             <title><![CDATA[20240212-linkedin-private-api]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240212-linkedin-private-api</link>
+            <link>http://localhost:3000/logA/posts/20240212-linkedin-private-api</link>
             <guid>20240212-linkedin-private-api</guid>
             <pubDate>Mon, 12 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -645,7 +645,7 @@ q_keyword]]></description>
         </item>
         <item>
             <title><![CDATA[20240211-taiwan-job-insights]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240211-taiwan-job-insights</link>
+            <link>http://localhost:3000/logA/posts/20240211-taiwan-job-insights</link>
             <guid>20240211-taiwan-job-insights</guid>
             <pubDate>Sun, 11 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -665,7 +665,7 @@ q_keyword]]></description>
         </item>
         <item>
             <title><![CDATA[20240211-pastebin-design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240211-pastebin-design</link>
+            <link>http://localhost:3000/logA/posts/20240211-pastebin-design</link>
             <guid>20240211-pastebin-design</guid>
             <pubDate>Sun, 11 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -685,7 +685,7 @@ q_keyword]]></description>
         </item>
         <item>
             <title><![CDATA[20240207-personal-finanicial-manager]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240207-personal-finanicial-manager</link>
+            <link>http://localhost:3000/logA/posts/20240207-personal-finanicial-manager</link>
             <guid>20240207-personal-finanicial-manager</guid>
             <pubDate>Wed, 07 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -705,7 +705,7 @@ q_keyword]]></description>
         </item>
         <item>
             <title><![CDATA[20240205-salesrank-design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240205-salesrank-design</link>
+            <link>http://localhost:3000/logA/posts/20240205-salesrank-design</link>
             <guid>20240205-salesrank-design</guid>
             <pubDate>Mon, 05 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -726,7 +726,7 @@ q_keyword]]></description>
         </item>
         <item>
             <title><![CDATA[20240203-trading-bot]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240203-trading-bot</link>
+            <link>http://localhost:3000/logA/posts/20240203-trading-bot</link>
             <guid>20240203-trading-bot</guid>
             <pubDate>Sat, 03 Feb 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -744,7 +744,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[quotes]]></title>
-            <link>https://alanhc.github.io/logA/posts/quotes</link>
+            <link>http://localhost:3000/logA/posts/quotes</link>
             <guid>quotes</guid>
             <pubDate>Sun, 28 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -761,7 +761,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240125-web_srawler_design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240125-web-crawler-design</link>
+            <link>http://localhost:3000/logA/posts/20240125-web-crawler-design</link>
             <guid>20240125-web-crawler-design</guid>
             <pubDate>Thu, 25 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -781,7 +781,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240125-duplicate-url-design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240125-duplicate-url-design</link>
+            <link>http://localhost:3000/logA/posts/20240125-duplicate-url-design</link>
             <guid>20240125-duplicate-url-design</guid>
             <pubDate>Thu, 25 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -801,7 +801,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240125-cache-design]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240125-cache-design</link>
+            <link>http://localhost:3000/logA/posts/20240125-cache-design</link>
             <guid>20240125-cache-design</guid>
             <pubDate>Thu, 25 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -819,7 +819,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240124-break-cloudflare-bot-prevention]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240124-break-cloudflare-bot-prevention</link>
+            <link>http://localhost:3000/logA/posts/20240124-break-cloudflare-bot-prevention</link>
             <guid>20240124-break-cloudflare-bot-prevention</guid>
             <pubDate>Wed, 24 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -841,7 +841,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240123-scalper]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240123-scalper</link>
+            <link>http://localhost:3000/logA/posts/20240123-scalper</link>
             <guid>20240123-scalper</guid>
             <pubDate>Tue, 23 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -860,7 +860,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240122-stock-data]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240122-stock-data-design</link>
+            <link>http://localhost:3000/logA/posts/20240122-stock-data-design</link>
             <guid>20240122-stock-data-design</guid>
             <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -878,7 +878,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240122-ntu-cool-video-download]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240122-ntu-cool-video-download</link>
+            <link>http://localhost:3000/logA/posts/20240122-ntu-cool-video-download</link>
             <guid>20240122-ntu-cool-video-download</guid>
             <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -896,7 +896,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[沒環境講英文？如何跟 ChatGPT 對話，快速加強口說]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240122-english-speaking</link>
+            <link>http://localhost:3000/logA/posts/20240122-english-speaking</link>
             <guid>20240122-english-speaking</guid>
             <pubDate>Mon, 22 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -913,7 +913,7 @@ https://www.xq]]></description>
         </item>
         <item>
             <title><![CDATA[20240121-Web-Scraping-Instagram-with-Selenium]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium</link>
+            <link>http://localhost:3000/logA/posts/20240121-Web-Scraping-Instagram-with-Selenium</link>
             <guid>20240121-Web-Scraping-Instagram-with-Selenium</guid>
             <pubDate>Sun, 21 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -932,7 +932,7 @@ https://youtu]]></description>
         </item>
         <item>
             <title><![CDATA[20240119-OSINT]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240119-OSINT</link>
+            <link>http://localhost:3000/logA/posts/20240119-OSINT</link>
             <guid>20240119-OSINT</guid>
             <pubDate>Fri, 19 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -950,7 +950,7 @@ https://youtu]]></description>
         </item>
         <item>
             <title><![CDATA[20240114-product-insight]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240114-product-insight</link>
+            <link>http://localhost:3000/logA/posts/20240114-product-insight</link>
             <guid>20240114-product-insight</guid>
             <pubDate>Sun, 14 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -969,7 +969,7 @@ why? 品牌商想知道自己跟對手]]></description>
         </item>
         <item>
             <title><![CDATA[20240113-data-pay]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240113-data-engineer-salary</link>
+            <link>http://localhost:3000/logA/posts/20240113-data-engineer-salary</link>
             <guid>20240113-data-engineer-salary</guid>
             <pubDate>Sat, 13 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -991,7 +991,7 @@ why? 品牌商想知道自己跟對手]]></description>
         </item>
         <item>
             <title><![CDATA[20240108-attention]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240108-attention</link>
+            <link>http://localhost:3000/logA/posts/20240108-attention</link>
             <guid>20240108-attention</guid>
             <pubDate>Mon, 08 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1014,7 +1014,7 @@ why? 手機成癮
         </item>
         <item>
             <title><![CDATA[20240107-notion-websire]]></title>
-            <link>https://alanhc.github.io/logA/posts/20240107-notion-website</link>
+            <link>http://localhost:3000/logA/posts/20240107-notion-website</link>
             <guid>20240107-notion-website</guid>
             <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1034,7 +1034,7 @@ why? 手機成癮
         </item>
         <item>
             <title><![CDATA[20231222-socket-io]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231222-chat</link>
+            <link>http://localhost:3000/logA/posts/20231222-chat</link>
             <guid>20231222-chat</guid>
             <pubDate>Fri, 22 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1052,7 +1052,7 @@ https://github.com/signalapp/libsi]]></description>
         </item>
         <item>
             <title><![CDATA[20231217-ntu-matches]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231217-ntu-matches</link>
+            <link>http://localhost:3000/logA/posts/20231217-ntu-matches</link>
             <guid>20231217-ntu-matches</guid>
             <pubDate>Sun, 17 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1072,7 +1072,7 @@ https://github.com/signalapp/libsi]]></description>
         </item>
         <item>
             <title><![CDATA[20231217-google-gemini]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231217-google-gemini</link>
+            <link>http://localhost:3000/logA/posts/20231217-google-gemini</link>
             <guid>20231217-google-gemini</guid>
             <pubDate>Sun, 17 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1091,7 +1091,7 @@ https://github.com/signalapp/libsi]]></description>
         </item>
         <item>
             <title><![CDATA[20231213-pyspark]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231213-pyspark</link>
+            <link>http://localhost:3000/logA/posts/20231213-pyspark</link>
             <guid>20231213-pyspark</guid>
             <pubDate>Wed, 13 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1109,7 +1109,7 @@ https://github.com/signalapp/libsi]]></description>
         </item>
         <item>
             <title><![CDATA[20231210-convert-post-markdown]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231210-convert-post-markdown</link>
+            <link>http://localhost:3000/logA/posts/20231210-convert-post-markdown</link>
             <guid>20231210-convert-post-markdown</guid>
             <pubDate>Sun, 10 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1129,7 +1129,7 @@ https://cod]]></description>
         </item>
         <item>
             <title><![CDATA[20231209-docker-machine-learning]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231209-docker-machine-learning</link>
+            <link>http://localhost:3000/logA/posts/20231209-docker-machine-learning</link>
             <guid>20231209-docker-machine-learning</guid>
             <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1148,7 +1148,7 @@ https://cod]]></description>
         </item>
         <item>
             <title><![CDATA[20231209-AI-music-example]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231209-AI-music-example</link>
+            <link>http://localhost:3000/logA/posts/20231209-AI-music-example</link>
             <guid>20231209-AI-music-example</guid>
             <pubDate>Sat, 09 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1166,7 +1166,7 @@ AI 音樂風格轉換太酷了
         </item>
         <item>
             <title><![CDATA[20231202-twitter-bot]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231202-twitter-bot</link>
+            <link>http://localhost:3000/logA/posts/20231202-twitter-bot</link>
             <guid>20231202-twitter-bot</guid>
             <pubDate>Sat, 02 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1184,7 +1184,7 @@ AI 音樂風格轉換太酷了
         </item>
         <item>
             <title><![CDATA[20231130-Building-and-Evaluating-Advanced-RAG (未完)]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231130-Building-and-Evaluating-Advanced-RAG</link>
+            <link>http://localhost:3000/logA/posts/20231130-Building-and-Evaluating-Advanced-RAG</link>
             <guid>20231130-Building-and-Evaluating-Advanced-RAG</guid>
             <pubDate>Thu, 30 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1203,7 +1203,7 @@ AI 音樂風格轉換太酷了
         </item>
         <item>
             <title><![CDATA[Should You Use Open Source Large Language Models?]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231129-Should You Use Open Source Large Language Models</link>
+            <link>http://localhost:3000/logA/posts/20231129-Should You Use Open Source Large Language Models</link>
             <guid>20231129-Should You Use Open Source Large Language Models</guid>
             <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1222,7 +1222,7 @@ https://www.youtube.com/watch?v=y9k-U9AuDeM
         </item>
         <item>
             <title><![CDATA[20231125-cloudflare-tunnel]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231125-cloudflare-tunnel</link>
+            <link>http://localhost:3000/logA/posts/20231125-cloudflare-tunnel</link>
             <guid>20231125-cloudflare-tunnel</guid>
             <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1242,7 +1242,7 @@ e.g. `docker run -p 80:80 -d nginx`
         </item>
         <item>
             <title><![CDATA[20231124-terraform-vercel]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231124-terraform-vercel</link>
+            <link>http://localhost:3000/logA/posts/20231124-terraform-vercel</link>
             <guid>20231124-terraform-vercel</guid>
             <pubDate>Fri, 24 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1259,7 +1259,7 @@ vercel token: https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token]]
         </item>
         <item>
             <title><![CDATA[20231116-Vector-Databases-from-Embeddings-to-Applications]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231116-Vector-Databases-from-Embeddings-to-Applications</link>
+            <link>http://localhost:3000/logA/posts/20231116-Vector-Databases-from-Embeddings-to-Applications</link>
             <guid>20231116-Vector-Databases-from-Embeddings-to-Applications</guid>
             <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1278,7 +1278,7 @@ RAG -> vector database
         </item>
         <item>
             <title><![CDATA[20231115-How-to-Build-An-MVP-Startup-School]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231115-How-to-Build-An-MVP-Startup-School</link>
+            <link>http://localhost:3000/logA/posts/20231115-How-to-Build-An-MVP-Startup-School</link>
             <guid>20231115-How-to-Build-An-MVP-Startup-School</guid>
             <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1298,7 +1298,7 @@ twich 創辦人（Michael Seibel）
         </item>
         <item>
             <title><![CDATA[20211115-LIVEBuilding-Multi-Modal-Search-with-Vector-Databases]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases</link>
+            <link>http://localhost:3000/logA/posts/20231115-Building-Multi-Modal-Search-with-Vector-Databases</link>
             <guid>20231115-Building-Multi-Modal-Search-with-Vector-Databases</guid>
             <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1318,7 +1318,7 @@ problem?
         </item>
         <item>
             <title><![CDATA[2021112-upload-large-file]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231112-nextjs-upload-large-file</link>
+            <link>http://localhost:3000/logA/posts/20231112-nextjs-upload-large-file</link>
             <guid>20231112-nextjs-upload-large-file</guid>
             <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1338,7 +1338,7 @@ i]]></description>
         </item>
         <item>
             <title><![CDATA[filebase]]></title>
-            <link>https://alanhc.github.io/logA/posts/learn-filebase</link>
+            <link>http://localhost:3000/logA/posts/learn-filebase</link>
             <guid>learn-filebase</guid>
             <pubDate>Sat, 11 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1358,7 +1358,7 @@ https://docs.filebase.com/getting-started/ipfs-getting-started-guide
         </item>
         <item>
             <title><![CDATA[20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</link>
+            <link>http://localhost:3000/logA/posts/20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</link>
             <guid>20231110-生成式AI淺談圖像生成模型-Diffusion-Model-原理</guid>
             <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1377,7 +1377,7 @@ https://docs.filebase.com/getting-started/ipfs-getting-started-guide
         </item>
         <item>
             <title><![CDATA[80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</link>
+            <link>http://localhost:3000/logA/posts/20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</link>
             <guid>20231110-80分鐘快速了解大型語言模型-5-30 有咒術迴戰雷</guid>
             <pubDate>Fri, 10 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1396,7 +1396,7 @@ https://openai.com/blog/introducin]]></description>
         </item>
         <item>
             <title><![CDATA[20231108-How-Diffusion-Models-Work]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231108-How-Diffusion-Models-Work</link>
+            <link>http://localhost:3000/logA/posts/20231108-How-Diffusion-Models-Work</link>
             <guid>20231108-How-Diffusion-Models-Work</guid>
             <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1415,7 +1415,7 @@ https://openai.com/blog/introducin]]></description>
         </item>
         <item>
             <title><![CDATA[20231107-imgbb]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231107-imgbb</link>
+            <link>http://localhost:3000/logA/posts/20231107-imgbb</link>
             <guid>20231107-imgbb</guid>
             <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1435,7 +1435,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231107-MUI-toolpad]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231107-MUI-toolpad</link>
+            <link>http://localhost:3000/logA/posts/20231107-MUI-toolpad</link>
             <guid>20231107-MUI-toolpad</guid>
             <pubDate>Tue, 07 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1455,7 +1455,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231104-learn-cosmos]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231104-learn-cosmos</link>
+            <link>http://localhost:3000/logA/posts/20231104-learn-cosmos</link>
             <guid>20231104-learn-cosmos</guid>
             <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1472,7 +1472,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231103-linklist]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231103-linklist</link>
+            <link>http://localhost:3000/logA/posts/20231103-linklist</link>
             <guid>20231103-linklist</guid>
             <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1495,7 +1495,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231103-Finetuning-Large-Language-Models]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231103-Finetuning-Large-Language-Models</link>
+            <link>http://localhost:3000/logA/posts/20231103-Finetuning-Large-Language-Models</link>
             <guid>20231103-Finetuning-Large-Language-Models</guid>
             <pubDate>Fri, 03 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1516,7 +1516,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231101-generative-ai-for-everyone]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231101-generative-ai-for-everyone</link>
+            <link>http://localhost:3000/logA/posts/20231101-generative-ai-for-everyone</link>
             <guid>20231101-generative-ai-for-everyone</guid>
             <pubDate>Thu, 02 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1535,7 +1535,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[Andrew-Ng-Opportunities-in-AI-2023]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023</link>
+            <link>http://localhost:3000/logA/posts/20231031-Andrew-Ng-Opportunities-in-AI-2023</link>
             <guid>20231031-Andrew-Ng-Opportunities-in-AI-2023</guid>
             <pubDate>Tue, 31 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1555,7 +1555,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[Building Systems with the ChatGPT API]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API</link>
+            <link>http://localhost:3000/logA/posts/20231029-Building-Systems-with-the-ChatGPT-API</link>
             <guid>20231029-Building-Systems-with-the-ChatGPT-API</guid>
             <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1575,7 +1575,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231028-mozilla-ai]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231028-mozilla-ai</link>
+            <link>http://localhost:3000/logA/posts/20231028-mozilla-ai</link>
             <guid>20231028-mozilla-ai</guid>
             <pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1595,7 +1595,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231026-ChatGPT-Prompt-Engineering-for-Developers]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers</link>
+            <link>http://localhost:3000/logA/posts/20231026-ChatGPT-Prompt-Engineering-for-Developers</link>
             <guid>20231026-ChatGPT-Prompt-Engineering-for-Developers</guid>
             <pubDate>Thu, 26 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1615,7 +1615,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231023-learning]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231023-learning-from-lin</link>
+            <link>http://localhost:3000/logA/posts/20231023-learning-from-lin</link>
             <guid>20231023-learning-from-lin</guid>
             <pubDate>Mon, 23 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1632,7 +1632,7 @@ acceptedF]]></description>
         </item>
         <item>
             <title><![CDATA[20231023-Pair-Programming-with-a-Large-Language-Model]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231023-Pair-Programming-with-a-Large-Language-Model</link>
+            <link>http://localhost:3000/logA/posts/20231023-Pair-Programming-with-a-Large-Language-Model</link>
             <guid>20231023-Pair-Programming-with-a-Large-Language-Model</guid>
             <pubDate>Mon, 23 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1650,7 +1650,7 @@ LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫
         </item>
         <item>
             <title><![CDATA[20231010-webauthn]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231010-webauthn</link>
+            <link>http://localhost:3000/logA/posts/20231010-webauthn</link>
             <guid>20231010-webauthn</guid>
             <pubDate>Tue, 10 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1672,7 +1672,7 @@ web 生物辨識api
         </item>
         <item>
             <title><![CDATA[20231006-fastapi-streaming]]></title>
-            <link>https://alanhc.github.io/logA/posts/20231006-fastapi-streaming</link>
+            <link>http://localhost:3000/logA/posts/20231006-fastapi-streaming</link>
             <guid>20231006-fastapi-streaming</guid>
             <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1692,7 +1692,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[20230929-rn-qrcode]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230929-rn-qrcode</link>
+            <link>http://localhost:3000/logA/posts/20230929-rn-qrcode</link>
             <guid>20230929-rn-qrcode</guid>
             <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1712,7 +1712,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[20230926-21-things-before-21]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230926-21-things-before-21</link>
+            <link>http://localhost:3000/logA/posts/20230926-21-things-before-21</link>
             <guid>20230926-21-things-before-21</guid>
             <pubDate>Tue, 26 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1730,7 +1730,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[20230924-wagami]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230924-wagami</link>
+            <link>http://localhost:3000/logA/posts/20230924-wagami</link>
             <guid>20230924-wagami</guid>
             <pubDate>Mon, 25 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1747,7 +1747,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[20230924-QR-Code]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230924-QR-Code</link>
+            <link>http://localhost:3000/logA/posts/20230924-QR-Code</link>
             <guid>20230924-QR-Code</guid>
             <pubDate>Mon, 25 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1768,7 +1768,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[20230924-cmd-copy]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230924-cmd-copy</link>
+            <link>http://localhost:3000/logA/posts/20230924-cmd-copy</link>
             <guid>20230924-cmd-copy</guid>
             <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1790,7 +1790,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[20230920-nx]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230920-nx</link>
+            <link>http://localhost:3000/logA/posts/20230920-nx</link>
             <guid>20230920-nx</guid>
             <pubDate>Wed, 20 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1809,7 +1809,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[hardhat]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230919-hardhat</link>
+            <link>http://localhost:3000/logA/posts/20230919-hardhat</link>
             <guid>20230919-hardhat</guid>
             <pubDate>Tue, 19 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1827,7 +1827,7 @@ from fastapi.responses import ]]></description>
         </item>
         <item>
             <title><![CDATA[初探 react native]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230907-react-native</link>
+            <link>http://localhost:3000/logA/posts/20230907-react-native</link>
             <guid>20230907-react-native</guid>
             <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1846,7 +1846,7 @@ npx react-native@latest ]]></description>
         </item>
         <item>
             <title><![CDATA[在部落格中使用mdx]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230831-mdx</link>
+            <link>http://localhost:3000/logA/posts/20230831-mdx</link>
             <guid>20230831-mdx</guid>
             <pubDate>Fri, 01 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1864,7 +1864,7 @@ npx react-native@latest ]]></description>
         </item>
         <item>
             <title><![CDATA[在mongodb裡面將兩個group merge成一個結果]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230831-mongodb-aggregate-multiple-group</link>
+            <link>http://localhost:3000/logA/posts/20230831-mongodb-aggregate-multiple-group</link>
             <guid>20230831-mongodb-aggregate-multiple-group</guid>
             <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1888,7 +1888,7 @@ npx react-native@latest ]]></description>
         </item>
         <item>
             <title><![CDATA[(未完)加入kbar讓搜尋更便利]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230831-kbar</link>
+            <link>http://localhost:3000/logA/posts/20230831-kbar</link>
             <guid>20230831-kbar</guid>
             <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1909,7 +1909,7 @@ function MyApp(]]></description>
         </item>
         <item>
             <title><![CDATA[加入GA]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230830-nextjs-google-analytics</link>
+            <link>http://localhost:3000/logA/posts/20230830-nextjs-google-analytics</link>
             <guid>20230830-nextjs-google-analytics</guid>
             <pubDate>Wed, 30 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1926,7 +1926,7 @@ https://analytics.google.com/analytics/web/ 裡面 拿到GA_MEASUREMENT_ID應該
         </item>
         <item>
             <title><![CDATA[20230829-peerjs]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230829-peerjs</link>
+            <link>http://localhost:3000/logA/posts/20230829-peerjs</link>
             <guid>20230829-peerjs</guid>
             <pubDate>Tue, 29 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1944,7 +1944,7 @@ https://analytics.google.com/analytics/web/ 裡面 拿到GA_MEASUREMENT_ID應該
         </item>
         <item>
             <title><![CDATA[20230829-orbit-chat]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230829-orbit-chat</link>
+            <link>http://localhost:3000/logA/posts/20230829-orbit-chat</link>
             <guid>20230829-orbit-chat</guid>
             <pubDate>Tue, 29 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1963,7 +1963,7 @@ https://github.com/alanhc/orbit-chat
         </item>
         <item>
             <title><![CDATA[20230829-chakra-ui]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230829-chakra-ui</link>
+            <link>http://localhost:3000/logA/posts/20230829-chakra-ui</link>
             <guid>20230829-chakra-ui</guid>
             <pubDate>Tue, 29 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1980,7 +1980,7 @@ pnpm add @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled fr]]
         </item>
         <item>
             <title><![CDATA[初探libp2p]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230828-libp2p</link>
+            <link>http://localhost:3000/logA/posts/20230828-libp2p</link>
             <guid>20230828-libp2p</guid>
             <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -1999,7 +1999,7 @@ import { sigServer } from '@libp2p/webrtc-star-signalling]]></description>
         </item>
         <item>
             <title><![CDATA[初探ipfs]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230828-ipfs</link>
+            <link>http://localhost:3000/logA/posts/20230828-ipfs</link>
             <guid>20230828-ipfs</guid>
             <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2020,7 +2020,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[安裝動漫vscode主題]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230827-vscode-animate-extension</link>
+            <link>http://localhost:3000/logA/posts/20230827-vscode-animate-extension</link>
             <guid>20230827-vscode-animate-extension</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2037,7 +2037,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[初探orbitdb]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230827-orbitdb</link>
+            <link>http://localhost:3000/logA/posts/20230827-orbitdb</link>
             <guid>20230827-orbitdb</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2057,7 +2057,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[notion的替代品 - AFFiNE]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230827-notion-alternative</link>
+            <link>http://localhost:3000/logA/posts/20230827-notion-alternative</link>
             <guid>20230827-notion-alternative</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2074,7 +2074,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[加入PWA功能]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230827-next-pwa</link>
+            <link>http://localhost:3000/logA/posts/20230827-next-pwa</link>
             <guid>20230827-next-pwa</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2094,7 +2094,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[chat聊天界面初探]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230827-chat-app</link>
+            <link>http://localhost:3000/logA/posts/20230827-chat-app</link>
             <guid>20230827-chat-app</guid>
             <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2114,7 +2114,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[nextjs 相關文章]]></title>
-            <link>https://alanhc.github.io/logA/posts/nextjs</link>
+            <link>http://localhost:3000/logA/posts/nextjs</link>
             <guid>nextjs</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2137,7 +2137,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[統整markdown的使用方法]]></title>
-            <link>https://alanhc.github.io/logA/posts/nextjs-markdown</link>
+            <link>http://localhost:3000/logA/posts/nextjs-markdown</link>
             <guid>nextjs-markdown</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2159,7 +2159,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[加入next-seo]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230826-next-seo</link>
+            <link>http://localhost:3000/logA/posts/20230826-next-seo</link>
             <guid>20230826-next-seo</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2178,7 +2178,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[加入import別名讓import更好看]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230826-import-alias</link>
+            <link>http://localhost:3000/logA/posts/20230826-import-alias</link>
             <guid>20230826-import-alias</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2202,7 +2202,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[imgur上傳]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230826-imgur</link>
+            <link>http://localhost:3000/logA/posts/20230826-imgur</link>
             <guid>20230826-imgur</guid>
             <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2222,7 +2222,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[添加rss功能到nextjs部落格]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230825-rss</link>
+            <link>http://localhost:3000/logA/posts/20230825-rss</link>
             <guid>20230825-rss</guid>
             <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2243,7 +2243,7 @@ import { create } from 'ipfs-http-]]></description>
         </item>
         <item>
             <title><![CDATA[部落格暗黑模式]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230824-chakra-darkmode</link>
+            <link>http://localhost:3000/logA/posts/20230824-chakra-darkmode</link>
             <guid>20230824-chakra-darkmode</guid>
             <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2262,7 +2262,7 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui]]></description>
         </item>
         <item>
             <title><![CDATA[初探bigchaindb]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230824-bigchain</link>
+            <link>http://localhost:3000/logA/posts/20230824-bigchain</link>
             <guid>20230824-bigchain</guid>
             <pubDate>Thu, 24 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2281,7 +2281,7 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui]]></description>
         </item>
         <item>
             <title><![CDATA[更新nextjs到13]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230820-nexjs13</link>
+            <link>http://localhost:3000/logA/posts/20230820-nexjs13</link>
             <guid>20230820-nexjs13</guid>
             <pubDate>Sun, 20 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2299,7 +2299,7 @@ import { extendTheme, type ThemeConfig } from "@chakra-ui]]></description>
         </item>
         <item>
             <title><![CDATA[讓部落格可以顯示markdown的流程圖]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230819-mermaid-js</link>
+            <link>http://localhost:3000/logA/posts/20230819-mermaid-js</link>
             <guid>20230819-mermaid-js</guid>
             <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2326,7 +2326,7 @@ C-->D;
         </item>
         <item>
             <title><![CDATA[實作markdown section link]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230818-markdown-section-link</link>
+            <link>http://localhost:3000/logA/posts/20230818-markdown-section-link</link>
             <guid>20230818-markdown-section-link</guid>
             <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2346,7 +2346,7 @@ const tocMarkdown = awa]]></description>
         </item>
         <item>
             <title><![CDATA[將部落格加入sitemap功能]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230817-next-sitemap</link>
+            <link>http://localhost:3000/logA/posts/20230817-next-sitemap</link>
             <guid>20230817-next-sitemap</guid>
             <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2365,7 +2365,7 @@ SITE_URL="https://example.com"]]></description>
         </item>
         <item>
             <title><![CDATA[新增page loading的進度條]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230816-nprogress</link>
+            <link>http://localhost:3000/logA/posts/20230816-nprogress</link>
             <guid>20230816-nprogress</guid>
             <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2386,7 +2386,7 @@ im]]></description>
         </item>
         <item>
             <title><![CDATA[三種使用Python爬取網頁的方法]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230813-back-up-crawler</link>
+            <link>http://localhost:3000/logA/posts/20230813-back-up-crawler</link>
             <guid>20230813-back-up-crawler</guid>
             <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2407,7 +2407,7 @@ s = requests.Session()
         </item>
         <item>
             <title><![CDATA[使用react syntax highlighter及useClipboard強化程式碼區塊]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230812-react-syntax-clipboard</link>
+            <link>http://localhost:3000/logA/posts/20230812-react-syntax-clipboard</link>
             <guid>20230812-react-syntax-clipboard</guid>
             <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2425,7 +2425,7 @@ s = requests.Session()
         </item>
         <item>
             <title><![CDATA[實作ipfs上傳的前端]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230109-ipfs-upload</link>
+            <link>http://localhost:3000/logA/posts/20230109-ipfs-upload</link>
             <guid>20230109-ipfs-upload</guid>
             <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2445,7 +2445,7 @@ c]]></description>
         </item>
         <item>
             <title><![CDATA[erc 1155 合約]]></title>
-            <link>https://alanhc.github.io/logA/posts/20230108-solidity-nft</link>
+            <link>http://localhost:3000/logA/posts/20230108-solidity-nft</link>
             <guid>20230108-solidity-nft</guid>
             <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2465,7 +2465,7 @@ pragma solidity ^0.8.9;]]></description>
         </item>
         <item>
             <title><![CDATA[部署我的網站到k8s上]]></title>
-            <link>https://alanhc.github.io/logA/posts/20221231-k8s-notes</link>
+            <link>http://localhost:3000/logA/posts/20221231-k8s-notes</link>
             <guid>20221231-k8s-notes</guid>
             <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2485,7 +2485,7 @@ ARG NODE_ENV="production"]]></description>
         </item>
         <item>
             <title><![CDATA[使用smartpy撰寫tezos的nft程式]]></title>
-            <link>https://alanhc.github.io/logA/posts/20221230-tezos-nft-tutorial</link>
+            <link>http://localhost:3000/logA/posts/20221230-tezos-nft-tutorial</link>
             <guid>20221230-tezos-nft-tutorial</guid>
             <pubDate>Fri, 30 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2505,7 +2505,7 @@ import smart]]></description>
         </item>
         <item>
             <title><![CDATA[在solana上mint NFT]]></title>
-            <link>https://alanhc.github.io/logA/posts/20221228-solana-nft-tutorial</link>
+            <link>http://localhost:3000/logA/posts/20221228-solana-nft-tutorial</link>
             <guid>20221228-solana-nft-tutorial</guid>
             <pubDate>Wed, 28 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2522,7 +2522,7 @@ import smart]]></description>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
-            <link>https://alanhc.github.io/logA/posts/first-day</link>
+            <link>http://localhost:3000/logA/posts/first-day</link>
             <guid>first-day</guid>
             <pubDate>Thu, 22 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2544,7 +2544,7 @@ hello world!
         </item>
         <item>
             <title><![CDATA[20220811-monorepo-development]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220811-monorepo-development</link>
+            <link>http://localhost:3000/logA/posts/20220811-monorepo-development</link>
             <guid>20220811-monorepo-development</guid>
             <pubDate>Thu, 11 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2567,7 +2567,7 @@ hello world!
         </item>
         <item>
             <title><![CDATA[20220811-LINE-Blockchain-Developer-Intern]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220811-LINE-Blockchain-Developer-Intern</link>
+            <link>http://localhost:3000/logA/posts/20220811-LINE-Blockchain-Developer-Intern</link>
             <guid>20220811-LINE-Blockchain-Developer-Intern</guid>
             <pubDate>Thu, 11 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2590,7 +2590,7 @@ hello world!
         </item>
         <item>
             <title><![CDATA[Upgrade nx repo to react 18]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220721-upgrade-nx-repo-to-react-18</link>
+            <link>http://localhost:3000/logA/posts/20220721-upgrade-nx-repo-to-react-18</link>
             <guid>20220721-upgrade-nx-repo-to-react-18</guid>
             <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2608,7 +2608,7 @@ hello world!
         </item>
         <item>
             <title><![CDATA[Decentral Showroom — NTU DApp Term project]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project</link>
+            <link>http://localhost:3000/logA/posts/20220531-Decentral-Showroom-NTU-DApp-Term-project</link>
             <guid>20220531-Decentral-Showroom-NTU-DApp-Term-project</guid>
             <pubDate>Tue, 31 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2627,7 +2627,7 @@ photo by Hsiang Hsu, model: Cute Ubi
         </item>
         <item>
             <title><![CDATA[web3 世界裡的驗證機制，以Tezos為例]]></title>
-            <link>https://alanhc.github.io/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例</link>
+            <link>http://localhost:3000/logA/posts/20220518-web3-世界裡的驗證機制-以Tezos為例</link>
             <guid>20220518-web3-世界裡的驗證機制-以Tezos為例</guid>
             <pubDate>Wed, 18 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2644,7 +2644,7 @@ photo by Hsiang Hsu, model: Cute Ubi
         </item>
         <item>
             <title><![CDATA[20211028-虛擬人課堂筆記4-vroid]]></title>
-            <link>https://alanhc.github.io/logA/posts/20211028-虛擬人課堂筆記4-vroid</link>
+            <link>http://localhost:3000/logA/posts/20211028-虛擬人課堂筆記4-vroid</link>
             <guid>20211028-虛擬人課堂筆記4-vroid</guid>
             <pubDate>Thu, 28 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2663,7 +2663,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20211027-虛擬人課堂筆記3-unity-facecapture]]></title>
-            <link>https://alanhc.github.io/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture</link>
+            <link>http://localhost:3000/logA/posts/20211027-虛擬人課堂筆記3-unity-facecapture</link>
             <guid>20211027-虛擬人課堂筆記3-unity-facecapture</guid>
             <pubDate>Wed, 27 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2681,7 +2681,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[虛擬人課堂筆記2 —Mozilla Hub]]></title>
-            <link>https://alanhc.github.io/logA/posts/20211018-虛擬人課堂筆記2</link>
+            <link>http://localhost:3000/logA/posts/20211018-虛擬人課堂筆記2</link>
             <guid>20211018-虛擬人課堂筆記2</guid>
             <pubDate>Mon, 18 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2701,7 +2701,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[虛擬人課堂筆記 — SparkAR]]></title>
-            <link>https://alanhc.github.io/logA/posts/20211011-虛擬人課堂筆記-spark-ar</link>
+            <link>http://localhost:3000/logA/posts/20211011-虛擬人課堂筆記-spark-ar</link>
             <guid>20211011-虛擬人課堂筆記-spark-ar</guid>
             <pubDate>Mon, 11 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2720,7 +2720,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20210820-開發mcu-up-銘傳金手指3-0-的那些事兒]]></title>
-            <link>https://alanhc.github.io/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</link>
+            <link>http://localhost:3000/logA/posts/20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</link>
             <guid>20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</guid>
             <pubDate>Fri, 20 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2738,7 +2738,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20190614-CGfinal]]></title>
-            <link>https://alanhc.github.io/logA/posts/20190614-CGfinal</link>
+            <link>http://localhost:3000/logA/posts/20190614-CGfinal</link>
             <guid>20190614-CGfinal</guid>
             <pubDate>Fri, 14 Jun 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2756,7 +2756,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20190409-uva409]]></title>
-            <link>https://alanhc.github.io/logA/posts/20190409-uva409</link>
+            <link>http://localhost:3000/logA/posts/20190409-uva409</link>
             <guid>20190409-uva409</guid>
             <pubDate>Mon, 09 Apr 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2773,7 +2773,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180405-uva630]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180405-uva630</link>
+            <link>http://localhost:3000/logA/posts/20180405-uva630</link>
             <guid>20180405-uva630</guid>
             <pubDate>Thu, 05 Apr 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2790,7 +2790,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180317-uva10409]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180317-uva10409</link>
+            <link>http://localhost:3000/logA/posts/20180317-uva10409</link>
             <guid>20180317-uva10409</guid>
             <pubDate>Sat, 17 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2807,7 +2807,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180314-uva105]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180314-uva105</link>
+            <link>http://localhost:3000/logA/posts/20180314-uva105</link>
             <guid>20180314-uva105</guid>
             <pubDate>Wed, 14 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2824,7 +2824,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180312-uva10190]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180312-uva10190</link>
+            <link>http://localhost:3000/logA/posts/20180312-uva10190</link>
             <guid>20180312-uva10190</guid>
             <pubDate>Mon, 12 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2841,7 +2841,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180309-uva141]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180309-uva141</link>
+            <link>http://localhost:3000/logA/posts/20180309-uva141</link>
             <guid>20180309-uva141</guid>
             <pubDate>Fri, 09 Mar 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2858,7 +2858,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180228-hash-table]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180228-hash-table</link>
+            <link>http://localhost:3000/logA/posts/20180228-hash-table</link>
             <guid>20180228-hash-table</guid>
             <pubDate>Wed, 28 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2875,7 +2875,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180222-uva401]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180222-uva401</link>
+            <link>http://localhost:3000/logA/posts/20180222-uva401</link>
             <guid>20180222-uva401</guid>
             <pubDate>Thu, 22 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2892,7 +2892,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180212-uva10611]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180212-uva10611</link>
+            <link>http://localhost:3000/logA/posts/20180212-uva10611</link>
             <guid>20180212-uva10611</guid>
             <pubDate>Mon, 12 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2911,7 +2911,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180210-NCTU-PCCA-winter-notes]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180210-NCTU-PCCA-winter-notes</link>
+            <link>http://localhost:3000/logA/posts/20180210-NCTU-PCCA-winter-notes</link>
             <guid>20180210-NCTU-PCCA-winter-notes</guid>
             <pubDate>Sat, 10 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2932,7 +2932,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180209-uva406]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180209-uva406</link>
+            <link>http://localhost:3000/logA/posts/20180209-uva406</link>
             <guid>20180209-uva406</guid>
             <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2949,7 +2949,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180209-linked-list]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180209-linked-list</link>
+            <link>http://localhost:3000/logA/posts/20180209-linked-list</link>
             <guid>20180209-linked-list</guid>
             <pubDate>Fri, 09 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2966,7 +2966,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180206-uva10162]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180206-uva10162</link>
+            <link>http://localhost:3000/logA/posts/20180206-uva10162</link>
             <guid>20180206-uva10162</guid>
             <pubDate>Tue, 06 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -2983,7 +2983,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180205-uva10405]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180205-uva10405</link>
+            <link>http://localhost:3000/logA/posts/20180205-uva10405</link>
             <guid>20180205-uva10405</guid>
             <pubDate>Mon, 05 Feb 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3000,7 +3000,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180131-uva11917]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180131-uva11917</link>
+            <link>http://localhost:3000/logA/posts/20180131-uva11917</link>
             <guid>20180131-uva11917</guid>
             <pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3017,7 +3017,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180128-uva10931]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180128-uva10931</link>
+            <link>http://localhost:3000/logA/posts/20180128-uva10931</link>
             <guid>20180128-uva10931</guid>
             <pubDate>Sun, 28 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3034,7 +3034,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180124-gets-puts]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180124-gets-puts</link>
+            <link>http://localhost:3000/logA/posts/20180124-gets-puts</link>
             <guid>20180124-gets-puts</guid>
             <pubDate>Wed, 24 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3051,7 +3051,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180123-int2str]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180123-int2str</link>
+            <link>http://localhost:3000/logA/posts/20180123-int2str</link>
             <guid>20180123-int2str</guid>
             <pubDate>Tue, 23 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3068,7 +3068,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20180119-hackmd]]></title>
-            <link>https://alanhc.github.io/logA/posts/20180119-hackmd</link>
+            <link>http://localhost:3000/logA/posts/20180119-hackmd</link>
             <guid>20180119-hackmd</guid>
             <pubDate>Fri, 19 Jan 2018 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3085,7 +3085,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171230-recursion]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171230-recursion</link>
+            <link>http://localhost:3000/logA/posts/20171230-recursion</link>
             <guid>20171230-recursion</guid>
             <pubDate>Sat, 30 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3102,7 +3102,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171221-uva10190]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171221-uva10190</link>
+            <link>http://localhost:3000/logA/posts/20171221-uva10190</link>
             <guid>20171221-uva10190</guid>
             <pubDate>Thu, 21 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3119,7 +3119,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171219-recursion]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171219-recursion</link>
+            <link>http://localhost:3000/logA/posts/20171219-recursion</link>
             <guid>20171219-recursion</guid>
             <pubDate>Tue, 19 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3136,7 +3136,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171217-DP]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171217-DP</link>
+            <link>http://localhost:3000/logA/posts/20171217-DP</link>
             <guid>20171217-DP</guid>
             <pubDate>Sun, 17 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3153,7 +3153,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171210-vector]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171210-vector</link>
+            <link>http://localhost:3000/logA/posts/20171210-vector</link>
             <guid>20171210-vector</guid>
             <pubDate>Sun, 10 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3170,7 +3170,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171202-styleguide]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171202-styleguide</link>
+            <link>http://localhost:3000/logA/posts/20171202-styleguide</link>
             <guid>20171202-styleguide</guid>
             <pubDate>Sat, 02 Dec 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3187,7 +3187,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171106-gcd]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171106-gcd</link>
+            <link>http://localhost:3000/logA/posts/20171106-gcd</link>
             <guid>20171106-gcd</guid>
             <pubDate>Mon, 06 Nov 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3204,7 +3204,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171105-makerfair]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171105-makerfair</link>
+            <link>http://localhost:3000/logA/posts/20171105-makerfair</link>
             <guid>20171105-makerfair</guid>
             <pubDate>Sun, 05 Nov 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3225,7 +3225,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171102-computer-virus]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171102-computer-virus</link>
+            <link>http://localhost:3000/logA/posts/20171102-computer-virus</link>
             <guid>20171102-computer-virus</guid>
             <pubDate>Thu, 02 Nov 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3242,7 +3242,7 @@ Face Editor>Gene]]></description>
         </item>
         <item>
             <title><![CDATA[20171027-refactor]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171027-refactor</link>
+            <link>http://localhost:3000/logA/posts/20171027-refactor</link>
             <guid>20171027-refactor</guid>
             <pubDate>Fri, 27 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
@@ -3261,7 +3261,7 @@ https://www.ithome.com.tw/node/46046
         </item>
         <item>
             <title><![CDATA[20171027-bnf]]></title>
-            <link>https://alanhc.github.io/logA/posts/20171027-bnf</link>
+            <link>http://localhost:3000/logA/posts/20171027-bnf</link>
             <guid>20171027-bnf</guid>
             <pubDate>Fri, 27 Oct 2017 00:00:00 GMT</pubDate>
             <description><![CDATA[<!doctype html>
