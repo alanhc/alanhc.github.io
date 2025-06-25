@@ -1,98 +1,79 @@
-import { useContext, useEffect, useState } from "react";
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/legacy/image";
-import styles from "../styles/Home.module.css";
-import path from "path";
-import { promises as fs } from "fs";
-import { useRouter } from "next/router";
-import Profile from "@/components/partial/Profile";
-import { TagContext } from "@/context/portfolioContext";
-import Experience from "@/components/partial/Experience";
 import Layout from "@/components/Layout";
-import CollectionResult from "@/components/partial/CollectionResult";
-import LeftCheckBox from "@/components/partial/LeftCheckBox";
-import portfolioData from "../../public/api/portfolio.json";
-import generateRSS from "@/lib/generateRSS";
-import NextLink from "next/link";
-import { NotionRenderer } from 'react-notion-x'
-import 'react-notion-x/src/styles.css'
-
-import {
-  useDisclosure,
-  VStack,
-  Heading,
-  Flex,
-  Center,
-  Card,
-  HStack,
-  Box,
-  Container,
-  CardBody,
-  Stack,
-  StackDivider,
-  Textarea,
-  Button,
-  Link,
-  useColorMode,
-} from "@chakra-ui/react";
-import SEO from "../../next-seo.config";
+import { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import { get } from "lodash";
-import { getFolderMarkdownData, getMarkdownData } from "@/lib/parseFile";
-import { NotionAPI } from 'notion-client'
-import { NotionPage } from "@/components/NotionPage";
+import SEO from "../../next-seo.config";
+import { promises as fs } from "fs";
+import { join } from "path";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 
-
-
-const Home: NextPage = ({ portfolio,recordMap }: any) => {
-  const router = useRouter();
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [msg, setMsg] = useState("");
-  const { colorMode, toggleColorMode } = useColorMode()
-  const opts = {
-    height: "240",
-    width: "240",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-    },
-  };
-  const handleInputChange = (e: any) => {
-    setMsg(e.target.value);
-  };
-  const tagContext = useContext(TagContext);
-  const tags = tagContext?.tags === undefined ? [] : tagContext.tags;
-
-  return (
-    <Layout>
-      <NextSeo
-        title="Hello, from alanhc"
-        description="Alan Tseng | alanhc | 曾宏鈞's website"
-        {...SEO}
-      />
-      <NotionPage recordMap={recordMap} rootPageId={"Alan-Tseng-6928c2d8766044269c70b5a4b248bed8"} colorMode={colorMode}/>
-    </Layout>
-  );
+import { components } from "@/components/partial/MarkdownComponents";
+import { Box, Button, Code, Flex, Link, ListItem, OrderedList, Stack, UnorderedList, useClipboard } from "@chakra-ui/react";
+import markdownToc from 'markdown-toc';
+import remarkGfm from "remark-gfm";
+import SectionBlock from "@/components/partial/SectionBlock";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { darcula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import NextLink from "next/link";
+const toc_components = {
+  h1: ({ node, ...props }: any) => (
+    <SectionBlock as="h1" size="xl" {...props} />
+  ),
+  h2: ({ node, ...props }: any) => (
+    <SectionBlock as="h2" size="lg" {...props} />
+  ),
+  h3: ({ node, ...props }: any) => (
+    <SectionBlock as="h3" size="md" {...props} />
+  ),
+  h4: ({ node, ...props }: any) => (
+    <SectionBlock as="h4" size="sm" {...props} />
+  ),
+  h5: ({ node, ...props }: any) => (
+    <SectionBlock as="h5" size="xs" {...props} />
+  ),
+  a: ({ node, ...props }: any) => <Link as={NextLink} {...props} />,
+  ul: ({ node, ...props }: any) => <UnorderedList {...props} />,
+  li: ({ node, ...props }: any) => <ListItem {...props} />,
+  ol: ({ node, ...props }: any) => <OrderedList {...props} />,
 };
-
 export async function getStaticProps() {
-  const project = await getFolderMarkdownData("projects");
-  let tags = project.map((x: any) => x.tech).flat();
-  tags.push("select");
-  tags = Array.from(new Set(tags));
-  console.log(tags)
-  fs.writeFile("src/config/tags.json", JSON.stringify({tags:tags}), 'utf8');
-  generateRSS();
-  const portfolio = portfolioData;
-  const notion = new NotionAPI()
-  const pageId = 'Alan-Tseng-6928c2d8766044269c70b5a4b248bed8'
-  let recordMap = await notion.getPage(pageId)
+  const file = await fs.readFile(process.cwd() + "/src/files/about.md", "utf8");
   
+  const mdxSource = await serialize(file);
+  const tocMarkdown = await markdownToc(file);
+  const tocSource = await serialize(tocMarkdown.content, {
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+          rehypePlugins: [],
+          format: "mdx",
+        },
+      });
+  console.log(tocSource);
   return {
     props: {
-      portfolio,recordMap
+      mdxSource: mdxSource,
+      tocSource: tocSource,
     },
   };
 }
-export default Home;
+
+const Index: NextPage = ({ mdxSource, tocSource }: any) => {
+  return (
+    <Layout>
+      <NextSeo title="index" description="About alanhc" {...SEO} />
+      {/* {JSON.stringify(tocSource)}  */}
+      <Stack direction="row" spacing={8}>
+        <Stack flex={1} maxW={"fit-content"} position="sticky" top="0">
+          {/* {JSON.stringify(tocSource)}  */}
+          <MDXRemote {...tocSource} components={toc_components} />
+        </Stack>
+        <Stack flex={1} >
+          {/* {JSON.stringify(toc)} */}
+          <MDXRemote {...mdxSource} components={components} />
+
+        </Stack>
+      </Stack>
+    </Layout>
+  );
+};
+export default Index;

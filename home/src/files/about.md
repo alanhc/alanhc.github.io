@@ -1,8 +1,24 @@
 ## Contact
 Hello! Thank you for reaching out. If you would like to contact me, please send an email to [alan.tseng.cs@gmail.com](mailto:alan.tseng.cs@gmail.com). 
 ## Summary
-Highly motivated and experienced software engineer with a strong track record of success in developing innovative solutions. Expertise in blockchain, artificial intelligence, web development, cloud-native applications, and computer vision. Passionate about learning new technologies and collaborating effectively to deliver impactful results.
+Embedded systems engineer with hands-on experience in BMC firmware development (OpenBMC/Yocto), cloud-scale
+server provisioning (Kubernetes), and low-level Linux debugging. Proven ability to bridge kernel-space and user-space,
+automate hardware validation workflows, and optimize system services using Python, D-Bus, and systemd. Strong
+background in performance profiling (perf, uftrace), device tree configuration, and IPMI/Redfish protocol stacks.
+Passionate about open-source projects and cross-domain collaboration, with industry experience from hyperscaler
+ODMs and top tech companies (Wiwynn, Pegatron, LINE).
 ## Experience
+- **Wiwynn Corporation**
+- **Embedded Software Engineer (BMC)**  _New Taipei City, Taiwan, Dec 2024 – Present_
+	- `C/C++`, `Device Driver`, `Firmware`, `BMC`, `OpenBMC`, `Yocto`, `Gnu debug`, `Embedded Systems`, `Redfish`, `low-speed interface`, `Buildroot`, `IPMI`, `D-Bus`, `systemd`
+- **Pegatron Corporation**
+- **Software Engineer (Server)** _Taipei City, Taiwan, Sep 2024 – Dec 2024_
+	- `Kubernetes`, `Bash`, `PXE`, `Networking`, `Linux`, `Provisioning`, `ARP`, `DHCP`, `TFTP`, `Shell Scripting`, `Kubeadm`, `Helm`, `Server Boot`, `Rack Server Testing`
+- Developed a Kubernetes-based rack server testing system using kubeadm, Helm, and Shell scripting.
+- Automated PXE-based OS provisioning (Windows/Linux) across ARM and x86 servers.
+- Integrated low-level networking components and commands (e.g., ARP, DHCP, TFTP) into provisioning and validation
+workflows.
+- Reduced repository size from 663 MB to 2.4 MB by streamlining base images and minimizing layer redundancy.
 - **LINE Corporation**
 - **Software Engineer Intern**  _Taipei City, Taiwan, Jul 2022 – Nov 2022_
 	- `Blockchain`, `Kubernetes`, `Cloud-Native Applications`, `CI/CD`, `web3`, `NFT`, `TypeScript`, `React`, `Python`, `Nx`, `NextJS`
@@ -22,12 +38,15 @@ Highly motivated and experienced software engineer with a strong track record of
 
 ## Skills
 - Technical Skills
+	- Embedded Software Development, Cloud-Native Applications, Web Systems
 	- Blockchain, Artificial Intelligence(Machine Learning, DeepLearning), Web(Frontend/Backend) Development, Cloud-Native Applications, Computer Vision
 	- Socket, Chrome Extension, SSG/SSR, MVC
 	- Blockchain(EVM Compatible Chains(L1/L2), Tezos, COSMOS, Solana)
 - Software Skills
 	- Languages: Python, C/C++, JavaScript/TypeScript, Solidity, Java, SmartPy, Swift, Dart, C#, Matlab
-	- Tools: FastAPI/Flask, NodeJS, React(NextJS, ), Tensorflow, Scikit-Learn, OpenCV, OpenGL, Numpy, Pandas, Matplotlib, Processing(p5), Flutter
+	- Tools:
+		- Yocto Project, BuildRoot, Gnu Make, perf, valgrind, GDB
+		- FastAPI/Flask, NodeJS, React(NextJS, ), Tensorflow, Scikit-Learn, OpenCV, OpenGL, Numpy, Pandas, Matplotlib, Processing(p5), Flutter
 	- Storage: NoSQL(MongoDB), SQL(PostgreSQL, MySQL), p2p(orbitDB, GunJS), IPFS
 
 ## Education

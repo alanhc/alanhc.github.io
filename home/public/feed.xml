@@ -4,7 +4,11 @@
         <title>Alan Tseng</title>
         <link>http://localhost:3000</link>
         <description>This is my personal feed!</description>
+<<<<<<< HEAD
         <lastBuildDate>Wed, 25 Jun 2025 14:59:49 GMT</lastBuildDate>
+=======
+        <lastBuildDate>Sat, 21 Jun 2025 09:47:02 GMT</lastBuildDate>
+>>>>>>> 2900e58da3d7793800a69291a5d55be8019092dd
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>awesome</generator>
         <image>
