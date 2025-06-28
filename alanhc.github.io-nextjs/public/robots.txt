@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alanhc.github.io/
+
+# Sitemaps
+Sitemap: https://alanhc.github.io/sitemap.xml
