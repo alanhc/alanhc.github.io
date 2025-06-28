@@ -96,7 +96,7 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/alanhc/logA/edit/main/content"
+    base: "https://github.com/alanhc/alanhc.github.io/edit/main/content"
 
 taxonomies:
   author: authors
