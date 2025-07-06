@@ -3,8 +3,12 @@ title: Alan Tseng
 toc: true
 description: "Alan's personal tech blog"
 ---
+{{< cards cols="2" >}}
+  {{< card link="/" title="Welcome to my blog!"  >}}
+  {{< card link="/" image="ChatGPT Image.png" imageStyle="" title="Hi" >}}
+{{< /cards >}}
 
-Welcome to my blog!
+
 
 ## Explore
 
@@ -54,4 +58,4 @@ _LINE Corporation, 2022_
 
 | Date | Title                                   | Where           | 
 |------|-----------------------------------------|-----------------|
-| 2025 | Using GDB Debug in OpenBMC              | COSCUP - Taiwan | 
+| 2025 | [Using GDB Debug in OpenBMC](https://web.archive.org/web/20250703021811/https://pretalx.coscup.org/coscup-2025/talk/EXYUKY/)              | COSCUP - Taiwan | 
