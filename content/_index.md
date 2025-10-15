@@ -30,14 +30,17 @@ _National Taiwan University, 2024_
 ## Experience
 {{% steps %}}
 
+### Embedded Software Engineer @ Mediatek
+_Mediatek Corporation, 2025, Embedded Software Engineer_
+
 ### Embedded Software Engineer @ Wiwynn
-_Wiwynn Corporation, 2024_
+_Wiwynn Corporation, 2024, BMC Engineer_
 
 ### Software Engineer @ Pegatron
-_Pegatron Corporation, 2024_
+_Pegatron Corporation 2024, Server Software Engineer_
 
 ### Software Engineer Intern @ LINE
-_LINE Corporation, 2022_
+_LINE Corporation, 2022, Software Engineer Intern_
 
 {{% /steps %}}
 
