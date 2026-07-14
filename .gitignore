@@ -8,3 +8,4 @@ resources/
 
 # macOS
 .DS_Store
+.superpowers/
