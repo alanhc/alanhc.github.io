@@ -56,8 +56,10 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --gc --minify \
+            --gc --minify --panicOnWarning \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Preflight
+        run: ./scripts/preflight.sh ./public
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
