@@ -1,0 +1,32 @@
+# Known-broken internal links inherited from the Blogger -> Hugo migration.
+# Each pattern below is scoped as narrowly as the evidence allows so that a
+# NEW broken link in new content still fails the check. Do not broaden these
+# patterns to bare directory prefixes (e.g. "images/") -- that would also
+# hide genuinely new missing images.
+#
+# Regenerate the error list this file was derived from with:
+#   lychee --offline --no-progress --root-dir "$(pwd)/public" './public/**/*.html'
+
+# 1) Blogger media that was never migrated into public/images/ when the blog
+# moved off Blogger. Blogger post IDs are 18-19 digit numbers, so this only
+# matches that specific legacy filename shape (images/<18-19 digits>-*),
+# e.g. images/8741533010592647710-1.png. A new post's
+# images/my-new-diagram.png does NOT match this pattern and will still fail.
+# 198 of the 203 pre-existing errors are this category.
+images/[0-9]{15,}-
+
+# 2) content/blog/20230820-nexjs13.md has an /image/ (singular) vs /images/
+# typo. Fixing the typo would not help: no matching file exists under
+# /images/ either, so the target image is simply missing. 3 errors.
+image/next-blog-13-[123]\.png
+
+# 3) A leaked local absolute filesystem path from the author's machine,
+# embedded in migrated post content (content/blog/20230907-react-native.md).
+# 1 error.
+/Users/alanhc/workspace/ticketing/
+
+# 4) A protocol-relative Blogger CDN link (`//1.bp.blogspot.com/...`) left
+# over from Blogger migration (content/blog/20190614-CGfinal.md). Under
+# --offline mode lychee resolves the missing scheme against --root-dir and
+# treats it as a local file, which will never exist. 1 error.
+[0-9]\.bp\.blogspot\.com/
