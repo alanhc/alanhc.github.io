@@ -110,6 +110,29 @@ ${hits}
     截斷後若與其他項目同值，Hugo 改用名稱字母序決定順序，
     選單會在 build 成功的情況下無聲錯掉。請改用整數。"
   fi
+
+  # 只抓 menu: 區塊（到下一個頂層 key 為止），避免其他區塊剛好出現
+  # weight: 欄位時誤判成選單項目。
+  local menu_block
+  menu_block=$(awk '/^menu:/ { in_menu=1; next } /^[^ #]/ { in_menu=0 } in_menu' hugo.yaml)
+
+  # 同樣用 [^#]* 排除被註解掉的 weight，小數與整數都收（小數已截斷成整數比對）。
+  local weights dup_weights
+  weights=$(printf '%s\n' "$menu_block" \
+    | grep -oE '^[^#]*weight: *[0-9]+' \
+    | grep -oE '[0-9]+$')
+  dup_weights=$(printf '%s\n' "$weights" | sort -n | uniq -d)
+
+  if [[ -n "$dup_weights" ]]; then
+    local w
+    while IFS= read -r w; do
+      [[ -z "$w" ]] && continue
+      fail "menu weight：weight ${w} 被多個選單項目重複使用
+  → 小數截斷或手動打錯數字都可能造成兩個項目的 weight 打平，
+    Hugo 這時改用名稱字母序決定順序，選單會在 build 成功的情況下無聲重排。
+    請確認 menu.main 底下每個項目的 weight 都不重複。"
+    done <<< "$dup_weights"
+  fi
 }
 
 # --- 執行 ---------------------------------------------------------------
