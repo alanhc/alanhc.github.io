@@ -95,9 +95,27 @@ check_build_output() {
   fi
 }
 
+# --- Check 3: menu weight 必須是整數 ------------------------------------
+# Hugo 的 menu weight 是 int，YAML 寫 2.5 會被截斷成 2，
+# 跟另一個 weight 2 的項目打平後改用字母序 tie-break，順序就無聲錯掉。
+check_menu_weights() {
+  local hits
+  # 開頭的 [^#]* 讓被註解掉的 weight 不會誤判。
+  hits=$(grep -nE '^[^#]*weight: *[0-9]+\.[0-9]+' hugo.yaml)
+
+  if [[ -n "$hits" ]]; then
+    fail "menu weight：發現小數 weight
+${hits}
+  → Hugo 的 menu weight 是整數，小數會被截斷（2.5 → 2）。
+    截斷後若與其他項目同值，Hugo 改用名稱字母序決定順序，
+    選單會在 build 成功的情況下無聲錯掉。請改用整數。"
+  fi
+}
+
 # --- 執行 ---------------------------------------------------------------
 check_hugo_version_consistency
 check_build_output
+check_menu_weights
 
 if (( ${#FAILURES[@]} > 0 )); then
   echo "preflight 失敗（${#FAILURES[@]} 項）：" >&2
