@@ -35,34 +35,36 @@ markup:
   highlight:
     noClasses: false
 
+# Menu weights must be integers -- Hugo truncates floats, so 1.5 and 2.5
+# collapse onto 1 and 2 and ties get broken alphabetically instead.
 menu:
   main:
-    - name: Projects
-      pageRef: /projects
-      weight: 1.5
     - name: Blog
       pageRef: /blog
       weight: 1
+    - name: Projects
+      pageRef: /projects
+      weight: 2
     - name: Home ↗
       url: "https://alanhc.github.io"
-      weight: 1.5
+      weight: 3
     - name: CV ↗
-      url: "http://alanhc.github.io/cv.pdf"
-      weight: 2.5
+      url: "https://alanhc.github.io/cv.pdf"
+      weight: 4
     - name: Contact ↗
       url: "mailto:alan.tseng.cs@gmail.com"
-      weight: 3
+      weight: 5
     - name: Search
-      weight: 4
+      weight: 6
       params:
         type: search
     - name: GitHub
-      weight: 5
+      weight: 7
       url: "https://github.com/alanhc"
       params:
         icon: github
     - name: LinkedIn
-      weight: 6
+      weight: 8
       url: "https://www.linkedin.com/in/alanhc316/"
       params:
         icon: linkedin
@@ -85,10 +87,10 @@ params:
   toc:
     displayTags: true
   highlight:
-  copy:
-    enable: true
-    # hover | always
-    display: hover
+    copy:
+      enable: true
+      # hover | always
+      display: hover
   footer:
     displayCopyright: true
     displayPoweredBy: false
@@ -98,7 +100,10 @@ params:
     enable: true
     base: "https://github.com/alanhc/alanhc.github.io/edit/main/content"
 
+# Defining taxonomies replaces Hugo's defaults, so tag must be listed
+# explicitly or the tags on every post stop resolving.
 taxonomies:
+  tag: tags
   author: authors
 
 services:
