@@ -50,8 +50,54 @@ check_hugo_version_consistency() {
   fi
 }
 
+# --- Check 2: 建置產出斷言 ----------------------------------------------
+# 用下限而非精確值：內容只會成長，所以這些數字幾乎不用維護，
+# 但 taxonomies 壞掉那種崩塌（tags 直接歸零）一定擋得住。
+MIN_TAG_PAGES=100      # 2026-07-14 實測 123
+MIN_BLOG_POSTS=180     # 2026-07-14 實測 214
+MIN_TOTAL_HTML=300     # 2026-07-14 實測 350
+
+count_dirs() {
+  find "$1" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l | tr -d ' '
+}
+
+check_build_output() {
+  if [[ ! -d "$PUBLIC_DIR" ]]; then
+    fail "建置產出：找不到目錄 ${PUBLIC_DIR}
+  → 請先建置，或用參數指定輸出目錄：scripts/preflight.sh <dir>"
+    return
+  fi
+
+  local p
+  for p in index.html blog/index.html projects/index.html \
+           docs/index.html tags/index.html; do
+    [[ -f "$PUBLIC_DIR/$p" ]] || fail "建置產出：缺少關鍵頁面 ${p}"
+  done
+
+  local tags blog total
+  tags=$(count_dirs "$PUBLIC_DIR/tags")
+  blog=$(count_dirs "$PUBLIC_DIR/blog")
+  total=$(find "$PUBLIC_DIR" -name '*.html' -type f | wc -l | tr -d ' ')
+
+  if (( tags < MIN_TAG_PAGES )); then
+    fail "建置產出：tag 頁數 ${tags}，低於下限 ${MIN_TAG_PAGES}
+  → 通常代表 hugo.yaml 的 taxonomies 區塊漏了 tag。
+    自訂 taxonomies 會「取代」而非「擴充」Hugo 預設值，
+    所以 tag 必須明確列出，否則全站文章的 tag 連結都會失效。"
+  fi
+
+  if (( blog < MIN_BLOG_POSTS )); then
+    fail "建置產出：blog 文章數 ${blog}，低於下限 ${MIN_BLOG_POSTS}"
+  fi
+
+  if (( total < MIN_TOTAL_HTML )); then
+    fail "建置產出：總 HTML 頁數 ${total}，低於下限 ${MIN_TOTAL_HTML}"
+  fi
+}
+
 # --- 執行 ---------------------------------------------------------------
 check_hugo_version_consistency
+check_build_output
 
 if (( ${#FAILURES[@]} > 0 )); then
   echo "preflight 失敗（${#FAILURES[@]} 項）：" >&2
