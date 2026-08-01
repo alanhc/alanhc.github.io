@@ -2,6 +2,8 @@
 title: '讓部落格可以顯示markdown的流程圖'
 date: '2023-08-19'
 tag: ["blog", "mermaid js"]
+aliases:
+  - /blog/20230819-mermaid-js/
 ---
 code如下
 

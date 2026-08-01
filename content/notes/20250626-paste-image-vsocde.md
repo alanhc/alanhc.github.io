@@ -6,6 +6,8 @@ tags:
 updated: 2025-06-26
 draft: false
 up:
+aliases:
+  - /blog/20250626-paste-image-vsocde/
 ---
 可以藉由設定 `{專案_ROOT}/.vscode/settings.json`
 

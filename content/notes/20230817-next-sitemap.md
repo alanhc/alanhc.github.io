@@ -2,6 +2,8 @@
 title: '將部落格加入sitemap功能'
 date: '2023-08-17'
 tag: ["blog"]
+aliases:
+  - /blog/20230817-next-sitemap/
 ---
 指令下：`pnpm add -D next-sitemap`
 next.config.js新增

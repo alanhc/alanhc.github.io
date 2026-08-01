@@ -2,6 +2,8 @@
 title: '使用react syntax highlighter及useClipboard強化程式碼區塊'
 date: '2023-08-12'
 tag: ['blog', 'react', 'chakra ui']
+aliases:
+  - /blog/20230812-react-syntax-clipboard/
 ---
 # react syntax highlighter + clipboard
 

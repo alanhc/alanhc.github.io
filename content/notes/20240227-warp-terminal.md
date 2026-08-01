@@ -6,6 +6,8 @@ tags:
 updated: 2024-02-27
 up:
   - "[[tools]]"
+aliases:
+  - /blog/20240227-warp-terminal/
 ---
 發現一個有趣的東西
 brew install --cask warp

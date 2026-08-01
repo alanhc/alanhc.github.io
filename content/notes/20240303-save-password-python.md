@@ -6,6 +6,8 @@ tags:
   - security
 updated: 2024-03-03
 up:
+aliases:
+  - /blog/20240303-save-password-python/
 ---
 使用 AES（對稱加密） + base64 
 ## 加密

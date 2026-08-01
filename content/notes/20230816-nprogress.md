@@ -2,6 +2,8 @@
 title: '新增page loading的進度條'
 date: '2023-08-16'
 tag: ["blog"]
+aliases:
+  - /blog/20230816-nprogress/
 ---
 `pnpm add nprogress`
 `pnpm add -D @types/nprogress`

@@ -2,6 +2,8 @@
 title: "統整markdown的使用方法"
 date: "2023-08-26"
 tag: ["nextjs", "organize"]
+aliases:
+  - /blog/nextjs-markdown/
 ---
 
 ## 資料在本地

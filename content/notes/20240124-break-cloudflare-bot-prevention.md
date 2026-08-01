@@ -7,6 +7,8 @@ tags:
 updated: 2024-01-24
 up:
   - "[[爬蟲]]"
+aliases:
+  - /blog/20240124-break-cloudflare-bot-prevention/
 ---
 今日看到好玩的東西，改天有時間來玩
 ## Ref

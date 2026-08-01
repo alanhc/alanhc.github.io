@@ -7,6 +7,8 @@ tags:
 updated: 2024-02-03
 up:
   - "[[增加收入]]"
+aliases:
+  - /blog/20240203-trading-bot/
 ---
 [Python自動化交易](https://youtu.be/eDolz-_Ls4o?si=SWWnmwDFPey1cUHS)
 https://www.xq.com.tw/XQlite-Download.aspx

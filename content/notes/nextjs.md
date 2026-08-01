@@ -2,6 +2,8 @@
 title: "nextjs 相關文章"
 date: "2023-08-26"
 tag: ["nextjs"]
+aliases:
+  - /blog/nextjs/
 ---
 
 # markdown相關

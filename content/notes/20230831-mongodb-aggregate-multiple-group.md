@@ -2,6 +2,8 @@
 title: "在mongodb裡面將兩個group merge成一個結果"
 date: "2023-08-31"
 tags: ["mongodb", "python"]
+aliases:
+  - /blog/20230831-mongodb-aggregate-multiple-group/
 ---
 ## 結果
 ```json

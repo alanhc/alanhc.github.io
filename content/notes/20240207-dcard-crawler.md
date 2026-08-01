@@ -10,6 +10,8 @@ tags:
   - playright
   - DrissionPage
 updated: 2024-02-07
+aliases:
+  - /blog/20240207-dcard-crawler/
 ---
 https://github.com/alanhc/dcard_crawler.git
 

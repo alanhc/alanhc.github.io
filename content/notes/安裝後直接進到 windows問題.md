@@ -5,6 +5,8 @@ tags:
   - 重灌
 updated: 2024-10-1010:49
 up: []
+aliases:
+  - /blog/%E5%AE%89%E8%A3%9D%E5%BE%8C%E7%9B%B4%E6%8E%A5%E9%80%B2%E5%88%B0-windows%E5%95%8F%E9%A1%8C/
 ---
 
 ## Ref

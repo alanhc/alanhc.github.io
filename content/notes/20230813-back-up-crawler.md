@@ -2,6 +2,8 @@
 title: '三種使用Python爬取網頁的方法'
 date: '2023-08-13'
 tag: ['notes', 'crawler']
+aliases:
+  - /blog/20230813-back-up-crawler/
 ---
 ## 第一版: 使用session慢慢爬
 ```python

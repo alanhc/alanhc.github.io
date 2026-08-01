@@ -5,6 +5,8 @@ tags:
   - docker
 updated: 2024-10-1322:18
 up:
+aliases:
+  - /blog/%E8%87%AA%E6%9E%B6harbor/
 ---
 
 

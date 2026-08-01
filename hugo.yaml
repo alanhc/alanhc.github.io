@@ -39,32 +39,35 @@ markup:
 # collapse onto 1 and 2 and ties get broken alphabetically instead.
 menu:
   main:
-    - name: Blog
-      pageRef: /blog
-      weight: 1
     - name: Projects
       pageRef: /projects
+      weight: 1
+    - name: Blog
+      pageRef: /blog
       weight: 2
+    - name: Notes
+      pageRef: /notes
+      weight: 3
     - name: Home ↗
       url: "https://alanhc.github.io"
-      weight: 3
+      weight: 4
     - name: CV ↗
       url: "https://alanhc.github.io/cv.pdf"
-      weight: 4
+      weight: 5
     - name: Contact ↗
       url: "mailto:alan.tseng.cs@gmail.com"
-      weight: 5
-    - name: Search
       weight: 6
+    - name: Search
+      weight: 7
       params:
         type: search
     - name: GitHub
-      weight: 7
+      weight: 8
       url: "https://github.com/alanhc"
       params:
         icon: github
     - name: LinkedIn
-      weight: 8
+      weight: 9
       url: "https://www.linkedin.com/in/alanhc316/"
       params:
         icon: linkedin

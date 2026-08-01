@@ -5,6 +5,8 @@ tags:
   - nextjs
   - file
   - frontend
+aliases:
+  - /blog/20231112-nextjs-upload-large-file/
 ---
 ## upload api
 ```js

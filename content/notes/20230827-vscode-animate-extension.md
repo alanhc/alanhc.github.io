@@ -2,6 +2,8 @@
 title: "安裝動漫vscode主題"
 date: "2023-08-27"
 tag: ["vscode"]
+aliases:
+  - /blog/20230827-vscode-animate-extension/
 ---
 去 [下載doki-theme](https://marketplace.visualstudio.com/items?itemName=unthrottled.doki-theme) 
 ## 使用方法

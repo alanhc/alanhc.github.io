@@ -5,6 +5,8 @@ tags:
   - bot
   - twitter
   - api
+aliases:
+  - /blog/20231202-twitter-bot/
 ---
 ## 1. 使用 twitter API
 1. 先去 [dashboard]( https://developer.twitter.com/en/portal/dashboard )建立App，並在User authentication settings > 設定

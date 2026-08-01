@@ -3,6 +3,8 @@ title: 20231006-fastapi-streaming
 date: 2023-10-06
 tags:
   - python
+aliases:
+  - /blog/20231006-fastapi-streaming/
 ---
 - main.py
 ```python

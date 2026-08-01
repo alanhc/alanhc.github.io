@@ -6,6 +6,8 @@ tags:
   - select
 up:
   - "[[projects]]"
+aliases:
+  - /blog/20231217-ntu-matches/
 ---
 ## 先請AI生成資料
 ### prompt

@@ -6,6 +6,8 @@ tags:
   - nx
   - job
   - select
+aliases:
+  - /blog/20220721-upgrade-nx-repo-to-react-18/
 ---
 - 更新@nrwl/react 到14會自動更新React到18
 - https://nx.dev/guides/react-18#react-18-migration

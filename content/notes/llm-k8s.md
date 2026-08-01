@@ -5,6 +5,8 @@ tags:
 updated: 2024-07-17
 up:
   - "[[k8s]]"
+aliases:
+  - /blog/llm-k8s/
 ---
 https://microk8s.io/docs/install-macos
 https://sarinsuriyakoon.medium.com/deploy-ollama-on-local-kubernetes-microk8s-6ca22bfb7fa3

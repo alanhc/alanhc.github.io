@@ -106,7 +106,8 @@ _National Taiwan University, 2024_
 {{< cards >}}
   {{< card link="/projects" title="Projects" icon="collection" >}}
   {{< card link="/blog" title="Blog" icon="book-open" >}}
+  {{< card link="/notes" title="Notes" icon="book-open" >}}
   {{< card link="/docs" title="Engineering Notes" icon="book-open" >}}
-  {{< card link="https://alanhc.github.io/til/" title="TIL" icon="book-open" >}}
+  {{< card link="https://alanhc.github.io/til/" title="TIL ↗" icon="book-open" >}}
   {{< card link="/about" title="About" icon="user" >}}
 {{< /cards >}}

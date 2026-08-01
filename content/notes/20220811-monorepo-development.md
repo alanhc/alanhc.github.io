@@ -5,6 +5,8 @@ tags:
   - frontend
   - monorepo
   - select
+aliases:
+  - /blog/20220811-monorepo-development/
 ---
 
 ## Ref

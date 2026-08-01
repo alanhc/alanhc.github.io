@@ -2,6 +2,8 @@
 title: '實作markdown section link'
 date: '2023-08-18'
 tag: ["blog"]
+aliases:
+  - /blog/20230818-markdown-section-link/
 ---
 ## Toc部分
 

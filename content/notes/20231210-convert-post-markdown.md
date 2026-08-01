@@ -5,6 +5,8 @@ tags:
   - markdown
 up:
   - "[[tools]]"
+aliases:
+  - /blog/20231210-convert-post-markdown/
 ---
 ## medium
 https://github.com/dtesler/medium-to-markdown

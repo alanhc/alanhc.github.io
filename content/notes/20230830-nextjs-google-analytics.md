@@ -2,6 +2,8 @@
 title: "加入GA"
 date: "2023-08-30"
 tag: ["nextjs", "blog", "seo"]
+aliases:
+  - /blog/20230830-nextjs-google-analytics/
 ---
 
 https://analytics.google.com/analytics/web/ 裡面 拿到GA_MEASUREMENT_ID應該會是`G-{...}`

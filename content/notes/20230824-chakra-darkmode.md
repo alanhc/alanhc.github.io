@@ -2,6 +2,8 @@
 title: "部落格暗黑模式"
 date: "2023-08-24"
 tag: ["blog", "chakra ui"]
+aliases:
+  - /blog/20230824-chakra-darkmode/
 ---
 
 1. 新增 theme.ts

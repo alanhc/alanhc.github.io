@@ -7,6 +7,8 @@ tags:
 updated: 2024-02-12
 up:
   - "[[工作]]"
+aliases:
+  - /blog/20240212-linkedin-private-api/
 ---
 思路：先用playwright 取得cookies，觀察network直接打API
 

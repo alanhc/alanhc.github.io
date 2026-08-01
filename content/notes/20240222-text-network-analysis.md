@@ -7,6 +7,8 @@ tags:
 updated: 2024-02-22
 up:
   - "[[nlp]]"
+aliases:
+  - /blog/20240222-text-network-analysis/
 ---
 - 文字清理（去除符號、轉小寫）
 - 依據詞頻拆分關鍵字網路

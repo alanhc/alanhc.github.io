@@ -4,6 +4,8 @@ date: 2023-09-07
 tags:
   - mobile
   - react-native
+aliases:
+  - /blog/20230907-react-native/
 ---
 - 網路編輯器：https://snack.expo.dev/
 - CocoaPods：ios 的套件管理

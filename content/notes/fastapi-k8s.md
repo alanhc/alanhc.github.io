@@ -5,6 +5,8 @@ tags:
   - kubernetes
 updated: 2024-07-17
 up:
+aliases:
+  - /blog/fastapi-k8s/
 ---
 ![[Pasted image 20240717010914.png]]
 ```

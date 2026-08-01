@@ -5,6 +5,8 @@ tags:
   - driver
 updated: 2024-10-11
 up:
+aliases:
+  - /blog/ubuntu-wifi%E7%B6%B2%E5%8D%A1%E6%8A%93%E4%B8%8D%E5%88%B0/
 ---
 
 ## Ref

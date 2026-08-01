@@ -7,6 +7,8 @@ tags:
 updated: 2024-01-22
 up:
   - "[[tools]]"
+aliases:
+  - /blog/20240122-ntu-cool-video-download/
 ---
 
 ## Ref

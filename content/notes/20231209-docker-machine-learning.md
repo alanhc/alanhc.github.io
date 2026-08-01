@@ -6,6 +6,8 @@ tags:
   - machine_learning
 up:
   - "[[ml]]"
+aliases:
+  - /blog/20231209-docker-machine-learning/
 ---
 ## Docker
 `docker search tensorflow`

@@ -7,6 +7,8 @@ tags:
 updated: 2024-06-26
 up:
   - "[[cross-platform]]"
+aliases:
+  - /blog/python%E4%BD%BF%E7%94%A8pyinstaller%E8%A3%BD%E4%BD%9C%E6%A1%8C%E9%9D%A2%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/
 ---
 - 先看 File structure:
 ![](https://i.imgur.com/HGlGJij.png)

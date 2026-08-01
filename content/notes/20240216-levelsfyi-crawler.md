@@ -6,6 +6,8 @@ tags:
 updated: 2024-02-17
 up:
   - "[[工作]]"
+aliases:
+  - /blog/20240216-levelsfyi-crawler/
 ---
 ## Background
 - from a [stack overflow question](https://stackoverflow.com/questions/76496884/how-levels-fyi-is-encoding-the-api-response) , level.fyi encrypt its response

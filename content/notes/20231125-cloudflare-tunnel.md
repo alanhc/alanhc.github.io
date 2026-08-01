@@ -4,6 +4,8 @@ date: 2023-11-25
 tags:
   - self-host
   - cloudflare
+aliases:
+  - /blog/20231125-cloudflare-tunnel/
 ---
 # 方式一 使用 GUI
 ## run service

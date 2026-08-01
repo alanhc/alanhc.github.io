@@ -2,6 +2,8 @@
 title: "加入import別名讓import更好看"
 date: "2023-08-26"
 tag: ["blog"]
+aliases:
+  - /blog/20230826-import-alias/
 ---
 ## 設定
 - tsconfig.json

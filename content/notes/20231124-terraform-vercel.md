@@ -4,6 +4,8 @@ date: 2023-11-24
 tags:
   - terraform
   - vercel
+aliases:
+  - /blog/20231124-terraform-vercel/
 ---
 vercel token: https://vercel.com/guides/how-do-i-use-a-vercel-api-access-token
 npx create-next-app nextjs-terraform-demo
