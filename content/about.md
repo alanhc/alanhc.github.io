@@ -1,6 +1,7 @@
 ---
 title: About
 type: about
+description: "Alan Tseng — embedded platform engineer working on OpenBMC server firmware and Android SoC bring-up, with a background in performance profiling, provisioning automation, and AI agent tooling."
 ---
 
 ## Contact

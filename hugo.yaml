@@ -1,5 +1,7 @@
 # Hugo configuration file
-title: alanhc's blog
+# title feeds every page's <title> and the navbar. It was "alanhc's blog",
+# which framed the whole site as a personal blog rather than a portfolio.
+title: Alan Tseng
 baseURL: https://alanhc.github.io/
 
 
@@ -73,6 +75,20 @@ menu:
         icon: linkedin
 
 params:
+  # SEO. Hextra reads these specific keys:
+  #   params.description -> <meta name="description"> on the home page, and
+  #                         og:description for any page with no own description
+  #   params.title       -> og:site_name (this is params.title, NOT the
+  #                         top-level title above -- they are different keys)
+  #   params.social      -> twitter:site, via Hugo's internal twitter_cards
+  # params.images would drive og:image / twitter:image, but the site has no
+  # social preview image yet, so twitter:card stays "summary" rather than
+  # "summary_large_image". Add an image to static/ and list it here to fix.
+  title: Alan Tseng
+  description: "Embedded platform engineer bringing up silicon at register level — device tree, I2C/PMBus drivers, cross-debugging — across server BMC and Android SoC platforms, and automating that work with AI agents."
+  social:
+    twitter: alanhc316
+
   navbar:
     displayTitle: true
     displayLogo: false
