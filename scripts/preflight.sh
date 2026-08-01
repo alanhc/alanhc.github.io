@@ -51,11 +51,20 @@ check_hugo_version_consistency() {
 }
 
 # --- Check 2: 建置產出斷言 ----------------------------------------------
-# 用下限而非精確值：內容只會成長，所以這些數字幾乎不用維護，
-# 但 taxonomies 壞掉那種崩塌（tags 直接歸零）一定擋得住。
-MIN_TAG_PAGES=100      # 2026-07-14 實測 123
-MIN_BLOG_POSTS=180     # 2026-07-14 實測 214
-MIN_TOTAL_HTML=300     # 2026-07-14 實測 350
+# 用下限而非精確值，擋的是「崩塌」：taxonomies 壞掉導致 tags 歸零、
+# 或整個 section 意外消失。不是用來偵測刻意的內容調整。
+#
+# 2026-08-02 重新 baseline。原本的下限（tag 100 / blog 180 / total 300）
+# 是照改版前的實測值訂的，而這次改版刻意把 141 篇課程與刷題筆記轉成
+# draft、把 68 篇短筆記移到 /notes/，產出本來就會大幅下降。
+# 下限跟著實測值重訂，仍保留偵測崩塌的能力（各留約 10-15% 餘裕）。
+#
+# 注意 blog/ 底下現在混了兩種東西：13 篇實際文章，加上 68 個從舊
+# /blog/ 網址指到 /notes/ 的 alias 轉址頁，合計 81 個目錄。
+MIN_TAG_PAGES=70       # 2026-08-02 實測 82
+MIN_BLOG_POSTS=70      # 2026-08-02 實測 81（13 篇文章 + 68 個 alias）
+MIN_NOTES_POSTS=60     # 2026-08-02 實測 68
+MIN_TOTAL_HTML=220     # 2026-08-02 實測 246
 
 count_dirs() {
   find "$1" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l | tr -d ' '
@@ -69,14 +78,15 @@ check_build_output() {
   fi
 
   local p
-  for p in index.html blog/index.html projects/index.html \
+  for p in index.html blog/index.html notes/index.html projects/index.html \
            docs/index.html tags/index.html; do
     [[ -f "$PUBLIC_DIR/$p" ]] || fail "建置產出：缺少關鍵頁面 ${p}"
   done
 
-  local tags blog total
+  local tags blog notes total
   tags=$(count_dirs "$PUBLIC_DIR/tags")
   blog=$(count_dirs "$PUBLIC_DIR/blog")
+  notes=$(count_dirs "$PUBLIC_DIR/notes")
   total=$(find "$PUBLIC_DIR" -name '*.html' -type f | wc -l | tr -d ' ')
 
   if (( tags < MIN_TAG_PAGES )); then
@@ -87,7 +97,13 @@ check_build_output() {
   fi
 
   if (( blog < MIN_BLOG_POSTS )); then
-    fail "建置產出：blog 文章數 ${blog}，低於下限 ${MIN_BLOG_POSTS}"
+    fail "建置產出：blog 目錄數 ${blog}，低於下限 ${MIN_BLOG_POSTS}
+  → 含實際文章與舊網址的 alias 轉址頁。數字掉下來通常代表
+    alias 沒產生（既有連結會全部失效），或有文章被誤設 draft。"
+  fi
+
+  if (( notes < MIN_NOTES_POSTS )); then
+    fail "建置產出：notes 文章數 ${notes}，低於下限 ${MIN_NOTES_POSTS}"
   fi
 
   if (( total < MIN_TOTAL_HTML )); then
