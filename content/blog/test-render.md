@@ -2,6 +2,7 @@
 title: test
 date: 2000-01-01
 tags:
+draft: true
 ---
 # h1
 text text text text text text text text text text text text text text text text text text text text text text 

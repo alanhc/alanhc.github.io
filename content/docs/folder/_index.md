@@ -5,6 +5,7 @@ prev: docs/first-page
 next: docs/folder/leaf
 sidebar:
   open: true
+draft: true
 ---
 
 Pages can be organized into folders.
