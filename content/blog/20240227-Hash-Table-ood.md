@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-27
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 設計一個使用chaining（Link List）處理碰撞問題的hash table

@@ -4,6 +4,7 @@ date: 2023-10-31
 tags:
   - ai
   - llm
+draft: true
 ---
 ### 兩個很重要的領域 監督式學習及生成式AI
 ![](https://i.imgur.com/Wvb36Eh.png)

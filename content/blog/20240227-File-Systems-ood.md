@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-27
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 解釋如何設計in-memory的DS 及 演算法，請可能舉例

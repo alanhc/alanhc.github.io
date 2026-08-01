@@ -6,6 +6,7 @@ tags:
   - llm
   - software_engineer
   - course
+draft: true
 ---
 ## TL;DR
 LLM 可以幫助程式設計師包含：改進現有程式碼、簡化code、寫測試、優化程式除錯及解釋程式碼，使用流程為(1)建立prompt (2)取得結果 (3) 輸出結果，為了程式重複使用，會使用template機制讓呼叫比較簡單。

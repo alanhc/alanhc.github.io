@@ -6,6 +6,7 @@ tags:
 updated: 2024-01-25
 up:
   - "[[system design]]"
+draft: true
 ---
 ## Question
 設計一個簡單搜尋引擎的webserver，假設系統有100台機器負責回應queries，有個昂貴的function，processSearch(string query)，機器的選擇是隨機的，同一台機器回應可能會不一樣，請設計最相關queries的caching機制，請解釋當資料改變時如何更新cache

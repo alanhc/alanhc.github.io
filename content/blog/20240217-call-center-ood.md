@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-17
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 有一個有三種level員工的call center，respondent, manager, director。當電話進來時，要assign給空閒的respondent，如果他不能回答，必須轉介給manager，也不行就往上給director，設計一個給這問題的class及資料結構，實作一個dispathchCall()指派電話給低一個可用的員工

@@ -4,6 +4,7 @@ date: 2023-11-02
 tags:
   - ai
   - llm
+draft: true
 ---
 ## What is Generative AI
 ![](https://i.imgur.com/Q877q0W.png)

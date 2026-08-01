@@ -4,6 +4,7 @@ date: 2023-11-16
 tags:
   - llm
   - vector_database
+draft: true
 ---
 RAG -> vector database
  

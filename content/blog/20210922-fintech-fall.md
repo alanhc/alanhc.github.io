@@ -4,6 +4,7 @@ date: 2023-11-13
 tags:
   - fintech
   - course
+draft: true
 ---
 ## Links
 - http://mirlab.org/jang/courses/fintech/schedule.asp

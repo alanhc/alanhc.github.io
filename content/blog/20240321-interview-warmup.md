@@ -8,6 +8,7 @@ tags:
 updated: 2024-03-21
 up:
   - "[[projects]]"
+draft: true
 ---
 ## Backgrounds
 I just got rejected by a big tech company. In order to improve my ability to explain interview questions effectively in English, I'm designing an interview warmup tool using LLM and RAG technologies.

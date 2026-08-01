@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-11
 up:
   - "[[system design]]"
+draft: true
 ---
 ## Question
 

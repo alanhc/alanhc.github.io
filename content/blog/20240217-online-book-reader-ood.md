@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-17
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 設計線上書本閱讀器的資料結構

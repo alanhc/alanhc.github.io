@@ -4,6 +4,7 @@ date: 2023-11-04
 tags:
   - cosmos
   - blockchain
+draft: true
 ---
 
 [Ignite CLI](https://ignite.com/cli): [它是Cosmos SDK](https://github.com/cosmos/cosmos-sdk)的開發人員友善介面

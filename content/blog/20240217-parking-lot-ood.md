@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-17
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 設計一個根據object-oriented principles的parking lot（停車場）

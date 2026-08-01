@@ -4,6 +4,7 @@ date: 2023-10-28
 tags:
   - llm
   - course
+draft: true
 ---
 ## Introduction
 ## Language Models, the Chat Format and Tokens

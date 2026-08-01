@@ -2,6 +2,7 @@
 title: 'erc 1155 合約'
 date: '2023-01-08'
 tag: ['notes', 'solidity']
+draft: true
 ---
 ## ERC 721
 ```solidity

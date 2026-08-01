@@ -7,6 +7,7 @@ tags:
 updated: 2024-01-22
 up:
   - "[[英文]]"
+draft: true
 ---
 [Voice Control for ChatGPT](https://chromewebstore.google.com/detail/voice-control-for-chatgpt/eollffkcakegifhacjnlnegohfdlidhn)
 
