@@ -67,7 +67,7 @@ locally, driving build → flash → boot verification, and walking new-chip por
 checklists.
 
 ### Embedded Software Engineer @ Wiwynn
-_Wiwynn Corporation, Dec 2024 – 2025 · BMC Firmware_
+_Wiwynn Corporation, Dec 2024 – Sep 2025 · BMC Firmware_
 
 OpenBMC firmware on hyperscaler server platforms — C/C++ drivers over I2C/PMBus,
 Yocto builds, and the D-Bus/systemd services above them. Debugged production BMCs
