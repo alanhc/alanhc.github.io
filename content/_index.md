@@ -1,20 +1,26 @@
 ---
 title: Alan Tseng
 toc: true
-description: "Embedded platform engineer. I bring up other people's silicon at register level — device tree, I2C/PMBus drivers, cross-debugging — across server BMC and Android SoC platforms, and automate that work with AI agents."
+description: "Embedded software engineer using AI agents to speed up firmware development. Register-level driver and debugging work on OpenBMC servers, platform and automation work on Android — three platform stacks in two years."
 ---
 
-I bring up other people's silicon at register level — device tree, I2C/PMBus
-drivers, cross-debugging — and I automate that work with AI agents.
+I'm an embedded software engineer who uses AI agents to make firmware work go
+faster.
 
-The same bring-up loop runs on server BMCs and on Android SoCs. The register map
-changes, the vendor changes, the debugger transport changes; the problem does
-not. Getting a chip to respond, proving it responds correctly, and then making
-the next engineer's turn of that loop cheaper is one job, and I do it on either
-side of the fence.
+Rack provisioning at Pegatron, OpenBMC firmware at Wiwynn, Android platform work
+at MediaTek — three platforms in two years, each with its own toolchain, its own
+debugger, and its own definition of "it booted". I don't think that's a scattered
+résumé; I think getting productive on unfamiliar hardware quickly is the skill,
+and I've had to do it repeatedly rather than talk about it.
 
-The automating half is not new for me. It started with rack-scale provisioning
-and has since moved up the stack into firmware development itself.
+The deepest register-level work is on the server side: I2C/PMBus drivers, device
+tree, and cross-machine debugging with gdbserver, live-attach and core dumps,
+which I presented at COSCUP 2025. On the Android side the leverage has been
+automation — agent skills that take the repetitive half of platform work off the
+critical path.
+
+That automation instinct isn't new. It started with rack-scale provisioning and
+has since moved up into firmware development itself.
 
 ## Selected Projects
 
@@ -60,11 +66,9 @@ and has since moved up the stack into firmware development itself.
 ### Embedded Software Engineer @ MediaTek
 _MediaTek Corporation, 2025 – Present_
 
-Android SoC platform bring-up: device tree configuration, low-speed interface
-drivers, and cross-debugging on new silicon. Built AI agent skills that automate
-the repetitive half of the job — pulling Gerrit changes and validating them
-locally, driving build → flash → boot verification, and walking new-chip porting
-checklists.
+Android platform work. Built AI agent skills that automate the repetitive half
+of the job — pulling Gerrit changes and validating them locally, driving
+build → flash → boot verification, and walking new-chip porting checklists.
 
 ### Embedded Software Engineer @ Wiwynn
 _Wiwynn Corporation, Dec 2024 – Sep 2025 · BMC Firmware_

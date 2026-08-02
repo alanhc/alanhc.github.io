@@ -1,6 +1,6 @@
 ---
 title: Projects
-description: "Selected work in embedded platform engineering: agent security architecture, firmware development automation, OpenBMC debugging, provisioning at rack scale, and CPU-side LLM inference analysis."
+description: "Selected embedded software work: agent security architecture, firmware development automation, OpenBMC debugging, provisioning at rack scale, and CPU-side LLM inference analysis."
 toc: true
 layout: wide
 ---
@@ -8,7 +8,7 @@ layout: wide
 <div class="hx:mt-4"></div>
 
 <p class="hx:mb-12 hx:text-center hx:text-lg hx:text-gray-500 hx:dark:text-gray-400">
-Bringing up silicon at register level, and automating the loop around it.
+Register-level firmware work, and the automation built around it.
 </p>
 
 {{< cards >}}

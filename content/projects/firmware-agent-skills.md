@@ -46,8 +46,8 @@ from rack deployment into firmware development itself.
 
 ## Result
 
-The repetitive half of platform bring-up runs unattended up to the points where
-a human genuinely needs to decide, and failures surface at the step that failed
+The repetitive half of platform work runs unattended up to the points where a
+human genuinely needs to decide, and failures surface at the step that failed
 rather than at the end.
 
 **TODO:** add measured numbers — turnaround time before and after, and the
