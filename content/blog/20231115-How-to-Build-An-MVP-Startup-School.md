@@ -4,6 +4,7 @@ date: 2023-11-15
 tags:
   - 創業
   - mvp
+draft: true
 ---
 16:52
 twich 創辦人（Michael Seibel）

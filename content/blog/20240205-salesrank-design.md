@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-05
 up:
   - "[[system design]]"
+draft: true
 ---
 ## Question
 設計一個有多類別的產品ranking網站

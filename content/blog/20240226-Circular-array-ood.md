@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-26
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 實作CircularArray class可以有效翻轉array like  data structure，這個class需使用generic type(template)，且支援iter notaion（obj o: circularArray）

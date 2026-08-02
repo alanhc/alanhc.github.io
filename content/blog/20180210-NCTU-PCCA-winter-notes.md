@@ -3,6 +3,7 @@ title: 20180210-NCTU-PCCA-winter-notes
 date: 2018-02-10
 tags:
   - competitive_programming
+draft: true
 ---
 # NCTU PCCA winter
 

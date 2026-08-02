@@ -4,6 +4,7 @@ date: 2023-10-26
 tags:
   - llm
   - course
+draft: true
 ---
 ## Introduction
 ### 兩種LLM模型

@@ -6,6 +6,7 @@ tags:
 updated: 2024-02-19
 up:
   - "[[ood]]"
+draft: true
 ---
 ## Question
 - 請解釋你會怎麼設計一個chat server，請說明你會怎麼設計Backend Component的細節、Class及Method，可能需要解決最困難的問題是什麼

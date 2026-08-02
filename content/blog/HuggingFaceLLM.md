@@ -5,6 +5,7 @@ tags:
 updated: 2024-07-10
 up:
   - "[[llm]]"
+draft: true
 ---
 確認有 Hugging face token，記得要有read權限
 - `run.py`

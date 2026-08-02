@@ -2,6 +2,7 @@
 title: '在solana上mint NFT'
 date: '2022-12-28'
 tag: ['notes', 'solana']
+draft: true
 ---
 1. 下載 solana cli: `sh -c "$(curl -sSfL https://release.solana.com/v1.14.11/install)"`
 2. 新增帳號 `solana-keygen new --outfile ~/.config/solana/devnet.json`

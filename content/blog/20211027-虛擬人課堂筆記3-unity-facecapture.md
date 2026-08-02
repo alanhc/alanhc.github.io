@@ -5,6 +5,7 @@ tags:
   - unity
   - medium
   - select
+draft: true
 ---
 
 去上禮拜[ReadyPlayerMe](https://readyplayer.me/)下載glb模型檔

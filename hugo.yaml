@@ -1,5 +1,7 @@
 # Hugo configuration file
-title: alanhc's blog
+# title feeds every page's <title> and the navbar. It was "alanhc's blog",
+# which framed the whole site as a personal blog rather than a portfolio.
+title: Alan Tseng
 baseURL: https://alanhc.github.io/
 
 
@@ -39,37 +41,54 @@ markup:
 # collapse onto 1 and 2 and ties get broken alphabetically instead.
 menu:
   main:
-    - name: Blog
-      pageRef: /blog
-      weight: 1
     - name: Projects
       pageRef: /projects
+      weight: 1
+    - name: Blog
+      pageRef: /blog
       weight: 2
+    - name: Notes
+      pageRef: /notes
+      weight: 3
     - name: Home ↗
       url: "https://alanhc.github.io"
-      weight: 3
+      weight: 4
     - name: CV ↗
       url: "https://alanhc.github.io/cv.pdf"
-      weight: 4
+      weight: 5
     - name: Contact ↗
       url: "mailto:alan.tseng.cs@gmail.com"
-      weight: 5
-    - name: Search
       weight: 6
+    - name: Search
+      weight: 7
       params:
         type: search
     - name: GitHub
-      weight: 7
+      weight: 8
       url: "https://github.com/alanhc"
       params:
         icon: github
     - name: LinkedIn
-      weight: 8
+      weight: 9
       url: "https://www.linkedin.com/in/alanhc316/"
       params:
         icon: linkedin
 
 params:
+  # SEO. Hextra reads these specific keys:
+  #   params.description -> <meta name="description"> on the home page, and
+  #                         og:description for any page with no own description
+  #   params.title       -> og:site_name (this is params.title, NOT the
+  #                         top-level title above -- they are different keys)
+  #   params.social      -> twitter:site, via Hugo's internal twitter_cards
+  # params.images would drive og:image / twitter:image, but the site has no
+  # social preview image yet, so twitter:card stays "summary" rather than
+  # "summary_large_image". Add an image to static/ and list it here to fix.
+  title: Alan Tseng
+  description: "Embedded software engineer using AI agents to speed up firmware development. Register-level driver and debugging work on OpenBMC servers, platform and automation work on Android."
+  social:
+    twitter: alanhc316
+
   navbar:
     displayTitle: true
     displayLogo: false

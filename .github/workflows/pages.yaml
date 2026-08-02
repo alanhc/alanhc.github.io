@@ -1,9 +1,17 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+# Builds the Hugo site, gates it on preflight + link checking, and deploys to
+# GitHub Pages. Pull requests run the build and both gates but never deploy --
+# see the `if:` guards on the upload step and the deploy job.
+name: Build and deploy Hugo site to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
+    branches: ["main"]
+
+  # Validate pull requests too. Without this, preflight.sh and lychee only ever
+  # ran after merge, so a PR could not be verified before it landed -- broken
+  # links and a failing build were only discovered on main.
+  pull_request:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -15,11 +23,14 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Production deployments keep the original behaviour: one at a time, never
+# cancelled, so a deploy always runs to completion.
+# Pull requests get their own group per PR and DO cancel superseded runs --
+# otherwise pushing twice to a PR would queue a second full build behind the
+# first, and PR validation would also serialise against production deploys.
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: pages-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 # Default to bash
 defaults:
@@ -67,13 +78,18 @@ jobs:
           # 所以外部網站掛掉不會造成假紅燈。
           args: --offline --no-progress --root-dir "$(pwd)/public" './public/**/*.html'
           fail: true
+      # Only needed for deployment, and a PR must not produce a deployable
+      # artifact -- the build above plus the two gates are the whole point of
+      # running this on a pull request.
       - name: Upload artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  # Deployment job
+  # Deployment job. Skipped entirely on pull requests.
   deploy:
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

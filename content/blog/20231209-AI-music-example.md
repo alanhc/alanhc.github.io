@@ -6,6 +6,7 @@ tags:
   - music
 up:
   - "[[ml]]"
+draft: true
 ---
 AI 音樂風格轉換太酷了
 [Frank Sinatra - A Cruel Angel's Thesis](https://youtu.be/IM_EDpvY4vA?si=jrhDvSM1wWdcnZgG)

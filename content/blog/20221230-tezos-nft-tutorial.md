@@ -2,6 +2,7 @@
 title: '使用smartpy撰寫tezos的nft程式'
 date: '2022-12-30'
 tag: ['notes', 'tezos']
+draft: true
 ---
 ## 撰寫nft合約
 - 到 [smartpy ide](https://smartpy.io/ide) 輸入

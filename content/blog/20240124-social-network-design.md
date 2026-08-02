@@ -4,6 +4,7 @@ date: 2024-01-24
 tags:
   - system_design
 updated: 2024-01-24
+draft: true
 ---
 ## Question
  如何設計給Linkedin、Facebook等公司可以處理非常大量資料的data structure？請說明如何設計計算兩個人的最短距離的 (e.g. src->B-C->dst) 演算法

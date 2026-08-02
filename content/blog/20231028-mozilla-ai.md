@@ -5,6 +5,7 @@ tags:
   - ai
   - llm
   - guide
+draft: true
 ---
 有涵蓋LLM，由淺入深，有colab實作，還不錯
 

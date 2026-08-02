@@ -3,6 +3,7 @@ title: Showcase
 description: "Open source projects powered by Hextra"
 toc: false
 layout: wide
+draft: true
 ---
 
 <div class="hx:mt-4"></div>

@@ -6,6 +6,7 @@ tags:
 updated: 2024-01-25
 up:
   - "[[system design]]"
+draft: true
 ---
 ## Question
 再設計爬蟲時，如何避免無限迴圈

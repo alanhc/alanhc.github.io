@@ -5,6 +5,7 @@ tags:
   - recursion
 up:
   - "[[coding]]"
+draft: true
 ---
 [#心得](https://www.facebook.com/hashtag/%E5%BF%83%E5%BE%97?__eep__=6&__cft__[0]=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe31FV1uV2iNgYYQeBm-PnO8eu5EHsA6Egx3Jf6DZz4&__tn__=*NK-R) [#除錯](https://www.facebook.com/hashtag/%E9%99%A4%E9%8C%AF?__eep__=6&__cft__[0]=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe31FV1uV2iNgYYQeBm-PnO8eu5EHsA6Egx3Jf6DZz4&__tn__=*NK-R) [#遞迴](https://www.facebook.com/hashtag/%E9%81%9E%E8%BF%B4?__eep__=6&__cft__[0]=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe31FV1uV2iNgYYQeBm-PnO8eu5EHsA6Egx3Jf6DZz4&__tn__=*NK-R) [#等比數列](https://www.facebook.com/hashtag/%E7%AD%89%E6%AF%94%E6%95%B8%E5%88%97?__eep__=6&__cft__[0]=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe31FV1uV2iNgYYQeBm-PnO8eu5EHsA6Egx3Jf6DZz4&__tn__=*NK-R) [#PART1](https://www.facebook.com/hashtag/part1?__eep__=6&__cft__[0]=AZWzwA7_EE8Lu_6n-_UF_2L4gT4ATh_NW2y2_m8yqNOtrKsUC_GDq6nlu87zIRv-ovrCT33tbUYmA9s_WInaULKkqTDB6N4ewNAHsu3o140la4X_irZgzHZdh2WphWhGBgfph1T33dtKfJ9Mq8R4wO4Pqe31FV1uV2iNgYYQeBm-PnO8eu5EHsA6Egx3Jf6DZz4&__tn__=*NK-R)
 
