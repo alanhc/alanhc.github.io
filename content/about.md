@@ -1,22 +1,35 @@
 ---
 title: About
 type: about
-description: "Alan Tseng — embedded platform engineer working on OpenBMC server firmware and Android SoC bring-up, with a background in performance profiling, provisioning automation, and AI agent tooling."
+description: "Alan Tseng — embedded software engineer using AI agents to speed up firmware development, with register-level driver and debugging work on OpenBMC servers and platform work on Android."
 ---
 
 ## Contact
 Hello! Thank you for reaching out. If you would like to contact me, please send an email to [alan.tseng.cs@gmail.com](mailto:alan.tseng.cs@gmail.com). 
 ## Summary
-Embedded systems engineer with hands-on experience in BMC firmware development (OpenBMC/Yocto), cloud-scale
-server provisioning (Kubernetes), and low-level Linux debugging. Proven ability to bridge kernel-space and user-space,
-automate hardware validation workflows, and optimize system services using Python, D-Bus, and systemd. Strong
-background in performance profiling (perf, uftrace), device tree configuration, and IPMI/Redfish protocol stacks.
-Passionate about open-source projects and cross-domain collaboration, with industry experience from hyperscaler
-ODMs and top tech companies (Wiwynn, Pegatron, LINE).
+Embedded software engineer who uses AI agents to speed up firmware development.
+Register-level work is on the server side: C/C++ drivers over I2C/PMBus, device tree, Yocto builds, and the
+D-Bus/systemd services above them, plus cross-machine debugging of production BMCs with gdbserver, live-attach
+and core dump analysis — a workflow I presented at COSCUP 2025. On Android platform work the leverage has been
+automation: agent skills that take the repetitive half of the job off the critical path.
+Three platform stacks in two years — rack provisioning, OpenBMC firmware, Android platform — each with its own
+toolchain and debugger. Getting productive on unfamiliar hardware quickly is the part I'd point at.
+Also comfortable with performance profiling (perf, uftrace) and IPMI/Redfish protocol stacks, and interested in
+open-source work and cross-domain collaboration.
 ## Experience
+- **MediaTek Corporation**
+- **Embedded Software Engineer**  _Taiwan, 2025 – Present_
+	- `Android`, `AOSP`, `Platform`, `Gerrit`, `Build/Flash Automation`, `AI Agent`, `Embedded Systems`
+- Built AI agent skills that automate repetitive Android platform work: pulling Gerrit changes and validating them
+locally, driving build → flash → boot verification, and walking new-chip porting checklists.
 - **Wiwynn Corporation**
-- **Embedded Software Engineer (BMC)**  _New Taipei City, Taiwan, Dec 2024 – Present_
+- **Embedded Software Engineer (BMC)**  _New Taipei City, Taiwan, Dec 2024 – Sep 2025_
 	- `C/C++`, `Device Driver`, `Firmware`, `BMC`, `OpenBMC`, `Yocto`, `Gnu debug`, `Embedded Systems`, `Redfish`, `low-speed interface`, `Buildroot`, `IPMI`, `D-Bus`, `systemd`
+- Developed OpenBMC firmware for hyperscaler server platforms: C/C++ drivers over I2C/PMBus, device tree
+configuration, and Yocto image builds.
+- Debugged production BMCs across machines using gdbserver, live-attach to running daemons, and core dump
+analysis, avoiding the rebuild-and-reflash cycle for failures that only reproduce on real hardware.
+- Presented [Using GDB Debug in OpenBMC](https://web.archive.org/web/20250703021811/https://pretalx.coscup.org/coscup-2025/talk/EXYUKY/) at COSCUP 2025. [slides](/OpenBMC%20Cross-Debugging%20with%20GDB.pdf)
 - **Pegatron Corporation**
 - **Software Engineer (Server)** _Taipei City, Taiwan, Sep 2024 – Dec 2024_
 	- `Kubernetes`, `Bash`, `PXE`, `Networking`, `Linux`, `Provisioning`, `ARP`, `DHCP`, `TFTP`, `Shell Scripting`, `Kubeadm`, `Helm`, `Server Boot`, `Rack Server Testing`
@@ -325,6 +338,8 @@ for more [projects](https://alanhc.github.io/projects)[Github](https://github.co
 - MakeNTU hackathon participant (2019)
 - Micro Processor App Design Contest participant Team Captain (2018, 2019) 
 ## Talks
+- Firmware Development with Agentic AI: Let the AI Run the Build, You Solve the Hard Problems (COSCUP 2026) — 韌體開發與 Agentic AI：讓 AI 跑 Build，你來解難題 [session](https://coscup.org/2026/session/TEDPF3/)
+- Using GDB Debug in OpenBMC (COSCUP 2025) [session](https://web.archive.org/web/20250703021811/https://pretalx.coscup.org/coscup-2025/talk/EXYUKY/) [slides](/OpenBMC%20Cross-Debugging%20with%20GDB.pdf)
 - Ethereum & Smart Contract (LINE Blockchain study group) (Aug 31, 2022) [slide](https://drive.google.com/file/d/1ThIOW6jPkHyEQEW5TzRNsBWWVvafFn6N/view?usp=sharing)
 - Deep Learning and Dino PoseNet (Mar 26, 2020) [youtube](https://www.youtube.com/watch?v=wFFjubze-Es) [slide](https://drive.google.com/file/d/1BfwGhYa_wm30OqORkY2uDh8avIVvRCI3/view?usp=sharing) 18 attendees, 210 views
 - Flutter Interact: Viewing Parties (Nov 21, 2019) Workshop  (Nov 28, 2019) - 29 attendees
