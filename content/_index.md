@@ -56,7 +56,7 @@ has since moved up into firmware development itself.
 
 | Date | Title | Where |
 |------|-------|-------|
-| 2026 | Agentic AI for Firmware Development | COSCUP — Taiwan |
+| 2026 | [Firmware Development with Agentic AI: Let the AI Run the Build, You Solve the Hard Problems](https://coscup.org/2026/session/TEDPF3/) <br><small>韌體開發與 Agentic AI：讓 AI 跑 Build，你來解難題</small> | COSCUP — Taiwan |
 | 2025 | [Using GDB Debug in OpenBMC](https://web.archive.org/web/20250703021811/https://pretalx.coscup.org/coscup-2025/talk/EXYUKY/) | COSCUP — Taiwan |
 
 ## Experience
