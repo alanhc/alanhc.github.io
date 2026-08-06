@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# 主站 sitemap（Hugo 產生）
+Sitemap: {{ "sitemap.xml" | absURL }}
+# TIL 子站 sitemap（另一個 repo：alanhc/til，部署在 /til/ 底下）。
+# GitHub Pages 上 robots.txt 只吃網域根目錄這一份，子路徑放的不會被讀，
+# 所以子站的 sitemap 必須在這裡宣告，Googlebot 才有 GSC 以外的發現管道。
+Sitemap: https://alanhc.github.io/til/sitemap.xml
