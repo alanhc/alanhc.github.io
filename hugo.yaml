@@ -44,32 +44,35 @@ menu:
     - name: Projects
       pageRef: /projects
       weight: 1
+    - name: Open Source
+      pageRef: /open-source
+      weight: 2
     - name: Blog
       pageRef: /blog
-      weight: 2
+      weight: 3
     - name: Notes
       pageRef: /notes
-      weight: 3
+      weight: 4
     - name: Home ↗
       url: "https://alanhc.github.io"
-      weight: 4
+      weight: 5
     - name: CV ↗
       url: "https://alanhc.github.io/cv.pdf"
-      weight: 5
+      weight: 6
     - name: Contact ↗
       url: "mailto:alan.tseng.cs@gmail.com"
-      weight: 6
-    - name: Search
       weight: 7
+    - name: Search
+      weight: 8
       params:
         type: search
     - name: GitHub
-      weight: 8
+      weight: 9
       url: "https://github.com/alanhc"
       params:
         icon: github
     - name: LinkedIn
-      weight: 9
+      weight: 10
       url: "https://www.linkedin.com/in/alanhc316/"
       params:
         icon: linkedin

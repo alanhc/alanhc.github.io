@@ -52,6 +52,23 @@ has since moved up into firmware development itself.
   >}}
 {{< /cards >}}
 
+## Open Source
+
+Upstream work on boot firmware, platform security and RISC-V, all merged:
+
+- **[u-root](https://github.com/u-root/u-root)** (LinuxBoot) — riscv64 kexec
+  support, a `reboot` command and integration test fixes.
+- **[AOSP](https://android-review.googlesource.com/q/owner:alan.tseng.cs@gmail.com+status:merged)**
+  — Android Generic Bootloader QEMU flows, including riscv64, and Android
+  Common Kernel documentation fixes.
+- **[DMTF libspdm](https://github.com/DMTF/libspdm/pull/3816)** — a fix for
+  half-applied SPDM key updates when key derivation fails.
+- **[llama.cpp](https://github.com/ggml-org/llama.cpp/pull/28479)** — a SpacemiT
+  X60 matrix kernel that took LLM prefill from 10.7 to 95.3 tokens/s.
+
+The full list, with links to every change, is on the
+[Open Source](/open-source) page.
+
 ## Talks
 
 | Date | Title | Where |
