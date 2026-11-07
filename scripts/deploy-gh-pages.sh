@@ -76,12 +76,20 @@ say "Gate 1/2：preflight"
 ./scripts/preflight.sh ./public
 
 # --- Gate 2: 內部連結 --------------------------------------------------
-say "Gate 2/2：內部連結（lychee --offline）"
+# 偏好 lychee（CI 跑的就是這支）；沒裝就用 scripts/linkcheck.py 代班。
+# 這道 gate 一定要有人跑：之前這裡在找不到 lychee 時只印警告就跳過，
+# 於是在沒裝 lychee 的機器上 gate 2 實際上是空的，壞連結會直接上線。
+say "Gate 2/2：內部連結"
 if command -v lychee >/dev/null; then
+  echo "使用 lychee --offline"
   lychee --offline --no-progress --root-dir "$(pwd)/public" './public/**/*.html'
+elif command -v python3 >/dev/null; then
+  echo "找不到 lychee，改用 scripts/linkcheck.py（安裝 lychee 可與 CI 完全一致：brew install lychee）"
+  python3 -I ./scripts/linkcheck.py ./public
 else
-  printf 'WARNING: 找不到 lychee，跳過連結檢查（CI 有跑這道）。\n'
-  printf '         安裝：brew install lychee\n'
+  die "連結檢查無法執行：lychee 與 python3 都找不到。
+  → 安裝任一個：brew install lychee  或  brew install python3
+    這道 gate 不會自動跳過，否則壞連結會無聲上線。"
 fi
 
 if (( DRY_RUN )); then
