@@ -1,0 +1,58 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Nx</title><link>https://alanhc.github.io/tags/nx/</link><description>Recent content in Nx on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 21 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/nx/index.xml" rel="self" type="application/rss+xml"/><item><title>Upgrade nx repo to react 18</title><link>https://alanhc.github.io/notes/20220721-upgrade-nx-repo-to-react-18/</link><pubDate>Thu, 21 Jul 2022 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20220721-upgrade-nx-repo-to-react-18/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;更新@nrwl/react 到14會自動更新React到18&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nx.dev/guides/react-18#react-18-migration"target="_blank" rel="noopener"&gt;https://nx.dev/guides/react-18#react-18-migration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;npx 指令：暫時使用，不global下載&lt;/li&gt;
+&lt;li&gt;更新nx
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;npx nx migrate latest &lt;/code&gt;: 尋找更新的dependencies，還沒更新任何東西
+&lt;ul&gt;
+&lt;li&gt;更新package.json&lt;/li&gt;
+&lt;li&gt;產生migrations.json&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npx nx migrate --run-migrations&lt;/code&gt;: 開始執行下載，包含npm i &lt;a href="https://nx.dev/using-nx/updating-nx"target="_blank" rel="noopener"&gt;https://nx.dev/using-nx/updating-nx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;更新chakra-ui
+&lt;ul&gt;
+&lt;li&gt;查版本https://www.npmjs.com/package/@chakra-ui/react
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://chakra-ui.com/getting-started/migration"target="_blank" rel="noopener"&gt;https://chakra-ui.com/getting-started/migration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;改package.json到最新版 （目前2.2.4)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;更新 Typescript
+&lt;ul&gt;
+&lt;li&gt;查版本https://www.npmjs.com/package/typescript&lt;/li&gt;
+&lt;li&gt;改package.json到最新版 （目前4.7.4)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;檢查
+&lt;ul&gt;
+&lt;li&gt;npx nx run app:lint&lt;/li&gt;
+&lt;li&gt;npx nx run app:build:production&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;遇到問題
+&lt;ul&gt;
+&lt;li&gt;chakra裡面的csstype下npm i沒有被下載到
+&lt;ul&gt;
+&lt;li&gt;@chakra-ui/styled-system/node_modules/csstype&lt;/li&gt;
+&lt;li&gt;改path: @chakra-ui/styled-system/node_modules/csstype ~&amp;gt; csstype&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Warning: ReactDOM.hydrate is no longer supported in React 18
+&lt;ul&gt;
+&lt;li&gt;next在版本12.1.7有解掉，
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/vercel/next.js/issues/37378"target="_blank" rel="noopener"&gt;https://github.com/vercel/next.js/issues/37378&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

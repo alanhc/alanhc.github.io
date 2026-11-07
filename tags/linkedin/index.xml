@@ -1,0 +1,360 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Linkedin</title><link>https://alanhc.github.io/tags/linkedin/</link><description>Recent content in Linkedin on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 12 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/linkedin/index.xml" rel="self" type="application/rss+xml"/><item><title>20240212-linkedin-private-api</title><link>https://alanhc.github.io/notes/20240212-linkedin-private-api/</link><pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20240212-linkedin-private-api/</guid><description>
+&lt;p&gt;思路：先用playwright 取得cookies，觀察network直接打API&lt;/p&gt;
+&lt;p&gt;先取得 geoid (地點id)&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;q_keywords&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;software engineer&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;q_location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;taiwan&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://www.linkedin.com/jobs/search?keywords=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;q_keywords&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;amp;location=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;q_location&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;amp;trk=public_jobs_jobs-search-bar_search-submit&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;html.parser&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;geo_id_inputs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;input[name=&amp;#39;geoId&amp;#39;]&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;geoid&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;geo_id_inputs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;start_n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;job_search_link&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;https://www.linkedin.com/voyager/api/voyagerJobsDashJobCards?decorationId=com.linkedin.voyager.dash.deco.jobs.search.JobSearchCardsCollection-192&amp;amp;count=25&amp;amp;q=jobSearch&amp;amp;query=(origin:JOB_SEARCH_PAGE_SEARCH_BUTTON,keywords:software%20engineer,locationUnion:(geoId:&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;geoid&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;),spellCorrectionEnabled:true)&amp;amp;start=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;start_n&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;headers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Authority&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;www.linkedin.com&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Method&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;GET&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Scheme&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Accept&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;application/vnd.linkedin.normalized+json+2.1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Accept-Encoding&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;gzip, deflate, br&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Accept-Language&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;en-US,en;q=0.9&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Cookie&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;; &amp;#34;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;=&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookies&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;()]),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;Csrf-Token&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cookies&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;JSESSIONID&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;User-Agent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;OOOO&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;&amp;#39;X-Li-Track&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;OOOO&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;session&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;job_search_link&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;後記：結果發現github有人做了 &lt;a href="https://github.com/tomquirk/linkedin-api"target="_blank" rel="noopener"&gt;linkedin api&lt;/a&gt;QQ，當作練習吧
+- &lt;a href="https://github.com/tomquirk/linkedin-api"target="_blank" rel="noopener"&gt;https://github.com/tomquirk/linkedin-api&lt;/a&gt;
+-&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;這裡有說明如何運作 &lt;a href="https://github.com/tomquirk/linkedin-api?tab=readme-ov-file#how-it-works"target="_blank" rel="noopener"&gt;https://github.com/tomquirk/linkedin-api?tab=readme-ov-file#how-it-works&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;linkedin_api&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Linkedin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;api&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Linkedin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;acc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pass&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;profile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_profile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;alanhc316&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;contact_info&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_profile_contact_info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;connections&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_profile_connections&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;username&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/linkedin-developers/linkedin-api-python-client"target="_blank" rel="noopener"&gt;官方API&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>20240209-job-insights</title><link>https://alanhc.github.io/blog/20240209-job-insights/</link><pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240209-job-insights/</guid><description>
+&lt;h1&gt;system design&lt;/h1&gt;&lt;h2&gt;1. Scope the problem&lt;span class="hx:absolute hx:-mt-20" id="1-scope-the-problem"&gt;&lt;/span&gt;
+&lt;a href="#1-scope-the-problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以知道現在有什麼工作機會、該公司位於總體的薪水級距&lt;/li&gt;
+&lt;li&gt;可以知道最近就業市場中需要的工作技能&lt;/li&gt;
+&lt;li&gt;如何讓自己更搶手、薪水更高？
+&lt;ul&gt;
+&lt;li&gt;技能vs薪水級距&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. Reasonable Assumptions&lt;span class="hx:absolute hx:-mt-20" id="2-reasonable-assumptions"&gt;&lt;/span&gt;
+&lt;a href="#2-reasonable-assumptions" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;雇主資料每天會更新一次&lt;/li&gt;
+&lt;li&gt;刪除大於半年以上的 job&lt;/li&gt;
+&lt;li&gt;高價值產業、薪水頻繁更新，其餘不一定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. Key Component&lt;span class="hx:absolute hx:-mt-20" id="3--key-component"&gt;&lt;/span&gt;
+&lt;a href="#3--key-component" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h1&gt;探索資料&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Taiwan 資料：[[20240211-taiwan-job-insights]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;全球&lt;span class="hx:absolute hx:-mt-20" id="全球"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;找地區&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/cscareerquestions/comments/12zon6k/do_most_software_engineers_eventually_make_200k/"target="_blank" rel="noopener"&gt;(reddit) Do most software engineers eventually make $200K+&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.bls.gov/oes/current/oes151252.htm"target="_blank" rel="noopener"&gt;Occupational Employment and Wages, May 2022 (bls.gov)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/cscareerquestionsEU/comments/w0kpml/arent_eu_salaries_are_too_low_compared_to_eastern/"target="_blank" rel="noopener"&gt;(reddit) Aren&amp;rsquo;t EU salaries are too low compared to Eastern European?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;全球公司產業排名&lt;span class="hx:absolute hx:-mt-20" id="全球公司產業排名"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e5%85%ac%e5%8f%b8%e7%94%a2%e6%a5%ad%e6%8e%92%e5%90%8d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/zAmZZCd.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;全球公司薪資排名&lt;span class="hx:absolute hx:-mt-20" id="全球公司薪資排名"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e5%85%ac%e5%8f%b8%e8%96%aa%e8%b3%87%e6%8e%92%e5%90%8d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/BoeEMzo.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;全球 yoe &amp;lt;= 2 的公司薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球-yoe--2-的公司薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-yoe--2-%e7%9a%84%e5%85%ac%e5%8f%b8%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Citadel&amp;rdquo;, &amp;ldquo;Nvidia&amp;rdquo;, &amp;ldquo;Hudson River Trading&amp;rdquo;, &amp;ldquo;Facebook&amp;rdquo;, &amp;ldquo;Google&amp;rdquo;, &amp;ldquo;Optiver&amp;rdquo;, &amp;ldquo;Amazon&amp;rdquo;, &amp;ldquo;Snap&amp;rdquo;, &amp;ldquo;The D. E. Shaw Group&amp;rdquo;, &amp;ldquo;Lenovo&amp;rdquo;, &amp;ldquo;Jane Street&amp;rdquo;, &amp;ldquo;Adobe&amp;rdquo;, &amp;ldquo;DoorDash&amp;rdquo;, &amp;ldquo;Snowflake&amp;rdquo;, &amp;ldquo;MongoDB&amp;rdquo;, &amp;ldquo;Pinterest&amp;rdquo;, &amp;ldquo;ByteDance&amp;rdquo;, &amp;ldquo;JPMorgan Chase&amp;rdquo;, &amp;ldquo;Apple&amp;rdquo;, &amp;ldquo;XPeng Motors&amp;rdquo;, &amp;ldquo;Goosk&amp;rdquo;, &amp;ldquo;Twitch&amp;rdquo;, &amp;ldquo;Scale AI&amp;rdquo;, &amp;ldquo;Walmart Global Tech&amp;rdquo;, &amp;ldquo;Palantir&amp;rdquo;, &amp;ldquo;Maven Securities&amp;rdquo;, &amp;ldquo;Netflix&amp;rdquo;, &amp;ldquo;Udemy&amp;rdquo;, &amp;ldquo;Stripe&amp;rdquo;, &amp;ldquo;Microsoft&amp;rdquo;, &amp;ldquo;Uber&amp;rdquo;, &amp;ldquo;Robinhood&amp;rdquo;, &amp;ldquo;The Boring Company&amp;rdquo;, &amp;ldquo;Roblox&amp;rdquo;, &amp;ldquo;Wintermute&amp;rdquo;, &amp;ldquo;Oracle&amp;rdquo;, &amp;ldquo;InnoPeak Technology&amp;rdquo;, &amp;ldquo;SpaceX&amp;rdquo;, &amp;ldquo;StubHub&amp;rdquo;, &amp;ldquo;Mailchimp&amp;rdquo;, &amp;ldquo;Rokt&amp;rdquo;, &amp;ldquo;Coinbase&amp;rdquo;, &amp;ldquo;Qualcomm&amp;rdquo;, &amp;ldquo;MNTN&amp;rdquo;, &amp;ldquo;Anduril Industries&amp;rdquo;, &amp;ldquo;Two Sigma&amp;rdquo;, &amp;ldquo;Bloomberg&amp;rdquo;, &amp;ldquo;Broadcom&amp;rdquo;, &amp;ldquo;Block&amp;rdquo;, &amp;ldquo;Epic&amp;rdquo;, &amp;ldquo;TuSimple&amp;rdquo;, &amp;ldquo;eBay&amp;rdquo;, &amp;ldquo;Salesforce&amp;rdquo;, &amp;ldquo;Bridgewater Associates&amp;rdquo;, &amp;ldquo;Marshall Wace&amp;rdquo;, &amp;ldquo;Lyft&amp;rdquo;, &amp;ldquo;Affirm&amp;rdquo;, &amp;ldquo;LinkedIn&amp;rdquo;, &amp;ldquo;Ramp&amp;rdquo;, &amp;ldquo;Australian Government&amp;rdquo;, &amp;ldquo;Samsung&amp;rdquo;, &amp;ldquo;Lucid Motors&amp;rdquo;, &amp;ldquo;ServiceNow&amp;rdquo;, &amp;ldquo;Flexport&amp;rdquo;, &amp;ldquo;SAP&amp;rdquo;, &amp;ldquo;C3.ai&amp;rdquo;, &amp;ldquo;CoreWeave&amp;rdquo;, &amp;ldquo;Tesla&amp;rdquo;, &amp;ldquo;Intel&amp;rdquo;, &amp;ldquo;Hive&amp;rdquo;, &amp;ldquo;Indeed&amp;rdquo;, &amp;ldquo;Zillow&amp;rdquo;, &amp;ldquo;Nextdoor&amp;rdquo;, &amp;ldquo;Cresta&amp;rdquo;, &amp;ldquo;Wish&amp;rdquo;, &amp;ldquo;Tableau Software&amp;rdquo;, &amp;ldquo;MetaData&amp;rdquo;, &amp;ldquo;QuantCo&amp;rdquo;, &amp;ldquo;Slack&amp;rdquo;, &amp;ldquo;Confluent&amp;rdquo;, &amp;ldquo;Peraton&amp;rdquo;, &amp;ldquo;Generate Biomedicines&amp;rdquo;, &amp;ldquo;Qualtrics&amp;rdquo;, &amp;ldquo;McKinsey&amp;rdquo;, &amp;ldquo;Atlassian&amp;rdquo;, &amp;ldquo;Millennium&amp;rdquo;, &amp;ldquo;Johnson &amp;amp; Johnson&amp;rdquo;, &amp;ldquo;ZipRecruiter&amp;rdquo;, &amp;ldquo;Arista Networks&amp;rdquo;, &amp;ldquo;Yahoo&amp;rdquo;, &amp;ldquo;Nutanix&amp;rdquo;, &amp;ldquo;Nike&amp;rdquo;, &amp;ldquo;Asana&amp;rdquo;, &amp;ldquo;Electronic Arts&amp;rdquo;, &amp;ldquo;Datadog&amp;rdquo;, &amp;ldquo;Goldman Sachs&amp;rdquo;, &amp;ldquo;Twitter&amp;rdquo;, &amp;ldquo;Cue Health&amp;rdquo;, &amp;ldquo;Cisco&amp;rdquo;, &amp;ldquo;Booz Allen Hamilton&amp;rdquo;, &amp;ldquo;Intuit&amp;rdquo;, &amp;ldquo;XTX Markets&amp;rdquo;, &amp;ldquo;Alithya&amp;rdquo;, &amp;ldquo;American Express&amp;rdquo;, &amp;ldquo;GoodRx&amp;rdquo;, &amp;ldquo;Criteo&amp;rdquo;, &amp;ldquo;DFINITY&amp;rdquo;, &amp;ldquo;Marqeta&amp;rdquo;, &amp;ldquo;Accenture&amp;rdquo;, &amp;ldquo;Gopuff&amp;rdquo;, &amp;ldquo;Verily&amp;rdquo;, &amp;ldquo;Workday&amp;rdquo;, &amp;ldquo;EOG Resources&amp;rdquo;, &amp;ldquo;Viasat&amp;rdquo;, &amp;ldquo;Wealthfront&amp;rdquo;, &amp;ldquo;IBM&amp;rdquo;, &amp;ldquo;AppFolio&amp;rdquo;, &amp;ldquo;Path Robotics&amp;rdquo;, &amp;ldquo;Deloitte&amp;rdquo;, &amp;ldquo;Walmart&amp;rdquo;, &amp;ldquo;Interactive Brokers&amp;rdquo;, &amp;ldquo;Pleasant Pediatrics&amp;rdquo;, &amp;ldquo;Toast&lt;/p&gt;
+&lt;h2&gt;全球 yoe &amp;lt;= 2 的產業薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球-yoe--2-的產業薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-yoe--2-%e7%9a%84%e7%94%a2%e6%a5%ad%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Data&amp;rdquo;, &amp;ldquo;Full Stack&amp;rdquo;, &amp;ldquo;AI&amp;rdquo;, &amp;ldquo;ML / AI&amp;rdquo;, &amp;ldquo;API Development (Back-End)&amp;rdquo;, &amp;ldquo;Distributed Systems (Back-End)&amp;rdquo;, &amp;ldquo;OR&amp;rdquo;, &amp;ldquo;AR / VR&amp;rdquo;, &amp;ldquo;Web Development (Front-End)&amp;rdquo;, null, &amp;ldquo;iOS&amp;rdquo;, &amp;ldquo;Site Reliability (SRE)&amp;rdquo;, &amp;ldquo;Networking&amp;rdquo;, &amp;ldquo;Supply Chain&amp;rdquo;, &amp;ldquo;Production&amp;rdquo;, &amp;ldquo;Security&amp;rdquo;, &amp;ldquo;Mobile (iOS + Android)&amp;rdquo;, &amp;ldquo;Systems Engineering&amp;rdquo;, &amp;ldquo;Shop&amp;rdquo;, &amp;ldquo;Multimedia&amp;rdquo;, &amp;ldquo;Analytics&amp;rdquo;, &amp;ldquo;General&amp;rdquo;, &amp;ldquo;ML&amp;rdquo;, false, &amp;ldquo;DS&amp;rdquo;, &amp;ldquo;Testing (SDET)&amp;rdquo;, &amp;ldquo;DevOps&amp;rdquo;, &amp;ldquo;sec&amp;rdquo;, &amp;ldquo;IV&amp;rdquo;, &amp;ldquo;Android&amp;rdquo;, &amp;ldquo;Machining Learning&amp;rdquo;, &amp;ldquo;Salesforce&amp;rdquo;, &amp;ldquo;AI / ML&amp;rdquo;, &amp;ldquo;Camera Systems&amp;rdquo;, &amp;ldquo;Wireless Engineer&amp;rdquo;, &amp;ldquo;Machine Learning&amp;rdquo;, &amp;ldquo;AI/ML&amp;rdquo;, &amp;ldquo;Other&amp;rdquo;, &amp;ldquo;Risk &amp;amp; Resilience&amp;rdquo;, &amp;ldquo;Software QA&amp;rdquo;, &amp;ldquo;Cyber&amp;rdquo;, &amp;ldquo;Linux Kernel&amp;rdquo;, &amp;ldquo;Backend&amp;rdquo;, &amp;ldquo;Data Science&amp;rdquo;, &amp;ldquo;Hardware&amp;rdquo;, &amp;ldquo;GPU&amp;rdquo;, &amp;ldquo;Computer Vision&amp;rdquo;, &amp;ldquo;Modem&amp;rdquo;, &amp;ldquo;Modem Software&amp;rdquo;, &amp;ldquo;Graduate&amp;rdquo;, &amp;ldquo;Embedded&amp;rdquo;, &amp;ldquo;Azure&amp;rdquo;, &amp;ldquo;Wallet Payments Commerce&amp;rdquo;, &amp;ldquo;Statistics&amp;rdquo;, &amp;ldquo;Camera&amp;rdquo;, &amp;ldquo;Blockchain&amp;rdquo;, &amp;ldquo;Systems&amp;rdquo;, &amp;ldquo;Marketing&amp;rdquo;, &amp;ldquo;NLP&amp;rdquo;, &amp;ldquo;Firmware&amp;rdquo;, &amp;ldquo;Biotech&amp;rdquo;, &amp;ldquo;Cloud&amp;rdquo;, &amp;ldquo;Product&amp;rdquo;, &amp;ldquo;Cybersecurity&amp;rdquo;, &amp;ldquo;Compiler&amp;rdquo;, &amp;ldquo;Data Scientist&amp;rdquo;, &amp;ldquo;Cellular&amp;rdquo;, &amp;ldquo;Research&amp;rdquo;, &amp;ldquo;Finance&amp;rdquo;, &amp;ldquo;Anon&amp;rdquo;, &amp;ldquo;1&amp;rdquo;, &amp;ldquo;Ads&amp;rdquo;, &amp;ldquo;Tech&amp;rdquo;, &amp;ldquo;Quant&amp;rdquo;, &amp;ldquo;Speech&amp;rdquo;, &amp;ldquo;IT&amp;rdquo;, &amp;ldquo;Operations&amp;rdquo;, &amp;ldquo;Mandiant&amp;rdquo;, &amp;ldquo;Performance&amp;rdquo;, &amp;ldquo;TSE&amp;rdquo;, &amp;ldquo;Security Reseearcher&amp;rdquo;, &amp;ldquo;Risk Management&amp;rdquo;&lt;/p&gt;
+&lt;h2&gt;全球產業薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球產業薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e7%94%a2%e6%a5%ad%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Distributed Systems (Back-End)&amp;rdquo;, &amp;ldquo;ML / AI&amp;rdquo;, &amp;ldquo;Full Stack&amp;rdquo;, &amp;ldquo;iOS&amp;rdquo;, &amp;ldquo;AR / VR&amp;rdquo;, &amp;ldquo;Science&amp;rdquo;, &amp;ldquo;Data&amp;rdquo;, false, &amp;ldquo;Trading&amp;rdquo;, &amp;ldquo;Web Development (Front-End)&amp;rdquo;, &amp;ldquo;Site Reliability (SRE)&amp;rdquo;, &amp;ldquo;Networking&amp;rdquo;, &amp;ldquo;Infra&amp;rdquo;, &amp;ldquo;Android&amp;rdquo;, &amp;ldquo;Production&amp;rdquo;, &amp;ldquo;AI / ML&amp;rdquo;, &amp;ldquo;Security&amp;rdquo;, &amp;ldquo;Malware&amp;rdquo;, &amp;ldquo;Data Science&amp;rdquo;, &amp;ldquo;Mobile (iOS + Android)&amp;rdquo;, &amp;ldquo;Satellite Software&amp;rdquo;, &amp;ldquo;API Development (Back-End)&amp;rdquo;, null, &amp;ldquo;AI Infra&amp;rdquo;, &amp;ldquo;Org Leader&amp;rdquo;, &amp;ldquo;Trust and Safety&amp;rdquo;, &amp;ldquo;Backend&amp;rdquo;, &amp;ldquo;Cyber Security&amp;rdquo;, &amp;ldquo;Machine Learning&amp;rdquo;, &amp;ldquo;Operating Systems&amp;rdquo;, &amp;ldquo;Backend Infra&amp;rdquo;, &amp;ldquo;DevOps&amp;rdquo;, &amp;ldquo;Hardware&amp;rdquo;, &amp;ldquo;Front End&amp;rdquo;, &amp;ldquo;Product Analytics&amp;rdquo;, &amp;ldquo;General&amp;rdquo;, &amp;ldquo;CoreOS&amp;rdquo;, &amp;ldquo;Economics&amp;rdquo;, &amp;ldquo;System&amp;rdquo;, &amp;ldquo;Testing (SDET)&amp;rdquo;, &amp;ldquo;Cloud Security&amp;rdquo;, &amp;ldquo;Developer Experience&amp;rdquo;, &amp;ldquo;Specialist&amp;rdquo;, &amp;ldquo;Marketing&amp;rdquo;, &amp;ldquo;Equity&amp;rdquo;, &amp;ldquo;Healthcare&amp;rdquo;, &amp;ldquo;System Software&amp;rdquo;, &amp;ldquo;Desktop&amp;rdquo;, &amp;ldquo;Product&amp;rdquo;, &amp;ldquo;Infrastructure&amp;rdquo;, &amp;ldquo;Manager Security Engineer&amp;rdquo;, &amp;ldquo;Embedded Systems&amp;rdquo;, &amp;ldquo;Applied Scientist&amp;rdquo;, &amp;ldquo;Security, Architect, Lead, L7, E7&amp;rdquo;, &amp;ldquo;Analyst&amp;rdquo;, &amp;ldquo;Linux&amp;rdquo;, &amp;ldquo;Information Security&amp;rdquo;, &amp;ldquo;Analytics&amp;rdquo;, &amp;ldquo;Chipset&amp;rdquo;, &amp;ldquo;ML&amp;rdquo;, &amp;ldquo;Game Development&amp;rdquo;, &amp;ldquo;Artificial Intelligence&amp;rdquo;, &amp;ldquo;Applied Science&amp;rdquo;, &amp;ldquo;Firmware&amp;rdquo;, &amp;ldquo;Robotics&amp;rdquo;, &amp;ldquo;AR/VR&amp;rdquo;, &amp;ldquo;Quant Research&amp;rdquo;, &amp;ldquo;Quantum&amp;rdquo;, &amp;ldquo;Tag&amp;rdquo;, &amp;ldquo;Research&amp;rdquo;, &amp;ldquo;AWS&amp;rdquo;, &amp;ldquo;Chrome OS&amp;rdquo;, &amp;ldquo;Other&amp;rdquo;, &amp;ldquo;Experimentation&amp;rdquo;, &amp;ldquo;Satellites&amp;rdquo;, &amp;ldquo;Microcontrollers&amp;rdquo;, &amp;ldquo;Confidential&amp;rdquo;, &amp;ldquo;Fuchsia&amp;rdquo;, &amp;ldquo;Distributed Storage&amp;rdquo;, &amp;ldquo;Performance&amp;rdquo;, &amp;ldquo;Fraud&amp;rdquo;, &amp;ldquo;search ads&amp;rdquo;, &amp;ldquo;AI&amp;rdquo;, &amp;ldquo;EDA&amp;rdquo;,&lt;/p&gt;
+&lt;h2&gt;全球公司薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球公司薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e5%85%ac%e5%8f%b8%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Uber&amp;rdquo;, &amp;ldquo;Facebook&amp;rdquo;, &amp;ldquo;Figma&amp;rdquo;, &amp;ldquo;Google&amp;rdquo;, &amp;ldquo;Roblox&amp;rdquo;, &amp;ldquo;Stripe&amp;rdquo;, &amp;ldquo;Amazon&amp;rdquo;, &amp;ldquo;ByteDance&amp;rdquo;, &amp;ldquo;Snowflake&amp;rdquo;, &amp;ldquo;LinkedIn&amp;rdquo;, &amp;ldquo;OpenAI&amp;rdquo;, &amp;ldquo;Apple&amp;rdquo;, &amp;ldquo;Millennium&amp;rdquo;, &amp;ldquo;Coupang&amp;rdquo;, &amp;ldquo;Brex&amp;rdquo;, &amp;ldquo;Broadcom&amp;rdquo;, &amp;ldquo;Snap&amp;rdquo;, &amp;ldquo;Oracle&amp;rdquo;, &amp;ldquo;PingCAP&amp;rdquo;, &amp;ldquo;SAP&amp;rdquo;, &amp;ldquo;Signzy&amp;rdquo;, &amp;ldquo;Slack&amp;rdquo;, &amp;ldquo;Plaid&amp;rdquo;, &amp;ldquo;Salesforce&amp;rdquo;, &amp;ldquo;Cruise&amp;rdquo;, &amp;ldquo;Nuro&amp;rdquo;, &amp;ldquo;Citadel&amp;rdquo;, &amp;ldquo;SoFi&amp;rdquo;, &amp;ldquo;Block&amp;rdquo;, &amp;ldquo;SpaceX&amp;rdquo;, &amp;ldquo;Netflix&amp;rdquo;, &amp;ldquo;Robinhood&amp;rdquo;, &amp;ldquo;Workday&amp;rdquo;, &amp;ldquo;Pinterest&amp;rdquo;, &amp;ldquo;Verily&amp;rdquo;, &amp;ldquo;Hudson River Trading&amp;rdquo;, &amp;ldquo;BlackRock&amp;rdquo;, &amp;ldquo;Microsoft&amp;rdquo;, &amp;ldquo;Atlassian&amp;rdquo;, &amp;ldquo;Thumbtack&amp;rdquo;, &amp;ldquo;DoorDash&amp;rdquo;, &amp;ldquo;Class Technologies&amp;rdquo;, &amp;ldquo;ClickUp&amp;rdquo;, &amp;ldquo;Huawei&amp;rdquo;, &amp;ldquo;Waymo&amp;rdquo;, &amp;ldquo;Tesla&amp;rdquo;, &amp;ldquo;Twilio&amp;rdquo;, &amp;ldquo;Pinduoduo&amp;rdquo;, &amp;ldquo;Rebellion Defense&amp;rdquo;, &amp;ldquo;Nvidia&amp;rdquo;, &amp;ldquo;Goldman Sachs&amp;rdquo;, &amp;ldquo;Coinbase&amp;rdquo;, &amp;ldquo;Walmart Global Tech&amp;rdquo;, &amp;ldquo;AMD&amp;rdquo;, &amp;ldquo;Cisco&amp;rdquo;, &amp;ldquo;Visa&amp;rdquo;, &amp;ldquo;Jane Street&amp;rdquo;, &amp;ldquo;Square&amp;rdquo;, &amp;ldquo;Samsara&amp;rdquo;, &amp;ldquo;Flexport&amp;rdquo;, &amp;ldquo;Lyft&amp;rdquo;, &amp;ldquo;Anduril Industries&amp;rdquo;, &amp;ldquo;T. Rowe Price&amp;rdquo;, &amp;ldquo;Lockheed Martin&amp;rdquo;, &amp;ldquo;Instacart&amp;rdquo;, &amp;ldquo;Adobe&amp;rdquo;, &amp;ldquo;Databricks&amp;rdquo;, &amp;ldquo;Dropbox&amp;rdquo;, &amp;ldquo;Two Sigma&amp;rdquo;, &amp;ldquo;Anduril&amp;rdquo;, &amp;ldquo;Intuit&amp;rdquo;, &amp;ldquo;eBay&amp;rdquo;, &amp;ldquo;StubHub&amp;rdquo;, &amp;ldquo;Tower Research Capital&amp;rdquo;, &amp;ldquo;CloudKitchens&amp;rdquo;, &amp;ldquo;GoDaddy&amp;rdquo;, &amp;ldquo;Grammarly&amp;rdquo;, &amp;ldquo;Carta&amp;rdquo;, &amp;ldquo;GitHub&amp;rdquo;, &amp;ldquo;PayPal&amp;rdquo;, &amp;ldquo;Akamai&amp;rdquo;, &amp;ldquo;SandboxAQ&amp;rdquo;, &amp;ldquo;Reddit&amp;rdquo;, &amp;ldquo;City Storage Systems&amp;rdquo;, &amp;ldquo;Albert&amp;rdquo;, &amp;ldquo;Zynga&amp;rdquo;, &amp;ldquo;Pure Storage&amp;rdquo;, &amp;ldquo;American Century Investments&amp;rdquo;, &amp;ldquo;Epic&amp;rdquo;, &amp;ldquo;Respawn Entertainment&amp;rdquo;, &amp;ldquo;Upstart&amp;rdquo;, &amp;ldquo;Neo Financial&amp;rdquo;, &amp;ldquo;Qualcomm&amp;rdquo;, &amp;ldquo;Dune&amp;rdquo;, &amp;ldquo;Applied Intuition&amp;rdquo;, &amp;ldquo;GLMX&amp;rdquo;, &amp;ldquo;Palantir&amp;rdquo;, &amp;ldquo;C3.ai&amp;rdquo;, &amp;ldquo;Noom&amp;rdquo;, &amp;ldquo;Zillow&amp;rdquo;, &amp;ldquo;Palo Alto Networks&amp;rdquo;, &amp;ldquo;Spotify&amp;rdquo;, &amp;ldquo;Cloudera&amp;rdquo;, &amp;ldquo;Indeed&amp;rdquo;, &amp;ldquo;Hopper&amp;rdquo;, &amp;ldquo;Airbnb&amp;rdquo;, &amp;ldquo;Opendoor&amp;rdquo;, &amp;ldquo;Cisco Equipment&amp;rdquo;, &amp;ldquo;Optiver&amp;rdquo;, &amp;ldquo;Meta Platform&amp;rdquo;, &amp;ldquo;ServiceNow&amp;rdquo;, &amp;ldquo;Gopuff&amp;rdquo;, &amp;ldquo;Firebolt&amp;rdquo;, &amp;ldquo;MongoDB&amp;rdquo;, &amp;ldquo;Benchling&amp;rdquo;, &amp;ldquo;Fireblocks&amp;rdquo;, &amp;ldquo;Niantic&amp;rdquo;, &amp;ldquo;UiPath&amp;rdquo;, &amp;ldquo;The Boring Company&amp;rdquo;, &amp;ldquo;Discord&amp;rdquo;, &amp;ldquo;Twitter&amp;rdquo;, &amp;ldquo;Intel&amp;rdquo;, &amp;ldquo;ecoATM&amp;rdquo;, &amp;ldquo;Roku&amp;rdquo;, &amp;ldquo;Splunk&amp;rdquo;, &amp;ldquo;Ultra Mobile&amp;rdquo;, &amp;ldquo;Brava&amp;rdquo;, &amp;ldquo;Riot Games&amp;rdquo;, &amp;ldquo;Warner Bros. Discovery&amp;rdquo;, &amp;ldquo;Alibaba&amp;rdquo;, &amp;ldquo;Micron Technology&amp;rdquo;, &amp;ldquo;Epic Sys&amp;rdquo;, &amp;ldquo;AppFolio&amp;rdquo;, &amp;ldquo;T-Mobile&amp;rdquo;, &amp;ldquo;Aamzon&amp;rdquo;, &amp;ldquo;HoneyBook&amp;rdquo;, &amp;ldquo;Qualtrics&amp;rdquo;, &amp;ldquo;SmartNews&amp;rdquo;, &amp;ldquo;Synopsys&amp;rdquo;, &amp;ldquo;Affirm&amp;rdquo;, &amp;ldquo;Schonfeld&amp;rdquo;, &amp;ldquo;Glean&amp;rdquo;, &amp;ldquo;Stealth Computer&amp;rdquo;, &amp;ldquo;Datadog&amp;rdquo;, &amp;ldquo;Activision&amp;rdquo;, &amp;ldquo;Disney&amp;rdquo;, &amp;ldquo;Chronosphere&amp;rdquo;, &amp;ldquo;Binance&amp;rdquo;,&lt;/p&gt;
+&lt;h3&gt;全球 軟體工程師 比台灣好的國家稅後收入&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-比台灣好的國家稅後收入"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e6%af%94%e5%8f%b0%e7%81%a3%e5%a5%bd%e7%9a%84%e5%9c%8b%e5%ae%b6%e7%a8%85%e5%be%8c%e6%94%b6%e5%85%a5" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/uri6UUL.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;全球 軟體工程師 比台灣好的國家 扣除12月房租&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-比台灣好的國家-扣除12月房租"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e6%af%94%e5%8f%b0%e7%81%a3%e5%a5%bd%e7%9a%84%e5%9c%8b%e5%ae%b6-%e6%89%a3%e9%99%a412%e6%9c%88%e6%88%bf%e7%a7%9f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;假設台灣不需租房&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;郊區&lt;span class="hx:absolute hx:-mt-20" id="郊區"&gt;&lt;/span&gt;
+&lt;a href="#%e9%83%8a%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/Y6Fmemn.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;美國（Seattle, Bay Area, NY, , San Diego, Texas, Boulder, LA, New Hampshire, Montana, Utah, Santa Barbara, Wisconsin, Minnesota, Baltimore Area, Ohio, Kansas, Denmark, London, Singapore, Toronto, UK, Canada）、歐洲(Switzerland, Israel,Norway)、大洋洲（Australia）、亞洲（China）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;市區&lt;span class="hx:absolute hx:-mt-20" id="市區"&gt;&lt;/span&gt;
+&lt;a href="#%e5%b8%82%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/pmGZV7d.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;美國（Bay Area, Seattle ,Montana, Boulder, LA, New Hampshire, San Diego, Texas, NY, Utah, Wisconsin, Santa Barbara, Baltimore Area, Minnesota, Ohio, Kansas, Denmark, London, Singapore, Toronto, UK, Canada）、歐洲(Switzerland, Israel,Norway,Denmark)、大洋洲（Australia）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;全球 軟體工程師 薪資比較（中位數排序）&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-薪資比較中位數排序"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e8%96%aa%e8%b3%87%e6%af%94%e8%bc%83%e4%b8%ad%e4%bd%8d%e6%95%b8%e6%8e%92%e5%ba%8f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/6XSWQug.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;軟體工程師去哪個地區工作？&lt;span class="hx:absolute hx:-mt-20" id="軟體工程師去哪個地區工作"&gt;&lt;/span&gt;
+&lt;a href="#%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab%e5%8e%bb%e5%93%aa%e5%80%8b%e5%9c%b0%e5%8d%80%e5%b7%a5%e4%bd%9c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;假設在台灣不需租房&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;郊區&lt;span class="hx:absolute hx:-mt-20" id="郊區-1"&gt;&lt;/span&gt;
+&lt;a href="#%e9%83%8a%e5%8d%80-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/wu00ebJ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比台灣高組：
+&lt;ul&gt;
+&lt;li&gt;歐洲(Switzerland, Israel, Norway, Demank)、美國（S F Bay Area, Seattle, New Hampshire, Montana, Texas, Boulder, Utah, Wisconsin, LA, Minnesota, San Diego, Baltimore Area, Ohio, Kansas）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2&gt;接近台灣&lt;span class="hx:absolute hx:-mt-20" id="接近台灣"&gt;&lt;/span&gt;
+&lt;a href="#%e6%8e%a5%e8%bf%91%e5%8f%b0%e7%81%a3" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;市區&lt;span class="hx:absolute hx:-mt-20" id="市區-1"&gt;&lt;/span&gt;
+&lt;a href="#%e5%b8%82%e5%8d%80-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/FBABous.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;全球 軟體工程師 (淨收入-12月房租)&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-淨收入-12月房租"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e6%b7%a8%e6%94%b6%e5%85%a5-12%e6%9c%88%e6%88%bf%e7%a7%9f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;台灣軟體工程師年薪 (p25, p50, p75) = (108, 159, 221)&lt;/li&gt;
+&lt;li&gt;台大資訊工程所畢業 年薪（聽學長說）100-200w
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://drive.google.com/file/d/1nwSRuODXhM-l0ham5vdDbNgLAmPZwoWx/view"target="_blank" rel="noopener"&gt;米一粒&lt;/a&gt;，年薪 168 資工所在學 140w+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;假設在台北不用負擔房租&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;租市區&lt;span class="hx:absolute hx:-mt-20" id="租市區"&gt;&lt;/span&gt;
+&lt;a href="#%e7%a7%9f%e5%b8%82%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/cw0X5HC.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;租郊區&lt;span class="hx:absolute hx:-mt-20" id="租郊區"&gt;&lt;/span&gt;
+&lt;a href="#%e7%a7%9f%e9%83%8a%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/L0kBsgd.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;其他支出&lt;span class="hx:absolute hx:-mt-20" id="其他支出"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%b6%e4%bb%96%e6%94%af%e5%87%ba" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;prompt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日常開銷&lt;/strong&gt;：包括房租、水電費、伙食費、交通費、通訊費等費用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安家費用&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;租房：租房的費用會因城市、地段、房屋大小等因素而有所不同。一般來說，在美國的大城市，一套一室一廳的公寓的月租金在 1,500 美元以上。&lt;/li&gt;
+&lt;li&gt;購置家具家電：家具家電的費用會因品牌、型號等因素而有所不同。一般來說，一套基本的家具家電需要花費幾千美元。&lt;/li&gt;
+&lt;li&gt;生活用品：生活用品的費用會因個人需求而有所不同。一般來說，需要準備一些基本的衣物、洗漱用品、廚房用品等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;span class="hx:absolute hx:-mt-20" id="notes"&gt;&lt;/span&gt;
+&lt;a href="#notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;nltk: 舊方法
+有錯誤需要
+import nltk
+nltk.download()
+bert tokenizer&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/saffsd/langid.py"target="_blank" rel="noopener"&gt;https://github.com/saffsd/langid.py&lt;/a&gt;: 辨別語系
+&lt;a href="https://www.numbeo.com/cost-of-living/compare_cities.jsp"target="_blank" rel="noopener"&gt;https://www.numbeo.com/cost-of-living/compare_cities.jsp&lt;/a&gt;: 查看物價、房租&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/ArshKA/LinkedIn-Job-Scraper"target="_blank" rel="noopener"&gt;https://github.com/ArshKA/LinkedIn-Job-Scraper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;helper/create_levels_map.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;input: &lt;code&gt;*_salary.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;helper/levelsfyi.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;all_contryIds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;all_cityIds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;all_dmaIds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;mp_country&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;14&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Melbourne, VI, Australia&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;mp_city&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;mp_dma&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create_keywords_from_levels_data.py&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: &lt;code&gt;../out/*_salary.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Output: &lt;code&gt;../helper/focusTag_keywords.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;raw&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;notebooks/worldwide_jobs.ipynb&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;全球EDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notebooks/taiwan_jobs.ipynb&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;台灣資料EDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notebooks/taiwan_jobs.ipynb&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;生活、薪資換算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;linkedin_get_jobs.py&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;input: keywords, locations&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;out/{keyword}_{location}_jobs.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;trackingUrn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;urn:li:jobPosting:3839104661&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;repostedJob&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Forex / Crypto Trader - Work From Home&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;$recipeTypes&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;com.linkedin.deco.recipe.anonymous.Anon1578943416&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;posterId&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;966281264&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;$type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;com.linkedin.voyager.dash.jobs.JobPosting&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;contentSource&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;JOBS_PREMIUM_OFFLINE&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;entityUrn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;urn:li:fsd_jobPosting:3839104661&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;linkedin/process.py &lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;input: &lt;code&gt;../out/*_jobs.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;../out/process_details.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;3729512725&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Quantitative Developer&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;formattedLocation&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;New York, United States&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;listedAt&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1708703570000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;applyUrls&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;https://www.linkedin.com/job-apply/3729512725&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;salary_paragraphs&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;....&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;salary_matches&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;$24&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;workplaceType&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Hybrid&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;由於 Linkedin api好像沒有 following 的entry points，因此要自己寫
+思路
+&lt;a href="https://www.linkedin.com/mynetwork/network-manager/people-follow/following/"target="_blank" rel="noopener"&gt;https://www.linkedin.com/mynetwork/network-manager/people-follow/following/&lt;/a&gt;
+request&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;https://www.linkedin.com/voyager/api/graphql?variables=(start:50,count:10,origin:CurationHub,query:(flagshipSearchIntent:MYNETWORK_CURATION_HUB,includeFiltersInResponse:true,queryParameters:List((key:resultType,value:List(PEOPLE_FOLLOW)))))&amp;amp;queryId=voyagerSearchDashClusters.a6589bc963659630adee73df22e9384c&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

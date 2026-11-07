@@ -1,0 +1,9 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Text_network_analysis</title><link>https://alanhc.github.io/tags/text_network_analysis/</link><description>Recent content in Text_network_analysis on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 22 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/text_network_analysis/index.xml" rel="self" type="application/rss+xml"/><item><title>20240222-content-analysis</title><link>https://alanhc.github.io/notes/20240222-text-network-analysis/</link><pubDate>Thu, 22 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20240222-text-network-analysis/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;文字清理（去除符號、轉小寫）&lt;/li&gt;
+&lt;li&gt;依據詞頻拆分關鍵字網路&lt;/li&gt;
+&lt;li&gt;邊/連結厚度代表關鍵字的相依頻率&lt;/li&gt;
+&lt;li&gt;節點大小代表專見字的頻率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item></channel></rss>

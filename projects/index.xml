@@ -1,0 +1,174 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Projects</title><link>https://alanhc.github.io/projects/</link><description>Recent content in Projects on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://alanhc.github.io/projects/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Agent Security Architecture</title><link>https://alanhc.github.io/projects/agent-security-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/agent-security-architecture/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An LLM agent that both decides and acts is a single trust domain. Any text it
+reads — a retrieved document, a tool result, a file in the repo — is a candidate
+instruction, and if the model is persuaded, the action executes with the agent&amp;rsquo;s
+full privileges. Prompt injection is not a bug in a particular prompt; it is the
+predictable outcome of putting the decision and the capability in the same place.&lt;/p&gt;
+&lt;p&gt;The usual mitigations — input filtering, instruction hierarchies, &amp;ldquo;ignore
+previous instructions&amp;rdquo; detectors — are heuristic, and they all share one
+assumption: that the model is the security boundary. A model is a bad boundary.
+It has no notion of a capability it cannot exercise.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Built a proof of concept that treats the model as untrusted and puts the boundary
+outside it, using four established security principles rather than model-level
+defenses:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reasoning / action separation.&lt;/strong&gt; The reasoning process proposes an action; it
+never holds the capability to perform one. A separate mediator decides whether
+the proposal executes. Convincing the model is therefore not sufficient to cause
+an effect — it only produces a request.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Least privilege.&lt;/strong&gt; Each action is granted only the specific capability it
+needs, scoped to that action, rather than the agent holding a standing union of
+every permission it might ever need.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Complete mediation.&lt;/strong&gt; Every action goes through the mediator on every
+invocation. There is no cached authorization and no side path — a bypass is not
+something the model can talk its way into, because no bypass is implemented.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Namespace isolation.&lt;/strong&gt; Actions execute inside isolated namespaces, so a
+compromised action cannot reach the host, the agent&amp;rsquo;s own state, or a sibling
+task&amp;rsquo;s data.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The security properties stop depending on model behavior. An injected
+instruction still produces a &lt;em&gt;proposal&lt;/em&gt;, but the proposal is subject to the same
+mediation as any other, and an action that escapes its intended scope is confined
+by the namespace rather than by the model&amp;rsquo;s judgment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add the concrete evaluation from the writeup — which injection classes
+were tested, and what the mediator rejected.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; link the public writeup. It is not in this repository — I searched the
+content tree and the full git history across all branches and found no copy, so
+the URL needs to be added here by hand.&lt;/p&gt;</description></item><item><title>AI Agent Skills for Firmware Development</title><link>https://alanhc.github.io/projects/firmware-agent-skills/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/firmware-agent-skills/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A large share of Android platform work is mechanical but unforgiving. Pull a
+Gerrit change and verify it actually builds and behaves locally. Build an image,
+flash it, and confirm the device really came up. Walk a new-chip porting
+checklist where the same twenty steps happen for every SoC.&lt;/p&gt;
+&lt;p&gt;None of this is intellectually hard. All of it is long-running, easy to get
+subtly wrong, and expensive when it fails silently — a flash that &amp;ldquo;succeeded&amp;rdquo;
+onto a device that then boot-loops costs an hour before anyone notices.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Encoded these loops as agent skills. The design principles matter more than the
+individual scripts:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verify the outcome, not the exit code.&lt;/strong&gt; A flash step is not done because
+&lt;code&gt;fastboot&lt;/code&gt; returned 0; it is done when the device is confirmed booted to the
+desktop. Each skill defines success as an observable end state and checks for it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make every step resumable.&lt;/strong&gt; Firmware loops are long and fail in the middle.
+Steps are idempotent where possible so a run can be resumed rather than restarted
+from a clean tree.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keep a human at the irreversible steps.&lt;/strong&gt; Flashing a device and pushing to
+Gerrit are gated. The agent prepares the action and reports what it is about to
+do; it does not decide on its own to write to hardware or to a shared branch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encode the checklist, not the conclusion.&lt;/strong&gt; For new-chip porting the skill
+carries the ordered procedure and its checkpoints. It does not attempt to guess
+platform-specific values — it surfaces the decision points to the engineer.&lt;/p&gt;
+&lt;p&gt;This is the same automation instinct as the
+&lt;a href="https://alanhc.github.io/projects/pxe-provisioning-automation/"&gt;provisioning work&lt;/a&gt;, moved up the stack
+from rack deployment into firmware development itself.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The repetitive half of platform work runs unattended up to the points where a
+human genuinely needs to decide, and failures surface at the step that failed
+rather than at the end.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add measured numbers — turnaround time before and after, and the
+unattended success rate.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; the implementation is internal company work and is not publishable.
+This page documents the architecture and design reasoning only. If a
+sanitized reference implementation is ever extracted, link it here.&lt;/p&gt;</description></item><item><title>OpenBMC Firmware Debugging Workflow</title><link>https://alanhc.github.io/projects/openbmc-debugging-workflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/openbmc-debugging-workflow/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;BMC firmware bugs live on the machine, not on your desk. The BMC is a constrained
+ARM SoC on a production server platform — there is no room to run a debugger and
+a toolchain on it, and the interesting failures are the ones that only reproduce
+on real hardware, under real load, in the state the machine is already in.&lt;/p&gt;
+&lt;p&gt;The default response to that is printf and redeploy: add a log line, rebuild the
+Yocto image, reflash, wait, hope the failure recurs. Each iteration costs a full
+build-and-flash cycle, and restarting the daemon to attach a debugger destroys
+the exact state you were trying to inspect.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Set up a cross-debugging workflow that puts a real debugger on the failing
+process without moving it off the machine:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gdbserver on target, toolchain on host.&lt;/strong&gt; The BMC runs only the stub; the
+cross-GDB, the symbols, and the sysroot stay on the development host. This
+requires the host sysroot to match the deployed Yocto image exactly — mismatched
+symbols are worse than no symbols, because they are confidently wrong.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Live-attach to a running daemon.&lt;/strong&gt; Attach to the process in its current state
+instead of restarting it under a debugger. For failures that take hours to
+manifest, or that depend on accumulated state, this is the difference between
+investigating the bug and being unable to reach it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core dump analysis.&lt;/strong&gt; For crashes that cannot be caught interactively, collect
+the dump from the target and analyze it against matching symbols on the host,
+so a one-shot crash still yields a stack.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Turned BMC debugging from rebuild-and-guess into attaching to the actual failing
+process on the actual machine — the interactive path for reproducible failures,
+the core dump path for the ones that only happen once.&lt;/p&gt;
+&lt;p&gt;I presented this workflow at &lt;strong&gt;COSCUP 2025&lt;/strong&gt;, and the slide deck is published
+below.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add a concrete number — iteration time before and after, or a bug that
+was only findable this way.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://web.archive.org/web/20250703021811/https://pretalx.coscup.org/coscup-2025/talk/EXYUKY/"target="_blank" rel="noopener"&gt;Using GDB Debug in OpenBMC — COSCUP 2025&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://alanhc.github.io/OpenBMC%20Cross-Debugging%20with%20GDB.pdf"&gt;Slides: OpenBMC Cross-Debugging with GDB (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Kubernetes PXE Provisioning Automation</title><link>https://alanhc.github.io/projects/pxe-provisioning-automation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/pxe-provisioning-automation/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Validating servers at rack scale means installing an operating system on every
+machine, repeatedly, across two architectures. Done by hand it is the same
+sequence of steps per box, and the cost scales linearly with the size of the
+rack — which makes it the first thing that breaks when the rack gets bigger.&lt;/p&gt;
+&lt;p&gt;The supporting artifacts had their own problem: the provisioning images and
+repository had accumulated to 663 MB, and every rebuild and every fetch paid
+that cost.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Built a Kubernetes-based test system — kubeadm, Helm, and shell — that drives
+PXE-based OS provisioning across ARM and x86 servers, covering both Windows and
+Linux targets.&lt;/p&gt;
+&lt;p&gt;Getting PXE to behave across two architectures means working below the
+convenient abstractions: ARP, DHCP, and TFTP are part of the workflow, not
+implementation details, and the boot path differs enough between ARM and x86
+that it has to be handled explicitly rather than assumed.&lt;/p&gt;
+&lt;p&gt;Separately, audited what was actually in the images and the repository, stripped
+the base images down to what provisioning genuinely required, and collapsed
+redundant layers.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;663 MB → 2.4 MB&lt;/strong&gt; image and repository footprint — roughly a &lt;strong&gt;99% reduction&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rack-scale validation across ARM and x86 driven by the system rather than by hand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the earliest piece of the automation thread that later became
+&lt;a href="https://alanhc.github.io/projects/firmware-agent-skills/"&gt;agent skills for firmware development&lt;/a&gt; — the
+same instinct to remove a repeated manual loop, applied at deployment scale
+before it was applied to firmware work.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; the work is not public. Add a link if a sanitized writeup is produced.&lt;/p&gt;</description></item><item><title>CPU-Side Low-Bit LLM Inference Analysis</title><link>https://alanhc.github.io/projects/low-bit-llm-inference-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/low-bit-llm-inference-analysis/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Low-bit inference kernels like T-MAC and BitNet promise that quantized LLMs can
+run usefully on CPUs. The published evidence for that is mostly throughput:
+tokens per second, on some machine, against some baseline.&lt;/p&gt;
+&lt;p&gt;Throughput tells you whether something got faster. It does not tell you &lt;em&gt;why&lt;/em&gt;,
+and it does not tell you what to fix next. A kernel that is bound on memory
+behavior and one that is bound on instruction issue produce the same
+tokens-per-second number and demand completely different optimizations. Guessing
+which one you have is how optimization effort gets spent in the wrong place.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Profiled the inference path on CPU with &lt;code&gt;perf&lt;/code&gt; and &lt;code&gt;uftrace&lt;/code&gt;, measuring the
+hardware behavior rather than the wall clock:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IPC&lt;/strong&gt; — whether the core is issuing work or stalled&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cache misses&lt;/strong&gt; — whether the working set and access pattern fit the hierarchy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLB misses&lt;/strong&gt; — whether address translation is itself a cost, which low-bit
+layouts can provoke by trading memory footprint for irregular access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page faults&lt;/strong&gt; — whether time is going to the memory system rather than compute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;uftrace&lt;/code&gt; gave the function-level call path so the hardware counters could be
+attributed to specific stages rather than to the process as a whole.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Located where the time actually goes in the low-bit inference path on CPU, and
+identified concrete optimization targets on that evidence rather than on
+assumption about which layer &amp;ldquo;should&amp;rdquo; be slow.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; publish the measured numbers — the counter deltas per stage, and which
+targets they pointed to.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/microsoft/T-MAC"target="_blank" rel="noopener"&gt;T-MAC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/microsoft/BitNet"target="_blank" rel="noopener"&gt;BitNet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; link the analysis writeup once published.&lt;/p&gt;</description></item></channel></rss>

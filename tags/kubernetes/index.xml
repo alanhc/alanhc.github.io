@@ -1,0 +1,130 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Kubernetes</title><link>https://alanhc.github.io/tags/kubernetes/</link><description>Recent content in Kubernetes on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 17 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml"/><item><title>Kubernetes PXE Provisioning Automation</title><link>https://alanhc.github.io/projects/pxe-provisioning-automation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/pxe-provisioning-automation/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Validating servers at rack scale means installing an operating system on every
+machine, repeatedly, across two architectures. Done by hand it is the same
+sequence of steps per box, and the cost scales linearly with the size of the
+rack — which makes it the first thing that breaks when the rack gets bigger.&lt;/p&gt;
+&lt;p&gt;The supporting artifacts had their own problem: the provisioning images and
+repository had accumulated to 663 MB, and every rebuild and every fetch paid
+that cost.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Built a Kubernetes-based test system — kubeadm, Helm, and shell — that drives
+PXE-based OS provisioning across ARM and x86 servers, covering both Windows and
+Linux targets.&lt;/p&gt;
+&lt;p&gt;Getting PXE to behave across two architectures means working below the
+convenient abstractions: ARP, DHCP, and TFTP are part of the workflow, not
+implementation details, and the boot path differs enough between ARM and x86
+that it has to be handled explicitly rather than assumed.&lt;/p&gt;
+&lt;p&gt;Separately, audited what was actually in the images and the repository, stripped
+the base images down to what provisioning genuinely required, and collapsed
+redundant layers.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;663 MB → 2.4 MB&lt;/strong&gt; image and repository footprint — roughly a &lt;strong&gt;99% reduction&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Rack-scale validation across ARM and x86 driven by the system rather than by hand&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is the earliest piece of the automation thread that later became
+&lt;a href="https://alanhc.github.io/projects/firmware-agent-skills/"&gt;agent skills for firmware development&lt;/a&gt; — the
+same instinct to remove a repeated manual loop, applied at deployment scale
+before it was applied to firmware work.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; the work is not public. Add a link if a sanitized writeup is produced.&lt;/p&gt;</description></item><item><title>fastapi-k8s</title><link>https://alanhc.github.io/notes/fastapi-k8s/</link><pubDate>Wed, 17 Jul 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/fastapi-k8s/</guid><description>
+&lt;p&gt;![[Pasted image 20240717010914.png]]&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+COPY ./main.py /app/main.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;fastapi-deployment.yaml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi
+  template:
+    metadata:
+      labels:
+        app: fastapi
+    spec:
+      containers:
+        - name: fastapi-container
+          image: alanhc/test:latest
+          ports:
+            - containerPort: 80&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;fastapi-service.yaml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-service
+spec:
+  selector:
+    app: fastapi
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;from fastapi import FastAPI
+app = FastAPI()
+@app.get(&amp;#34;/&amp;#34;)
+def read_root():
+    return {&amp;#34;Hello&amp;#34;: &amp;#34;World&amp;#34;}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;kubectl apply -f&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;kubectl get services&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;kubectl port-forward svc/fastapi&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item></channel></rss>

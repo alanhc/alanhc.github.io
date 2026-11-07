@@ -1,0 +1,75 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Ai-Agent</title><link>https://alanhc.github.io/tags/ai-agent/</link><description>Recent content in Ai-Agent on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://alanhc.github.io/tags/ai-agent/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Agent Security Architecture</title><link>https://alanhc.github.io/projects/agent-security-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/agent-security-architecture/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An LLM agent that both decides and acts is a single trust domain. Any text it
+reads — a retrieved document, a tool result, a file in the repo — is a candidate
+instruction, and if the model is persuaded, the action executes with the agent&amp;rsquo;s
+full privileges. Prompt injection is not a bug in a particular prompt; it is the
+predictable outcome of putting the decision and the capability in the same place.&lt;/p&gt;
+&lt;p&gt;The usual mitigations — input filtering, instruction hierarchies, &amp;ldquo;ignore
+previous instructions&amp;rdquo; detectors — are heuristic, and they all share one
+assumption: that the model is the security boundary. A model is a bad boundary.
+It has no notion of a capability it cannot exercise.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Built a proof of concept that treats the model as untrusted and puts the boundary
+outside it, using four established security principles rather than model-level
+defenses:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reasoning / action separation.&lt;/strong&gt; The reasoning process proposes an action; it
+never holds the capability to perform one. A separate mediator decides whether
+the proposal executes. Convincing the model is therefore not sufficient to cause
+an effect — it only produces a request.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Least privilege.&lt;/strong&gt; Each action is granted only the specific capability it
+needs, scoped to that action, rather than the agent holding a standing union of
+every permission it might ever need.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Complete mediation.&lt;/strong&gt; Every action goes through the mediator on every
+invocation. There is no cached authorization and no side path — a bypass is not
+something the model can talk its way into, because no bypass is implemented.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Namespace isolation.&lt;/strong&gt; Actions execute inside isolated namespaces, so a
+compromised action cannot reach the host, the agent&amp;rsquo;s own state, or a sibling
+task&amp;rsquo;s data.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The security properties stop depending on model behavior. An injected
+instruction still produces a &lt;em&gt;proposal&lt;/em&gt;, but the proposal is subject to the same
+mediation as any other, and an action that escapes its intended scope is confined
+by the namespace rather than by the model&amp;rsquo;s judgment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add the concrete evaluation from the writeup — which injection classes
+were tested, and what the mediator rejected.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; link the public writeup. It is not in this repository — I searched the
+content tree and the full git history across all branches and found no copy, so
+the URL needs to be added here by hand.&lt;/p&gt;</description></item><item><title>AI Agent Skills for Firmware Development</title><link>https://alanhc.github.io/projects/firmware-agent-skills/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/firmware-agent-skills/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A large share of Android platform work is mechanical but unforgiving. Pull a
+Gerrit change and verify it actually builds and behaves locally. Build an image,
+flash it, and confirm the device really came up. Walk a new-chip porting
+checklist where the same twenty steps happen for every SoC.&lt;/p&gt;
+&lt;p&gt;None of this is intellectually hard. All of it is long-running, easy to get
+subtly wrong, and expensive when it fails silently — a flash that &amp;ldquo;succeeded&amp;rdquo;
+onto a device that then boot-loops costs an hour before anyone notices.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Encoded these loops as agent skills. The design principles matter more than the
+individual scripts:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Verify the outcome, not the exit code.&lt;/strong&gt; A flash step is not done because
+&lt;code&gt;fastboot&lt;/code&gt; returned 0; it is done when the device is confirmed booted to the
+desktop. Each skill defines success as an observable end state and checks for it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make every step resumable.&lt;/strong&gt; Firmware loops are long and fail in the middle.
+Steps are idempotent where possible so a run can be resumed rather than restarted
+from a clean tree.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keep a human at the irreversible steps.&lt;/strong&gt; Flashing a device and pushing to
+Gerrit are gated. The agent prepares the action and reports what it is about to
+do; it does not decide on its own to write to hardware or to a shared branch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encode the checklist, not the conclusion.&lt;/strong&gt; For new-chip porting the skill
+carries the ordered procedure and its checkpoints. It does not attempt to guess
+platform-specific values — it surfaces the decision points to the engineer.&lt;/p&gt;
+&lt;p&gt;This is the same automation instinct as the
+&lt;a href="https://alanhc.github.io/projects/pxe-provisioning-automation/"&gt;provisioning work&lt;/a&gt;, moved up the stack
+from rack deployment into firmware development itself.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The repetitive half of platform work runs unattended up to the points where a
+human genuinely needs to decide, and failures surface at the step that failed
+rather than at the end.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add measured numbers — turnaround time before and after, and the
+unattended success rate.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; the implementation is internal company work and is not publishable.
+This page documents the architecture and design reasoning only. If a
+sanitized reference implementation is ever extracted, link it here.&lt;/p&gt;</description></item></channel></rss>

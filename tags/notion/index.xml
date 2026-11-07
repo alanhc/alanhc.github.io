@@ -1,0 +1,8 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Notion</title><link>https://alanhc.github.io/tags/notion/</link><description>Recent content in Notion on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 07 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/notion/index.xml" rel="self" type="application/rss+xml"/><item><title>20240107-notion-websire</title><link>https://alanhc.github.io/notes/20240107-notion-website/</link><pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20240107-notion-website/</guid><description>
+&lt;p&gt;使用這套件可以讓notion嵌入到網站
+因為不能使用iframe 將notion嵌入，而大多數的solution都要付費&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/NotionX/react-notion-x"target="_blank" rel="noopener"&gt;https://github.com/NotionX/react-notion-x&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/NotionX/react-notion-x/tree/master/examples/minimal"target="_blank" rel="noopener"&gt;https://github.com/NotionX/react-notion-x/tree/master/examples/minimal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

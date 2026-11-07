@@ -1,0 +1,10 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Pyspark</title><link>https://alanhc.github.io/tags/pyspark/</link><description>Recent content in Pyspark on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 13 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/pyspark/index.xml" rel="self" type="application/rss+xml"/><item><title>20231213-pyspark</title><link>https://alanhc.github.io/notes/20231213-pyspark/</link><pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20231213-pyspark/</guid><description>
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/databricks/pandas/pyspark-pandas-conversion"target="_blank" rel="noopener"&gt;https://learn.microsoft.com/en-us/azure/databricks/pandas/pyspark-pandas-conversion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf"target="_blank" rel="noopener"&gt;https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/geekculture/pandas-vs-pyspark-fe110c266e5c"target="_blank" rel="noopener"&gt;Pandas vs PySpark..!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@benpinner1997/data-processing-pandas-vs-pyspark-vs-polars-fc1cdcb28725"target="_blank" rel="noopener"&gt;Data Processing: Pandas vs PySpark vs Polars&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.jetbrains.com/dataspell/2023/08/polars-vs-pandas-what-s-the-difference/"target="_blank" rel="noopener"&gt;Polars vs. pandas: What’s the Difference?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

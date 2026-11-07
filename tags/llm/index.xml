@@ -1,0 +1,308 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Llm</title><link>https://alanhc.github.io/tags/llm/</link><description>Recent content in Llm on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml"/><item><title>CPU-Side Low-Bit LLM Inference Analysis</title><link>https://alanhc.github.io/projects/low-bit-llm-inference-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/low-bit-llm-inference-analysis/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Low-bit inference kernels like T-MAC and BitNet promise that quantized LLMs can
+run usefully on CPUs. The published evidence for that is mostly throughput:
+tokens per second, on some machine, against some baseline.&lt;/p&gt;
+&lt;p&gt;Throughput tells you whether something got faster. It does not tell you &lt;em&gt;why&lt;/em&gt;,
+and it does not tell you what to fix next. A kernel that is bound on memory
+behavior and one that is bound on instruction issue produce the same
+tokens-per-second number and demand completely different optimizations. Guessing
+which one you have is how optimization effort gets spent in the wrong place.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Profiled the inference path on CPU with &lt;code&gt;perf&lt;/code&gt; and &lt;code&gt;uftrace&lt;/code&gt;, measuring the
+hardware behavior rather than the wall clock:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IPC&lt;/strong&gt; — whether the core is issuing work or stalled&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cache misses&lt;/strong&gt; — whether the working set and access pattern fit the hierarchy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLB misses&lt;/strong&gt; — whether address translation is itself a cost, which low-bit
+layouts can provoke by trading memory footprint for irregular access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page faults&lt;/strong&gt; — whether time is going to the memory system rather than compute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;uftrace&lt;/code&gt; gave the function-level call path so the hardware counters could be
+attributed to specific stages rather than to the process as a whole.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Located where the time actually goes in the low-bit inference path on CPU, and
+identified concrete optimization targets on that evidence rather than on
+assumption about which layer &amp;ldquo;should&amp;rdquo; be slow.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; publish the measured numbers — the counter deltas per stage, and which
+targets they pointed to.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/microsoft/T-MAC"target="_blank" rel="noopener"&gt;T-MAC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/microsoft/BitNet"target="_blank" rel="noopener"&gt;BitNet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; link the analysis writeup once published.&lt;/p&gt;</description></item><item><title>超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇</title><link>https://alanhc.github.io/blog/%E8%B6%85%E7%B0%A1%E5%96%AE%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8Bllm-ollamaopenwebui%E7%AF%87/</link><pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/%E8%B6%85%E7%B0%A1%E5%96%AE%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8Bllm-ollamaopenwebui%E7%AF%87/</guid><description>
+&lt;h2&gt;步驟&lt;span class="hx:absolute hx:-mt-20" id="步驟"&gt;&lt;/span&gt;
+&lt;a href="#%e6%ad%a5%e9%a9%9f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/jycGc1B.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安裝 Docker Desktop&lt;/li&gt;
+&lt;li&gt;使用wsl2&lt;/li&gt;
+&lt;li&gt;使用 docker compose&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;2 使用WSL2&lt;span class="hx:absolute hx:-mt-20" id="2-使用wsl2"&gt;&lt;/span&gt;
+&lt;a href="#2-%e4%bd%bf%e7%94%a8wsl2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;打開命令提示字元或Terminal，鍵入: &lt;code&gt;wsl --install&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;3 使用 docker compose 安裝&lt;span class="hx:absolute hx:-mt-20" id="3-使用-docker-compose-安裝"&gt;&lt;/span&gt;
+&lt;a href="#3-%e4%bd%bf%e7%94%a8-docker-compose-%e5%ae%89%e8%a3%9d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;3.1 安裝  NVIDIA Container Toolkit讓GPU可以使用&lt;span class="hx:absolute hx:-mt-20" id="31-安裝-nvidia-container-toolkit讓gpu可以使用"&gt;&lt;/span&gt;
+&lt;a href="#31-%e5%ae%89%e8%a3%9d-nvidia-container-toolkit%e8%ae%93gpu%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey &lt;span class="p"&gt;|&lt;/span&gt; sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sed &lt;span class="s1"&gt;&amp;#39;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install -y nvidia-container-toolkit
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Configure NVIDIA Container Toolkit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo nvidia-ctk runtime configure --runtime&lt;span class="o"&gt;=&lt;/span&gt;docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl restart docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Test GPU integration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker run --gpus all nvidia/cuda:11.5.2-base-ubuntu20.04 nvidia-smi&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;後續步驟有影片可以對照參考：&lt;a href="https://youtu.be/2NGVNUjdoe0?si=-IQvk7y2x583ysY6"target="_blank" rel="noopener"&gt;200 秒內帶你進入私有大型語言模型LLM的世界 - Ollama + Open WebUI&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;3.2.1 clone repo&lt;span class="hx:absolute hx:-mt-20" id="321-clone-repo"&gt;&lt;/span&gt;
+&lt;a href="#321-clone-repo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git clone https://github.com/valiantlynx/ollama-docker.git&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;3.2.2 進入repo&lt;span class="hx:absolute hx:-mt-20" id="322-進入repo"&gt;&lt;/span&gt;
+&lt;a href="#322-%e9%80%b2%e5%85%a5repo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cd ollama-docker&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;3.3 使用docker compose 跑服務&lt;span class="hx:absolute hx:-mt-20" id="33-使用docker-compose-跑服務"&gt;&lt;/span&gt;
+&lt;a href="#33-%e4%bd%bf%e7%94%a8docker-compose-%e8%b7%91%e6%9c%8d%e5%8b%99" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker-compose -f docker-compose-ollama-gpu.yaml up -d&lt;/code&gt;
+&lt;img src="https://i.imgur.com/GJKhDG5.png" alt="" loading="lazy" /&gt;
+看到這就跑起來啦&lt;/p&gt;
+&lt;h2&gt;4 使用&lt;span class="hx:absolute hx:-mt-20" id="4-使用"&gt;&lt;/span&gt;
+&lt;a href="#4-%e4%bd%bf%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;4.1 下載模型&lt;span class="hx:absolute hx:-mt-20" id="41-下載模型"&gt;&lt;/span&gt;
+&lt;a href="#41-%e4%b8%8b%e8%bc%89%e6%a8%a1%e5%9e%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;打開瀏覽器: http://localhost:8080/，點選左下角使用者&amp;gt;設定&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jbDwuxS.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/R6uBbGk.png" alt="" loading="lazy" /&gt;
+請按照1. 2. 3. 順序點選，2可以先輸入使用微軟製作的小模型 phi3:3.8b&lt;/p&gt;
+&lt;h3&gt;4.2 可以開始玩拉&lt;span class="hx:absolute hx:-mt-20" id="42-可以開始玩拉"&gt;&lt;/span&gt;
+&lt;a href="#42-%e5%8f%af%e4%bb%a5%e9%96%8b%e5%a7%8b%e7%8e%a9%e6%8b%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/0Mipwj2.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;5 關閉&lt;span class="hx:absolute hx:-mt-20" id="5-關閉"&gt;&lt;/span&gt;
+&lt;a href="#5-%e9%97%9c%e9%96%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker compose down&lt;/code&gt;
+—來自Alan Tseng發佈於Alan Tseng的沙龍 &lt;a href="https://vocus.cc/article/669aba96fd89780001daf87d"target="_blank" rel="noopener"&gt;https://vocus.cc/article/669aba96fd89780001daf87d&lt;/a&gt;&lt;/p&gt;</description></item><item><title>inferencing-llm</title><link>https://alanhc.github.io/blog/20240704-inferencing-llm/</link><pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240704-inferencing-llm/</guid><description>
+&lt;pre&gt;&lt;code&gt; ## mac
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;安裝&lt;span class="hx:absolute hx:-mt-20" id="安裝"&gt;&lt;/span&gt;
+&lt;a href="#%e5%ae%89%e8%a3%9d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip install mlx-lm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;使用 mac cli&lt;span class="hx:absolute hx:-mt-20" id="使用-mac-cli"&gt;&lt;/span&gt;
+&lt;a href="#%e4%bd%bf%e7%94%a8-mac-cli" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python -m mlx_lm.generate --model mlx-community/Phi-3-mini-4k-instruct-4bit --prompt &amp;quot;how are you&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;import bs4
+from langchain import hub
+from langchain_community.document_loaders import WebBaseLoader
+from langchain_chroma import Chroma
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;import getpass
+import os
+os.environ[&amp;#34;OPENAI_API_KEY&amp;#34;] = &amp;#34;sk-proj-&amp;#34;#getpass.getpass()
+from langchain_community.document_loaders import PyPDFLoader
+loader = PyPDFLoader(&amp;#34;files/替代役管理作業規定.pdf&amp;#34;)
+pages = loader.load_and_split()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;from langchain_community.llms.mlx_pipeline import MLXPipeline
+llm = MLXPipeline.from_model_id(
+&amp;#34;mlx-community/quantized-gemma-2b-it&amp;#34;,
+# pipeline_kwargs={&amp;#34;max_tokens&amp;#34;: 512, &amp;#34;temp&amp;#34;: 0.1},
+pipeline_kwargs={&amp;#34;temp&amp;#34;: 0.1},
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;from huggingface_hub import login
+login(token=&amp;#34;&amp;#34;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;import os
+docs = loader.load()
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+splits = text_splitter.split_documents(docs)
+vectorstore = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
+# Retrieve and generate using the relevant snippets of the blog.
+retriever = vectorstore.as_retriever()
+prompt = hub.pull(&amp;#34;rlm/rag-prompt&amp;#34;)
+def format_docs(docs):
+return &amp;#34;\n\n&amp;#34;.join(doc.page_content for doc in docs)
+rag_chain = (
+{&amp;#34;context&amp;#34;: retriever | format_docs, &amp;#34;question&amp;#34;: RunnablePassthrough()}
+| prompt
+| llm
+| StrOutputParser()
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;question = &amp;#34;替代役管理作業規定是依據甚麼法律?&amp;#34;
+rag_chain.invoke(f&amp;#34;{question} &amp;#34;)
+# &amp;#39; 根據上述法律，替代役管理作業規定主要依據兵役法第 26條。&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Ollama&lt;span class="hx:absolute hx:-mt-20" id="ollama"&gt;&lt;/span&gt;
+&lt;a href="#ollama" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.miniasp.com/post/2024/04/17/Run-TAIDE-LX-7B-Chat-4bit-model-in-Ollama"target="_blank" rel="noopener"&gt;使用 Ollama 執行 TAIDE 的 TAIDE-LX-7B-Chat-4bit 大語言模型&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ollama create taide-lx-7b-chat-4bit:latest -f Modelfile&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.miniasp.com/post/2024/03/04/Useful-tool-Ollama"target="_blank" rel="noopener"&gt;介紹好用工具：Ollama 快速在本地啟動並執行大型語言模型&lt;/a&gt;
+&lt;a href="https://swf.com.tw/?p=1952"target="_blank" rel="noopener"&gt;透過Ollama在本機電腦執行大型語言模型（LLM）：Windows與VS Code篇&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>80分鐘快速了解大型語言模型-5-30有咒術迴戰雷</title><link>https://alanhc.github.io/blog/20231110-80%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B-5-30%E6%9C%89%E5%92%92%E8%A1%93%E8%BF%B4%E6%88%B0%E9%9B%B7/</link><pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20231110-80%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B-5-30%E6%9C%89%E5%92%92%E8%A1%93%E8%BF%B4%E6%88%B0%E9%9B%B7/</guid><description>
+&lt;p&gt;&lt;img src="https://i.imgur.com/U6OeFM7.png" alt="" loading="lazy" /&gt;
+客製化GPT
+&lt;a href="https://openai.com/blog/introducing-gpts"target="_blank" rel="noopener"&gt;https://openai.com/blog/introducing-gpts&lt;/a&gt;
+串接dalle 自動生成頭像&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/oBxJeFw.png" alt="" loading="lazy" /&gt;
+GPT: Generative Pre-trained Transformer
+others Google Bard anthropic Claude
+GPT 訓練：文字接龍 e.g. 台灣大-&amp;gt;chatGPT-&amp;gt; 學
+台灣大-&amp;gt;chatGPT-&amp;gt; （機率）學10% 歌、6%
+&lt;img src="https://i.imgur.com/WxgJVLd.png" alt="" loading="lazy" /&gt;
+&lt;a href="https://platform.openai.com/docs/tokenizer"target="_blank" rel="noopener"&gt;https://platform.openai.com/docs/tokenizer&lt;/a&gt;
+&lt;img src="https://i.imgur.com/OaqzMkQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;ChatGPT目前可以讀300頁pdt&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/LakJpvl.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/N38im7J.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/rADG2nT.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/p5wvO2f.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/LU8OEvz.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/sAZAVkn.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jymlc5s.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/td5xUOQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/QUuYMwJ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/d9NR3Tm.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/eD4pabX.png" alt="" loading="lazy" /&gt;
+chatgpt可能跟 Instruct gpt有關&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/fnq016C.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/XnJi3eQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/QOxjDFZ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/kG7tiSR.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/NFesrFO.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/90J8vor.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/R3EC4JH.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/E2PHJyD.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/8NPELGC.png" alt="" loading="lazy" /&gt;
+gpt 3.5 人類去調整
+&lt;img src="https://i.imgur.com/Gx0UFI1.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/UUoGWE3.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;激發語言模型&lt;span class="hx:absolute hx:-mt-20" id="激發語言模型"&gt;&lt;/span&gt;
+&lt;a href="#%e6%bf%80%e7%99%bc%e8%aa%9e%e8%a8%80%e6%a8%a1%e5%9e%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;需求講清楚
+&lt;ol&gt;
+&lt;li&gt;e.g. 擴寫、文法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;提供資訊給chatgpt&lt;/li&gt;
+&lt;li&gt;提供範例&lt;/li&gt;
+&lt;li&gt;想一想 chain of thiught&lt;/li&gt;
+&lt;li&gt;找出神奇的prompt&lt;/li&gt;
+&lt;li&gt;上傳檔案
+&lt;ol&gt;
+&lt;li&gt;製作投影片、外掛程式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;使用其它工具&lt;/li&gt;
+&lt;li&gt;拆解任務&lt;/li&gt;
+&lt;li&gt;自主進行規劃&lt;/li&gt;
+&lt;li&gt;模型自我反省&lt;/li&gt;
+&lt;li&gt;跟真實環境互動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/8fMEfuR.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/HSVx09i.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/9hq7EFO.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/VG2Sqqy.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/nooGFgj.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ABZCSi6.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/OtG7Afm.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/2tef2w9.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/zq78GhS.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/s0IVFSc.png" alt="" loading="lazy" /&gt;
+GPT 4 以後才有反省能力
+&lt;img src="https://i.imgur.com/ntmOaPw.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ePCj9UD.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/L1Dw49l.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jgjkTj0.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/nK4hG2R.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/KXFhfgh.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=wG8-IUtqu-s&amp;amp;t=365s"target="_blank" rel="noopener"&gt;https://www.youtube.com/watch?v=wG8-IUtqu-s&amp;t=365s&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

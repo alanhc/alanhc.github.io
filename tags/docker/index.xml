@@ -1,0 +1,147 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Docker</title><link>https://alanhc.github.io/tags/docker/</link><description>Recent content in Docker on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>自架harbor</title><link>https://alanhc.github.io/notes/%E8%87%AA%E6%9E%B6harbor/</link><pubDate>Sun, 13 Oct 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/%E8%87%AA%E6%9E%B6harbor/</guid><description>
+&lt;p&gt;wget &lt;a href="https://github.com/goharbor/harbor/releases/download/v2.11.1/harbor-online-installer-v2.11.1.tgz"target="_blank" rel="noopener"&gt;https://github.com/goharbor/harbor/releases/download/v2.11.1/harbor-online-installer-v2.11.1.tgz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;tar xzvf harbor-online-installer-v2.11.1.tgz
+cd harbor
+Config HTTPS&lt;/p&gt;
+&lt;p&gt;使用OpenSSL 建立ＣＡ
+openssl genrsa -out ca.key 4096&lt;/p&gt;
+&lt;p&gt;openssl req -x509 -new -nodes -sha512 -days 3650 &lt;br&gt;
+-subj &amp;ldquo;/C=TW/ST=Taiwan/L=Taipei/O=alanhc/OU=Personal/CN=0xfanslab.com&amp;rdquo; &lt;br&gt;
+-key ca.key &lt;br&gt;
+-out ca.crt&lt;/p&gt;
+&lt;p&gt;openssl genrsa -out 0xfanslab.com.key 4096&lt;/p&gt;
+&lt;p&gt;openssl req -sha512 -new &lt;br&gt;
+-subj &amp;ldquo;/C=TW/ST=Taiwan/L=Taipei/O=alanhc/OU=Personal/CN=0xfanslab.com&amp;rdquo; &lt;br&gt;
+-key 0xfanslab.com.key &lt;br&gt;
+-out 0xfanslab.com.csr&lt;/p&gt;
+&lt;p&gt;cat &amp;gt; v3.ext &amp;laquo;-EOF
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names&lt;/p&gt;
+&lt;p&gt;[alt_names]
+DNS.1=0xfanslab.com
+DNS.2=www.0xfanslab.com
+DNS.3=localhost
+EOF&lt;/p&gt;
+&lt;p&gt;authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth
+subjectAltName = @alt_names&lt;/p&gt;
+&lt;p&gt;[alt_names]
+DNS.1=0xfanslab.com
+DNS.2=www.0xfanslab.com
+DNS.3=localhost
+IP.1=192.168.64.2 # multipass 要加上這&lt;/p&gt;
+&lt;p&gt;openssl x509 -req -sha512 -days 3650 &lt;br&gt;
+-extfile v3.ext &lt;br&gt;
+-CA ca.crt -CAkey ca.key -CAcreateserial &lt;br&gt;
+-in 0xfanslab.com.csr &lt;br&gt;
+-out 0xfanslab.com.crt&lt;/p&gt;
+&lt;p&gt;sudo mkdir -p /data/certs/&lt;/p&gt;
+&lt;p&gt;sudo cp 0xfanslab.com.crt /data/certs/
+sudo cp 0xfanslab.com.key /data/certs/&lt;/p&gt;
+&lt;p&gt;openssl x509 -inform PEM -in 0xfanslab.com.crt -out 0xfanslab.com.cert&lt;/p&gt;
+&lt;p&gt;sed -i &amp;rsquo;s|certificate: /your/certificate/path|certificate: &amp;lsquo;&amp;quot;$(pwd)/0xfanslab.com.crt&amp;quot;&amp;rsquo;|&amp;rsquo; harbor.yml
+sed -i &amp;rsquo;s|private_key: /your/private/key/path|private_key: &amp;lsquo;&amp;quot;$(pwd)/0xfanslab.com.key&amp;quot;&amp;rsquo;|&amp;rsquo; harbor.yml
+read -p &amp;ldquo;請輸入新的 Harbor 管理員密碼: &amp;quot; new_password
+sed -i &amp;ldquo;s|harbor_admin_password: .*|harbor_admin_password: $new_password|&amp;rdquo; harbor.yml
+sed -i &amp;ldquo;s|hostname: reg.mydomain.com|hostname: harbor.0xfanslab.com|&amp;rdquo; harbor.yml&lt;/p&gt;
+&lt;p&gt;sudo mkdir -p /etc/docker/certs.d/0xfanslab.com/
+sudo cp 0xfanslab.com.cert /etc/docker/certs.d/0xfanslab.com/
+sudo cp 0xfanslab.com.key /etc/docker/certs.d/0xfanslab.com/
+sudo cp ca.crt /etc/docker/certs.d/0xfanslab.com/&lt;/p&gt;
+&lt;p&gt;sudo systemctl restart docker&lt;/p&gt;
+&lt;p&gt;cp harbor.yml.tmpl harbor.yml&lt;/p&gt;
+&lt;p&gt;設定&lt;/p&gt;
+&lt;h1&gt;https related config&lt;/h1&gt;&lt;p&gt;https:&lt;/p&gt;
+&lt;h1&gt;https port for harbor, default is 443&lt;/h1&gt;&lt;p&gt;port: 443&lt;/p&gt;
+&lt;h1&gt;The path of cert and key files for nginx&lt;/h1&gt;&lt;p&gt;certificate: /Users/alantseng/harbor/0xfanslab.com.crt
+private_key: /Users/alantseng/harbor/0xfanslab.com.key&lt;/p&gt;
+&lt;p&gt;harbor_admin_password:&lt;/p&gt;
+&lt;p&gt;./prepare&lt;/p&gt;
+&lt;p&gt;sudo docker compose down&lt;/p&gt;
+&lt;p&gt;如果有錯：WARN[0000] /home/ubuntu/harbor/docker-compose.yml: the attribute &lt;code&gt;version&lt;/code&gt; is obsolete, it will be ignored, please remove it to avoid potential confusion
+sed -i &amp;lsquo;/^version:/d&amp;rsquo; /home/ubuntu/harbor/docker-compose.yml&lt;/p&gt;
+&lt;p&gt;sudo docker compose up -d&lt;/p&gt;
+&lt;p&gt;Cloudflare 連線不到是要勾 No TLS Verify&lt;/p&gt;</description></item><item><title>20231209-docker-machine-learning</title><link>https://alanhc.github.io/notes/20231209-docker-machine-learning/</link><pubDate>Sat, 09 Dec 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20231209-docker-machine-learning/</guid><description>
+&lt;h2&gt;Docker&lt;span class="hx:absolute hx:-mt-20" id="docker"&gt;&lt;/span&gt;
+&lt;a href="#docker" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;docker search tensorflow&lt;/code&gt;
+&lt;code&gt;docker pull jupyter/tensorflow-notebook&lt;/code&gt;
+&lt;code&gt;docker run jupyter/tensorflow-notebook -p 8000:8888&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-p out:in&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Transformers
+&lt;code&gt;from transformers import pipeline&lt;/code&gt;
+&lt;code&gt;pip install transformers&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;docker compose&lt;span class="hx:absolute hx:-mt-20" id="docker-compose"&gt;&lt;/span&gt;
+&lt;a href="#docker-compose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;transformers-notebook&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;build: ./Dockerfile | image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;jupyter/tensorflow-notebook&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="m"&gt;8000&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="m"&gt;8888&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;environment&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;JUPYTER_TOKEN=token&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;volumes&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;- &lt;span class="l"&gt;./:/home/{user}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Dockerfile" data-lang="Dockerfile"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;FROM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;jupyter/tensorflow-notebook&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;USER&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;$NB_UID&lt;/span&gt; //user &lt;span class="p"&gt;|&lt;/span&gt; USER root&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;RUN&lt;/span&gt; pip install --upgrade pip &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pip install transformers &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pip install pysrt &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; fix-permissions &lt;span class="s2"&gt;&amp;#34;/home/&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;NB_USER&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;&lt;span class="err"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;COPY&lt;/span&gt; file.srt Translate.ipynb ./&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;docker-compose up&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;from transformers import pipeline&lt;/code&gt;
+&lt;code&gt;pip install transformers&lt;/code&gt;&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;translator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;translation_en_to_fr&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;fr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;translator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Hi there I&amp;#39;m Alan!&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;pysrt 讀取字幕檔&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker images&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker image tag OOOOOOO-transformers-notebook:latest {user}/srt-translator:1.0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker push {user}/srt-translator:1.0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker container prune&lt;/code&gt;
+&lt;code&gt;docker rmi {user}/srt-translator:1.0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -p 5000:8888 {user}/srt-translator:1.0&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/-l7YocEQtA0?si=GOfJLcaa5CL8NBaX"target="_blank" rel="noopener"&gt;https://youtu.be/-l7YocEQtA0?si=GOfJLcaa5CL8NBaX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

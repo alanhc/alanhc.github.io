@@ -1,0 +1,1744 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Blog</title><link>https://alanhc.github.io/blog/</link><description>Recent content in Blog on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://alanhc.github.io/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>超簡單! 一文理解如何使用私有大型語言模型LLM - Ollama＋Open WebUI篇</title><link>https://alanhc.github.io/blog/%E8%B6%85%E7%B0%A1%E5%96%AE%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8Bllm-ollamaopenwebui%E7%AF%87/</link><pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/%E8%B6%85%E7%B0%A1%E5%96%AE%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%A7%81%E6%9C%89%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8Bllm-ollamaopenwebui%E7%AF%87/</guid><description>
+&lt;h2&gt;步驟&lt;span class="hx:absolute hx:-mt-20" id="步驟"&gt;&lt;/span&gt;
+&lt;a href="#%e6%ad%a5%e9%a9%9f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/jycGc1B.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安裝 Docker Desktop&lt;/li&gt;
+&lt;li&gt;使用wsl2&lt;/li&gt;
+&lt;li&gt;使用 docker compose&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;2 使用WSL2&lt;span class="hx:absolute hx:-mt-20" id="2-使用wsl2"&gt;&lt;/span&gt;
+&lt;a href="#2-%e4%bd%bf%e7%94%a8wsl2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;打開命令提示字元或Terminal，鍵入: &lt;code&gt;wsl --install&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;3 使用 docker compose 安裝&lt;span class="hx:absolute hx:-mt-20" id="3-使用-docker-compose-安裝"&gt;&lt;/span&gt;
+&lt;a href="#3-%e4%bd%bf%e7%94%a8-docker-compose-%e5%ae%89%e8%a3%9d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;3.1 安裝  NVIDIA Container Toolkit讓GPU可以使用&lt;span class="hx:absolute hx:-mt-20" id="31-安裝-nvidia-container-toolkit讓gpu可以使用"&gt;&lt;/span&gt;
+&lt;a href="#31-%e5%ae%89%e8%a3%9d-nvidia-container-toolkit%e8%ae%93gpu%e5%8f%af%e4%bb%a5%e4%bd%bf%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey &lt;span class="p"&gt;|&lt;/span&gt; sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sed &lt;span class="s1"&gt;&amp;#39;s#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo apt-get install -y nvidia-container-toolkit
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Configure NVIDIA Container Toolkit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo nvidia-ctk runtime configure --runtime&lt;span class="o"&gt;=&lt;/span&gt;docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sudo systemctl restart docker
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# Test GPU integration&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker run --gpus all nvidia/cuda:11.5.2-base-ubuntu20.04 nvidia-smi&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;後續步驟有影片可以對照參考：&lt;a href="https://youtu.be/2NGVNUjdoe0?si=-IQvk7y2x583ysY6"target="_blank" rel="noopener"&gt;200 秒內帶你進入私有大型語言模型LLM的世界 - Ollama + Open WebUI&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;3.2.1 clone repo&lt;span class="hx:absolute hx:-mt-20" id="321-clone-repo"&gt;&lt;/span&gt;
+&lt;a href="#321-clone-repo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;git clone https://github.com/valiantlynx/ollama-docker.git&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;3.2.2 進入repo&lt;span class="hx:absolute hx:-mt-20" id="322-進入repo"&gt;&lt;/span&gt;
+&lt;a href="#322-%e9%80%b2%e5%85%a5repo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;cd ollama-docker&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;3.3 使用docker compose 跑服務&lt;span class="hx:absolute hx:-mt-20" id="33-使用docker-compose-跑服務"&gt;&lt;/span&gt;
+&lt;a href="#33-%e4%bd%bf%e7%94%a8docker-compose-%e8%b7%91%e6%9c%8d%e5%8b%99" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker-compose -f docker-compose-ollama-gpu.yaml up -d&lt;/code&gt;
+&lt;img src="https://i.imgur.com/GJKhDG5.png" alt="" loading="lazy" /&gt;
+看到這就跑起來啦&lt;/p&gt;
+&lt;h2&gt;4 使用&lt;span class="hx:absolute hx:-mt-20" id="4-使用"&gt;&lt;/span&gt;
+&lt;a href="#4-%e4%bd%bf%e7%94%a8" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;4.1 下載模型&lt;span class="hx:absolute hx:-mt-20" id="41-下載模型"&gt;&lt;/span&gt;
+&lt;a href="#41-%e4%b8%8b%e8%bc%89%e6%a8%a1%e5%9e%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;打開瀏覽器: http://localhost:8080/，點選左下角使用者&amp;gt;設定&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jbDwuxS.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/R6uBbGk.png" alt="" loading="lazy" /&gt;
+請按照1. 2. 3. 順序點選，2可以先輸入使用微軟製作的小模型 phi3:3.8b&lt;/p&gt;
+&lt;h3&gt;4.2 可以開始玩拉&lt;span class="hx:absolute hx:-mt-20" id="42-可以開始玩拉"&gt;&lt;/span&gt;
+&lt;a href="#42-%e5%8f%af%e4%bb%a5%e9%96%8b%e5%a7%8b%e7%8e%a9%e6%8b%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/0Mipwj2.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;5 關閉&lt;span class="hx:absolute hx:-mt-20" id="5-關閉"&gt;&lt;/span&gt;
+&lt;a href="#5-%e9%97%9c%e9%96%89" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;docker compose down&lt;/code&gt;
+—來自Alan Tseng發佈於Alan Tseng的沙龍 &lt;a href="https://vocus.cc/article/669aba96fd89780001daf87d"target="_blank" rel="noopener"&gt;https://vocus.cc/article/669aba96fd89780001daf87d&lt;/a&gt;&lt;/p&gt;</description></item><item><title>inferencing-llm</title><link>https://alanhc.github.io/blog/20240704-inferencing-llm/</link><pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240704-inferencing-llm/</guid><description>
+&lt;pre&gt;&lt;code&gt; ## mac
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;安裝&lt;span class="hx:absolute hx:-mt-20" id="安裝"&gt;&lt;/span&gt;
+&lt;a href="#%e5%ae%89%e8%a3%9d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip install mlx-lm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;使用 mac cli&lt;span class="hx:absolute hx:-mt-20" id="使用-mac-cli"&gt;&lt;/span&gt;
+&lt;a href="#%e4%bd%bf%e7%94%a8-mac-cli" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python -m mlx_lm.generate --model mlx-community/Phi-3-mini-4k-instruct-4bit --prompt &amp;quot;how are you&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;import bs4
+from langchain import hub
+from langchain_community.document_loaders import WebBaseLoader
+from langchain_chroma import Chroma
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import RunnablePassthrough
+from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;import getpass
+import os
+os.environ[&amp;#34;OPENAI_API_KEY&amp;#34;] = &amp;#34;sk-proj-&amp;#34;#getpass.getpass()
+from langchain_community.document_loaders import PyPDFLoader
+loader = PyPDFLoader(&amp;#34;files/替代役管理作業規定.pdf&amp;#34;)
+pages = loader.load_and_split()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;from langchain_community.llms.mlx_pipeline import MLXPipeline
+llm = MLXPipeline.from_model_id(
+&amp;#34;mlx-community/quantized-gemma-2b-it&amp;#34;,
+# pipeline_kwargs={&amp;#34;max_tokens&amp;#34;: 512, &amp;#34;temp&amp;#34;: 0.1},
+pipeline_kwargs={&amp;#34;temp&amp;#34;: 0.1},
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;from huggingface_hub import login
+login(token=&amp;#34;&amp;#34;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;import os
+docs = loader.load()
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+splits = text_splitter.split_documents(docs)
+vectorstore = Chroma.from_documents(documents=splits, embedding=OpenAIEmbeddings())
+# Retrieve and generate using the relevant snippets of the blog.
+retriever = vectorstore.as_retriever()
+prompt = hub.pull(&amp;#34;rlm/rag-prompt&amp;#34;)
+def format_docs(docs):
+return &amp;#34;\n\n&amp;#34;.join(doc.page_content for doc in docs)
+rag_chain = (
+{&amp;#34;context&amp;#34;: retriever | format_docs, &amp;#34;question&amp;#34;: RunnablePassthrough()}
+| prompt
+| llm
+| StrOutputParser()
+)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;question = &amp;#34;替代役管理作業規定是依據甚麼法律?&amp;#34;
+rag_chain.invoke(f&amp;#34;{question} &amp;#34;)
+# &amp;#39; 根據上述法律，替代役管理作業規定主要依據兵役法第 26條。&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Ollama&lt;span class="hx:absolute hx:-mt-20" id="ollama"&gt;&lt;/span&gt;
+&lt;a href="#ollama" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.miniasp.com/post/2024/04/17/Run-TAIDE-LX-7B-Chat-4bit-model-in-Ollama"target="_blank" rel="noopener"&gt;使用 Ollama 執行 TAIDE 的 TAIDE-LX-7B-Chat-4bit 大語言模型&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ollama create taide-lx-7b-chat-4bit:latest -f Modelfile&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.miniasp.com/post/2024/03/04/Useful-tool-Ollama"target="_blank" rel="noopener"&gt;介紹好用工具：Ollama 快速在本地啟動並執行大型語言模型&lt;/a&gt;
+&lt;a href="https://swf.com.tw/?p=1952"target="_blank" rel="noopener"&gt;透過Ollama在本機電腦執行大型語言模型（LLM）：Windows與VS Code篇&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>20240409-你要如何衡量你的人生</title><link>https://alanhc.github.io/blog/20240409-%E4%BD%A0%E8%A6%81%E5%A6%82%E4%BD%95%E8%A1%A1%E9%87%8F%E4%BD%A0%E7%9A%84%E4%BA%BA%E7%94%9F/</link><pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240409-%E4%BD%A0%E8%A6%81%E5%A6%82%E4%BD%95%E8%A1%A1%E9%87%8F%E4%BD%A0%E7%9A%84%E4%BA%BA%E7%94%9F/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;人生方向
+&lt;ul&gt;
+&lt;li&gt;樂在工作、挑戰、個人成長、有意義&lt;/li&gt;
+&lt;li&gt;家庭
+&lt;ul&gt;
+&lt;li&gt;婚姻&lt;/li&gt;
+&lt;li&gt;孩子：學做困難事、價值觀&lt;/li&gt;
+&lt;li&gt;家庭文化、行為準則&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;個人：道德原則、不妥協&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;職涯發展 5特質
+&lt;ul&gt;
+&lt;li&gt;Spiritual&lt;/li&gt;
+&lt;li&gt;Heart&lt;/li&gt;
+&lt;li&gt;Abilities&lt;/li&gt;
+&lt;li&gt;Personality&lt;/li&gt;
+&lt;li&gt;Experience&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;作者是 Rhodes Scholar 牛津讀博
+&lt;ul&gt;
+&lt;li&gt;運動、政治、寫作、社區&lt;/li&gt;
+&lt;li&gt;股市大盜：Dan of thieves&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;如何知道工作生涯何以成功、快樂&lt;/li&gt;
+&lt;li&gt;如何知道自己與配偶、兒女、朋友可以快樂&lt;/li&gt;
+&lt;li&gt;如何知道一生堅守原則，免於牢獄&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;破壞性創新 - Andy Grove&lt;/li&gt;
+&lt;li&gt;創新的兩難&lt;/li&gt;
+&lt;li&gt;理論的Value：從經驗學cost大&lt;/li&gt;
+&lt;li&gt;每天一睜眼可以為自己喜歡社情欣喜&lt;/li&gt;
+&lt;li&gt;誘因理論 Michael Jemsem&lt;/li&gt;
+&lt;li&gt;Agent Theory Willian Meckling&lt;/li&gt;
+&lt;li&gt;Two-Factor Theory&lt;/li&gt;
+&lt;li&gt;動機（發自內心）vs 應因&lt;/li&gt;
+&lt;li&gt;動機理論 Frederiok Herzberg
+&lt;ul&gt;
+&lt;li&gt;hygrene factor 保健 e.g. 地位穩定&lt;/li&gt;
+&lt;li&gt;motivation factor 動機 e.g. 有挑戰性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;策略 Hery Mintzberg
+&lt;ol&gt;
+&lt;li&gt;deliberate strategy 審慎策略 （可預期）&lt;/li&gt;
+&lt;li&gt;emergement strategy 應急策略（不可預期）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Walmart 只在小鎮，支援方便，避免削價競爭&lt;/li&gt;
+&lt;li&gt;發現導向（計畫）- 檢驗哪一比的收穫大 -&amp;gt; 哪些假設新證明為真&lt;/li&gt;
+&lt;li&gt;重要不確定 vs 不重要但確定&lt;/li&gt;
+&lt;li&gt;創新的困難 e.g. SonoSite 資源分配的重要&lt;/li&gt;
+&lt;li&gt;投資困境：為什麼雪球滾不大 （書）&lt;/li&gt;
+&lt;li&gt;好資金 （少、慢、考慮獲利）、壞資金（大、急於成功）&lt;/li&gt;
+&lt;li&gt;孩子溝通時要使用：如果&amp;hellip;、你還記得&amp;hellip;&lt;/li&gt;
+&lt;li&gt;30個月多說話&lt;/li&gt;
+&lt;li&gt;公司能力：資源、流程、企業優先順序&lt;/li&gt;
+&lt;li&gt;Ship of Theseus&lt;/li&gt;
+&lt;li&gt;人才『書』展翅高飛：培養下一代領導者&lt;/li&gt;
+&lt;li&gt;經驗的重要&lt;/li&gt;
+&lt;li&gt;文化的制定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>20240227-huggingface-nlp</title><link>https://alanhc.github.io/blog/20240227-huggingface-nlp/</link><pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240227-huggingface-nlp/</guid><description>
+&lt;h1&gt;transformers models&lt;/h1&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/QkCYS7N.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/72ZHVoq.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;NLP&lt;span class="hx:absolute hx:-mt-20" id="nlp"&gt;&lt;/span&gt;
+&lt;a href="#nlp" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;challenge&lt;span class="hx:absolute hx:-mt-20" id="challenge"&gt;&lt;/span&gt;
+&lt;a href="#challenge" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;人可以很快知道詞相似&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Transformers, what can they do?&lt;span class="hx:absolute hx:-mt-20" id="transformers-what-can-they-do"&gt;&lt;/span&gt;
+&lt;a href="#transformers-what-can-they-do" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Working with pipelines&lt;span class="hx:absolute hx:-mt-20" id="working-with-pipelines"&gt;&lt;/span&gt;
+&lt;a href="#working-with-pipelines" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/models"target="_blank" rel="noopener"&gt;https://huggingface.co/models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;classifier&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;sentiment-analysis&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;classifier&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;I&amp;#39;ve been waiting for a HuggingFace course my whole life.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;label&amp;#39;: &amp;#39;POSITIVE&amp;#39;, &amp;#39;score&amp;#39;: 0.9598047137260437}]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;a href="https://huggingface.co/transformers/main_classes/pipelines"target="_blank" rel="noopener"&gt;available pipelines&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Zero-shot classification&lt;span class="hx:absolute hx:-mt-20" id="zero-shot-classification"&gt;&lt;/span&gt;
+&lt;a href="#zero-shot-classification" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;不需要pretrain來進行分類&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;classifier&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;zero-shot-classification&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;classifier&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;This is a course about the Transformers library&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;candidate_labels&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;education&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;politics&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;business&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#{&amp;#39;sequence&amp;#39;: &amp;#39;This is a course about the Transformers library&amp;#39;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# &amp;#39;labels&amp;#39;: [&amp;#39;education&amp;#39;, &amp;#39;business&amp;#39;, &amp;#39;politics&amp;#39;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# &amp;#39;scores&amp;#39;: [0.8445963859558105, 0.111976258456707, 0.043427448719739914]}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Text generation&lt;span class="hx:absolute hx:-mt-20" id="text-generation"&gt;&lt;/span&gt;
+&lt;a href="#text-generation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;generator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;text-generation&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;generator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;In this course, we will teach you how to&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;generated_text&amp;#39;: &amp;#39;In this course, we will teach you how to understand and use &amp;#39; &amp;#39;data flow and data interchange when handling user data. We &amp;#39; &amp;#39;will be working with one or more of the most commonly used &amp;#39; &amp;#39;data flows — data flows of various types, as seen by the &amp;#39; &amp;#39;HTTP&amp;#39;}]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Using any model from the Hub in a pipeline&lt;span class="hx:absolute hx:-mt-20" id="using-any-model-from-the-hub-in-a-pipeline"&gt;&lt;/span&gt;
+&lt;a href="#using-any-model-from-the-hub-in-a-pipeline" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;generator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;text-generation&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;distilgpt2&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;generator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;In this course, we will teach you how to&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;max_length&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;num_return_sequences&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;generated_text&amp;#39;: &amp;#39;In this course, we will teach you how to manipulate the world and &amp;#39; &amp;#39;move your mental and physical capabilities to your advantage.&amp;#39;}, {&amp;#39;generated_text&amp;#39;: &amp;#39;In this course, we will teach you how to become an expert and &amp;#39; &amp;#39;practice realtime, and with a hands on experience on both real &amp;#39; &amp;#39;time and real&amp;#39;}]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Mask filling&lt;span class="hx:absolute hx:-mt-20" id="mask-filling"&gt;&lt;/span&gt;
+&lt;a href="#mask-filling" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;unmasker&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;fill-mask&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;unmasker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;This course will teach you all about &amp;lt;mask&amp;gt; models.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;top_k&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;sequence&amp;#39;: &amp;#39;This course will teach you all about mathematical models.&amp;#39;, &amp;#39;score&amp;#39;: 0.19619831442832947, &amp;#39;token&amp;#39;: 30412, &amp;#39;token_str&amp;#39;: &amp;#39; mathematical&amp;#39;}, {&amp;#39;sequence&amp;#39;: &amp;#39;This course will teach you all about computational models.&amp;#39;, &amp;#39;score&amp;#39;: 0.04052725434303284, &amp;#39;token&amp;#39;: 38163, &amp;#39;token_str&amp;#39;: &amp;#39; computational&amp;#39;}]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Named entity recognition&lt;span class="hx:absolute hx:-mt-20" id="named-entity-recognition"&gt;&lt;/span&gt;
+&lt;a href="#named-entity-recognition" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ner&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;ner&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grouped_entities&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ner&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;My name is Sylvain and I work at Hugging Face in Brooklyn.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;entity_group&amp;#39;: &amp;#39;PER&amp;#39;, &amp;#39;score&amp;#39;: 0.99816, &amp;#39;word&amp;#39;: &amp;#39;Sylvain&amp;#39;, &amp;#39;start&amp;#39;: 11, &amp;#39;end&amp;#39;: 18}, {&amp;#39;entity_group&amp;#39;: &amp;#39;ORG&amp;#39;, &amp;#39;score&amp;#39;: 0.97960, &amp;#39;word&amp;#39;: &amp;#39;Hugging Face&amp;#39;, &amp;#39;start&amp;#39;: 33, &amp;#39;end&amp;#39;: 45}, {&amp;#39;entity_group&amp;#39;: &amp;#39;LOC&amp;#39;, &amp;#39;score&amp;#39;: 0.99321, &amp;#39;word&amp;#39;: &amp;#39;Brooklyn&amp;#39;, &amp;#39;start&amp;#39;: 49, &amp;#39;end&amp;#39;: 57} ]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Question answering&lt;span class="hx:absolute hx:-mt-20" id="question-answering"&gt;&lt;/span&gt;
+&lt;a href="#question-answering" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;question_answerer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;question-answering&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;question_answerer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;question&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Where do I work?&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;My name is Sylvain and I work at Hugging Face in Brooklyn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# {&amp;#39;score&amp;#39;: 0.6385916471481323, &amp;#39;start&amp;#39;: 33, &amp;#39;end&amp;#39;: 45, &amp;#39;answer&amp;#39;: &amp;#39;Hugging Face&amp;#39;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Summarization&lt;span class="hx:absolute hx:-mt-20" id="summarization"&gt;&lt;/span&gt;
+&lt;a href="#summarization" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;summarizer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;summarization&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;summarizer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; America has changed dramatically during recent years. Not only has the number of
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; graduates in traditional engineering disciplines such as mechanical, civil,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; electrical, chemical, and aeronautical engineering declined, but in most of
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; the premier American universities engineering curricula now concentrate on
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; and encourage largely the study of engineering science. As a result, there
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; are declining offerings in engineering subjects dealing with infrastructure,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; the environment, and related issues, and greater concentration on high
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; technology subjects, largely supporting increasingly complex scientific
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; developments. While the latter is important, it should not be at the expense
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; of more traditional engineering.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; Rapidly developing economies such as China and India, as well as other
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; industrial countries in Europe and Asia, continue to encourage and advance
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; the teaching of engineering. Both China and India, respectively, graduate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; six and eight times as many traditional engineers as does the United States.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; Other industrial countries at minimum maintain their output, while America
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; suffers an increasingly serious decline in the number of engineering graduates
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt; and a lack of well-educated engineers.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s2"&gt;&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;summary_text&amp;#39;: &amp;#39; America has changed dramatically during recent years . The &amp;#39; &amp;#39;number of engineering graduates in the U.S. has declined in &amp;#39; &amp;#39;traditional engineering disciplines such as mechanical, civil &amp;#39; &amp;#39;, electrical, chemical, and aeronautical engineering . Rapidly &amp;#39; &amp;#39;developing economies such as China and India, as well as other &amp;#39; &amp;#39;industrial countries in Europe and Asia, continue to encourage &amp;#39; &amp;#39;and advance engineering .&amp;#39;}]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3&gt;Translation&lt;span class="hx:absolute hx:-mt-20" id="translation"&gt;&lt;/span&gt;
+&lt;a href="#translation" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;transformers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;translator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pipeline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;translation&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Helsinki-NLP/opus-mt-fr-en&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;translator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Ce cours est produit par Hugging Face.&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# [{&amp;#39;translation_text&amp;#39;: &amp;#39;This course is produced by Hugging Face.&amp;#39;}]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;How do Transformers work?&lt;span class="hx:absolute hx:-mt-20" id="how-do-transformers-work"&gt;&lt;/span&gt;
+&lt;a href="#how-do-transformers-work" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;A bit of Transformer history&lt;span class="hx:absolute hx:-mt-20" id="a-bit-of-transformer-history"&gt;&lt;/span&gt;
+&lt;a href="#a-bit-of-transformer-history" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt; &lt;a href="https://arxiv.org/abs/1706.03762"target="_blank" rel="noopener"&gt;Transformer architecture&lt;/a&gt; 2017, June
+&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_chrono.svg" alt="A brief chronology of Transformers models." loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;Transformers are language models&lt;span class="hx:absolute hx:-mt-20" id="transformers-are-language-models"&gt;&lt;/span&gt;
+&lt;a href="#transformers-are-language-models" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;causal language modelin&lt;/em&gt;: 預測n個word
+&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/causal_modeling.svg" alt="Example of causal language modeling in which the next word from a sentence is predicted." loading="lazy" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;masked language modeling&lt;/em&gt;: 預測空格&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/masked_modeling.svg" alt="Example of masked language modeling in which a masked word from a sentence is predicted." loading="lazy" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Transformers are big models&lt;span class="hx:absolute hx:-mt-20" id="transformers-are-big-models"&gt;&lt;/span&gt;
+&lt;a href="#transformers-are-big-models" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/model_parameters.png" alt="Number of parameters of recent Transformers models" loading="lazy" /&gt;
+&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/carbon_footprint.svg" alt="The carbon footprint of a large language model." loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;Transfer Learning&lt;span class="hx:absolute hx:-mt-20" id="transfer-learning"&gt;&lt;/span&gt;
+&lt;a href="#transfer-learning" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;pre training vs Fine-tuning
+&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/pretraining.svg" alt="The pretraining of a language model is costly in both time and money." loading="lazy" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/finetuning.svg" alt="The fine-tuning of a language model is cheaper than pretraining in both time and money." loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;General architecture&lt;span class="hx:absolute hx:-mt-20" id="general-architecture"&gt;&lt;/span&gt;
+&lt;a href="#general-architecture" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Introduction&lt;span class="hx:absolute hx:-mt-20" id="introduction"&gt;&lt;/span&gt;
+&lt;a href="#introduction" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers_blocks.svg" alt="Architecture of a Transformers models" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;Attention layers&lt;span class="hx:absolute hx:-mt-20" id="attention-layers"&gt;&lt;/span&gt;
+&lt;a href="#attention-layers" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;The original architecture&lt;span class="hx:absolute hx:-mt-20" id="the-original-architecture"&gt;&lt;/span&gt;
+&lt;a href="#the-original-architecture" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter1/transformers.svg" alt="Architecture of a Transformers models" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;Architectures vs. checkpoints&lt;span class="hx:absolute hx:-mt-20" id="architectures-vs-checkpoints"&gt;&lt;/span&gt;
+&lt;a href="#architectures-vs-checkpoints" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Architecture&lt;/strong&gt;: skeleton&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Checkpoints&lt;/strong&gt;: weights&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: This is an umbrella term that isn’t as precise as “architecture” or “checkpoint”: it can mean both. This course will specify &lt;em&gt;architecture&lt;/em&gt; or &lt;em&gt;checkpoint&lt;/em&gt; when it matters to reduce ambiguity.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Encoder models&lt;span class="hx:absolute hx:-mt-20" id="encoder-models"&gt;&lt;/span&gt;
+&lt;a href="#encoder-models" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;具有雙向attension&lt;/li&gt;
+&lt;li&gt;模型訓練通常使用mask訓練&lt;/li&gt;
+&lt;li&gt;encoder model適合理解完整句子&lt;/li&gt;
+&lt;li&gt;example
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/docs/transformers/model_doc/albert"target="_blank" rel="noopener"&gt;ALBERT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/docs/transformers/model_doc/bert"target="_blank" rel="noopener"&gt;BERT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/docs/transformers/model_doc/distilbert"target="_blank" rel="noopener"&gt;DistilBERT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/docs/transformers/model_doc/electra"target="_blank" rel="noopener"&gt;ELECTRA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/docs/transformers/model_doc/roberta"target="_blank" rel="noopener"&gt;RoBERTa&lt;/a&gt;
+&lt;img src="https://i.imgur.com/pSKKssf.png" alt="" loading="lazy" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Decoder models&lt;span class="hx:absolute hx:-mt-20" id="decoder-models"&gt;&lt;/span&gt;
+&lt;a href="#decoder-models" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/0AaFRkb.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;example
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/ctrl"target="_blank" rel="noopener"&gt;CTRL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/docs/transformers/model_doc/openai-gpt"target="_blank" rel="noopener"&gt;GPT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/gpt2"target="_blank" rel="noopener"&gt;GPT-2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/transfo-xl"target="_blank" rel="noopener"&gt;Transformer XL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Sequence-to-sequence models sequence-to-sequence-models&lt;span class="hx:absolute hx:-mt-20" id="sequence-to-sequence-models-sequence-to-sequence-models"&gt;&lt;/span&gt;
+&lt;a href="#sequence-to-sequence-models-sequence-to-sequence-models" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/hY4WxfB.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;example
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/bart"target="_blank" rel="noopener"&gt;BART&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/mbart"target="_blank" rel="noopener"&gt;mBART&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/marian"target="_blank" rel="noopener"&gt;Marian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/transformers/model_doc/t5"target="_blank" rel="noopener"&gt;T5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Bias and limitations&lt;span class="hx:absolute hx:-mt-20" id="bias-and-limitations"&gt;&lt;/span&gt;
+&lt;a href="#bias-and-limitations" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可能有偏見，因為他從網路資料訓練&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Summary&lt;span class="hx:absolute hx:-mt-20" id="summary"&gt;&lt;/span&gt;
+&lt;a href="#summary" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Model&lt;/th&gt;
+&lt;th&gt;Examples&lt;/th&gt;
+&lt;th&gt;Tasks&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Encoder&lt;/td&gt;
+&lt;td&gt;ALBERT, BERT, DistilBERT, ELECTRA, RoBERTa&lt;/td&gt;
+&lt;td&gt;Sentence classification, named entity recognition, extractive question answering&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Decoder&lt;/td&gt;
+&lt;td&gt;CTRL, GPT, GPT-2, Transformer XL&lt;/td&gt;
+&lt;td&gt;Text generation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Encoder-decoder&lt;/td&gt;
+&lt;td&gt;BART, T5, Marian, mBART&lt;/td&gt;
+&lt;td&gt;Summarization, translation, generative question answering&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1&gt;using transformers&lt;/h1&gt;&lt;h2&gt;inside pipline&lt;span class="hx:absolute hx:-mt-20" id="inside-pipline"&gt;&lt;/span&gt;
+&lt;a href="#inside-pipline" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://huggingface.co/datasets/huggingface-course/documentation-images/resolve/main/en/chapter2/full_nlp_pipeline.svg" alt="The full NLP pipeline: tokenization of text, conversion to IDs, and inference through the Transformer model and the model head." loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;models&lt;span class="hx:absolute hx:-mt-20" id="models"&gt;&lt;/span&gt;
+&lt;a href="#models" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;可以使用 save pretrain&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BertModel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;save_pretrained&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;directory_on_my_computer&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;torch&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;model_inputs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;torch&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tensor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;encoded_sequences&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model_inputs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Tokenizer&lt;span class="hx:absolute hx:-mt-20" id="tokenizer"&gt;&lt;/span&gt;
+&lt;a href="#tokenizer" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;word based&lt;span class="hx:absolute hx:-mt-20" id="word-based"&gt;&lt;/span&gt;
+&lt;a href="#word-based" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;有可能遇到沒在資料庫的會unknown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Character-based&lt;span class="hx:absolute hx:-mt-20" id="character-based"&gt;&lt;/span&gt;
+&lt;a href="#character-based" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Subword tokenization&lt;span class="hx:absolute hx:-mt-20" id="subword-tokenization"&gt;&lt;/span&gt;
+&lt;a href="#subword-tokenization" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;BERT 用這
+&lt;img src="https://i.imgur.com/HCERX6Z.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/ChfFqii.png" alt="" loading="lazy" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;encoding&lt;span class="hx:absolute hx:-mt-20" id="encoding"&gt;&lt;/span&gt;
+&lt;a href="#encoding" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/0spIuRj.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;Handling multiple sequences&lt;span class="hx:absolute hx:-mt-20" id="handling-multiple-sequences"&gt;&lt;/span&gt;
+&lt;a href="#handling-multiple-sequences" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;Putting it all together&lt;span class="hx:absolute hx:-mt-20" id="putting-it-all-together"&gt;&lt;/span&gt;
+&lt;a href="#putting-it-all-together" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h1&gt;Fine tuning a pre-trained model&lt;/h1&gt;&lt;p&gt;(skip)&lt;/p&gt;
+&lt;h1&gt;Sharing&lt;/h1&gt;&lt;p&gt;(skip)&lt;/p&gt;
+&lt;h1&gt;Datasets Lib&lt;/h1&gt;&lt;p&gt;(skip)&lt;/p&gt;
+&lt;h1&gt;Tokenizer lib&lt;/h1&gt;&lt;p&gt;(skip)&lt;/p&gt;
+&lt;h2&gt;Main NLP tasks&lt;span class="hx:absolute hx:-mt-20" id="main-nlp-tasks"&gt;&lt;/span&gt;
+&lt;a href="#main-nlp-tasks" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Token Classification&lt;span class="hx:absolute hx:-mt-20" id="token-classification"&gt;&lt;/span&gt;
+&lt;a href="#token-classification" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Named entity recognition (NER)&lt;/strong&gt;: 找相近&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Part-of-speech tagging (POS)&lt;/strong&gt;: 分詞性&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chunking&lt;/strong&gt;: 分段(?)
+&lt;img src="https://i.imgur.com/HAe8XCf.png" alt="" loading="lazy" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fine Tuning masked L M&lt;span class="hx:absolute hx:-mt-20" id="fine-tuning-masked-l-m"&gt;&lt;/span&gt;
+&lt;a href="#fine-tuning-masked-l-m" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Translation&lt;span class="hx:absolute hx:-mt-20" id="translation-1"&gt;&lt;/span&gt;
+&lt;a href="#translation-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Summarization&lt;span class="hx:absolute hx:-mt-20" id="summarization-1"&gt;&lt;/span&gt;
+&lt;a href="#summarization-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;Causal Language Modeling&lt;span class="hx:absolute hx:-mt-20" id="causal-language-modeling"&gt;&lt;/span&gt;
+&lt;a href="#causal-language-modeling" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;從前一個字預測下一個&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Question answering&lt;span class="hx:absolute hx:-mt-20" id="question-answering-1"&gt;&lt;/span&gt;
+&lt;a href="#question-answering-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h1&gt;Building and sharing using Gradio&lt;/h1&gt;&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://huggingface.co/learn/nlp-course/chapter0/1"target="_blank" rel="noopener"&gt;https://huggingface.co/learn/nlp-course/chapter0/1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>國外工作</title><link>https://alanhc.github.io/blog/%E5%9C%8B%E5%A4%96%E5%B7%A5%E4%BD%9C/</link><pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/%E5%9C%8B%E5%A4%96%E5%B7%A5%E4%BD%9C/</guid><description>
+&lt;h2&gt;歐洲&lt;span class="hx:absolute hx:-mt-20" id="歐洲"&gt;&lt;/span&gt;
+&lt;a href="#%e6%ad%90%e6%b4%b2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;根據 歐洲資訊科技產業協會: 的資料，歐洲軟體工程師最需要的領域包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;雲端計算和分散式系統&lt;/li&gt;
+&lt;li&gt;人工智慧和機器學習&lt;/li&gt;
+&lt;li&gt;網路安全&lt;/li&gt;
+&lt;li&gt;大數據和資料分析&lt;/li&gt;
+&lt;li&gt;軟體開發和工程&lt;/li&gt;
+&lt;li&gt;行動應用程式開發&lt;/li&gt;
+&lt;li&gt;遊戲開發&lt;/li&gt;
+&lt;li&gt;嵌入式系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些領域的軟體工程師都比較容易獲得歐洲簽證，因為這些領域的職缺很多，而且這些職缺通常需要高技能的員工。&lt;/p&gt;
+&lt;p&gt;以下是歐洲一些提供軟體工程師簽證的國家：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;德國&lt;/strong&gt;：德國的藍卡計畫讓高技能的非歐盟公民可以獲得工作簽證。藍卡的申請人必須有大學學歷，並有至少 56,400 歐元的年薪。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.germany-visa.org/immigration/residence-permit/"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTml15q9rwxKPzDn7nG2u7zVmNq-9hJp5wyGnQze2Sbnk2Bn4JFYDMV2ReG-oqM" alt="Image of Germany visa" loading="lazy" /&gt;Opens in a new window&lt;/a&gt;&lt;a href="https://www.germany-visa.org/immigration/residence-permit/"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTZhwHe2uDKZNVjEmRNYfci9__fVbf9Y_9mYej8OcDmXD1ApbN2l4lEOvOVbNM77QUvLFAkCcjdflGBSOYIot2-0ZGYljHbDl0RK7UIpHA" alt="" loading="lazy" /&gt;www.germany-visa.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Germany visa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;荷蘭&lt;/strong&gt;：荷蘭的知識型移民計畫讓高技能的非歐盟公民可以獲得工作簽證。知識型移民計畫的申請人必須有大學學歷，並有至少 48,000 歐元的年薪。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://en.siu.com.cn/index.php?s=news&amp;amp;c=show&amp;amp;id=360"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSm0mMnzlTjeCb9bBocbDVrpJ3rdGaygJzBEPkVPeRxnsSWGFxOcalSTcUq5p-5" alt="Image of Netherlands visa" loading="lazy" /&gt;Opens in a new window&lt;/a&gt;&lt;a href="https://en.siu.com.cn/index.php?s=news&amp;amp;c=show&amp;amp;id=360"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcQsUR_fwQJsMAuGPHNFt8NiIYIQQ7IVBXVQrD6INo2Mjulf5v-mM2bKP8CU5Ltm1Cg87pnMAs5WcHdYVhjhaoLa2GBBm6bLlw" alt="" loading="lazy" /&gt;en.siu.com.cn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Netherlands visa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;英國&lt;/strong&gt;：英國的全球人才簽證計畫讓高技能的非歐盟公民可以獲得工作簽證。全球人才簽證的申請人必須有大學學歷，並有至少 25,600 英鎊的年薪。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.gov.uk/government/news/new-online-uk-visa-application-service-launches-in-nepal"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1lJt-v4CH3pYtNCkvtLdWFN5oEYCW_DdIRH_gP4HCH-m9jKok6B7_GAkss2zt" alt="Image of UK visa" loading="lazy" /&gt;Opens in a new window&lt;/a&gt;&lt;a href="https://www.gov.uk/government/news/new-online-uk-visa-application-service-launches-in-nepal"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcS-As69jhYANcAuS5CDA_AghyhsBniZqmEY6BHjQh1kv-MzB4X1rz-i5x84kU80lbXGo4K7fzPyJyT9DsQV4StIvm5hPg" alt="" loading="lazy" /&gt;www.gov.uk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;UK visa&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;法國&lt;/strong&gt;：法國的科技人才簽證計畫讓高技能的非歐盟公民可以獲得工作簽證。科技人才簽證的申請人必須有大學學歷，並有至少 30,000 歐元的年薪。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://rjfmac.com/2022/03/29/france-long-stay-visa/"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbo-t_dt4G5Biq4z6uoGXv6Ad9qlkto0yK5KdvTgT3USNUi3AWeXObSp55S5dp" alt="Image of France visa" loading="lazy" /&gt;Opens in a new window&lt;/a&gt;&lt;a href="https://rjfmac.com/2022/03/29/france-long-stay-visa/"target="_blank" rel="noopener"&gt;&lt;img src="https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcT3YtZCsKdH9tPAwo7hMYq8PgaKvGiOiErPrTLnyP_x-sFNzjqx9WKOsA2oZqpNm-Ul_TVOg3Z-Y1sDq2wdsw7PfT1Vtw" alt="" loading="lazy" /&gt;rjfmac.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;France visa&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在申請歐洲軟體工程師簽證時，請務必準備好所有必需的文件，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有效護照&lt;/li&gt;
+&lt;li&gt;大學學歷證明&lt;/li&gt;
+&lt;li&gt;工作合約&lt;/li&gt;
+&lt;li&gt;薪資證明&lt;/li&gt;
+&lt;li&gt;健康保險證明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;您可能還需要提供其他文件，具體取決於您申請的簽證類型和您申請的國家。&lt;/p&gt;
+&lt;p&gt;中歐、北歐和東歐的軟體工程師簽證要求各不相同。以下是一些一般性的資訊：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;中歐&lt;/strong&gt;：中歐的軟體工程師簽證要求通常與西歐相似。例如，德國、奧地利和瑞士都提供藍卡計畫，讓高技能的非歐盟公民可以獲得工作簽證。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;北歐&lt;/strong&gt;：北歐的軟體工程師簽證要求通常比西歐和中歐更嚴格。例如，丹麥和瑞典要求軟體工程師簽證的申請人必須有大學學歷和相關工作經驗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;東歐&lt;/strong&gt;：東歐的軟體工程師簽證要求通常比西歐、中歐和北歐更寬鬆。例如，波蘭和捷克共和國允許非歐盟公民在沒有工作許可的情況下工作最多 6 個月。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是中歐、北歐和東歐一些提供軟體工程師簽證的國家：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中歐&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;奧地利&lt;/strong&gt;：奧地利的藍卡計畫讓高技能的非歐盟公民可以獲得工作簽證。藍卡的申請人必須有大學學歷，並有至少 56,400 歐元的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;捷克共和國&lt;/strong&gt;：捷克共和國的 Z 卡讓高技能的非歐盟公民可以獲得工作簽證。Z 卡的申請人必須有大學學歷，並有至少 48,000 歐元的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;匈牙利&lt;/strong&gt;：匈牙利的藍卡計畫讓高技能的非歐盟公民可以獲得工作簽證。藍卡的申請人必須有大學學歷，並有至少 48,000 歐元的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;波蘭&lt;/strong&gt;：波蘭的 D 類簽證讓非歐盟公民可以工作最多 6 個月。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;北歐&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;丹麥&lt;/strong&gt;：丹麥的綠卡計畫讓高技能的非歐盟公民可以獲得工作簽證。綠卡的申請人必須有大學學歷，並有至少 360,000 丹麥克朗的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;芬蘭&lt;/strong&gt;：芬蘭的專家居留許可讓高技能的非歐盟公民可以獲得工作簽證。專家居留許可的申請人必須有大學學歷，並有至少 46,000 歐元的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;挪威&lt;/strong&gt;：挪威的技術移民計畫讓高技能的非歐盟公民可以獲得工作簽證。技術移民計畫的申請人必須有大學學歷，並有至少 360,000 挪威克朗的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;瑞典&lt;/strong&gt;：瑞典的工作許可讓高技能的非歐盟公民可以獲得工作簽證。工作許可的申請人必須有大學學歷，並有至少 320,400 瑞典克朗的年薪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;東歐&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;保加利亞&lt;/strong&gt;：保加利亞的 D 類簽證讓非歐盟公民可以工作最多 6 個月。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;羅馬尼亞&lt;/strong&gt;：羅馬尼亞的工作許可讓非歐盟公民可以工作最多 1 年。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;俄羅斯&lt;/strong&gt;：俄羅斯的配額工作許可讓非歐盟公民可以工作。配額工作許可的申請人必須有大學學歷，並有俄羅斯雇主的贊助。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在申請中歐、北歐或東歐的軟體工程師簽證時，請務必準備好所有必需的文件，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有效護照&lt;/li&gt;
+&lt;li&gt;大學學歷證明&lt;/li&gt;
+&lt;li&gt;工作合約&lt;/li&gt;
+&lt;li&gt;薪資證明&lt;/li&gt;
+&lt;li&gt;健康保險證明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;您可能還需要提供其他文件，具體取決於您申請的簽證類型和您申請的國家。&lt;/p&gt;
+&lt;p&gt;美洲地區的軟體工程師簽證要求各不相同。以下是一些一般性的資訊：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;北美洲&lt;/strong&gt;：北美洲的軟體工程師簽證要求通常比歐洲更嚴格。例如，美國和加拿大都要求軟體工程師簽證的申請人必須有大學學歷和相關工作經驗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中美洲&lt;/strong&gt;：中美洲的軟體工程師簽證要求通常比北美洲和南美洲更寬鬆。例如，哥斯大黎加和巴拿馬允許非歐盟公民在沒有工作許可的情況下工作最多 90 天。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;南美洲&lt;/strong&gt;：南美洲的軟體工程師簽證要求各不相同。例如，巴西和阿根廷要求軟體工程師簽證的申請人必須有大學學歷和相關工作經驗，而智利和烏拉圭則允許非歐盟公民在沒有工作許可的情況下工作最多 90 天。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是美洲地區一些提供軟體工程師簽證的國家：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;北美洲&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;美國&lt;/strong&gt;：美國的 H-1B 簽證讓高技能的非美國公民可以獲得工作簽證。H-1B 簽證的申請人必須有大學學歷，並有至少 60,000 美元的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加拿大&lt;/strong&gt;：加拿大的技術移民計畫讓高技能的非加拿大公民可以獲得工作簽證。技術移民計畫的申請人必須有大學學歷，並有至少 75,000 加拿大元的年薪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;中美洲&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;哥斯大黎加&lt;/strong&gt;：哥斯大黎加的 D 類簽證讓非歐盟公民可以工作最多 90 天。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;巴拿馬&lt;/strong&gt;：巴拿馬的友好國家簽證讓非歐盟公民可以工作最多 90 天。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;南美洲&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;巴西&lt;/strong&gt;：巴西的工作許可讓高技能的非巴西公民可以獲得工作簽證。工作許可的申請人必須有大學學歷，並有巴西雇主的贊助。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阿根廷&lt;/strong&gt;：阿根廷的工作許可讓高技能的非阿根廷公民可以獲得工作簽證。工作許可的申請人必須有大學學歷，並有阿根廷雇主的贊助。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智利&lt;/strong&gt;：智利的 D 類簽證讓非歐盟公民可以工作最多 90 天。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;烏拉圭&lt;/strong&gt;：烏拉圭的臨時居留許可讓非歐盟公民可以工作最多 90 天。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在申請美洲地區的軟體工程師簽證時，請務必準備好所有必需的文件，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有效護照&lt;/li&gt;
+&lt;li&gt;大學學歷證明&lt;/li&gt;
+&lt;li&gt;工作合約&lt;/li&gt;
+&lt;li&gt;薪資證明&lt;/li&gt;
+&lt;li&gt;健康保險證明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;您可能還需要提供其他文件，具體取決於您申請的簽證類型和您申請的國家。&lt;/p&gt;
+&lt;p&gt;以下是一些額外的提示，可幫助您獲得美洲地區的軟體工程師簽證：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;獲得相關工作經驗。許多美洲國家的軟體工程師簽證要求申請人具有相關工作經驗。獲得相關工作經驗的最佳方法是找到一份實習或初級職位。&lt;/li&gt;
+&lt;li&gt;提高您的英語能力。英語是美洲地區許多國家的官方語言。提高您的英語能力將幫助您在求職和申請簽證時脫穎而出。&lt;/li&gt;
+&lt;li&gt;尋找一家願意為您贊助的雇主。一些美洲國家的軟體工程師簽證要求申請人有雇主的贊助。尋找一家願意為您贊助的雇主將幫助您提高獲得簽證的機會。&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;東南亞和大洋洲的軟體工程師簽證要求各不相同。以下是一些一般性的資訊：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;東南亞&lt;/strong&gt;：東南亞的軟體工程師簽證要求通常比歐洲、北美洲和南美洲更寬鬆。例如，新加坡、馬來西亞和泰國允許非歐盟公民在沒有工作許可的情況下工作最多 90 天。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大洋洲&lt;/strong&gt;：大洋洲的軟體工程師簽證要求通常比東南亞更嚴格。例如，澳大利亞和紐西蘭都要求軟體工程師簽證的申請人必須有大學學歷和相關工作經驗。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是東南亞和大洋洲一些提供軟體工程師簽證的國家：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;東南亞&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;新加坡&lt;/strong&gt;：新加坡的技術人才通行證讓高技能的非新加坡公民可以獲得工作簽證。技術人才通行證的申請人必須有大學學歷，並有至少 4,500 新加坡元的月薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;馬來西亞&lt;/strong&gt;：馬來西亞的第二家園計畫讓非馬來西亞公民可以獲得居留權。第二家園計畫的申請人必須有至少 300,000 馬來西亞令吉的資產。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;泰國&lt;/strong&gt;：泰國的非移民 B 簽證讓非泰國公民可以工作最多 90 天。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;大洋洲&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;澳大利亞&lt;/strong&gt;：澳大利亞的技術移民計畫讓高技能的非澳大利亞公民可以獲得工作簽證。技術移民計畫的申請人必須有大學學歷，並有至少 65,000 澳大利亞元的年薪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;紐西蘭&lt;/strong&gt;：紐西蘭的技術移民計畫讓高技能的非紐西蘭公民可以獲得工作簽證。技術移民計畫的申請人必須有大學學歷，並有至少 52,000 紐西蘭元的年薪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在申請東南亞和大洋洲的軟體工程師簽證時，請務必準備好所有必需的文件，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有效護照&lt;/li&gt;
+&lt;li&gt;大學學歷證明&lt;/li&gt;
+&lt;li&gt;工作合約&lt;/li&gt;
+&lt;li&gt;薪資證明&lt;/li&gt;
+&lt;li&gt;健康保險證明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;您可能還需要提供其他文件，具體取決於您申請的簽證類型和您申請的國家。&lt;/p&gt;
+&lt;p&gt;以下是一些額外的提示，可幫助您獲得東南亞和大洋洲的軟體工程師簽證：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;獲得相關工作經驗。許多東南亞和大洋洲國家的軟體工程師簽證要求申請人具有相關工作經驗。獲得相關工作經驗的最佳方法是找到一份實習或初級職位。&lt;/li&gt;
+&lt;li&gt;提高您的英語能力。英語是東南亞和大洋洲許多國家的官方語言或通用語言。提高您的英語能力將幫助您在求職和申請簽證時脫穎而出。&lt;/li&gt;
+&lt;li&gt;尋找一家願意為您贊助的雇主。一些東南亞和大洋洲國家的軟體工程師簽證要求申請人有雇主的贊助。尋找一家願意為您贊助的雇主將幫助您提高獲得簽證的機會。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是一些東南亞和大洋洲軟體工程師職缺的資源：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;：LinkedIn 是尋找軟體工程師職缺的全球性平台。您可以使用 LinkedIn 的搜索功能來查找特定地點或職位的職缺。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Indeed&lt;/strong&gt;：Indeed 是另一個尋找軟體工程師職缺的全球性平台。您可以使用 Indeed 的搜索功能來查找特定地點或職位的職缺。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Glassdoor&lt;/strong&gt;：Glassdoor 是一個提供公司薪資和評論的網站。您可以使用 Glassdoor 來查找特定公司或職位的薪資信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;希望這些資訊對您有所幫助。&lt;/p&gt;
+&lt;h2&gt;日本&lt;span class="hx:absolute hx:-mt-20" id="日本"&gt;&lt;/span&gt;
+&lt;a href="#%e6%97%a5%e6%9c%ac" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href="https://hackmd.io/@WQ0waXxNRLuBfCSPnDc3Kw/Syh6QjzKj"target="_blank" rel="noopener"&gt;https://hackmd.io/@WQ0waXxNRLuBfCSPnDc3Kw/Syh6QjzKj&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>20240211-taiwan-job-insights</title><link>https://alanhc.github.io/blog/20240211-taiwan-job-insights/</link><pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240211-taiwan-job-insights/</guid><description>
+&lt;p&gt;&lt;a href="https://alanhc.github.io/taiwan_jobs.html"target="_blank" rel="noopener"&gt;網頁互動版&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;資料來源：Levels Fyi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;台灣&lt;span class="hx:absolute hx:-mt-20" id="台灣"&gt;&lt;/span&gt;
+&lt;a href="#%e5%8f%b0%e7%81%a3" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;在台灣 軟體工程師 做什麼最賺錢？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-軟體工程師-做什麼最賺錢"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e5%81%9a%e4%bb%80%e9%ba%bc%e6%9c%80%e8%b3%ba%e9%8c%a2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/GHvjK50.png" alt="" loading="lazy" /&gt;
+Android先猜應該是因為Google的關係拉高平均，Testing有點意外，Backend也是常常被提到成長幅度較大的，Networking先猜應該是網通廠MTK之類的。
+AI 天花板高一點，但整體比做產品、嵌入式系統低。&lt;/p&gt;
+&lt;h3&gt;在台灣 軟體工程師 做什麼底薪最好？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-軟體工程師-做什麼底薪最好"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e5%81%9a%e4%bb%80%e9%ba%bc%e5%ba%95%e8%96%aa%e6%9c%80%e5%a5%bd" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/TnOjosz.png" alt="" loading="lazy" /&gt;
+起薪最高Android，但成長幅度最高是Backend，但只有很少一部分&lt;/p&gt;
+&lt;h3&gt;在台灣 Android 去哪間？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-android-去哪間"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-android-%e5%8e%bb%e5%93%aa%e9%96%93" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/9hAIRym.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;果然Google最高，但起薪是MTK比較高，之前不知道MTK也有Android，以前以為只有網通
+從看到一些強者從Google跳槽到NV後，這張圖好像不會很意外。
+這個問我爸後，原來Android不只有手機，許多如smart TV等底層很多都是Android&lt;/p&gt;
+&lt;h3&gt;在台灣 Testing 去哪間？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-testing-去哪間"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-testing-%e5%8e%bb%e5%93%aa%e9%96%93" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/pkM4DZ5.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;原來Testing是被Apple拉高，大部分頂級外商也都有Testing職位&lt;/p&gt;
+&lt;h3&gt;在台灣 ML/AI 去哪間？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-mlai-去哪間"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-mlai-%e5%8e%bb%e5%93%aa%e9%96%93" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/AEGhCQZ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;在台灣ML給最高是Amazon，意外的是街口竟然比外商及半導體公司高&lt;/p&gt;
+&lt;h3&gt;在台灣 Production 去哪間？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-production-去哪間"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-production-%e5%8e%bb%e5%93%aa%e9%96%93" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/YqAGJtM.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;產品工程師，最多是NV，其次是群暉、MTK，MTK起薪比較高，群暉天花板高一點&lt;/p&gt;
+&lt;h3&gt;在台灣 Embeding 去哪間？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-embeding-去哪間"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-embeding-%e5%8e%bb%e5%93%aa%e9%96%93" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/qjN1B2s.png" alt="" loading="lazy" /&gt;
+做嵌入式系統裡，MTK天花板最高，但其薪資差異也最多，其次AWS、Google&lt;/p&gt;
+&lt;h3&gt;在台灣 什麼公司開最高？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-什麼公司開最高"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e4%bb%80%e9%ba%bc%e5%85%ac%e5%8f%b8%e9%96%8b%e6%9c%80%e9%ab%98" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/mWIzls2.png" alt="" loading="lazy" /&gt;
+頂級外商(FAANG+NV)、MTK開的都很高&lt;/p&gt;
+&lt;h3&gt;在台灣 什麼底薪公司開最高？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-什麼底薪公司開最高"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e4%bb%80%e9%ba%bc%e5%ba%95%e8%96%aa%e5%85%ac%e5%8f%b8%e9%96%8b%e6%9c%80%e9%ab%98" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/v4mnaUj.png" alt="" loading="lazy" /&gt;
+MTK、瑞昱、街口、頂級外商的薪水底薪都很高&lt;/p&gt;
+&lt;h3&gt;在台灣 新鮮人什麼公司開最高？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-新鮮人什麼公司開最高"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e6%96%b0%e9%ae%ae%e4%ba%ba%e4%bb%80%e9%ba%bc%e5%85%ac%e5%8f%b8%e9%96%8b%e6%9c%80%e9%ab%98" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/44n95Pq.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;在台灣 新鮮人(YOE &amp;lt; 1y)什麼公司底薪開最高？&lt;span class="hx:absolute hx:-mt-20" id="在台灣-新鮮人yoe--1y什麼公司底薪開最高"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e6%96%b0%e9%ae%ae%e4%ba%bayoe--1y%e4%bb%80%e9%ba%bc%e5%85%ac%e5%8f%b8%e5%ba%95%e8%96%aa%e9%96%8b%e6%9c%80%e9%ab%98" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/4EgIPSw.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;在台灣 工作型態對薪資影響&lt;span class="hx:absolute hx:-mt-20" id="在台灣-工作型態對薪資影響"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e5%b7%a5%e4%bd%9c%e5%9e%8b%e6%85%8b%e5%b0%8d%e8%96%aa%e8%b3%87%e5%bd%b1%e9%9f%bf" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/ruPEhPi.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;在台灣 工作年資對薪資影響&lt;span class="hx:absolute hx:-mt-20" id="在台灣-工作年資對薪資影響"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e5%b7%a5%e4%bd%9c%e5%b9%b4%e8%b3%87%e5%b0%8d%e8%96%aa%e8%b3%87%e5%bd%b1%e9%9f%bf" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/pFTecCG.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;在台灣 工作地區對薪資影響&lt;span class="hx:absolute hx:-mt-20" id="在台灣-工作地區對薪資影響"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e5%b7%a5%e4%bd%9c%e5%9c%b0%e5%8d%80%e5%b0%8d%e8%96%aa%e8%b3%87%e5%bd%b1%e9%9f%bf" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/aJovsL7.png" alt="" loading="lazy" /&gt;
+中位數、p75花蓮最高&lt;/p&gt;
+&lt;h3&gt;在台灣 學位對薪資影響&lt;span class="hx:absolute hx:-mt-20" id="在台灣-學位對薪資影響"&gt;&lt;/span&gt;
+&lt;a href="#%e5%9c%a8%e5%8f%b0%e7%81%a3-%e5%ad%b8%e4%bd%8d%e5%b0%8d%e8%96%aa%e8%b3%87%e5%bd%b1%e9%9f%bf" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/xTOjfth.png" alt="" loading="lazy" /&gt;
+博士起新高、中位數高，但碩士的極端值最高，p75也最高&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>20240209-job-insights</title><link>https://alanhc.github.io/blog/20240209-job-insights/</link><pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240209-job-insights/</guid><description>
+&lt;h1&gt;system design&lt;/h1&gt;&lt;h2&gt;1. Scope the problem&lt;span class="hx:absolute hx:-mt-20" id="1-scope-the-problem"&gt;&lt;/span&gt;
+&lt;a href="#1-scope-the-problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以知道現在有什麼工作機會、該公司位於總體的薪水級距&lt;/li&gt;
+&lt;li&gt;可以知道最近就業市場中需要的工作技能&lt;/li&gt;
+&lt;li&gt;如何讓自己更搶手、薪水更高？
+&lt;ul&gt;
+&lt;li&gt;技能vs薪水級距&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. Reasonable Assumptions&lt;span class="hx:absolute hx:-mt-20" id="2-reasonable-assumptions"&gt;&lt;/span&gt;
+&lt;a href="#2-reasonable-assumptions" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;雇主資料每天會更新一次&lt;/li&gt;
+&lt;li&gt;刪除大於半年以上的 job&lt;/li&gt;
+&lt;li&gt;高價值產業、薪水頻繁更新，其餘不一定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. Key Component&lt;span class="hx:absolute hx:-mt-20" id="3--key-component"&gt;&lt;/span&gt;
+&lt;a href="#3--key-component" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h1&gt;探索資料&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Taiwan 資料：[[20240211-taiwan-job-insights]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;全球&lt;span class="hx:absolute hx:-mt-20" id="全球"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;找地區&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/cscareerquestions/comments/12zon6k/do_most_software_engineers_eventually_make_200k/"target="_blank" rel="noopener"&gt;(reddit) Do most software engineers eventually make $200K+&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.bls.gov/oes/current/oes151252.htm"target="_blank" rel="noopener"&gt;Occupational Employment and Wages, May 2022 (bls.gov)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.reddit.com/r/cscareerquestionsEU/comments/w0kpml/arent_eu_salaries_are_too_low_compared_to_eastern/"target="_blank" rel="noopener"&gt;(reddit) Aren&amp;rsquo;t EU salaries are too low compared to Eastern European?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;全球公司產業排名&lt;span class="hx:absolute hx:-mt-20" id="全球公司產業排名"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e5%85%ac%e5%8f%b8%e7%94%a2%e6%a5%ad%e6%8e%92%e5%90%8d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/zAmZZCd.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;全球公司薪資排名&lt;span class="hx:absolute hx:-mt-20" id="全球公司薪資排名"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e5%85%ac%e5%8f%b8%e8%96%aa%e8%b3%87%e6%8e%92%e5%90%8d" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/BoeEMzo.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;全球 yoe &amp;lt;= 2 的公司薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球-yoe--2-的公司薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-yoe--2-%e7%9a%84%e5%85%ac%e5%8f%b8%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Citadel&amp;rdquo;, &amp;ldquo;Nvidia&amp;rdquo;, &amp;ldquo;Hudson River Trading&amp;rdquo;, &amp;ldquo;Facebook&amp;rdquo;, &amp;ldquo;Google&amp;rdquo;, &amp;ldquo;Optiver&amp;rdquo;, &amp;ldquo;Amazon&amp;rdquo;, &amp;ldquo;Snap&amp;rdquo;, &amp;ldquo;The D. E. Shaw Group&amp;rdquo;, &amp;ldquo;Lenovo&amp;rdquo;, &amp;ldquo;Jane Street&amp;rdquo;, &amp;ldquo;Adobe&amp;rdquo;, &amp;ldquo;DoorDash&amp;rdquo;, &amp;ldquo;Snowflake&amp;rdquo;, &amp;ldquo;MongoDB&amp;rdquo;, &amp;ldquo;Pinterest&amp;rdquo;, &amp;ldquo;ByteDance&amp;rdquo;, &amp;ldquo;JPMorgan Chase&amp;rdquo;, &amp;ldquo;Apple&amp;rdquo;, &amp;ldquo;XPeng Motors&amp;rdquo;, &amp;ldquo;Goosk&amp;rdquo;, &amp;ldquo;Twitch&amp;rdquo;, &amp;ldquo;Scale AI&amp;rdquo;, &amp;ldquo;Walmart Global Tech&amp;rdquo;, &amp;ldquo;Palantir&amp;rdquo;, &amp;ldquo;Maven Securities&amp;rdquo;, &amp;ldquo;Netflix&amp;rdquo;, &amp;ldquo;Udemy&amp;rdquo;, &amp;ldquo;Stripe&amp;rdquo;, &amp;ldquo;Microsoft&amp;rdquo;, &amp;ldquo;Uber&amp;rdquo;, &amp;ldquo;Robinhood&amp;rdquo;, &amp;ldquo;The Boring Company&amp;rdquo;, &amp;ldquo;Roblox&amp;rdquo;, &amp;ldquo;Wintermute&amp;rdquo;, &amp;ldquo;Oracle&amp;rdquo;, &amp;ldquo;InnoPeak Technology&amp;rdquo;, &amp;ldquo;SpaceX&amp;rdquo;, &amp;ldquo;StubHub&amp;rdquo;, &amp;ldquo;Mailchimp&amp;rdquo;, &amp;ldquo;Rokt&amp;rdquo;, &amp;ldquo;Coinbase&amp;rdquo;, &amp;ldquo;Qualcomm&amp;rdquo;, &amp;ldquo;MNTN&amp;rdquo;, &amp;ldquo;Anduril Industries&amp;rdquo;, &amp;ldquo;Two Sigma&amp;rdquo;, &amp;ldquo;Bloomberg&amp;rdquo;, &amp;ldquo;Broadcom&amp;rdquo;, &amp;ldquo;Block&amp;rdquo;, &amp;ldquo;Epic&amp;rdquo;, &amp;ldquo;TuSimple&amp;rdquo;, &amp;ldquo;eBay&amp;rdquo;, &amp;ldquo;Salesforce&amp;rdquo;, &amp;ldquo;Bridgewater Associates&amp;rdquo;, &amp;ldquo;Marshall Wace&amp;rdquo;, &amp;ldquo;Lyft&amp;rdquo;, &amp;ldquo;Affirm&amp;rdquo;, &amp;ldquo;LinkedIn&amp;rdquo;, &amp;ldquo;Ramp&amp;rdquo;, &amp;ldquo;Australian Government&amp;rdquo;, &amp;ldquo;Samsung&amp;rdquo;, &amp;ldquo;Lucid Motors&amp;rdquo;, &amp;ldquo;ServiceNow&amp;rdquo;, &amp;ldquo;Flexport&amp;rdquo;, &amp;ldquo;SAP&amp;rdquo;, &amp;ldquo;C3.ai&amp;rdquo;, &amp;ldquo;CoreWeave&amp;rdquo;, &amp;ldquo;Tesla&amp;rdquo;, &amp;ldquo;Intel&amp;rdquo;, &amp;ldquo;Hive&amp;rdquo;, &amp;ldquo;Indeed&amp;rdquo;, &amp;ldquo;Zillow&amp;rdquo;, &amp;ldquo;Nextdoor&amp;rdquo;, &amp;ldquo;Cresta&amp;rdquo;, &amp;ldquo;Wish&amp;rdquo;, &amp;ldquo;Tableau Software&amp;rdquo;, &amp;ldquo;MetaData&amp;rdquo;, &amp;ldquo;QuantCo&amp;rdquo;, &amp;ldquo;Slack&amp;rdquo;, &amp;ldquo;Confluent&amp;rdquo;, &amp;ldquo;Peraton&amp;rdquo;, &amp;ldquo;Generate Biomedicines&amp;rdquo;, &amp;ldquo;Qualtrics&amp;rdquo;, &amp;ldquo;McKinsey&amp;rdquo;, &amp;ldquo;Atlassian&amp;rdquo;, &amp;ldquo;Millennium&amp;rdquo;, &amp;ldquo;Johnson &amp;amp; Johnson&amp;rdquo;, &amp;ldquo;ZipRecruiter&amp;rdquo;, &amp;ldquo;Arista Networks&amp;rdquo;, &amp;ldquo;Yahoo&amp;rdquo;, &amp;ldquo;Nutanix&amp;rdquo;, &amp;ldquo;Nike&amp;rdquo;, &amp;ldquo;Asana&amp;rdquo;, &amp;ldquo;Electronic Arts&amp;rdquo;, &amp;ldquo;Datadog&amp;rdquo;, &amp;ldquo;Goldman Sachs&amp;rdquo;, &amp;ldquo;Twitter&amp;rdquo;, &amp;ldquo;Cue Health&amp;rdquo;, &amp;ldquo;Cisco&amp;rdquo;, &amp;ldquo;Booz Allen Hamilton&amp;rdquo;, &amp;ldquo;Intuit&amp;rdquo;, &amp;ldquo;XTX Markets&amp;rdquo;, &amp;ldquo;Alithya&amp;rdquo;, &amp;ldquo;American Express&amp;rdquo;, &amp;ldquo;GoodRx&amp;rdquo;, &amp;ldquo;Criteo&amp;rdquo;, &amp;ldquo;DFINITY&amp;rdquo;, &amp;ldquo;Marqeta&amp;rdquo;, &amp;ldquo;Accenture&amp;rdquo;, &amp;ldquo;Gopuff&amp;rdquo;, &amp;ldquo;Verily&amp;rdquo;, &amp;ldquo;Workday&amp;rdquo;, &amp;ldquo;EOG Resources&amp;rdquo;, &amp;ldquo;Viasat&amp;rdquo;, &amp;ldquo;Wealthfront&amp;rdquo;, &amp;ldquo;IBM&amp;rdquo;, &amp;ldquo;AppFolio&amp;rdquo;, &amp;ldquo;Path Robotics&amp;rdquo;, &amp;ldquo;Deloitte&amp;rdquo;, &amp;ldquo;Walmart&amp;rdquo;, &amp;ldquo;Interactive Brokers&amp;rdquo;, &amp;ldquo;Pleasant Pediatrics&amp;rdquo;, &amp;ldquo;Toast&lt;/p&gt;
+&lt;h2&gt;全球 yoe &amp;lt;= 2 的產業薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球-yoe--2-的產業薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-yoe--2-%e7%9a%84%e7%94%a2%e6%a5%ad%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Data&amp;rdquo;, &amp;ldquo;Full Stack&amp;rdquo;, &amp;ldquo;AI&amp;rdquo;, &amp;ldquo;ML / AI&amp;rdquo;, &amp;ldquo;API Development (Back-End)&amp;rdquo;, &amp;ldquo;Distributed Systems (Back-End)&amp;rdquo;, &amp;ldquo;OR&amp;rdquo;, &amp;ldquo;AR / VR&amp;rdquo;, &amp;ldquo;Web Development (Front-End)&amp;rdquo;, null, &amp;ldquo;iOS&amp;rdquo;, &amp;ldquo;Site Reliability (SRE)&amp;rdquo;, &amp;ldquo;Networking&amp;rdquo;, &amp;ldquo;Supply Chain&amp;rdquo;, &amp;ldquo;Production&amp;rdquo;, &amp;ldquo;Security&amp;rdquo;, &amp;ldquo;Mobile (iOS + Android)&amp;rdquo;, &amp;ldquo;Systems Engineering&amp;rdquo;, &amp;ldquo;Shop&amp;rdquo;, &amp;ldquo;Multimedia&amp;rdquo;, &amp;ldquo;Analytics&amp;rdquo;, &amp;ldquo;General&amp;rdquo;, &amp;ldquo;ML&amp;rdquo;, false, &amp;ldquo;DS&amp;rdquo;, &amp;ldquo;Testing (SDET)&amp;rdquo;, &amp;ldquo;DevOps&amp;rdquo;, &amp;ldquo;sec&amp;rdquo;, &amp;ldquo;IV&amp;rdquo;, &amp;ldquo;Android&amp;rdquo;, &amp;ldquo;Machining Learning&amp;rdquo;, &amp;ldquo;Salesforce&amp;rdquo;, &amp;ldquo;AI / ML&amp;rdquo;, &amp;ldquo;Camera Systems&amp;rdquo;, &amp;ldquo;Wireless Engineer&amp;rdquo;, &amp;ldquo;Machine Learning&amp;rdquo;, &amp;ldquo;AI/ML&amp;rdquo;, &amp;ldquo;Other&amp;rdquo;, &amp;ldquo;Risk &amp;amp; Resilience&amp;rdquo;, &amp;ldquo;Software QA&amp;rdquo;, &amp;ldquo;Cyber&amp;rdquo;, &amp;ldquo;Linux Kernel&amp;rdquo;, &amp;ldquo;Backend&amp;rdquo;, &amp;ldquo;Data Science&amp;rdquo;, &amp;ldquo;Hardware&amp;rdquo;, &amp;ldquo;GPU&amp;rdquo;, &amp;ldquo;Computer Vision&amp;rdquo;, &amp;ldquo;Modem&amp;rdquo;, &amp;ldquo;Modem Software&amp;rdquo;, &amp;ldquo;Graduate&amp;rdquo;, &amp;ldquo;Embedded&amp;rdquo;, &amp;ldquo;Azure&amp;rdquo;, &amp;ldquo;Wallet Payments Commerce&amp;rdquo;, &amp;ldquo;Statistics&amp;rdquo;, &amp;ldquo;Camera&amp;rdquo;, &amp;ldquo;Blockchain&amp;rdquo;, &amp;ldquo;Systems&amp;rdquo;, &amp;ldquo;Marketing&amp;rdquo;, &amp;ldquo;NLP&amp;rdquo;, &amp;ldquo;Firmware&amp;rdquo;, &amp;ldquo;Biotech&amp;rdquo;, &amp;ldquo;Cloud&amp;rdquo;, &amp;ldquo;Product&amp;rdquo;, &amp;ldquo;Cybersecurity&amp;rdquo;, &amp;ldquo;Compiler&amp;rdquo;, &amp;ldquo;Data Scientist&amp;rdquo;, &amp;ldquo;Cellular&amp;rdquo;, &amp;ldquo;Research&amp;rdquo;, &amp;ldquo;Finance&amp;rdquo;, &amp;ldquo;Anon&amp;rdquo;, &amp;ldquo;1&amp;rdquo;, &amp;ldquo;Ads&amp;rdquo;, &amp;ldquo;Tech&amp;rdquo;, &amp;ldquo;Quant&amp;rdquo;, &amp;ldquo;Speech&amp;rdquo;, &amp;ldquo;IT&amp;rdquo;, &amp;ldquo;Operations&amp;rdquo;, &amp;ldquo;Mandiant&amp;rdquo;, &amp;ldquo;Performance&amp;rdquo;, &amp;ldquo;TSE&amp;rdquo;, &amp;ldquo;Security Reseearcher&amp;rdquo;, &amp;ldquo;Risk Management&amp;rdquo;&lt;/p&gt;
+&lt;h2&gt;全球產業薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球產業薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e7%94%a2%e6%a5%ad%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Distributed Systems (Back-End)&amp;rdquo;, &amp;ldquo;ML / AI&amp;rdquo;, &amp;ldquo;Full Stack&amp;rdquo;, &amp;ldquo;iOS&amp;rdquo;, &amp;ldquo;AR / VR&amp;rdquo;, &amp;ldquo;Science&amp;rdquo;, &amp;ldquo;Data&amp;rdquo;, false, &amp;ldquo;Trading&amp;rdquo;, &amp;ldquo;Web Development (Front-End)&amp;rdquo;, &amp;ldquo;Site Reliability (SRE)&amp;rdquo;, &amp;ldquo;Networking&amp;rdquo;, &amp;ldquo;Infra&amp;rdquo;, &amp;ldquo;Android&amp;rdquo;, &amp;ldquo;Production&amp;rdquo;, &amp;ldquo;AI / ML&amp;rdquo;, &amp;ldquo;Security&amp;rdquo;, &amp;ldquo;Malware&amp;rdquo;, &amp;ldquo;Data Science&amp;rdquo;, &amp;ldquo;Mobile (iOS + Android)&amp;rdquo;, &amp;ldquo;Satellite Software&amp;rdquo;, &amp;ldquo;API Development (Back-End)&amp;rdquo;, null, &amp;ldquo;AI Infra&amp;rdquo;, &amp;ldquo;Org Leader&amp;rdquo;, &amp;ldquo;Trust and Safety&amp;rdquo;, &amp;ldquo;Backend&amp;rdquo;, &amp;ldquo;Cyber Security&amp;rdquo;, &amp;ldquo;Machine Learning&amp;rdquo;, &amp;ldquo;Operating Systems&amp;rdquo;, &amp;ldquo;Backend Infra&amp;rdquo;, &amp;ldquo;DevOps&amp;rdquo;, &amp;ldquo;Hardware&amp;rdquo;, &amp;ldquo;Front End&amp;rdquo;, &amp;ldquo;Product Analytics&amp;rdquo;, &amp;ldquo;General&amp;rdquo;, &amp;ldquo;CoreOS&amp;rdquo;, &amp;ldquo;Economics&amp;rdquo;, &amp;ldquo;System&amp;rdquo;, &amp;ldquo;Testing (SDET)&amp;rdquo;, &amp;ldquo;Cloud Security&amp;rdquo;, &amp;ldquo;Developer Experience&amp;rdquo;, &amp;ldquo;Specialist&amp;rdquo;, &amp;ldquo;Marketing&amp;rdquo;, &amp;ldquo;Equity&amp;rdquo;, &amp;ldquo;Healthcare&amp;rdquo;, &amp;ldquo;System Software&amp;rdquo;, &amp;ldquo;Desktop&amp;rdquo;, &amp;ldquo;Product&amp;rdquo;, &amp;ldquo;Infrastructure&amp;rdquo;, &amp;ldquo;Manager Security Engineer&amp;rdquo;, &amp;ldquo;Embedded Systems&amp;rdquo;, &amp;ldquo;Applied Scientist&amp;rdquo;, &amp;ldquo;Security, Architect, Lead, L7, E7&amp;rdquo;, &amp;ldquo;Analyst&amp;rdquo;, &amp;ldquo;Linux&amp;rdquo;, &amp;ldquo;Information Security&amp;rdquo;, &amp;ldquo;Analytics&amp;rdquo;, &amp;ldquo;Chipset&amp;rdquo;, &amp;ldquo;ML&amp;rdquo;, &amp;ldquo;Game Development&amp;rdquo;, &amp;ldquo;Artificial Intelligence&amp;rdquo;, &amp;ldquo;Applied Science&amp;rdquo;, &amp;ldquo;Firmware&amp;rdquo;, &amp;ldquo;Robotics&amp;rdquo;, &amp;ldquo;AR/VR&amp;rdquo;, &amp;ldquo;Quant Research&amp;rdquo;, &amp;ldquo;Quantum&amp;rdquo;, &amp;ldquo;Tag&amp;rdquo;, &amp;ldquo;Research&amp;rdquo;, &amp;ldquo;AWS&amp;rdquo;, &amp;ldquo;Chrome OS&amp;rdquo;, &amp;ldquo;Other&amp;rdquo;, &amp;ldquo;Experimentation&amp;rdquo;, &amp;ldquo;Satellites&amp;rdquo;, &amp;ldquo;Microcontrollers&amp;rdquo;, &amp;ldquo;Confidential&amp;rdquo;, &amp;ldquo;Fuchsia&amp;rdquo;, &amp;ldquo;Distributed Storage&amp;rdquo;, &amp;ldquo;Performance&amp;rdquo;, &amp;ldquo;Fraud&amp;rdquo;, &amp;ldquo;search ads&amp;rdquo;, &amp;ldquo;AI&amp;rdquo;, &amp;ldquo;EDA&amp;rdquo;,&lt;/p&gt;
+&lt;h2&gt;全球公司薪資排行&lt;span class="hx:absolute hx:-mt-20" id="全球公司薪資排行"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83%e5%85%ac%e5%8f%b8%e8%96%aa%e8%b3%87%e6%8e%92%e8%a1%8c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&amp;ldquo;Uber&amp;rdquo;, &amp;ldquo;Facebook&amp;rdquo;, &amp;ldquo;Figma&amp;rdquo;, &amp;ldquo;Google&amp;rdquo;, &amp;ldquo;Roblox&amp;rdquo;, &amp;ldquo;Stripe&amp;rdquo;, &amp;ldquo;Amazon&amp;rdquo;, &amp;ldquo;ByteDance&amp;rdquo;, &amp;ldquo;Snowflake&amp;rdquo;, &amp;ldquo;LinkedIn&amp;rdquo;, &amp;ldquo;OpenAI&amp;rdquo;, &amp;ldquo;Apple&amp;rdquo;, &amp;ldquo;Millennium&amp;rdquo;, &amp;ldquo;Coupang&amp;rdquo;, &amp;ldquo;Brex&amp;rdquo;, &amp;ldquo;Broadcom&amp;rdquo;, &amp;ldquo;Snap&amp;rdquo;, &amp;ldquo;Oracle&amp;rdquo;, &amp;ldquo;PingCAP&amp;rdquo;, &amp;ldquo;SAP&amp;rdquo;, &amp;ldquo;Signzy&amp;rdquo;, &amp;ldquo;Slack&amp;rdquo;, &amp;ldquo;Plaid&amp;rdquo;, &amp;ldquo;Salesforce&amp;rdquo;, &amp;ldquo;Cruise&amp;rdquo;, &amp;ldquo;Nuro&amp;rdquo;, &amp;ldquo;Citadel&amp;rdquo;, &amp;ldquo;SoFi&amp;rdquo;, &amp;ldquo;Block&amp;rdquo;, &amp;ldquo;SpaceX&amp;rdquo;, &amp;ldquo;Netflix&amp;rdquo;, &amp;ldquo;Robinhood&amp;rdquo;, &amp;ldquo;Workday&amp;rdquo;, &amp;ldquo;Pinterest&amp;rdquo;, &amp;ldquo;Verily&amp;rdquo;, &amp;ldquo;Hudson River Trading&amp;rdquo;, &amp;ldquo;BlackRock&amp;rdquo;, &amp;ldquo;Microsoft&amp;rdquo;, &amp;ldquo;Atlassian&amp;rdquo;, &amp;ldquo;Thumbtack&amp;rdquo;, &amp;ldquo;DoorDash&amp;rdquo;, &amp;ldquo;Class Technologies&amp;rdquo;, &amp;ldquo;ClickUp&amp;rdquo;, &amp;ldquo;Huawei&amp;rdquo;, &amp;ldquo;Waymo&amp;rdquo;, &amp;ldquo;Tesla&amp;rdquo;, &amp;ldquo;Twilio&amp;rdquo;, &amp;ldquo;Pinduoduo&amp;rdquo;, &amp;ldquo;Rebellion Defense&amp;rdquo;, &amp;ldquo;Nvidia&amp;rdquo;, &amp;ldquo;Goldman Sachs&amp;rdquo;, &amp;ldquo;Coinbase&amp;rdquo;, &amp;ldquo;Walmart Global Tech&amp;rdquo;, &amp;ldquo;AMD&amp;rdquo;, &amp;ldquo;Cisco&amp;rdquo;, &amp;ldquo;Visa&amp;rdquo;, &amp;ldquo;Jane Street&amp;rdquo;, &amp;ldquo;Square&amp;rdquo;, &amp;ldquo;Samsara&amp;rdquo;, &amp;ldquo;Flexport&amp;rdquo;, &amp;ldquo;Lyft&amp;rdquo;, &amp;ldquo;Anduril Industries&amp;rdquo;, &amp;ldquo;T. Rowe Price&amp;rdquo;, &amp;ldquo;Lockheed Martin&amp;rdquo;, &amp;ldquo;Instacart&amp;rdquo;, &amp;ldquo;Adobe&amp;rdquo;, &amp;ldquo;Databricks&amp;rdquo;, &amp;ldquo;Dropbox&amp;rdquo;, &amp;ldquo;Two Sigma&amp;rdquo;, &amp;ldquo;Anduril&amp;rdquo;, &amp;ldquo;Intuit&amp;rdquo;, &amp;ldquo;eBay&amp;rdquo;, &amp;ldquo;StubHub&amp;rdquo;, &amp;ldquo;Tower Research Capital&amp;rdquo;, &amp;ldquo;CloudKitchens&amp;rdquo;, &amp;ldquo;GoDaddy&amp;rdquo;, &amp;ldquo;Grammarly&amp;rdquo;, &amp;ldquo;Carta&amp;rdquo;, &amp;ldquo;GitHub&amp;rdquo;, &amp;ldquo;PayPal&amp;rdquo;, &amp;ldquo;Akamai&amp;rdquo;, &amp;ldquo;SandboxAQ&amp;rdquo;, &amp;ldquo;Reddit&amp;rdquo;, &amp;ldquo;City Storage Systems&amp;rdquo;, &amp;ldquo;Albert&amp;rdquo;, &amp;ldquo;Zynga&amp;rdquo;, &amp;ldquo;Pure Storage&amp;rdquo;, &amp;ldquo;American Century Investments&amp;rdquo;, &amp;ldquo;Epic&amp;rdquo;, &amp;ldquo;Respawn Entertainment&amp;rdquo;, &amp;ldquo;Upstart&amp;rdquo;, &amp;ldquo;Neo Financial&amp;rdquo;, &amp;ldquo;Qualcomm&amp;rdquo;, &amp;ldquo;Dune&amp;rdquo;, &amp;ldquo;Applied Intuition&amp;rdquo;, &amp;ldquo;GLMX&amp;rdquo;, &amp;ldquo;Palantir&amp;rdquo;, &amp;ldquo;C3.ai&amp;rdquo;, &amp;ldquo;Noom&amp;rdquo;, &amp;ldquo;Zillow&amp;rdquo;, &amp;ldquo;Palo Alto Networks&amp;rdquo;, &amp;ldquo;Spotify&amp;rdquo;, &amp;ldquo;Cloudera&amp;rdquo;, &amp;ldquo;Indeed&amp;rdquo;, &amp;ldquo;Hopper&amp;rdquo;, &amp;ldquo;Airbnb&amp;rdquo;, &amp;ldquo;Opendoor&amp;rdquo;, &amp;ldquo;Cisco Equipment&amp;rdquo;, &amp;ldquo;Optiver&amp;rdquo;, &amp;ldquo;Meta Platform&amp;rdquo;, &amp;ldquo;ServiceNow&amp;rdquo;, &amp;ldquo;Gopuff&amp;rdquo;, &amp;ldquo;Firebolt&amp;rdquo;, &amp;ldquo;MongoDB&amp;rdquo;, &amp;ldquo;Benchling&amp;rdquo;, &amp;ldquo;Fireblocks&amp;rdquo;, &amp;ldquo;Niantic&amp;rdquo;, &amp;ldquo;UiPath&amp;rdquo;, &amp;ldquo;The Boring Company&amp;rdquo;, &amp;ldquo;Discord&amp;rdquo;, &amp;ldquo;Twitter&amp;rdquo;, &amp;ldquo;Intel&amp;rdquo;, &amp;ldquo;ecoATM&amp;rdquo;, &amp;ldquo;Roku&amp;rdquo;, &amp;ldquo;Splunk&amp;rdquo;, &amp;ldquo;Ultra Mobile&amp;rdquo;, &amp;ldquo;Brava&amp;rdquo;, &amp;ldquo;Riot Games&amp;rdquo;, &amp;ldquo;Warner Bros. Discovery&amp;rdquo;, &amp;ldquo;Alibaba&amp;rdquo;, &amp;ldquo;Micron Technology&amp;rdquo;, &amp;ldquo;Epic Sys&amp;rdquo;, &amp;ldquo;AppFolio&amp;rdquo;, &amp;ldquo;T-Mobile&amp;rdquo;, &amp;ldquo;Aamzon&amp;rdquo;, &amp;ldquo;HoneyBook&amp;rdquo;, &amp;ldquo;Qualtrics&amp;rdquo;, &amp;ldquo;SmartNews&amp;rdquo;, &amp;ldquo;Synopsys&amp;rdquo;, &amp;ldquo;Affirm&amp;rdquo;, &amp;ldquo;Schonfeld&amp;rdquo;, &amp;ldquo;Glean&amp;rdquo;, &amp;ldquo;Stealth Computer&amp;rdquo;, &amp;ldquo;Datadog&amp;rdquo;, &amp;ldquo;Activision&amp;rdquo;, &amp;ldquo;Disney&amp;rdquo;, &amp;ldquo;Chronosphere&amp;rdquo;, &amp;ldquo;Binance&amp;rdquo;,&lt;/p&gt;
+&lt;h3&gt;全球 軟體工程師 比台灣好的國家稅後收入&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-比台灣好的國家稅後收入"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e6%af%94%e5%8f%b0%e7%81%a3%e5%a5%bd%e7%9a%84%e5%9c%8b%e5%ae%b6%e7%a8%85%e5%be%8c%e6%94%b6%e5%85%a5" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/uri6UUL.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;全球 軟體工程師 比台灣好的國家 扣除12月房租&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-比台灣好的國家-扣除12月房租"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e6%af%94%e5%8f%b0%e7%81%a3%e5%a5%bd%e7%9a%84%e5%9c%8b%e5%ae%b6-%e6%89%a3%e9%99%a412%e6%9c%88%e6%88%bf%e7%a7%9f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;假設台灣不需租房&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;郊區&lt;span class="hx:absolute hx:-mt-20" id="郊區"&gt;&lt;/span&gt;
+&lt;a href="#%e9%83%8a%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/Y6Fmemn.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;美國（Seattle, Bay Area, NY, , San Diego, Texas, Boulder, LA, New Hampshire, Montana, Utah, Santa Barbara, Wisconsin, Minnesota, Baltimore Area, Ohio, Kansas, Denmark, London, Singapore, Toronto, UK, Canada）、歐洲(Switzerland, Israel,Norway)、大洋洲（Australia）、亞洲（China）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;市區&lt;span class="hx:absolute hx:-mt-20" id="市區"&gt;&lt;/span&gt;
+&lt;a href="#%e5%b8%82%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/pmGZV7d.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;美國（Bay Area, Seattle ,Montana, Boulder, LA, New Hampshire, San Diego, Texas, NY, Utah, Wisconsin, Santa Barbara, Baltimore Area, Minnesota, Ohio, Kansas, Denmark, London, Singapore, Toronto, UK, Canada）、歐洲(Switzerland, Israel,Norway,Denmark)、大洋洲（Australia）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;全球 軟體工程師 薪資比較（中位數排序）&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-薪資比較中位數排序"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e8%96%aa%e8%b3%87%e6%af%94%e8%bc%83%e4%b8%ad%e4%bd%8d%e6%95%b8%e6%8e%92%e5%ba%8f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/6XSWQug.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;軟體工程師去哪個地區工作？&lt;span class="hx:absolute hx:-mt-20" id="軟體工程師去哪個地區工作"&gt;&lt;/span&gt;
+&lt;a href="#%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab%e5%8e%bb%e5%93%aa%e5%80%8b%e5%9c%b0%e5%8d%80%e5%b7%a5%e4%bd%9c" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;假設在台灣不需租房&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;郊區&lt;span class="hx:absolute hx:-mt-20" id="郊區-1"&gt;&lt;/span&gt;
+&lt;a href="#%e9%83%8a%e5%8d%80-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/wu00ebJ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比台灣高組：
+&lt;ul&gt;
+&lt;li&gt;歐洲(Switzerland, Israel, Norway, Demank)、美國（S F Bay Area, Seattle, New Hampshire, Montana, Texas, Boulder, Utah, Wisconsin, LA, Minnesota, San Diego, Baltimore Area, Ohio, Kansas）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2&gt;接近台灣&lt;span class="hx:absolute hx:-mt-20" id="接近台灣"&gt;&lt;/span&gt;
+&lt;a href="#%e6%8e%a5%e8%bf%91%e5%8f%b0%e7%81%a3" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;市區&lt;span class="hx:absolute hx:-mt-20" id="市區-1"&gt;&lt;/span&gt;
+&lt;a href="#%e5%b8%82%e5%8d%80-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/FBABous.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;全球 軟體工程師 (淨收入-12月房租)&lt;span class="hx:absolute hx:-mt-20" id="全球-軟體工程師-淨收入-12月房租"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%a8%e7%90%83-%e8%bb%9f%e9%ab%94%e5%b7%a5%e7%a8%8b%e5%b8%ab-%e6%b7%a8%e6%94%b6%e5%85%a5-12%e6%9c%88%e6%88%bf%e7%a7%9f" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;台灣軟體工程師年薪 (p25, p50, p75) = (108, 159, 221)&lt;/li&gt;
+&lt;li&gt;台大資訊工程所畢業 年薪（聽學長說）100-200w
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://drive.google.com/file/d/1nwSRuODXhM-l0ham5vdDbNgLAmPZwoWx/view"target="_blank" rel="noopener"&gt;米一粒&lt;/a&gt;，年薪 168 資工所在學 140w+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;假設在台北不用負擔房租&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;租市區&lt;span class="hx:absolute hx:-mt-20" id="租市區"&gt;&lt;/span&gt;
+&lt;a href="#%e7%a7%9f%e5%b8%82%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/cw0X5HC.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;租郊區&lt;span class="hx:absolute hx:-mt-20" id="租郊區"&gt;&lt;/span&gt;
+&lt;a href="#%e7%a7%9f%e9%83%8a%e5%8d%80" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/L0kBsgd.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h3&gt;其他支出&lt;span class="hx:absolute hx:-mt-20" id="其他支出"&gt;&lt;/span&gt;
+&lt;a href="#%e5%85%b6%e4%bb%96%e6%94%af%e5%87%ba" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;prompt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日常開銷&lt;/strong&gt;：包括房租、水電費、伙食費、交通費、通訊費等費用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安家費用&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;租房：租房的費用會因城市、地段、房屋大小等因素而有所不同。一般來說，在美國的大城市，一套一室一廳的公寓的月租金在 1,500 美元以上。&lt;/li&gt;
+&lt;li&gt;購置家具家電：家具家電的費用會因品牌、型號等因素而有所不同。一般來說，一套基本的家具家電需要花費幾千美元。&lt;/li&gt;
+&lt;li&gt;生活用品：生活用品的費用會因個人需求而有所不同。一般來說，需要準備一些基本的衣物、洗漱用品、廚房用品等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Notes&lt;span class="hx:absolute hx:-mt-20" id="notes"&gt;&lt;/span&gt;
+&lt;a href="#notes" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;nltk: 舊方法
+有錯誤需要
+import nltk
+nltk.download()
+bert tokenizer&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/saffsd/langid.py"target="_blank" rel="noopener"&gt;https://github.com/saffsd/langid.py&lt;/a&gt;: 辨別語系
+&lt;a href="https://www.numbeo.com/cost-of-living/compare_cities.jsp"target="_blank" rel="noopener"&gt;https://www.numbeo.com/cost-of-living/compare_cities.jsp&lt;/a&gt;: 查看物價、房租&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/ArshKA/LinkedIn-Job-Scraper"target="_blank" rel="noopener"&gt;https://github.com/ArshKA/LinkedIn-Job-Scraper&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;helper/create_levels_map.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;input: &lt;code&gt;*_salary.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;helper/levelsfyi.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;all_contryIds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;all_cityIds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;all_dmaIds&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;mp_country&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;14&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Melbourne, VI, Australia&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;mp_city&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;mp_dma&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create_keywords_from_levels_data.py&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Input: &lt;code&gt;../out/*_salary.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Output: &lt;code&gt;../helper/focusTag_keywords.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;raw&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:[],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;s&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:[]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;notebooks/worldwide_jobs.ipynb&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;全球EDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notebooks/taiwan_jobs.ipynb&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;台灣資料EDA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notebooks/taiwan_jobs.ipynb&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;生活、薪資換算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;linkedin_get_jobs.py&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;input: keywords, locations&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;out/{keyword}_{location}_jobs.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;trackingUrn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;urn:li:jobPosting:3839104661&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;repostedJob&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Forex / Crypto Trader - Work From Home&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;$recipeTypes&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;com.linkedin.deco.recipe.anonymous.Anon1578943416&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;posterId&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;966281264&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;$type&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;com.linkedin.voyager.dash.jobs.JobPosting&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;contentSource&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;JOBS_PREMIUM_OFFLINE&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;entityUrn&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;urn:li:fsd_jobPosting:3839104661&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;linkedin/process.py &lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;input: &lt;code&gt;../out/*_jobs.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;../out/process_details.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;3729512725&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Quantitative Developer&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;formattedLocation&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;New York, United States&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;listedAt&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1708703570000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;applyUrls&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;https://www.linkedin.com/job-apply/3729512725&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;salary_paragraphs&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;....&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;salary_matches&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;$24&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;workplaceType&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Hybrid&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;},&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;由於 Linkedin api好像沒有 following 的entry points，因此要自己寫
+思路
+&lt;a href="https://www.linkedin.com/mynetwork/network-manager/people-follow/following/"target="_blank" rel="noopener"&gt;https://www.linkedin.com/mynetwork/network-manager/people-follow/following/&lt;/a&gt;
+request&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;https://www.linkedin.com/voyager/api/graphql?variables=(start:50,count:10,origin:CurationHub,query:(flagshipSearchIntent:MYNETWORK_CURATION_HUB,includeFiltersInResponse:true,queryParameters:List((key:resultType,value:List(PEOPLE_FOLLOW)))))&amp;amp;queryId=voyagerSearchDashClusters.a6589bc963659630adee73df22e9384c&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>20240113-data-pay</title><link>https://alanhc.github.io/blog/20240113-data-engineer-salary/</link><pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240113-data-engineer-salary/</guid><description>
+&lt;p&gt;以下內容為該影片的筆記：&lt;/p&gt;
+&lt;p&gt;中國經濟變差 政府監管 員工信心&lt;/p&gt;
+&lt;p&gt;全球資產配置 美股 賺美元全權資產配置&lt;/p&gt;
+&lt;p&gt;大廠 推行要一年&lt;/p&gt;
+&lt;p&gt;大廠大家做得跟核心業務沒關&lt;/p&gt;
+&lt;p&gt;數據 有博士會有加成、做得好不需要博士、性價比不高&lt;/p&gt;
+&lt;p&gt;有用的DS?&lt;/p&gt;
+&lt;p&gt;第一份工作很重要 拿到最好的工作&lt;/p&gt;
+&lt;p&gt;儘早感受真實世界在想什麼比較重要&lt;/p&gt;
+&lt;p&gt;面試&lt;/p&gt;
+&lt;p&gt;business sense&lt;/p&gt;
+&lt;p&gt;統計、SQL、python、analyical、business（商業問題化成數據可解決）、product sense（找重點）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有沒有思考足夠多的trade-off&lt;/li&gt;
+&lt;li&gt;有沒有把東西推到落地&lt;/li&gt;
+&lt;li&gt;這個方法的理解是否是本質的理解&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ＤＳ學徒制學習&lt;/p&gt;
+&lt;p&gt;統計理論很重要&lt;/p&gt;
+&lt;p&gt;Scientist：用科學方法論理解世界、data &amp;amp; model 只是輔助&lt;/p&gt;
+&lt;p&gt;ML scientist pay 會多一些 很多聰明人擠 apply跟發揮價值很少&lt;/p&gt;
+&lt;p&gt;懂業務的analytics非常少&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/A8GWS00nYDQ?si=mv4ORUgu4cxO45d1"target="_blank" rel="noopener"&gt;https://youtu.be/A8GWS00nYDQ?si=mv4ORUgu4cxO45d1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>20240108-attention</title><link>https://alanhc.github.io/blog/20240108-attention/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20240108-attention/</guid><description>
+&lt;p&gt;公司 → 搶奪注意力&lt;/p&gt;
+&lt;p&gt;太多分心事&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;克服
+&lt;ul&gt;
+&lt;li&gt;決心、自我反省&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;why? 手機成癮&lt;/p&gt;
+&lt;p&gt;多巴安 → 採取行動獲得獎勵&lt;/p&gt;
+&lt;p&gt;看手機→獎勵→空虛 （重複）久了會疲乏 →思考力下降 高度專注任務難以進行 因為需要相同刺激&lt;/p&gt;
+&lt;p&gt;多巴安排毒 = 減少外在刺激&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;（激烈）24-48 小時內 斷絕 網路 社群媒體 手機遊戲 ，使用散步 冥想替代&lt;/li&gt;
+&lt;li&gt;部分排毒：找出最容易分心刺激來源，有意識限制，減少使用時間
+&lt;ol&gt;
+&lt;li&gt;找出最容易成癮的 逛網購、短影音&lt;/li&gt;
+&lt;li&gt;找出想分析原因 戒掉衝動 想為什麼想滑？吸引？當下事情太困難&lt;/li&gt;
+&lt;li&gt;解決可以解決當前問題的替換事項 找到有停止點的替換事項 e.g. 書 拉筋 放鬆 保持客觀、不批判 感受情緒&lt;/li&gt;
+&lt;li&gt;延遲享樂 自我控制
+&lt;ol&gt;
+&lt;li&gt;現代 太習慣立即性獎賞&lt;/li&gt;
+&lt;li&gt;滑手機 太習慣立即性想法 影響人際 思考現在的事情對長遠影響 好的留不好的改&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;有意識計劃每一天：減少分心
+&lt;ol&gt;
+&lt;li&gt;早晨看 計畫 e.g. notion ，而不是看email等 → 都在處理別人事情的陷阱&lt;/li&gt;
+&lt;li&gt;明確的目標、計畫&lt;/li&gt;
+&lt;li&gt;把零碎時間填滿&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/gvOOgqcpbvU?si=GVwLMdc0DqtdpWC2"target="_blank" rel="noopener"&gt;https://youtu.be/gvOOgqcpbvU?si=GVwLMdc0DqtdpWC2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>80分鐘快速了解大型語言模型-5-30有咒術迴戰雷</title><link>https://alanhc.github.io/blog/20231110-80%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B-5-30%E6%9C%89%E5%92%92%E8%A1%93%E8%BF%B4%E6%88%B0%E9%9B%B7/</link><pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20231110-80%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B-5-30%E6%9C%89%E5%92%92%E8%A1%93%E8%BF%B4%E6%88%B0%E9%9B%B7/</guid><description>
+&lt;p&gt;&lt;img src="https://i.imgur.com/U6OeFM7.png" alt="" loading="lazy" /&gt;
+客製化GPT
+&lt;a href="https://openai.com/blog/introducing-gpts"target="_blank" rel="noopener"&gt;https://openai.com/blog/introducing-gpts&lt;/a&gt;
+串接dalle 自動生成頭像&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/oBxJeFw.png" alt="" loading="lazy" /&gt;
+GPT: Generative Pre-trained Transformer
+others Google Bard anthropic Claude
+GPT 訓練：文字接龍 e.g. 台灣大-&amp;gt;chatGPT-&amp;gt; 學
+台灣大-&amp;gt;chatGPT-&amp;gt; （機率）學10% 歌、6%
+&lt;img src="https://i.imgur.com/WxgJVLd.png" alt="" loading="lazy" /&gt;
+&lt;a href="https://platform.openai.com/docs/tokenizer"target="_blank" rel="noopener"&gt;https://platform.openai.com/docs/tokenizer&lt;/a&gt;
+&lt;img src="https://i.imgur.com/OaqzMkQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;ChatGPT目前可以讀300頁pdt&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/LakJpvl.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/N38im7J.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/rADG2nT.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/p5wvO2f.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/LU8OEvz.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/sAZAVkn.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jymlc5s.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/td5xUOQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/QUuYMwJ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/d9NR3Tm.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/eD4pabX.png" alt="" loading="lazy" /&gt;
+chatgpt可能跟 Instruct gpt有關&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/fnq016C.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/XnJi3eQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/QOxjDFZ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/kG7tiSR.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/NFesrFO.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/90J8vor.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/R3EC4JH.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/E2PHJyD.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/8NPELGC.png" alt="" loading="lazy" /&gt;
+gpt 3.5 人類去調整
+&lt;img src="https://i.imgur.com/Gx0UFI1.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/UUoGWE3.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;激發語言模型&lt;span class="hx:absolute hx:-mt-20" id="激發語言模型"&gt;&lt;/span&gt;
+&lt;a href="#%e6%bf%80%e7%99%bc%e8%aa%9e%e8%a8%80%e6%a8%a1%e5%9e%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;需求講清楚
+&lt;ol&gt;
+&lt;li&gt;e.g. 擴寫、文法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;提供資訊給chatgpt&lt;/li&gt;
+&lt;li&gt;提供範例&lt;/li&gt;
+&lt;li&gt;想一想 chain of thiught&lt;/li&gt;
+&lt;li&gt;找出神奇的prompt&lt;/li&gt;
+&lt;li&gt;上傳檔案
+&lt;ol&gt;
+&lt;li&gt;製作投影片、外掛程式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;使用其它工具&lt;/li&gt;
+&lt;li&gt;拆解任務&lt;/li&gt;
+&lt;li&gt;自主進行規劃&lt;/li&gt;
+&lt;li&gt;模型自我反省&lt;/li&gt;
+&lt;li&gt;跟真實環境互動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/8fMEfuR.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/HSVx09i.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/9hq7EFO.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/VG2Sqqy.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/nooGFgj.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ABZCSi6.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/OtG7Afm.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/2tef2w9.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/zq78GhS.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/s0IVFSc.png" alt="" loading="lazy" /&gt;
+GPT 4 以後才有反省能力
+&lt;img src="https://i.imgur.com/ntmOaPw.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ePCj9UD.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/L1Dw49l.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jgjkTj0.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/nK4hG2R.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/KXFhfgh.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=wG8-IUtqu-s&amp;amp;t=365s"target="_blank" rel="noopener"&gt;https://www.youtube.com/watch?v=wG8-IUtqu-s&amp;t=365s&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>20231023-learning</title><link>https://alanhc.github.io/blog/20231023-learning-from-lin/</link><pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20231023-learning-from-lin/</guid><description>
+&lt;p&gt;小林說：分享有關於金融背景的ytr，分享得很棒 &lt;a href="https://www.youtube.com/watch?v=EViSmcCPK5g"target="_blank" rel="noopener"&gt;我是如何快速学习一个领域的 (15:49)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Sumary&lt;span class="hx:absolute hx:-mt-20" id="sumary"&gt;&lt;/span&gt;
+&lt;a href="#sumary" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;結構化思維可以幫助記憶，How?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法
+&lt;ul&gt;
+&lt;li&gt;可信、簡短、品質好的來源，一文理解XX、八分鐘釐清&lt;/li&gt;
+&lt;li&gt;問ChatGPT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如何梳裡架構&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多問為什麼：思維的捷徑 -&amp;gt; 帶目的搜索&lt;/li&gt;
+&lt;li&gt;沿著時間線：一個東西發展很複雜，剛起步開始講，挖掘中間怎麼發展&lt;/li&gt;
+&lt;li&gt;從結果導向的數據e.g. 股價，反應看哪個時間的事件重要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重要&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;找一手訊息：從底層挖掘
+&lt;ul&gt;
+&lt;li&gt;國家：基礎CPI、就業率&lt;/li&gt;
+&lt;li&gt;公司：年報、訪談&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2&gt;流程化思維&lt;span class="hx:absolute hx:-mt-20" id="流程化思維"&gt;&lt;/span&gt;
+&lt;a href="#%e6%b5%81%e7%a8%8b%e5%8c%96%e6%80%9d%e7%b6%ad" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;記憶大師 記52章牌：聯想法 &amp;gt; 找到結構
+&lt;img src="https://i.imgur.com/e8gbAP3.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;search 搜尋&lt;/li&gt;
+&lt;li&gt;問題：資料太多&lt;/li&gt;
+&lt;li&gt;整理框架 &amp;lt; 結構化思維&lt;/li&gt;
+&lt;li&gt;參考別人的框架
+&lt;ol&gt;
+&lt;li&gt;看書目錄、框架&lt;/li&gt;
+&lt;li&gt;可信來源 + 一文讀懂OOO&lt;/li&gt;
+&lt;li&gt;AI (chatgpt) 會錯 &amp;gt; 不斷交互問&lt;/li&gt;
+&lt;li&gt;省略細節、注重重點&lt;/li&gt;
+&lt;li&gt;製作影片有樹枝 &amp;gt; 塞細節&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;一直問為什麼
+&lt;ol&gt;
+&lt;li&gt;帶目的搜尋，忽略不重要的部分&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;時間線
+&lt;ol&gt;
+&lt;li&gt;起源&lt;/li&gt;
+&lt;li&gt;太多資訊？ 找重點=&amp;gt; 結果導向數據 e.g. 大波動、市場真實反映=&amp;gt;股價&lt;/li&gt;
+&lt;li&gt;一手訊息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;流程化思維
+&lt;ol&gt;
+&lt;li&gt;大神有框架 有知識樹，問知識樹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;整理
+&lt;ol&gt;
+&lt;li&gt;長文 讀兩次
+&lt;ol&gt;
+&lt;li&gt;第一次忽略所有細節，找關鍵性框架訊息&lt;/li&gt;
+&lt;li&gt;整理： 根據問題 想知道什麼細節 補充進去&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;輸出
+&lt;ol&gt;
+&lt;li&gt;複習 蓋起來重劃 這概念有點類似覆盤&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/3tdOHt7.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/Ke28xnQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;Trading Economics
+&lt;a href="https://tradingeconomics.com/"target="_blank" rel="noopener"&gt;https://tradingeconomics.com/&lt;/a&gt;
+世界银行
+&lt;a href="https://www.worldbank.org/en/home"target="_blank" rel="noopener"&gt;https://www.worldbank.org/en/home&lt;/a&gt; Our World in Data
+&lt;a href="https://ourworldindata.org/"target="_blank" rel="noopener"&gt;https://ourworldindata.org/&lt;/a&gt;
+OECD
+&lt;a href="https://data.oecd.org/"target="_blank" rel="noopener"&gt;https://data.oecd.org/&lt;/a&gt;
+IMF
+&lt;a href="https://www.imf.org/en/Data"target="_blank" rel="noopener"&gt;https://www.imf.org/en/Data&lt;/a&gt;
+中国统计局
+&lt;a href="http://www.stats.gov.cn/"target="_blank" rel="noopener"&gt;http://www.stats.gov.cn/&lt;/a&gt;
+&lt;img src="https://i.imgur.com/8dki5jU.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/Vi09suf.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何找到心儀另一半？
+&lt;ul&gt;
+&lt;li&gt;認識這個人&amp;gt;建立信任&amp;gt;表白成功
+&lt;img src="https://i.imgur.com/frKC5Uu.png" alt="" loading="lazy" /&gt;
+虛擬資產&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/4Z1L2U0.png" alt="" loading="lazy" /&gt;
+例子：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;怎麼找另一半
+&lt;ul&gt;
+&lt;li&gt;認識&amp;gt;建立信任&amp;gt;表白成功
+&lt;ul&gt;
+&lt;li&gt;認識&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=EViSmcCPK5g"target="_blank" rel="noopener"&gt;https://www.youtube.com/watch?v=EViSmcCPK5g&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>20220811-LINE-Blockchain-Developer-Intern</title><link>https://alanhc.github.io/blog/20220811-line-blockchain-developer-intern/</link><pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20220811-line-blockchain-developer-intern/</guid><description>
+&lt;h2&gt;為何想去實習？&lt;span class="hx:absolute hx:-mt-20" id="為何想去實習"&gt;&lt;/span&gt;
+&lt;a href="#%e7%82%ba%e4%bd%95%e6%83%b3%e5%8e%bb%e5%af%a6%e7%bf%92" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;知道業界缺乏什麼樣的人才？&lt;/li&gt;
+&lt;li&gt;了解學界、業界差異&lt;/li&gt;
+&lt;li&gt;累積實戰經驗&lt;/li&gt;
+&lt;li&gt;同學都有好幾段實習經歷&lt;/li&gt;
+&lt;li&gt;看看自己的市場價值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;我怎麼準備？&lt;span class="hx:absolute hx:-mt-20" id="我怎麼準備"&gt;&lt;/span&gt;
+&lt;a href="#%e6%88%91%e6%80%8e%e9%ba%bc%e6%ba%96%e5%82%99" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;目標
+&lt;ul&gt;
+&lt;li&gt;Blockchain、雲端相關、Application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;當時準備
+&lt;ul&gt;
+&lt;li&gt;ALG、DS、Behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;檢討
+&lt;ul&gt;
+&lt;li&gt;但可能比較重要還是 Side Project及你準備一下有多想進你申請公司的一些準備&lt;/li&gt;
+&lt;li&gt;雖然我沒花啥時間準備Side Project的面試，原本想說都我寫的問不倒，但其實很多問題不是當下你的Project做了什麼，而是面試官會希望你講一下你可以怎麼優化你的Side Project跟旁敲側擊技術難度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我很幸運因為那時剛好是Blockchain牛市，Blockchain人才非常稀缺，我剛好很幸運拿到趨勢及LINE的Offer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;投遞 Intern&lt;span class="hx:absolute hx:-mt-20" id="投遞-intern"&gt;&lt;/span&gt;
+&lt;a href="#%e6%8a%95%e9%81%9e-intern" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;目標：選可以學到最多的，讓自己成為很厲害的工程師&lt;/li&gt;
+&lt;li&gt;指標
+&lt;ul&gt;
+&lt;li&gt;實習時間&lt;/li&gt;
+&lt;li&gt;成長性&lt;/li&gt;
+&lt;li&gt;未來發展&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;機會
+&lt;ul&gt;
+&lt;li&gt;趨勢Web3 Team(暑期2 month) vs. LINE Blockchain Dev (一年期)
+&lt;ul&gt;
+&lt;li&gt;最後選擇 LINE，因為我爸在美商從小嚮往像我爸公司的外商文化及實習時間長（預期可以學到比較多東西），但如果可以重新選我可能會選趨勢，因為那個比較偏分析交易+點一些Infra技能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;其她
+&lt;ul&gt;
+&lt;li&gt;中研院：放棄
+&lt;ul&gt;
+&lt;li&gt;一階過後放棄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;台灣微軟：未錄取
+&lt;ul&gt;
+&lt;li&gt;4/28電話面試，BQ &amp;gt; 5/6 說明演算法、中英自我介紹（萬寶華）&lt;/li&gt;
+&lt;li&gt;大概面到第四輪，應該是沒有Team match被刷，當時偏向找AR/VR。&lt;/li&gt;
+&lt;li&gt;其實我不太喜歡他們委託給其他人力公司，很難從面試官獲得反饋，面試很像在跟沒靈魂的機器人對答。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;群暉 iOS/Android：無聲
+&lt;ul&gt;
+&lt;li&gt;3/18 投遞 &amp;gt; 4/12 一面線上考 Link List &amp;gt; 4/21 二面考Tree 樹遍歷，不用queue等資料結構&lt;/li&gt;
+&lt;li&gt;面到第三輪，考很細，都考DS的問題，因為是面Application所以LeetCode沒有很難，問很多OS、OOD及記憶體管理問題，無聲。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Garmin：無聲
+&lt;ul&gt;
+&lt;li&gt;我實驗室同學(博翔)很早就上了，所以沒有機會ＱＱ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Amazon：沒上
+&lt;ul&gt;
+&lt;li&gt;Coding沒寫完。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Intel：放棄
+&lt;ul&gt;
+&lt;li&gt;原本有TME(Technical Marketing Engineer)機會，但因為LINE先上＋我爸覺得年輕人做這沒有很好（他之前幹過這），所以婉拒。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ASUS：5/19 二面沒上&lt;/li&gt;
+&lt;li&gt;趨勢：放棄
+&lt;ul&gt;
+&lt;li&gt;3/25 Codility (120min) &amp;gt; 4/15通知二面 &amp;gt; 4/21 主管聊天（專案）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;緯創：放棄&lt;/li&gt;
+&lt;li&gt;LINE Blockchain：錄取
+&lt;ul&gt;
+&lt;li&gt;3/19 投遞 &amp;gt; 4/28面試（聊履歷） &amp;gt; 5/11 確認錄取&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;結論
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;感覺有什麼機會還是看當時就業市場需要什麼&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;關於 LINE Blockchain Dev&lt;span class="hx:absolute hx:-mt-20" id="關於-line-blockchain-dev"&gt;&lt;/span&gt;
+&lt;a href="#%e9%97%9c%e6%96%bc-line-blockchain-dev" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Background
+&lt;ul&gt;
+&lt;li&gt;LINE的組織架構很複雜&amp;hellip;，從上到下都是，因為避稅關係，好像設立地點是在某太平洋小島，總之我算是在LINE做Blockchain的子公司LINE Next，底下的DOSI Store產品，主要就是NFT交易市場Team。&lt;/li&gt;
+&lt;li&gt;因為我們的Product Owner是KR，所以Deadline很死、很操、沒辦法negotiate。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Pros
+&lt;ul&gt;
+&lt;li&gt;學習資源很多，LINE的Engineer文化就是分享（尤其是日本），Global Dev Relation很活躍會一直去邀請大佬來分享，有很多讀書會，裡面的人也熱愛分享。&lt;/li&gt;
+&lt;li&gt;主管級很有Business的Sense，也會在讀書會跟員工討論分享，也不會有主管架子，新人意見可以很有效傳達到上面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons
+&lt;ul&gt;
+&lt;li&gt;組織很扁平，可能會一直被skip(大主管)敲，Context Switch要很好。&lt;/li&gt;
+&lt;li&gt;會議很多，跟KR、讀書會、自己Team，我感覺大概工作有一半時間都在開會 @@&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;總結
+&lt;ul&gt;
+&lt;li&gt;LINE 是一間很大的新創公司，相對其他大公司變動很快，無時不刻在創新。&lt;/li&gt;
+&lt;li&gt;想比較多產品參與感可能要去比較在地化的Team，LINE Today、Travel、Music之類，否則還是去LINE Fukuoka（福岡）、LINE Tokyo（東京）、LINE Global(韓國)比較好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;我學到了什麼？&lt;span class="hx:absolute hx:-mt-20" id="我學到了什麼"&gt;&lt;/span&gt;
+&lt;a href="#%e6%88%91%e5%ad%b8%e5%88%b0%e4%ba%86%e4%bb%80%e9%ba%bc" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;使用 Monorepo Development 打造 Scalable Frontend
+&lt;ul&gt;
+&lt;li&gt;[[20220811-monorepo-development]]&lt;/li&gt;
+&lt;li&gt;Why? Re-use Code&lt;/li&gt;
+&lt;li&gt;How? 由很像JSON結構去生前端，其實美商很多都這樣，這邊可能用graphql比較好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Web2 公司如何做、進入Blockchain/web3
+&lt;ul&gt;
+&lt;li&gt;公司私鏈、COSMOS（LINE Blockchain底層使用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;公司運作
+&lt;ul&gt;
+&lt;li&gt;Business&lt;/li&gt;
+&lt;li&gt;避稅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;各國文化差異
+&lt;ul&gt;
+&lt;li&gt;日本：嚴謹，重Testing&lt;/li&gt;
+&lt;li&gt;韓國：做事很快、嚴格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;軟體開發
+&lt;ul&gt;
+&lt;li&gt;Dev Flow: &lt;img src="https://i.imgur.com/f2x8itN.png" alt="" loading="lazy" /&gt;&lt;/li&gt;
+&lt;li&gt;開發流程 &lt;img src="https://i.imgur.com/P44twiK.png" alt="" loading="lazy" /&gt;&lt;/li&gt;
+&lt;li&gt;增進Frontend (Alvin推薦)
+&lt;ul&gt;
+&lt;li&gt;clean code: design&lt;/li&gt;
+&lt;li&gt;clean architecture: refactor&lt;/li&gt;
+&lt;li&gt;clean architecture&lt;/li&gt;
+&lt;li&gt;white_check_mark&lt;/li&gt;
+&lt;li&gt;eyes&lt;/li&gt;
+&lt;li&gt;raised_hands&lt;/li&gt;
+&lt;li&gt;You Don&amp;rsquo;t know JS &lt;img src="https://i.imgur.com/oOmi8k9.png" alt="" loading="lazy" /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getify/You-Dont-Know-JS"target="_blank" rel="noopener"&gt;https://github.com/getify/You-Dont-Know-JS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/react-swr-485b8e41ef78"target="_blank" rel="noopener"&gt;https://medium.com/%E6%89%8B%E5%AF%AB%E7%AD%86%E8%A8%98/react-swr-485b8e41ef78&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/starbugs/%E9%96%8B%E6%BA%90%E5%B0%88%E6%A1%88%E8%AE%80%E8%B5%B7["target="_blank" rel="noopener"&gt;https://medium.com/starbugs/%E9%96%8B%E6%BA%90%E5%B0%88%E6%A1%88%E8%AE%80%E8%B5%B7[&lt;/a&gt;…]1%E4%B8%8D%E8%A6%81%E6%9B%B4%E6%96%B0%E7%9A%84-swr-d02dadc1116b&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/hulis-blog/frontend-engineer-guide-297821512f4e"target="_blank" rel="noopener"&gt;https://medium.com/hulis-blog/frontend-engineer-guide-297821512f4e&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://roadmap.sh/frontend"target="_blank" rel="noopener"&gt;https://roadmap.sh/frontend&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.tenlong.com.tw/products/9786263332577"target="_blank" rel="noopener"&gt;https://www.tenlong.com.tw/products/9786263332577&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Multitier_architecture"target="_blank" rel="noopener"&gt;https://en.wikipedia.org/wiki/Multitier_architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel"target="_blank" rel="noopener"&gt;https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.guru99.com/mvc-vs-mvvm.html"target="_blank" rel="noopener"&gt;https://www.guru99.com/mvc-vs-mvvm.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.tutorialspoint.com/What-is-the-difference-between-session-and-cookies"target="_blank" rel="noopener"&gt;https://www.tutorialspoint.com/What-is-the-difference-between-session-and-cookies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;我在實習做了什麼？&lt;span class="hx:absolute hx:-mt-20" id="我在實習做了什麼"&gt;&lt;/span&gt;
+&lt;a href="#%e6%88%91%e5%9c%a8%e5%af%a6%e7%bf%92%e5%81%9a%e4%ba%86%e4%bb%80%e9%ba%bc" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;升級project workspace to React 18 [[20220721-upgrade-nx-repo-to-react-18]]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;認知反直覺的事&lt;span class="hx:absolute hx:-mt-20" id="認知反直覺的事"&gt;&lt;/span&gt;
+&lt;a href="#%e8%aa%8d%e7%9f%a5%e5%8f%8d%e7%9b%b4%e8%a6%ba%e7%9a%84%e4%ba%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;景氣不好因為招聘放緩所以不太會裁員（台廠思維）&lt;/li&gt;
+&lt;li&gt;廣告的收益並不好&lt;/li&gt;
+&lt;li&gt;管理學第一步是要從自身利益開始&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;認識/厲害的人&lt;span class="hx:absolute hx:-mt-20" id="認識厲害的人"&gt;&lt;/span&gt;
+&lt;a href="#%e8%aa%8d%e8%ad%98%e5%8e%b2%e5%ae%b3%e7%9a%84%e4%ba%ba" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;George (UIT Eng manager) 中央資管 (Skip) 半導體pm &amp;gt; LINE日本UIT &amp;gt; LINE TW
+&lt;ul&gt;
+&lt;li&gt;以前是LINE日本的，後來來台灣是UIT的頭，我很常被他抓去討論Blockchain的事情😂。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Coke (UIT Team Lead) 中央資管碩畢
+&lt;ul&gt;
+&lt;li&gt;我的直屬主管，常常在開會的時候分享Code怎麼寫比較安全、我覺得他蠻棒ㄉ，資源也很Support，我那時說想去碰K8s他也給我一個K8s Task，也會跟我講要做哪些Task可以讓自己未來比較值錢，講話很好笑。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Eric (Mentor) 交大資工實務組，yoe~1y
+&lt;ul&gt;
+&lt;li&gt;交大實務組碩畢業，實作很強，但講話有點太直接。好像同時也在創業，很厲害的人。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Alvin (UIT Senior) 輔大資工，YOE 5+
+&lt;ul&gt;
+&lt;li&gt;算蠻資深UIT，以前在趨勢，他之前推薦我很多FE的學習資源，以及講解整個Project的架構、歷史，真的很抱歉打擾他很多時間XD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Evan (Dev Rel Lead) 東吳資管(?)，yoe 10+
+&lt;ul&gt;
+&lt;li&gt;應該軟體開發圈沒人不認識他，Golang社群很活躍，以前在DSC也常常聽他分享學生該怎麼樣讓自己更有競爭力！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tom (DOSI ServerSide)
+&lt;ul&gt;
+&lt;li&gt;黑客松夥伴，很Carry，也指出了我一些Project的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Water (Travel Team ServerSide Intern) 台大資工所
+&lt;ul&gt;
+&lt;li&gt;我學姊ＸＤ 實驗室也很近，之前常常和她請教BE的一些技術、該學哪些之類，還有叫我不要延畢XD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TU (Mobile Team Intern) 北科資工 -&amp;gt; 英國碩
+&lt;ul&gt;
+&lt;li&gt;可能因為他實習時間待比較長？跟他聊蠻多Mobile方面還有業界比較看什麼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cipto (UIT) 北科互動，yoe 10+
+&lt;ul&gt;
+&lt;li&gt;之前是Designer後來轉FE，之前有關UI問題都問他XD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Steve (UIT Intern) 雲科電機
+&lt;ul&gt;
+&lt;li&gt;有很多我不知道問題可以找誰的時候都是直接問他&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Jerry (QA Intern) 政大資管
+&lt;ul&gt;
+&lt;li&gt;沒有很熟，之前Intern月會有小聊Blockchain，以前他在OurSong，但後來去日本露天&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Jonny (SRE Team Lead)
+&lt;ul&gt;
+&lt;li&gt;之前K8s不知道怎用的時候都是去請教他，很厲害的人，人也很好，以前在騰訊&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Steve (SRE Intern)
+&lt;ul&gt;
+&lt;li&gt;只有吃過幾次飯，sitcon 裡大神，貌似是大一休學&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kyle (UIT Lead) 政大資管學 yoe 3-5y
+&lt;ul&gt;
+&lt;li&gt;FE 大佬，有出書很厲害，但後來貌似也不在LINE了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Brian (Staff Engineer (?), Platform)
+&lt;ul&gt;
+&lt;li&gt;DevOps大佬，之前在IBM，上過他的內部training學到很多DevOps知識&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Penny (ML Team Lead) 外國碩-&amp;gt;TSMC-&amp;gt;LINE
+&lt;ul&gt;
+&lt;li&gt;之前在TSMC，很厲害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tom (UIT Infra)
+&lt;ul&gt;
+&lt;li&gt;UIT 優化、Infra很厲害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Joey (Strategy)
+&lt;ul&gt;
+&lt;li&gt;黑客松夥伴，對於Presentation 很厲害，很Carry&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YiHan
+&lt;ul&gt;
+&lt;li&gt;TW Intern -&amp;gt; LFK（福岡）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OO (Blockchain) ??
+&lt;ul&gt;
+&lt;li&gt;從幣安跳來LINE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>20210820-開發mcu-up-銘傳金手指3-0-的那些事兒</title><link>https://alanhc.github.io/blog/20210820-%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92/</link><pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20210820-%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92/</guid><description>
+&lt;p&gt;請參考：&lt;a href="https://next-school-up.vercel.app/"target="_blank" rel="noopener"&gt;銘傳金手指&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ermaKMu.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;Photo by &lt;a href="http://yabing890123@gmail.com"target="_blank" rel="noopener"&gt;joanna&lt;/a&gt;, from &lt;a href="https://www.facebook.com/upMCU"target="_blank" rel="noopener"&gt;upMCU&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MCU-up，一個專屬銘傳人的選課評價網站。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;為甚麼會想做此專案?&lt;/h1&gt;&lt;p&gt;大學四年邁向尾聲時，我開始思考做過的事情。從 &lt;a href="https://medium.com/@alanhc/%e7%82%ba%e4%bb%80%e6%88%91%e6%9c%83%e6%88%90%e7%82%badsc-lead%e5%8f%8a%e6%80%8e%e9%ba%bc%e7%94%b3%e8%ab%8b-3277a54b6965"target="_blank" rel="noopener"&gt;創立MCU開源社&lt;/a&gt; 把校內對資訊有興趣的同學可以有個地方聚在一起討論進步。那我是否可以藉由自身的資訊專長造福更多人，於是 MCU-up 這個專案就此誕生了😆
+&lt;img src="https://i.imgur.com/whPdfpe.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;from &lt;a href="https://www.dcard.tw/f/mcu/p/236608778"target="_blank" rel="noopener"&gt;Dcard — 金手指…他回來了？&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;我如何開發這個專案?&lt;/h1&gt;&lt;p&gt;首先，我找了社團對於改善學校選課系統有興趣的社團幹部-&lt;a href="https://github.com/z8246123"target="_blank" rel="noopener"&gt;徐友笙&lt;/a&gt;，組織了MCU-up讀書會，並藉由讀書會的時間去閱讀許多學校如&lt;a href="https://plus.nctu.edu.tw/"target="_blank" rel="noopener"&gt;NCTU+&lt;/a&gt;、&lt;a href="https://ntusweety.herokuapp.com/"target="_blank" rel="noopener"&gt;NTU Sweety Course&lt;/a&gt;、&lt;a href="https://classin.info/add"target="_blank" rel="noopener"&gt;CLASSIN&lt;/a&gt;等使用的技術，嘗試找出他們使用的技術、及遇到的問題，同時也透過&lt;a href="https://www.facebook.com/xie.y.ping.5"target="_blank" rel="noopener"&gt;謝育平&lt;/a&gt;老師得知了之前的金手指作者-&lt;a href="https://www.facebook.com/SJZeng.tw"target="_blank" rel="noopener"&gt;曾信傑&lt;/a&gt;，學長也熱心提供了之前的2000筆評論資料。
+&lt;img src="https://i.imgur.com/TuDlGzh.png" alt="" loading="lazy" /&gt;
+銘傳金手指 BY &lt;a href="https://www.facebook.com/SJZeng.tw"target="_blank" rel="noopener"&gt;曾信傑&lt;/a&gt; from &lt;a href="https://www.dcard.tw/f/mcu/p/227233219"target="_blank" rel="noopener"&gt;dcard&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;為了保持彈性及希望使其網站可以永續經營，我們使用了最多人且歷史悠久 NodeJS+Express+MongoDB的技術，並依照最小可行性產品的原則做出了初版MCU-up網站。
+&lt;img src="https://i.imgur.com/Y9jWz75.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;初版MCU-up(銘傳金手指3.0)網站&lt;/p&gt;
+&lt;p&gt;基本的網站功能(使用者驗證、留言）完成後，由於需要將此專案推行到一般使用者及使團隊背景更多元，我找了2nd社員(現3rd副社長，資工系)-&lt;a href="https://github.com/fanlan1210"target="_blank" rel="noopener"&gt;張智仁&lt;/a&gt;來一同改善前端顯示的部分、&lt;a href="http://yabing890123@gmail.com"target="_blank" rel="noopener"&gt;何靖嫻&lt;/a&gt;(1th 社員，設計學院) 來討論及設計前端介面。組別也增編了設計組讀書會，來討論此網站想帶給同學的功能，及頁面顯示的強化。此時 view engine也從原本的EJS改成PUG。並且找了幾個對資安比較有興趣的&lt;a href="https://github.com/JianShan-1214"target="_blank" rel="noopener"&gt;子軒&lt;/a&gt;(3rd社長)、龍成(2nd社長)來討論改善資安問題，並找到同屆DSC — 楊毅(中興 GDSC Lead 2019)Flutter開發手機端程式。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/mcuosc/MCU-up/releases/tag/v0.1.1-alpha"target="_blank" rel="noopener"&gt;MCU-up(銘傳金手指3.0) v0.1.1-alpha&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;總結&lt;/h1&gt;&lt;p&gt;此專案最終在7/30正式上線，很高興開發組(&lt;a href="https://github.com/fanlan1210"target="_blank" rel="noopener"&gt;張智仁&lt;/a&gt;、&lt;a href="https://github.com/z8246123"target="_blank" rel="noopener"&gt;徐友笙&lt;/a&gt;、&lt;a href="https://github.com/JianShan-1214"target="_blank" rel="noopener"&gt;子軒&lt;/a&gt;、龍成)、設計組(&lt;a href="http://yabing890123@gmail.com"target="_blank" rel="noopener"&gt;何靖嫻&lt;/a&gt;)、&lt;a href="https://www.facebook.com/xie.y.ping.5"target="_blank" rel="noopener"&gt;謝育平&lt;/a&gt;老師、學長(&lt;a href="https://www.facebook.com/SJZeng.tw"target="_blank" rel="noopener"&gt;曾信傑&lt;/a&gt;、&lt;a href="https://github.com/mingtsay"target="_blank" rel="noopener"&gt;小喵&lt;/a&gt;) 的各位來支持一同完成這項任務，&lt;strong&gt;沒有你們就沒有今天的MCU-up&lt;/strong&gt;。從此專案磨練並學習到很多不僅是技術或開發方面的知識，更多是如何將不同領域背景的人聚在一同完成專案。接下來此專案將由MCU開源社共同維護所以看到這篇文的銘傳學弟妹，想學背後的相關技術就加 MCU開源社吧! 社團會在下學期社課教導背後的相關技術，如果你是其他學校想一起合作也歡迎留言或者直接私訊粉專(Link在下面)，讓我們一起來讓這個開源專案更好！&lt;/p&gt;
+&lt;h1&gt;特別感謝&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/xie.y.ping.5"target="_blank" rel="noopener"&gt;謝育平&lt;/a&gt;老師：分享他在&lt;a href="http://coding-frenzy.arping.me/"target="_blank" rel="noopener"&gt;CPE瘋狂程設&lt;/a&gt;剛開始的開發故事，並鼓勵我們勇於嘗試及討論此專案的一些方向。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/SJZeng.tw"target="_blank" rel="noopener"&gt;曾信傑&lt;/a&gt;學長(金手指作者)：提供了金手指過去的2000筆資料，及教導過往金手指的技術實作細節。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/mingtsay"target="_blank" rel="noopener"&gt;小喵&lt;/a&gt;學長：教導了我們一些比較業界方面在專案管理上的一些知識、工具及方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;鏈結&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://alanhc.github.io/school/"target="_blank" rel="noopener"&gt;銘傳金手指&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@alanhc/%e7%82%ba%e4%bb%80%e6%88%91%e6%9c%83%e6%88%90%e7%82%badsc-lead%e5%8f%8a%e6%80%8e%e9%ba%bc%e7%94%b3%e8%ab%8b-3277a54b6965"target="_blank" rel="noopener"&gt;為什我會成為DSC Lead及怎麼申請&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@alanhc/%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92-5214e62aca80"target="_blank" rel="noopener"&gt;https://medium.com/@alanhc/%E9%96%8B%E7%99%BCmcu-up-%E9%8A%98%E5%82%B3%E9%87%91%E6%89%8B%E6%8C%873-0-%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%85%92-5214e62aca80&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

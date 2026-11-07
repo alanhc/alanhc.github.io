@@ -1,0 +1,37 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Debugging</title><link>https://alanhc.github.io/tags/debugging/</link><description>Recent content in Debugging on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://alanhc.github.io/tags/debugging/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenBMC Firmware Debugging Workflow</title><link>https://alanhc.github.io/projects/openbmc-debugging-workflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/openbmc-debugging-workflow/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;BMC firmware bugs live on the machine, not on your desk. The BMC is a constrained
+ARM SoC on a production server platform — there is no room to run a debugger and
+a toolchain on it, and the interesting failures are the ones that only reproduce
+on real hardware, under real load, in the state the machine is already in.&lt;/p&gt;
+&lt;p&gt;The default response to that is printf and redeploy: add a log line, rebuild the
+Yocto image, reflash, wait, hope the failure recurs. Each iteration costs a full
+build-and-flash cycle, and restarting the daemon to attach a debugger destroys
+the exact state you were trying to inspect.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Set up a cross-debugging workflow that puts a real debugger on the failing
+process without moving it off the machine:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;gdbserver on target, toolchain on host.&lt;/strong&gt; The BMC runs only the stub; the
+cross-GDB, the symbols, and the sysroot stay on the development host. This
+requires the host sysroot to match the deployed Yocto image exactly — mismatched
+symbols are worse than no symbols, because they are confidently wrong.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Live-attach to a running daemon.&lt;/strong&gt; Attach to the process in its current state
+instead of restarting it under a debugger. For failures that take hours to
+manifest, or that depend on accumulated state, this is the difference between
+investigating the bug and being unable to reach it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Core dump analysis.&lt;/strong&gt; For crashes that cannot be caught interactively, collect
+the dump from the target and analyze it against matching symbols on the host,
+so a one-shot crash still yields a stack.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Turned BMC debugging from rebuild-and-guess into attaching to the actual failing
+process on the actual machine — the interactive path for reproducible failures,
+the core dump path for the ones that only happen once.&lt;/p&gt;
+&lt;p&gt;I presented this workflow at &lt;strong&gt;COSCUP 2025&lt;/strong&gt;, and the slide deck is published
+below.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add a concrete number — iteration time before and after, or a bug that
+was only findable this way.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://web.archive.org/web/20250703021811/https://pretalx.coscup.org/coscup-2025/talk/EXYUKY/"target="_blank" rel="noopener"&gt;Using GDB Debug in OpenBMC — COSCUP 2025&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://alanhc.github.io/OpenBMC%20Cross-Debugging%20with%20GDB.pdf"&gt;Slides: OpenBMC Cross-Debugging with GDB (PDF)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

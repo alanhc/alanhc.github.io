@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Performance</title><link>https://alanhc.github.io/tags/performance/</link><description>Recent content in Performance on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://alanhc.github.io/tags/performance/index.xml" rel="self" type="application/rss+xml"/><item><title>CPU-Side Low-Bit LLM Inference Analysis</title><link>https://alanhc.github.io/projects/low-bit-llm-inference-analysis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/low-bit-llm-inference-analysis/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Low-bit inference kernels like T-MAC and BitNet promise that quantized LLMs can
+run usefully on CPUs. The published evidence for that is mostly throughput:
+tokens per second, on some machine, against some baseline.&lt;/p&gt;
+&lt;p&gt;Throughput tells you whether something got faster. It does not tell you &lt;em&gt;why&lt;/em&gt;,
+and it does not tell you what to fix next. A kernel that is bound on memory
+behavior and one that is bound on instruction issue produce the same
+tokens-per-second number and demand completely different optimizations. Guessing
+which one you have is how optimization effort gets spent in the wrong place.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Profiled the inference path on CPU with &lt;code&gt;perf&lt;/code&gt; and &lt;code&gt;uftrace&lt;/code&gt;, measuring the
+hardware behavior rather than the wall clock:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IPC&lt;/strong&gt; — whether the core is issuing work or stalled&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cache misses&lt;/strong&gt; — whether the working set and access pattern fit the hierarchy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TLB misses&lt;/strong&gt; — whether address translation is itself a cost, which low-bit
+layouts can provoke by trading memory footprint for irregular access&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page faults&lt;/strong&gt; — whether time is going to the memory system rather than compute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;uftrace&lt;/code&gt; gave the function-level call path so the hardware counters could be
+attributed to specific stages rather than to the process as a whole.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Located where the time actually goes in the low-bit inference path on CPU, and
+identified concrete optimization targets on that evidence rather than on
+assumption about which layer &amp;ldquo;should&amp;rdquo; be slow.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; publish the measured numbers — the counter deltas per stage, and which
+targets they pointed to.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/microsoft/T-MAC"target="_blank" rel="noopener"&gt;T-MAC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/microsoft/BitNet"target="_blank" rel="noopener"&gt;BitNet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; link the analysis writeup once published.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Mobile</title><link>https://alanhc.github.io/tags/mobile/</link><description>Recent content in Mobile on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/mobile/index.xml" rel="self" type="application/rss+xml"/><item><title>初探 react native</title><link>https://alanhc.github.io/notes/20230907-react-native/</link><pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20230907-react-native/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;網路編輯器：https://snack.expo.dev/&lt;/li&gt;
+&lt;li&gt;CocoaPods：ios 的套件管理
+npx react-native@latest init AwesomeProject&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://reactnativepaper.com/"target="_blank" rel="noopener"&gt;https://reactnativepaper.com/&lt;/a&gt;: UI mui
+&lt;a href="https://callstack.github.io/react-native-paper/"target="_blank" rel="noopener"&gt;https://callstack.github.io/react-native-paper/&lt;/a&gt;
+&lt;a href="https://callstack.github.io/react-native-paper/docs/guides/getting-started/"target="_blank" rel="noopener"&gt;https://callstack.github.io/react-native-paper/docs/guides/getting-started/&lt;/a&gt;
+&lt;a href="https://snyk.io/advisor/npm-package/react-native-qrcode-scanner"target="_blank" rel="noopener"&gt;https://snyk.io/advisor/npm-package/react-native-qrcode-scanner&lt;/a&gt;: QR Code&lt;/p&gt;
+&lt;p&gt;在螢幕間切換：https://reactnative.dev/docs/navigation
+&lt;a href="https://blog.logrocket.com/using-mui-react-native/"target="_blank" rel="noopener"&gt;https://blog.logrocket.com/using-mui-react-native/&lt;/a&gt; 這也是使用 react-native-paper
+&lt;a href="https://callstack.github.io/react-native-paper/docs/components/Badge"target="_blank" rel="noopener"&gt;https://callstack.github.io/react-native-paper/docs/components/Badge&lt;/a&gt;
+&lt;a href="https://stackoverflow.com/questions/61398426/is-it-possible-to-use-material-ui-library-with-react-native"target="_blank" rel="noopener"&gt;https://stackoverflow.com/questions/61398426/is-it-possible-to-use-material-ui-library-with-react-native&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;UI&lt;span class="hx:absolute hx:-mt-20" id="ui"&gt;&lt;/span&gt;
+&lt;a href="#ui" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://reactnativeelements.com/"target="_blank" rel="noopener"&gt;&lt;strong&gt;React Native Elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://reactnativepaper.com/"target="_blank" rel="noopener"&gt;&lt;strong&gt;React Native Paper&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nativebase.io/"target="_blank" rel="noopener"&gt;&lt;strong&gt;Native Base&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Native base&lt;span class="hx:absolute hx:-mt-20" id="native-base"&gt;&lt;/span&gt;
+&lt;a href="#native-base" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.nativebase.io/install-rn"target="_blank" rel="noopener"&gt;https://docs.nativebase.io/install-rn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="file:///Users/alanhc/workspace/ticketing/components/hero/index.tsx"&gt;/Users/alanhc/workspace/ticketing/components/hero/index.tsx&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://reactnative.dev/docs/getting-started"target="_blank" rel="noopener"&gt;https://reactnative.dev/docs/getting-started&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://reactnative.dev/docs/environment-setup?guide=quickstart"target="_blank" rel="noopener"&gt;https://reactnative.dev/docs/environment-setup?guide=quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://reactnative.dev/docs/environment-setup"target="_blank" rel="noopener"&gt;https://reactnative.dev/docs/environment-setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://roadmap.sh/react-native"target="_blank" rel="noopener"&gt;https://roadmap.sh/react-native&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

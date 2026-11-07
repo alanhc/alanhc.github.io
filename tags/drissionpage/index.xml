@@ -1,0 +1,48 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – DrissionPage</title><link>https://alanhc.github.io/tags/drissionpage/</link><description>Recent content in DrissionPage on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/drissionpage/index.xml" rel="self" type="application/rss+xml"/><item><title>20240207-dcard-crawler</title><link>https://alanhc.github.io/notes/20240207-dcard-crawler/</link><pubDate>Wed, 07 Feb 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20240207-dcard-crawler/</guid><description>
+&lt;p&gt;&lt;a href="https://github.com/alanhc/dcard_crawler.git"target="_blank" rel="noopener"&gt;https://github.com/alanhc/dcard_crawler.git&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Backgorund&lt;span class="hx:absolute hx:-mt-20" id="backgorund"&gt;&lt;/span&gt;
+&lt;a href="#backgorund" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;有些反爬蟲會針對selenium偵測，因此使用 undetected-chromedriver&lt;/p&gt;
+&lt;p&gt;先去 chrome://settings/help 確定chrome是最新版本&lt;/p&gt;
+&lt;h2&gt;playwright 比 seleium 快&lt;span class="hx:absolute hx:-mt-20" id="playwright-比-seleium-快"&gt;&lt;/span&gt;
+&lt;a href="#playwright-%e6%af%94-seleium-%e5%bf%ab" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h2&gt;DrissionPage vs playwright&lt;span class="hx:absolute hx:-mt-20" id="drissionpage-vs-playwright"&gt;&lt;/span&gt;
+&lt;a href="#drissionpage-vs-playwright" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;DrissionPage 比較快
+&lt;ul&gt;
+&lt;li&gt;0.844653 秒 vs 3.023822 秒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不會觸發一些反爬蟲措施&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;斷詞&lt;span class="hx:absolute hx:-mt-20" id="斷詞"&gt;&lt;/span&gt;
+&lt;a href="#%e6%96%b7%e8%a9%9e" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href="https://www.fontpalace.com/font-download/SimHei/"target="_blank" rel="noopener"&gt;https://www.fontpalace.com/font-download/SimHei/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;文字雲&lt;span class="hx:absolute hx:-mt-20" id="文字雲"&gt;&lt;/span&gt;
+&lt;a href="#%e6%96%87%e5%ad%97%e9%9b%b2" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/3nHi6Of.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;ckip-transformers&lt;span class="hx:absolute hx:-mt-20" id="ckip-transformers"&gt;&lt;/span&gt;
+&lt;a href="#ckip-transformers" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;文字雲&lt;span class="hx:absolute hx:-mt-20" id="文字雲-1"&gt;&lt;/span&gt;
+&lt;a href="#%e6%96%87%e5%ad%97%e9%9b%b2-1" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.imgur.com/O3dfcbd.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;jieba 比較 ckip-transformers&lt;span class="hx:absolute hx:-mt-20" id="jieba-比較-ckip-transformers"&gt;&lt;/span&gt;
+&lt;a href="#jieba-%e6%af%94%e8%bc%83-ckip-transformers" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;img src="https://i.imgur.com/O3dfcbd.png" alt="" loading="lazy" /&gt;&lt;/th&gt;
+&lt;th&gt;&lt;img src="https://i.imgur.com/YnFXpM6.png" alt="" loading="lazy" /&gt;&lt;br&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;ckip-transformers&lt;/td&gt;
+&lt;td&gt;jieba&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;爬蟲時間：DrissionPage &amp;lt; Playwright &amp;lt; seleium&lt;span class="hx:absolute hx:-mt-20" id="爬蟲時間drissionpage--playwright--seleium"&gt;&lt;/span&gt;
+&lt;a href="#%e7%88%ac%e8%9f%b2%e6%99%82%e9%96%93drissionpage--playwright--seleium" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h3&gt;段詞： ckip-transformers &amp;gt; jieba&lt;span class="hx:absolute hx:-mt-20" id="段詞-ckip-transformers--jieba"&gt;&lt;/span&gt;
+&lt;a href="#%e6%ae%b5%e8%a9%9e-ckip-transformers--jieba" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://zhuanlan.zhihu.com/p/39437488"target="_blank" rel="noopener"&gt;# jieba分词过滤停顿词、标点符号及统计词频&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/alanhc/dcard_crawler.git"target="_blank" rel="noopener"&gt;https://github.com/alanhc/dcard_crawler.git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/ckiplab/ckip-transformers"target="_blank" rel="noopener"&gt;https://github.com/ckiplab/ckip-transformers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.w3schools.com/cssref/css_selectors.php"target="_blank" rel="noopener"&gt;https://www.w3schools.com/cssref/css_selectors.php&lt;/a&gt;
+&lt;a href="https://www.zenrows.com/blog/playwright-scraping#step-five-taking-screenshots-with-playwright"target="_blank" rel="noopener"&gt;https://www.zenrows.com/blog/playwright-scraping#step-five-taking-screenshots-with-playwright&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

@@ -1,0 +1,111 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Security</title><link>https://alanhc.github.io/tags/security/</link><description>Recent content in Security on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 03 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/security/index.xml" rel="self" type="application/rss+xml"/><item><title>AI Agent Security Architecture</title><link>https://alanhc.github.io/projects/agent-security-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/projects/agent-security-architecture/</guid><description>
+&lt;h2&gt;Problem&lt;span class="hx:absolute hx:-mt-20" id="problem"&gt;&lt;/span&gt;
+&lt;a href="#problem" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;An LLM agent that both decides and acts is a single trust domain. Any text it
+reads — a retrieved document, a tool result, a file in the repo — is a candidate
+instruction, and if the model is persuaded, the action executes with the agent&amp;rsquo;s
+full privileges. Prompt injection is not a bug in a particular prompt; it is the
+predictable outcome of putting the decision and the capability in the same place.&lt;/p&gt;
+&lt;p&gt;The usual mitigations — input filtering, instruction hierarchies, &amp;ldquo;ignore
+previous instructions&amp;rdquo; detectors — are heuristic, and they all share one
+assumption: that the model is the security boundary. A model is a bad boundary.
+It has no notion of a capability it cannot exercise.&lt;/p&gt;
+&lt;h2&gt;What I did&lt;span class="hx:absolute hx:-mt-20" id="what-i-did"&gt;&lt;/span&gt;
+&lt;a href="#what-i-did" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Built a proof of concept that treats the model as untrusted and puts the boundary
+outside it, using four established security principles rather than model-level
+defenses:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reasoning / action separation.&lt;/strong&gt; The reasoning process proposes an action; it
+never holds the capability to perform one. A separate mediator decides whether
+the proposal executes. Convincing the model is therefore not sufficient to cause
+an effect — it only produces a request.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Least privilege.&lt;/strong&gt; Each action is granted only the specific capability it
+needs, scoped to that action, rather than the agent holding a standing union of
+every permission it might ever need.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Complete mediation.&lt;/strong&gt; Every action goes through the mediator on every
+invocation. There is no cached authorization and no side path — a bypass is not
+something the model can talk its way into, because no bypass is implemented.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Namespace isolation.&lt;/strong&gt; Actions execute inside isolated namespaces, so a
+compromised action cannot reach the host, the agent&amp;rsquo;s own state, or a sibling
+task&amp;rsquo;s data.&lt;/p&gt;
+&lt;h2&gt;Result&lt;span class="hx:absolute hx:-mt-20" id="result"&gt;&lt;/span&gt;
+&lt;a href="#result" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;The security properties stop depending on model behavior. An injected
+instruction still produces a &lt;em&gt;proposal&lt;/em&gt;, but the proposal is subject to the same
+mediation as any other, and an action that escapes its intended scope is confined
+by the namespace rather than by the model&amp;rsquo;s judgment.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; add the concrete evaluation from the writeup — which injection classes
+were tested, and what the mediator rejected.&lt;/p&gt;
+&lt;h2&gt;Links&lt;span class="hx:absolute hx:-mt-20" id="links"&gt;&lt;/span&gt;
+&lt;a href="#links" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;TODO:&lt;/strong&gt; link the public writeup. It is not in this repository — I searched the
+content tree and the full git history across all branches and found no copy, so
+the URL needs to be added here by hand.&lt;/p&gt;</description></item><item><title>20240303-save-password-python</title><link>https://alanhc.github.io/notes/20240303-save-password-python/</link><pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20240303-save-password-python/</guid><description>
+&lt;p&gt;使用 AES（對稱加密） + base64&lt;/p&gt;
+&lt;h2&gt;加密&lt;span class="hx:absolute hx:-mt-20" id="加密"&gt;&lt;/span&gt;
+&lt;a href="#%e5%8a%a0%e5%af%86" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Crypto.Cipher&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;AES&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Crypto.Util.Padding&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pad&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unpad&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Crypto.Protocol.KDF&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PBKDF2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Crypto.Random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;get_random_bytes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;salt&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_random_bytes&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;key_enc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;PBKDF2&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;salt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dkLen&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;32&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;cipher&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;AES&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;key_enc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;AES&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MODE_ECB&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;ciphertext&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cipher&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encrypt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pad&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plaintext&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;BLOCK_SIZE&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;base64&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;b64encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ciphertext&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;password.txt&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;w&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item><item><title>20240119-OSINT</title><link>https://alanhc.github.io/notes/20240119-osint/</link><pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/notes/20240119-osint/</guid><description>
+&lt;ul&gt;
+&lt;li&gt;一開始看到
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/Da2LDllZjHQ?si=KfYkfcB_ok7PZ_VH"target="_blank" rel="noopener"&gt;The KK Show - 187 中共網軍的敵人 - 沈伯洋&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/eiBJmdjTOwU?si=HhDiyqeQFqkg7MT_"target="_blank" rel="noopener"&gt;【賀瓏夜夜秀】沈伯洋 被攻擊炎上是榮幸&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/XCBjCtCNcSQ?si=MRj2qceUZOXN-jqd"target="_blank" rel="noopener"&gt;The KK Show - 34 小粉紅殺手 - 沈伯洋（助理）教授&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;攻敵必救、遊說、關鍵人物、&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://youtu.be/NSt4RUKkkik?si=U-urp9djmwXdl-KR"target="_blank" rel="noopener"&gt;網軍常見手法全面解析，製造網路恐懼效應，應立法管制嗎？【時事評判】&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;相關文章
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://minmin0625.medium.com/%e6%bb%b2%e9%80%8f%e6%b8%ac%e8%a9%a6lab-%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8osint-spiderfoot-%e5%9f%b7%e8%a1%8c%e6%83%85%e8%92%90-425de6e9198c"target="_blank" rel="noopener"&gt;【滲透測試LAB】如何使用OSINT - SpiderFoot 執行情蒐&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.netadmin.com.tw/netadmin/zh-tw/technology/E6BE51392849415BA8F586310A091CA5"target="_blank" rel="noopener"&gt;肉搜神器theHarvester　學APT攻擊找開源情資&lt;/a&gt;
+&lt;a href="https://www.nss.com.tw/socialmarketing/product/ptt%E9%96%8B%E6%96%87%E4%B8%80%E9%96%8B%E4%BA%94%E5%9B%9E%E6%AF%8F%E7%AF%87/"target="_blank" rel="noopener"&gt;https://www.nss.com.tw/socialmarketing/product/ptt%E9%96%8B%E6%96%87%E4%B8%80%E9%96%8B%E4%BA%94%E5%9B%9E%E6%AF%8F%E7%AF%87/&lt;/a&gt;
+&lt;a href="https://sectools.tw/sherlock/"target="_blank" rel="noopener"&gt;https://sectools.tw/sherlock/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://vocus.cc/article/63cd303ffd89780001d86678"target="_blank" rel="noopener"&gt;簡單操作 Facebook 爬蟲：Facebook scraper 套件介紹&lt;/a&gt;
+&lt;a href="https://github.com/kevinzg/facebook-scraper"target="_blank" rel="noopener"&gt;https://github.com/kevinzg/facebook-scraper&lt;/a&gt;
+&lt;a href="https://github.com/topics/osint"target="_blank" rel="noopener"&gt;https://github.com/topics/osint&lt;/a&gt;
+&lt;a href="https://github.com/topics/osint-tools"target="_blank" rel="noopener"&gt;https://github.com/topics/osint-tools&lt;/a&gt;
+&lt;a href="https://github.com/jivoi/awesome-osint"target="_blank" rel="noopener"&gt;https://github.com/jivoi/awesome-osint&lt;/a&gt;
+&lt;a href="https://github.com/alishahlakhani/Facebook-comments-exporter-chrome-extension/blob/master/src/scripts/background.js"target="_blank" rel="noopener"&gt;https://github.com/alishahlakhani/Facebook-comments-exporter-chrome-extension/blob/master/src/scripts/background.js&lt;/a&gt;: 擷取facebook comments
+&lt;a href="https://www.youtube.com/watch?v=2MJt1dTqbPk&amp;amp;ab_channel=%E5%B0%8FLin%E8%AF%B4"target="_blank" rel="noopener"&gt;https://www.youtube.com/watch?v=2MJt1dTqbPk&amp;ab_channel=%E5%B0%8FLin%E8%AF%B4&lt;/a&gt;: 擷取facebook comments&lt;/p&gt;
+&lt;h2&gt;sherlock (從帳號名稱找註冊網站)&lt;span class="hx:absolute hx:-mt-20" id="sherlock-從帳號名稱找註冊網站"&gt;&lt;/span&gt;
+&lt;a href="#sherlock-%e5%be%9e%e5%b8%b3%e8%99%9f%e5%90%8d%e7%a8%b1%e6%89%be%e8%a8%bb%e5%86%8a%e7%b6%b2%e7%ab%99" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以使用
+&lt;a href="https://github.com/sherlock-project/sherlock"target="_blank" rel="noopener"&gt;https://github.com/sherlock-project/sherlock&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Twint （從twitter找貼文）&lt;span class="hx:absolute hx:-mt-20" id="twint-從twitter找貼文"&gt;&lt;/span&gt;
+&lt;a href="#twint-%e5%be%9etwitter%e6%89%be%e8%b2%bc%e6%96%87" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;不確定是否可以使用
+Analyzing Tweets with NLP in minutes with Spark, Optimus and Twint
+&lt;a href="https://pielco11.ovh/posts/twint-osint/"target="_blank" rel="noopener"&gt;How to use Twint as an OSINT tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Osintagram (Instagram osint工具)&lt;span class="hx:absolute hx:-mt-20" id="osintagram-instagram-osint工具"&gt;&lt;/span&gt;
+&lt;a href="#osintagram-instagram-osint%e5%b7%a5%e5%85%b7" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;可以使用
+&lt;a href="https://github.com/Datalux/Osintgram?tab=readme-ov-file"target="_blank" rel="noopener"&gt;https://github.com/Datalux/Osintgram?tab=readme-ov-file&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;</description></item></channel></rss>

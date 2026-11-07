@@ -1,0 +1,81 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Tseng – Ai</title><link>https://alanhc.github.io/tags/ai/</link><description>Recent content in Ai on Alan Tseng</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 10 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alanhc.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>80分鐘快速了解大型語言模型-5-30有咒術迴戰雷</title><link>https://alanhc.github.io/blog/20231110-80%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B-5-30%E6%9C%89%E5%92%92%E8%A1%93%E8%BF%B4%E6%88%B0%E9%9B%B7/</link><pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate><guid>https://alanhc.github.io/blog/20231110-80%E5%88%86%E9%90%98%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E5%A4%A7%E5%9E%8B%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B-5-30%E6%9C%89%E5%92%92%E8%A1%93%E8%BF%B4%E6%88%B0%E9%9B%B7/</guid><description>
+&lt;p&gt;&lt;img src="https://i.imgur.com/U6OeFM7.png" alt="" loading="lazy" /&gt;
+客製化GPT
+&lt;a href="https://openai.com/blog/introducing-gpts"target="_blank" rel="noopener"&gt;https://openai.com/blog/introducing-gpts&lt;/a&gt;
+串接dalle 自動生成頭像&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/oBxJeFw.png" alt="" loading="lazy" /&gt;
+GPT: Generative Pre-trained Transformer
+others Google Bard anthropic Claude
+GPT 訓練：文字接龍 e.g. 台灣大-&amp;gt;chatGPT-&amp;gt; 學
+台灣大-&amp;gt;chatGPT-&amp;gt; （機率）學10% 歌、6%
+&lt;img src="https://i.imgur.com/WxgJVLd.png" alt="" loading="lazy" /&gt;
+&lt;a href="https://platform.openai.com/docs/tokenizer"target="_blank" rel="noopener"&gt;https://platform.openai.com/docs/tokenizer&lt;/a&gt;
+&lt;img src="https://i.imgur.com/OaqzMkQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;ChatGPT目前可以讀300頁pdt&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/LakJpvl.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/N38im7J.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/rADG2nT.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/p5wvO2f.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/LU8OEvz.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/sAZAVkn.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jymlc5s.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/td5xUOQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/QUuYMwJ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/d9NR3Tm.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/eD4pabX.png" alt="" loading="lazy" /&gt;
+chatgpt可能跟 Instruct gpt有關&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/fnq016C.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/XnJi3eQ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/QOxjDFZ.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/kG7tiSR.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/NFesrFO.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/90J8vor.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/R3EC4JH.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/E2PHJyD.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/8NPELGC.png" alt="" loading="lazy" /&gt;
+gpt 3.5 人類去調整
+&lt;img src="https://i.imgur.com/Gx0UFI1.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/UUoGWE3.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;激發語言模型&lt;span class="hx:absolute hx:-mt-20" id="激發語言模型"&gt;&lt;/span&gt;
+&lt;a href="#%e6%bf%80%e7%99%bc%e8%aa%9e%e8%a8%80%e6%a8%a1%e5%9e%8b" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;需求講清楚
+&lt;ol&gt;
+&lt;li&gt;e.g. 擴寫、文法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;提供資訊給chatgpt&lt;/li&gt;
+&lt;li&gt;提供範例&lt;/li&gt;
+&lt;li&gt;想一想 chain of thiught&lt;/li&gt;
+&lt;li&gt;找出神奇的prompt&lt;/li&gt;
+&lt;li&gt;上傳檔案
+&lt;ol&gt;
+&lt;li&gt;製作投影片、外掛程式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;使用其它工具&lt;/li&gt;
+&lt;li&gt;拆解任務&lt;/li&gt;
+&lt;li&gt;自主進行規劃&lt;/li&gt;
+&lt;li&gt;模型自我反省&lt;/li&gt;
+&lt;li&gt;跟真實環境互動&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/8fMEfuR.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/HSVx09i.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/9hq7EFO.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/VG2Sqqy.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/nooGFgj.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ABZCSi6.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/OtG7Afm.png" alt="" loading="lazy" /&gt;
+&lt;img src="https://i.imgur.com/2tef2w9.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/zq78GhS.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/s0IVFSc.png" alt="" loading="lazy" /&gt;
+GPT 4 以後才有反省能力
+&lt;img src="https://i.imgur.com/ntmOaPw.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/ePCj9UD.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/L1Dw49l.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/jgjkTj0.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/nK4hG2R.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.imgur.com/KXFhfgh.png" alt="" loading="lazy" /&gt;&lt;/p&gt;
+&lt;h2&gt;Ref&lt;span class="hx:absolute hx:-mt-20" id="ref"&gt;&lt;/span&gt;
+&lt;a href="#ref" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=wG8-IUtqu-s&amp;amp;t=365s"target="_blank" rel="noopener"&gt;https://www.youtube.com/watch?v=wG8-IUtqu-s&amp;t=365s&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
