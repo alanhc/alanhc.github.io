@@ -56,13 +56,17 @@ has since moved up into firmware development itself.
 
 Upstream work on boot firmware, platform security and RISC-V, all merged:
 
-- **[u-root](https://github.com/u-root/u-root)** (LinuxBoot) — riscv64 kexec
-  support, a `reboot` command and integration test fixes.
+- **[U-Boot](https://source.denx.de/u-boot/u-boot)** — standard boot for QEMU
+  RISC-V, a TPM RNG fix, and SpacemiT K1 fixes for the Milk-V Jupiter.
+- **[u-root](https://github.com/u-root/u-root)** (LinuxBoot) — riscv64 and
+  32-bit Arm kexec support, a `reboot` command and integration test fixes.
 - **[AOSP](https://android-review.googlesource.com/q/owner:alan.tseng.cs@gmail.com+status:merged)**
   — Android Generic Bootloader QEMU flows, including riscv64, and Android
   Common Kernel documentation fixes.
 - **[DMTF libspdm](https://github.com/DMTF/libspdm/pull/3816)** — a fix for
   half-applied SPDM key updates when key derivation fails.
+- **[OpenPRoT pldm-lib](https://github.com/OpenPRoT/pldm-lib)** — PLDM decoders
+  hardened against malformed peer messages.
 - **[llama.cpp](https://github.com/ggml-org/llama.cpp/pull/28479)** — a SpacemiT
   X60 matrix kernel that took LLM prefill from 10.7 to 95.3 tokens/s.
 
