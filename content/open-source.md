@@ -1,13 +1,14 @@
 ---
 title: Open Source
-description: "Merged upstream contributions: U-Boot fixes for QEMU RISC-V, TPM and the SpacemiT K1, LinuxBoot kexec for RISC-V and Arm, Android bootloader fixes, SPDM and PLDM fixes, RISC-V LLM inference kernels in llama.cpp, Triton CPU fixes, and systems tooling."
+description: "Merged upstream contributions: U-Boot fixes for QEMU RISC-V, TPM and the SpacemiT K1, Linux reset and dma-buf fixes, LinuxBoot kexec for RISC-V and Arm, Android bootloader fixes, SPDM and PLDM fixes, RISC-V LLM inference kernels in llama.cpp, Triton CPU fixes, and systems tooling."
 toc: true
 ---
 
 My upstream work centers on firmware that boots servers and devices, the
 protocols they use to prove what they are running, and getting software to run
-well on new hardware. Everything below is merged
-upstream; each item links to the change itself.
+well on new hardware. Everything below is merged upstream, except the Linux
+patches, which are applied in their maintainers' trees and on their way to
+mainline; each item links to the change itself.
 
 ## Boot firmware
 
@@ -53,6 +54,7 @@ support to its kexec path.
   and boots to a login prompt.
 - [pkg/boot/kexec: honour #address-cells and #size-cells in the FDT memory map](https://github.com/u-root/u-root/pull/3813)
   — device trees with 32-bit cells, as on 32-bit Arm, could not be read at all.
+- [universalpayload: return the load error last](https://github.com/u-root/u-root/pull/3776)
 - [integration: run kexec_load tests on riscv64](https://github.com/u-root/u-root/pull/3761)
 - [kexec: explain kexec_file_load failures](https://github.com/u-root/u-root/pull/3774)
 - [bootcmd: show the menu again when the shell exits](https://github.com/u-root/u-root/pull/3805)
@@ -121,6 +123,15 @@ kernels for CPUs:
   the elements in the bf16 tests came out wrong.
 - [Enable 43 more test_core.py tests on the CPU backend](https://github.com/triton-lang/triton-cpu/pull/324)
 - [Honor the mask in tl.histogram](https://github.com/triton-lang/triton-cpu/pull/329)
+
+## Linux kernel
+
+Applied by the subsystem maintainers and in linux-next, not yet in mainline:
+
+- [reset: spacemit: Fix the RCPU2 PWM reset registers](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=168cae7e87463)
+  — every RCPU2 PWM reset on the SpacemiT K1 pointed at PWM9's register, so
+  resetting PWM0 to PWM8 acted on PWM9 instead.
+- [dma-buf: fix stale return value documentation for dma_buf_set_name()](https://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git/commit/?id=cc5d6dbe488d)
 
 ## Android kernel
 
