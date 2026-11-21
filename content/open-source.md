@@ -1,21 +1,33 @@
 ---
 title: Open Source
-description: "Merged upstream contributions: U-Boot fixes for QEMU RISC-V, TPM and the SpacemiT K1, Linux reset and dma-buf fixes, LinuxBoot kexec for RISC-V and Arm, Android bootloader fixes, SPDM and PLDM fixes, RISC-V LLM inference kernels in llama.cpp, Triton CPU fixes, and systems tooling."
+description: "Upstream contributions: a U-Boot virtio RTC driver I maintain, U-Boot fixes for QEMU RISC-V, TPM and the SpacemiT K1, Linux reset and dma-buf fixes, LinuxBoot kexec for RISC-V and Arm, Android bootloader fixes, SPDM and PLDM fixes, RISC-V LLM inference kernels in llama.cpp, Triton CPU fixes, and systems tooling."
 toc: true
 ---
 
 My upstream work centers on firmware that boots servers and devices, the
 protocols they use to prove what they are running, and getting software to run
-well on new hardware. Everything below is merged upstream, except the Linux
-patches, which are applied in their maintainers' trees and on their way to
-mainline; each item links to the change itself.
+well on new hardware. Everything below is merged upstream, except the U-Boot
+virtio RTC driver and the Linux patches, which are applied in their
+maintainers' trees and on their way to mainline; each item links to the change
+itself.
 
 ## Boot firmware
 
 ### U-Boot
 
 [U-Boot](https://source.denx.de/u-boot/u-boot) is the bootloader on most
-embedded Linux boards and on QEMU's virt machines.
+embedded Linux boards and on QEMU's virt machines. I maintain its virtio RTC
+driver and review patches for the SpacemiT K1 boards.
+
+A virtio RTC driver, so U-Boot reads the time from QEMU's virtio-rtc device. It
+is in the `next` branch for the next release:
+
+- [virtio: rtc: Add virtio RTC driver](https://source.denx.de/u-boot/u-boot/-/commit/eb36d1397def8d4dd836fe580e965a960d4405ee)
+- [virtio: sandbox: Let tests emulate the device side of a virtqueue](https://source.denx.de/u-boot/u-boot/-/commit/2afa361ec6fd87d74b11cb57ee43ff9e9da8f2da)
+- [test: dm: Add tests for the virtio RTC driver](https://source.denx.de/u-boot/u-boot/-/commit/9e4fda399ec31c7d4586242e5d6dc73fb6258165)
+- [doc: virtio: List the supported device types](https://source.denx.de/u-boot/u-boot/-/commit/adbf9f718db837ceb55e6c44cc42681e814e3f78)
+- [doc: virtio: Explain how to reach the virtio RTC](https://source.denx.de/u-boot/u-boot/-/commit/0115e0d56be982ab9bde4b3ea582908e12ff8c69)
+- [MAINTAINERS: Add entry for virtio RTC](https://source.denx.de/u-boot/u-boot/-/commit/ea9d1b6610200d38943a090f697b5ec33994b7b3)
 
 QEMU RISC-V now boots through standard boot, so a kernel passed with
 `-kernel`, `-initrd` and `-append` boots directly when U-Boot runs from pflash:
@@ -39,6 +51,8 @@ SpacemiT K1, on the Milk-V Jupiter:
   end of DRAM and passed 8 GiB to Linux.
 - [spacemit: k1: initialise the EEPROM index in read_ddr_info()](https://source.denx.de/u-boot/u-boot/-/commit/7009e73cafc88773a502be8a94713d81ec3d0516)
 - [configs: k1: enable GigaDevice SPI NOR flash support](https://source.denx.de/u-boot/u-boot/-/commit/f1fd97b340b601ab684c2e206d9ffa18dbab8322)
+- [configs: spacemit_k1: Enable onboard USB hub support](https://source.denx.de/u-boot/u-boot/-/commit/d28d5f8162865bf76d6fab677a926b3797a0ff8d)
+- [MAINTAINERS: spacemit: k1: add Hung-Chun Tseng as reviewer](https://source.denx.de/u-boot/u-boot/-/commit/83b0cb0675f5a016ade619b735ed7b9f5f884a12)
 
 ### u-root (LinuxBoot)
 

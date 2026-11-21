@@ -54,10 +54,12 @@ has since moved up into firmware development itself.
 
 ## Open Source
 
-Upstream work on boot firmware, platform security and RISC-V, all merged:
+Upstream work on boot firmware, platform security and RISC-V, merged or in a
+maintainer's tree:
 
-- **[U-Boot](https://source.denx.de/u-boot/u-boot)** — standard boot for QEMU
-  RISC-V, a TPM RNG fix, and SpacemiT K1 fixes for the Milk-V Jupiter.
+- **[U-Boot](https://source.denx.de/u-boot/u-boot)** — a virtio RTC driver I
+  maintain, standard boot for QEMU RISC-V, a TPM RNG fix, and SpacemiT K1 fixes
+  for the Milk-V Jupiter, where I am a reviewer.
 - **[u-root](https://github.com/u-root/u-root)** (LinuxBoot) — riscv64 and
   32-bit Arm kexec support, a `reboot` command and integration test fixes.
 - **[AOSP](https://android-review.googlesource.com/q/owner:alan.tseng.cs@gmail.com+status:merged)**
