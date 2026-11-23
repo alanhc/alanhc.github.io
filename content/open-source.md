@@ -123,8 +123,8 @@ malformed messages from a peer:
 Matrix kernels for the SpacemiT X60's IME matrix extension:
 
 - [ggml-cpu: add Q8_0 IME1 matrix kernel for SpacemiT X60](https://github.com/ggml-org/llama.cpp/pull/28479)
-  — prefill on Qwen2.5-0.5B went from 10.7 to 95.3 tokens/s on a Milk-V
-  Jupiter board.
+  — prefill on Qwen2.5-0.5B went from 10.7 to 93.9 tokens/s (Q8_0) and from
+  11.7 to 94.6 tokens/s (Q6_K) on a Milk-V Jupiter board.
 - [ggml-cpu: conditionally add SpacemiT IME kernel sources](https://github.com/ggml-org/llama.cpp/pull/27961)
 
 ## Triton CPU backend

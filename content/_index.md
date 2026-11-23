@@ -17,7 +17,8 @@ The deepest register-level work is on the server side: I2C/PMBus drivers, device
 tree, and cross-machine debugging with gdbserver, live-attach and core dumps,
 which I presented at COSCUP 2025. On the Android side the leverage has been
 automation — agent skills that take the repetitive half of platform work off the
-critical path.
+critical path — and a remote device farm I lead, which lets N users share N
+devices instead of one PC per device.
 
 That automation instinct isn't new. It started with rack-scale provisioning and
 has since moved up into firmware development itself.
@@ -60,6 +61,8 @@ maintainer's tree:
 - **[U-Boot](https://source.denx.de/u-boot/u-boot)** — a virtio RTC driver I
   maintain, standard boot for QEMU RISC-V, a TPM RNG fix, and SpacemiT K1 fixes
   for the Milk-V Jupiter, where I am a reviewer.
+- **[Linux kernel](/open-source#linux-kernel)** — a SpacemiT reset driver fix and
+  a dma-buf documentation fix, both applied and in linux-next.
 - **[u-root](https://github.com/u-root/u-root)** (LinuxBoot) — riscv64 and
   32-bit Arm kexec support, a `reboot` command and integration test fixes.
 - **[AOSP](https://android-review.googlesource.com/q/owner:alan.tseng.cs@gmail.com+status:merged)**
@@ -70,7 +73,8 @@ maintainer's tree:
 - **[OpenPRoT pldm-lib](https://github.com/OpenPRoT/pldm-lib)** — PLDM decoders
   hardened against malformed peer messages.
 - **[llama.cpp](https://github.com/ggml-org/llama.cpp/pull/28479)** — a SpacemiT
-  X60 matrix kernel that took LLM prefill from 10.7 to 95.3 tokens/s.
+  X60 matrix kernel that took LLM prefill from 10.7 to 93.9 tokens/s (Q8_0)
+  and from 11.7 to 94.6 tokens/s (Q6_K).
 
 The full list, with links to every change, is on the
 [Open Source](/open-source) page.
@@ -87,11 +91,15 @@ The full list, with links to every change, is on the
 {{% steps %}}
 
 ### Embedded Software Engineer @ MediaTek
-_MediaTek Corporation, 2025 – Present_
+_MediaTek Corporation, Sep 2025 – Present_
 
-Android platform work. Built AI agent skills that automate the repetitive half
-of the job — pulling Gerrit changes and validating them locally, driving
-build → flash → boot verification, and walking new-chip porting checklists.
+Android platform work. Took part in bring-up of an Android 14 to 18 vendor
+upgrade, booting to the home screen. Built AI agent skills that automate the
+repetitive half of the job — pulling Gerrit changes and validating them locally,
+driving build → flash → boot verification, and walking new-chip porting
+checklists — and used them for the system upgrade in an Android migration
+project. Task lead for a remote device farm: the client app, the booking system,
+and scaling it from one PC per device to N users sharing N devices.
 
 ### Embedded Software Engineer @ Wiwynn
 _Wiwynn Corporation, Dec 2024 – Sep 2025 · BMC Firmware_
@@ -123,8 +131,11 @@ Deployed it on Kubernetes with DNS and load balancing.
 
 {{% steps %}}
 
-### M.Sc., Computer Science @ NTU
-_National Taiwan University, 2024_
+### M.Sc., Networking and Multimedia @ NTU
+_National Taiwan University, Graduate Institute of Networking and Multimedia, 2024_
+
+### B.S., Computer and Communication Engineering @ MCU
+_Ming Chuan University, 2021_
 
 {{% /steps %}}
 

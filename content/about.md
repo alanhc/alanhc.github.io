@@ -18,10 +18,14 @@ Also comfortable with performance profiling (perf, uftrace) and IPMI/Redfish pro
 open-source work and cross-domain collaboration.
 ## Experience
 - **MediaTek Corporation**
-- **Embedded Software Engineer**  _Taiwan, 2025 – Present_
-	- `Android`, `AOSP`, `Platform`, `Gerrit`, `Build/Flash Automation`, `AI Agent`, `Embedded Systems`
+- **Embedded Software Engineer**  _Hsinchu, Taiwan, Sep 2025 – Present_
+	- `Android`, `AOSP`, `Platform`, `Bring-up`, `Gerrit`, `Build/Flash Automation`, `Device Farm`, `AI Agent`, `Embedded Systems`
+- Took part in bring-up of an Android vendor upgrade from Android 14 to 18, booting to the home screen.
 - Built AI agent skills that automate repetitive Android platform work: pulling Gerrit changes and validating them
-locally, driving build → flash → boot verification, and walking new-chip porting checklists.
+locally, driving build → flash → boot verification, and walking new-chip porting checklists. Wrote agent skills for
+the system upgrade in an Android migration project.
+- Task lead for the development and research of a remote device farm: built the client app and booking system, and
+extended the one-PC-per-DUT setup so that N users share N DUTs.
 - **Wiwynn Corporation**
 - **Embedded Software Engineer (BMC)**  _New Taipei City, Taiwan, Dec 2024 – Sep 2025_
 	- `C/C++`, `Device Driver`, `Firmware`, `BMC`, `OpenBMC`, `Yocto`, `Gnu debug`, `Embedded Systems`, `Redfish`, `low-speed interface`, `Buildroot`, `IPMI`, `D-Bus`, `systemd`
@@ -70,16 +74,19 @@ workflows.
 
 ## Education
 - **National Taiwan University**  
-    Master’s Degree, **Computer Science and Engineering** (Sep 2021 - Jan 2024)
+    Master’s Degree, **Graduate Institute of Networking and Multimedia** (Sep 2021 - Jan 2024)
     - Master’s Thesis: [FansTick (Solidity, 2023)](https://github.com/alanhc/Decentralized-Mechanisms-of-Ticket-Pricing-for-Highly-Demanded-Events-Theory-and-Practice), 
     - avg. GPA: 4.12/4.30
+- **Ming Chuan University**  
+    Bachelor's Degree, **Computer and Communication Engineering** (Sep 2017 - Jun 2021)
+    - avg. GPA: 3.99/4.0
 
 ## Publications
 - Sung, H.-M., Chen, T., **Tseng, H.-C.**, Prayogo, B., Lin, J.-Y., & Hung, Y.-P. (2023). **akaTick: Hybrid Mobile E-Ticketing System Based on Non-Fungible Tokens**. _2023 IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom)_, 686–687. [https://doi.org/10.1109/MetaCom57706.2023.00126](https://doi.org/10.1109/MetaCom57706.2023.00126)
 - **Tseng, H.-C**., Tu, C.-W., Huan, X.-Y., & Chia, T.-L. (2020). **Nighttime vehicle light detection based on deep learning and image enhancement**. _2020 IPPR Conference on Computer Vision, Graphics, and Image Processing (CVGIP)_, 1–8.
 ## Honors 
 ### Academic Performances
-- **Research Excellence Award**  (Jun 2021)
+- **Research Excellence Award**, Ming Chuan University  (Jun 2021)
 	- Recognized for outstanding research contributions, placing among the top 1% of graduating students.
 - **College Student Research Scholarship**  (Jul 2020)
 	- Awarded a prestigious scholarship by the [Ministry of Science and Technology, Taiwan](https://www.nstc.gov.tw/), for exceptional research potential.
